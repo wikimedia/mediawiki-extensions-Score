@@ -253,6 +253,13 @@ $messages['diq'] = array(
 	'score-page' => 'Pela $1',
 );
 
+/** Esperanto (Esperanto)
+ * @author Yekrats
+ */
+$messages['eo'] = array(
+	'score-page' => 'Paĝo 1', # Fuzzy
+);
+
 /** Spanish (español)
  * @author Armando-Martin
  * @author Dalton2
