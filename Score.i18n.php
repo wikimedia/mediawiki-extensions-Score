@@ -304,9 +304,11 @@ $1',
 
 /** Finnish (suomi)
  * @author Crt
+ * @author VezonThunder
  */
 $messages['fi'] = array(
 	'score-page' => 'Sivu $1',
+	'score-readerr' => 'Tiedostoa $1 ei voitu lukea.',
 );
 
 /** French (français)
