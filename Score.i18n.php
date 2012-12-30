@@ -834,6 +834,17 @@ $messages['ro'] = array(
 	'score-page' => 'Pagina $1',
 );
 
+/** tarandíne (tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'score-abcconversionerr' => "'Mbossibbile convertì 'u file ABC jndr'à 'u formate LilyPond:
+$1",
+	'score-chdirerr' => "'Mbossibbile cangià jndr'à cartelle $1",
+	'score-noabcinput' => "'U file sorgende ABC $1 non ge pò essere ccrejate.",
+	'score-page' => 'Pàgene $1',
+);
+
 /** Sinhala (සිංහල)
  * @author පසිඳු කාවින්ද
  */
