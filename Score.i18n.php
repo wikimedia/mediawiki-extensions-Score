@@ -159,6 +159,7 @@ $messages['br'] = array(
 );
 
 /** Danish (dansk)
+ * @author Christian List
  * @author Peter Alberti
  */
 $messages['da'] = array(
@@ -168,6 +169,8 @@ $1',
 	'score-chdirerr' => 'Kunne ikke skifte folder til $1',
 	'score-cleanerr' => 'Kunne ikke rense ud i gamle filer før genrendering',
 	'score-compilererr' => 'Kunne ikke kompilere inddatafil til LilyPond:
+$1',
+	'score-backend-error' => 'Ikke i stand til at kopiere de genererede filer til deres endelige placering:
 $1',
 	'score-desc' => 'Tilføjer et tag til at gengive partiturer ved hjælp af LilyPond',
 	'score-getcwderr' => 'Kunne ikke bestemme navnet på den gældende arbejdsfolder',
