@@ -64,6 +64,7 @@ $1',
 );
 
 /** Message documentation (Message documentation)
+ * @author Shirayuki
  */
 $messages['qqq'] = array(
 	'score-abc2lynotexecutable' => 'Displayed if the ABC to LilyPond converter could not be executed. $1 is the path to the abc2ly binary.',
@@ -85,7 +86,9 @@ $messages['qqq'] = array(
 	'score-notexecutable' => 'Displayed if LilyPond binary cannot be executed. $1 is the path to the LilyPond binary.',
 	'score-oggconversionerr' => 'Displayed if the MIDI to Ogg/Vorbis conversion failed. $1 is the error (generally big block of text in a pre tag)',
 	'score-oggoverridenotfound' => 'Displayed if the file specified with the override_ogg="…" attribute could not be found. $1 is the value of the override_ogg attribute.',
-	'score-page' => 'The word "Page" as used in pagination. $1 is the page number',
+	'score-page' => 'The word "Page" as used in pagination. Parameters:
+* $1 - the page number
+{{Identical|Page}}',
 	'score-pregreplaceerr' => 'Displayed if a PCRE regular expression replacement failed.',
 	'score-readerr' => 'Displayed if the extension could not read a file. $1 is the path to the file that could not be read.',
 	'score-timiditynotexecutable' => 'Displayed if TiMidity++ could not be executed. $1 is the path to the TiMidity++ binary.',
