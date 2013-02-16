@@ -793,23 +793,24 @@ $1',
 );
 
 /** Piedmontese (Piemontèis)
+ * @author Borichèt
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'score-abc2lynotexecutable' => 'Ël convertidor ABC a LilyPond a peul pa esse eseguì: $1 a l\'é pa n\'archivi eseguìbil. Sigurte che <code>$wgScoreAbc2Ly</code> a sia ampostè coretament.',
+	'score-abc2lynotexecutable' => "Ël convertidor ABC a LilyPond a peul pa esse eseguì: \$1 a l'é pa n'archivi eseguìbil. Ch'as sigura che <code>\$wgScoreAbc2Ly</code> a sia ampostà coretament.",
 	'score-abcconversionerr' => "As peul pa convertisse l'archivi ABC al formà LilyPond:
 $1",
-	'score-chdirerr' => 'As peul pa cangé a la cartela $1',
-	'score-cleanerr' => "As peul pa scanselesse j'archivi vej prima ëd rifé ël rendering",
+	'score-chdirerr' => 'As peul pa cangé al dossié $1',
+	'score-cleanerr' => "Impossìbil dë scanselé j'archivi vej prima ëd rigeneré",
 	'score-compilererr' => "As peul pa compilesse l'archivi d'anseriment LilyPond:
 $1",
 	'score-backend-error' => "As peul pa copiesse j'archivi generà a soa locassion final:
 $1",
-	'score-desc' => 'A gionta na tichëtta për renderisé dij spartì musicaj con LilyPond',
+	'score-desc' => 'A gionta na tichëtta për rende ëd tòch musicaj con LilyPond',
 	'score-getcwderr' => 'As peul pa otense la cartela ëd travaj corenta',
-	'score-invalidlang' => 'Lenga ëd valutassion pa bon-a lang="<nowiki>$1</nowiki>". Le lenghe arconossùe al moment a son lang="lilypond" (predefinì) e lang="ABC".',
+	'score-invalidlang' => 'Lenga ëd valutassion pa bon-a lang="<nowiki>$1</nowiki>". Le lenghe arconossùe al moment a son lang="lilypond" (predefinìa) e lang="ABC".',
 	'score-invalidoggoverride' => 'L\'archivi "<nowiki>$1</nowiki>" ch\'it l\'has specificà con override_ogg a l\'é pa bon. Për piasì specifica mach ël nòm d\'archivi, sàuta <nowiki>[[…]]</nowiki> e ël prefiss "{{ns:file}}:".',
-	'score-midioverridenotfound' => 'L\'archivi "<nowiki>$1</nowiki>" ch\'it l\'has specificàcon override_midi As peul pa trovesse. Për piasì specìfica mach ël nòm d\'archivi, sàuta <nowiki>[[…]]</nowiki> e ël prefiss "{{ns:file}}:".',
+	'score-midioverridenotfound' => "L'archivi «<nowiki>$1</nowiki>» ch'« l'has spessificà con override_midi As peul pa trovesse. Për piasì, ch'a specìfica mach ël nòm dl'archivi, ch'a sàuta <nowiki>[[…]]</nowiki> e ël prefiss «{{ns:file}}:».",
 	'score-noabcinput' => "L'archivi sorziss ABC $1 a peul pa esse creà.",
 	'score-noimages' => 'Gnun-e figure dë spertì a son stàite generà. Për piasì contròla ëd còdes dlë spartì.',
 	'score-noinput' => "Falì a creé l'archivi d'anseriment LilyPond $1.",
