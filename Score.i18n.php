@@ -811,12 +811,12 @@ $1",
 	'score-invalidlang' => 'Lenga ëd valutassion pa bon-a lang="<nowiki>$1</nowiki>". Le lenghe arconossùe al moment a son lang="lilypond" (predefinìa) e lang="ABC".',
 	'score-invalidoggoverride' => 'L\'archivi "<nowiki>$1</nowiki>" ch\'it l\'has specificà con override_ogg a l\'é pa bon. Për piasì specifica mach ël nòm d\'archivi, sàuta <nowiki>[[…]]</nowiki> e ël prefiss "{{ns:file}}:".',
 	'score-midioverridenotfound' => "L'archivi «<nowiki>$1</nowiki>» ch'« l'has spessificà con override_midi As peul pa trovesse. Për piasì, ch'a specìfica mach ël nòm dl'archivi, ch'a sàuta <nowiki>[[…]]</nowiki> e ël prefiss «{{ns:file}}:».",
-	'score-noabcinput' => "L'archivi sorziss ABC $1 a peul pa esse creà.",
-	'score-noimages' => 'Gnun-e figure dë spertì a son stàite generà. Për piasì contròla ëd còdes dlë spartì.',
+	'score-noabcinput' => "L'archivi sorgiss ABC $1 a l'han nen podù esse creà.",
+	'score-noimages' => "Gnun-e figure d'arzultà a son stàite generà. Për piasì, ch'a contròla sò còdes d'arzultà.",
 	'score-noinput' => "Falì a creé l'archivi d'anseriment LilyPond $1.",
-	'score-noogghandler' => "La conversion Ogg/Vorbis a ciama n'estension OggHandler istalà e configurà, varda [https://www.mediawiki.org/wiki/Extension:OggHandler Extension:OggHandler].",
-	'score-nomidi' => "Gnun archivi MIDI generà contut a sia obligatòri. S'it të stas travajand an manera riga LilyPond, sigurte ëd dé un blòch pròpi \\midi.",
-	'score-nooutput' => 'Falì a creé la cartela $1 ëd surtìa.',
+	'score-noogghandler' => "La conversion Ogg/Vorbis a l'ha damanca ëd n'estension OggHandler istalà e configurà, ch'a varda [https://www.mediawiki.org/wiki/Extension:OggHandler Extension:OggHandler].",
+	'score-nomidi' => "Gnun archivi MIDI generà malgré l'arcesta. S'a l'é an camin ch'a travaja an manera sëcca LilyPond, ch'as sigura ëd dé un blòch \\midi bon.",
+	'score-nooutput' => 'Falì a creé ël dossié ëd surtìa $1.',
 	'score-notexecutable' => 'As peul pa eseguisse LilyPond: $1 a l\'é pa n\'archivi eseguìbil. Sigurte che <code>$wgScoreLilyPond</code> a sia ampostà giust.',
 	'score-oggconversionerr' => 'As peul pa convertisse MIDI a Ogg/Vorbis:
 $1',
@@ -825,13 +825,13 @@ $1',
 	'score-pregreplaceerr' => "Falì ël rimpiassament ëd l'espression regolar PCRE",
 	'score-readerr' => "As peul pa les-se l'archivi $1.",
 	'score-timiditynotexecutable' => 'As peul pa eseguisse TiMidity++: $1 a l\'é pa n\'archivi eseguìbil. Sigurte che <code>$wgScoreTimidity</code> a sia ampostà giust.',
-	'score-renameerr' => "Eror tramudand j'archivi djë spartì a la cartela ëd caria.",
-	'score-trimerr' => 'As peul pa tajesse la figura:
+	'score-renameerr' => "Eror durant ël tramud ëj'archivi ëd mùsica al dossié ëd caria.",
+	'score-trimerr' => 'As peul pa artajesse la figura:
 $1
-Ampòsta <code>$wgScoreTrim=false</code> se sto problem a continua.',
-	'score-versionerr' => 'As peul pa otense na version LilyPond:
+Ch\'a ampòsta <code>$wgScoreTrim=false</code> se \'s problema a përsist.',
+	'score-versionerr' => 'As peul pa otense la version ëd LilyPond:
 $1',
-	'score-vorbisoverrideogg' => 'It peule pa ciamé ëd renderisé Ogg/Vorbis e specifiché override_ogg ant ël midem temp.',
+	'score-vorbisoverrideogg' => "A peul pa ciamé ël rendicont d'Ogg/Vorbis e specifiché override_ogg ant ël midem temp.",
 );
 
 /** Romanian (română)
