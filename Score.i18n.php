@@ -72,7 +72,7 @@ $messages['qqq'] = array(
 	'score-chdirerr' => 'Displayed if the extension cannot change its working directory. $1 is the path to the target directory.',
 	'score-cleanerr' => 'Displayed if an old file cleanup operation fails.',
 	'score-compilererr' => 'Displayed if the LilyPond code could not be compiled. $1 is the error (generally big block of text in a pre tag)',
-	'score-desc' => '{{desc}}',
+	'score-desc' => '{{desc|name=Score|url=http://www.mediawiki.org/wiki/Extension:Score}}',
 	'score-getcwderr' => 'Displayed if the extension cannot obtain the current working directory.',
 	'score-invalidlang' => 'Displayed if the lang="…" attribute contains an unrecognised score language. $1 is the unrecognised language.',
 	'score-invalidoggoverride' => 'Displayed if the file specified with the override_ogg="…" attribute is invalid. $1 is the value of the override_ogg attribute.',
