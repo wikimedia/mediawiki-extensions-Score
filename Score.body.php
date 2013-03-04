@@ -332,9 +332,9 @@ class Score {
 				$options['generate_ogg'] = false;
 			}
 			if ( $options['generate_ogg']
-				&& !( class_exists( 'OggHandler' ) && class_exists( 'OggAudioDisplay' ) ) )
-			{
-				throw new ScoreException( wfMessage( 'score-noogghandler' ) );
+				&& !class_exists( 'TimedMediaTransformOutput' ) && !class_exists( 'OggAudioDisplay' )
+			) {
+				throw new ScoreException( wfMessage( 'score-nomediahandler' ) );
 			}
 			if ( $options['generate_ogg'] && ( $options['override_ogg'] !== false ) ) {
 				throw new ScoreException( wfMessage( 'score-vorbisoverrideogg' ) );
@@ -363,7 +363,7 @@ class Score {
 	 * 		may be generated without stepping on someone else's
 	 * 		toes. The directory may not exist yet. Required.
 	 * 	- generate_ogg: bool Whether to create an Ogg/Vorbis file in
-	 * 		an OggHandler. If set to true, the override_ogg option
+	 * 		TimedMediaHandler or OggHandler. If set to true, the override_ogg option
 	 * 		must be set to false. Required.
 	 *  - dest_storage_path: The path of the destination directory relative to
 	 *  	the current backend. Required.
@@ -486,18 +486,31 @@ class Score {
 				$link = Html::rawElement( 'a', array( 'href' => $url ), $link );
 			}
 			if ( $options['generate_ogg'] ) {
-				$oh = new OggHandler();
-				$oh->parserTransformHook( $parser, false );
-				$player = new OggHandlerPlayer( array(
-					'type' => 'audio',
-					'defaultAlt' => '',
-					'videoUrl' => $oggUrl,
-					'thumbUrl' => false,
-					'width' => self::DEFAULT_PLAYER_WIDTH,
-					'height' => 0,
-					'length' => 0,
-					'showIcon' => false,
-				) );
+				if ( class_exists( 'TimedMediaTransformOutput' ) ){
+					$player = new TimedMediaTransformOutput( array(
+						'sources' => array(
+							array(
+								'src' => $oggUrl,
+								'type' => 'audio/ogg; codecs="vorbis"',
+								'disablecontrols' => 'options,timedText'
+							)
+						),
+						'width' => self::DEFAULT_PLAYER_WIDTH
+					) );
+				} else /* class_exists( 'OggAudioDisplay' ) */ {
+					$oh = new OggHandler();
+					$oh->parserTransformHook( $parser, false );
+					$player = new OggHandlerPlayer( array(
+						'type' => 'audio',
+						'defaultAlt' => '',
+						'videoUrl' => $oggUrl,
+						'thumbUrl' => false,
+						'width' => self::DEFAULT_PLAYER_WIDTH,
+						'height' => 0,
+						'length' => 0,
+						'showIcon' => false,
+					) );
+				}
 				$link .= $player->toHtml();
 			}
 			if ( $options['override_ogg'] !== false ) {
