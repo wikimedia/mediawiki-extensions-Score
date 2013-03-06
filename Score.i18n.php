@@ -259,6 +259,13 @@ $messages['diq'] = array(
 	'score-page' => 'Pela $1',
 );
 
+/** British English (British English)
+ * @author Shirayuki
+ */
+$messages['en-gb'] = array(
+	'score-invalidlang' => 'Invalid score language lang="<nowiki>$1</nowiki>". Currently recognised languages are lang="lilypond" (the default) and lang="ABC".',
+);
+
 /** Esperanto (Esperanto)
  * @author Yekrats
  */
