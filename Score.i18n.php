@@ -155,10 +155,12 @@ $1',
 );
 
 /** Breton (brezhoneg)
+ * @author Fohanno
  * @author Fulup
  */
 $messages['br'] = array(
 	'score-page' => 'Pajenn $1',
+	'score-readerr' => "Ne c'haller ket lenn ar restr $1.",
 );
 
 /** Danish (dansk)
