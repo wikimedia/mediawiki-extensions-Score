@@ -859,6 +859,7 @@ $1",
 	'score-chdirerr' => "'Mbossibbile cangià jndr'à cartelle $1",
 	'score-noabcinput' => "'U file sorgende ABC $1 non ge pò essere ccrejate.",
 	'score-page' => 'Pàgene $1',
+	'score-readerr' => "Non ge riesche a leggere 'u file $1.",
 );
 
 /** Sinhala (සිංහල)
