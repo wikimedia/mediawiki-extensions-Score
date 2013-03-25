@@ -749,6 +749,7 @@ $1',
 );
 
 /** Dutch (Nederlands)
+ * @author Konovalov
  * @author Patio
  * @author SPQRobin
  * @author Siebrand
@@ -771,7 +772,7 @@ $1',
 	'score-noabcinput' => 'Het ABC-bronbestand $1 kon niet aangemaakt worden',
 	'score-noimages' => 'Er zijn geen afbeeldingen met bladmuziek aangemaakt. Controleer uw notatie.',
 	'score-noinput' => 'Het was niet mogelijk het invoerbestand $1 voor LilyPond aan te maken',
-	'score-noogghandler' => 'Voor het omzetten naar Ogg/Vorbis moet de uitbreiding OggHandler geïnstalleerd en ingesteld zijn. Zie [https://www.mediawiki.org/wiki/Extension:OggHandler Extension:OggHandler].',
+	'score-nomediahandler' => 'Ogg/Vorbis omschakeling vereist een geïnstalleerde en geconfigureerde versie van de [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler extensie] of de [https://www.mediawiki.org/wiki/Extension:OggHandler OggHandler extensie].',
 	'score-nomidi' => 'Ondank een verzoek, is er geen MIDI-bestand aangemaakt. Als u in de modus LilyPond ruw werkt, zorg dan dat u een correcte opmaak van het onderdeel "\\midi" hebt.',
 	'score-nooutput' => 'Het was niet mogelijk de uitvoermap $1 aan te maken',
 	'score-notexecutable' => 'Het was niet mogelijk om LilyPond uit te voeren: $1 is geen uitvoerbaar bestand. Zorg dat de instelling <code>$wgScoreLilyPond</code> correct is.',
@@ -953,7 +954,7 @@ $1',
 	'score-noabcinput' => 'Không thể tạo ra tập tin mã nguồn ABC $1.',
 	'score-noimages' => 'Các hình tài liệu âm nhạc không được tạo ra. Xin vui lòng kiểm tra lại mã nguồn.',
 	'score-noinput' => 'Thất bại trong việc tạo ra tập tin đầu vào LilyPond $1.',
-	'score-noogghandler' => 'Tính năng chuyển đổi Ogg/Vorbis cần cài đặt và thiết lập phần mở rộng OggHandler; xem [https://www.mediawiki.org/wiki/Extension:OggHandler/vi?uselang=vi Extension:OggHandler].',
+	'score-nomediahandler' => 'Tính năng chuyển đổi Ogg/Vorbis cần cài đặt và thiết lập phần mở rộng [//www.mediawiki.org/wiki/Extension:TimedMediaHandler?uselang=vi TimedMediaHandler] hoặc [//www.mediawiki.org/wiki/Extension:OggHandler/vi?uselang=vi OggHandler].',
 	'score-nomidi' => 'Tập tin MIDI đã yêu cầu không được tạo ra. Nếu bạn đang làm việc trong chế độ LilyPond nguyên văn, hãy chắc chắn cung cấp một khối \\midi hợp lệ.',
 	'score-nooutput' => 'Thất bại trong việc tạo ra thư mục đầu ra $1.',
 	'score-notexecutable' => 'Không thể thực thi LilyPond: $1 không phải là một tập tin thực thi. Hãy chắc chắn rằng <code>$wgScoreLilyPond</code> có giá trị chính xác.',
