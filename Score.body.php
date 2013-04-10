@@ -582,7 +582,7 @@ class Score {
 		}
 		$cmd = wfEscapeShellArg( $wgScoreLilyPond )
 			. ' ' . wfEscapeShellArg( '-dsafe=#t' )
-			. ' -dbackend=eps --png --header=texidoc '
+			. ' -dbackend=ps --png --header=texidoc '
 			. wfEscapeShellArg( $factoryLy )
 			. ' 2>&1';
 		$output = wfShellExec( $cmd, $rc2 );
