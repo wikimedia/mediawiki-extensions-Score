@@ -591,6 +591,7 @@ class Score {
 			throw new ScoreException( wfMessage( 'score-chdirerr', $oldcwd ) );
 		}
 		if ( $rc2 != 0 ) {
+			$output .= "\nexited with status: " . $rc2;
 			self::throwCallException( wfMessage( 'score-compilererr' ), $output, $options );
 		}
 		if ( !file_exists( $factoryMidi ) ) {
