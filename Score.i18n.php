@@ -861,6 +861,8 @@ $messages['roa-tara'] = array(
 	'score-abcconversionerr' => "'Mbossibbile convertì 'u file ABC jndr'à 'u formate LilyPond:
 $1",
 	'score-chdirerr' => "'Mbossibbile cangià jndr'à cartelle $1",
+	'score-compilererr' => "Non ge se riesce a combilà 'u file de ingresse LilyPond:
+$1",
 	'score-noabcinput' => "'U file sorgende ABC $1 non ge pò essere ccrejate.",
 	'score-page' => 'Pàgene $1',
 	'score-readerr' => "Non ge riesche a leggere 'u file $1.",
