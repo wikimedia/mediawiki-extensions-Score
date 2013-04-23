@@ -592,7 +592,7 @@ class Score {
 		}
 		if ( $rc2 != 0 ) {
 			$output .= "\nexited with status: " . $rc2;
-			self::throwCallException( wfMessage( 'score-compilererr' ), $output, $options );
+			self::throwCallException( wfMessage( 'score-compilererr' ), $output, $options['factory_dir'] );
 		}
 		if ( !file_exists( $factoryMidi ) ) {
 			throw new ScoreException( wfMessage( 'score-nomidi' ) );
