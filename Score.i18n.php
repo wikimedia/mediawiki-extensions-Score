@@ -165,6 +165,47 @@ $messages['br'] = array(
 	'score-readerr' => "Ne c'haller ket lenn ar restr $1.",
 );
 
+/** Czech (česky)
+ * @author Mormegil
+ */
+$messages['cs'] = array(
+	'score-abc2lynotexecutable' => 'Nepodařilo se spustit převodník z ABC na LilyPond: $1 není spustitelný soubor. Ověřte, že máte správně nastaveno <code>$wgScoreAbc2Ly</code>.',
+	'score-abcconversionerr' => 'Převod souboru z formátu ABC na LilyPond se nezdařil:
+$1',
+	'score-chdirerr' => 'Nepodařilo se přejít do adresáře $1',
+	'score-cleanerr' => 'Nepodařilo se vymazat staré soubory před novým vykreslováním',
+	'score-compilererr' => 'Překlad vstupního souboru LilyPond se nezdařil:
+$1',
+	'score-backend-error' => 'Nepodařilo se zkopírovat vygenerované soubory do cílového umístění:
+$1',
+	'score-desc' => 'Přidává značku pro vykreslování partitur pomocí LilyPondu',
+	'score-getcwderr' => 'Nepodařilo se zjistit aktuální pracovní adresář',
+	'score-invalidlang' => 'Neplatný jazyk partitury lang="<nowiki>$1</nowiki>". V současné době jsou podporovány jazyky lang="lilypond" (implicitní hodnota) a lang="ABC".',
+	'score-invalidoggoverride' => 'Soubor „<nowiki>$1</nowiki>“ uvedený pomocí override_ogg je neplatný. Uveďte jen název souboru bez <nowiki>[[…]]</nowiki> a prefixu „{{ns:file}}“.',
+	'score-midioverridenotfound' => 'Soubor „<nowiki>$1</nowiki>“ uvedený pomocí override_midi nebyl nalezen. Uveďte jen název souboru bez <nowiki>[[…]]</nowiki> a prefixu „{{ns:file}}“.',
+	'score-noabcinput' => 'Nepodařilo se vytvořit soubor $1 se zdrojovým kódem pro ABC.',
+	'score-noimages' => 'Nevytvořily se žádné obrázky partitury. Zkontrolujte svůj zdrojový kód.',
+	'score-noinput' => 'Nepodařilo se vytvořit soubor $1 se zdrojovým kódem pro LilyPond.',
+	'score-nomediahandler' => 'Konverze na Ogg/Vorbis vyžaduje nainstalovanou a nakonfigurovanou kopii jednoho z rozšíření [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler] nebo [https://www.mediawiki.org/wiki/Extension:OggHandler OggHandler].',
+	'score-nomidi' => 'Přestože byl vyžádán, nevytvořil se MIDI soubor. Pokud pracujete v přímém režimu LilyPond, nezapomeňte uvést platný blok \\midi.',
+	'score-nooutput' => 'Nepodařilo se vytvořit výstupní adresář $1.',
+	'score-notexecutable' => 'Nepodařilo se spustit LilyPond: $1 není spustitelný soubor. Ověřte, že máte správně nastaveno <code>$wgScoreLilyPond</code>.',
+	'score-oggconversionerr' => 'Převod MIDI do Ogg/Vorbis se nezdařil:
+$1',
+	'score-oggoverridenotfound' => 'Soubor „<nowiki>$1</nowiki>“ uvedený pomocí override_ogg neexistuje.',
+	'score-page' => 'Strana $1',
+	'score-pregreplaceerr' => 'Chyba při náhradě pomocí regulárního výrazu PCRE',
+	'score-readerr' => 'Nepodařilo se přečíst soubor $1.',
+	'score-timiditynotexecutable' => 'Nepodařilo se spustit TiMidity++: $1 není spustitelný soubor. Ověřte, že máte správně nastaveno <code>$wgScoreTimidity</code>.',
+	'score-renameerr' => 'Chyba při přesouvání souborů partitury do adresáře pro načtené soubory.',
+	'score-trimerr' => 'Obrázek se nepodařilo oříznout:
+$1
+Pokud problém přetrvává, nastavte <code>$wgScoreTrim=false</code>.',
+	'score-versionerr' => 'Nepodařilo se zjistit verzi programu LilyPond:
+$1',
+	'score-vorbisoverrideogg' => 'Nemůžete současně vyžadovat vytvoření Ogg/Vorbis a uvést override_ogg.',
+);
+
 /** Danish (dansk)
  * @author Christian List
  * @author Peter Alberti
@@ -728,7 +769,7 @@ $1',
 	'score-noabcinput' => 'Fail sumber ABC $1 tidak dapat diwujudkan.',
 	'score-noimages' => 'Tiada imej skor dihasilkan. Sila semak kod skor anda.',
 	'score-noinput' => 'Fail input LilyPond $1 tidak dapat dicipta.',
-	'score-noogghandler' => 'Penukaran Ogg/Vorbis memerlukan sambungan OggHandler yang terpasang dan terkonfigurasi, oleh itu rujuk [https://www.mediawiki.org/wiki/Extension:OggHandler Extension:OggHandler].',
+	'score-nomediahandler' => 'Penukaran Ogg/Vorbis memerlukan dipasangnya dan dikonfigurasikannya sebarang versi sambungan [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler] atau [https://www.mediawiki.org/wiki/Extension:OggHandler OggHandler].',
 	'score-nomidi' => 'Tiada fail MIDI yang dihasilkan biarpun dipohon. Jika anda menggunakan ragam LilyPond mentah, jangan lupa untuk menyediakan blok \\midi yang betul.',
 	'score-nooutput' => 'Direktori output $1 tidak dapat dicipta.',
 	'score-notexecutable' => 'LilyPond tidak dapat dilaksanakan: $1 bukan fail yang boleh dilaksanakan. Pastikan <code>$wgScoreLilyPond</code> diset dengan betul.',
