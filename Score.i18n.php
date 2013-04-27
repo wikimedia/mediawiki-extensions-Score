@@ -48,6 +48,7 @@ $1',
 	'score-nomidi' => 'No MIDI file generated despite being requested. If you are working in raw LilyPond mode, make sure to provide a proper \midi block.',
 	'score-nooutput' => 'Failed to create output directory $1.',
 	'score-notexecutable' => 'Could not execute LilyPond: $1 is not an executable file. Make sure <code>$wgScoreLilyPond</code> is set correctly.',
+	'score-nocontent' => 'Could not load file $1 from server.',
 	'score-oggconversionerr' => 'Unable to convert MIDI to Ogg/Vorbis:
 $1',
 	'score-oggoverridenotfound' => 'The file "<nowiki>$1</nowiki>" you specified with override_ogg does not exist.',

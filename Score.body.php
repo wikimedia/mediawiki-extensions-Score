@@ -410,32 +410,45 @@ class Score {
 			$imageFileName = "{$options['file_name_prefix']}.png";
 			$multi1FileName = "{$options['file_name_prefix']}-1.png";
 			$midiFileName = "{$options['file_name_prefix']}.midi";
+			$metaDataFileName = "{$options['file_name_prefix']}.json";
+
+			if( isset( $existingFiles[$metaDataFileName] ) ) {
+				$metaDataFile = $backend->getFileContents(
+					array( 'src' => "{$options['dest_storage_path']}/$metaDataFileName" ) );
+				if ( $metaDataFile === false ) {
+					throw new ScoreException( wfMessage( 'score-nocontent', $metaDataFileName ) );
+				}
+				$metaData = FormatJson::decode( $metaDataFile, true );
+			} else {
+				$metaData = array();
+			}
+
 			if (
-				(
+				!isset( $existingFiles[$metaDataFileName] )
+				|| (
 					!isset( $existingFiles[$imageFileName] )
 					&& !isset( $existingFiles[$multi1FileName] )
 				)
 				|| !isset( $existingFiles[$midiFileName] ) )
 			{
-				$existingFiles += self::generatePngAndMidi( $code, $options );
+				$existingFiles += self::generatePngAndMidi( $code, $options, $metaData );
 			}
 
 			/* Generate Ogg/Vorbis file if necessary */
 			if ( $options['generate_ogg']  ) {
 				if ( $options['override_midi'] ) {
 					$oggUrl = $options['ogg_url'];
+					$oggPath = $options['ogg_storage_path'];
 					$exists = $backend->fileExists( array( 'src' => $options['ogg_storage_path'] ) );
 					if ( !$exists ) {
 						$backend->prepare( array( 'dir' => $options['ogg_storage_dir'] ) );
 						$sourcePath = $options['midi_file']->getLocalRefPath();
-						self::generateOgg(
-							$sourcePath,
-							$options['factory_directory'],
-							$options['ogg_storage_path'] );
+						self::generateOgg( $sourcePath, $options, $oggPath, $metaData );
 					}
 				} else {
 					$oggFileName = "{$options['file_name_prefix']}.ogg";
 					$oggUrl = "{$options['dest_url']}/$oggFileName";
+					$oggPath = "{$options['dest_storage_path']}/$oggFileName";
 					if ( !isset( $existingFiles[$oggFileName] ) ) {
 						// Maybe we just generated it
 						$sourcePath = "{$options['factory_directory']}/file.midi";
@@ -445,18 +458,18 @@ class Score {
 								array( 'src' => "{$options['dest_storage_path']}/$midiFileName" ) );
 							$sourcePath = $sourceFileRef->getPath();
 						}
-						self::generateOgg(
-							$sourcePath,
-							$options['factory_directory'],
-							"{$options['dest_storage_path']}/$oggFileName" );
+						self::generateOgg( $sourcePath, $options, $oggPath, $metaData );
 					}
 				}
 			}
 
 			/* return output link(s) */
 			if ( isset( $existingFiles[$imageFileName] ) ) {
+				list( $width, $height ) = $metaData[$imageFileName]['size'];
 				$link = Html::rawElement( 'img', array(
 					'src' => "{$options['dest_url']}/$imageFileName",
+					'width' => $width,
+					'height' => $height,
 					'alt' => $code,
 				) );
 			} elseif ( isset( $existingFiles[$multi1FileName] ) ) {
@@ -466,8 +479,11 @@ class Score {
 					if ( !isset( $existingFiles[$fileName] ) ) {
 						break;
 					}
+					list( $width, $height ) = $metaData[$imageFileName]['size'];
 					$link .= Html::rawElement( 'img', array(
 						'src' => "{$options['dest_url']}/$fileName",
+						'width' => $width,
+						'height' => $height,
 						'alt' => wfMessage( 'score-page' )
 							->inContentLanguage()
 							->numParams( $i )
@@ -487,8 +503,10 @@ class Score {
 				$link = Html::rawElement( 'a', array( 'href' => $url ), $link );
 			}
 			if ( $options['generate_ogg'] ) {
+				$length = $metaData[basename($oggPath)]['length'];
 				if ( class_exists( 'TimedMediaTransformOutput' ) ){
 					$player = new TimedMediaTransformOutput( array(
+						'length' => $length,
 						'sources' => array(
 							array(
 								'src' => $oggUrl,
@@ -508,7 +526,7 @@ class Score {
 						'thumbUrl' => false,
 						'width' => self::DEFAULT_PLAYER_WIDTH,
 						'height' => 0,
-						'length' => 0,
+						'length' => $length,
 						'showIcon' => false,
 					) );
 				}
@@ -533,13 +551,14 @@ class Score {
 	 * @param $code string Score code.
 	 * @param $options array Rendering options. They are the same as for
 	 * 	Score::generateHTML().
+	 * @parma $metaData array to hold information about images
 	 *
 	 * @return Array of file names placed in the remote dest dir, with the
 	 * 	file names in each key.
 	 *
 	 * @throws ScoreException on error.
 	 */
-	private static function generatePngAndMidi( $code, $options ) {
+	private static function generatePngAndMidi( $code, $options, &$metaData ) {
 		global $wgScoreLilyPond, $wgScoreTrim;
 
 		$prof = new Score_ScopedProfiling( __METHOD__ );
@@ -650,6 +669,8 @@ class Score {
 				'src' => $src,
 				'dst' => "{$options['dest_storage_path']}/$dstFileName" );
 
+			list( $width, $height ) = self::imageSize( $src );
+			$metaData[$dstFileName]['size'] = array( $width, $height );
 			$newFiles[$dstFileName] = true;
 		} else {
 			for ( $i = 1; ; ++$i ) {
@@ -667,15 +688,39 @@ class Score {
 					'op' => 'store',
 					'src' => $src,
 					'dst' => $dest );
+
+				list( $width, $height ) = self::imageSize( $src );
+				$metaData[$dstFileName]['size'] = array( $width, $height );
 				$newFiles[$dstFileName] = true;
 			}
 		}
+
+		$dstFileName = "{$options['file_name_prefix']}.json";
+		$dest = "{$options['dest_storage_path']}/$dstFileName";
+		$ops[] = array(
+			'op' => 'create',
+			'content' => FormatJson::encode( $metaData ),
+			'dst' => $dest );
+
+		$newFiles[$dstFileName] = true;
+
 		// Execute the batch
 		$status = $backend->doQuickOperations( $ops );
 		if ( !$status->isOK() ) {
 			throw new ScoreException( wfMessage( 'score-backend-error', $status->getWikiText() ) );
 		}
 		return $newFiles;
+	}
+
+	/**
+	 * Extract the size of one of our generated PNG images
+	 *
+	 * @param string $filename
+	 * @return array of ints (width, height)
+	 */
+	private static function imageSize( $filename ) {
+		list( $width, $height ) = getimagesize( $filename );
+		return array( $width, $height );
 	}
 
 	/**
@@ -725,12 +770,13 @@ LILYPOND;
 	 * Generates an Ogg/Vorbis file from a MIDI file using timidity.
 	 *
 	 * @param $sourceFile string The local filename of the MIDI file
-	 * @param $factoryDir string The local temporary directory
+	 * @param $options array of rendering options.
 	 * @param $remoteDest string The backend storage path to upload the Ogg file to
+	 * @param $metaData   array  Array with metadata information
 	 *
 	 * @throws ScoreException if an error occurs.
 	 */
-	private static function generateOgg( $sourceFile, $factoryDir, $remoteDest ) {
+	private static function generateOgg( $sourceFile, $options, $remoteDest, &$metaData ) {
 		global $wgScoreTimidity;
 
 		$prof = new Score_ScopedProfiling(  __METHOD__ );
@@ -740,6 +786,7 @@ LILYPOND;
 		}
 
 		/* Working environment */
+		$factoryDir = $options['factory_directory'];
 		self::createDirectory( $factoryDir, 0700 );
 		$factoryOgg = "$factoryDir/file.ogg";
 
@@ -754,11 +801,25 @@ LILYPOND;
 		if ( ( $rc != 0 ) || !file_exists( $factoryOgg ) ) {
 			self::throwCallException( wfMessage( 'score-oggconversionerr' ), $output, $factoryDir );
 		}
-
-		/* Move resultant file to proper place */
-		$status = self::getBackend()->quickStore( array(
+		$ops = array();
+		// Move resultant file to proper place
+		$ops[] = array(
+			'op' => 'store',
 			'src' => $factoryOgg,
-			'dst' => $remoteDest ) );
+			'dst' => $remoteDest );
+
+		// Create metadata json
+		$metaData[basename($remoteDest)]['length'] = self::getLength( $factoryOgg );
+		$dstFileName = "{$options['file_name_prefix']}.json";
+		$dest = "{$options['dest_storage_path']}/$dstFileName";
+		$ops[] = array(
+			'op' => 'create',
+			'content' => FormatJson::encode( $metaData ),
+			'dst' => $dest );
+
+		// Execute the batch
+		$backend = self::getBackend();
+		$status = $backend->doQuickOperations( $ops );
 		if ( !$status->isOK() ) {
 			throw new ScoreException( wfMessage( 'score-backend-error', $status->getWikiText() ) );
 		}
@@ -848,6 +909,22 @@ LILYPOND;
 		if ( $rc === false ) {
 			throw new ScoreException( wfMessage( 'score-noinput', $destFile ) );
 		}
+	}
+
+	/**
+	 * get length of ogg vorbis file
+	 *
+	 * @param $path file system path to file
+	 *
+	 * @return float duration in seconds
+	 */
+	private static function getLength( $path ) {
+		//File_Ogg is packaged in TimedMediaHandler and OggHandler
+		if ( !class_exists( 'File_Ogg' ) ) {
+			require( 'File/Ogg.php' );
+		}
+		$f = new File_Ogg( $path );
+		return $f->getLength();
 	}
 
 	/**
