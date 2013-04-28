@@ -789,6 +789,47 @@ $1',
 	'score-vorbisoverrideogg' => 'Anda tidak boleh memohon persembahan Ogg/Vorbis dan menyatakan override_ogg pada masa yang sama.',
 );
 
+/** Norwegian Bokmål (norsk bokmål)
+ * @author Danmichaelo
+ */
+$messages['nb'] = array(
+	'score-abc2lynotexecutable' => 'Kunne ikke kjøre programmet for å konvertere fra ABC til LilyPond: $1 er ikke en eksekverbar fil. Sjekk at <code>$wgScoreAbc2Ly</code> er riktig.',
+	'score-abcconversionerr' => 'Kunne ikke konvertere ABC-fil til LilyPond-format:
+$1',
+	'score-chdirerr' => 'Kunne ikke åpne mappen $1',
+	'score-cleanerr' => 'Klarte ikke å fjerne gamle filer før ny rendering',
+	'score-compilererr' => 'Klarte ikke å kompilere LilyPond-inndatafil:
+$1',
+	'score-backend-error' => 'Klarte ikke kopiere de genererte filene til deres målplassering:
+$1',
+	'score-desc' => 'Legger til en tagg for å gjengi partiturer ved hjelp av LilyPond',
+	'score-getcwderr' => 'Klarte ikke finne navnet på den nåværende arbeidsmappen',
+	'score-invalidlang' => 'Partiturspråket lang="<nowiki>$1</nowiki>" er ugyldig. Språk som gjenkjennes per i dag er lang="lilypond" (standard) og lang="ABC".',
+	'score-invalidoggoverride' => 'Filen «<nowiki>$1</nowiki>» som du anga med override_ogg er ugyldig. Vennligst angi kun filnavnet, og utelat <nowiki>[[…]]</nowiki> og «{{ns:file}}:»-prefikset.',
+	'score-midioverridenotfound' => 'Kunne ikke finne filen «<nowiki>$1</nowiki>» som du anga med override_midi k. Vennligst angi kun filnavn, og utelat <nowiki>[[…]]</nowiki> og «{{ns:file}}:»-prefikset.',
+	'score-noabcinput' => 'Kunne ikke opprette ABC-kildefilen $1.',
+	'score-noimages' => 'Ingen partiturbilder ble generert. Sjekk om koden din er korrekt.',
+	'score-noinput' => 'Klarte ikke å opprette LilyPond-inndatafilen $1.',
+	'score-nomediahandler' => 'Ogg/Vorbis-konvertering krever en installert og konfigurert versjon av enten  [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler-tillegget] eller [https://www.mediawiki.org/wiki/Extension:OggHandler OggHandler-tillegget].',
+	'score-nomidi' => 'Ingen MIDI-fil ble generert. Hvis du arbeider i rå LilyPond-modus; sjekk at du har angir en passende \\midi-blokk.',
+	'score-nooutput' => 'Klarte ikke å opprette målmappen $1.',
+	'score-notexecutable' => 'Klarte ikke å kjøre LilyPond: $1 er ikke en eksekverbar fil. Sjekk at <code>$wgScoreLilyPond</code> er riktig.',
+	'score-oggconversionerr' => 'Klarte ikke å konvertere MIDI til Ogg/Vorbis:
+$1',
+	'score-oggoverridenotfound' => 'Filen «<nowiki>$1</nowiki>» som du anga med override_ogg eksisterer ikke.',
+	'score-page' => 'Side $1',
+	'score-pregreplaceerr' => 'PCRE-regulæruttrykkerstatning lyktes ikke.',
+	'score-readerr' => 'Klarte ikek å lese filen $1.',
+	'score-timiditynotexecutable' => 'Kunne ikke kjøre TiMidity++: $1 er ikke en eksekverbar fil. Sjekk at <code>$wgScoreTimidity</code> er korrekt definert.',
+	'score-renameerr' => 'Det oppsto en feil ved flytting av partiturfiler til mappen for opplasting.',
+	'score-trimerr' => 'Bildet kunne ikke beskjæres:
+$1
+Hvis problemet vedvarer kan du prøve å sette <code>$wgScoreTrim=false</code>.',
+	'score-versionerr' => 'Klarte ikke å finne LilyPond-versjon:
+$1',
+	'score-vorbisoverrideogg' => 'Du kan ikke be om Ogg/Vorbis-rendering og angi override_ogg samtidig.',
+);
+
 /** Dutch (Nederlands)
  * @author Konovalov
  * @author Patio
