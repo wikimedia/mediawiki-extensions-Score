@@ -637,12 +637,12 @@ class Score {
 		}
 
 		// Add the PNGs
-		if ( file_exists( $factoryImageTrimmed ) ) {
-			if ( $wgScoreTrim ) {
-				$src = $factoryImageTrimmed;
-			} else {
-				$src = $factoryImage;
-			}
+		if ( $wgScoreTrim ) {
+			$src = $factoryImageTrimmed;
+		} else {
+			$src = $factoryImage;
+		}
+		if ( file_exists( $src ) ) {
 			$dstFileName = "{$options['file_name_prefix']}.png";
 			$ops[] = array(
 				'op' => 'store',
