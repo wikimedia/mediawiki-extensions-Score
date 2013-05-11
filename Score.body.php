@@ -408,7 +408,7 @@ class Score {
 
 			/* Generate PNG and MIDI files if necessary */
 			$imageFileName = "{$options['file_name_prefix']}.png";
-			$multi1FileName = "{$options['file_name_prefix']}-1.png";
+			$multi1FileName = "{$options['file_name_prefix']}-page1.png";
 			$midiFileName = "{$options['file_name_prefix']}.midi";
 			$metaDataFileName = "{$options['file_name_prefix']}.json";
 
@@ -475,19 +475,21 @@ class Score {
 			} elseif ( isset( $existingFiles[$multi1FileName] ) ) {
 				$link = '';
 				for ( $i = 1; ; ++$i ) {
-					$fileName = "{$options['file_name_prefix']}-$i.png";
+					$fileName = "{$options['file_name_prefix']}-page$i.png";
 					if ( !isset( $existingFiles[$fileName] ) ) {
 						break;
 					}
-					list( $width, $height ) = $metaData[$imageFileName]['size'];
+					$pageNumb = wfMessage( 'score-page' )
+						->inContentLanguage()
+						->numParams( $i )
+						->plain();
+					list( $width, $height ) = $metaData[$fileName]['size'];
 					$link .= Html::rawElement( 'img', array(
 						'src' => "{$options['dest_url']}/$fileName",
 						'width' => $width,
 						'height' => $height,
-						'alt' => wfMessage( 'score-page' )
-							->inContentLanguage()
-							->numParams( $i )
-							->plain()
+						'alt' => $pageNumb,
+						'title' => $pageNumb
 					) );
 				}
 			} else {
@@ -624,11 +626,11 @@ class Score {
 				self::trimImage( $factoryImage, $factoryImageTrimmed );
 			} else {
 				for ( $i = 1; ; ++$i ) {
-					$src = "$factoryDirectory/file-$i.png";
+					$src = "$factoryDirectory/file-page$i.png";
 					if ( !file_exists( $src ) ) {
 						break;
 					}
-					$dest = "$factoryDirectory/file-$i-trimmed.png";
+					$dest = "$factoryDirectory/file-page$i-trimmed.png";
 					self::trimImage( $src, $dest );
 				}
 			}
@@ -675,14 +677,14 @@ class Score {
 		} else {
 			for ( $i = 1; ; ++$i ) {
 				if ( $wgScoreTrim ) {
-					$src = "$factoryDirectory/file-$i-trimmed.png";
+					$src = "$factoryDirectory/file-page$i-trimmed.png";
 				} else {
-					$src = "$factoryDirectory/file-$i.png";
+					$src = "$factoryDirectory/file-page$i.png";
 				}
 				if ( !file_exists( $src ) ) {
 					break;
 				}
-				$dstFileName = "{$options['file_name_prefix']}-$i.png";
+				$dstFileName = "{$options['file_name_prefix']}-page$i.png";
 				$dest = "{$options['dest_storage_path']}/$dstFileName";
 				$ops[] = array(
 					'op' => 'store',
