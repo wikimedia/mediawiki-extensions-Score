@@ -36,6 +36,7 @@ $1',
 	'score-backend-error' => 'Unable to copy the generated files to their final location:
 $1',
 	'score-desc' => 'Adds a tag for rendering musical scores with LilyPond',
+	'score-error-category' => 'Pages with score rendering errors',
 	'score-getcwderr' => 'Unable to obtain current working directory',
 	'score-invalidlang' => 'Invalid score language lang="<nowiki>$1</nowiki>". Currently recognized languages are lang="lilypond" (the default) and lang="ABC".',
 	'score-invalidoggoverride' => 'The file "<nowiki>$1</nowiki>" you specified with override_ogg is invalid. Please specify the file name only, omit <nowiki>[[…]]</nowiki> and the "{{ns:file}}:" prefix.',
@@ -75,6 +76,7 @@ $messages['qqq'] = array(
 	'score-backend-error' => 'Parameters:
 * $1 - result message which was returned',
 	'score-desc' => '{{desc|name=Score|url=http://www.mediawiki.org/wiki/Extension:Score}}',
+	'score-error-category' => 'Name of [[mw:Help:Tracking categories|tracking category]] to list pages where there was an error rendering the &lt;score&gt; tag.',
 	'score-getcwderr' => 'Displayed if the extension cannot obtain the current working directory.',
 	'score-invalidlang' => 'Displayed if the lang="…" attribute contains an unrecognized score language. $1 is the unrecognized language.',
 	'score-invalidoggoverride' => 'Displayed if the file specified with the override_ogg="…" attribute is invalid. $1 is the value of the override_ogg attribute.',

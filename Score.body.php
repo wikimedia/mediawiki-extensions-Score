@@ -342,6 +342,7 @@ class Score {
 
 			$html = self::generateHTML( $parser, $code, $options );
 		} catch ( ScoreException $e ) {
+			$parser->addTrackingCategory( 'score-error-category' );
 			$html = "$e";
 		}
 
