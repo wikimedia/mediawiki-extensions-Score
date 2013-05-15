@@ -398,7 +398,7 @@ class Score {
 		$prof = new Score_ScopedProfiling( __METHOD__ );
 		try {
 			$backend = self::getBackend();
-			$fileIter = $backend->getFileList( 
+			$fileIter = $backend->getFileList(
 				array( 'dir' => $options['dest_storage_path'], 'topOnly' => true ) );
 			$existingFiles = array();
 			foreach ( $fileIter as $file ) {
@@ -410,10 +410,10 @@ class Score {
 			$multi1FileName = "{$options['file_name_prefix']}-1.png";
 			$midiFileName = "{$options['file_name_prefix']}.midi";
 			if (
-				( 
-					!isset( $existingFiles[$imageFileName] ) 
-					&& !isset( $existingFiles[$multi1FileName] ) 
-				) 
+				(
+					!isset( $existingFiles[$imageFileName] )
+					&& !isset( $existingFiles[$multi1FileName] )
+				)
 				|| !isset( $existingFiles[$midiFileName] ) )
 			{
 				$existingFiles += self::generatePngAndMidi( $code, $options );
@@ -440,7 +440,7 @@ class Score {
 						$sourcePath = "{$options['factory_directory']}/file.midi";
 						if ( !file_exists( $sourcePath ) ) {
 							// No, need to fetch it from the backend
-							$sourceFileRef = $backend->getLocalReference( 
+							$sourceFileRef = $backend->getLocalReference(
 								array( 'src' => "{$options['dest_storage_path']}/$midiFileName" ) );
 							$sourcePath = $sourceFileRef->getPath();
 						}
@@ -458,7 +458,7 @@ class Score {
 					'src' => "{$options['dest_url']}/$imageFileName",
 					'alt' => $code,
 				) );
-			} elseif ( isset( $existingFiles[$multi1Path] ) ) { // @fixme: $multi1Path is undefined
+			} elseif ( isset( $existingFiles[$multi1FileName] ) ) {
 				$link = '';
 				for ( $i = 1; ; ++$i ) {
 					$fileName = "{$options['file_name_prefix']}-$i.png";
@@ -533,7 +533,7 @@ class Score {
 	 * @param $options array Rendering options. They are the same as for
 	 * 	Score::generateHTML().
 	 *
-	 * @return Array of file names placed in the remote dest dir, with the 
+	 * @return Array of file names placed in the remote dest dir, with the
 	 * 	file names in each key.
 	 *
 	 * @throws ScoreException on error.
@@ -783,7 +783,7 @@ LILYPOND;
 		/* Generate LilyPond code by score language */
 		switch ( $options['lang'] ) {
 		case 'ABC':
-			self::generateLilypondFromAbc( 
+			self::generateLilypondFromAbc(
 				$code, $options['factory_directory'], $options['lilypond_path'] );
 			break;
 		case 'lilypond':
