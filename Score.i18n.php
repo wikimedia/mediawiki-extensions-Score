@@ -1061,8 +1061,10 @@ $1',
 );
 
 /** Simplified Chinese (中文（简体）‎)
+ * @author Li3939108
  * @author Shirayuki
  */
 $messages['zh-hans'] = array(
+	'score-getcwderr' => '无法获取当前工作目录',
 	'score-page' => '页面$1',
 );
