@@ -492,10 +492,10 @@ class Score {
 						'sources' => array(
 							array(
 								'src' => $oggUrl,
-								'type' => 'audio/ogg; codecs="vorbis"',
-								'disablecontrols' => 'options,timedText'
+								'type' => 'audio/ogg; codecs="vorbis"'
 							)
 						),
+						'disablecontrols' => 'options,timedText',
 						'width' => self::DEFAULT_PLAYER_WIDTH
 					) );
 				} else /* class_exists( 'OggAudioDisplay' ) */ {
