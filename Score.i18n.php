@@ -375,6 +375,7 @@ $messages['fi'] = array(
 /** French (français)
  * @author Crochet.david
  * @author Gomoko
+ * @author Hello71
  * @author Od1n
  * @author Seb35
  */
@@ -389,6 +390,7 @@ $1',
 	'score-backend-error' => 'Impossible de copier les fichiers générés vers leur emplacement cible:
 $1',
 	'score-desc' => 'Ajoute une balise pour le rendu d’extraits musicaux avec LilyPond',
+	'score-error-category' => 'Pages avec erreurs de rendu de score',
 	'score-getcwderr' => 'Impossible d’obtenir le répertoire de travail actuel',
 	'score-invalidlang' => 'Langage de partition invalide lang="<nowiki>$1</nowiki>". Les langages actuellement reconnus sont lang="lilypond" (par défaut) et lang="ABC".',
 	'score-invalidoggoverride' => 'Le fichier "<nowiki>$1</nowiki>" que vous avez spécifié avec override_ogg n\'est pas valide. Veuillez spécifier uniquement le nom du fichier, omettez <nowiki>[[…]]</nowiki> et le préfixe "{{ns:file}}:".',
@@ -726,10 +728,11 @@ $1',
 	'score-backend-error' => 'Не можам да ги ставам создадените податотеки на нивното конечно место:
 $1',
 	'score-desc' => 'Додава ознака за испис на музички партитури со LilyPond',
+	'score-error-category' => 'Страници со грешки при испис на партитура',
 	'score-getcwderr' => 'Не можам да го добијам тековниот работен директориум',
 	'score-invalidlang' => 'lang="<nowiki>$1</nowiki>" не е важечки јазик за партитурата. Моментално се признаваат јазиците lang="lilypond" (основниот) и lang="ABC".',
 	'score-invalidoggoverride' => 'Податотеката „<nowiki>$1</nowiki>“ што ја укажавте со override_ogg е неважечка. Укажете го само нејзиното име, изоставувајќи го <nowiki>[[…]]</nowiki> и префиксот „{{ns:file}}:“.',
-	'score-midioverridenotfound' => 'Податотеката „<nowiki>$1</nowiki>“ што ја укажавте со override_midi не е пронајдена. Укажете го само нејзиното име, изоставувајќи го <nowiki>[[…]]</nowiki> и префиксот „{{ns:file}}:“.',
+	'score-midioverridenotfound' => 'Податотеката „<nowiki>$1</nowiki>“ што ја укажавте со override_midi не е пронајдена. Укажете го само нејзиното име, изоставувајќи го <nowiki>[[…]]</nowiki> и претставката „{{ns:file}}:“.',
 	'score-noabcinput' => 'Не можев да ја создадам изворната ABC податотека $1.',
 	'score-noimages' => 'Не создадов партитурни слики. Проверете го кодот.',
 	'score-noinput' => 'Не можев да ја создадам влезната податотека $1 за LilyPond.',
