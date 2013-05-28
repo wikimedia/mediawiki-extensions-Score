@@ -857,6 +857,7 @@ $1',
 	'score-backend-error' => 'Het was niet mogelijk de gemaakte bestanden naar hun uiteindelijke plaats te kopiëren:
 $1',
 	'score-desc' => 'Voegt een label toe voor het weergeven van bladmuziek met LilyPond',
+	'score-error-category' => "Pagina's met problemen in de verwerking van bladmuziek",
 	'score-getcwderr' => 'Het was niet mogelijk de ingestelde werkmap te gebruiken',
 	'score-invalidlang' => 'Er is een onjuiste taal voor bladmuziek opgegeven (lang="<nowiki>$1</nowiki>"). Op dit moment worden lang="lilypond" (standaard) en lang="ABC" ondersteund.',
 	'score-invalidoggoverride' => 'Het bestand "<nowiki>$1</nowiki>" dat u hebt opgegeven met "override_ogg" is ongeldig. Geef alleen de bestandsnaam op, laat <nowiki>[[…]]</nowiki> en het voorvoegsel "{{ns:file}}:" weg.',
@@ -1076,4 +1077,11 @@ $1',
 $messages['zh-hans'] = array(
 	'score-getcwderr' => '无法获取当前工作目录',
 	'score-page' => '页面$1',
+);
+
+/** Traditional Chinese (中文（繁體）‎)
+ * @author Simon Shek
+ */
+$messages['zh-hant'] = array(
+	'score-error-category' => '分數呈現錯誤的頁面',
 );
