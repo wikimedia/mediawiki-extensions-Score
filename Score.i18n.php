@@ -772,6 +772,7 @@ $1',
 	'score-backend-error' => 'Fail-fail yang dihasilkan tidak dapat disalin ke lokasi akhirnya:
 $1',
 	'score-desc' => 'Membubuh teg untuk mempersembahkan skor muzik dengan LilyPond',
+	'score-error-category' => 'Halaman yang mempunyai ralat pemaparan skor',
 	'score-getcwderr' => 'Direktori berfungsi semasa tidak dapat diperoleh',
 	'score-invalidlang' => 'Bahasa skor lang="<nowiki>$1</nowiki>" tidak sah. Bahasa-bahasa yang dikenali kini adalah lang="lilypond" (azali) dan lang="ABC".',
 	'score-invalidoggoverride' => 'Fail "<nowiki>$1</nowiki>" yang anda nyatakan dengan override_ogg tidak sah. Sila nyatakan nama fail sahaja, gugurkan <nowiki>[[…]]</nowiki> dan awalan "{{ns:file}}:".',
