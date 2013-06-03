@@ -183,6 +183,7 @@ $1',
 	'score-backend-error' => 'Nepodařilo se zkopírovat vygenerované soubory do cílového umístění:
 $1',
 	'score-desc' => 'Přidává značku pro vykreslování partitur pomocí LilyPondu',
+	'score-error-category' => 'Stránky s chybami při vykreslování partitur',
 	'score-getcwderr' => 'Nepodařilo se zjistit aktuální pracovní adresář',
 	'score-invalidlang' => 'Neplatný jazyk partitury lang="<nowiki>$1</nowiki>". V současné době jsou podporovány jazyky lang="lilypond" (implicitní hodnota) a lang="ABC".',
 	'score-invalidoggoverride' => 'Soubor „<nowiki>$1</nowiki>“ uvedený pomocí override_ogg je neplatný. Uveďte jen název souboru bez <nowiki>[[…]]</nowiki> a prefixu „{{ns:file}}“.',
@@ -455,6 +456,7 @@ $1',
 	'score-nomidi' => 'Non se xerou ficheiro MIDI ningún malia a solicitude. Se está a traballar no modo LilyPond en bruto asegúrese de proporcionar un bloque \\midi axeitado.',
 	'score-nooutput' => 'Erro ao crear o directorio de saída "$1".',
 	'score-notexecutable' => 'Non se puido executar o LilyPond: "$1" non é un ficheiro executable. Asegúrese de que <code>$wgScoreLilyPond</code> está definido correctamente.',
+	'score-nocontent' => 'Non se puido cargar o ficheiro "$1" desde o servidor.',
 	'score-oggconversionerr' => 'Non se puido converter o MIDI a Ogg/Vorbis:
 $1',
 	'score-oggoverridenotfound' => 'O ficheiro "<nowiki>$1</nowiki>" que especificou con override_ogg non existe.',
@@ -942,6 +944,13 @@ $1',
 	'score-vorbisoverrideogg' => "A peul pa ciamé ël rendicont d'Ogg/Vorbis e specifiché override_ogg ant ël midem temp.",
 );
 
+/** Brazilian Portuguese (português do Brasil)
+ * @author Luckas
+ */
+$messages['pt-br'] = array(
+	'score-page' => 'Página $1',
+);
+
 /** Romanian (română)
  * @author Stelistcristi
  */
@@ -1073,12 +1082,40 @@ $1',
 );
 
 /** Simplified Chinese (中文（简体）‎)
+ * @author Cwek
  * @author Li3939108
  * @author Shirayuki
  */
 $messages['zh-hans'] = array(
+	'score-abc2lynotexecutable' => 'ABC转LilyPond不能执行：$1不是可执行文件。请确认<code>$wgScoreAbc2Ly</code>设置正确。',
+	'score-abcconversionerr' => '无法将 ABC 文件转换为 LilyPond 格式： 
+$1',
+	'score-chdirerr' => '无法更改到目录$1',
+	'score-cleanerr' => '在清除旧文件之前，无法重新渲染',
+	'score-compilererr' => '无法编译 LilyPond 输入的文件：
+$1',
+	'score-backend-error' => '无法将所生成的文件复制到其最终位置：
+$1',
+	'score-desc' => '添加一个标记以LilyPond方式呈现音乐乐谱与',
 	'score-getcwderr' => '无法获取当前工作目录',
+	'score-invalidlang' => 'lang="<nowiki>$1</nowiki>"为不合法的score语言赋值。正确可用的赋值有lang="lilypond" (默认的) 和lang="ABC".',
+	'score-noabcinput' => 'ABC源文件 $1 无法创建。',
+	'score-noimages' => '没有乐谱图像生成。请检查您的乐谱代码。',
+	'score-noinput' => '创建 LilyPond 输入的文件 $1 失败。',
+	'score-nooutput' => '创建输出目录 $1 失败。',
+	'score-notexecutable' => 'LilyPond不能执行：$1不是可执行文件。请确认<code>$wgScoreLilyPond</code>设置正确。',
+	'score-oggconversionerr' => '无法将 MIDI 转换为 Ogg/Vorbis：
+$1',
 	'score-page' => '页面$1',
+	'score-pregreplaceerr' => 'PCRE 正则表达式替换失败',
+	'score-readerr' => '无法读取文件 $1 。',
+	'score-timiditynotexecutable' => 'TiMidity++不能执行：$1不是可执行文件。请确认<code>$wgScoreTimidity</code>设置正确。',
+	'score-renameerr' => '移动乐谱文件到上载目录时出错。',
+	'score-trimerr' => '图像不能被剪裁：
+$1
+如果此问题仍然存在，设置 <code>$wgScoreTrim=false</code>。',
+	'score-versionerr' => '无法获取 LilyPond 版本：
+$1',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
