@@ -449,7 +449,10 @@ class Score {
 					$oggFileName = "{$options['file_name_prefix']}.ogg";
 					$oggUrl = "{$options['dest_url']}/$oggFileName";
 					$oggPath = "{$options['dest_storage_path']}/$oggFileName";
-					if ( !isset( $existingFiles[$oggFileName] ) ) {
+					if (
+						!isset( $existingFiles[$oggFileName] ) ||
+						!isset( $metaData[$oggFileName]['length'] )
+					) {
 						// Maybe we just generated it
 						$sourcePath = "{$options['factory_directory']}/file.midi";
 						if ( !file_exists( $sourcePath ) ) {
