@@ -1129,9 +1129,11 @@ $1',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
+ * @author Justincheng12345
  * @author Simon Shek
  */
 $messages['zh-hant'] = array(
+	'score-desc' => '添加一個標記以使用LilyPond呈現樂譜',
 	'score-error-category' => '分數呈現錯誤的頁面',
 	'score-nocontent' => '無法從伺服器載入檔案 $1 。',
 );
