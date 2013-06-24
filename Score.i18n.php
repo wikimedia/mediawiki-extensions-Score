@@ -796,6 +796,7 @@ $1',
 	'score-nomidi' => 'Tiada fail MIDI yang dihasilkan biarpun dipohon. Jika anda menggunakan ragam LilyPond mentah, jangan lupa untuk menyediakan blok \\midi yang betul.',
 	'score-nooutput' => 'Direktori output $1 tidak dapat dicipta.',
 	'score-notexecutable' => 'LilyPond tidak dapat dilaksanakan: $1 bukan fail yang boleh dilaksanakan. Pastikan <code>$wgScoreLilyPond</code> diset dengan betul.',
+	'score-nocontent' => 'Fail $1 tidak dapat dimuatkan dari pelayan.',
 	'score-oggconversionerr' => 'MIDI tidak dapat ditukarkan kepada Ogg/Vorbis:
 $1',
 	'score-oggoverridenotfound' => 'Fail "<nowiki>$1</nowiki>" yang anda nyatakan dengan override_ogg tidak wujud.',
