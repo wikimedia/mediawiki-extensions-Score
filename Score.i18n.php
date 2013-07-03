@@ -719,6 +719,7 @@ $1',
 $messages['lb'] = array(
 	'score-chdirerr' => 'Et konnt net op de Repertoire $1 gewiesselt ginn',
 	'score-cleanerr' => 'Déi al Fichiere konnten net geläscht ginn ier se nei generéiert goufen',
+	'score-noabcinput' => 'Den ABC-Quellfichier $1 konnt net ugeluecht ginn.',
 	'score-nocontent' => 'De Fichier $1 konnt net vum Server geluede ginn.',
 	'score-oggconversionerr' => 'MIDI konnt net an Ogg/Vorbis ëmgewandelt ginn:
 $1',
