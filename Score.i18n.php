@@ -241,6 +241,7 @@ $1',
 	'score-nomidi' => 'Ingen MIDI blev dannet på trods af anmodning. Hvis du arbejder i rå LilyPond-tilstand, sørg for at angive en passende \\midi-blok.',
 	'score-nooutput' => 'Kunne ikke oprette folderen $1 til uddata.',
 	'score-notexecutable' => 'Kunne ikke køre LilyPond: $1 er ikke en eksekverbar fil. Kontroller at <code>$wgScoreLilyPond</code> er sat korrekt.',
+	'score-nocontent' => 'Kunne ikke indlæse filen $1 fra serveren.',
 	'score-oggconversionerr' => 'Kunne ikke omdanne MIDI til Ogg/Vorbis:
 $1',
 	'score-oggoverridenotfound' => 'Filen "<nowiki>$1</nowiki>", som du angav med override_ogg, findes ikke.',
