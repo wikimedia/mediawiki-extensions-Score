@@ -981,6 +981,7 @@ $1",
 	'score-compilererr' => "Non ge se riesce a combilà 'u file de ingresse LilyPond:
 $1",
 	'score-noabcinput' => "'U file sorgende ABC $1 non ge pò essere ccrejate.",
+	'score-nooutput' => "Non ge riesche a ccrejà 'a cartelle d'u resultate $1.",
 	'score-page' => 'Pàgene $1',
 	'score-readerr' => "Non ge riesche a leggere 'u file $1.",
 );
