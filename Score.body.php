@@ -605,12 +605,21 @@ class Score {
 		if ( !$rc ) {
 			throw new ScoreException( wfMessage( 'score-chdirerr', $factoryDirectory ) );
 		}
+
+		// Reduce the GC yield to 25% since testing indicates that this will
+		// reduce memory usage by a factor of 3 or so with minimal impact on
+		// CPU time. Tested with http://www.mutopiaproject.org/cgibin/piece-info.cgi?id=108
+		//
+		// Note that if Lilypond is compiled against Guile 2.0+, this
+		// probably won't do anything.
+		$env = array( 'LILYPOND_GC_YIELD' => '25' );
+
 		$cmd = wfEscapeShellArg( $wgScoreLilyPond )
 			. ' ' . wfEscapeShellArg( '-dsafe=#t' )
 			. ' -dbackend=ps --png --header=texidoc '
 			. wfEscapeShellArg( $factoryLy )
 			. ' 2>&1';
-		$output = wfShellExec( $cmd, $rc2 );
+		$output = wfShellExec( $cmd, $rc2, $env );
 		$rc = chdir( $oldcwd );
 		if ( !$rc ) {
 			throw new ScoreException( wfMessage( 'score-chdirerr', $oldcwd ) );
