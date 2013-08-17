@@ -1049,10 +1049,48 @@ Itakda ang <code>$wgScoreTrim=false</code> kapag nagtagal ang suliraning ito.',
 );
 
 /** Ukrainian (українська)
+ * @author Andriykopanytsia
  * @author Steve.rusyn
+ * @author SteveR
  */
 $messages['uk'] = array(
+	'score-abc2lynotexecutable' => 'Не вдалося виконати конвертер ABC у LilyPond:  $1  не є виконуваним файлом. Переконайтеся, що <code>$wgScoreAbc2Ly</code> правильно встановлено.',
+	'score-abcconversionerr' => 'Не можна перетворити файл формату ABC у формат LilyPond:
+$1',
+	'score-chdirerr' => 'Не можна змінити каталог $1',
+	'score-cleanerr' => 'Не в змозі очистити старі файли перед повторною візуалізацією',
+	'score-compilererr' => 'Не вдалося компілювати вхідний файл LilyPond:
+$1',
+	'score-backend-error' => 'Не вдалося скопіювати згенеровані файли до їх кінцевого розташування:
+$1',
+	'score-desc' => 'Додає тег для відтворення музичних партитур з LilyPond',
+	'score-error-category' => 'Сторінки з помилками візуалізації нот',
+	'score-getcwderr' => 'Не вдалося отримати поточний робочий каталог',
+	'score-invalidlang' => 'Невірна мова нот lang="<nowiki>$1</nowiki>". В даний час визнаними мовами є lang="lilypond" (типова) і lang="ABC".',
+	'score-invalidoggoverride' => 'Невірний файл "<nowiki>$1</nowiki>", вказаний вами з  override_ogg. Будь ласка, вкажіть лише назву файлу, опустіть <nowiki>[[…]]</nowiki> та "{{ns:file}}:" префікс.',
+	'score-midioverridenotfound' => 'Не знайдено файл "<nowiki>$1</nowiki>", вказаний вами з  override_midi. Будь ласка, вкажіть лише назву файлу, опустіть <nowiki>[[…]]</nowiki> та "{{ns:file}}:".',
+	'score-noabcinput' => 'Вихідний ABC-файл $1 не вдалося створити.',
+	'score-noimages' => 'Не створено жодних нотних зображень. Будь ласка, перевірте ваш нотний код.',
+	'score-noinput' => 'Не вдалося створити вхідний файл LilyPond $1 .',
+	'score-nomediahandler' => 'Перетворення Ogg/Vorbis вимагає встановленої та налаштованої версії або [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler extension],або [https://www.mediawiki.org/wiki/Extension:OggHandler OggHandler extension].',
+	'score-nomidi' => 'Не створено жодного файл MIDI, незважаючи на запит. Якщо ви працюєте з чистим LilyPond, то переконайтеся у правильному забезпеченні блоку \\midi.',
+	'score-nooutput' => 'Не вдалося створити вихідний каталог  $1.',
+	'score-notexecutable' => 'Не вдалося виконати LilyPond:  $1  не є виконуваним файлом. Переконайтеся, що <code>$wgScoreLilyPond</code> правильно встановлено.',
+	'score-nocontent' => 'Не вдалося завантажити файл  $1  з сервера.',
+	'score-oggconversionerr' => 'Не можна перетворити MIDI Ogg/Vorbis:
+$1',
+	'score-oggoverridenotfound' => 'Файл "<nowiki> $1 </nowiki>", вказаний вами з override_ogg, не існує.',
 	'score-page' => 'Сторінка $1',
+	'score-pregreplaceerr' => 'Невдала заміна регулярного виразу PCRE',
+	'score-readerr' => 'Не можна прочитати файл  $1.',
+	'score-timiditynotexecutable' => 'TiMidity++ не може бути виконаним: $1 не є виконуваним файлом. Переконайтеся, що <code>$wgScoreTimidity</code> задано вірно.',
+	'score-renameerr' => 'Помилка переміщення нотних файлів у каталог вивантаження',
+	'score-trimerr' => 'Зображення не може бути урізаним:
+$1
+Задайте <code>$wgScoreTrim=false</code>, якщо ця проблема зберігається.',
+	'score-versionerr' => 'Не вдалося отримати версію LilyPond:
+$1',
+	'score-vorbisoverrideogg' => 'Ви не можете запросити візуалізацію Ogg/Vorbis і вказати при цьому override_ogg.',
 );
 
 /** Vietnamese (Tiếng Việt)
