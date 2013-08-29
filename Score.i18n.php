@@ -984,10 +984,20 @@ $1",
 	'score-chdirerr' => "'Mbossibbile cangià jndr'à cartelle $1",
 	'score-compilererr' => "Non ge se riesce a combilà 'u file de ingresse LilyPond:
 $1",
+	'score-getcwderr' => "Non ge riesche ad avè 'a cartelle de fatìe de mò",
 	'score-noabcinput' => "'U file sorgende ABC $1 non ge pò essere ccrejate.",
+	'score-noinput' => "Non ge riesche a ccrejà 'u file de ingresse de LilyPound $1.",
 	'score-nooutput' => "Non ge riesche a ccrejà 'a cartelle d'u resultate $1.",
+	'score-nocontent' => "Non ge pozze carecà 'u file $1 da 'u server.",
+	'score-oggconversionerr' => "Non ge riesche a convertì MIDI jndr'à Ogg/Vorbis:
+$1",
+	'score-oggoverridenotfound' => '\'U file "<nowiki>$1</nowiki>" ca è specificate cu override_ogg non g\'esiste.',
 	'score-page' => 'Pàgene $1',
+	'score-pregreplaceerr' => "Sostituzione de l'espressione regolare PCRE non riuscite",
 	'score-readerr' => "Non ge riesche a leggere 'u file $1.",
+	'score-renameerr' => "Errore muvenne le file d'u pundegge jndr'à cartelle de carecamende.",
+	'score-versionerr' => "Non ge riesche ad avè 'a versione de LilyPound:
+$1",
 );
 
 /** Sinhala (සිංහල)
