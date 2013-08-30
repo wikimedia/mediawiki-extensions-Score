@@ -984,6 +984,7 @@ $1",
 	'score-chdirerr' => "'Mbossibbile cangià jndr'à cartelle $1",
 	'score-compilererr' => "Non ge se riesce a combilà 'u file de ingresse LilyPond:
 $1",
+	'score-error-category' => "Pàggene cu 'u pundegge de errore de renderizzazzione",
 	'score-getcwderr' => "Non ge riesche ad avè 'a cartelle de fatìe de mò",
 	'score-noabcinput' => "'U file sorgende ABC $1 non ge pò essere ccrejate.",
 	'score-noinput' => "Non ge riesche a ccrejà 'u file de ingresse de LilyPound $1.",
