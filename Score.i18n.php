@@ -77,7 +77,7 @@ $messages['qqq'] = array(
 	'score-backend-error' => 'Parameters:
 * $1 - result message which was returned',
 	'score-desc' => '{{desc|name=Score|url=http://www.mediawiki.org/wiki/Extension:Score}}',
-	'score-error-category' => 'Name of [[mw:Help:Tracking categories|tracking category]] to list pages where there was an error rendering the &lt;score&gt; tag.',
+	'score-error-category' => 'Name of [[mw:Help:Tracking categories|tracking category]] to list pages where there was an error rendering the <code><nowiki><score></nowiki></code> tag.',
 	'score-getcwderr' => 'Displayed if the extension cannot obtain the current working directory.',
 	'score-invalidlang' => 'Displayed if the lang="…" attribute contains an unrecognized score language. $1 is the unrecognized language.',
 	'score-invalidoggoverride' => 'Displayed if the file specified with the override_ogg="…" attribute is invalid. $1 is the value of the override_ogg attribute.',
