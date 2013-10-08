@@ -1002,6 +1002,14 @@ $1",
 $1",
 );
 
+/** Russian (русский)
+ * @author Okras
+ */
+$messages['ru'] = array(
+	'score-page' => 'Страница $1',
+	'score-readerr' => 'Не удаётся прочитать файл $1.',
+);
+
 /** Sinhala (සිංහල)
  * @author පසිඳු කාවින්ද
  */
