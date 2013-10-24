@@ -1021,6 +1021,39 @@ $messages['si'] = array(
 	'score-readerr' => '$1 ගොනුව කියවිය නොහැක.',
 );
 
+/** Swedish (svenska)
+ * @author Jopparn
+ * @author Skalman
+ */
+$messages['sv'] = array(
+	'score-abc2lynotexecutable' => 'ABC-till-LilyPond-konverteraren kunde inte köras: $1 är inte en körbar fil. Kontrollera att <code>$wgScoreAbc2Ly</code> är korrekt inställd.',
+	'score-abcconversionerr' => 'Det går inte att konvertera ABC-filen till LilyPond-formatet: $1',
+	'score-chdirerr' => 'Det går inte att ändra till katalogen $1',
+	'score-cleanerr' => 'Det gick inte att rensa gamla filer före omrenderingen',
+	'score-compilererr' => 'Det gick inte att kompilera LilyPond-indatafilen:
+$1',
+	'score-backend-error' => 'Det går inte att kopiera de genererade filerna till sin slutliga plats:
+$1',
+	'score-desc' => 'Lägger till en tagg för rendering av partitur med LilyPond',
+	'score-error-category' => 'Sidor med partiturrenderingsfel',
+	'score-getcwderr' => 'Det gick inte att hämta den aktuella arbetskatalogen',
+	'score-invalidlang' => 'Ogiltigt partiturspråk lang="<nowiki>$1</nowiki>". För närvarande accepterade språk är lang="lilypond" (standard) och lang="ABC".',
+	'score-invalidoggoverride' => 'Filen "<nowiki>$1</nowiki>" som du har angett med override_ogg är ogiltig. Vänligen ange endast filnamnet, utelämna <nowiki>[[...]]</nowiki> and prefixet "{{ns:file}}:".', # Fuzzy
+	'score-midioverridenotfound' => 'Filen "<nowiki>$1</nowiki>" som du har angett med override_midi kunde inte hittas. Vänligen ange endast filnamnet, utelämna <nowiki>[[...]]</nowiki> och prefixet "{{ns:file}}:".', # Fuzzy
+	'score-noabcinput' => 'ABC-källfilen $1 kunde inte skapas.',
+	'score-noimages' => 'Inga partiturbilder genererades. Kontrollera din partiturkod.',
+	'score-noinput' => 'Det gick inte att skapa LilyPond-indatafilen $1.',
+	'score-nomediahandler' => 'Ogg/Vorbis-konvertering kräver en installerad och konfigurerad version av antingen [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler-tillägget] eller [https://www.mediawiki.org/wiki/Extension:OggHandler OggHandler-tillägget].',
+	'score-nomidi' => 'Inga MIDI-filer genereras trots att de begärs. Om du arbetar i LilyPonds källkodsläge, se till att ge ett korrekt \\midi-block.',
+	'score-nooutput' => 'Det gick inte att skapa utdatakatalogen $1.',
+	'score-notexecutable' => 'Kunde inte köra LilyPond: $1 är inte en körbar fil. Kontrollera att <code>$wgScoreLilyPond</code> är korrekt inställd.',
+	'score-nocontent' => 'Kunde inte ladda filen $1 från servern.',
+	'score-oggconversionerr' => 'Det går inte att konvertera MIDI till Ogg/Vorbis:
+$1',
+	'score-oggoverridenotfound' => 'Filen "<nowiki>$1</nowiki>" du angett som override_ogg finns inte.',
+	'score-page' => 'Sida $1',
+);
+
 /** Swahili (Kiswahili)
  * @author Stephenwanjau
  */
