@@ -481,9 +481,10 @@ $1',
 
 /** Hebrew (עברית)
  * @author Amire80
+ * @author Guycn1
  */
 $messages['he'] = array(
-	'score-abc2lynotexecutable' => 'המרה מ־ABC ל־LilyPond לא יכלה להתבצע: $1 אינו קובץ בר־הרצה. נא לודא שהמשתנה <code>$wgScoreAbc2Ly</code> מוגדר נכון.',
+	'score-abc2lynotexecutable' => 'המרה מ־ABC ל־LilyPond לא יכלה להתבצע: $1 אינו קובץ בר־הרצה. נא לוודא שהמשתנה <code>$wgScoreAbc2Ly</code> מוגדר נכון.',
 	'score-abcconversionerr' => 'לא ניתן להמיר את קובץ ה־ABC לתסדיר LilyPond:
 $1',
 	'score-chdirerr' => 'לא ניתן לעבור את התיקייה $1',
