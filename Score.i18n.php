@@ -1019,17 +1019,22 @@ $1',
 	'score-desc' => 'Добавляет тег для визуализации музыкальных партитур с LilyPond',
 	'score-error-category' => 'Страницы с ошибками рендеринга партитур',
 	'score-getcwderr' => 'Не удается получить текущий рабочий каталог',
+	'score-invalidlang' => 'Недопустимый язык партитуры lang="<nowiki>$1</nowiki>". Распозноваемые в настоящее время языки: lang="lilypond" (по умолчанию) и lang="ABC".',
 	'score-noabcinput' => 'Исходный ABC-файл $1 не может быть создан.',
+	'score-noimages' => 'Изображения партитур не были созданы. Пожалуйста, проверьте код партитур.',
 	'score-noinput' => 'Не удалось создать входной файл LilyPond $1.',
+	'score-nomediahandler' => 'Ogg/Vorbis-преобразование требует установленной и настроенной версии [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler-расширения] или [https://www.mediawiki.org/wiki/Extension:OggHandler OggHandler-расширения].',
 	'score-nooutput' => 'Не удалось создать выходной каталог $1.',
 	'score-nocontent' => 'Не удалось загрузить с сервера файл $1.',
 	'score-oggconversionerr' => 'Не удаётся преобразовать MIDI в Ogg/Vorbis:
 $1',
+	'score-oggoverridenotfound' => 'Файл «<nowiki>$1</nowiki>», который вы определили с помощью override_ogg, не существует.',
 	'score-page' => 'Страница $1',
 	'score-readerr' => 'Не удаётся прочитать файл $1.',
 	'score-renameerr' => 'Ошибка при перемещении файлов партитур в каталог загрузки.',
 	'score-versionerr' => 'Не удаётся получить версию LilyPond:
 $1',
+	'score-vorbisoverrideogg' => 'Нельзя запросить Ogg/Vorbis-рендеринг и определить в то же время override_ogg.',
 );
 
 /** Sinhala (සිංහල)
