@@ -1038,6 +1038,9 @@ $1',
 	'score-readerr' => 'Не удаётся прочитать файл $1.',
 	'score-timiditynotexecutable' => 'TiMidity++ не может быть запущен: $1 не является исполняемым файлом. Убедитесь, что <code>$wgScoreTimidity</code> правильно установлен.',
 	'score-renameerr' => 'Ошибка при перемещении файлов партитур в каталог загрузки.',
+	'score-trimerr' => 'Изображение не может быть обрезано:
+$1
+Установите <code>$wgScoreTrim=false</code>, если эта проблема сохранится.',
 	'score-versionerr' => 'Не удаётся получить версию LilyPond:
 $1',
 	'score-vorbisoverrideogg' => 'Нельзя запросить Ogg/Vorbis-рендеринг и определить в то же время override_ogg.',
