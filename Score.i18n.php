@@ -1057,6 +1057,7 @@ $messages['si'] = array(
 /** Swedish (svenska)
  * @author Jopparn
  * @author Skalman
+ * @author WikiPhoenix
  */
 $messages['sv'] = array(
 	'score-abc2lynotexecutable' => 'ABC-till-LilyPond-konverteraren kunde inte köras: $1 är inte en körbar fil. Kontrollera att <code>$wgScoreAbc2Ly</code> är korrekt inställd.',
@@ -1071,8 +1072,8 @@ $1',
 	'score-error-category' => 'Sidor med partiturrenderingsfel',
 	'score-getcwderr' => 'Det gick inte att hämta den aktuella arbetskatalogen',
 	'score-invalidlang' => 'Ogiltigt partiturspråk lang="<nowiki>$1</nowiki>". För närvarande accepterade språk är lang="lilypond" (standard) och lang="ABC".',
-	'score-invalidoggoverride' => 'Filen "<nowiki>$1</nowiki>" som du har angett med override_ogg är ogiltig. Vänligen ange endast filnamnet, utelämna <nowiki>[[...]]</nowiki> and prefixet "{{ns:file}}:".', # Fuzzy
-	'score-midioverridenotfound' => 'Filen "<nowiki>$1</nowiki>" som du har angett med override_midi kunde inte hittas. Vänligen ange endast filnamnet, utelämna <nowiki>[[...]]</nowiki> och prefixet "{{ns:file}}:".', # Fuzzy
+	'score-invalidoggoverride' => 'Filen "<nowiki>$1</nowiki>" som du har angett med override_ogg är ogiltig. Vänligen ange endast filnamnet, utelämna <nowiki>[[…]]</nowiki> och prefixet "{{ns:file}}:".',
+	'score-midioverridenotfound' => 'Filen "<nowiki>$1</nowiki>" som du har angett med override_midi kunde inte hittas. Vänligen ange endast filnamnet, utelämna <nowiki>[[…]]</nowiki> och prefixet "{{ns:file}}:".',
 	'score-noabcinput' => 'ABC-källfilen $1 kunde inte skapas.',
 	'score-noimages' => 'Inga partiturbilder genererades. Kontrollera din partiturkod.',
 	'score-noinput' => 'Det gick inte att skapa LilyPond-indatafilen $1.',
@@ -1085,6 +1086,7 @@ $1',
 $1',
 	'score-oggoverridenotfound' => 'Filen "<nowiki>$1</nowiki>" du angett som override_ogg finns inte.',
 	'score-page' => 'Sida $1',
+	'score-readerr' => 'Det gick inte att läsa filen $1.',
 );
 
 /** Swahili (Kiswahili)
