@@ -172,7 +172,7 @@ $messages['br'] = array(
 	'score-readerr' => "Ne c'haller ket lenn ar restr $1.",
 );
 
-/** Czech (česky)
+/** Czech (čeština)
  * @author Mormegil
  */
 $messages['cs'] = array(
@@ -482,6 +482,7 @@ $1',
 /** Hebrew (עברית)
  * @author Amire80
  * @author Guycn1
+ * @author Guycn2
  */
 $messages['he'] = array(
 	'score-abc2lynotexecutable' => 'המרה מ־ABC ל־LilyPond לא יכלה להתבצע: $1 אינו קובץ בר־הרצה. נא לוודא שהמשתנה <code>$wgScoreAbc2Ly</code> מוגדר נכון.',
@@ -775,6 +776,14 @@ $1
 	'score-versionerr' => 'Не можам да ја добијам верзијата на LilyPond.
 $1',
 	'score-vorbisoverrideogg' => 'Не можете истовремено да побарате испис во Ogg/Vorbis и да укажете override_ogg.',
+);
+
+/** Malayalam (മലയാളം)
+ * @author Praveenp
+ */
+$messages['ml'] = array(
+	'score-desc' => 'ലിലിപോണ്ട് ഉപയോഗിച്ച് സംഗീതസ്കോറുകൾ പ്രദർശിപ്പിക്കാനുള്ള ടാഗ് ചേർക്കുന്നു',
+	'score-page' => 'താൾ $1',
 );
 
 /** Malay (Bahasa Melayu)
