@@ -254,21 +254,6 @@ class Score {
 			// Raw rendering?
 			$options['raw'] = array_key_exists( 'raw', $args );
 
-			// Input for cache key
-			$cacheOptions = array(
-				'code' => $code,
-				'lang' => $options['lang'],
-				'raw'  => $options['raw'],
-			);
-
-			/* image file path and URL prefixes */
-			$imageCacheName = wfBaseConvert( sha1( serialize( $cacheOptions ) ), 16, 36, 31 );
-			$imagePrefixEnd = "{$imageCacheName[0]}/" .
-				"{$imageCacheName[1]}/$imageCacheName";
-			$options['dest_storage_path'] = "$baseStoragePath/$imagePrefixEnd";
-			$options['dest_url'] = "$baseUrl/$imagePrefixEnd";
-			$options['file_name_prefix'] = substr( $imageCacheName, 0, 8 );
-
 			/* Midi linking? */
 			if ( array_key_exists( 'midi', $args ) ) {
 				$options['link_midi'] = $args['midi'];
@@ -307,6 +292,27 @@ class Score {
 			if ( $options['generate_ogg'] && ( $options['override_ogg'] !== false ) ) {
 				throw new ScoreException( wfMessage( 'score-vorbisoverrideogg' ) );
 			}
+
+			// Input for cache key
+			$cacheOptions = array(
+				'code' => $code,
+				'lang' => $options['lang'],
+				'raw'  => $options['raw'],
+			);
+			// Doing this separately to not invalidate too many existing keys.
+			if ( $options['raw'] && ( $options['generate_ogg']
+				|| ( $options['link_midi'] && !$options['override_midi'] )
+			) ) {
+				$cacheOptions['rawAndMidi'] = true;
+			}
+
+			/* image file path and URL prefixes */
+			$imageCacheName = wfBaseConvert( sha1( serialize( $cacheOptions ) ), 16, 36, 31 );
+			$imagePrefixEnd = "{$imageCacheName[0]}/" .
+				"{$imageCacheName[1]}/$imageCacheName";
+			$options['dest_storage_path'] = "$baseStoragePath/$imagePrefixEnd";
+			$options['dest_url'] = "$baseUrl/$imagePrefixEnd";
+			$options['file_name_prefix'] = substr( $imageCacheName, 0, 8 );
 
 			$html = self::generateHTML( $parser, $code, $options );
 		} catch ( ScoreException $e ) {
@@ -596,8 +602,14 @@ class Score {
 			$output .= "\nexited with status: " . $rc2;
 			self::throwCallException( wfMessage( 'score-compilererr' ), $output, $options['factory_directory'] );
 		}
-		if ( !file_exists( $factoryMidi ) ) {
-			throw new ScoreException( wfMessage( 'score-nomidi' ) );
+		$needMidi = false;
+		if ( !$options['raw'] ||
+			( $options['generate_ogg'] || ( $options['link_midi'] && !$options['override_midi'] ) )
+		) {
+			$needMidi = true;
+			if ( !file_exists( $factoryMidi ) ) {
+				throw new ScoreException( wfMessage( 'score-nomidi' ) );
+			}
 		}
 
 		/* trim output images if wanted */
@@ -628,14 +640,16 @@ class Score {
 		// Backend operation batch
 		$ops = array();
 
-		// Add the MIDI file to the batch
-		$ops[] = array(
-			'op' => 'store',
-			'src' => $factoryMidi,
-			'dst' => "{$options['dest_storage_path']}/{$options['file_name_prefix']}.midi" );
-		$newFiles["{$options['file_name_prefix']}.midi"] = true;
-		if ( !$status->isOK() ) {
-			throw new ScoreException( wfMessage( 'score-backend-error', $status->getWikiText() ) );
+		if ( $needMidi ) {
+			// Add the MIDI file to the batch
+			$ops[] = array(
+				'op' => 'store',
+				'src' => $factoryMidi,
+				'dst' => "{$options['dest_storage_path']}/{$options['file_name_prefix']}.midi" );
+			$newFiles["{$options['file_name_prefix']}.midi"] = true;
+			if ( !$status->isOK() ) {
+				throw new ScoreException( wfMessage( 'score-backend-error', $status->getWikiText() ) );
+			}
 		}
 
 		// Add the PNGs
