@@ -198,6 +198,7 @@ $1',
 	'score-nomidi' => 'Přestože byl vyžádán, nevytvořil se MIDI soubor. Pokud pracujete v přímém režimu LilyPond, nezapomeňte uvést platný blok \\midi.',
 	'score-nooutput' => 'Nepodařilo se vytvořit výstupní adresář $1.',
 	'score-notexecutable' => 'Nepodařilo se spustit LilyPond: $1 není spustitelný soubor. Ověřte, že máte správně nastaveno <code>$wgScoreLilyPond</code>.',
+	'score-nocontent' => 'Nelze načíst soubor $1 ze serveru.',
 	'score-oggconversionerr' => 'Převod MIDI do Ogg/Vorbis se nezdařil:
 $1',
 	'score-oggoverridenotfound' => 'Soubor „<nowiki>$1</nowiki>“ uvedený pomocí override_ogg neexistuje.',
