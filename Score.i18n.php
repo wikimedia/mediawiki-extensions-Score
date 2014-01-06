@@ -325,10 +325,11 @@ $messages['en-gb'] = array(
 );
 
 /** Esperanto (Esperanto)
+ * @author KuboF
  * @author Yekrats
  */
 $messages['eo'] = array(
-	'score-page' => 'Paĝo 1', # Fuzzy
+	'score-page' => 'Paĝo $1',
 );
 
 /** Spanish (español)
