@@ -565,7 +565,7 @@ $1',
 	'score-noabcinput' => 'Le file de fonte ABC $1 non poteva esser create.',
 	'score-noimages' => 'Nulle imagine de partitura ha essite generate. Per favor verifica tu codice de partitura.',
 	'score-noinput' => 'Le creation del file de entrata LilyPond $1 ha fallite.',
-	'score-nomediahandler' => 'Le conversion in Ogg/Vorbis require un extension OggHandler installate e configurate, vide [https://www.mediawiki.org/wiki/Extension:OggHandler Extension:OggHandler].', # Fuzzy
+	'score-nomediahandler' => 'Le conversion in Ogg/Vorbis require un extension [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler] o [https://www.mediawiki.org/wiki/Extension:OggHandler OggHandler] installate e configurate.',
 	'score-nomidi' => 'Nulle file MIDI ha essite generate, malgrado que illo esseva requestate. Si tu travalia in modo LilyPond brute, assecura te de fornir un bloco \\midi correcte.',
 	'score-nooutput' => 'Le creation del directorio de output $1 ha fallite.',
 	'score-notexecutable' => 'Impossibile executar LilyPond: $1 non es un file executabile. Assecura te que <code>$wgScoreLilyPond</code> es definite correctemente.',
