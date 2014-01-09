@@ -920,10 +920,12 @@ $1',
 
 /** Polish (polski)
  * @author BeginaFelicysym
+ * @author Matma Rex
  */
 $messages['pl'] = array(
 	'score-chdirerr' => 'Nie można zmienić do katalogu $1',
 	'score-cleanerr' => 'Nie można usunąć starych plików przed ponownym wyrenderowaniem',
+	'score-error-category' => 'Strony z błędami w zapisie muzycznym',
 	'score-nooutput' => 'Nie można utworzyć katalogu docelowego  $1 .',
 	'score-oggconversionerr' => 'Nie można przekonwertować MIDI na Ogg/Vorbis:
 $1',
