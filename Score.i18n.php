@@ -374,6 +374,14 @@ $1',
 	'score-vorbisoverrideogg' => 'No puede solicitar una renderización Ogg/Vorbis y especificar override_ogg al mismo tiempo.',
 );
 
+/** Persian (فارسی)
+ * @author Armin1392
+ */
+$messages['fa'] = array(
+	'score-page' => 'صفحهٔ $1',
+	'score-readerr' => 'قادر به خواندن پوشهٔ $1 نیست.',
+);
+
 /** Finnish (suomi)
  * @author Crt
  * @author VezonThunder
