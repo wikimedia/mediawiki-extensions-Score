@@ -378,6 +378,9 @@ $1',
  * @author Armin1392
  */
 $messages['fa'] = array(
+	'score-nocontent' => 'پوشهٔ $1 نتوانست از سرور بارگذاری شود.',
+	'score-oggconversionerr' => 'قادر به تبدیل ام‌آی‌دی به آگگ/وربیس نیست:
+$1',
 	'score-page' => 'صفحهٔ $1',
 	'score-readerr' => 'قادر به خواندن پوشهٔ $1 نیست.',
 );
