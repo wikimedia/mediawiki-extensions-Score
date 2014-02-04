@@ -172,6 +172,13 @@ $messages['br'] = array(
 	'score-readerr' => "Ne c'haller ket lenn ar restr $1.",
 );
 
+/** Chechen (нохчийн)
+ * @author Умар
+ */
+$messages['ce'] = array(
+	'score-desc' => 'Музыкан LilyPond партитур кечян тег тӀетуху',
+);
+
 /** Czech (čeština)
  * @author Mormegil
  */
