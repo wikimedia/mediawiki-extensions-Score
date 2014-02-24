@@ -406,6 +406,7 @@ $messages['fi'] = array(
  * @author Gomoko
  * @author Hello71
  * @author Od1n
+ * @author Orlodrim
  * @author Seb35
  */
 $messages['fr'] = array(
@@ -419,7 +420,7 @@ $1',
 	'score-backend-error' => 'Impossible de copier les fichiers générés vers leur emplacement cible:
 $1',
 	'score-desc' => 'Ajoute une balise pour le rendu d’extraits musicaux avec LilyPond',
-	'score-error-category' => 'Pages avec erreurs de rendu de score',
+	'score-error-category' => 'Pages avec erreurs de rendu de partition',
 	'score-getcwderr' => 'Impossible d’obtenir le répertoire de travail actuel',
 	'score-invalidlang' => 'Langage de partition invalide lang="<nowiki>$1</nowiki>". Les langages actuellement reconnus sont lang="lilypond" (par défaut) et lang="ABC".',
 	'score-invalidoggoverride' => 'Le fichier "<nowiki>$1</nowiki>" que vous avez spécifié avec override_ogg n\'est pas valide. Veuillez spécifier uniquement le nom du fichier, omettez <nowiki>[[…]]</nowiki> et le préfixe "{{ns:file}}:".',
