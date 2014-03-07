@@ -1123,6 +1123,7 @@ $messages['si'] = array(
 
 /** Swedish (svenska)
  * @author Jopparn
+ * @author Lokal Profil
  * @author Skalman
  * @author WikiPhoenix
  */
@@ -1153,7 +1154,16 @@ $1',
 $1',
 	'score-oggoverridenotfound' => 'Filen "<nowiki>$1</nowiki>" du angett som override_ogg finns inte.',
 	'score-page' => 'Sida $1',
+	'score-pregreplaceerr' => 'Ersättning med PCRE reguljärt uttryck misslyckades',
 	'score-readerr' => 'Det gick inte att läsa filen $1.',
+	'score-timiditynotexecutable' => 'TiMidity++ kunde inte köras: $1 är inte en körbar fil. Kontrollera att <code>$wgScoreTimidity</code> är korrekt inställd.',
+	'score-renameerr' => 'Fel vid flytt av partiturfiler till upladdningskatalogen.',
+	'score-trimerr' => 'Bilden kunde inte trimmas:
+$1
+Ange <code>$wgScoreTrim=false</code> om problemet kvarstår.',
+	'score-versionerr' => 'Det gick inte att hämta LilyPond version:
+$1',
+	'score-vorbisoverrideogg' => 'Du kan inte begära Ogg/Vorbis rendering och anger override_ogg på samma gång.',
 );
 
 /** Swahili (Kiswahili)
