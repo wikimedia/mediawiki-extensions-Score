@@ -28,39 +28,6 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 /**
- * Helper class for mixing profiling with code that throws exceptions.
- * It produces matching wfProfileIn/Out calls for scopes.
- * This could be done with a try-finally construct instead, but we want to be
- * backwards compatible with PHP 5.3 for now.
- */
-class Score_ScopedProfiling {
-	/**
-	 * Profiling ID such as a method name.
-	 */
-	private $id;
-
-	/**
-	 * Creates new scoped profiling.
-	 * The new scoped profiling will profile out as soon as its destructor
-	 * is called (normally when the variable holding the created object
-	 * goes out of scope).
-	 *
-	 * @param $id string profiling ID, most commonly a method name.
-	 */
-	public function __construct( $id ) {
-		$this->id = $id;
-		wfProfileIn( $id );
-	}
-
-	/**
-	 * Out-profiles on end of scope.
-	 */
-	public function __destruct() {
-		wfProfileOut( $this->id );
-	}
-}
-
-/**
  * Score exception
  */
 class ScoreException extends Exception {
@@ -148,7 +115,7 @@ class Score {
 	private static function getLilypondVersion() {
 		global $wgScoreLilyPond;
 
-		$prof = new Score_ScopedProfiling( __METHOD__ );
+		$prof = new ProfileSection( __METHOD__ );
 
 		if ( !is_executable( $wgScoreLilyPond ) ) {
 			throw new ScoreException( wfMessage( 'score-notexecutable', $wgScoreLilyPond ) );
@@ -240,7 +207,7 @@ class Score {
 	public static function render( $code, array $args, Parser $parser, PPFrame $frame ) {
 		global $wgTmpDirectory;
 
-		$prof = new Score_ScopedProfiling( __METHOD__ );
+		$prof = new ProfileSection( __METHOD__ );
 
 		try {
 			$baseUrl = self::getBaseUrl();
@@ -397,7 +364,7 @@ class Score {
 	 * @throws ScoreException if an error occurs.
 	 */
 	private static function generateHTML( &$parser, $code, $options ) {
-		$prof = new Score_ScopedProfiling( __METHOD__ );
+		$prof = new ProfileSection( __METHOD__ );
 		try {
 			$backend = self::getBackend();
 			$fileIter = $backend->getFileList(
@@ -567,7 +534,7 @@ class Score {
 	private static function generatePngAndMidi( $code, $options, &$metaData ) {
 		global $wgScoreLilyPond, $wgScoreTrim;
 
-		$prof = new Score_ScopedProfiling( __METHOD__ );
+		$prof = new ProfileSection( __METHOD__ );
 
 		if ( !is_executable( $wgScoreLilyPond ) ) {
 			throw new ScoreException( wfMessage( 'score-notexecutable', $wgScoreLilyPond ) );
@@ -794,7 +761,7 @@ LILYPOND;
 	private static function generateOgg( $sourceFile, $options, $remoteDest, &$metaData ) {
 		global $wgScoreTimidity;
 
-		$prof = new Score_ScopedProfiling(  __METHOD__ );
+		$prof = new ProfileSection(  __METHOD__ );
 
 		if ( !is_executable( $wgScoreTimidity ) ) {
 			throw new ScoreException( wfMessage( 'score-timiditynotexecutable', $wgScoreTimidity ) );
@@ -852,7 +819,7 @@ LILYPOND;
 	 * @throws MWException if an error occurs.
 	 */
 	private static function generateLilypond( $code, $options ) {
-		$prof = new Score_ScopedProfiling( __METHOD__ );
+		$prof = new ProfileSection( __METHOD__ );
 
 		/* Delete old file if necessary */
 		self::cleanupFile( $options['lilypond_path'] );
@@ -885,7 +852,7 @@ LILYPOND;
 	private static function generateLilypondFromAbc( $code, $factoryDirectory, $destFile ) {
 		global $wgScoreAbc2Ly;
 
-		$prof = new Score_ScopedProfiling( __METHOD__ );
+		$prof = new ProfileSection( __METHOD__ );
 
 		if ( !is_executable( $wgScoreAbc2Ly ) ) {
 			throw new ScoreException( wfMessage( 'score-abc2lynotexecutable', $wgScoreAbc2Ly ) );
@@ -953,7 +920,7 @@ LILYPOND;
 	private static function trimImage( $source, $dest ) {
 		global $wgImageMagickConvertCommand;
 
-		$prof = new Score_ScopedProfiling( __METHOD__ );
+		$prof = new ProfileSection( __METHOD__ );
 
 		$cmd = wfEscapeShellArg( $wgImageMagickConvertCommand )
 			. ' -trim '

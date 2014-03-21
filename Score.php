@@ -94,7 +94,6 @@ $wgHooks['ParserFirstCallInit'][] = 'efScoreExtension';
 $wgExtensionMessagesFiles['Score'] = "$scoreBase/Score.i18n.php";
 $wgAutoloadClasses['Score'] = "$scoreBase/Score.body.php";
 $wgAutoloadClasses['ScoreException'] = "$scoreBase/Score.body.php";
-$wgAutoloadClasses['Score_ScopedProfiling'] = "$scoreBase/Score.body.php";
 
 /**
  * Init routine.
