@@ -1,0 +1,35 @@
+{
+    "@metadata": {
+        "authors": [
+            "Shirayuki"
+        ]
+    },
+    "score-abc2lynotexecutable": "ABC から LilyPond へのコンバーターを実行できません: $1 は実行可能ファイルではありません。<code>$wgScoreAbc2Ly</code> が正しく設定されているか確認してください。",
+    "score-abcconversionerr": "ABC ファイルを LilyPond 形式に変換できません:\n$1",
+    "score-chdirerr": "現在のディレクトリを $1 に変更できません",
+    "score-cleanerr": "再レンダリングの前に、古いファイルを消去できませんでした",
+    "score-compilererr": "LilyPond 入力ファイルをコンパイルできません:\n$1",
+    "score-backend-error": "生成したファイルを最終的な出力先にコピーできません:\n$1",
+    "score-desc": "LilyPond で楽譜を描画する、タグを追加する",
+    "score-getcwderr": "現在のディレクトリを取得できません",
+    "score-invalidlang": "楽譜の言語 lang=\"<nowiki>$1</nowiki>\" は無効です。現在認識できる言語は lang=\"lilypond\" (既定) および lang=\"ABC\" です。",
+    "score-invalidoggoverride": "override_ogg に指定されたファイル「<nowiki>$1</nowiki>」は無効です。<nowiki>[[…]]</nowiki> や「{{ns:file}}:」を省略して、ファイル名のみを指定してください。",
+    "score-midioverridenotfound": "override_midi で指定されたファイル「<nowiki>$1</nowiki>」が見つかりません。<nowiki>[[…]]</nowiki> や「{{ns:file}}:」を省略して、ファイル名のみを指定してください。",
+    "score-noabcinput": "ABC ソース ファイル $1 を作成できませんでした。",
+    "score-noimages": "楽譜画像を生成できませんでした。ソースコードを確認してください。",
+    "score-noinput": "LilyPond 入力ファイル $1 の作成に失敗しました。",
+    "score-nomediahandler": "Ogg/Vorbis 変換には、[https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler 拡張機能]または [https://www.mediawiki.org/wiki/Extension:OggHandler/ja OggHandler 拡張機能]のいずれかのバージョンのインストール/設定が必要です。",
+    "score-nooutput": "出力ディレクトリ $1 の作成に失敗しました。",
+    "score-notexecutable": "LilyPond を実行できませんでした: $1 は実行可能ファイルではありません。<code>$wgScoreLilyPond</code> が正しく設定されているか確認してください。",
+    "score-nocontent": "サーバーからファイル $1 を読み込めません。",
+    "score-oggconversionerr": "MIDI を Ogg/Vorbis に変換できません:\n$1",
+    "score-oggoverridenotfound": "override_ogg で指定されたファイル「$1」は存在しません。",
+    "score-page": "ページ $1",
+    "score-pregreplaceerr": "PCRE 正規表現置換に失敗しました",
+    "score-readerr": "ファイル $1 から読み取れません。",
+    "score-timiditynotexecutable": "TiMidity++ を実行できませんでした: $1 は実行可能ファイルではありません。<code>$wgScoreTimidity</code> が正しく設定されているか確認してください。",
+    "score-renameerr": "楽譜ファイルをアップロードディレクトリに移動する際にエラーが発生しました。",
+    "score-trimerr": "画像をトリミングできませんでした:\n$1\nこの問題が続く場合は、<code>$wgScoreTrim=false</code> を設定してください。",
+    "score-versionerr": "LilyPond のバージョンを取得できません:\n$1",
+    "score-vorbisoverrideogg": "Ogg/Vorbis のレンダリングの要求と override_ogg の指定は、同時にはできません。"
+}

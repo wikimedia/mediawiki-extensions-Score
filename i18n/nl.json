@@ -1,0 +1,40 @@
+{
+    "@metadata": {
+        "authors": [
+            "Konovalov",
+            "Patio",
+            "SPQRobin",
+            "Siebrand"
+        ]
+    },
+    "score-abc2lynotexecutable": "Het conversieprogramma voor ABC naar LilyPond kon niet uitgevoerd worden: $1 is geen uitvoerbaar bestand. Zorg dat de instelling <code>$wgScoreAbc2Ly</code> correct is.",
+    "score-abcconversionerr": "Het was niet mogelijk het ABC-bestand om te zetten naar LilyPond:\n$1",
+    "score-chdirerr": "Het was niet mogelijk naar de map $1 te gaan.",
+    "score-cleanerr": "Het was niet mogelijk de oude bestanden op te ruimen voor het opnieuw aanmaken van de afbeeldingen",
+    "score-compilererr": "Het was niet mogelijk de LilyPondinvoer te compileren:\n$1",
+    "score-backend-error": "Het was niet mogelijk de gemaakte bestanden naar hun uiteindelijke plaats te kopiëren:\n$1",
+    "score-desc": "Voegt een label toe voor het weergeven van bladmuziek met LilyPond",
+    "score-error-category": "Pagina's met problemen in de verwerking van bladmuziek",
+    "score-getcwderr": "Het was niet mogelijk de ingestelde werkmap te gebruiken",
+    "score-invalidlang": "Er is een onjuiste taal voor bladmuziek opgegeven (lang=\"<nowiki>$1</nowiki>\"). Op dit moment worden lang=\"lilypond\" (standaard) en lang=\"ABC\" ondersteund.",
+    "score-invalidoggoverride": "Het bestand \"<nowiki>$1</nowiki>\" dat u hebt opgegeven met \"override_ogg\" is ongeldig. Geef alleen de bestandsnaam op, laat <nowiki>[[…]]</nowiki> en het voorvoegsel \"{{ns:file}}:\" weg.",
+    "score-midioverridenotfound": "Het bestand \"<nowiki>$1</nowiki>\" dat u hebt opgegeven met \"override_midi\" kon niet gevonden worden. Geef alleen de bestandsnaam op, laat <nowiki>[[…]]</nowiki> en het voorvoegsel \"{{ns:file}}:\" weg.",
+    "score-noabcinput": "Het ABC-bronbestand $1 kon niet aangemaakt worden",
+    "score-noimages": "Er zijn geen afbeeldingen met bladmuziek aangemaakt. Controleer uw notatie.",
+    "score-noinput": "Het was niet mogelijk het invoerbestand $1 voor LilyPond aan te maken",
+    "score-nomediahandler": "Ogg/Vorbis omschakeling vereist een geïnstalleerde en geconfigureerde versie van de [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler extensie] of de [https://www.mediawiki.org/wiki/Extension:OggHandler OggHandler extensie].",
+    "score-nomidi": "Ondank een verzoek, is er geen MIDI-bestand aangemaakt. Als u in de modus LilyPond ruw werkt, zorg dan dat u een correcte opmaak van het onderdeel \"\\midi\" hebt.",
+    "score-nooutput": "Het was niet mogelijk de uitvoermap $1 aan te maken",
+    "score-notexecutable": "Het was niet mogelijk om LilyPond uit te voeren: $1 is geen uitvoerbaar bestand. Zorg dat de instelling <code>$wgScoreLilyPond</code> correct is.",
+    "score-nocontent": "Het bestand $1 kon niet van de server geladen worden.",
+    "score-oggconversionerr": "Het was niet mogelijk MIDI naar Ogg/Vorbis om te zetten:\n$1",
+    "score-oggoverridenotfound": "Het bestand \"<nowiki>$1</nowiki>\" dat u hebt opgegeven met \"override_ogg\" bestaat niet.",
+    "score-page": "Pagina $1",
+    "score-pregreplaceerr": "Vervangen met behulp van een PCRE reguliere expressie is mislukt",
+    "score-readerr": "Het bestand $1 kan niet gelezen worden.",
+    "score-timiditynotexecutable": "TiMidity++ kon niet uitgevoerd worden: $1 is geen uitvoerbaar bestand. Zorg dat de instelling <code>$wgScoreTimidity</code> correct is.",
+    "score-renameerr": "Er is een fout opgetreden tijdens het verplaatsen van de bladmuziekbestanden naar de uploadmap",
+    "score-trimerr": "De afbeelding kon niet bijgesneden worden:\n$1\nStel de volgende waarde in als dit probleem blijft bestaan: <code>$wgScoreTrim=false</code>.",
+    "score-versionerr": "Het was niet mogelijk de LiliPond-versie te achterhalen:\n$1",
+    "score-vorbisoverrideogg": "U kunt niet vragen om Ogg/Vorbisrendering en tegelijkertijd \"override_ogg\" gebruiken."
+}

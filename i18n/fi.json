@@ -1,0 +1,10 @@
+{
+    "@metadata": {
+        "authors": [
+            "Crt",
+            "VezonThunder"
+        ]
+    },
+    "score-page": "Sivu $1",
+    "score-readerr": "Tiedostoa $1 ei voitu lukea."
+}

@@ -1,0 +1,40 @@
+{
+    "@metadata": {
+        "authors": [
+            "Cwek",
+            "Hzy980512",
+            "Li3939108",
+            "Shirayuki"
+        ]
+    },
+    "score-abc2lynotexecutable": "无法运行ABC转LilyPond转换器：$1不是可执行文件。请确认<code>$wgScoreAbc2Ly</code>设置正确。",
+    "score-abcconversionerr": "无法将 ABC 文件转换为 LilyPond 格式： \n$1",
+    "score-chdirerr": "无法更改到目录$1",
+    "score-cleanerr": "在清除旧文件之前，无法重新渲染",
+    "score-compilererr": "无法编译 LilyPond 输入的文件：\n$1",
+    "score-backend-error": "无法将所生成的文件复制到其最终位置：\n$1",
+    "score-desc": "添加一个标记来以LilyPond呈现乐谱",
+    "score-error-category": "有乐谱输出错误的页面",
+    "score-getcwderr": "无法获取当前工作目录",
+    "score-invalidlang": "lang=\"<nowiki>$1</nowiki>\"为不合法的score语言赋值。正确可用的赋值有lang=\"lilypond\" (默认的) 和lang=\"ABC\".",
+    "score-invalidoggoverride": "您用override_ogg指定的文件“<nowiki>$1</nowiki>”无效。请仅用override_ogg指定文件名，去掉<nowiki>[[…]]</nowiki>与“{{ns:file}}:”。",
+    "score-midioverridenotfound": "您用override_midi指定的文件“<nowiki>$1</nowiki>”无效。请仅用override_midi指定文件名，去掉<nowiki>[[…]]</nowiki>与“{{ns:file}}:”。",
+    "score-noabcinput": "ABC源文件 $1 无法创建。",
+    "score-noimages": "没有乐谱图像生成。请检查您的乐谱代码。",
+    "score-noinput": "创建 LilyPond 输入的文件 $1 失败。",
+    "score-nomediahandler": "Ogg/Vorbis转换需要安装并配置好[https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler扩展]或[https://www.mediawiki.org/wiki/Extension:OggHandler OggHandler扩展]。",
+    "score-nomidi": "虽然已请求但MIDI文件没有生成。如果您正在使用原始LilyPond模式，确保\\midi已提供正确。",
+    "score-nooutput": "创建输出目录 $1 失败。",
+    "score-notexecutable": "LilyPond不能执行：$1不是可执行文件。请确认<code>$wgScoreLilyPond</code>设置正确。",
+    "score-nocontent": "无法从服务器加载文件$1。",
+    "score-oggconversionerr": "无法将 MIDI 转换为 Ogg/Vorbis：\n$1",
+    "score-oggoverridenotfound": "您用override_ogg指定的文件“<nowiki>$1</nowiki>”不存在。",
+    "score-page": "页面$1",
+    "score-pregreplaceerr": "PCRE 正则表达式替换失败",
+    "score-readerr": "无法读取文件$1。",
+    "score-timiditynotexecutable": "无法运行TiMidity++：$1不是可执行文件。请确认<code>$wgScoreTimidity</code>设置正确。",
+    "score-renameerr": "移动乐谱文件到上载目录时出错。",
+    "score-trimerr": "图像不能被剪裁：\n$1\n如果此问题仍然存在，设置 <code>$wgScoreTrim=false</code>。",
+    "score-versionerr": "无法获取 LilyPond 版本：\n$1",
+    "score-vorbisoverrideogg": "您不能要求Ogg/Vorbis成像时指定override_ogg。"
+}

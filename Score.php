@@ -80,7 +80,7 @@ $wgScoreFileBackend = false;
 $wgExtensionCredits['parserhooks'][] = array(
 	'name' => 'Score',
 	'path' => __FILE__,
-	'version' => '0.2',
+	'version' => '0.3.0',
 	'author' => 'Alexander Klauer',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:Score',
 	'descriptionmsg' => 'score-desc'
@@ -91,6 +91,7 @@ $wgExtensionCredits['parserhooks'][] = array(
  */
 $scoreBase = __DIR__;
 $wgHooks['ParserFirstCallInit'][] = 'efScoreExtension';
+$wgMessagesDirs['Score'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['Score'] = "$scoreBase/Score.i18n.php";
 $wgAutoloadClasses['Score'] = "$scoreBase/Score.body.php";
 $wgAutoloadClasses['ScoreException'] = "$scoreBase/Score.body.php";
