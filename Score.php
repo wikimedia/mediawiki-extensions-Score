@@ -95,6 +95,7 @@ $wgMessagesDirs['Score'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['Score'] = "$scoreBase/Score.i18n.php";
 $wgAutoloadClasses['Score'] = "$scoreBase/Score.body.php";
 $wgAutoloadClasses['ScoreException'] = "$scoreBase/Score.body.php";
+$wgTrackingCategories[] = 'score-error-category';
 
 /**
  * Init routine.

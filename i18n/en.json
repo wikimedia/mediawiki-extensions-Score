@@ -10,6 +10,7 @@
     "score-backend-error": "Unable to copy the generated files to their final location:\n$1",
     "score-desc": "Adds a tag for rendering musical scores with LilyPond",
     "score-error-category": "Pages with score rendering errors",
+    "score-error-category-desc": "There was an error while rendering the score.",
     "score-getcwderr": "Unable to obtain current working directory",
     "score-invalidlang": "Invalid score language lang=\"<nowiki>$1</nowiki>\". Currently recognized languages are lang=\"lilypond\" (the default) and lang=\"ABC\".",
     "score-invalidoggoverride": "The file \"<nowiki>$1</nowiki>\" you specified with override_ogg is invalid. Please specify the file name only, omit <nowiki>[[…]]</nowiki> and the \"{{ns:file}}:\" prefix.",
