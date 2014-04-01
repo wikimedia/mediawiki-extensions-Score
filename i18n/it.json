@@ -14,6 +14,7 @@
     "score-backend-error": "Impossibile copiare i file generati nella loro destinazione finale:\n$1",
     "score-desc": "Aggiunge un tag per il rendering di spartiti musicali con LilyPond",
     "score-error-category": "Pagine con errori di rendering della partitura",
+    "score-error-category-desc": "Si è verificato un errore durante il rendering della partitura.",
     "score-getcwderr": "Impossibile accedere alla directory di lavoro corrente",
     "score-invalidlang": "Risultato non valido per il linguaggio lang=\"<nowiki>$1</nowiki>\". I linguaggi attualmente riconosciuti sono lang=\"lilypond\" (predefinito) e lang=\"ABC\".",
     "score-invalidoggoverride": "Il file \"<nowiki>$1</nowiki>\" che hai specificato con override_ogg non è valido. Per favore, specifica solo il nome del file, ometti <nowiki>[[…]]</nowiki> e il prefisso \"{{ns:file}}:\".",

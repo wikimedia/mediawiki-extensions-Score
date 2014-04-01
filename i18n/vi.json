@@ -12,6 +12,7 @@
     "score-backend-error": "Không thể sao chép các tập tin được tạo ra vào vị trí cuối cùng:\n$1",
     "score-desc": "Cung cấp thẻ để vẽ tài liệu âm nhạc dùng LilyPond",
     "score-error-category": "Trang có lỗi kết xuất khuôn nhạc",
+    "score-error-category-desc": "Đã xuất hiện lỗi khi kết xuất khuôn nhạc.",
     "score-getcwderr": "Không thể lấy thư mục làm việc hiện tại",
     "score-invalidlang": "Ngôn ngữ nốt nhạc lang=\"<nowiki>$1</nowiki>\" không hợp lệ. Các ngôn ngữ đang được chấp nhận là lang=\"lilypond\" (mặc định) và lang=\"ABC\".",
     "score-invalidoggoverride": "Tập tin “<nowiki>$1</nowiki>” mà bạn chỉ định override_ogg không hợp lệ. Xin vui lòng chỉ đưa vào tên tập tin; bỏ qua <nowiki>[[…]]</nowiki> và tiền tố “{{ns:file}}:”.",
