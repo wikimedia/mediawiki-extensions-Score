@@ -12,6 +12,7 @@
     "score-backend-error": "Non se puideron copiar os ficheiros xerados á súa localización final:\n$1",
     "score-desc": "Engade unha etiqueta para renderizar partituras musicais co LilyPond",
     "score-error-category": "Páxinas con erros de renderización de partituras",
+    "score-error-category-desc": "Produciuse un erro ao renderizar a partitura.",
     "score-getcwderr": "Non se puido obter o directorio de traballo actual",
     "score-invalidlang": "A lingua da partitura lang=\"<nowiki>$1</nowiki>\" é incorrecta. As linguas recoñecidas nestes momentos son lang=\"lilypond\" (predeterminada) e lang=\"ABC\".",
     "score-invalidoggoverride": "O ficheiro \"<nowiki>$1</nowiki>\" que especificou con override_ogg non é válido. Especifique unicamente o nome do ficheiro, omita <nowiki>[[…]]</nowiki> e o prefixo \"{{ns:file}}:\".",
