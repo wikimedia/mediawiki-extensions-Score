@@ -15,6 +15,7 @@
     "score-backend-error": "Det går inte att kopiera de genererade filerna till sin slutliga plats:\n$1",
     "score-desc": "Lägger till en tagg för rendering av partitur med LilyPond",
     "score-error-category": "Sidor med partiturrenderingsfel",
+    "score-error-category-desc": "Ett fel uppstod under renderingen av partituret.",
     "score-getcwderr": "Det gick inte att hämta den aktuella arbetskatalogen",
     "score-invalidlang": "Ogiltigt partiturspråk lang=\"<nowiki>$1</nowiki>\". För närvarande accepterade språk är lang=\"lilypond\" (standard) och lang=\"ABC\".",
     "score-invalidoggoverride": "Filen \"<nowiki>$1</nowiki>\" som du har angett med override_ogg är ogiltig. Vänligen ange endast filnamnet, utelämna <nowiki>[[…]]</nowiki> och prefixet \"{{ns:file}}:\".",
