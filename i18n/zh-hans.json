@@ -4,7 +4,8 @@
             "Cwek",
             "Hzy980512",
             "Li3939108",
-            "Shirayuki"
+            "Shirayuki",
+            "Xiaomingyan"
         ]
     },
     "score-abc2lynotexecutable": "无法运行ABC转LilyPond转换器：$1不是可执行文件。请确认<code>$wgScoreAbc2Ly</code>设置正确。",
@@ -14,7 +15,7 @@
     "score-compilererr": "无法编译 LilyPond 输入的文件：\n$1",
     "score-backend-error": "无法将所生成的文件复制到其最终位置：\n$1",
     "score-desc": "添加一个标记来以LilyPond呈现乐谱",
-    "score-error-category": "有乐谱输出错误的页面",
+    "score-error-category": "有乐谱生成错误的页面",
     "score-getcwderr": "无法获取当前工作目录",
     "score-invalidlang": "lang=\"<nowiki>$1</nowiki>\"为不合法的score语言赋值。正确可用的赋值有lang=\"lilypond\" (默认的) 和lang=\"ABC\".",
     "score-invalidoggoverride": "您用override_ogg指定的文件“<nowiki>$1</nowiki>”无效。请仅用override_ogg指定文件名，去掉<nowiki>[[…]]</nowiki>与“{{ns:file}}:”。",
