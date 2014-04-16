@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Luckas"
-        ]
-    },
-    "score-page": "Página $1"
+	"@metadata": {
+		"authors": [
+			"Luckas"
+		]
+	},
+	"score-page": "Página $1"
 }

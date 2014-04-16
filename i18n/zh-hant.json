@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "Justincheng12345",
-            "Simon Shek"
-        ]
-    },
-    "score-desc": "添加一個標記以使用LilyPond呈現樂譜",
-    "score-error-category": "分數呈現錯誤的頁面",
-    "score-nocontent": "無法從伺服器載入檔案 $1 。"
+	"@metadata": {
+		"authors": [
+			"Justincheng12345",
+			"Simon Shek"
+		]
+	},
+	"score-desc": "添加一個標記以使用LilyPond呈現樂譜",
+	"score-error-category": "分數呈現錯誤的頁面",
+	"score-nocontent": "無法從伺服器載入檔案 $1 。"
 }
