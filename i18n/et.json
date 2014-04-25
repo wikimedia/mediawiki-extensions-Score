@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pikne"
+		]
+	},
+	"score-desc": "Lisab sildi, mis vormistab noodid LilyPondi abil.",
+	"score-error-category": "Nootide viimistlemise tõrkega leheküljed",
+	"score-error-category-desc": "Nootide viimistlemise juures esines tõrge."
+}
