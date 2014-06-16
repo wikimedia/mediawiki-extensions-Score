@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Armando-Martin",
-			"Dalton2"
+			"Dalton2",
+			"Macofe"
 		]
 	},
 	"score-abc2lynotexecutable": "No se pudo ejecutar el conversor ABC a LilyPond: \"$1\" no es un archivo ejecutable. Asegúrese de que <code>$wgScoreAbc2Ly</code> está definido correctamente.",
@@ -19,7 +20,7 @@
 	"score-noabcinput": "No se pudo crear el archivo fuente ABC \"$1\".",
 	"score-noimages": "No se generó ninguna imagen de partitura. Compruebe su código de partitura.",
 	"score-noinput": "Error al crear el archivo de entrada \"$1\" de LilyPond.",
-	"score-nomediahandler": "La conversión Ogg/Vorbis necesita una extensión OggHandler instalada y configurada, ver [https://www.mediawiki.org/wiki/Extension:OggHandler Extensión:OggHandler].",
+	"score-nomediahandler": "La conversión Ogg/Vorbis necesita una versión instalada y configurada ya sea de la [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler extensión TimedMediaHandler], o de la [https://www.mediawiki.org/wiki/Extension:OggHandler extensión OggHandler].",
 	"score-nomidi": "No se generó el archivo MIDI a pesar de que fue solicitado. Si está a trabajando en modo LilyPond en bruto, asegúrese de proporcionar un bloque \\midi adecuado.",
 	"score-nooutput": "Error al crear el directorio de salida \"$1\".",
 	"score-notexecutable": "No se pudo ejecutar LilyPond: \"$1\" no es un archivo ejecutable. Asegúrese de que <code>$wgScoreLilyPond</code> está definido correctamente.",
