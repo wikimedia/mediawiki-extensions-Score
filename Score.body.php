@@ -566,6 +566,7 @@ class Score {
 
 		$cmd = wfEscapeShellArg( $wgScoreLilyPond )
 			. ' ' . wfEscapeShellArg( '-dsafe=#t' )
+			. ' -dmidi-extension=midi' // midi needed for Windows to generate the file
 			. ' -dbackend=ps --png --header=texidoc '
 			. wfEscapeShellArg( $factoryLy )
 			. ' 2>&1';
