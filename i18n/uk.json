@@ -3,7 +3,8 @@
 		"authors": [
 			"Andriykopanytsia",
 			"Steve.rusyn",
-			"SteveR"
+			"SteveR",
+			"Ата"
 		]
 	},
 	"score-abc2lynotexecutable": "Не вдалося виконати конвертер ABC у LilyPond:  $1  не є виконуваним файлом. Переконайтеся, що <code>$wgScoreAbc2Ly</code> правильно встановлено.",
@@ -14,6 +15,7 @@
 	"score-backend-error": "Не вдалося скопіювати згенеровані файли до їх кінцевого розташування:\n$1",
 	"score-desc": "Додає тег для відтворення музичних партитур з LilyPond",
 	"score-error-category": "Сторінки з помилками візуалізації нот",
+	"score-error-category-desc": "Сталася помилка під час візуалізації партитури.",
 	"score-getcwderr": "Не вдалося отримати поточний робочий каталог",
 	"score-invalidlang": "Невірна мова нот lang=\"<nowiki>$1</nowiki>\". В даний час визнаними мовами є lang=\"lilypond\" (типова) і lang=\"ABC\".",
 	"score-invalidoggoverride": "Невірний файл \"<nowiki>$1</nowiki>\", вказаний вами з  override_ogg. Будь ласка, вкажіть лише назву файлу, опустіть <nowiki>[[…]]</nowiki> та \"{{ns:file}}:\" префікс.",
