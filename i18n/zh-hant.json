@@ -24,7 +24,7 @@
 	"score-notexecutable": "LilyPond 無法執行：$1 不是一個可執行檔，請確定 <code>$wgScoreLilyPond</code> 已設定正確。",
 	"score-nocontent": "無法從伺服器載入檔案 $1 。",
 	"score-oggconversionerr": "無法轉換 MIDI 為 Ogg/Vorbis：\n$1",
-	"score-page": "第 1 頁",
+	"score-page": "第 $1 頁",
 	"score-pregreplaceerr": "PCRE 正規表示法取代失敗",
 	"score-readerr": "無法讀取檔案 $1。",
 	"score-timiditynotexecutable": "TiMidity++ 無法執行：$1 不是一個可執行檔，請確定 <code>$wgScoreTimidity</code> 已設定正確。",
