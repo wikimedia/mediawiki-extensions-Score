@@ -830,7 +830,7 @@ LILYPOND;
 	 * 	* lilypond_path: local path to the LilyPond file that is to be
 	 * 		generated.
 	 *
-	 * @throws MWException if an error occurs.
+	 * @throws Exception if an error occurs.
 	 */
 	private static function generateLilypond( $code, $options ) {
 		$prof = new ProfileSection( __METHOD__ );
@@ -845,10 +845,10 @@ LILYPOND;
 				$code, $options['factory_directory'], $options['lilypond_path'] );
 			break;
 		case 'lilypond':
-			throw new MWException( 'lang="lilypond" in ' . __METHOD__ . ". " .
+			throw new Exception( 'lang="lilypond" in ' . __METHOD__ . ". " .
 				"This should not happen.\n" );
 		default:
-			throw new MWException( 'Unknown score language in ' . __METHOD__ . ". " .
+			throw new Exception( 'Unknown score language in ' . __METHOD__ . ". " .
 				"This should not happen.\n" );
 		}
 
