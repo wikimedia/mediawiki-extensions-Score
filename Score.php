@@ -83,7 +83,8 @@ $wgExtensionCredits['parserhooks'][] = array(
 	'version' => '0.3.0',
 	'author' => 'Alexander Klauer',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:Score',
-	'descriptionmsg' => 'score-desc'
+	'descriptionmsg' => 'score-desc',
+	'license-name' => 'GPL-3.0+'
 );
 
 /*
