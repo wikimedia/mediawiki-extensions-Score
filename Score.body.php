@@ -115,8 +115,6 @@ class Score {
 	private static function getLilypondVersion() {
 		global $wgScoreLilyPond;
 
-		$prof = new ProfileSection( __METHOD__ );
-
 		if ( !is_executable( $wgScoreLilyPond ) ) {
 			throw new ScoreException( wfMessage( 'score-notexecutable', $wgScoreLilyPond ) );
 		}
@@ -206,8 +204,6 @@ class Score {
 	 */
 	public static function render( $code, array $args, Parser $parser, PPFrame $frame ) {
 		global $wgTmpDirectory;
-
-		$prof = new ProfileSection( __METHOD__ );
 
 		try {
 			$baseUrl = self::getBaseUrl();
@@ -370,7 +366,6 @@ class Score {
 	 * @throws ScoreException if an error occurs.
 	 */
 	private static function generateHTML( &$parser, $code, $options ) {
-		$prof = new ProfileSection( __METHOD__ );
 		try {
 			$backend = self::getBackend();
 			$fileIter = $backend->getFileList(
@@ -539,8 +534,6 @@ class Score {
 	 */
 	private static function generatePngAndMidi( $code, $options, &$metaData ) {
 		global $wgScoreLilyPond, $wgScoreTrim;
-
-		$prof = new ProfileSection( __METHOD__ );
 
 		if ( !is_executable( $wgScoreLilyPond ) ) {
 			throw new ScoreException( wfMessage( 'score-notexecutable', $wgScoreLilyPond ) );
@@ -775,8 +768,6 @@ LILYPOND;
 	private static function generateOgg( $sourceFile, $options, $remoteDest, &$metaData ) {
 		global $wgScoreTimidity;
 
-		$prof = new ProfileSection(  __METHOD__ );
-
 		if ( !is_executable( $wgScoreTimidity ) ) {
 			throw new ScoreException( wfMessage( 'score-timiditynotexecutable', $wgScoreTimidity ) );
 		}
@@ -833,8 +824,6 @@ LILYPOND;
 	 * @throws Exception if an error occurs.
 	 */
 	private static function generateLilypond( $code, $options ) {
-		$prof = new ProfileSection( __METHOD__ );
-
 		/* Delete old file if necessary */
 		self::cleanupFile( $options['lilypond_path'] );
 
@@ -865,8 +854,6 @@ LILYPOND;
 	 */
 	private static function generateLilypondFromAbc( $code, $factoryDirectory, $destFile ) {
 		global $wgScoreAbc2Ly;
-
-		$prof = new ProfileSection( __METHOD__ );
 
 		if ( !is_executable( $wgScoreAbc2Ly ) ) {
 			throw new ScoreException( wfMessage( 'score-abc2lynotexecutable', $wgScoreAbc2Ly ) );
@@ -933,8 +920,6 @@ LILYPOND;
 	 */
 	private static function trimImage( $source, $dest ) {
 		global $wgImageMagickConvertCommand;
-
-		$prof = new ProfileSection( __METHOD__ );
 
 		$cmd = wfEscapeShellArg( $wgImageMagickConvertCommand )
 			. ' -trim '
