@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"score-abcconversionerr": "Mer kunnte di Dattei em met ABC dren nit en et <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"\">LilyPond</i>-Fommahd ömsäze:",
+	"score-chdirerr": "Mer kunnte nid en et Verzeijschneß $1 wääßelle.",
+	"score-cleanerr": "Mer kunnte de ahle Datteije nit loß wähde vör em Neumaache.",
+	"score-backend-error": "Mer kunnte di neu zerääsch jemaate Datteije nit aan dänne iehr ändjölltijje Päz keppehre:\n$1",
+	"score-error-category": "Sigge met kapodde Mussiknohte dren.",
+	"score-getcwderr": "Mer kunnte et aktoälle Verzeijschneß för dren ze brassele nit erus fenge.",
+	"score-noabcinput": "Di Dattei $1 met de ABC-Quälle dren kunnte mer nit aanlähje.",
+	"score-nooutput": "Mer kunnte et Verzeijschneß $1 för jät dren ußzejävve nidd aanlähje.",
+	"score-page": "Sigg $1",
+	"score-readerr": "Mer kunnte di Dattei $1 nit lässe."
+}
