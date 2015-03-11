@@ -4,12 +4,17 @@
 			"Purodha"
 		]
 	},
+	"score-abc2lynotexecutable": "Dat Projramm, öm ABC noh <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"\">LilyPond</i> ze wandelle kunnt nit ußjeföhrt wähde: <code>$1</code> es kein usföhrbaar Dattei med enem Projramm dren. Bes sescher, dat <code xml:lang=\"en\" lang=\"en\" dir=\"ltr\">$wgScoreAbc2Ly</code> reeschtesch jesaz es.",
 	"score-abcconversionerr": "Mer kunnte di Dattei em met ABC dren nit en et <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"\">LilyPond</i>-Fommahd ömsäze:",
 	"score-chdirerr": "Mer kunnte nid en et Verzeijschneß $1 wääßelle.",
 	"score-cleanerr": "Mer kunnte de ahle Datteije nit loß wähde vör em Neumaache.",
+	"score-compilererr": "Mer kunnte de Dattei met de Einjahbe för <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"\">LilyPond</i> nit ömsäze:\n$1",
 	"score-backend-error": "Mer kunnte di neu zerääsch jemaate Datteije nit aan dänne iehr ändjölltijje Päz keppehre:\n$1",
-	"score-error-category": "Sigge met kapodde Mussiknohte dren.",
+	"score-desc": "Brängk ene Befähl en et Wikki, wohmet mer Pattituhre med Mussik aanzeije kann.",
+	"score-error-category": "Sigge met kapodde mussekahlesche Pattituhrdahte dren.",
+	"score-error-category-desc": "Ene Fähler es opjetrodde beim Ömsäze vun mussekahlesche Pattituhrdahte.",
 	"score-getcwderr": "Mer kunnte et aktoälle Verzeijschneß för dren ze brassele nit erus fenge.",
+	"score-invalidlang": "„<code lang=\"en\" xml:lang=\"en\" dir=\"ltr\">lang=\"<nowiki>$1</nowiki></code>“ es onjöltesch.\nFör de musekahlesche Pattituhrdahte künne em Momang de Schprohche blohß als <code lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"LilyPond\">lang=\"lilypond\"</code> (der Schtandatt) und <code lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"ABC\">lang=\"ABC\"</code> aanjejovve wähde.",
 	"score-noabcinput": "Di Dattei $1 met de ABC-Quälle dren kunnte mer nit aanlähje.",
 	"score-nooutput": "Mer kunnte et Verzeijschneß $1 för jät dren ußzejävve nidd aanlähje.",
 	"score-page": "Sigg $1",
