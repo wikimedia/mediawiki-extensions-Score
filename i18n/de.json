@@ -13,7 +13,7 @@
 	"score-cleanerr": "Die alten Dateien konnten vor dem erneuten Berechnen nicht bereinigt werden",
 	"score-compilererr": "Die Eingabedatei von LilyPond konnte nicht kompiliert werden:\n$1",
 	"score-backend-error": "Die erzeugten Dateien konnten nicht an ihren Zielort kopiert werden:\n$1",
-	"score-desc": "Ergänzt einen Befehl zum Einbetten und Zeigen von Partituren mit LilyPond",
+	"score-desc": "Erweitert das Wiki um einen Befehl zum Einbetten und Zeigen von Partituren mit LilyPond",
 	"score-error-category": "Seiten mit Fehlern beim Anzeigen von Partituren",
 	"score-error-category-desc": "Beim Ausgeben der Partitur gab es einen Fehler.",
 	"score-getcwderr": "Das aktuelle Arbeitsverzeichnis konnte nicht abgerufen werden",
