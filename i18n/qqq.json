@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Shirayuki"
+			"Shirayuki",
+			"Umherirrender"
 		]
 	},
 	"score-abc2lynotexecutable": "Displayed if the ABC to LilyPond converter could not be executed. $1 is the path to the abc2ly binary.",
@@ -10,7 +11,7 @@
 	"score-cleanerr": "Displayed if an old file cleanup operation fails.",
 	"score-compilererr": "Displayed if the LilyPond code could not be compiled. $1 is the error (generally big block of text in a pre tag)",
 	"score-backend-error": "Parameters:\n* $1 - result message which was returned",
-	"score-desc": "{{desc|name=Score|url=http://www.mediawiki.org/wiki/Extension:Score}}",
+	"score-desc": "{{desc|name=Score|url=https://www.mediawiki.org/wiki/Extension:Score}}",
 	"score-error-category": "Name of [[mw:Help:Tracking categories|tracking category]] to list pages where there was an error rendering the <code><nowiki><score></nowiki></code> tag.",
 	"score-error-category-desc": "Description on [[Special:TrackingCategories]] for the {{msg-mw|score-error-category}} tracking category.",
 	"score-getcwderr": "Displayed if the extension cannot obtain the current working directory.",
