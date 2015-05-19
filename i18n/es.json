@@ -3,7 +3,8 @@
 		"authors": [
 			"Armando-Martin",
 			"Dalton2",
-			"Macofe"
+			"Macofe",
+			"Ryo567"
 		]
 	},
 	"score-abc2lynotexecutable": "No se pudo ejecutar el conversor ABC a LilyPond: \"$1\" no es un archivo ejecutable. Asegúrese de que <code>$wgScoreAbc2Ly</code> está definido correctamente.",
@@ -24,6 +25,7 @@
 	"score-nomidi": "No se generó el archivo MIDI a pesar de que fue solicitado. Si está a trabajando en modo LilyPond en bruto, asegúrese de proporcionar un bloque \\midi adecuado.",
 	"score-nooutput": "Error al crear el directorio de salida \"$1\".",
 	"score-notexecutable": "No se pudo ejecutar LilyPond: \"$1\" no es un archivo ejecutable. Asegúrese de que <code>$wgScoreLilyPond</code> está definido correctamente.",
+	"score-nocontent": "No se ha podido cargar el archivo $1 desde el servidor.",
 	"score-oggconversionerr": "No se pudo converter de MIDI a Ogg/Vorbis:\n$1",
 	"score-oggoverridenotfound": "El archivo \"<nowiki>$1</nowiki>\" que ha especificado con override_ogg no existe.",
 	"score-page": "Página $1",
