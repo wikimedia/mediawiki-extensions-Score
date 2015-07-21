@@ -36,5 +36,5 @@
 	"score-renameerr": "將樂譜檔移至上傳目錄錯誤。",
 	"score-trimerr": "無法裁切圖片：\n$1\n若問題仍持續存在，請設定 <code>$wgScoreTrim=false</code>。",
 	"score-versionerr": "無法取得 LilyPond 版本：\n$1",
-	"score-vorbisoverrideogg": "您無法同時請求 Ogg/Vorbis 繪圖與指定 override_ogg。"
+	"score-vorbisoverrideogg": "您無法同時請求 Ogg/Vorbis 繪圖時指定 override_ogg。"
 }
