@@ -98,6 +98,35 @@ $wgAutoloadClasses['Score'] = "$scoreBase/Score.body.php";
 $wgAutoloadClasses['ScoreException'] = "$scoreBase/Score.body.php";
 $wgTrackingCategories[] = 'score-error-category';
 
+/*
+ * VisualEditor resource loader module
+ */
+$moduleTemplate = array(
+    'localBasePath' => __DIR__ . '/modules',
+    'remoteExtPath' => 'Score/modules',
+);
+
+$wgResourceModules['ext.score.visualEditor'] = array(
+	'scripts' => array(
+		've-score/ve.dm.MWScoreNode.js',
+		've-score/ve.ce.MWScoreNode.js',
+		've-score/ve.ui.MWScoreInspector.js',
+		've-score/ve.ui.MWScoreInspectorTool.js',
+	),
+	'styles' => array(
+		've-score/ve.ui.MWScoreIcons.css',
+	),
+	'dependencies' => array(
+		'ext.visualEditor.mwcore',
+	),
+	'messages' => array(
+		'score-visualeditor-mwscoreinspector-title',
+	),
+	'targets' => array( 'desktop', 'mobile' ),
+) + $moduleTemplate;
+
+$wgVisualEditorPluginModules[] = 'ext.score.visualEditor';
+
 /**
  * Init routine.
  *

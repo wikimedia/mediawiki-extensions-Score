@@ -32,5 +32,6 @@
     "score-renameerr": "Error moving score files to upload directory.",
     "score-trimerr": "Image could not be trimmed:\n$1\nSet <code>$wgScoreTrim=false</code> if this problem persists.",
     "score-versionerr": "Unable to obtain LilyPond version:\n$1",
+    "score-visualeditor-mwscoreinspector-title": "Musical notation",
     "score-vorbisoverrideogg": "You cannot request Ogg/Vorbis rendering and specify override_ogg at the same time."
 }
