@@ -115,12 +115,23 @@ $wgResourceModules['ext.score.visualEditor'] = array(
 	),
 	'styles' => array(
 		've-score/ve.ui.MWScoreIcons.css',
+		've-score/ve.ui.MWScoreInspector.css',
 	),
 	'dependencies' => array(
 		'ext.visualEditor.mwcore',
 	),
 	'messages' => array(
+		'score-visualeditor-mwscoreinspector-lang',
+		'score-visualeditor-mwscoreinspector-lang-abc',
+		'score-visualeditor-mwscoreinspector-lang-lilypond',
+		'score-visualeditor-mwscoreinspector-midi',
+		'score-visualeditor-mwscoreinspector-override-midi',
+		'score-visualeditor-mwscoreinspector-override-midi-placeholder',
+		'score-visualeditor-mwscoreinspector-override-ogg',
+		'score-visualeditor-mwscoreinspector-override-ogg-placeholder',
+		'score-visualeditor-mwscoreinspector-raw',
 		'score-visualeditor-mwscoreinspector-title',
+		'score-visualeditor-mwscoreinspector-vorbis',
 	),
 	'targets' => array( 'desktop', 'mobile' ),
 ) + $moduleTemplate;
