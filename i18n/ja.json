@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Shirayuki",
-			"Dude1717"
+			"Dude1717",
+			"Sujiniku"
 		]
 	},
 	"score-abc2lynotexecutable": "ABC から LilyPond へのコンバーターを実行できません: $1 は実行可能ファイルではありません。<code>$wgScoreAbc2Ly</code> が正しく設定されているか確認してください。",
@@ -33,5 +34,6 @@
 	"score-renameerr": "楽譜ファイルをアップロードディレクトリに移動する際にエラーが発生しました。",
 	"score-trimerr": "画像をトリミングできませんでした:\n$1\nこの問題が続く場合は、<code>$wgScoreTrim=false</code> を設定してください。",
 	"score-versionerr": "LilyPond のバージョンを取得できません:\n$1",
+	"score-visualeditor-mwscoreinspector-title": "音楽的な通知",
 	"score-vorbisoverrideogg": "Ogg/Vorbis のレンダリングの要求と override_ogg の指定は、同時にはできません。"
 }

@@ -34,5 +34,6 @@
 	"score-renameerr": "Ene Fähler es opjetrodde, wi mer Datteije met Pattituhre med Mussik övver en et Verzeijschneß zum Huhlahde donn wullte.",
 	"score-trimerr": "Dat Beld kunnt nit beschnedde wähde:\n$1\nDonn <code xml:lang=\"en\" lang=\"en\" dir=\"ltr\">$wgScoreTrim=false</code> säze, wann dat Problem beschtonn bliht.",
 	"score-versionerr": "Mer kunnte de Projrammväsjohn vum <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"LilyPond\">LilyPond</i> nidd erus fenge:\n$1",
+	"score-visualeditor-mwscoreinspector-title": "Mussik_Nuhte",
 	"score-vorbisoverrideogg": "Do kanns nit <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\">Ogg/Vorbis</i> ußjävve lohße un derwihl och <code lang=\"en\" xml:lang=\"en\" dir=\"ltr\">override_ogg</code>“ aanjävve."
 }

@@ -34,5 +34,6 @@
 	"score-renameerr": "Грешка при преместувањето на партитурните податотеки во директориумот за подигања",
 	"score-trimerr": "Не можев да ја скастрам сликата. \n$1\nАко проблемот продолжи да се јавува, задајте <code>$wgScoreTrim=false</code>.",
 	"score-versionerr": "Не можам да ја добијам верзијата на LilyPond.\n$1",
+	"score-visualeditor-mwscoreinspector-title": "Музички запис",
 	"score-vorbisoverrideogg": "Не можете истовремено да побарате испис во Ogg/Vorbis и да укажете override_ogg."
 }

@@ -37,5 +37,6 @@
 	"score-renameerr": "Beim Verschieben der Partiturdateien in das Verzeichnis zum Hochladen ist ein Fehler aufgetreten",
 	"score-trimerr": "Das Bild konnte nicht zugeschnitten werden:\n$1 \nIn der Konfigurationsdatei muss <code>$wgScoreTrim = false;</code> festgelegt werden, sofern das Problem bestehen bleibt.",
 	"score-versionerr": "Die Version von LilyPond konnte nicht ermittelt werden:\n$1",
+	"score-visualeditor-mwscoreinspector-title": "Notenschrift",
 	"score-vorbisoverrideogg": "Es kann kein Ogg-Vorbis-Rendern angefordert und gleichzeitig <code>override_ogg</code> angegeben werden."
 }

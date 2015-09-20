@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"BeginaFelicysym",
-			"Matma Rex"
+			"Matma Rex",
+			"Chrumps"
 		]
 	},
 	"score-chdirerr": "Nie można zmienić do katalogu $1",
@@ -11,5 +12,6 @@
 	"score-nooutput": "Nie można utworzyć katalogu docelowego  $1 .",
 	"score-oggconversionerr": "Nie można przekonwertować MIDI na Ogg/Vorbis:\n$1",
 	"score-page": "Strona $1",
-	"score-readerr": "Nie można odczytać pliku  $1 ."
+	"score-readerr": "Nie można odczytać pliku  $1 .",
+	"score-visualeditor-mwscoreinspector-title": "Notacja muzyczna"
 }

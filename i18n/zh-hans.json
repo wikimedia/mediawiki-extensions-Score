@@ -41,5 +41,6 @@
 	"score-renameerr": "移动乐谱文件到上载目录时出错。",
 	"score-trimerr": "图像不能被剪裁：\n$1\n如果此问题仍然存在，设置 <code>$wgScoreTrim=false</code>。",
 	"score-versionerr": "无法获取 LilyPond 版本：\n$1",
+	"score-visualeditor-mwscoreinspector-title": "音乐符号",
 	"score-vorbisoverrideogg": "您不能要求Ogg/Vorbis成像时指定override_ogg。"
 }

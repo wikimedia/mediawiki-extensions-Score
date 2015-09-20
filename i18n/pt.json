@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Waldir"
+			"Waldir",
+			"Jkb8"
 		]
 	},
 	"score-abc2lynotexecutable": "O conversor de ABC para LilyPond não pôde ser executado: $1 não é um ficheiro executável. Certifique-se que <code>$wgScoreAbc2Ly</code> está definido corretamente.",
@@ -34,5 +35,6 @@
 	"score-renameerr": "Não foi possível mover ficheiros de partitura para o diretório de carregamento.",
 	"score-trimerr": "Não foi possível cortar a imagem:\n$1\nDefina <code>$wgScoreTrim=false</code> se este problema persistir.",
 	"score-versionerr": "Não foi possível obter a versão do LilyPond:\n$1",
+	"score-visualeditor-mwscoreinspector-title": "Notação Musical",
 	"score-vorbisoverrideogg": "Você não pode solicitar a geração de Ogg/Vorbis e especificar override_ogg ao mesmo tempo."
 }
