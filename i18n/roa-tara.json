@@ -20,5 +20,6 @@
 	"score-pregreplaceerr": "Sostituzione de l'espressione regolare PCRE non riuscite",
 	"score-readerr": "Non ge riesche a leggere 'u file $1.",
 	"score-renameerr": "Errore muvenne le file d'u pundegge jndr'à cartelle de carecamende.",
-	"score-versionerr": "Non ge riesche ad avè 'a versione de LilyPound:\n$1"
+	"score-versionerr": "Non ge riesche ad avè 'a versione de LilyPound:\n$1",
+	"score-visualeditor-mwscoreinspector-title": "Notazione musecale"
 }
