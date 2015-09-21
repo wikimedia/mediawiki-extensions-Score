@@ -32,6 +32,16 @@
     "score-renameerr": "Error moving score files to upload directory.",
     "score-trimerr": "Image could not be trimmed:\n$1\nSet <code>$wgScoreTrim=false</code> if this problem persists.",
     "score-versionerr": "Unable to obtain LilyPond version:\n$1",
+    "score-visualeditor-mwscoreinspector-lang": "Language",
+    "score-visualeditor-mwscoreinspector-lang-abc": "ABC",
+    "score-visualeditor-mwscoreinspector-lang-lilypond": "LilyPond",
+    "score-visualeditor-mwscoreinspector-midi": "Link to a MIDI file",
+    "score-visualeditor-mwscoreinspector-override-midi": "Link to an existing MIDI file (optional)",
+    "score-visualeditor-mwscoreinspector-override-midi-placeholder": "Name of existing MIDI file",
+    "score-visualeditor-mwscoreinspector-override-ogg": "Use an existing audio file (must be Ogg/Vorbis format)",
+    "score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Name of existing audio file",
+    "score-visualeditor-mwscoreinspector-raw": "This is a complete LilyPond file",
     "score-visualeditor-mwscoreinspector-title": "Musical notation",
+    "score-visualeditor-mwscoreinspector-vorbis": "Generate an audio file",
     "score-vorbisoverrideogg": "You cannot request Ogg/Vorbis rendering and specify override_ogg at the same time."
 }

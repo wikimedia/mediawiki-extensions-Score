@@ -1,0 +1,10 @@
+/*!
+ * VisualEditor UserInterface MWScoreInspector styles.
+ *
+ * @copyright 2015 VisualEditor Team and others; see AUTHORS.txt
+ * @license The MIT License (MIT); see LICENSE.txt
+ */
+
+.ve-ui-mwScoreInspector-content .ve-ui-mwExtensionWindow-input textarea {
+	font-family: monospace, Courier;
+}
