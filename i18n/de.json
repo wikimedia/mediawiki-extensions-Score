@@ -40,6 +40,10 @@
 	"score-visualeditor-mwscoreinspector-lang": "Sprache",
 	"score-visualeditor-mwscoreinspector-midi": "Link auf eine MIDI-Datei",
 	"score-visualeditor-mwscoreinspector-override-midi": "Link auf eine vorhandene MIDI-Datei (optional)",
+	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Name der vorhandenen MIDI-Datei",
+	"score-visualeditor-mwscoreinspector-override-ogg": "Eine vorhandene Audiodatei verwenden (muss im OGG/Vorbis-Format sein)",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Name der vorhandenen Audiodatei",
+	"score-visualeditor-mwscoreinspector-raw": "Dies ist eine vollständige LilyPond-Datei",
 	"score-visualeditor-mwscoreinspector-title": "Notenschrift",
 	"score-visualeditor-mwscoreinspector-vorbis": "Eine Audiodatei erzeugen",
 	"score-vorbisoverrideogg": "Es kann kein Ogg-Vorbis-Rendern angefordert und gleichzeitig <code>override_ogg</code> angegeben werden."

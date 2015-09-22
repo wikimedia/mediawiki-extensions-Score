@@ -12,5 +12,10 @@
 	"score-oggoverridenotfound": "De Fichier \"<nowiki>$1</nowiki>\" deen Dir mat override_ogg uginn hutt  gëtt et net.",
 	"score-page": "Säit $1",
 	"score-readerr": "De Fichier $1 konnt net geliest ginn.",
-	"score-visualeditor-mwscoreinspector-title": "Nouteschréft"
+	"score-visualeditor-mwscoreinspector-lang": "Sprooch",
+	"score-visualeditor-mwscoreinspector-midi": "Link op e MIDI-Fichier",
+	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Numm vum MIDI-Fichier deen do ass",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Numm vum Audio-Fichier deen do ass",
+	"score-visualeditor-mwscoreinspector-title": "Nouteschréft",
+	"score-visualeditor-mwscoreinspector-vorbis": "En Audio-Fichier generéieren"
 }

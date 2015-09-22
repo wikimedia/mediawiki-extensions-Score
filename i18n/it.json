@@ -3,7 +3,8 @@
 		"authors": [
 			"Beta16",
 			"F. Cosoleto",
-			"Gianfranco"
+			"Gianfranco",
+			"Macofe"
 		]
 	},
 	"score-abc2lynotexecutable": "Il convertitore ABC a LilyPond non può essere eseguito: $1 non è un file eseguibile. Assicurarsi che <code>$wgScoreAbc2Ly</code> è configurato correttamente.",
@@ -36,5 +37,6 @@
 	"score-renameerr": "Errore nello spostamento dei file di partitura alla directory di upload.",
 	"score-trimerr": "Non si è potuto ritagliare questa immagine:\n$1\nDefinisci <code>$wgScoreTrim=false</code> se il problema persiste.",
 	"score-versionerr": "Impossibile ottenere la versione di LilyPond:\n$1",
+	"score-visualeditor-mwscoreinspector-lang": "Lingua",
 	"score-vorbisoverrideogg": "Non è possibile richiedere un rendering Ogg/Vorbis e specificare override_ogg allo stesso tempo."
 }
