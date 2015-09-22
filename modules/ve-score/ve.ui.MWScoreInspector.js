@@ -42,10 +42,36 @@ ve.ui.MWScoreInspector.static.dir = 'ltr';
  */
 ve.ui.MWScoreInspector.prototype.initialize = function () {
 	var langDropdown, inputField, langField, midiField, vorbisField, rawField, overrideMidiField, overrideOggField,
+		notationCard, audioCard,
 		overlay = this.manager.getOverlay();
 
 	// Parent method
 	ve.ui.MWScoreInspector.super.prototype.initialize.call( this );
+
+	// Index layout
+	this.indexLayout = new OO.ui.IndexLayout( {
+		scrollable: false,
+		expanded: false
+	} );
+
+	// Cards
+	notationCard =  new OO.ui.CardLayout( 'notation', {
+		label: ve.msg( 'score-visualeditor-mwscoreinspector-notation' ),
+		expanded: false,
+		scrollable: false,
+		padded: true
+	} );
+	audioCard = new OO.ui.CardLayout( 'audio', {
+		label: ve.msg( 'score-visualeditor-mwscoreinspector-audio' ),
+		expanded: false,
+		scrollable: false,
+		padded: true
+	} );
+
+	this.indexLayout.addCards( [
+		notationCard,
+		audioCard
+	] );
 
 	// Dropdown
 	langDropdown = new OO.ui.DropdownWidget( {
@@ -116,14 +142,19 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 
 	// Initialization
 	this.$content.addClass( 've-ui-mwScoreInspector-content' );
-	this.form.$element.append(
+	notationCard.$element.append(
 		inputField.$element,
 		langField.$element,
-		rawField.$element,
+		rawField.$element
+	);
+	audioCard.$element.append(
 		midiField.$element,
 		overrideMidiField.$element,
 		vorbisField.$element,
 		overrideOggField.$element
+	);
+	this.form.$element.append(
+		this.indexLayout.$element
 	);
 };
 
@@ -164,6 +195,7 @@ ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
 			this.overrideMidiInput.on( 'change', this.onChangeHandler );
 			this.overrideOggInput.on( 'change', this.onChangeHandler );
 
+			this.indexLayout.connect( this, { set: 'updateSize' } );
 			this.langMenu.connect( this, { choose: 'toggleDisableRawCheckbox' } );
 			this.midiCheckbox.connect( this, { change: 'toggleDisableOverrideMidiInput' } );
 			this.vorbisCheckbox.connect( this, { change: 'toggleDisableOverrideOggInput' } );
