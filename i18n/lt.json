@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Zygimantus"
+		]
+	},
+	"score-visualeditor-mwscoreinspector-lang": "Kalba",
+	"score-visualeditor-mwscoreinspector-midi": "Nuorodą į MIDI failą",
+	"score-visualeditor-mwscoreinspector-override-midi": "Nuorodą į esamą MIDI failą (pasirenkama)",
+	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Esamo MIDI failo pavadinimas",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Esamo garso failo pavadinimas",
+	"score-visualeditor-mwscoreinspector-title": "Muzikos notacija",
+	"score-visualeditor-mwscoreinspector-vorbis": "Sukurti garso failą"
+}

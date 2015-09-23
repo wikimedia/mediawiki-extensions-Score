@@ -38,7 +38,7 @@
 	"score-versionerr": "לא ניתן לקבל את גרסת LilyPond:\n$1",
 	"score-visualeditor-mwscoreinspector-lang": "שפה",
 	"score-visualeditor-mwscoreinspector-midi": "קישור לקובץ MIDI",
-	"score-visualeditor-mwscoreinspector-override-midi": "קישר לקובץ MIDI קיים (לא חובה)",
+	"score-visualeditor-mwscoreinspector-override-midi": "קישור לקובץ MIDI קיים (לא חובה)",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "שם קובץ ה־MIDI הקיים",
 	"score-visualeditor-mwscoreinspector-override-ogg": "להשתמש בקובץ שמע קיים (חייב להיות בתסדיר Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "שם קובץ השמע הקיים",
