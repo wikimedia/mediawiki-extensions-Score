@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Priviet",
-			"아라"
+			"아라",
+			"Hwangjy9"
 		]
 	},
 	"score-abc2lynotexecutable": "ABC에서 LilyPond로의 변환기를 실행할 수 없습니다. $1(은)는 실행 파일이 아닙니다. <code>$wgScoreAbc2Ly</code>가 올바르게 설정되어 있는지 확인하세요.",
@@ -34,5 +35,6 @@
 	"score-renameerr": "업로드 디렉토리로 악보 파일을 이동하는 중 오류가 났습니다.",
 	"score-trimerr": "그림을 자를 수 없습니다:\n$1\n이 문제가 계속되면 <code>$wgScoreTrim=false</code>를 설정하세요.",
 	"score-versionerr": "LilyPond 버전을 얻을 수 없습니다:\n$1",
+	"score-visualeditor-mwscoreinspector-lang": "언어",
 	"score-vorbisoverrideogg": "Ogg/Vorbis 렌더링을 요청하고 동시에 override_ogg를 지정할 수 없습니다."
 }
