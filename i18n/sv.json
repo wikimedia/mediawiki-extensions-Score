@@ -4,7 +4,8 @@
 			"Jopparn",
 			"Lokal Profil",
 			"Skalman",
-			"WikiPhoenix"
+			"WikiPhoenix",
+			"Ainali"
 		]
 	},
 	"score-abc2lynotexecutable": "ABC-till-LilyPond-konverteraren kunde inte köras: $1 är inte en körbar fil. Kontrollera att <code>$wgScoreAbc2Ly</code> är korrekt inställd.",
@@ -37,5 +38,14 @@
 	"score-renameerr": "Fel vid flytt av partiturfiler till upladdningskatalogen.",
 	"score-trimerr": "Bilden kunde inte trimmas:\n$1\nAnge <code>$wgScoreTrim=false</code> om problemet kvarstår.",
 	"score-versionerr": "Det gick inte att hämta LilyPond version:\n$1",
+	"score-visualeditor-mwscoreinspector-lang": "Språk",
+	"score-visualeditor-mwscoreinspector-midi": "Länk till en MIDI-fil",
+	"score-visualeditor-mwscoreinspector-override-midi": "Länka till en befintlig MIDI-fil (valfritt)",
+	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Namn på den befintliga MIDI-filen",
+	"score-visualeditor-mwscoreinspector-override-ogg": "Använd en befintlig ljudfil (måste vara Ogg/Vorbis-format)",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Namn på den befintliga ljudfilen",
+	"score-visualeditor-mwscoreinspector-raw": "Detta är en komplett LilyPond-fil",
+	"score-visualeditor-mwscoreinspector-title": "Musiknotation",
+	"score-visualeditor-mwscoreinspector-vorbis": "Generera en ljudfil",
 	"score-vorbisoverrideogg": "Du kan inte begära Ogg/Vorbis rendering och anger override_ogg på samma gång."
 }

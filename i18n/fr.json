@@ -47,5 +47,8 @@
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Nom de fichier MIDI existant",
 	"score-visualeditor-mwscoreinspector-override-ogg": "Utiliser un fichier audio existant (uniquement au format Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Nom de fichier audio existant",
+	"score-visualeditor-mwscoreinspector-raw": "Interpréter comme fichier LilyPond complet",
+	"score-visualeditor-mwscoreinspector-title": "Notation musicale",
+	"score-visualeditor-mwscoreinspector-vorbis": "Générer un fichier audio",
 	"score-vorbisoverrideogg": "Vous ne peut pas demander de rendu de Ogg/Vorbis et spécifier override_ogg en même temps."
 }
