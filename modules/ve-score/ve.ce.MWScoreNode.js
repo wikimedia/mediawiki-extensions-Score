@@ -43,6 +43,16 @@ ve.ce.MWScoreNode.prototype.onSetup = function () {
 	this.$element.addClass( 've-ce-mwScoreNode' );
 };
 
+/**
+ * @inheritdoc ve.ce.GeneratedContentNode
+ */
+ve.ce.MWScoreNode.prototype.validateGeneratedContents = function ( $element ) {
+	if ( $element.is( 'div' ) && $element.hasClass( 'errorbox' ) ) {
+		return false;
+	}
+	return true;
+};
+
 /* Registration */
 
 ve.ce.nodeFactory.register( ve.ce.MWScoreNode );
