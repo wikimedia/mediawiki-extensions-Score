@@ -13,6 +13,7 @@
 	"score-oggconversionerr": "Nie można przekonwertować MIDI na Ogg/Vorbis:\n$1",
 	"score-page": "Strona $1",
 	"score-readerr": "Nie można odczytać pliku  $1 .",
+	"score-visualeditor-mwscoreinspector-audio": "Audio",
 	"score-visualeditor-mwscoreinspector-lang": "Język",
 	"score-visualeditor-mwscoreinspector-midi": "Link do pliku MIDI",
 	"score-visualeditor-mwscoreinspector-override-midi": "Link do istniejącego pliku MIDI (opcjonalnie)",

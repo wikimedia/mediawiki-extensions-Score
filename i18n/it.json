@@ -37,6 +37,7 @@
 	"score-renameerr": "Errore nello spostamento dei file di partitura alla directory di upload.",
 	"score-trimerr": "Non si è potuto ritagliare questa immagine:\n$1\nDefinisci <code>$wgScoreTrim=false</code> se il problema persiste.",
 	"score-versionerr": "Impossibile ottenere la versione di LilyPond:\n$1",
+	"score-visualeditor-mwscoreinspector-audio": "Audio",
 	"score-visualeditor-mwscoreinspector-lang": "Lingua",
 	"score-visualeditor-mwscoreinspector-midi": "Collegamento a un file MIDI",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Nome del file MIDI esistente",
