@@ -5,5 +5,7 @@
 		]
 	},
 	"score-desc": "Музыкан LilyPond партитур кечян тег тӀетуху",
-	"score-error-category-desc": "Партитурийн визуализаци ечу хенахь гӀалат даьлла."
+	"score-error-category-desc": "Партитурийн визуализаци ечу хенахь гӀалат даьлла.",
+	"score-visualeditor-mwscoreinspector-audio": "Аудио",
+	"score-visualeditor-mwscoreinspector-lang": "Мотт"
 }
