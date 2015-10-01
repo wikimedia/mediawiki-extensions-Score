@@ -99,7 +99,8 @@ class Score {
 		throw new ScoreException(
 			$message->rawParams(
 				Html::rawElement( 'pre',
-					array(),
+					// Error messages from LilyPond & abc2ly are always English
+					array( 'lang' => 'en', 'dir' => 'ltr' ),
 					htmlspecialchars( $output )
 				)
 			)
