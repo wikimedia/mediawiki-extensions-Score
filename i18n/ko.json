@@ -35,7 +35,6 @@
 	"score-renameerr": "업로드 디렉토리로 악보 파일을 이동하는 중 오류가 났습니다.",
 	"score-trimerr": "그림을 자를 수 없습니다:\n$1\n이 문제가 계속되면 <code>$wgScoreTrim=false</code>를 설정하세요.",
 	"score-versionerr": "LilyPond 버전을 얻을 수 없습니다:\n$1",
-	"score-visualeditor-mwscoreinspector-audio": "소리",
 	"score-visualeditor-mwscoreinspector-lang": "언어",
 	"score-vorbisoverrideogg": "Ogg/Vorbis 렌더링을 요청하고 동시에 override_ogg를 지정할 수 없습니다."
 }

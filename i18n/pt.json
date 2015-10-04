@@ -37,7 +37,6 @@
 	"score-renameerr": "Não foi possível mover ficheiros de partitura para o diretório de carregamento.",
 	"score-trimerr": "Não foi possível cortar a imagem:\n$1\nDefina <code>$wgScoreTrim=false</code> se este problema persistir.",
 	"score-versionerr": "Não foi possível obter a versão do LilyPond:\n$1",
-	"score-visualeditor-mwscoreinspector-audio": "Áudio",
 	"score-visualeditor-mwscoreinspector-lang": "Língua",
 	"score-visualeditor-mwscoreinspector-title": "Notação Musical",
 	"score-vorbisoverrideogg": "Você não pode solicitar a geração de Ogg/Vorbis e especificar override_ogg ao mesmo tempo."
