@@ -154,8 +154,10 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 
 	// Initialization
 	this.$content.addClass( 've-ui-mwScoreInspector-content' );
+
 	notationCard.$element.append(
 		inputField.$element,
+		this.$generatedContentsErrorContainer,
 		langField.$element
 	);
 	audioCard.$element.append(
@@ -214,6 +216,7 @@ ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
 			this.overrideMidiInput.on( 'change', this.onChangeHandler );
 			this.overrideOggInput.on( 'change', this.onChangeHandler );
 
+			this.indexLayout.connect( this, { set: 'onCardSet' } );
 			this.indexLayout.connect( this, { set: 'updateSize' } );
 			this.langSelect.connect( this, { choose: 'toggleDisableRawCheckbox' } );
 			this.midiCheckbox.connect( this, { change: 'toggleDisableOverrideMidiInput' } );
@@ -296,6 +299,20 @@ ve.ui.MWScoreInspector.prototype.toggleDisableOverrideMidiInput = function () {
 ve.ui.MWScoreInspector.prototype.toggleDisableOverrideOggInput = function () {
 	// Disable the input if we ARE generating an Ogg/Vorbis file
 	this.overrideOggInput.setDisabled( !this.audioCheckbox.isSelected() );
+};
+
+/**
+ * @inheritdoc
+ */
+ve.ui.MWScoreInspector.prototype.formatGeneratedContentsError = function ( $element ) {
+	return $element.text();
+};
+
+/**
+ * Append the error to the current card.
+ */
+ve.ui.MWScoreInspector.prototype.onCardSet = function () {
+	this.indexLayout.getCurrentCard().$element.append( this.$generatedContentsErrorContainer );
 };
 
 /* Registration */
