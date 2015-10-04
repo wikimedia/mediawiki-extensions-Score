@@ -5,7 +5,8 @@
 			"Patio",
 			"SPQRobin",
 			"Siebrand",
-			"Southparkfan"
+			"Southparkfan",
+			"Sjoerddebruin"
 		]
 	},
 	"score-abc2lynotexecutable": "Het conversieprogramma voor ABC naar LilyPond kon niet uitgevoerd worden: $1 is geen uitvoerbaar bestand. Zorg dat de instelling <code>$wgScoreAbc2Ly</code> correct is.",
@@ -38,5 +39,7 @@
 	"score-renameerr": "Er is een fout opgetreden tijdens het verplaatsen van de bladmuziekbestanden naar de uploadmap",
 	"score-trimerr": "De afbeelding kon niet bijgesneden worden:\n$1\nStel de volgende waarde in als dit probleem blijft bestaan: <code>$wgScoreTrim=false</code>.",
 	"score-versionerr": "Het was niet mogelijk de LiliPond-versie te achterhalen:\n$1",
+	"score-visualeditor-mwscoreinspector-audio": "Audio",
+	"score-visualeditor-mwscoreinspector-notation": "Notitie",
 	"score-vorbisoverrideogg": "U kunt niet vragen om Ogg/Vorbisrendering en tegelijkertijd \"override_ogg\" gebruiken."
 }
