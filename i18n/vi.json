@@ -34,6 +34,8 @@
 	"score-renameerr": "Lỗi khi di chuyển các tập tin tài liệu âm nhạc sang thư mục tải lên.",
 	"score-trimerr": "Không thể tỉa hình:\n$1\nNếu vấn đề này vẫn còn xuất hiện, hãy đặt <code>$wgScoreTrim=false</code>.",
 	"score-versionerr": "Không thể lấy phiên bản của LilyPond:\n$1",
+	"score-visualeditor-mwscoreinspector-card-audio": "Âm thanh",
+	"score-visualeditor-mwscoreinspector-card-notation": "Cú pháp",
 	"score-visualeditor-mwscoreinspector-lang": "Ngôn ngữ",
 	"score-visualeditor-mwscoreinspector-midi": "Liên kết đến tập tin MIDI",
 	"score-visualeditor-mwscoreinspector-override-midi": "Liên kết đến một tập tin MIDI đã tồn tại (tùy chọn)",

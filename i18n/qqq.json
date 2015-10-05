@@ -3,7 +3,8 @@
 		"authors": [
 			"Shirayuki",
 			"Umherirrender",
-			"Robby"
+			"Robby",
+			"Raymond"
 		]
 	},
 	"score-abc2lynotexecutable": "Displayed if the ABC to LilyPond converter could not be executed. $1 is the path to the abc2ly binary.",
