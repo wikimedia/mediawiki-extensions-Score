@@ -41,9 +41,11 @@ ve.ui.MWScoreInspector.static.dir = 'ltr';
  * @inheritdoc
  */
 ve.ui.MWScoreInspector.prototype.initialize = function () {
-	var langDropdown, inputField, langField, midiField, vorbisField, rawField, overrideMidiField, overrideOggField,
-		notationCard, audioCard,
-		overlay = this.manager.getOverlay();
+	var inputField, langField,
+		midiField, overrideMidiField,
+		vorbisField, overrideOggField,
+		rawField,
+		notationCard, audioCard, midiCard, advancedCard;
 
 	// Parent method
 	ve.ui.MWScoreInspector.super.prototype.initialize.call( this );
@@ -56,13 +58,25 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 
 	// Cards
 	notationCard =  new OO.ui.CardLayout( 'notation', {
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-notation' ),
+		label: ve.msg( 'score-visualeditor-mwscoreinspector-card-notation' ),
 		expanded: false,
 		scrollable: false,
 		padded: true
 	} );
 	audioCard = new OO.ui.CardLayout( 'audio', {
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-audio' ),
+		label: ve.msg( 'score-visualeditor-mwscoreinspector-card-audio' ),
+		expanded: false,
+		scrollable: false,
+		padded: true
+	} );
+	midiCard = new OO.ui.CardLayout( 'midi', {
+		label: ve.msg( 'score-visualeditor-mwscoreinspector-card-midi' ),
+		expanded: false,
+		scrollable: false,
+		padded: true
+	} );
+	advancedCard = new OO.ui.CardLayout( 'advanced', {
+		label: ve.msg( 'score-visualeditor-mwscoreinspector-card-advanced' ),
 		expanded: false,
 		scrollable: false,
 		padded: true
@@ -70,32 +84,30 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 
 	this.indexLayout.addCards( [
 		notationCard,
-		audioCard
+		audioCard,
+		midiCard,
+		advancedCard
 	] );
 
-	// Dropdown
-	langDropdown = new OO.ui.DropdownWidget( {
-		$overlay: overlay.$element,
-		menu: {
-			items: [
-				new OO.ui.MenuOptionWidget( {
-					data: 'lilypond',
-					label: ve.msg( 'score-visualeditor-mwscoreinspector-lang-lilypond' )
-				} ),
-				new OO.ui.MenuOptionWidget( {
-					data: 'ABC',
-					label: ve.msg( 'score-visualeditor-mwscoreinspector-lang-abc' )
-				} )
-			]
-		}
+	// Language
+	this.langSelect = new OO.ui.ButtonSelectWidget( {
+		items: [
+			new OO.ui.ButtonOptionWidget( {
+				data: 'lilypond',
+				label: ve.msg( 'score-visualeditor-mwscoreinspector-lang-lilypond' )
+			} ),
+			new OO.ui.ButtonOptionWidget( {
+				data: 'ABC',
+				label: ve.msg( 'score-visualeditor-mwscoreinspector-lang-abc' )
+			} )
+		]
 	} );
-	this.langMenu = langDropdown.getMenu();
 
 	// Checkboxes
 	this.midiCheckbox = new OO.ui.CheckboxInputWidget( {
 		value: '0'
 	} );
-	this.vorbisCheckbox = new OO.ui.CheckboxInputWidget( {
+	this.audioCheckbox = new OO.ui.CheckboxInputWidget( {
 		value: '0'
 	} );
 	this.rawCheckbox = new OO.ui.CheckboxInputWidget( {
@@ -115,43 +127,47 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 		align: 'top',
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-title' )
 	} );
-	langField = new OO.ui.FieldLayout( langDropdown, {
-		align: 'top',
+	langField = new OO.ui.FieldLayout( this.langSelect, {
+		align: 'left',
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-lang' )
+	} );
+	vorbisField = new OO.ui.FieldLayout( this.audioCheckbox, {
+		align: 'inline',
+		label: ve.msg( 'score-visualeditor-mwscoreinspector-vorbis' )
+	} );
+	overrideOggField = new OO.ui.FieldLayout( this.overrideOggInput, {
+		align: 'top',
+		label: ve.msg( 'score-visualeditor-mwscoreinspector-override-ogg' )
 	} );
 	midiField = new OO.ui.FieldLayout( this.midiCheckbox, {
 		align: 'inline',
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-midi' )
 	} );
-	vorbisField = new OO.ui.FieldLayout( this.vorbisCheckbox, {
-		align: 'inline',
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-vorbis' )
-	} );
-	rawField = new OO.ui.FieldLayout( this.rawCheckbox, {
-		align: 'inline',
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-raw' )
-	} );
 	overrideMidiField = new OO.ui.FieldLayout( this.overrideMidiInput, {
 		align: 'top',
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-override-midi' )
 	} );
-	overrideOggField = new OO.ui.FieldLayout( this.overrideOggInput, {
-		align: 'top',
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-override-ogg' )
+	rawField = new OO.ui.FieldLayout( this.rawCheckbox, {
+		align: 'inline',
+		label: ve.msg( 'score-visualeditor-mwscoreinspector-raw' )
 	} );
 
 	// Initialization
 	this.$content.addClass( 've-ui-mwScoreInspector-content' );
 	notationCard.$element.append(
 		inputField.$element,
-		langField.$element,
-		rawField.$element
+		langField.$element
 	);
 	audioCard.$element.append(
-		midiField.$element,
-		overrideMidiField.$element,
 		vorbisField.$element,
 		overrideOggField.$element
+	);
+	midiCard.$element.append(
+		midiField.$element,
+		overrideMidiField.$element
+	);
+	advancedCard.$element.append(
+		rawField.$element
 	);
 	this.form.$element.append(
 		this.indexLayout.$element
@@ -175,10 +191,13 @@ ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
 			// jscs:enable requireCamelCaseOrUpperCaseIdentifiers
 
 			// Populate form
-			this.langMenu.selectItemByData( lang );
+			this.langSelect.selectItemByData( lang );
 			this.rawCheckbox.setSelected( raw );
 			this.midiCheckbox.setSelected( midi );
-			this.vorbisCheckbox.setSelected( vorbis );
+			// vorbis is only set to 1 if an audio file is being auto-generated, but
+			// the checkbox should be checked if an audio file is being auto-generated
+			// OR if an existing file has been specified.
+			this.audioCheckbox.setSelected( vorbis || overrideOgg );
 			this.overrideMidiInput.setValue( overrideMidi );
 			this.overrideOggInput.setValue( overrideOgg );
 
@@ -188,17 +207,17 @@ ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
 			this.toggleDisableOverrideOggInput();
 
 			// Add event handlers
-			this.langMenu.on( 'choose', this.onChangeHandler );
+			this.langSelect.on( 'choose', this.onChangeHandler );
 			this.rawCheckbox.on( 'change', this.onChangeHandler );
 			this.midiCheckbox.on( 'change', this.onChangeHandler );
-			this.vorbisCheckbox.on( 'change', this.onChangeHandler );
+			this.audioCheckbox.on( 'change', this.onChangeHandler );
 			this.overrideMidiInput.on( 'change', this.onChangeHandler );
 			this.overrideOggInput.on( 'change', this.onChangeHandler );
 
 			this.indexLayout.connect( this, { set: 'updateSize' } );
-			this.langMenu.connect( this, { choose: 'toggleDisableRawCheckbox' } );
+			this.langSelect.connect( this, { choose: 'toggleDisableRawCheckbox' } );
 			this.midiCheckbox.connect( this, { change: 'toggleDisableOverrideMidiInput' } );
-			this.vorbisCheckbox.connect( this, { change: 'toggleDisableOverrideOggInput' } );
+			this.audioCheckbox.connect( this, { change: 'toggleDisableOverrideOggInput' } );
 		}, this );
 };
 
@@ -208,16 +227,16 @@ ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
 ve.ui.MWScoreInspector.prototype.getTeardownProcess = function ( data ) {
 	return ve.ui.MWScoreInspector.super.prototype.getTeardownProcess.call( this, data )
 		.first( function () {
-			this.langMenu.off( 'choose', this.onChangeHandler );
-			this.rawCheckbox.off( 'change', this.onChangeHandler );
+			this.langSelect.off( 'choose', this.onChangeHandler );
 			this.midiCheckbox.off( 'change', this.onChangeHandler );
-			this.vorbisCheckbox.off( 'change', this.onChangeHandler );
+			this.audioCheckbox.off( 'change', this.onChangeHandler );
 			this.overrideMidiInput.off( 'change', this.onChangeHandler );
 			this.overrideOggInput.off( 'change', this.onChangeHandler );
 
-			this.langMenu.disconnect( this );
+			this.indexLayout.disconnect( this );
+			this.langSelect.disconnect( this );
 			this.midiCheckbox.disconnect( this );
-			this.vorbisCheckbox.disconnect( this );
+			this.audioCheckbox.disconnect( this );
 		}, this );
 };
 
@@ -231,12 +250,18 @@ ve.ui.MWScoreInspector.prototype.updateMwData = function ( mwData ) {
 	ve.ui.MWScoreInspector.super.prototype.updateMwData.call( this, mwData );
 
 	// Get data from inspector
-	lang = this.langMenu.getSelectedItem().getData();
+	lang = this.langSelect.getSelectedItem().getData();
 	raw = !this.rawCheckbox.isDisabled() && this.rawCheckbox.isSelected();
-	midi = this.midiCheckbox.isSelected();
-	vorbis = this.vorbisCheckbox.isSelected();
-	overrideMidi = !this.overrideMidiInput.isDisabled() && this.overrideMidiInput.getValue();
+	// audioCheckbox is selected if an audio file is being included, whether that file
+	// is being auto-generated or whether an existing file is being used; but the "vorbis"
+	// attribute is only set to 1 if an audio file is being included AND that file is
+	// being auto-generated.
+	vorbis = this.audioCheckbox.isSelected() && this.overrideOggInput.getValue() === '';
 	overrideOgg = !this.overrideOggInput.isDisabled() && this.overrideOggInput.getValue();
+	// The "midi" attribute is set to 1 if a MIDI file is being linked to, whether or not
+	// this file is being auto-generated.
+	midi = this.midiCheckbox.isSelected();
+	overrideMidi = !this.overrideMidiInput.isDisabled() && this.overrideMidiInput.getValue();
 
 	// Update attributes
 	// jscs:disable requireCamelCaseOrUpperCaseIdentifiers
@@ -254,7 +279,7 @@ ve.ui.MWScoreInspector.prototype.updateMwData = function ( mwData ) {
  */
 ve.ui.MWScoreInspector.prototype.toggleDisableRawCheckbox = function () {
 	// Disable the checkbox if the language is not LilyPond
-	this.rawCheckbox.setDisabled( this.langMenu.getSelectedItem().getData() !== 'lilypond' );
+	this.rawCheckbox.setDisabled( this.langSelect.getSelectedItem().getData() !== 'lilypond' );
 };
 
 /**
@@ -270,7 +295,7 @@ ve.ui.MWScoreInspector.prototype.toggleDisableOverrideMidiInput = function () {
  */
 ve.ui.MWScoreInspector.prototype.toggleDisableOverrideOggInput = function () {
 	// Disable the input if we ARE generating an Ogg/Vorbis file
-	this.overrideOggInput.setDisabled( this.vorbisCheckbox.isSelected() );
+	this.overrideOggInput.setDisabled( !this.audioCheckbox.isSelected() );
 };
 
 /* Registration */
