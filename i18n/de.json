@@ -4,7 +4,8 @@
 			"Kghbln",
 			"Metalhead64",
 			"Purodha",
-			"Inkowik"
+			"Inkowik",
+			"Macofe"
 		]
 	},
 	"score-abc2lynotexecutable": "Der Konverter von ABC nach LilyPond konnte nicht ausgeführt werden: $1 ist keine ausführbare Datei. Es muss sichergestellt sein, dass <code>$wgScoreAbc2Ly</code> in der Konfigurationsdatei richtig eingestellt wurde.",
@@ -39,6 +40,7 @@
 	"score-versionerr": "Die Version von LilyPond konnte nicht ermittelt werden:\n$1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Erweitert",
 	"score-visualeditor-mwscoreinspector-card-audio": "Audio",
+	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-card-notation": "Notenschrift",
 	"score-visualeditor-mwscoreinspector-lang": "Sprache",
 	"score-visualeditor-mwscoreinspector-midi": "Link auf eine MIDI-Datei (standardmäßig automatisch erzeugt)",

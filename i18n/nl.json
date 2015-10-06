@@ -43,6 +43,9 @@
 	"score-visualeditor-mwscoreinspector-card-audio": "Audio",
 	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-card-notation": "Notitie",
+	"score-visualeditor-mwscoreinspector-lang": "Taal",
 	"score-visualeditor-mwscoreinspector-override-midi": "Gebruik een bestaand MIDI-bestand",
+	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Naam van het bestaande MIDI-bestand",
+	"score-visualeditor-mwscoreinspector-title": "Muzieknotatie",
 	"score-vorbisoverrideogg": "U kunt niet vragen om Ogg/Vorbisrendering en tegelijkertijd \"override_ogg\" gebruiken."
 }

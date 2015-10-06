@@ -36,8 +36,8 @@
 	"score-trimerr": "Non se puido axustar a imaxe:\n$1\nDefina <code>$wgScoreTrim=false</code> se o problema persiste.",
 	"score-versionerr": "Non se puido obter a versión do LilyPond:\n$1",
 	"score-visualeditor-mwscoreinspector-lang": "Lingua",
-	"score-visualeditor-mwscoreinspector-midi": "Ligazón a un ficheiro MIDI",
-	"score-visualeditor-mwscoreinspector-override-midi": "Ligazón a un ficheiro MIDI existente (opcional)",
+	"score-visualeditor-mwscoreinspector-midi": "Ligazón a un ficheiro MIDI (xenerado automaticamente por defecto)",
+	"score-visualeditor-mwscoreinspector-override-midi": "Usar un ficheiro MIDI existente",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Nome do ficheiro MIDI existente",
 	"score-vorbisoverrideogg": "Non pode solicitar unha renderización Ogg/Vorbis e asemade especificar override_ogg."
 }
