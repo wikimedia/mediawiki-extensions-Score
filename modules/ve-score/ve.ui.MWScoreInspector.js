@@ -157,8 +157,8 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 
 	notationCard.$element.append(
 		inputField.$element,
-		this.$generatedContentsErrorContainer,
-		langField.$element
+		langField.$element,
+		this.$generatedContentsErrorContainer
 	);
 	audioCard.$element.append(
 		vorbisField.$element,
@@ -305,7 +305,7 @@ ve.ui.MWScoreInspector.prototype.toggleDisableOverrideOggInput = function () {
  * @inheritdoc
  */
 ve.ui.MWScoreInspector.prototype.formatGeneratedContentsError = function ( $element ) {
-	return $element.text();
+	return $element.text().trim();
 };
 
 /**
