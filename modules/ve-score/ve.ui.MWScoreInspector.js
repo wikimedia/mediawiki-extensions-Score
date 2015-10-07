@@ -104,15 +104,9 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 	} );
 
 	// Checkboxes
-	this.midiCheckbox = new OO.ui.CheckboxInputWidget( {
-		value: '0'
-	} );
-	this.audioCheckbox = new OO.ui.CheckboxInputWidget( {
-		value: '0'
-	} );
-	this.rawCheckbox = new OO.ui.CheckboxInputWidget( {
-		value: '0'
-	} );
+	this.midiCheckbox = new OO.ui.CheckboxInputWidget();
+	this.audioCheckbox = new OO.ui.CheckboxInputWidget();
+	this.rawCheckbox = new OO.ui.CheckboxInputWidget();
 
 	// Text inputs
 	this.overrideMidiInput = new OO.ui.TextInputWidget( {
