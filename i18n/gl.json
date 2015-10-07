@@ -35,9 +35,17 @@
 	"score-renameerr": "Erro ao mover os ficheiros das partituras ao directorio de cargas.",
 	"score-trimerr": "Non se puido axustar a imaxe:\n$1\nDefina <code>$wgScoreTrim=false</code> se o problema persiste.",
 	"score-versionerr": "Non se puido obter a versión do LilyPond:\n$1",
+	"score-visualeditor-mwscoreinspector-card-advanced": "Avanzado",
+	"score-visualeditor-mwscoreinspector-card-audio": "Son",
+	"score-visualeditor-mwscoreinspector-card-notation": "Notación",
 	"score-visualeditor-mwscoreinspector-lang": "Lingua",
 	"score-visualeditor-mwscoreinspector-midi": "Ligazón a un ficheiro MIDI (xenerado automaticamente por defecto)",
 	"score-visualeditor-mwscoreinspector-override-midi": "Usar un ficheiro MIDI existente",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Nome do ficheiro MIDI existente",
+	"score-visualeditor-mwscoreinspector-override-ogg": "Usar un ficheiro de audio existente",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Nome do ficheiro de audio existente (debe ser Ogg/Vorbis)",
+	"score-visualeditor-mwscoreinspector-raw": "Este é un ficheiro completo de LilyPond",
+	"score-visualeditor-mwscoreinspector-title": "Notación musical",
+	"score-visualeditor-mwscoreinspector-vorbis": "Incluír un ficheiro de audio (xenerado automaticamente por defecto)",
 	"score-vorbisoverrideogg": "Non pode solicitar unha renderización Ogg/Vorbis e asemade especificar override_ogg."
 }

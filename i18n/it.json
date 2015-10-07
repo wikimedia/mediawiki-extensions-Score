@@ -40,12 +40,15 @@
 	"score-visualeditor-mwscoreinspector-card-advanced": "Avanzate",
 	"score-visualeditor-mwscoreinspector-card-audio": "Audio",
 	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
+	"score-visualeditor-mwscoreinspector-card-notation": "Notazione",
 	"score-visualeditor-mwscoreinspector-lang": "Lingua",
-	"score-visualeditor-mwscoreinspector-midi": "Collegamento a un file MIDI",
+	"score-visualeditor-mwscoreinspector-midi": "Collegamento a un file MIDI (generato automaticamente per default)",
+	"score-visualeditor-mwscoreinspector-override-midi": "Usa un file MIDI esistente",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Nome del file MIDI esistente",
 	"score-visualeditor-mwscoreinspector-override-ogg": "Usa un file audio esistente",
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Nome del file audio esistente (deve essere di formato Ogg/Vorbis)",
+	"score-visualeditor-mwscoreinspector-raw": "Questo è un file LilyPond completo",
 	"score-visualeditor-mwscoreinspector-title": "Notazione musicale",
-	"score-visualeditor-mwscoreinspector-vorbis": "Genera un file audio",
+	"score-visualeditor-mwscoreinspector-vorbis": "Includi un file audio (generato automaticamente per default)",
 	"score-vorbisoverrideogg": "Non è possibile richiedere un rendering Ogg/Vorbis e specificare override_ogg allo stesso tempo."
 }

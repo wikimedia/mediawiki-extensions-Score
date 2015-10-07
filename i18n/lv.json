@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Papuass"
+		]
+	},
+	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
+	"score-visualeditor-mwscoreinspector-midi": "Saite uz MIDI failu (pēc noklusējuma tiek automātiski ģenerēta)",
+	"score-visualeditor-mwscoreinspector-override-ogg": "Izmantot esošu audiofailu",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Esošā audiofaila nosaukums (jābūt Ogg/Vorbis)"
+}

@@ -13,10 +13,13 @@
 	"score-oggconversionerr": "Nie można przekonwertować MIDI na Ogg/Vorbis:\n$1",
 	"score-page": "Strona $1",
 	"score-readerr": "Nie można odczytać pliku  $1 .",
+	"score-visualeditor-mwscoreinspector-card-advanced": "Zaawansowane",
+	"score-visualeditor-mwscoreinspector-card-audio": "Audio",
+	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-lang": "Język",
-	"score-visualeditor-mwscoreinspector-midi": "Link do pliku MIDI",
+	"score-visualeditor-mwscoreinspector-midi": "Link do pliku MIDI (domyślnie tworzony automatycznie)",
 	"score-visualeditor-mwscoreinspector-override-midi": "Link do istniejącego pliku MIDI (opcjonalnie)",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Nazwa istniejącego pliku MIDI",
-	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Nazwa istniejącego pliku audio",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Nazwa istniejącego pliku audio (musi to być Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-title": "Notacja muzyczna"
 }

@@ -36,6 +36,7 @@
 	"score-versionerr": "LilyPond のバージョンを取得できません:\n$1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "高等",
 	"score-visualeditor-mwscoreinspector-card-audio": "オーディオ",
+	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-card-notation": "表記",
 	"score-visualeditor-mwscoreinspector-lang": "言語",
 	"score-visualeditor-mwscoreinspector-midi": "MIDIファイルへのリンク (デフォルトでは自動生成)",
