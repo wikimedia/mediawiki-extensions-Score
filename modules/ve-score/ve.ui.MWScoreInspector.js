@@ -152,7 +152,7 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 	notationCard.$element.append(
 		inputField.$element,
 		langField.$element,
-		this.$generatedContentsErrorContainer
+		this.generatedContentsError.$element
 	);
 	audioCard.$element.append(
 		vorbisField.$element,
@@ -306,7 +306,7 @@ ve.ui.MWScoreInspector.prototype.formatGeneratedContentsError = function ( $elem
  * Append the error to the current card.
  */
 ve.ui.MWScoreInspector.prototype.onCardSet = function () {
-	this.indexLayout.getCurrentCard().$element.append( this.$generatedContentsErrorContainer );
+	this.indexLayout.getCurrentCard().$element.append( this.generatedContentsError.$element );
 };
 
 /* Registration */

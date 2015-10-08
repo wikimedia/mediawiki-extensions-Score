@@ -8,7 +8,3 @@
 .ve-ui-mwScoreInspector-content .ve-ui-mwExtensionWindow-input textarea {
 	font-family: monospace, Courier;
 }
-
-.ve-ui-mwScoreInspector-content .ve-ui-mwLiveExtensionInspector-error-expanded {
-	white-space: pre-wrap;
-}
