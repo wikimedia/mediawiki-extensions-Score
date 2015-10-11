@@ -35,9 +35,6 @@ module.exports = function ( grunt ) {
 			tasks: 'lint'
 		},
 		banana: {
-			options: {
-				disallowDuplicateTranslations: false
-			},
 			all: 'i18n/'
 		},
 		jsonlint: {
