@@ -34,5 +34,18 @@
 	"score-renameerr": "Chyba při přesouvání souborů partitury do adresáře pro načtené soubory.",
 	"score-trimerr": "Obrázek se nepodařilo oříznout:\n$1\nPokud problém přetrvává, nastavte <code>$wgScoreTrim=false</code>.",
 	"score-versionerr": "Nepodařilo se zjistit verzi programu LilyPond:\n$1",
+	"score-visualeditor-mwscoreinspector-card-advanced": "Pokročilé",
+	"score-visualeditor-mwscoreinspector-card-audio": "Zvuk",
+	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
+	"score-visualeditor-mwscoreinspector-card-notation": "Notace",
+	"score-visualeditor-mwscoreinspector-lang": "Jazyk",
+	"score-visualeditor-mwscoreinspector-midi": "Odkaz na MIDI soubor (implicitně vygenerovaný automaticky)",
+	"score-visualeditor-mwscoreinspector-override-midi": "Použít existující MIDI soubor",
+	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Název existujícího MIDI souboru",
+	"score-visualeditor-mwscoreinspector-override-ogg": "Použít existující zvukový soubor",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Název existujícího zvukového souboru (musí to být Ogg/Vorbis)",
+	"score-visualeditor-mwscoreinspector-raw": "Toto je kompletní soubor ve formátu LilyPond",
+	"score-visualeditor-mwscoreinspector-title": "Hudební notace",
+	"score-visualeditor-mwscoreinspector-vorbis": "Zahrnout zvukový soubor (implicitně vygenerovaný automaticky)",
 	"score-vorbisoverrideogg": "Nemůžete současně vyžadovat vytvoření Ogg/Vorbis a uvést override_ogg."
 }
