@@ -35,3 +35,7 @@ ve.ui.commandRegistry.register(
 		{ args: [ 'score' ], supportedSelections: [ 'linear' ] }
 	)
 );
+
+ve.ui.sequenceRegistry.register(
+	new ve.ui.Sequence( 'wikitextScore', 'score', '<score', 6 )
+);
