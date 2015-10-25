@@ -4,10 +4,11 @@
 			"Zygimantus"
 		]
 	},
+	"score-visualeditor-mwscoreinspector-card-advanced": "Išsamiau",
 	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-lang": "Kalba",
 	"score-visualeditor-mwscoreinspector-midi": "Nuorodą į MIDI failą",
-	"score-visualeditor-mwscoreinspector-override-midi": "Nuorodą į esamą MIDI failą (pasirenkama)",
+	"score-visualeditor-mwscoreinspector-override-midi": "Naudoti esamą MIDI failą",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Esamo MIDI failo pavadinimas",
 	"score-visualeditor-mwscoreinspector-override-ogg": "Naudoti esamą garso failą (turi būti Ogg/Vorbis formatas)",
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Esamo garso failo pavadinimas",

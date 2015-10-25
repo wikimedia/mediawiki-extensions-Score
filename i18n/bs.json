@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Srdjan m"
+		]
+	},
+	"score-visualeditor-mwscoreinspector-card-advanced": "Napredno",
+	"score-visualeditor-mwscoreinspector-card-audio": "Zvuk",
+	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
+	"score-visualeditor-mwscoreinspector-card-notation": "Note",
+	"score-visualeditor-mwscoreinspector-lang": "Jezik",
+	"score-visualeditor-mwscoreinspector-midi": "Poveži MIDI datoteku (preodređeno je da se automatski proizvodi)",
+	"score-visualeditor-mwscoreinspector-override-midi": "Koristi postojeću MIDI datoteku",
+	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Ime postojeće MIDI datoteke",
+	"score-visualeditor-mwscoreinspector-override-ogg": "Koristite postojeću zvučnu datoteku",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Ime postojeće zvučne datoteke (mora biti u Ogg/Vobis formatu)",
+	"score-visualeditor-mwscoreinspector-raw": "Ovo je potpuna datoteka u LilyPond formatu",
+	"score-visualeditor-mwscoreinspector-title": "Notni zapis",
+	"score-visualeditor-mwscoreinspector-vorbis": "Uključi i zvučnu datoteku (preodređeno je da se automatski proizvodi)"
+}
