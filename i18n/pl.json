@@ -3,7 +3,8 @@
 		"authors": [
 			"BeginaFelicysym",
 			"Matma Rex",
-			"Chrumps"
+			"Chrumps",
+			"The Polish"
 		]
 	},
 	"score-chdirerr": "Nie można zmienić do katalogu $1",
@@ -18,7 +19,7 @@
 	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-lang": "Język",
 	"score-visualeditor-mwscoreinspector-midi": "Link do pliku MIDI (domyślnie tworzony automatycznie)",
-	"score-visualeditor-mwscoreinspector-override-midi": "Link do istniejącego pliku MIDI (opcjonalnie)",
+	"score-visualeditor-mwscoreinspector-override-midi": "Użyj istniejącego pliku MIDI",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Nazwa istniejącego pliku MIDI",
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Nazwa istniejącego pliku audio (musi to być Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-title": "Notacja muzyczna"
