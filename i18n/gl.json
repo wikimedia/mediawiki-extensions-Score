@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Toliño",
-			"Elisardojm"
+			"Elisardojm",
+			"Banjo"
 		]
 	},
 	"score-abc2lynotexecutable": "Non se puido executar o conversor ABC a LilyPond: \"$1\" non é un ficheiro executable. Asegúrese de que <code>$wgScoreAbc2Ly</code> está definido correctamente.",
@@ -37,6 +38,7 @@
 	"score-versionerr": "Non se puido obter a versión do LilyPond:\n$1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Avanzado",
 	"score-visualeditor-mwscoreinspector-card-audio": "Son",
+	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-card-notation": "Notación",
 	"score-visualeditor-mwscoreinspector-lang": "Lingua",
 	"score-visualeditor-mwscoreinspector-midi": "Ligazón a un ficheiro MIDI (xenerado automaticamente por defecto)",
