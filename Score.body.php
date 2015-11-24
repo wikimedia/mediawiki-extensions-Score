@@ -304,7 +304,7 @@ class Score {
 			}
 
 			/* image file path and URL prefixes */
-			$imageCacheName = wfBaseConvert( sha1( serialize( $cacheOptions ) ), 16, 36, 31 );
+			$imageCacheName = Wikimedia\base_convert( sha1( serialize( $cacheOptions ) ), 16, 36, 31 );
 			$imagePrefixEnd = "{$imageCacheName[0]}/" .
 				"{$imageCacheName[1]}/$imageCacheName";
 			$options['dest_storage_path'] = "$baseStoragePath/$imagePrefixEnd";
