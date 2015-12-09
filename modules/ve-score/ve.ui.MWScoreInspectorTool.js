@@ -39,3 +39,8 @@ ve.ui.commandRegistry.register(
 ve.ui.sequenceRegistry.register(
 	new ve.ui.Sequence( 'wikitextScore', 'score', '<score', 6 )
 );
+
+ve.ui.commandHelpRegistry.register( 'insert', 'score', {
+	sequences: [ 'wikitextScore' ],
+	label: OO.ui.deferMsg( 'score-visualeditor-mwscoreinspector-title' )
+} );
