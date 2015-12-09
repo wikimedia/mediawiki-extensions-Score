@@ -9,7 +9,7 @@
  * MediaWiki UserInterface score tool.
  *
  * @class
- * @extends ve.ui.InspectorTool
+ * @extends ve.ui.FragmentInspectorTool
  * @constructor
  * @param {OO.ui.ToolGroup} toolGroup
  * @param {Object} [config] Configuration options
@@ -18,7 +18,7 @@
 ve.ui.MWScoreInspectorTool = function VeUiMWScoreInspectorTool( toolGroup, config ) {
 	ve.ui.MWScoreInspectorTool.super.call( this, toolGroup, config );
 };
-OO.inheritClass( ve.ui.MWScoreInspectorTool, ve.ui.InspectorTool );
+OO.inheritClass( ve.ui.MWScoreInspectorTool, ve.ui.FragmentInspectorTool );
 ve.ui.MWScoreInspectorTool.static.name = 'score';
 ve.ui.MWScoreInspectorTool.static.group = 'object';
 ve.ui.MWScoreInspectorTool.static.icon = 'score';
