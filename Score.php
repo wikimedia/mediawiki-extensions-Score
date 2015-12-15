@@ -22,11 +22,6 @@
 	https://github.com/TheCount/score
 
  */
-
-if ( !defined( 'MEDIAWIKI' ) ) {
-	die( "This file cannot be run standalone.\n" );
-}
-
 /**
  * Score extension
  *
@@ -38,125 +33,9 @@ if ( !defined( 'MEDIAWIKI' ) ) {
  * @version 0.2
  */
 
-/*
- * Configuration
- */
-
-/* Whether to trim the score images. Requires ImageMagick.
- *  Default is $wgUseImageMagick and set in efScoreExtension */
-$wgScoreTrim = null;
-
-/* Path to LilyPond executable */
-$wgScoreLilyPond = '/usr/bin/lilypond';
-
-/* Path to converter from ABC */
-$wgScoreAbc2Ly = '/usr/bin/abc2ly';
-
-/* Path to TiMidity++ */
-$wgScoreTimidity = '/usr/bin/timidity';
-
-/**
- * The URL path of the directory where files will be stored.
- * Defaults to "{$wgUploadPath}/lilypond".
- */
-$wgScorePath = false;
-
-/**
- * The filesystem path where files will be stored.
- * Defaults to "{$wgUploadDirectory}/lilypond".
- */
-$wgScoreDirectory = false;
-
-/**
- * The name of a file backend ($wgFileBackends) to be used for storing files.
- * Defaults to FSFileBackend using $wgScoreDirectory as a base path. Files will
- * be stored in a container internally called "score-render".
- */
-$wgScoreFileBackend = false;
-
-/*
- * Extension credits
- */
-$wgExtensionCredits['parserhooks'][] = array(
-	'name' => 'Score',
-	'path' => __FILE__,
-	'version' => '0.3.0',
-	'author' => 'Alexander Klauer',
-	'url' => 'https://www.mediawiki.org/wiki/Extension:Score',
-	'descriptionmsg' => 'score-desc',
-	'license-name' => 'GPL-3.0+'
-);
-
-/*
- * Setup
- */
-$scoreBase = __DIR__;
-$wgHooks['ParserFirstCallInit'][] = 'efScoreExtension';
-$wgMessagesDirs['Score'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['Score'] = "$scoreBase/Score.i18n.php";
-$wgAutoloadClasses['Score'] = "$scoreBase/Score.body.php";
-$wgAutoloadClasses['ScoreException'] = "$scoreBase/Score.body.php";
-$wgTrackingCategories[] = 'score-error-category';
-
-/*
- * VisualEditor resource loader module
- */
-$moduleTemplate = array(
-    'localBasePath' => __DIR__ . '/modules',
-    'remoteExtPath' => 'Score/modules',
-);
-
-$wgResourceModules['ext.score.visualEditor'] = array(
-	'scripts' => array(
-		've-score/ve.dm.MWScoreNode.js',
-		've-score/ve.ce.MWScoreNode.js',
-		've-score/ve.ui.MWScoreInspector.js',
-		've-score/ve.ui.MWScoreInspectorTool.js',
-	),
-	'styles' => array(
-		've-score/ve.ui.MWScoreIcons.css',
-		've-score/ve.ui.MWScoreInspector.css',
-	),
-	'dependencies' => array(
-		'ext.visualEditor.mwcore',
-	),
-	'messages' => array(
-		'score-visualeditor-mwscoreinspector-card-advanced',
-		'score-visualeditor-mwscoreinspector-card-audio',
-		'score-visualeditor-mwscoreinspector-card-midi',
-		'score-visualeditor-mwscoreinspector-card-notation',
-		'score-visualeditor-mwscoreinspector-lang',
-		'score-visualeditor-mwscoreinspector-lang-abc',
-		'score-visualeditor-mwscoreinspector-lang-lilypond',
-		'score-visualeditor-mwscoreinspector-midi',
-		'score-visualeditor-mwscoreinspector-override-midi',
-		'score-visualeditor-mwscoreinspector-override-midi-placeholder',
-		'score-visualeditor-mwscoreinspector-override-ogg',
-		'score-visualeditor-mwscoreinspector-override-ogg-placeholder',
-		'score-visualeditor-mwscoreinspector-raw',
-		'score-visualeditor-mwscoreinspector-title',
-		'score-visualeditor-mwscoreinspector-vorbis',
-	),
-	'targets' => array( 'desktop', 'mobile' ),
-) + $moduleTemplate;
-
-$wgVisualEditorPluginModules[] = 'ext.score.visualEditor';
-
-/**
- * Init routine.
- *
- * @param $parser Parser Mediawiki parser
- *
- * @return bool Returns true
- */
-function efScoreExtension( Parser &$parser ) {
-	global $wgUseImageMagick, $wgScoreTrim;
-
-	if ( $wgScoreTrim === null ) {
-		// Default to if we use Image Magick, since it requires Image Magick.
-		$wgScoreTrim = $wgUseImageMagick;
-	}
-
-	$parser->setHook( 'score', 'Score::render' );
-	return true;
+if ( function_exists( 'wfLoadExtension' ) ) {
+	wfLoadExtension( 'Score' );
+	$wgMessagesDirs['Score'] = __DIR__ . '/i18n';
+} else {
+	die( 'This version of the Score extension requires MediaWiki 1.25+' );
 }

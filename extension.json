@@ -1,0 +1,82 @@
+{
+	"name": "Score",
+	"version": "0.3.0",
+	"author": "Alexander Klauer",
+	"url": "https://www.mediawiki.org/wiki/Extension:Score",
+	"descriptionmsg": "score-desc",
+	"license-name": "GPL-3.0+",
+	"type": "parserhooks",
+	"MessagesDirs": {
+		"Score": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"Score": "Score.body.php",
+		"ScoreException": "Score.body.php",
+		"ScoreHooks": "Score.hooks.php"
+	},
+	"ResourceModules": {
+		"ext.score.visualEditor": {
+			"scripts": [
+				"ve-score/ve.dm.MWScoreNode.js",
+				"ve-score/ve.ce.MWScoreNode.js",
+				"ve-score/ve.ui.MWScoreInspector.js",
+				"ve-score/ve.ui.MWScoreInspectorTool.js"
+			],
+			"styles": [
+				"ve-score/ve.ui.MWScoreIcons.css",
+				"ve-score/ve.ui.MWScoreInspector.css"
+			],
+			"dependencies": [
+				"ext.visualEditor.mwcore"
+			],
+			"messages": [
+				"score-visualeditor-mwscoreinspector-card-advanced",
+				"score-visualeditor-mwscoreinspector-card-audio",
+				"score-visualeditor-mwscoreinspector-card-midi",
+				"score-visualeditor-mwscoreinspector-card-notation",
+				"score-visualeditor-mwscoreinspector-lang",
+				"score-visualeditor-mwscoreinspector-lang-abc",
+				"score-visualeditor-mwscoreinspector-lang-lilypond",
+				"score-visualeditor-mwscoreinspector-midi",
+				"score-visualeditor-mwscoreinspector-override-midi",
+				"score-visualeditor-mwscoreinspector-override-midi-placeholder",
+				"score-visualeditor-mwscoreinspector-override-ogg",
+				"score-visualeditor-mwscoreinspector-override-ogg-placeholder",
+				"score-visualeditor-mwscoreinspector-raw",
+				"score-visualeditor-mwscoreinspector-title",
+				"score-visualeditor-mwscoreinspector-vorbis"
+			],
+			"targets": [
+				"desktop",
+				"mobile"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "Score/modules"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": [
+			"ScoreHooks::onParserFirstCallInit"
+		]
+	},
+	"config": {
+		"ScoreTrim": null,
+		"ScoreLilyPond": "/usr/bin/lilypond",
+		"ScoreAbc2Ly": "/usr/bin/abc2ly",
+		"ScoreTimidity": "/usr/bin/timidity",
+		"ScorePath": false,
+		"ScoreDirectory": false,
+		"ScoreFileBackend": false
+	},
+	"TrackingCategories": [
+		"score-error-category"
+	],
+	"VisualEditorPluginModules": [
+		"ext.score.visualEditor"
+	],
+	"manifest_version": 1
+}
