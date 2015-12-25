@@ -4,7 +4,8 @@
 			"Andriykopanytsia",
 			"Steve.rusyn",
 			"SteveR",
-			"Ата"
+			"Ата",
+			"Piramidion"
 		]
 	},
 	"score-abc2lynotexecutable": "Не вдалося виконати конвертер ABC у LilyPond:  $1  не є виконуваним файлом. Переконайтеся, що <code>$wgScoreAbc2Ly</code> правильно встановлено.",
@@ -37,5 +38,18 @@
 	"score-renameerr": "Помилка переміщення нотних файлів у каталог вивантаження",
 	"score-trimerr": "Зображення не може бути урізаним:\n$1\nЗадайте <code>$wgScoreTrim=false</code>, якщо ця проблема зберігається.",
 	"score-versionerr": "Не вдалося отримати версію LilyPond:\n$1",
+	"score-visualeditor-mwscoreinspector-card-advanced": "Додатково",
+	"score-visualeditor-mwscoreinspector-card-audio": "Аудіо",
+	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
+	"score-visualeditor-mwscoreinspector-card-notation": "Ноти",
+	"score-visualeditor-mwscoreinspector-lang": "Мова",
+	"score-visualeditor-mwscoreinspector-midi": "Посилання на MIDI-файл (за замовчуванням генерується автоматично)",
+	"score-visualeditor-mwscoreinspector-override-midi": "Використати існуючий MIDI-файл",
+	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Назва існуючого MIDI-файлу",
+	"score-visualeditor-mwscoreinspector-override-ogg": "Використати існуючий аудіофайл",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Назва існуючого аудіофайлу (має бути у форматі Ogg/Vorbis)",
+	"score-visualeditor-mwscoreinspector-raw": "Це — повний файл LilyPond",
+	"score-visualeditor-mwscoreinspector-title": "Нотний запис",
+	"score-visualeditor-mwscoreinspector-vorbis": "Включити аудіофайл (за замовчуванням генерується автоматично)",
 	"score-vorbisoverrideogg": "Ви не можете запросити візуалізацію Ogg/Vorbis і вказати при цьому override_ogg."
 }
