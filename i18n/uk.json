@@ -47,7 +47,7 @@
 	"score-visualeditor-mwscoreinspector-override-midi": "Використати існуючий MIDI-файл",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Назва існуючого MIDI-файлу",
 	"score-visualeditor-mwscoreinspector-override-ogg": "Використати існуючий аудіофайл",
-	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Назва існуючого аудіофайлу (має бути у форматі Ogg/Vorbis)",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Назва існуючого аудіофайлу (має бути Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Це — повний файл LilyPond",
 	"score-visualeditor-mwscoreinspector-title": "Нотний запис",
 	"score-visualeditor-mwscoreinspector-vorbis": "Включити аудіофайл (за замовчуванням генерується автоматично)",
