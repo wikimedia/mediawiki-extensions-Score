@@ -11,12 +11,12 @@
 	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-card-notation": "Zapis",
 	"score-visualeditor-mwscoreinspector-lang": "Jezik",
-	"score-visualeditor-mwscoreinspector-midi": "Poveznica na MIDI datoteku (zadano automatski generirana)",
+	"score-visualeditor-mwscoreinspector-midi": "Poveznica na MIDI datoteku (zadano se automatski izvodi)",
 	"score-visualeditor-mwscoreinspector-override-midi": "Rabi postojeću MIDI datoteku",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Ime postojeće MIDI datoteke",
 	"score-visualeditor-mwscoreinspector-override-ogg": "Rabi postojeću zvukovnu datoteku",
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Ime postojeće zvukovne datoteke (mora biti Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Ovo je u cijelosti LilyPond datoteka",
 	"score-visualeditor-mwscoreinspector-title": "Glazbeni zapis",
-	"score-visualeditor-mwscoreinspector-vorbis": "Postavi zvukovnu datoteku (zadano automatski generirana)"
+	"score-visualeditor-mwscoreinspector-vorbis": "Postavi zvukovnu datoteku (zadano se automatski izvodi)"
 }
