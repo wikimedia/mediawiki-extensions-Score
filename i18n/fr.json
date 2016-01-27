@@ -8,7 +8,8 @@
 			"Orlodrim",
 			"Seb35",
 			"Sherbrooke",
-			"Macofe"
+			"Macofe",
+			"Wladek92"
 		]
 	},
 	"score-abc2lynotexecutable": "Le convertisseur ABC vers LilyPond n'a pas pu être exécuté: $1 n'est pas un fichier exécutable. Assurez-vous que <code>$wgScoreAbc2Ly</code> est défini correctement.",
@@ -46,7 +47,7 @@
 	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-card-notation": "Notation",
 	"score-visualeditor-mwscoreinspector-lang": "Langue",
-	"score-visualeditor-mwscoreinspector-midi": "Lien vers un fichier MIDI (généré automatiquement par défaut)",
+	"score-visualeditor-mwscoreinspector-midi": "Un lien vers un fichier MIDI (généré automatiquement par défaut)",
 	"score-visualeditor-mwscoreinspector-override-midi": "Utiliser un fichier MIDI existant",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Nom de fichier MIDI existant",
 	"score-visualeditor-mwscoreinspector-override-ogg": "Utiliser un fichier audio existant",

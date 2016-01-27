@@ -42,7 +42,7 @@
 	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-card-notation": "Notazione",
 	"score-visualeditor-mwscoreinspector-lang": "Lingua",
-	"score-visualeditor-mwscoreinspector-midi": "Collegamento a un file MIDI (generato automaticamente per default)",
+	"score-visualeditor-mwscoreinspector-midi": "Un collegamento a un file MIDI (generato automaticamente per default)",
 	"score-visualeditor-mwscoreinspector-override-midi": "Usa un file MIDI esistente",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Nome del file MIDI esistente",
 	"score-visualeditor-mwscoreinspector-override-ogg": "Usa un file audio esistente",

@@ -43,7 +43,7 @@
 	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-card-notation": "Citat",
 	"score-visualeditor-mwscoreinspector-lang": "Språk",
-	"score-visualeditor-mwscoreinspector-midi": "Länka till en MIDI-fil (genereras automatiskt som standard)",
+	"score-visualeditor-mwscoreinspector-midi": "En länk till en MIDI-fil (genereras automatiskt som standard)",
 	"score-visualeditor-mwscoreinspector-override-midi": "Använd en befintlig MIDI-fil",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Namn på den befintliga MIDI-filen",
 	"score-visualeditor-mwscoreinspector-override-ogg": "Använd en befintlig ljudfil (måste vara Ogg/Vorbis-format)",

@@ -46,7 +46,7 @@
 	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-card-notation": "符号",
 	"score-visualeditor-mwscoreinspector-lang": "语言",
-	"score-visualeditor-mwscoreinspector-midi": "链接至一个MIDI文件（默认自动生成）",
+	"score-visualeditor-mwscoreinspector-midi": "至MIDI文件的链接（默认自动生成）",
 	"score-visualeditor-mwscoreinspector-override-midi": "使用现有MIDI文件",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "现有的MIDI文件名",
 	"score-visualeditor-mwscoreinspector-override-ogg": "使用一个现有音频文件",
