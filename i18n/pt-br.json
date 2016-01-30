@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Luckas",
-			"Dianakc"
+			"Dianakc",
+			"Almondega"
 		]
 	},
 	"score-abc2lynotexecutable": "O conversor ABC para LilyPond não pode ser executado: executed: $1 não é um arquivo executável. Certifique-se que o <code>$wgScoreAbc2Ly</code> está configurado corretamente.",
@@ -35,5 +36,18 @@
 	"score-renameerr": "Erro ao mover arquivos de partitura para o diretório de envio.",
 	"score-trimerr": "A imagem não pode ser cortada:\n$1\nDefina <code>$wgScoreTrim=false</code> se este problema persistir.",
 	"score-versionerr": "Não foi possível obter a versão do LilyPond:\n$1",
+	"score-visualeditor-mwscoreinspector-card-advanced": "Avançado",
+	"score-visualeditor-mwscoreinspector-card-audio": "Áudio",
+	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
+	"score-visualeditor-mwscoreinspector-card-notation": "Notação",
+	"score-visualeditor-mwscoreinspector-lang": "Idioma",
+	"score-visualeditor-mwscoreinspector-midi": "Uma ligação para um arquivo MIDI (autogerado por padrão)",
+	"score-visualeditor-mwscoreinspector-override-midi": "Use um arquivo MIDI existente",
+	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Nome de arquivo MIDI existente",
+	"score-visualeditor-mwscoreinspector-override-ogg": "Use um arquivo de som existente",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Nome de arquivo de som existente (deve ser Ogg/Vorbis)",
+	"score-visualeditor-mwscoreinspector-raw": "Este é um arquivo LilyPond completo",
+	"score-visualeditor-mwscoreinspector-title": "Notação musical",
+	"score-visualeditor-mwscoreinspector-vorbis": "Incluir um arquivo de som (autogerado por padrão)",
 	"score-vorbisoverrideogg": "Você não pode solicitar a renderização de Ogg/Vorbis e especificar override_ogg ao mesmo tempo."
 }
