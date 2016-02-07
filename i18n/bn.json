@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aftabuzzaman"
+		]
+	},
+	"score-page": "পাতা $1",
+	"score-readerr": "$1 ফাইল পড়তে অক্ষম।",
+	"score-visualeditor-mwscoreinspector-card-advanced": "উচ্চতর",
+	"score-visualeditor-mwscoreinspector-card-audio": "অডিও",
+	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
+	"score-visualeditor-mwscoreinspector-card-notation": "স্বরলিপি",
+	"score-visualeditor-mwscoreinspector-lang": "ভাষা",
+	"score-visualeditor-mwscoreinspector-title": "সাঙ্গীতিক স্বরলিপি"
+}
