@@ -4,6 +4,7 @@
 			"Aftabuzzaman"
 		]
 	},
+	"score-noinput": "LilyPond ইনপুট ফাইল $1 তৈরি করতে ব্যর্থ।",
 	"score-page": "পাতা $1",
 	"score-readerr": "$1 ফাইল পড়তে অক্ষম।",
 	"score-visualeditor-mwscoreinspector-card-advanced": "উচ্চতর",
@@ -11,5 +12,6 @@
 	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-card-notation": "স্বরলিপি",
 	"score-visualeditor-mwscoreinspector-lang": "ভাষা",
-	"score-visualeditor-mwscoreinspector-title": "সাঙ্গীতিক স্বরলিপি"
+	"score-visualeditor-mwscoreinspector-title": "সাঙ্গীতিক স্বরলিপি",
+	"score-visualeditor-mwscoreinspector-vorbis": "একটি অডিও ফাইল অন্তর্ভুক্ত করুন (ডিফল্ট অনুযায়ী স্বয়ংক্রিয়ভাবে উত্পন্ন)"
 }
