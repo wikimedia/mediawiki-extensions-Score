@@ -4,7 +4,10 @@
 			"Aftabuzzaman"
 		]
 	},
+	"score-error-category": "স্কোর রেন্ডারিং ত্রুটিসহ পাতা",
+	"score-getcwderr": "বর্তমান কর্মরত নির্দেশিকা পেতে অক্ষম",
 	"score-noinput": "LilyPond ইনপুট ফাইল $1 তৈরি করতে ব্যর্থ।",
+	"score-nooutput": "আউটপুট নির্দেশিকা $1 তৈরি করতে ব্যর্থ হয়েছে।",
 	"score-page": "পাতা $1",
 	"score-readerr": "$1 ফাইল পড়তে অক্ষম।",
 	"score-visualeditor-mwscoreinspector-card-advanced": "উচ্চতর",
@@ -12,6 +15,12 @@
 	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-card-notation": "স্বরলিপি",
 	"score-visualeditor-mwscoreinspector-lang": "ভাষা",
+	"score-visualeditor-mwscoreinspector-override-midi": "একটি বিদ্যমান MIDI ফাইল ব্যবহার করুন",
+	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "বিদ্যমান MIDI ফাইলের নাম",
+	"score-visualeditor-mwscoreinspector-override-ogg": "একটি বিদ্যমান অডিও ফাইল ব্যবহার করুন",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "বিদ্যমান অডিও ফাইলের নাম (অবশ্যই Ogg/Vorbis হতে হবে)",
+	"score-visualeditor-mwscoreinspector-raw": "এটি একটি সম্পূর্ণ LilyPond ফাইল",
 	"score-visualeditor-mwscoreinspector-title": "সাঙ্গীতিক স্বরলিপি",
-	"score-visualeditor-mwscoreinspector-vorbis": "একটি অডিও ফাইল অন্তর্ভুক্ত করুন (ডিফল্ট অনুযায়ী স্বয়ংক্রিয়ভাবে উত্পন্ন)"
+	"score-visualeditor-mwscoreinspector-vorbis": "একটি অডিও ফাইল অন্তর্ভুক্ত করুন (ডিফল্ট অনুযায়ী স্বয়ংক্রিয়ভাবে উত্পন্ন)",
+	"score-vorbisoverrideogg": "আপনি একই সময়ে Ogg/Vorbis রেন্ডারিংয়ের অনুরোধ এবং override_ogg নির্দিষ্ট করার কাজ করতে পারবেন না।"
 }
