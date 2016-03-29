@@ -27,8 +27,6 @@ OO.inheritClass( ve.ui.MWScoreInspector, ve.ui.MWLiveExtensionInspector );
 
 ve.ui.MWScoreInspector.static.name = 'score';
 
-ve.ui.MWScoreInspector.static.icon = 'score';
-
 ve.ui.MWScoreInspector.static.title = OO.ui.deferMsg( 'score-visualeditor-mwscoreinspector-title' );
 
 ve.ui.MWScoreInspector.static.modelClasses = [ ve.dm.MWScoreNode ];
