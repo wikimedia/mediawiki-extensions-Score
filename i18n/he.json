@@ -10,7 +10,7 @@
 	"score-abcconversionerr": "לא ניתן להמיר את קובץ ה־ABC לתסדיר LilyPond:\n$1",
 	"score-chdirerr": "לא ניתן לעבור את התיקייה $1",
 	"score-cleanerr": "לא ניתן לנקות קבצים ישנים לפני ציור מחדש",
-	"score-compilererr": "לא ניתן לקמפל קובץ קלט של LilyPond:\n$1",
+	"score-compilererr": "לא ניתן להדר קובץ קלט של LilyPond:\n$1",
 	"score-backend-error": "לא ניתן להעתיק את הקבצים שנוצרו ליעדם הסופי:\n$1",
 	"score-desc": "הוספת תג להצגת תווים מוזיקליים באמצעות LilyPond",
 	"score-error-category": "דפים עם שגיאות בהכנת תווים",
