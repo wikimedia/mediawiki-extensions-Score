@@ -46,7 +46,7 @@
 	"score-visualeditor-mwscoreinspector-midi": "En länk till en MIDI-fil (genereras automatiskt som standard)",
 	"score-visualeditor-mwscoreinspector-override-midi": "Använd en befintlig MIDI-fil",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Namn på den befintliga MIDI-filen",
-	"score-visualeditor-mwscoreinspector-override-ogg": "Använd en befintlig ljudfil (måste vara Ogg/Vorbis-format)",
+	"score-visualeditor-mwscoreinspector-override-ogg": "Använd en befintlig ljudfil",
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Namn på den befintliga ljudfilen (måste vara Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Detta är en komplett LilyPond-fil",
 	"score-visualeditor-mwscoreinspector-title": "Musiknotation",
