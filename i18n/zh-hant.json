@@ -4,7 +4,8 @@
 			"Justincheng12345",
 			"Simon Shek",
 			"Cwlin0416",
-			"LNDDYL"
+			"LNDDYL",
+			"Liuxinyu970226"
 		]
 	},
 	"score-abc2lynotexecutable": "ABC 轉 LilyPond 的轉換器無法執行：$1 不是一個可執行檔，請確定 <code>$wgScoreAbc2Ly</code> 已設定正確。",
@@ -37,6 +38,7 @@
 	"score-renameerr": "將樂譜檔移至上傳目錄錯誤。",
 	"score-trimerr": "無法裁切圖片：\n$1\n若問題仍持續存在，請設定 <code>$wgScoreTrim=false</code>。",
 	"score-versionerr": "無法取得 LilyPond 版本：\n$1",
+	"score-visualeditor-mwscoreinspector-card-audio": "音訊",
 	"score-visualeditor-mwscoreinspector-lang": "語言",
 	"score-visualeditor-mwscoreinspector-midi": "連結至 MIDI 檔案",
 	"score-visualeditor-mwscoreinspector-title": "樂譜",
