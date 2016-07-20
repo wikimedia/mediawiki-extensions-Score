@@ -7,7 +7,7 @@
 			"Ykhwong"
 		]
 	},
-	"score-abc2lynotexecutable": "ABC에서 LilyPond로의 변환기를 실행할 수 없습니다. $1(은)는 실행 파일이 아닙니다. <code>$wgScoreAbc2Ly</code>가 올바르게 설정되어 있는지 확인하세요.",
+	"score-abc2lynotexecutable": "ABC에서 LilyPond로의 변환기를 실행할 수 없습니다: $1은(는) 실행 파일이 아닙니다. <code>$wgScoreAbc2Ly</code>가 올바르게 설정되어 있는지 확인하세요.",
 	"score-abcconversionerr": "ABC 파일을 LilyPond 형식으로 변환할 수 없습니다:\n$1",
 	"score-chdirerr": "$1 디렉토리를 바꿀 수 없습니다",
 	"score-cleanerr": "다시 렌더링하기 전에 오래된 파일을 지울 수 없습니다",
