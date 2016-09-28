@@ -185,7 +185,9 @@ class Score {
 					'wikiId'         => wfWikiId(),
 					'lockManager'    => new NullLockManager( array() ),
 					'containerPaths' => array( 'score-render' => $dir ),
-					'fileMode'       => 0777
+					'fileMode'       => 0777,
+					'obResetFunc' => 'wfResetOutputBuffers',
+					'streamMimeFunc' => [ 'StreamFile', 'contentTypeFromPath' ]
 				) );
 			}
 			return self::$backend;
