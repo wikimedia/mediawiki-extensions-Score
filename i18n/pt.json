@@ -4,7 +4,8 @@
 			"Waldir",
 			"Jkb8",
 			"Macofe",
-			"Vitorvicentevalente"
+			"Vitorvicentevalente",
+			"Hamilton Abreu"
 		]
 	},
 	"score-abc2lynotexecutable": "O conversor de ABC para LilyPond não pôde ser executado: $1 não é um ficheiro executável. Certifique-se que <code>$wgScoreAbc2Ly</code> está definido corretamente.",
@@ -41,7 +42,7 @@
 	"score-visualeditor-mwscoreinspector-card-audio": "Áudio",
 	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-lang": "Língua",
-	"score-visualeditor-mwscoreinspector-midi": "Ligação a um arquivo MIDI (gerada automaticamente por defeito)",
+	"score-visualeditor-mwscoreinspector-midi": "Uma ligação a um ficheiro MIDI (gerada automaticamente por padrão)",
 	"score-visualeditor-mwscoreinspector-override-midi": "Utilizar um ficheiro MIDI existente",
 	"score-visualeditor-mwscoreinspector-override-ogg": "Utilizar um ficheiro de áudio existente",
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Nome do ficheiro de áudio existente (deve ser Ogg/Vobis)",
