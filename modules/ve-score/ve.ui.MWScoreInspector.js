@@ -55,7 +55,7 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 	} );
 
 	// Cards
-	notationCard =  new OO.ui.CardLayout( 'notation', {
+	notationCard = new OO.ui.CardLayout( 'notation', {
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-card-notation' ),
 		expanded: false,
 		scrollable: false,
@@ -174,15 +174,15 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
 	return ve.ui.MWScoreInspector.super.prototype.getSetupProcess.call( this, data )
 		.next( function () {
-			// jscs:disable requireCamelCaseOrUpperCaseIdentifiers
 			var attributes = this.selectedNode.getAttribute( 'mw' ).attrs,
 				lang = attributes.lang || 'lilypond',
 				raw = attributes.raw !== undefined,
 				midi = attributes.midi === '1',
 				vorbis = attributes.vorbis === '1',
+				/* eslint-disable camelcase */
 				overrideMidi = attributes.override_midi || '',
 				overrideOgg = attributes.override_ogg || '';
-			// jscs:enable requireCamelCaseOrUpperCaseIdentifiers
+				/* eslint-enable camelcase */
 
 			// Populate form
 			this.langSelect.selectItemByData( lang );
@@ -259,14 +259,14 @@ ve.ui.MWScoreInspector.prototype.updateMwData = function ( mwData ) {
 	overrideMidi = !this.overrideMidiInput.isDisabled() && this.overrideMidiInput.getValue();
 
 	// Update attributes
-	// jscs:disable requireCamelCaseOrUpperCaseIdentifiers
 	mwData.attrs.lang = lang;
 	mwData.attrs.raw = raw ? '1' : undefined;
 	mwData.attrs.midi = midi ? '1' : undefined;
 	mwData.attrs.vorbis = vorbis ? '1' : undefined;
+	/* eslint-disable camelcase */
 	mwData.attrs.override_midi = overrideMidi || undefined;
 	mwData.attrs.override_ogg = overrideOgg || undefined;
-	// jscs:enable requireCamelCaseOrUpperCaseIdentifiers
+	/* eslint-enable camelcase */
 };
 
 /**
