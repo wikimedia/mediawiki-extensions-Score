@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Danmichaelo"
+			"Danmichaelo",
+			"Jon Harald Søby"
 		]
 	},
 	"score-abc2lynotexecutable": "Kunne ikke kjøre programmet for å konvertere fra ABC til LilyPond: $1 er ikke en eksekverbar fil. Sjekk at <code>$wgScoreAbc2Ly</code> er riktig.",
@@ -39,7 +40,7 @@
 	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-card-notation": "Notasjon",
 	"score-visualeditor-mwscoreinspector-lang": "Språk",
-	"score-visualeditor-mwscoreinspector-midi": "Lenke til en MIDI-fil (auto-generert som standard)",
+	"score-visualeditor-mwscoreinspector-midi": "Ei lenke til en MIDI-fil (auto-generert som standard)",
 	"score-visualeditor-mwscoreinspector-override-midi": "Bruk en eksisterende MIDI-fil",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Eksisterende MIDI-fil",
 	"score-visualeditor-mwscoreinspector-override-ogg": "Bruk en eksisterende lydfil",
