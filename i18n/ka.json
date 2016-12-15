@@ -5,6 +5,19 @@
 		]
 	},
 	"score-page": "გვერდი $1",
+	"score-visualeditor-mwscoreinspector-card-advanced": "გაფართოებული",
+	"score-visualeditor-mwscoreinspector-card-audio": "აუდიო",
+	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-card-notation": "ნოტები",
-	"score-visualeditor-mwscoreinspector-title": "მუსიკალური ნოტები"
+	"score-visualeditor-mwscoreinspector-lang": "ენა",
+	"score-visualeditor-mwscoreinspector-lang-abc": "ABC",
+	"score-visualeditor-mwscoreinspector-lang-lilypond": "LilyPond",
+	"score-visualeditor-mwscoreinspector-midi": "MIDI ფაილის ბმული (ჩვეულებრივ ავტომატურად გენერირდება)",
+	"score-visualeditor-mwscoreinspector-override-midi": "არსებული MIDI ფაილის გამოყენება",
+	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "არსებული MIDI ფაილის სახელი",
+	"score-visualeditor-mwscoreinspector-override-ogg": "არსებული აუდიო ფაილის გამოყენება",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "არსებული აუდიო ფაილის სახელი (უნდა იყოს Ogg/Vorbis)",
+	"score-visualeditor-mwscoreinspector-raw": "ეს არის დასრულებული LilyPond ფაილი",
+	"score-visualeditor-mwscoreinspector-title": "მუსიკალური ნოტები",
+	"score-visualeditor-mwscoreinspector-vorbis": "აუდიო ფაილის ჩართვა (ჩვეულებრივ ავტომატურად გენერირდება)"
 }
