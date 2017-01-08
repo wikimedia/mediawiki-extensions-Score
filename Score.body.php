@@ -108,12 +108,24 @@ class Score {
 	}
 
 	/**
+	 * @return string
+	 * @throws ScoreException if LilyPond could not be executed properly.
+	 */
+	public static function getLilypondVersion() {
+		if ( self::$lilypondVersion === null ) {
+			self::fetchLilypondVersion();
+		}
+
+		return self::$lilypondVersion;
+	}
+
+	/**
 	 * Determines the version of LilyPond in use and writes the version
 	 * string to self::$lilypondVersion.
 	 *
 	 * @throws ScoreException if LilyPond could not be executed properly.
 	 */
-	private static function getLilypondVersion() {
+	private static function fetchLilypondVersion() {
 		global $wgScoreLilyPond;
 
 		if ( !is_executable( $wgScoreLilyPond ) ) {
@@ -725,11 +737,7 @@ class Score {
 	 * @throws ScoreException if determining the LilyPond version fails.
 	 */
 	private static function embedLilypondCode( $lilypondCode ) {
-		/* Get LilyPond version if we don't know it yet */
-		if ( self::$lilypondVersion === null ) {
-			self::getLilypondVersion();
-		}
-		$version = self::$lilypondVersion;
+		$version = self::getLilypondVersion();
 
 		/* Raw code. In Scheme, ##f is false and ##t is true. */
 		/* Set the default MIDI tempo to 100, 60 is a bit too slow */
