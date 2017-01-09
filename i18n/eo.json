@@ -2,8 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"KuboF",
-			"Yekrats"
+			"Yekrats",
+			"Robin van der Vliet"
 		]
 	},
-	"score-page": "Paĝo $1"
+	"score-page": "Paĝo $1",
+	"score-visualeditor-mwscoreinspector-lang": "Lingvo"
 }
