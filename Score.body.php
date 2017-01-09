@@ -925,7 +925,7 @@ LILYPOND;
 		global $wgImageMagickConvertCommand;
 
 		$cmd = wfEscapeShellArg( $wgImageMagickConvertCommand )
-			. ' -trim '
+			. ' -trim -transparent white '
 			. wfEscapeShellArg( $source ) . ' '
 			. wfEscapeShellArg( $dest )
 			. ' 2>&1';
