@@ -384,7 +384,7 @@ class Score {
 			$midiFileName = "{$options['file_name_prefix']}.midi";
 			$metaDataFileName = "{$options['file_name_prefix']}.json";
 
-			if( isset( $existingFiles[$metaDataFileName] ) ) {
+			if ( isset( $existingFiles[$metaDataFileName] ) ) {
 				$metaDataFile = $backend->getFileContents(
 					array( 'src' => "{$options['dest_storage_path']}/$metaDataFileName" ) );
 				if ( $metaDataFile === false ) {
@@ -480,8 +480,8 @@ class Score {
 				$link = Html::rawElement( 'a', array( 'href' => $url ), $link );
 			}
 			if ( $options['generate_ogg'] ) {
-				$length = $metaData[basename($oggPath)]['length'];
-				if ( class_exists( 'TimedMediaTransformOutput' ) ){
+				$length = $metaData[basename( $oggPath )]['length'];
+				if ( class_exists( 'TimedMediaTransformOutput' ) ) {
 					$player = new TimedMediaTransformOutput( array(
 						'length' => $length,
 						'sources' => array(
@@ -799,7 +799,7 @@ LILYPOND;
 			'dst' => $remoteDest );
 
 		// Create metadata json
-		$metaData[basename($remoteDest)]['length'] = self::getLength( $factoryOgg );
+		$metaData[basename( $remoteDest )]['length'] = self::getLength( $factoryOgg );
 		$dstFileName = "{$options['file_name_prefix']}.json";
 		$dest = "{$options['dest_storage_path']}/$dstFileName";
 		$ops[] = array(
@@ -905,7 +905,7 @@ LILYPOND;
 	 * @return float duration in seconds
 	 */
 	private static function getLength( $path ) {
-		//File_Ogg is packaged in TimedMediaHandler and OggHandler
+		// File_Ogg is packaged in TimedMediaHandler and OggHandler
 		if ( !class_exists( 'File_Ogg' ) ) {
 			require( 'File/Ogg.php' );
 		}
@@ -943,7 +943,7 @@ LILYPOND;
 	 * @return Bool true on success, false on error
 	 */
 	private static function eraseFactory( $dir ) {
-		if( file_exists( $dir ) ) {
+		if ( file_exists( $dir ) ) {
 			array_map( 'unlink', glob( "$dir/*", GLOB_NOSORT ) );
 			$rc = rmdir( $dir );
 			if ( !$rc ) {
