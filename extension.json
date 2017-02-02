@@ -13,7 +13,7 @@
 	},
 	"AutoloadClasses": {
 		"Score": "Score.body.php",
-		"ScoreException": "Score.body.php",
+		"ScoreException": "ScoreException.php",
 		"ScoreHooks": "Score.hooks.php"
 	},
 	"ResourceModules": {
