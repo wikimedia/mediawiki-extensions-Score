@@ -14,4 +14,12 @@ class ScoreHooks {
 		$parser->setHook( 'score', 'Score::render' );
 		return true;
 	}
+
+	public static function onSoftwareInfo( array &$software ) {
+		try {
+			$software[ '[http://lilypond.org/ LilyPond]' ] = Score::getLilypondVersion();
+		} catch ( ScoreException $ex ) {
+			// LilyPond executable can't found
+		}
+	}
 }
