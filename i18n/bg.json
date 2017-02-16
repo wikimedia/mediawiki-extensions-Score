@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Лорд Бъмбъри"
+			"Лорд Бъмбъри",
+			"StanProg"
 		]
 	},
+	"score-visualeditor-mwscoreinspector-lang": "Език",
 	"score-visualeditor-mwscoreinspector-title": "Музикална нотация"
 }
