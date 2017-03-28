@@ -4,5 +4,21 @@
 			"Geraki"
 		]
 	},
-	"score-error-category": "Σελίδες με σφάλματα απόδοσης παρτιτούρας"
+	"score-error-category": "Σελίδες με σφάλματα απόδοσης παρτιτούρας",
+	"score-oggconversionerr": "Δεν ήταν δυνατή η μετατροπή από MIDI σε Ogg/Vorbis:\n$1",
+	"score-page": "Σελίδα $1",
+	"score-visualeditor-mwscoreinspector-card-advanced": "Προχωρημένο",
+	"score-visualeditor-mwscoreinspector-card-audio": "Ήχος",
+	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
+	"score-visualeditor-mwscoreinspector-card-notation": "Σημειογραφία",
+	"score-visualeditor-mwscoreinspector-lang": "Γλώσσα",
+	"score-visualeditor-mwscoreinspector-midi": "Σύνδεσμος προς αρχείο MIDI (αυτόματα παραγόμενου από προεπιλογή)",
+	"score-visualeditor-mwscoreinspector-override-midi": "Χρήση υπάρχοντος αρχείου MIDI",
+	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Όνομα υπάρχοντος αρχείου MIDI",
+	"score-visualeditor-mwscoreinspector-override-ogg": "Χρήση υπάρχοντος αρχείου ήχου",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Όνομα υπάρχοντος αρχείου ήχου (πρέπει να είναι Ogg/Vorbis)",
+	"score-visualeditor-mwscoreinspector-raw": "Αυτό είναι ένα ολοκληρωμένο αρχείο LilyPond",
+	"score-visualeditor-mwscoreinspector-title": "Μουσική σημειογραφία",
+	"score-visualeditor-mwscoreinspector-vorbis": "Συμπερίληψη ενός αρχείου ήχου (αυτόματα παραγόμενου από προεπιλογή)",
+	"score-vorbisoverrideogg": "Δεν μπορείτε να ζητάτε απόδοση Ogg/Vorbis και να ορίζετε override_ogg την ίδια στιγμή."
 }
