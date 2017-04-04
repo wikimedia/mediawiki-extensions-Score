@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"John Reid"
+			"John Reid",
+			"AmaryllisGardener"
 		]
 	},
+	"score-error-category": "Pages wi score renderin errors",
 	"score-error-category-desc": "Thaur wis ae mistak while renderin the score."
 }
