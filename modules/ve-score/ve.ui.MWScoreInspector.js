@@ -43,7 +43,7 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 		midiField, overrideMidiField,
 		vorbisField, overrideOggField,
 		rawField,
-		notationCard, audioCard, midiCard, advancedCard;
+		notationTabPanel, audioTabPanel, midiTabPanel, advancedTabPanel;
 
 	// Parent method
 	ve.ui.MWScoreInspector.super.prototype.initialize.call( this );
@@ -54,37 +54,37 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 		expanded: false
 	} );
 
-	// Cards
-	notationCard = new OO.ui.CardLayout( 'notation', {
+	// TabPanels
+	notationTabPanel = new OO.ui.TabPanelLayout( 'notation', {
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-card-notation' ),
 		expanded: false,
 		scrollable: false,
 		padded: true
 	} );
-	audioCard = new OO.ui.CardLayout( 'audio', {
+	audioTabPanel = new OO.ui.TabPanelLayout( 'audio', {
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-card-audio' ),
 		expanded: false,
 		scrollable: false,
 		padded: true
 	} );
-	midiCard = new OO.ui.CardLayout( 'midi', {
+	midiTabPanel = new OO.ui.TabPanelLayout( 'midi', {
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-card-midi' ),
 		expanded: false,
 		scrollable: false,
 		padded: true
 	} );
-	advancedCard = new OO.ui.CardLayout( 'advanced', {
+	advancedTabPanel = new OO.ui.TabPanelLayout( 'advanced', {
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-card-advanced' ),
 		expanded: false,
 		scrollable: false,
 		padded: true
 	} );
 
-	this.indexLayout.addCards( [
-		notationCard,
-		audioCard,
-		midiCard,
-		advancedCard
+	this.indexLayout.addTabPanels( [
+		notationTabPanel,
+		audioTabPanel,
+		midiTabPanel,
+		advancedTabPanel
 	] );
 
 	// Language
@@ -147,20 +147,20 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 	// Initialization
 	this.$content.addClass( 've-ui-mwScoreInspector-content' );
 
-	notationCard.$element.append(
+	notationTabPanel.$element.append(
 		inputField.$element,
 		langField.$element,
 		this.generatedContentsError.$element
 	);
-	audioCard.$element.append(
+	audioTabPanel.$element.append(
 		vorbisField.$element,
 		overrideOggField.$element
 	);
-	midiCard.$element.append(
+	midiTabPanel.$element.append(
 		midiField.$element,
 		overrideMidiField.$element
 	);
-	advancedCard.$element.append(
+	advancedTabPanel.$element.append(
 		rawField.$element
 	);
 	this.form.$element.append(
@@ -208,7 +208,7 @@ ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
 			this.overrideMidiInput.on( 'change', this.onChangeHandler );
 			this.overrideOggInput.on( 'change', this.onChangeHandler );
 
-			this.indexLayout.connect( this, { set: 'onCardSet' } );
+			this.indexLayout.connect( this, { set: 'onTabPanelSet' } );
 			this.indexLayout.connect( this, { set: 'updateSize' } );
 			this.langSelect.connect( this, { choose: 'toggleDisableRawCheckbox' } );
 			this.midiCheckbox.connect( this, { change: 'toggleDisableOverrideMidiInput' } );
@@ -301,10 +301,10 @@ ve.ui.MWScoreInspector.prototype.formatGeneratedContentsError = function ( $elem
 };
 
 /**
- * Append the error to the current card.
+ * Append the error to the current tab panel.
  */
-ve.ui.MWScoreInspector.prototype.onCardSet = function () {
-	this.indexLayout.getCurrentCard().$element.append( this.generatedContentsError.$element );
+ve.ui.MWScoreInspector.prototype.onTabPanelSet = function () {
+	this.indexLayout.getCurrentTabPanel().$element.append( this.generatedContentsError.$element );
 };
 
 /* Registration */
