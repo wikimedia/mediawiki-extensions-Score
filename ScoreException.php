@@ -48,7 +48,7 @@ class ScoreException extends Exception {
 	public function  __toString() {
 		return Html::rawElement(
 			'div',
-			array( 'class' => 'errorbox' ),
+			[ 'class' => 'errorbox' ],
 			$this->getMessage()
 		);
 	}

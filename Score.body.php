@@ -39,7 +39,7 @@ class Score {
 	/**
 	 * Supported score languages.
 	 */
-	private static $supportedLangs = array( 'lilypond', 'ABC' );
+	private static $supportedLangs = [ 'lilypond', 'ABC' ];
 
 	/**
 	 * LilyPond version string.
@@ -70,7 +70,7 @@ class Score {
 			$message->rawParams(
 				Html::rawElement( 'pre',
 					// Error messages from LilyPond & abc2ly are always English
-					array( 'lang' => 'en', 'dir' => 'ltr' ),
+					[ 'lang' => 'en', 'dir' => 'ltr' ],
 					htmlspecialchars( $output )
 				)
 			)
@@ -162,15 +162,15 @@ class Score {
 				} else {
 					$dir = $wgScoreDirectory;
 				}
-				self::$backend = new FSFileBackend( array(
+				self::$backend = new FSFileBackend( [
 					'name'           => 'score-backend',
 					'wikiId'         => wfWikiId(),
-					'lockManager'    => new NullLockManager( array() ),
-					'containerPaths' => array( 'score-render' => $dir ),
+					'lockManager'    => new NullLockManager( [] ),
+					'containerPaths' => [ 'score-render' => $dir ],
 					'fileMode'       => 0777,
 					'obResetFunc' => 'wfResetOutputBuffers',
 					'streamMimeFunc' => [ 'StreamFile', 'contentTypeFromPath' ]
-				) );
+				] );
 			}
 			return self::$backend;
 		}
@@ -194,7 +194,7 @@ class Score {
 			$baseUrl = self::getBaseUrl();
 			$baseStoragePath = self::getBackend()->getRootStoragePath() . '/score-render';
 
-			$options = array(); // options to self::generateHTML()
+			$options = []; // options to self::generateHTML()
 
 			/* temporary working directory to use */
 			$fuzz = md5( mt_rand() );
@@ -275,11 +275,11 @@ class Score {
 			}
 
 			// Input for cache key
-			$cacheOptions = array(
+			$cacheOptions = [
 				'code' => $code,
 				'lang' => $options['lang'],
 				'raw'  => $options['raw'],
-			);
+			];
 			// Doing this separately to not invalidate too many existing keys.
 			if ( $options['raw'] && ( $options['generate_ogg']
 				|| ( $options['link_midi'] && !$options['override_midi'] )
@@ -303,7 +303,7 @@ class Score {
 
 		// Mark the page as using the score extension, it makes easier
 		// to track all those pages.
-		$parser->getOutput()->setProperty( 'score' , true );
+		$parser->getOutput()->setProperty( 'score', true );
 
 		return $html;
 	}
@@ -354,8 +354,8 @@ class Score {
 		try {
 			$backend = self::getBackend();
 			$fileIter = $backend->getFileList(
-				array( 'dir' => $options['dest_storage_path'], 'topOnly' => true ) );
-			$existingFiles = array();
+				[ 'dir' => $options['dest_storage_path'], 'topOnly' => true ] );
+			$existingFiles = [];
 			foreach ( $fileIter as $file ) {
 				$existingFiles[$file] = true;
 			}
@@ -368,13 +368,13 @@ class Score {
 
 			if ( isset( $existingFiles[$metaDataFileName] ) ) {
 				$metaDataFile = $backend->getFileContents(
-					array( 'src' => "{$options['dest_storage_path']}/$metaDataFileName" ) );
+					[ 'src' => "{$options['dest_storage_path']}/$metaDataFileName" ] );
 				if ( $metaDataFile === false ) {
 					throw new ScoreException( wfMessage( 'score-nocontent', $metaDataFileName ) );
 				}
 				$metaData = FormatJson::decode( $metaDataFile, true );
 			} else {
-				$metaData = array();
+				$metaData = [];
 			}
 
 			if (
@@ -389,13 +389,13 @@ class Score {
 			}
 
 			/* Generate Ogg/Vorbis file if necessary */
-			if ( $options['generate_ogg']  ) {
+			if ( $options['generate_ogg'] ) {
 				if ( $options['override_midi'] ) {
 					$oggUrl = $options['ogg_url'];
 					$oggPath = $options['ogg_storage_path'];
-					$exists = $backend->fileExists( array( 'src' => $options['ogg_storage_path'] ) );
+					$exists = $backend->fileExists( [ 'src' => $options['ogg_storage_path'] ] );
 					if ( !$exists ) {
-						$backend->prepare( array( 'dir' => $options['ogg_storage_dir'] ) );
+						$backend->prepare( [ 'dir' => $options['ogg_storage_dir'] ] );
 						$sourcePath = $options['midi_file']->getLocalRefPath();
 						self::generateOgg( $sourcePath, $options, $oggPath, $metaData );
 					}
@@ -412,7 +412,7 @@ class Score {
 						if ( !file_exists( $sourcePath ) ) {
 							// No, need to fetch it from the backend
 							$sourceFileRef = $backend->getLocalReference(
-								array( 'src' => "{$options['dest_storage_path']}/$midiFileName" ) );
+								[ 'src' => "{$options['dest_storage_path']}/$midiFileName" ] );
 							$sourcePath = $sourceFileRef->getPath();
 						}
 						self::generateOgg( $sourcePath, $options, $oggPath, $metaData );
@@ -423,12 +423,12 @@ class Score {
 			/* return output link(s) */
 			if ( isset( $existingFiles[$imageFileName] ) ) {
 				list( $width, $height ) = $metaData[$imageFileName]['size'];
-				$link = Html::rawElement( 'img', array(
+				$link = Html::rawElement( 'img', [
 					'src' => "{$options['dest_url']}/$imageFileName",
 					'width' => $width,
 					'height' => $height,
 					'alt' => $code,
-				) );
+				] );
 			} elseif ( isset( $existingFiles[$multi1FileName] ) ) {
 				$link = '';
 				for ( $i = 1; ; ++$i ) {
@@ -441,13 +441,13 @@ class Score {
 						->numParams( $i )
 						->plain();
 					list( $width, $height ) = $metaData[$fileName]['size'];
-					$link .= Html::rawElement( 'img', array(
+					$link .= Html::rawElement( 'img', [
 						'src' => "{$options['dest_url']}/$fileName",
 						'width' => $width,
 						'height' => $height,
 						'alt' => $pageNumb,
 						'title' => $pageNumb
-					) );
+					] );
 				}
 			} else {
 				/* No images; this may happen in raw mode or when the user omits the score code */
@@ -459,26 +459,26 @@ class Score {
 				} else {
 					$url = "{$options['dest_url']}/{$options['file_name_prefix']}.midi";
 				}
-				$link = Html::rawElement( 'a', array( 'href' => $url ), $link );
+				$link = Html::rawElement( 'a', [ 'href' => $url ], $link );
 			}
 			if ( $options['generate_ogg'] ) {
 				$length = $metaData[basename( $oggPath )]['length'];
 				if ( class_exists( 'TimedMediaTransformOutput' ) ) {
-					$player = new TimedMediaTransformOutput( array(
+					$player = new TimedMediaTransformOutput( [
 						'length' => $length,
-						'sources' => array(
-							array(
+						'sources' => [
+							[
 								'src' => $oggUrl,
 								'type' => 'audio/ogg; codecs="vorbis"'
-							)
-						),
+							]
+						],
 						'disablecontrols' => 'options,timedText',
 						'width' => self::DEFAULT_PLAYER_WIDTH
-					) );
+					] );
 				} else /* class_exists( 'OggAudioDisplay' ) */ {
 					$oh = new OggHandler();
 					$oh->parserTransformHook( $parser, false );
-					$player = new OggHandlerPlayer( array(
+					$player = new OggHandlerPlayer( [
 						'type' => 'audio',
 						'defaultAlt' => '',
 						'videoUrl' => $oggUrl,
@@ -487,7 +487,7 @@ class Score {
 						'height' => 0,
 						'length' => $length,
 						'showIcon' => false,
-					) );
+					] );
 				}
 				$link .= $player->toHtml();
 			}
@@ -561,10 +561,9 @@ class Score {
 		// Reduce the GC yield to 25% since testing indicates that this will
 		// reduce memory usage by a factor of 3 or so with minimal impact on
 		// CPU time. Tested with http://www.mutopiaproject.org/cgibin/piece-info.cgi?id=108
-		//
 		// Note that if Lilypond is compiled against Guile 2.0+, this
 		// probably won't do anything.
-		$env = array( 'LILYPOND_GC_YIELD' => '25' );
+		$env = [ 'LILYPOND_GC_YIELD' => '25' ];
 
 		$cmd = wfEscapeShellArg( $wgScoreLilyPond )
 			. ' ' . wfEscapeShellArg( '-dsafe=#t' )
@@ -578,7 +577,8 @@ class Score {
 		}
 		if ( $rc2 != 0 ) {
 			$output .= "\nexited with status: " . $rc2;
-			self::throwCallException( wfMessage( 'score-compilererr' ), $output, $options['factory_directory'] );
+			self::throwCallException( wfMessage( 'score-compilererr' ), $output,
+				$options['factory_directory'] );
 		}
 		$needMidi = false;
 		if ( !$options['raw'] ||
@@ -608,22 +608,22 @@ class Score {
 
 		// Create the destination directory if it doesn't exist
 		$backend = self::getBackend();
-		$status = $backend->prepare( array( 'dir' => $options['dest_storage_path'] ) );
+		$status = $backend->prepare( [ 'dir' => $options['dest_storage_path'] ] );
 		if ( !$status->isOK() ) {
 			throw new ScoreException( wfMessage( 'score-backend-error', $status->getWikiText() ) );
 		}
 
 		// File names of generated files
-		$newFiles = array();
+		$newFiles = [];
 		// Backend operation batch
-		$ops = array();
+		$ops = [];
 
 		if ( $needMidi ) {
 			// Add the MIDI file to the batch
-			$ops[] = array(
+			$ops[] = [
 				'op' => 'store',
 				'src' => $factoryMidi,
-				'dst' => "{$options['dest_storage_path']}/{$options['file_name_prefix']}.midi" );
+				'dst' => "{$options['dest_storage_path']}/{$options['file_name_prefix']}.midi" ];
 			$newFiles["{$options['file_name_prefix']}.midi"] = true;
 			if ( !$status->isOK() ) {
 				throw new ScoreException( wfMessage( 'score-backend-error', $status->getWikiText() ) );
@@ -638,13 +638,13 @@ class Score {
 		}
 		if ( file_exists( $src ) ) {
 			$dstFileName = "{$options['file_name_prefix']}.png";
-			$ops[] = array(
+			$ops[] = [
 				'op' => 'store',
 				'src' => $src,
-				'dst' => "{$options['dest_storage_path']}/$dstFileName" );
+				'dst' => "{$options['dest_storage_path']}/$dstFileName" ];
 
 			list( $width, $height ) = self::imageSize( $src );
-			$metaData[$dstFileName]['size'] = array( $width, $height );
+			$metaData[$dstFileName]['size'] = [ $width, $height ];
 			$newFiles[$dstFileName] = true;
 		} else {
 			for ( $i = 1; ; ++$i ) {
@@ -658,23 +658,23 @@ class Score {
 				}
 				$dstFileName = "{$options['file_name_prefix']}-page$i.png";
 				$dest = "{$options['dest_storage_path']}/$dstFileName";
-				$ops[] = array(
+				$ops[] = [
 					'op' => 'store',
 					'src' => $src,
-					'dst' => $dest );
+					'dst' => $dest ];
 
 				list( $width, $height ) = self::imageSize( $src );
-				$metaData[$dstFileName]['size'] = array( $width, $height );
+				$metaData[$dstFileName]['size'] = [ $width, $height ];
 				$newFiles[$dstFileName] = true;
 			}
 		}
 
 		$dstFileName = "{$options['file_name_prefix']}.json";
 		$dest = "{$options['dest_storage_path']}/$dstFileName";
-		$ops[] = array(
+		$ops[] = [
 			'op' => 'create',
 			'content' => FormatJson::encode( $metaData ),
-			'dst' => $dest );
+			'dst' => $dest ];
 
 		$newFiles[$dstFileName] = true;
 
@@ -694,7 +694,7 @@ class Score {
 	 */
 	private static function imageSize( $filename ) {
 		list( $width, $height ) = getimagesize( $filename );
-		return array( $width, $height );
+		return [ $width, $height ];
 	}
 
 	/**
@@ -769,21 +769,21 @@ LILYPOND;
 		if ( ( $rc != 0 ) || !file_exists( $factoryOgg ) ) {
 			self::throwCallException( wfMessage( 'score-oggconversionerr' ), $output, $factoryDir );
 		}
-		$ops = array();
+		$ops = [];
 		// Move resultant file to proper place
-		$ops[] = array(
+		$ops[] = [
 			'op' => 'store',
 			'src' => $factoryOgg,
-			'dst' => $remoteDest );
+			'dst' => $remoteDest ];
 
 		// Create metadata json
 		$metaData[basename( $remoteDest )]['length'] = self::getLength( $factoryOgg );
 		$dstFileName = "{$options['file_name_prefix']}.json";
 		$dest = "{$options['dest_storage_path']}/$dstFileName";
-		$ops[] = array(
+		$ops[] = [
 			'op' => 'create',
 			'content' => FormatJson::encode( $metaData ),
-			'dst' => $dest );
+			'dst' => $dest ];
 
 		// Execute the batch
 		$backend = self::getBackend();
@@ -885,7 +885,7 @@ LILYPOND;
 	private static function getLength( $path ) {
 		// File_Ogg is packaged in TimedMediaHandler and OggHandler
 		if ( !class_exists( 'File_Ogg' ) ) {
-			require( 'File/Ogg.php' );
+			require 'File/Ogg.php';
 		}
 		$f = new File_Ogg( $path );
 		return $f->getLength();
