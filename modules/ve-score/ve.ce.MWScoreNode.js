@@ -30,6 +30,8 @@ ve.ce.MWScoreNode.static.name = 'mwScore';
 
 ve.ce.MWScoreNode.static.primaryCommandName = 'score';
 
+ve.ce.MWScoreNode.static.iconWhenInvisible = 'score';
+
 /* Methods */
 
 /**
