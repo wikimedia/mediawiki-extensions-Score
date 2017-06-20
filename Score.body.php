@@ -383,8 +383,7 @@ class Score {
 					!isset( $existingFiles[$imageFileName] )
 					&& !isset( $existingFiles[$multi1FileName] )
 				)
-				|| !isset( $existingFiles[$midiFileName] ) )
-			{
+				|| !isset( $existingFiles[$midiFileName] ) ) {
 				$existingFiles += self::generatePngAndMidi( $code, $options, $metaData );
 			}
 
@@ -821,7 +820,6 @@ LILYPOND;
 			throw new Exception( 'Unknown score language in ' . __METHOD__ . ". " .
 				"This should not happen.\n" );
 		}
-
 	}
 
 	/**
