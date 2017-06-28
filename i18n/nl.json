@@ -6,7 +6,8 @@
 			"SPQRobin",
 			"Siebrand",
 			"Southparkfan",
-			"Sjoerddebruin"
+			"Sjoerddebruin",
+			"Mainframe98"
 		]
 	},
 	"score-abc2lynotexecutable": "Het conversieprogramma voor ABC naar LilyPond kon niet uitgevoerd worden: $1 is geen uitvoerbaar bestand. Zorg dat de instelling <code>$wgScoreAbc2Ly</code> correct is.",
@@ -46,6 +47,9 @@
 	"score-visualeditor-mwscoreinspector-lang": "Taal",
 	"score-visualeditor-mwscoreinspector-override-midi": "Gebruik een bestaand MIDI-bestand",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Naam van het bestaande MIDI-bestand",
+	"score-visualeditor-mwscoreinspector-override-ogg": "Gebruik een bestaand audiobestand",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Naam van een bestaand audiobestan (moet Ogg/Vorbis zijn)",
+	"score-visualeditor-mwscoreinspector-raw": "Dit is een volledig LilyPond-bestand",
 	"score-visualeditor-mwscoreinspector-title": "Muzieknotatie",
 	"score-vorbisoverrideogg": "U kunt niet vragen om Ogg/Vorbisrendering en tegelijkertijd \"override_ogg\" gebruiken."
 }
