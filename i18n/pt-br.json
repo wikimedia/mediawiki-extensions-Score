@@ -17,7 +17,7 @@
 	"score-error-category": "Páginas com erros de renderização de partitura",
 	"score-error-category-desc": "Ocorreu um erro ao processar a partitura.",
 	"score-getcwderr": "Não é possível obter o diretório de trabalho atual",
-	"score-invalidlang": "Linguagem de partitura inválida lang=\"<nowiki>$1</nowiki>\". As linguagens reconhecidas são  lang=\"lilypond\" (a padrão) e lang=\"ABC\".",
+	"score-invalidlang": "Linguagem de partitura inválida lang=\"<nowiki>$1</nowiki>\". As linguagens reconhecidas são lang=\"lilypond\" (a padrão) e lang=\"ABC\".",
 	"score-invalidoggoverride": "O arquivo \"<nowiki>$1</nowiki>\" que você especificou com override_ogg é inválido. Por favor, especifique apenas o nome do arquivo, omita <nowiki>[[…]]</nowiki> e o prefixo \"{{ns:file}}:\".",
 	"score-midioverridenotfound": "O arquivo \"<nowiki>$1</nowiki>\" que você especificou com override_midi não pode ser encontrado. Por favor, especifique apenas o nome do arquivo, omita <nowiki>[[…]]</nowiki> e o prefixo\"{{ns:file}}:\".",
 	"score-noabcinput": "O arquivo de fonte ABC $1 não pode ser criado.",
