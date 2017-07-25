@@ -26,5 +26,10 @@
 	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-card-notation": "Notazione",
 	"score-visualeditor-mwscoreinspector-lang": "Lènghe",
+	"score-visualeditor-mwscoreinspector-override-midi": "Ause 'nu file MIDI esistende",
+	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Nome d'u file MIDI esistende",
+	"score-visualeditor-mwscoreinspector-override-ogg": "Ause 'nu file audio esistende",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Nome d'u file audio esistende (adda essere Ogg/Vorbis)",
+	"score-visualeditor-mwscoreinspector-raw": "Quiste jè 'nu file LilyPond comblete",
 	"score-visualeditor-mwscoreinspector-title": "Notazione musecale"
 }
