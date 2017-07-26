@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Anakmalaysia"
+			"Anakmalaysia",
+			"Jeluang Terluang"
 		]
 	},
 	"score-abc2lynotexecutable": "Penukar ABC ke LilyPond tidak boleh dilaksanakan: $1 bukan fail yang boleh dilaksanakan. Pastikan <code>$wgScoreAbc2Ly</code> diset dengan betul.",
@@ -13,7 +14,7 @@
 	"score-desc": "Membubuh teg untuk mempersembahkan skor muzik dengan LilyPond",
 	"score-error-category": "Halaman yang mempunyai ralat pemaparan skor",
 	"score-getcwderr": "Direktori berfungsi semasa tidak dapat diperoleh",
-	"score-invalidlang": "Bahasa skor lang=\"<nowiki>$1</nowiki>\" tidak sah. Bahasa-bahasa yang dikenali kini adalah lang=\"lilypond\" (azali) dan lang=\"ABC\".",
+	"score-invalidlang": "Bahasa skor lang=\"<nowiki>$1</nowiki>\" tidak sah. Bahasa-bahasa yang dikenali kini ialah lang=\"lilypond\" (asali) dan lang=\"ABC\".",
 	"score-invalidoggoverride": "Fail \"<nowiki>$1</nowiki>\" yang anda nyatakan dengan override_ogg tidak sah. Sila nyatakan nama fail sahaja, gugurkan <nowiki>[[…]]</nowiki> dan awalan \"{{ns:file}}:\".",
 	"score-midioverridenotfound": "Fail \"<nowiki>$1</nowiki>\" yang anda nyatakan dengan override_midi tidak dapat dijumpai. Sila nyatakan nama fail sahaja, gugurkan <nowiki>[[…]]</nowiki> dan awalan \"{{ns:file}}:\".",
 	"score-noabcinput": "Fail sumber ABC $1 tidak dapat diwujudkan.",
