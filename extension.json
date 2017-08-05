@@ -71,6 +71,7 @@
 		"ScoreLilyPond": "/usr/bin/lilypond",
 		"ScoreAbc2Ly": "/usr/bin/abc2ly",
 		"ScoreTimidity": "/usr/bin/timidity",
+		"ScoreSafeMode": true,
 		"ScorePath": false,
 		"ScoreDirectory": false,
 		"ScoreFileBackend": false

@@ -510,7 +510,7 @@ class Score {
 	 * @throws ScoreException on error.
 	 */
 	private static function generatePngAndMidi( $code, $options, &$metaData ) {
-		global $wgScoreLilyPond, $wgScoreTrim;
+		global $wgScoreLilyPond, $wgScoreTrim, $wgScoreSafeMode;
 
 		if ( !is_executable( $wgScoreLilyPond ) ) {
 			throw new ScoreException( wfMessage( 'score-notexecutable', $wgScoreLilyPond ) );
@@ -556,11 +556,11 @@ class Score {
 		// Note that if Lilypond is compiled against Guile 2.0+, this
 		// probably won't do anything.
 		$env = [ 'LILYPOND_GC_YIELD' => '25' ];
+		$mode = $wgScoreSafeMode ? ' -dsafe' : '';
 
 		$cmd = wfEscapeShellArg( $wgScoreLilyPond )
-			. ' ' . wfEscapeShellArg( '-dsafe=#t' )
 			. ' -dmidi-extension=midi' // midi needed for Windows to generate the file
-			. ' -dbackend=ps --png --header=texidoc '
+			. $mode . ' -dbackend=ps --png --header=texidoc '
 			. wfEscapeShellArg( $factoryLy )
 			. ' 2>&1';
 		$output = wfShellExec( $cmd, $rc2, $env );
