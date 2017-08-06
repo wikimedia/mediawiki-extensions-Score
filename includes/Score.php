@@ -35,6 +35,11 @@ class Score {
 	const DEFAULT_PLAYER_WIDTH = 300;
 
 	/**
+	 * Version for cache invalidation.
+	 */
+	const CACHE_VERSION = 0;
+
+	/**
 	 * Supported score languages.
 	 */
 	private static $supportedLangs = [ 'lilypond', 'ABC' ];
@@ -274,6 +279,8 @@ class Score {
 				'code' => $code,
 				'lang' => $options['lang'],
 				'raw'  => $options['raw'],
+				'ExtVersion' => self::CACHE_VERSION,
+				'LyVersion' => self::getLilypondVersion(),
 			];
 			// Doing this separately to not invalidate too many existing keys.
 			if ( $options['raw'] && ( $options['generate_ogg']
