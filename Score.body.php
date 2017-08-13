@@ -709,6 +709,19 @@ class Score {
 	private static function embedLilypondCode( $lilypondCode ) {
 		$version = self::getLilypondVersion();
 
+		// Check if parameters have already been supplied (hybrid-raw mode)
+		$options = "";
+		if ( !strpos( $lilypondCode, "\\layout" ) ) {
+			$options .= "\\layout { }\n";
+		}
+		if ( !strpos( $lilypondCode, "\\midi" ) ) {
+			$options .= <<<LY
+				\\midi {
+					\\context { \Score tempoWholesPerMinute = #(ly:make-moment 100 4) }
+				}\n
+LY;
+		}
+
 		/* Raw code. In Scheme, ##f is false and ##t is true. */
 		/* Set the default MIDI tempo to 100, 60 is a bit too slow */
 		$raw = <<<LILYPOND
@@ -723,13 +736,7 @@ class Score {
 			\\version "$version"
 			\\score {
 				$lilypondCode
-				\\layout { }
-				\\midi {
-					\\context {
-						\\Score
-						tempoWholesPerMinute = #(ly:make-moment 100 4)
-					}
-				}
+				$options
 			}
 LILYPOND;
 
