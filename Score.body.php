@@ -236,11 +236,7 @@ class Score {
 			$options['raw'] = array_key_exists( 'raw', $args );
 
 			/* Midi linking? */
-			if ( array_key_exists( 'midi', $args ) ) {
-				$options['link_midi'] = $args['midi'];
-			} else {
-				$options['link_midi'] = false;
-			}
+			$options['link_midi'] = array_key_exists( 'midi', $args );
 
 			/* Override OGG file? */
 			if ( array_key_exists( 'override_ogg', $args ) ) {
@@ -260,11 +256,8 @@ class Score {
 			}
 
 			/* Vorbis rendering? */
-			if ( array_key_exists( 'vorbis', $args ) ) {
-				$options['generate_ogg'] = $args['vorbis'];
-			} else {
-				$options['generate_ogg'] = false;
-			}
+			$options['generate_ogg'] = array_key_exists( 'vorbis', $args );
+
 			if ( $options['generate_ogg']
 				&& !class_exists( 'TimedMediaTransformOutput' ) && !class_exists( 'OggAudioDisplay' )
 			) {
