@@ -164,7 +164,7 @@ class Score {
 				}
 				self::$backend = new FSFileBackend( [
 					'name'           => 'score-backend',
-					'wikiId'         => wfWikiId(),
+					'wikiId'         => wfWikiID(),
 					'lockManager'    => new NullLockManager( [] ),
 					'containerPaths' => [ 'score-render' => $dir ],
 					'fileMode'       => 0777,
@@ -504,7 +504,7 @@ class Score {
 	 * 	Score::generateHTML().
 	 * @parma $metaData array to hold information about images
 	 *
-	 * @return Array of file names placed in the remote dest dir, with the
+	 * @return array of file names placed in the remote dest dir, with the
 	 * 	file names in each key.
 	 *
 	 * @throws ScoreException on error.
@@ -761,7 +761,7 @@ LILYPOND;
 		/* Run timidity */
 		$cmd = wfEscapeShellArg( $wgScoreTimidity )
 			. ' -Ov' // Vorbis output
-			. ' ' . wfEscapeShellArg( '--output-file=' . $factoryOgg )
+			. ' --output-file=' . wfEscapeShellArg( $factoryOgg )
 			. ' ' . wfEscapeShellArg( $sourceFile )
 			. ' 2>&1';
 		$output = wfShellExec( $cmd, $rc );
@@ -851,7 +851,7 @@ LILYPOND;
 		/* Convert to LilyPond file */
 		$cmd = wfEscapeShellArg( $wgScoreAbc2Ly )
 			. ' -s'
-			. ' ' . wfEscapeShellArg( '--output=' . $destFile )
+			. ' --output=' . wfEscapeShellArg( $destFile )
 			. ' ' . wfEscapeShellArg( $factoryAbc )
 			. ' 2>&1';
 		$output = wfShellExec( $cmd, $rc );
@@ -877,7 +877,7 @@ LILYPOND;
 	/**
 	 * get length of ogg vorbis file
 	 *
-	 * @param $path file system path to file
+	 * @param string $path file system path to file
 	 *
 	 * @return float duration in seconds
 	 */
