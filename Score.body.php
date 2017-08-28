@@ -851,7 +851,7 @@ LILYPOND;
 		/* Convert to LilyPond file */
 		$cmd = wfEscapeShellArg( $wgScoreAbc2Ly )
 			. ' -s'
-			. ' --output=' . wfEscapeShellArg( $destFile )
+			. ' -o ' . wfEscapeShellArg( $destFile )
 			. ' ' . wfEscapeShellArg( $factoryAbc )
 			. ' 2>&1';
 		$output = wfShellExec( $cmd, $rc );
