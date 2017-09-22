@@ -4,6 +4,7 @@
 			"Joetaras"
 		]
 	},
+	"score-abc2lynotexecutable": "'U convertitore ABC jndr'à LilyPond non ge pò essere langiate: $1 non g'è 'nu file eseguibbile. Condrolle ca <code>$wgScoreAbc2Ly</code> ha state configurate accumme se deve.",
 	"score-abcconversionerr": "'Mbossibbile convertì 'u file ABC jndr'à 'u formate LilyPond:\n$1",
 	"score-chdirerr": "'Mbossibbile cangià jndr'à cartelle $1",
 	"score-compilererr": "Non ge se riesce a combilà 'u file de ingresse LilyPond:\n$1",
