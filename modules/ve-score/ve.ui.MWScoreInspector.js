@@ -16,7 +16,7 @@
  */
 ve.ui.MWScoreInspector = function VeUiMWScoreInspector( config ) {
 	// Parent constructor
-	ve.ui.MWScoreInspector.super.call( this, config );
+	ve.ui.MWScoreInspector.super.call( this, ve.extendObject( { padded: false }, config ) );
 };
 
 /* Inheritance */
