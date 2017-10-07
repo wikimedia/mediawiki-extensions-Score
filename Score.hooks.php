@@ -1,10 +1,10 @@
 <?php
 class ScoreHooks {
 	/**
-	  * @param Parser $parser
-	  *
-	  * @return bool Returns true
-	  */
+	 * @param Parser &$parser
+	 *
+	 * @return bool Returns true
+	 */
 	public static function onParserFirstCallInit( Parser &$parser ) {
 		global $wgUseImageMagick, $wgScoreTrim;
 		if ( $wgScoreTrim === null ) {

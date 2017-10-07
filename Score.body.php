@@ -55,9 +55,9 @@ class Score {
 	/**
 	 * Throws proper ScoreException in case of failed shell executions.
 	 *
-	 * @param $message Message to display.
-	 * @param $output string collected output from wfShellExec().
-	 * @param $factoryDir string|bool The factory directory to replace with "..."
+	 * @param Message $message Message to display.
+	 * @param string $output collected output from wfShellExec().
+	 * @param string|bool $factoryDir The factory directory to replace with "..."
 	 *
 	 * @throws ScoreException always.
 	 */
@@ -119,8 +119,8 @@ class Score {
 	 * Creates the specified local directory if it does not exist yet.
 	 * Otherwise does nothing.
 	 *
-	 * @param $path string Local path to directory to be created.
-	 * @param $mode integer Chmod value of the new directory.
+	 * @param string $path Local path to directory to be created.
+	 * @param int $mode Chmod value of the new directory.
 	 *
 	 * @throws ScoreException if the directory does not exist and could not
 	 * 	be created.
@@ -179,10 +179,10 @@ class Score {
 	/**
 	 * Renders the score code (LilyPond, ABC, etc.) in a <score>…</score> tag.
 	 *
-	 * @param $code string score code.
-	 * @param $args array of score tag attributes.
-	 * @param $parser Parser of Mediawiki.
-	 * @param $frame PPFrame expansion frame, not used by this extension.
+	 * @param string $code score code.
+	 * @param array $args array of score tag attributes.
+	 * @param Parser $parser Parser of Mediawiki.
+	 * @param PPFrame $frame expansion frame, not used by this extension.
 	 *
 	 * @throws ScoreException
 	 * @return string Image link HTML, and possibly anchor to MIDI file.
@@ -304,9 +304,9 @@ class Score {
 	/**
 	 * Generates the HTML code for a score tag.
 	 *
-	 * @param $parser Parser MediaWiki parser.
-	 * @param $code string Score code.
-	 * @param $options array of rendering options.
+	 * @param Parser $parser MediaWiki parser.
+	 * @param string $code Score code.
+	 * @param array $options array of rendering options.
 	 * 	The options keys are:
 	 * 	- factory_directory: string Path to directory in which files
 	 * 		may be generated without stepping on someone else's
@@ -499,10 +499,10 @@ class Score {
 	/**
 	 * Generates score PNG file(s) and a MIDI file.
 	 *
-	 * @param $code string Score code.
-	 * @param $options array Rendering options. They are the same as for
+	 * @param string $code Score code.
+	 * @param array $options Rendering options. They are the same as for
 	 * 	Score::generateHTML().
-	 * @parma $metaData array to hold information about images
+	 * @parma array $metaData array to hold information about images
 	 *
 	 * @return array of file names placed in the remote dest dir, with the
 	 * 	file names in each key.
@@ -693,7 +693,7 @@ class Score {
 	/**
 	 * Embeds simple LilyPond code in a score block.
 	 *
-	 * @param $lilypondCode string Simple LilyPond code.
+	 * @param string $lilypondCode Simple LilyPond code.
 	 *
 	 * @return string Raw lilypond code.
 	 *
@@ -739,10 +739,10 @@ LILYPOND;
 	/**
 	 * Generates an Ogg/Vorbis file from a MIDI file using timidity.
 	 *
-	 * @param $sourceFile string The local filename of the MIDI file
-	 * @param $options array of rendering options.
-	 * @param $remoteDest string The backend storage path to upload the Ogg file to
-	 * @param $metaData   array  Array with metadata information
+	 * @param string $sourceFile The local filename of the MIDI file
+	 * @param array $options array of rendering options.
+	 * @param string $remoteDest The backend storage path to upload the Ogg file to
+	 * @param array $metaData Array with metadata information
 	 *
 	 * @throws ScoreException if an error occurs.
 	 */
@@ -796,8 +796,8 @@ LILYPOND;
 	/**
 	 * Generates LilyPond code.
 	 *
-	 * @param $code string Score code.
-	 * @param $options array Rendering options. They are the same as for
+	 * @param string $code Score code.
+	 * @param array $options Rendering options. They are the same as for
 	 * 	Score::generateHTML(), with the following addition:
 	 * 	* lilypond_path: local path to the LilyPond file that is to be
 	 * 		generated.
@@ -826,9 +826,9 @@ LILYPOND;
 	/**
 	 * Runs abc2ly, creating the LilyPond input file.
 	 *
-	 * @param $code string ABC code.
-	 * @param $factoryDirectory string Local temporary directory
-	 * @param $destFile string Local destination path
+	 * @param string $code ABC code.
+	 * @param string $factoryDirectory Local temporary directory
+	 * @param string $destFile Local destination path
 	 *
 	 * @throws ScoreException if the conversion fails.
 	 */
@@ -893,8 +893,8 @@ LILYPOND;
 	/**
 	 * Trims an image with ImageMagick.
 	 *
-	 * @param $source string Local path to the source image.
-	 * @param $dest string Local path to the target (trimmed) image.
+	 * @param string $source Local path to the source image.
+	 * @param string $dest Local path to the target (trimmed) image.
 	 *
 	 * @throws ScoreException on error.
 	 */
@@ -915,9 +915,9 @@ LILYPOND;
 	/**
 	 * Deletes a local directory with no subdirectories with all files in it.
 	 *
-	 * @param $dir string Local path to the directory that is to be deleted.
+	 * @param string $dir Local path to the directory that is to be deleted.
 	 *
-	 * @return Bool true on success, false on error
+	 * @return bool true on success, false on error
 	 */
 	private static function eraseFactory( $dir ) {
 		if ( file_exists( $dir ) ) {
@@ -937,7 +937,7 @@ LILYPOND;
 	/**
 	 * Deletes a local file if it exists.
 	 *
-	 * @param $path string Local path to the file to be deleted.
+	 * @param string $path Local path to the file to be deleted.
 	 *
 	 * @throws ScoreException if the file specified by $path exists but
 	 * 	could not be deleted.
@@ -954,7 +954,7 @@ LILYPOND;
 	/**
 	 * Writes the specified message to the Score debug log.
 	 *
-	 * @param $msg string message to log.
+	 * @param string $msg message to log.
 	 */
 	private static function debug( $msg ) {
 		wfDebugLog( 'Score', $msg );
