@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Сербијана"
+			"Сербијана",
+			"Prevodim"
 		]
 	},
 	"score-visualeditor-mwscoreinspector-card-advanced": "Напредно",
 	"score-visualeditor-mwscoreinspector-lang": "Језик",
-	"score-visualeditor-mwscoreinspector-override-ogg": "Користите постојећу аудио датотеку"
+	"score-visualeditor-mwscoreinspector-override-ogg": "Користите постојећу аудио датотеку",
+	"score-visualeditor-mwscoreinspector-title": "Нотни запис"
 }
