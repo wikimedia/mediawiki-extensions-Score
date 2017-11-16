@@ -36,5 +36,6 @@
 	"score-visualeditor-mwscoreinspector-override-ogg": "Ause 'nu file audio esistende",
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Nome d'u file audio esistende (adda essere Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Quiste jè 'nu file LilyPond comblete",
-	"score-visualeditor-mwscoreinspector-title": "Notazione musecale"
+	"score-visualeditor-mwscoreinspector-title": "Notazione musecale",
+	"score-visualeditor-mwscoreinspector-vorbis": "'Nglude 'nu file audie (autogenerate cumme base)"
 }
