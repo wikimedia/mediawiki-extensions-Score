@@ -3,7 +3,8 @@
 		"authors": [
 			"Shirayuki",
 			"Dude1717",
-			"Sujiniku"
+			"Sujiniku",
+			"Whym"
 		]
 	},
 	"score-abc2lynotexecutable": "ABC から LilyPond へのコンバーターを実行できません: $1 は実行可能ファイルではありません。<code>$wgScoreAbc2Ly</code> が正しく設定されているか確認してください。",
@@ -44,7 +45,7 @@
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "存在するMIDIファイルの名前",
 	"score-visualeditor-mwscoreinspector-override-ogg": "存在する音声ファイルを使用",
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "存在する音声ファイルの名前 (Ogg/Vorbis 必須)",
-	"score-visualeditor-mwscoreinspector-title": "音楽的な通知",
+	"score-visualeditor-mwscoreinspector-title": "楽譜",
 	"score-visualeditor-mwscoreinspector-vorbis": "音声ファイルをふくむ (デフォルトでは自動生成)",
 	"score-vorbisoverrideogg": "Ogg/Vorbis のレンダリングの要求と override_ogg の指定は、同時にはできません。"
 }
