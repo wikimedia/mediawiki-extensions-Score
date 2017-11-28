@@ -23,6 +23,8 @@
 
  */
 
+use MediaWiki\Shell\Shell;
+
 if ( !defined( 'MEDIAWIKI' ) ) {
 	die( "This file cannot be run standalone.\n" );
 }
@@ -56,7 +58,7 @@ class Score {
 	 * Throws proper ScoreException in case of failed shell executions.
 	 *
 	 * @param Message $message Message to display.
-	 * @param string $output collected output from wfShellExec().
+	 * @param string $output collected output from stderr.
 	 * @param string|bool $factoryDir The factory directory to replace with "..."
 	 *
 	 * @throws ScoreException always.
@@ -102,9 +104,12 @@ class Score {
 			throw new ScoreException( wfMessage( 'score-notexecutable', $wgScoreLilyPond ) );
 		}
 
-		$cmd = wfEscapeShellArg( $wgScoreLilyPond ) . ' --version 2>&1';
-		$output = wfShellExec( $cmd, $rc );
-		if ( $rc != 0 ) {
+		$result = Shell::command( $wgScoreLilyPond, '--version' )
+			->includeStderr()
+			->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
+			->execute();
+		$output = $result->getStdout();
+		if ( $result->getExitCode() != 0 ) {
 			self::throwCallException( wfMessage( 'score-versionerr' ), $output );
 		}
 
@@ -542,20 +547,27 @@ class Score {
 		// Note that if Lilypond is compiled against Guile 2.0+, this
 		// probably won't do anything.
 		$env = [ 'LILYPOND_GC_YIELD' => '25' ];
-		$mode = $wgScoreSafeMode ? ' -dsafe' : '';
+		$mode = $wgScoreSafeMode ? '-dsafe' : null;
 
-		$cmd = wfEscapeShellArg( $wgScoreLilyPond )
-			. ' -dmidi-extension=midi' // midi needed for Windows to generate the file
-			. $mode . ' -dbackend=ps --png --header=texidoc '
-			. wfEscapeShellArg( $factoryLy )
-			. ' 2>&1';
-		$output = wfShellExec( $cmd, $rc2, $env );
+		$result = Shell::command(
+			$wgScoreLilyPond,
+			'-dmidi-extension=midi', // midi needed for Windows to generate the file
+			$mode,
+			'-dbackpend-ps',
+			'--png',
+			'--header=texidoc',
+			$factoryLy
+		)
+			->includeStderr()
+			->environment( $env )
+			->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
+			->execute();
 		$rc = chdir( $oldcwd );
 		if ( !$rc ) {
 			throw new ScoreException( wfMessage( 'score-chdirerr', $oldcwd ) );
 		}
-		if ( $rc2 != 0 ) {
-			$output .= "\nexited with status: " . $rc2;
+		if ( $result->getExitCode() != 0 ) {
+			$output = $result->getStdout() . "\nexited with status: " . $result->getExitCode();
 			self::throwCallException( wfMessage( 'score-compilererr' ), $output,
 				$options['factory_directory'] );
 		}
@@ -745,15 +757,20 @@ LILYPOND;
 		$factoryOgg = "$factoryDir/file.ogg";
 
 		/* Run timidity */
-		$cmd = wfEscapeShellArg( $wgScoreTimidity )
-			. ' -Ov' // Vorbis output
-			. ' --output-file=' . wfEscapeShellArg( $factoryOgg )
-			. ' ' . wfEscapeShellArg( $sourceFile )
-			. ' 2>&1';
-		$output = wfShellExec( $cmd, $rc );
+		$result = Shell::command(
+			$wgScoreTimidity,
+			'-Ov', // Vorbis output
+			'--output-file=' . $factoryOgg,
+			$sourceFile
+		)
+			->includeStderr()
+			->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
+			->execute();
 
-		if ( ( $rc != 0 ) || !file_exists( $factoryOgg ) ) {
-			self::throwCallException( wfMessage( 'score-oggconversionerr' ), $output, $factoryDir );
+		if ( ( $result->getExitCode() != 0 ) || !file_exists( $factoryOgg ) ) {
+			self::throwCallException(
+				wfMessage( 'score-oggconversionerr' ), $result->getStdout(), $factoryDir
+			);
 		}
 		$ops = [];
 		// Move resultant file to proper place
@@ -835,14 +852,21 @@ LILYPOND;
 		}
 
 		/* Convert to LilyPond file */
-		$cmd = wfEscapeShellArg( $wgScoreAbc2Ly )
-			. ' -s'
-			. ' -o ' . wfEscapeShellArg( $destFile )
-			. ' ' . wfEscapeShellArg( $factoryAbc )
-			. ' 2>&1';
-		$output = wfShellExec( $cmd, $rc );
-		if ( ( $rc != 0 ) || !file_exists( $destFile ) ) {
-			self::throwCallException( wfMessage( 'score-abcconversionerr' ), $output, $factoryDirectory );
+		$result = Shell::command(
+			$wgScoreAbc2Ly,
+			'-s',
+			'-o',
+			$destFile,
+			$factoryAbc
+		)
+			->includeStderr()
+			->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
+			->execute();
+
+		if ( ( $result->getExitCode() != 0 ) || !file_exists( $destFile ) ) {
+			self::throwCallException(
+				wfMessage( 'score-abcconversionerr' ), $result->getStdout(), $factoryDirectory
+			);
 		}
 
 		/* The output file has a tagline which should be removed in a wiki context */
@@ -887,14 +911,19 @@ LILYPOND;
 	private static function trimImage( $source, $dest ) {
 		global $wgImageMagickConvertCommand;
 
-		$cmd = wfEscapeShellArg( $wgImageMagickConvertCommand )
-			. ' -trim -transparent white '
-			. wfEscapeShellArg( $source ) . ' '
-			. wfEscapeShellArg( $dest )
-			. ' 2>&1';
-		$output = wfShellExec( $cmd, $rc );
-		if ( $rc != 0 ) {
-			self::throwCallException( wfMessage( 'score-trimerr' ), $output );
+		$result = Shell::command(
+			$wgImageMagickConvertCommand,
+			'-trim',
+			'-transparent',
+			'white',
+			$source,
+			$dest
+		)
+			->includeStderr()
+			->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
+			->execute();
+		if ( $result->getExitCode() != 0 ) {
+			self::throwCallException( wfMessage( 'score-trimerr' ), $result->getStdout() );
 		}
 	}
 
