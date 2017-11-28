@@ -169,7 +169,8 @@ class Score {
 					'containerPaths' => [ 'score-render' => $dir ],
 					'fileMode'       => 0777,
 					'obResetFunc' => 'wfResetOutputBuffers',
-					'streamMimeFunc' => [ 'StreamFile', 'contentTypeFromPath' ]
+					'streamMimeFunc' => [ 'StreamFile', 'contentTypeFromPath' ],
+					'statusWrapper' => [ 'Status', 'wrap' ],
 				] );
 			}
 			return self::$backend;
