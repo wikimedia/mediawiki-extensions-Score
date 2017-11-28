@@ -105,6 +105,6 @@ The following attributes are available:
 
 * Attribute: vorbis
   Effect: If included in the tag, an Ogg/Vorbis file will be generated for the
-          score, provided you installed and configured the OggHandler
+          score, provided you installed and configured the TimedMediaHandler
           extension. An Ogg/Vorbis player will be embedded in the HTML below
           the score image(s).

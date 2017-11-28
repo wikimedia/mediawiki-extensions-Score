@@ -260,7 +260,7 @@ class Score {
 			$options['generate_ogg'] = array_key_exists( 'vorbis', $args );
 
 			if ( $options['generate_ogg']
-				&& !class_exists( 'TimedMediaTransformOutput' ) && !class_exists( 'OggAudioDisplay' )
+				&& !class_exists( 'TimedMediaTransformOutput' )
 			) {
 				throw new ScoreException( wfMessage( 'score-nomediahandler' ) );
 			}
@@ -313,7 +313,7 @@ class Score {
 	 * 		may be generated without stepping on someone else's
 	 * 		toes. The directory may not exist yet. Required.
 	 * 	- generate_ogg: bool Whether to create an Ogg/Vorbis file in
-	 * 		TimedMediaHandler or OggHandler. If set to true, the override_ogg option
+	 * 		TimedMediaHandler. If set to true, the override_ogg option
 	 * 		must be set to false. Required.
 	 *  - dest_storage_path: The path of the destination directory relative to
 	 *  	the current backend. Required.
@@ -456,32 +456,17 @@ class Score {
 			}
 			if ( $options['generate_ogg'] ) {
 				$length = $metaData[basename( $oggPath )]['length'];
-				if ( class_exists( 'TimedMediaTransformOutput' ) ) {
-					$player = new TimedMediaTransformOutput( [
-						'length' => $length,
-						'sources' => [
-							[
-								'src' => $oggUrl,
-								'type' => 'audio/ogg; codecs="vorbis"'
-							]
-						],
-						'disablecontrols' => 'options,timedText',
-						'width' => self::DEFAULT_PLAYER_WIDTH
-					] );
-				} else /* class_exists( 'OggAudioDisplay' ) */ {
-					$oh = new OggHandler();
-					$oh->parserTransformHook( $parser, false );
-					$player = new OggHandlerPlayer( [
-						'type' => 'audio',
-						'defaultAlt' => '',
-						'videoUrl' => $oggUrl,
-						'thumbUrl' => false,
-						'width' => self::DEFAULT_PLAYER_WIDTH,
-						'height' => 0,
-						'length' => $length,
-						'showIcon' => false,
-					] );
-				}
+				$player = new TimedMediaTransformOutput( [
+					'length' => $length,
+					'sources' => [
+						[
+							'src' => $oggUrl,
+							'type' => 'audio/ogg; codecs="vorbis"'
+						]
+					],
+					'disablecontrols' => 'options,timedText',
+					'width' => self::DEFAULT_PLAYER_WIDTH
+				] );
 				$link .= $player->toHtml();
 			}
 			if ( $options['override_ogg'] !== false ) {
@@ -883,7 +868,7 @@ LILYPOND;
 	 * @return float duration in seconds
 	 */
 	private static function getLength( $path ) {
-		// File_Ogg is packaged in TimedMediaHandler and OggHandler
+		// File_Ogg is packaged in TimedMediaHandler
 		if ( !class_exists( 'File_Ogg' ) ) {
 			require 'File/Ogg.php';
 		}
