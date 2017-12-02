@@ -21,7 +21,7 @@
 	"score-noabcinput": "এবিসি উৎস ফাইল $1 তৈরি করা যায়নি।",
 	"score-noimages": "কোন স্কোর চিত্র উত্পন্ন হয়নি। দয়া করে আপনার স্কোর কোড পরীক্ষা করুন।",
 	"score-noinput": "LilyPond ইনপুট ফাইল $1 তৈরি করতে ব্যর্থ।",
-	"score-nomediahandler": "Ogg/Vorbis রূপান্তরে প্রদত্ত লিংক হতে একটা ইনস্টল করা এবং কনফিগার করা ভার্সন প্রয়োজন [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler extension].",
+	"score-nomediahandler": "Ogg/Vorbis রূপান্তরের জন্য [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler এক্সটেনশনের] সংস্করণ ইনস্টল ও কনফিগার করা প্রয়োজন।",
 	"score-nomidi": "অনুরোধ করা সত্ত্বেও কোন MIDI ফাইল উত্পন্ন হয়নি। আপনি যদি সারি LilyPond মোডে কাজ করে থাকেন, নিশ্চিত করুন যে আপনি একটি সঠিক \\midi ব্লক প্রদান করেছেন।",
 	"score-nooutput": "আউটপুট নির্দেশিকা $1 তৈরি করতে ব্যর্থ হয়েছে।",
 	"score-notexecutable": " LilyPond কার্যকর করা যায়নি: $1 কার্যকর করার যোগ্য ফাইল নয়। নিশ্চিত করুন <code>$wgScoreLilyPond</code> সঠিকভাবে নির্ধারণ করা হয়েছে।",

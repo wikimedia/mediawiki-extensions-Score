@@ -4,7 +4,8 @@
 			"Shirayuki",
 			"Dude1717",
 			"Sujiniku",
-			"Whym"
+			"Whym",
+			"Otokoume"
 		]
 	},
 	"score-abc2lynotexecutable": "ABC から LilyPond へのコンバーターを実行できません: $1 は実行可能ファイルではありません。<code>$wgScoreAbc2Ly</code> が正しく設定されているか確認してください。",
@@ -22,7 +23,7 @@
 	"score-noabcinput": "ABC ソース ファイル $1 を作成できませんでした。",
 	"score-noimages": "楽譜画像を生成できませんでした。ソースコードを確認してください。",
 	"score-noinput": "LilyPond 入力ファイル $1 の作成に失敗しました。",
-	"score-nomediahandler": "Ogg/Vorbis 変換には、[https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler 拡張機能]または [https://www.mediawiki.org/wiki/Extension:OggHandler/ja OggHandler 拡張機能]のいずれかのバージョンのインストール/設定が必要です。",
+	"score-nomediahandler": "Ogg/Vorbis 変換には、[https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler 拡張機能]のバージョンのインストールおよび設定が必要です。",
 	"score-nooutput": "出力ディレクトリ $1 の作成に失敗しました。",
 	"score-notexecutable": "LilyPond を実行できませんでした: $1 は実行可能ファイルではありません。<code>$wgScoreLilyPond</code> が正しく設定されているか確認してください。",
 	"score-nocontent": "サーバーからファイル $1 を読み込めません。",
