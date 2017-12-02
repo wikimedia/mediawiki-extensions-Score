@@ -86,16 +86,23 @@ The following attributes are available:
   Effect: If included in the tag, the rendered image(s) will be embedded into a
           hyperlink to an appropriate MIDI file.
 
+* Attribute: override_midi
+  Allowed values: Known file name, that is, if override_midi="name" is given,
+                  [[File:name]] is not a redlink.
+  Effect: Embeds the score image(s) into a hyperlink to a specified MIDI file.
+          This is an alternative to the midi attribute (see above). It can, for
+          example, be useful if you have a suitable MIDI file of superior
+          quality compared with the auto-generated MIDI file the midi attribute
+          yields. Of course, you can still omit both attributes in this case and
+          add the file manually to the page, if you prefer.
+
 * Attribute: override_ogg
   Allowed values: Known file name, that is, if override_ogg="name" is given,
                   [[File:name]] is not a redlink.
   Effect: Embeds the media specified by the file name in the HTML below the
           score image(s). This is an alternative to the vorbis attribute (see
-          below). It can, for example, be useful if you have a suitable
-          Ogg/Vorbis file of superior quality compared with the auto-generated
-          Ogg/Vorbis file the vorbis attribute yields. Of course, you can still
-          omit both attributes in this case and add the file manually to the
-          page, if you prefer.
+          below). Its use is similar to the use of the override_midi attribute
+          (see above).
 
 * Attribute: raw
   Effect: If included in the tag, the score code is interpreted as a complete
