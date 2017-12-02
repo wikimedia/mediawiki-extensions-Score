@@ -6,15 +6,18 @@
 	"descriptionmsg": "score-desc",
 	"license-name": "GPL-3.0+",
 	"type": "parserhooks",
+	"requires": {
+		"MediaWiki": ">= 1.31.0"
+	},
 	"MessagesDirs": {
 		"Score": [
 			"i18n"
 		]
 	},
 	"AutoloadClasses": {
-		"Score": "Score.body.php",
-		"ScoreException": "ScoreException.php",
-		"ScoreHooks": "Score.hooks.php"
+		"Score": "includes/Score.php",
+		"ScoreException": "includes/ScoreException.php",
+		"ScoreHooks": "includes/ScoreHooks.php"
 	},
 	"ResourceModules": {
 		"ext.score.visualEditor": {

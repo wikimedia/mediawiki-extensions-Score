@@ -25,10 +25,6 @@
 
 use MediaWiki\Shell\Shell;
 
-if ( !defined( 'MEDIAWIKI' ) ) {
-	die( "This file cannot be run standalone.\n" );
-}
-
 /**
  * Score class.
  */
