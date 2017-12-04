@@ -489,7 +489,7 @@ class Score {
 	 * @param string $code Score code.
 	 * @param array $options Rendering options. They are the same as for
 	 * 	Score::generateHTML().
-	 * @parma array $metaData array to hold information about images
+	 * @param array $metaData array to hold information about images
 	 *
 	 * @return array of file names placed in the remote dest dir, with the
 	 * 	file names in each key.
@@ -549,7 +549,7 @@ class Score {
 			$wgScoreLilyPond,
 			'-dmidi-extension=midi', // midi needed for Windows to generate the file
 			$mode,
-			'-dbackpend-ps',
+			'-dbackend=ps',
 			'--png',
 			'--header=texidoc',
 			$factoryLy
