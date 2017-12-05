@@ -549,7 +549,6 @@ class Score {
 			$wgScoreLilyPond,
 			'-dmidi-extension=midi', // midi needed for Windows to generate the file
 			$mode,
-			'-dbackend=ps',
 			'--png',
 			'--header=texidoc',
 			$factoryLy
