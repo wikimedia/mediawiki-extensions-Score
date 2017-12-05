@@ -29,7 +29,7 @@
 	"score-noabcinput": "Le fichier source ABC $1 n'a pas pu être créé.",
 	"score-noimages": "Aucune image de résultat n'a été générée. Veuillez vérifier votre code de résultat.",
 	"score-noinput": "Erreur lors de la création du fichier d’entrée $1 LilyPond",
-	"score-nomediahandler": "La conversion Ogg/Vorbis nécessite une version installée et configurée soit de [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler l’extension TimedMediaHandler], soit de [https://www.mediawiki.org/wiki/Extension:OggHandler l’extension OggHandler].",
+	"score-nomediahandler": "La conversion Ogg/Vorbis nécessite une version installée et configurée depuis [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler l’extension TimedMediaHandler].",
 	"score-nomidi": "Pas de fichier MIDI généré malgré la demande. Si vous travaillez en mode brut de LilyPond, assurez-vous de fournir un bloc \\midi correct.",
 	"score-nooutput": "Erreur lors de la création du répertoire de sortie $1.",
 	"score-notexecutable": "Impossible d’exécuter LilyPond: $1 n'est pas un fichier exécutable. Vérifiez que <code>$wgScoreLilyPond</code> est correctement configuré.",
