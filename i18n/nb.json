@@ -21,7 +21,7 @@
 	"score-noabcinput": "Kunne ikke opprette ABC-kildefilen $1.",
 	"score-noimages": "Ingen partiturbilder ble generert. Sjekk om koden din er korrekt.",
 	"score-noinput": "Klarte ikke å opprette LilyPond-inndatafilen $1.",
-	"score-nomediahandler": "Ogg/Vorbis-konvertering krever en installert og konfigurert versjon av enten  [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler-tillegget] eller [https://www.mediawiki.org/wiki/Extension:OggHandler OggHandler-tillegget].",
+	"score-nomediahandler": "Ogg/Vorbis-konvertering krever en installert og konfigurert versjon av [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler-tillegget]",
 	"score-nomidi": "Ingen MIDI-fil ble generert. Hvis du arbeider i rå LilyPond-modus; sjekk at du har angir en passende \\midi-blokk.",
 	"score-nooutput": "Klarte ikke å opprette målmappen $1.",
 	"score-notexecutable": "Klarte ikke å kjøre LilyPond: $1 er ikke en eksekverbar fil. Sjekk at <code>$wgScoreLilyPond</code> er riktig.",
