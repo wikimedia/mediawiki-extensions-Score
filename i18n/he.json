@@ -22,7 +22,7 @@
 	"score-noabcinput": "קובץ $1 עם קוד המקור של ABC לא יכול היה להיווצר.",
 	"score-noimages": "לא נוצרו תמונות של תווים. נא לבדוק את קוד התווים שלך.",
 	"score-noinput": "יצירת הקובץ $1 עם קלט של LilyPond לא הצליחה.",
-	"score-nomediahandler": "המרת Ogg/Vorbis דורשת התקנה והגדרה של גרסה של [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler ההרחבה TimedMediaHandler] או [https://www.mediawiki.org/wiki/Extension:OggHandler ההרחבה OggHandler].",
+	"score-nomediahandler": "המרת Ogg/Vorbis דורשת התקנה והגדרה של גרסה של [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler ההרחבה TimedMediaHandler].",
 	"score-nomidi": "לא נוצר שום קובץ MIDI, למקות ש התבקש כזה. אם זה מצב LilyPond טהור, יש לספק גוש <span dir=\"ltr\">\\midi</span> מתאים.",
 	"score-nooutput": "לא ניתן היה ליצור את תיקיית הפלט $1.",
 	"score-notexecutable": "לא ניתן להריץ את LilyPond: הקובץ $1 אינו בר־הרצה. נא לוודא שנמשתנה <code>$wgScoreLilyPond</code> מוגדר נכון.",
