@@ -502,9 +502,6 @@ class Score {
 						'title' => $pageNumb
 					] );
 				}
-			} else {
-				/* No images; this may happen in raw mode or when the user omits the score code */
-				throw new ScoreException( wfMessage( 'score-noimages' ) );
 			}
 			if ( $options['generate_audio'] ) {
 				$length = $metaData[basename( $audioPath )]['length'];
@@ -589,6 +586,7 @@ class Score {
 		$factoryLy = "$factoryDirectory/file.ly";
 		$factoryMidi = "$factoryDirectory/file.midi";
 		$factoryImage = "$factoryDirectory/file.png";
+		$factoryPage1 = "$factoryDirectory/file-page1.png";
 		$factoryImageTrimmed = "$factoryDirectory/file-trimmed.png";
 
 		/* Generate LilyPond input file */
@@ -646,6 +644,11 @@ class Score {
 			self::throwCallException( wfMessage( 'score-compilererr' ), $output,
 				$options['factory_directory'] );
 		}
+
+		if ( !file_exists( $factoryImage ) && !file_exists( $factoryPage1 ) ) {
+			throw new ScoreException( wfMessage( 'score-noimages' ) );
+		}
+
 		$needMidi = false;
 		if ( !$options['raw'] || $options['generate_audio'] && !$options['override_midi'] ) {
 			$needMidi = true;
