@@ -266,7 +266,7 @@ class Score {
 			$options['generate_ogg'] = array_key_exists( 'vorbis', $args );
 
 			if ( $options['generate_ogg']
-				&& !class_exists( 'TimedMediaTransformOutput' )
+				&& !ExtensionRegistry::getInstance()->isLoaded( 'TimedMediaHandler' )
 			) {
 				throw new ScoreException( wfMessage( 'score-nomediahandler' ) );
 			}
@@ -889,10 +889,6 @@ LILYPOND;
 	 * @return float duration in seconds
 	 */
 	private static function getLength( $path ) {
-		// File_Ogg is packaged in TimedMediaHandler
-		if ( !class_exists( 'File_Ogg' ) ) {
-			require 'File/Ogg.php';
-		}
 		$f = new File_Ogg( $path );
 		return $f->getLength();
 	}
