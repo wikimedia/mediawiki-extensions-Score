@@ -282,12 +282,6 @@ class Score {
 				'ExtVersion' => self::CACHE_VERSION,
 				'LyVersion' => self::getLilypondVersion(),
 			];
-			// Doing this separately to not invalidate too many existing keys.
-			if ( $options['raw'] && ( $options['generate_ogg']
-				|| ( $options['link_midi'] && !$options['override_midi'] )
-			) ) {
-				$cacheOptions['rawAndMidi'] = true;
-			}
 
 			/* image file path and URL prefixes */
 			$imageCacheName = Wikimedia\base_convert( sha1( serialize( $cacheOptions ) ), 16, 36, 31 );
