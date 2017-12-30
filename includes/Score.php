@@ -266,7 +266,7 @@ class Score {
 			$options['generate_ogg'] = array_key_exists( 'vorbis', $args );
 
 			if ( $options['generate_ogg']
-				&& !ExtensionRegistry::getInstance()->isLoaded( 'TimedMediaHandler' )
+				&& !class_exists( 'TimedMediaTransformOutput' )
 			) {
 				throw new ScoreException( wfMessage( 'score-nomediahandler' ) );
 			}
