@@ -15,6 +15,7 @@
 	"score-compilererr": "Displayed if the LilyPond code could not be compiled. $1 is the error (generally big block of text in a pre tag)",
 	"score-backend-error": "Parameters:\n* $1 - result message which was returned",
 	"score-desc": "{{desc|name=Score|url=https://www.mediawiki.org/wiki/Extension:Score}}",
+	"score-download-midi-file": "Content of link to download MIDI file of score shown in score popup",
 	"score-error-category": "Name of [[mw:Help:Tracking categories|tracking category]] to list pages where there was an error rendering the <code><nowiki><score></nowiki></code> tag.",
 	"score-error-category-desc": "Description on [[Special:TrackingCategories]] for the {{msg-mw|score-error-category}} tracking category.",
 	"score-getcwderr": "Displayed if the extension cannot obtain the current working directory.",

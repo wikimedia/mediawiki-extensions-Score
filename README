@@ -19,6 +19,9 @@ https://www.mediawiki.org/wiki/Extension:TimedMediaHandler
 
 for more information.
 
+The extension also provides a way to download MIDI file generated from the score
+from the popup that is shown on score click.
+
 This extension was tested with LilyPond 2.12.3 through 2.18.2.
 
 
@@ -81,10 +84,6 @@ The following attributes are available:
           C, D, E, F,|G, A, B, C|D E F G|A B c d|
           e f g a|b c' d' e'|f' g' a' b'|]
           </score>.
-
-* Attribute: midi
-  Effect: If included in the tag, the rendered image(s) will be embedded into a
-          hyperlink to an appropriate MIDI file.
 
 * Attribute: override_midi
   Allowed values: Known file name, that is, if override_midi="name" is given,
