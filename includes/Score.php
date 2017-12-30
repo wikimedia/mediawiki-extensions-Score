@@ -472,19 +472,29 @@ class Score {
 
 		self::eraseFactory( $options['factory_directory'] );
 
-		// Wrap score in div container.
-		$link = HTML::rawElement( 'div', [
-			'class' => 'mw-ext-score',
-			'data-midi' => $options['override_midi'] ?
+		$attributes = [
+			'class' => 'mw-ext-score'
+		];
+
+		if ( $options['override_midi']
+			|| isset( $existingFiles["{$options['file_name_prefix']}.midi"] ) ) {
+			$attributes['data-midi'] = $options['override_midi'] ?
 				$options['midi_file']->getUrl()
-				: "{$options['dest_url']}/{$options['file_name_prefix']}.midi"
-		], $link );
+				: "{$options['dest_url']}/{$options['file_name_prefix']}.midi";
+		}
+
+		if ( isset( $existingFiles["{$options['file_name_prefix']}.ly"] ) ) {
+			$attributes['data-source'] = "{$options['dest_url']}/{$options['file_name_prefix']}.ly";
+		}
+
+		// Wrap score in div container.
+		$link = HTML::rawElement( 'div', $attributes, $link );
 
 		return $link;
 	}
 
 	/**
-	 * Generates score PNG file(s) and a MIDI file.
+	 * Generates score PNG file(s) and a MIDI file. Stores lilypond file.
 	 *
 	 * @param string $code Score code.
 	 * @param array $options Rendering options. They are the same as for
@@ -567,9 +577,7 @@ class Score {
 				$options['factory_directory'] );
 		}
 		$needMidi = false;
-		if ( !$options['raw'] ||
-			( $options['generate_ogg'] || !$options['override_midi'] )
-		) {
+		if ( !$options['raw'] || $options['generate_ogg'] && !$options['override_midi'] ) {
 			$needMidi = true;
 			if ( !file_exists( $factoryMidi ) ) {
 				throw new ScoreException( wfMessage( 'score-nomidi' ) );
@@ -603,6 +611,14 @@ class Score {
 		$newFiles = [];
 		// Backend operation batch
 		$ops = [];
+
+		// Add LY source to its file
+		$ops[] = [
+			'op' => 'store',
+			'src' => $factoryLy,
+			'dst' => "{$options['dest_storage_path']}/{$options['file_name_prefix']}.ly"
+		];
+		$newFiles["{$options['file_name_prefix']}.ly"] = true;
 
 		if ( $needMidi ) {
 			// Add the MIDI file to the batch

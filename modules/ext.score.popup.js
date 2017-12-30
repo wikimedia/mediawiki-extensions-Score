@@ -2,16 +2,31 @@
 	var popupShown = false;
 
 	function showPopup( $score ) {
-		var $popup, midi = $score.data( 'midi' );
+		var $popup, midi = $score.data( 'midi' ), source = $score.data( 'source' );
+
+		// Don't show popup when there is no midi or source.
+		if ( typeof midi === 'undefined' && typeof source === 'undefined' ) {
+			return;
+		}
+
 		$popup = $( '<div>' )
 			.addClass( 'mw-ext-score-popup' )
 			.attr( 'id', 'mw-ext-score-popup' )
-			.html(
-				$( '<a>' )
-					.attr( 'href', midi )
-					.text( mw.msg( 'score-download-midi-file' ) )
-			)
 			.css( 'opacity', 0 );
+
+		if ( typeof midi !== 'undefined' ) {
+			$popup.append( $( '<a>' )
+				.attr( 'href', midi )
+				.html( $( '<span>' ).text( mw.msg( 'score-download-midi-file' ) ) )
+			);
+		}
+
+		if ( typeof source !== 'undefined' ) {
+			$popup.append( $( '<a>' )
+				.attr( 'href', source )
+				.html( $( '<span>' ).text( mw.msg( 'score-download-source-file' ) ) )
+			);
+		}
 
 		$score.append( $popup );
 

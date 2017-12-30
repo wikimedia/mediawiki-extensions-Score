@@ -64,7 +64,8 @@
 				"mediawiki.api"
 			],
 			"messages": [
-				"score-download-midi-file"
+				"score-download-midi-file",
+				"score-download-source-file"
 			]
 		}
 	},

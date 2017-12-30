@@ -42,3 +42,21 @@
 	background: #fff;
 	transform: rotate( 45deg );
 }
+
+.mw-ext-score-popup a {
+	pointer-events: none;
+}
+
+.mw-ext-score-popup a span {
+	pointer-events: all;
+}
+
+.mw-ext-score-popup a:not( :first-child ) {
+	margin-left: 0.5em;
+}
+
+.mw-ext-score-popup a:not( :first-child ):before {
+	content: '•';
+	display: inline-block;
+	margin-right: 0.5em;
+}

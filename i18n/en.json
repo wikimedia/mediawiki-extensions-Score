@@ -10,6 +10,7 @@
 	"score-backend-error": "Unable to copy the generated files to their final location:\n$1",
 	"score-desc": "Adds a tag for rendering musical scores with LilyPond",
 	"score-download-midi-file": "Download MIDI file",
+	"score-download-source-file": "Download lilypond file",
 	"score-error-category": "Pages with score rendering errors",
 	"score-error-category-desc": "There was an error while rendering the score.",
 	"score-getcwderr": "Unable to obtain current working directory",
