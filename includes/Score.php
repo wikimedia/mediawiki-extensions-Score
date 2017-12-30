@@ -242,9 +242,6 @@ class Score {
 			// Raw rendering?
 			$options['raw'] = array_key_exists( 'raw', $args );
 
-			/* Midi linking? */
-			$options['link_midi'] = array_key_exists( 'midi', $args );
-
 			/* Override OGG file? */
 			if ( array_key_exists( 'override_ogg', $args ) ) {
 				$t = Title::newFromText( $args['override_ogg'], NS_FILE );
@@ -324,7 +321,6 @@ class Score {
 	 *  - file_name_prefix: The filename prefix used for all files
 	 *  	in the default destination directory. Required.
 	 * 	- lang: string Score language. Required.
-	 * 	- link_midi: bool Whether to link to a MIDI file. Required.
 	 * 	- override_midi: bool Whether to use a user-provided MIDI file.
 	 * 		Required.
 	 * 	- midi_file: If override_midi is true, MIDI file object.
@@ -349,6 +345,8 @@ class Score {
 	 */
 	private static function generateHTML( &$parser, $code, $options ) {
 		try {
+			$parser->getOutput()->addModules( 'ext.score.popup' );
+
 			$backend = self::getBackend();
 			$fileIter = $backend->getFileList(
 				[ 'dir' => $options['dest_storage_path'], 'topOnly' => true ] );
@@ -449,14 +447,6 @@ class Score {
 				/* No images; this may happen in raw mode or when the user omits the score code */
 				throw new ScoreException( wfMessage( 'score-noimages' ) );
 			}
-			if ( $options['link_midi'] ) {
-				if ( $options['override_midi'] ) {
-					$url = $options['midi_file']->getUrl();
-				} else {
-					$url = "{$options['dest_url']}/{$options['file_name_prefix']}.midi";
-				}
-				$link = Html::rawElement( 'a', [ 'href' => $url ], $link );
-			}
 			if ( $options['generate_ogg'] ) {
 				$length = $metaData[basename( $oggPath )]['length'];
 				$player = new TimedMediaTransformOutput( [
@@ -481,6 +471,14 @@ class Score {
 		}
 
 		self::eraseFactory( $options['factory_directory'] );
+
+		// Wrap score in div container.
+		$link = HTML::rawElement( 'div', [
+			'class' => 'mw-ext-score',
+			'data-midi' => $options['override_midi'] ?
+				$options['midi_file']->getUrl()
+				: "{$options['dest_url']}/{$options['file_name_prefix']}.midi"
+		], $link );
 
 		return $link;
 	}
@@ -570,7 +568,7 @@ class Score {
 		}
 		$needMidi = false;
 		if ( !$options['raw'] ||
-			( $options['generate_ogg'] || ( $options['link_midi'] && !$options['override_midi'] ) )
+			( $options['generate_ogg'] || !$options['override_midi'] )
 		) {
 			$needMidi = true;
 			if ( !file_exists( $factoryMidi ) ) {

@@ -1,0 +1,44 @@
+.mw-ext-score {
+	position: relative;
+	display: inline-block;
+}
+
+.mw-ext-score img {
+	cursor: pointer;
+}
+
+.mw-ext-score-popup {
+	box-sizing: border-box;
+	position: absolute;
+	bottom: calc( 100% + 9px );
+	left: 0;
+	right: 0;
+	width: 300px;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	max-width: 100%;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 15px;
+	background: #fff;
+	box-shadow: 0 3px 15px rgba( 0, 0, 0, 0.2 );
+	text-align: center;
+}
+
+/* Triangle on the bottom of popup */
+.mw-ext-score-popup:after {
+	content: '';
+	position: absolute;
+	bottom: -9px;
+	right: 0;
+	left: 0;
+	margin: auto;
+	width: 15px;
+	height: 15px;
+	border: 1px solid #ccc;
+	border-width: 0 1px 1px 0;
+	background: #fff;
+	transform: rotate( 45deg );
+}
