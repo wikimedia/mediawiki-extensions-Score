@@ -18,6 +18,8 @@
 	"score-compilererr": "无法编译 LilyPond 输入的文件：\n$1",
 	"score-backend-error": "无法将所生成的文件复制到其最终位置：\n$1",
 	"score-desc": "添加一个标记来以LilyPond呈现乐谱",
+	"score-download-midi-file": "下载MIDI文件",
+	"score-download-source-file": "下载lilypond文件",
 	"score-error-category": "有乐谱生成错误的页面",
 	"score-error-category-desc": "生成乐谱时出错。",
 	"score-getcwderr": "无法获取当前工作目录",

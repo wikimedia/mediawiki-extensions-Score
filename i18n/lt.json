@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Zygimantus"
+			"Zygimantus",
+			"Eitvys200"
 		]
 	},
+	"score-download-midi-file": "Atsisiųsti MIDI failą",
+	"score-download-source-file": "Atsisiųsti lilypond failą",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Išsamiau",
 	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-lang": "Kalba",

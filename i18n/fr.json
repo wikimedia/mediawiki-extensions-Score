@@ -20,6 +20,8 @@
 	"score-compilererr": "Impossible de compiler le fichier d’entrée LilyPond :\n$1",
 	"score-backend-error": "Impossible de copier les fichiers générés vers leur emplacement cible :\n$1",
 	"score-desc": "Ajoute une balise pour le rendu d’extraits musicaux avec LilyPond",
+	"score-download-midi-file": "Télécharger le fichier MIDI",
+	"score-download-source-file": "Télécharger le fichier lilypond",
 	"score-error-category": "Pages avec erreurs de rendu de partition",
 	"score-error-category-desc": "Une erreur s'est produite lors du rendu de la partition.",
 	"score-getcwderr": "Impossible d’obtenir le répertoire de travail actuel",

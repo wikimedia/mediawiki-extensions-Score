@@ -43,7 +43,7 @@
 	"score-visualeditor-mwscoreinspector-card-advanced": "Label for the advanced card of the score inspector\n{{Identical|Advanced}}",
 	"score-visualeditor-mwscoreinspector-card-audio": "Label for the audio card of the score inspector\n{{Identical|Audio}}",
 	"score-visualeditor-mwscoreinspector-card-midi": "Label for the MIDI card of the score inspector",
-	"score-visualeditor-mwscoreinspector-card-notation": "Label for the notation card of the score inspector",
+	"score-visualeditor-mwscoreinspector-card-notation": "Label for the notation card of the score inspector\n{{Identical|Notation}}",
 	"score-visualeditor-mwscoreinspector-lang": "Label for the lang attribute of the score node\n{{Identical|Language}}",
 	"score-visualeditor-mwscoreinspector-lang-abc": "Label for the 'ABC' value of the lang attribute",
 	"score-visualeditor-mwscoreinspector-lang-lilypond": "Label for the 'LilyPond' value of the lang attribute",

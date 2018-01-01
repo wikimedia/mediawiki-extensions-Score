@@ -15,6 +15,8 @@
 	"score-compilererr": "Die Eingabedatei von LilyPond konnte nicht kompiliert werden:\n$1",
 	"score-backend-error": "Die erzeugten Dateien konnten nicht an ihren Zielort kopiert werden:\n$1",
 	"score-desc": "Erweitert das Wiki um einen Befehl zum Einbetten und Zeigen von Partituren mit LilyPond",
+	"score-download-midi-file": "MIDI-Datei herunterladen",
+	"score-download-source-file": "Lilypond-Datei herunterladen",
 	"score-error-category": "Seiten mit Fehlern beim Anzeigen von Partituren",
 	"score-error-category-desc": "Beim Ausgeben der Partitur gab es einen Fehler.",
 	"score-getcwderr": "Das aktuelle Arbeitsverzeichnis konnte nicht abgerufen werden",

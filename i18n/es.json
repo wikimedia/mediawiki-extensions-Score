@@ -4,7 +4,8 @@
 			"Armando-Martin",
 			"Dalton2",
 			"Macofe",
-			"Ryo567"
+			"Ryo567",
+			"Fitoschido"
 		]
 	},
 	"score-abc2lynotexecutable": "No se pudo ejecutar el conversor ABC a LilyPond: \"$1\" no es un archivo ejecutable. Asegúrate de que <code>$wgScoreAbc2Ly</code> esté definido correctamente.",
@@ -14,6 +15,8 @@
 	"score-compilererr": "No se pudo compilar el archivo de entrada LilyPond:\n$1",
 	"score-backend-error": "No se pueden copiar los archivos generados en su ubicación final:\n$1",
 	"score-desc": "Agrega una etiqueta para representar partituras musicales con LilyPond",
+	"score-download-midi-file": "Descargar archivo MIDI",
+	"score-download-source-file": "Descargar archivo de Lilypond",
 	"score-error-category": "Páginas con errores de representación de partituras",
 	"score-error-category-desc": "Hubo un error al representar la partitura.",
 	"score-getcwderr": "No se ha podido obtener el directorio de trabajo actual",
