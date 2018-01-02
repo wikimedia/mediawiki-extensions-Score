@@ -232,9 +232,9 @@ class Score {
 				$sha1 = $file->getSha1();
 				$oggRelDir = "override-midi/{$sha1[0]}/{$sha1[1]}";
 				$oggRel = "$oggRelDir/$sha1.ogg";
-				$options['ogg_storage_dir'] = "$baseStoragePath/$oggRelDir";
-				$options['ogg_storage_path'] = "$baseStoragePath/$oggRel";
-				$options['ogg_url'] = "$baseUrl/$oggRel";
+				$options['audio_storage_dir'] = "$baseStoragePath/$oggRelDir";
+				$options['audio_storage_path'] = "$baseStoragePath/$oggRel";
+				$options['audio_url'] = "$baseUrl/$oggRel";
 			} else {
 				$options['override_midi'] = false;
 			}
@@ -242,33 +242,38 @@ class Score {
 			// Raw rendering?
 			$options['raw'] = array_key_exists( 'raw', $args );
 
-			/* Override OGG file? */
-			if ( array_key_exists( 'override_ogg', $args ) ) {
-				$t = Title::newFromText( $args['override_ogg'], NS_FILE );
+			/* Override audio file? */
+			if ( array_key_exists( 'override_audio', $args )
+				|| array_key_exists( 'override_ogg', $args ) ) {
+				$overrideAudio = isset( $args['override_ogg'] )
+					? $args['override_ogg']
+					: $args['override_audio'];
+				$t = Title::newFromText( $overrideAudio, NS_FILE );
 				if ( is_null( $t ) ) {
-					throw new ScoreException( wfMessage( 'score-invalidoggoverride',
-						htmlspecialchars( $args['override_ogg'] ) ) );
+					throw new ScoreException( wfMessage( 'score-invalidaudiooverride',
+						htmlspecialchars( $overrideAudio ) ) );
 				}
 				if ( !$t->isKnown() ) {
-					throw new ScoreException( wfMessage( 'score-oggoverridenotfound',
-						htmlspecialchars( $args['override_ogg'] ) ) );
+					throw new ScoreException( wfMessage( 'score-audiooverridenotfound',
+						htmlspecialchars( $overrideAudio ) ) );
 				}
-				$options['override_ogg'] = true;
-				$options['ogg_name'] = $args['override_ogg'];
+				$options['override_audio'] = true;
+				$options['audio_name'] = $overrideAudio;
 			} else {
-				$options['override_ogg'] = false;
+				$options['override_audio'] = false;
 			}
 
-			/* Vorbis rendering? */
-			$options['generate_ogg'] = array_key_exists( 'vorbis', $args );
+			/* Audio rendering? */
+			$options['generate_ogg'] = array_key_exists( 'sound', $args )
+				|| array_key_exists( 'vorbis', $args );
 
 			if ( $options['generate_ogg']
 				&& !class_exists( 'TimedMediaTransformOutput' )
 			) {
 				throw new ScoreException( wfMessage( 'score-nomediahandler' ) );
 			}
-			if ( $options['generate_ogg'] && ( $options['override_ogg'] !== false ) ) {
-				throw new ScoreException( wfMessage( 'score-vorbisoverrideogg' ) );
+			if ( $options['generate_ogg'] && ( $options['override_audio'] !== false ) ) {
+				throw new ScoreException( wfMessage( 'score-vorbisoverrideaudio' ) );
 			}
 
 			// Input for cache key
@@ -313,7 +318,7 @@ class Score {
 	 * 		may be generated without stepping on someone else's
 	 * 		toes. The directory may not exist yet. Required.
 	 * 	- generate_ogg: bool Whether to create an Ogg/Vorbis file in
-	 * 		TimedMediaHandler. If set to true, the override_ogg option
+	 * 		TimedMediaHandler. If set to true, the override_audio option
 	 * 		must be set to false. Required.
 	 *  - dest_storage_path: The path of the destination directory relative to
 	 *  	the current backend. Required.
@@ -324,17 +329,17 @@ class Score {
 	 * 	- override_midi: bool Whether to use a user-provided MIDI file.
 	 * 		Required.
 	 * 	- midi_file: If override_midi is true, MIDI file object.
-	 * 	- ogg_storage_dir: If override_midi and generate_ogg are true, the
-	 * 		backend directory in which the Ogg file is to be stored.
-	 * 	- ogg_storage_path: string If override_midi and generate_ogg are true,
-	 * 		the backend path at which the generated Ogg file is to be
+	 * 	- audio_storage_dir: If override_midi and generate_ogg are true, the
+	 * 		backend directory in which the audio file is to be stored.
+	 * 	- audio_storage_path: string If override_midi and generate_ogg are true,
+	 * 		the backend path at which the generated audio file is to be
 	 * 		stored.
-	 * 	- ogg_url: string If override_midi and generate_ogg is true,
-	 * 		the URL corresponding to ogg_storage_path
-	 * 	- override_ogg: bool Whether to generate a wikilink to a
-	 * 		user-provided OGG file. If set to true, the vorbis
+	 * 	- audio_url: string If override_midi and generate_ogg is true,
+	 * 		the URL corresponding to audio_storage_path
+	 * 	- override_audio: bool Whether to generate a wikilink to a
+	 * 		user-provided audio file. If set to true, the vorbis
 	 * 		option must be set to false. Required.
-	 * 	- ogg_name: string If override_ogg is true, the Ogg file name
+	 * 	- audio_name: string If override_audio is true, the audio file name
 	 * 	- raw: bool Whether to assume raw LilyPond code. Ignored if the
 	 * 		language is not lilypond, required otherwise.
 	 *
@@ -385,11 +390,11 @@ class Score {
 			/* Generate Ogg/Vorbis file if necessary */
 			if ( $options['generate_ogg'] ) {
 				if ( $options['override_midi'] ) {
-					$oggUrl = $options['ogg_url'];
-					$oggPath = $options['ogg_storage_path'];
-					$exists = $backend->fileExists( [ 'src' => $options['ogg_storage_path'] ] );
+					$oggUrl = $options['audio_url'];
+					$oggPath = $options['audio_storage_path'];
+					$exists = $backend->fileExists( [ 'src' => $options['audio_storage_path'] ] );
 					if ( !$exists ) {
-						$backend->prepare( [ 'dir' => $options['ogg_storage_dir'] ] );
+						$backend->prepare( [ 'dir' => $options['audio_storage_dir'] ] );
 						$sourcePath = $options['midi_file']->getLocalRefPath();
 						self::generateOgg( $sourcePath, $options, $oggPath, $metaData );
 					}
@@ -462,8 +467,8 @@ class Score {
 				] );
 				$link .= $player->toHtml();
 			}
-			if ( $options['override_ogg'] !== false ) {
-				$link .= $parser->recursiveTagParse( "[[File:{$options['ogg_name']}]]" );
+			if ( $options['override_audio'] !== false ) {
+				$link .= $parser->recursiveTagParse( "[[File:{$options['audio_name']}]]" );
 			}
 		} catch ( Exception $e ) {
 			self::eraseFactory( $options['factory_directory'] );

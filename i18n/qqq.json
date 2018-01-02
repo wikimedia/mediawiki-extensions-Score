@@ -21,7 +21,7 @@
 	"score-error-category-desc": "Description on [[Special:TrackingCategories]] for the {{msg-mw|score-error-category}} tracking category.",
 	"score-getcwderr": "Displayed if the extension cannot obtain the current working directory.",
 	"score-invalidlang": "Displayed if the lang=\"…\" attribute contains an unrecognized score language. $1 is the unrecognized language.",
-	"score-invalidoggoverride": "Displayed if the file specified with the override_ogg=\"…\" attribute is invalid. $1 is the value of the override_ogg attribute.",
+	"score-invalidaudiooverride": "Displayed if the file specified with the override_audio=\"…\" attribute is invalid. $1 is the value of the override_audio attribute.",
 	"score-midioverridenotfound": "Displayed if the file specified with the override_midi=\"…\" attribute could not be found. $1 is the value of the override_midi attribute.",
 	"score-noabcinput": "Displayed if an ABC source file could not be created for lang=\"ABC\". $1 is the path to the file that could not be created.",
 	"score-noimages": "Displayed if no score images were rendered.",
@@ -32,7 +32,7 @@
 	"score-notexecutable": "Displayed if LilyPond binary cannot be executed. $1 is the path to the LilyPond binary.",
 	"score-nocontent": "Parameters:\n* $1 - filename",
 	"score-oggconversionerr": "Displayed if the MIDI to Ogg/Vorbis conversion failed. $1 is the error (generally big block of text in a pre tag)",
-	"score-oggoverridenotfound": "Displayed if the file specified with the override_ogg=\"…\" attribute could not be found. $1 is the value of the override_ogg attribute.",
+	"score-audiooverridenotfound": "Displayed if the file specified with the override_audio=\"…\" attribute could not be found. $1 is the value of the override_ogg attribute.",
 	"score-page": "The word \"Page\" as used in pagination. Parameters:\n* $1 - the page number\n{{Identical|Page}}",
 	"score-pregreplaceerr": "Displayed if a PCRE regular expression replacement failed.",
 	"score-readerr": "Displayed if the extension could not read a file. $1 is the path to the file that could not be read.",
@@ -55,5 +55,5 @@
 	"score-visualeditor-mwscoreinspector-raw": "Label for the raw attribute of the score node",
 	"score-visualeditor-mwscoreinspector-title": "Title for the inspector to edit <nowiki><score></nowiki> blocks.",
 	"score-visualeditor-mwscoreinspector-vorbis": "Label for the vorbis attribute of the score node",
-	"score-vorbisoverrideogg": "Displayed if both vorbis=\"1\" and override_ogg=\"…\" were specified."
+	"score-vorbisoverrideaudio": "Displayed if both sound=\"1\" and override_audio=\"…\" were specified."
 }
