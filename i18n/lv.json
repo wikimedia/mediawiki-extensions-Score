@@ -4,6 +4,8 @@
 			"Papuass"
 		]
 	},
+	"score-download-midi-file": "Lejupielādēt MIDI failu",
+	"score-download-source-file": "Lejupielādēt lilypond failu",
 	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-card-notation": "Pieraksts",
 	"score-visualeditor-mwscoreinspector-midi": "Saite uz MIDI failu (pēc noklusējuma tiek automātiski ģenerēta)",
