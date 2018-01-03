@@ -732,19 +732,19 @@ LY;
 		/* Raw code. In Scheme, ##f is false and ##t is true. */
 		/* Set the default MIDI tempo to 100, 60 is a bit too slow */
 		$raw = <<<LILYPOND
-			\\header {
-				tagline = ##f
-			}
-			\\paper {
-				raggedright = ##t
-				raggedbottom = ##t
-				indent = 0\mm
-			}
-			\\version "$version"
-			\\score {
-				$lilypondCode
-				$options
-			}
+\\header {
+	tagline = ##f
+}
+\\paper {
+	raggedright = ##t
+	raggedbottom = ##t
+	indent = 0\mm
+}
+\\version "$version"
+\\score {
+	$lilypondCode
+	$options
+}
 LILYPOND;
 
 		return $raw;
