@@ -39,11 +39,12 @@ ve.ui.MWScoreInspector.static.dir = 'ltr';
  * @inheritdoc
  */
 ve.ui.MWScoreInspector.prototype.initialize = function () {
-	var inputField, langField,
+	var inputField, langField, noteLanguageField,
 		midiField, overrideMidiField,
 		vorbisField, overrideOggField,
 		rawField,
-		notationTabPanel, audioTabPanel, midiTabPanel, advancedTabPanel;
+		notationTabPanel, audioTabPanel, midiTabPanel, advancedTabPanel,
+		language, languages = mw.config.get( 'wgScoreNoteLanguages' );
 
 	// Parent method
 	ve.ui.MWScoreInspector.super.prototype.initialize.call( this );
@@ -101,6 +102,15 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 		]
 	} );
 
+	// Note Language
+	this.noteLanguageDropdown = new OO.ui.DropdownWidget();
+	for ( language in languages ) {
+		this.noteLanguageDropdown.getMenu().insertItem( new OO.ui.MenuOptionWidget( {
+			data: language,
+			label: languages[ language ]
+		} ) );
+	}
+
 	// Checkboxes
 	this.midiCheckbox = new OO.ui.CheckboxInputWidget();
 	this.audioCheckbox = new OO.ui.CheckboxInputWidget();
@@ -122,6 +132,10 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 	langField = new OO.ui.FieldLayout( this.langSelect, {
 		align: 'left',
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-lang' )
+	} );
+	noteLanguageField = new OO.ui.FieldLayout( this.noteLanguageDropdown, {
+		align: 'left',
+		label: ve.msg( 'score-visualeditor-mwscoreinspector-notelanguage' )
 	} );
 	vorbisField = new OO.ui.FieldLayout( this.audioCheckbox, {
 		align: 'inline',
@@ -150,6 +164,7 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 	notationTabPanel.$element.append(
 		inputField.$element,
 		langField.$element,
+		noteLanguageField.$element,
 		this.generatedContentsError.$element
 	);
 	audioTabPanel.$element.append(
@@ -176,6 +191,7 @@ ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
 		.next( function () {
 			var attributes = this.selectedNode.getAttribute( 'mw' ).attrs,
 				lang = attributes.lang || 'lilypond',
+				noteLanguage = attributes[ 'note-language' ] || mw.config.get( 'wgScoreDefaultNoteLanguage' ),
 				raw = attributes.raw !== undefined,
 				midi = attributes.midi === '1',
 				vorbis = attributes.vorbis === '1',
@@ -186,6 +202,7 @@ ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
 
 			// Populate form
 			this.langSelect.selectItemByData( lang );
+			this.noteLanguageDropdown.getMenu().selectItemByData( noteLanguage );
 			this.rawCheckbox.setSelected( raw );
 			this.midiCheckbox.setSelected( midi );
 			// vorbis is only set to 1 if an audio file is being auto-generated, but
@@ -197,17 +214,20 @@ ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
 
 			// Disable any fields that should be disabled
 			this.toggleDisableRawCheckbox();
+			this.toggleDisableNoteLanguageDropdown();
 			this.toggleDisableOverrideMidiInput();
 			this.toggleDisableOverrideOggInput();
 
 			// Add event handlers
 			this.langSelect.on( 'choose', this.onChangeHandler );
+			this.noteLanguageDropdown.on( 'labelChange', this.onChangeHandler );
 			this.rawCheckbox.on( 'change', this.onChangeHandler );
 			this.midiCheckbox.on( 'change', this.onChangeHandler );
 			this.audioCheckbox.on( 'change', this.onChangeHandler );
 			this.overrideMidiInput.on( 'change', this.onChangeHandler );
 			this.overrideOggInput.on( 'change', this.onChangeHandler );
 
+			this.rawCheckbox.connect( this, { change: 'toggleDisableNoteLanguageDropdown' } );
 			this.indexLayout.connect( this, { set: 'onTabPanelSet' } );
 			this.indexLayout.connect( this, { set: 'updateSize' } );
 			this.langSelect.connect( this, { choose: 'toggleDisableRawCheckbox' } );
@@ -223,6 +243,7 @@ ve.ui.MWScoreInspector.prototype.getTeardownProcess = function ( data ) {
 	return ve.ui.MWScoreInspector.super.prototype.getTeardownProcess.call( this, data )
 		.first( function () {
 			this.langSelect.off( 'choose', this.onChangeHandler );
+			this.noteLanguageDropdown.off( 'labelChange', this.onChangeHandler );
 			this.midiCheckbox.off( 'change', this.onChangeHandler );
 			this.audioCheckbox.off( 'change', this.onChangeHandler );
 			this.overrideMidiInput.off( 'change', this.onChangeHandler );
@@ -239,13 +260,14 @@ ve.ui.MWScoreInspector.prototype.getTeardownProcess = function ( data ) {
  * @inheritdoc
  */
 ve.ui.MWScoreInspector.prototype.updateMwData = function ( mwData ) {
-	var lang, raw, midi, vorbis, overrideMidi, overrideOgg;
+	var lang, noteLanguage, raw, midi, vorbis, overrideMidi, overrideOgg;
 
 	// Parent method
 	ve.ui.MWScoreInspector.super.prototype.updateMwData.call( this, mwData );
 
 	// Get data from inspector
 	lang = this.langSelect.getSelectedItem().getData();
+	noteLanguage = this.noteLanguageDropdown.getMenu().getSelectedItem().getData();
 	raw = !this.rawCheckbox.isDisabled() && this.rawCheckbox.isSelected();
 	// audioCheckbox is selected if an audio file is being included, whether that file
 	// is being auto-generated or whether an existing file is being used; but the "vorbis"
@@ -260,6 +282,7 @@ ve.ui.MWScoreInspector.prototype.updateMwData = function ( mwData ) {
 
 	// Update attributes
 	mwData.attrs.lang = lang;
+	mwData.attrs[ 'note-language' ] = raw ? undefined : noteLanguage;
 	mwData.attrs.raw = raw ? '1' : undefined;
 	mwData.attrs.midi = midi ? '1' : undefined;
 	mwData.attrs.vorbis = vorbis ? '1' : undefined;
@@ -275,6 +298,14 @@ ve.ui.MWScoreInspector.prototype.updateMwData = function ( mwData ) {
 ve.ui.MWScoreInspector.prototype.toggleDisableRawCheckbox = function () {
 	// Disable the checkbox if the language is not LilyPond
 	this.rawCheckbox.setDisabled( this.langSelect.getSelectedItem().getData() !== 'lilypond' );
+};
+
+/**
+ * Set the disabled status of this.noteLanguage based on the raw attribute
+ */
+ve.ui.MWScoreInspector.prototype.toggleDisableNoteLanguageDropdown = function () {
+	// Disable the dropdown if raw mode is used
+	this.noteLanguageDropdown.setDisabled( this.rawCheckbox.isSelected() );
 };
 
 /**

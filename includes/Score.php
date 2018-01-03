@@ -45,6 +45,30 @@ class Score {
 	private static $supportedLangs = [ 'lilypond', 'ABC' ];
 
 	/**
+	 * Supported note languages.
+	 * Key is LilyPond filename. Value is native word
+	 */
+	public static $supportedNoteLanguages = [
+		'arabic' => 'العربية',
+		'catalan' => 'Català',
+		'deutsch' => 'Deutsch',
+		'english' => 'English',
+		'espanol' => 'Español',
+		'italiano' => 'Italiano',
+		'nederlands' => 'Nederlands',
+		'norsk' => 'Norsk',
+		'portugues' => 'Português',
+		'suomi' => 'Suomi',
+		'svenska' => 'Svenska',
+		'vlaams' => 'Flemish',
+	];
+
+	/**
+	 * Default language used for notes.
+	 */
+	public static $defaultNoteLanguage = 'nederlands';
+
+	/**
 	 * LilyPond version string.
 	 * It defaults to null and is set the first time it is required.
 	 */
@@ -242,6 +266,25 @@ class Score {
 			// Raw rendering?
 			$options['raw'] = array_key_exists( 'raw', $args );
 
+			/* Note language selection */
+			if ( array_key_exists( 'note-language', $args ) ) {
+				if ( !$options['raw'] ) {
+					$options['note-language'] = $args['note-language'];
+				} else {
+					throw new ScoreException( wfMessage( 'score-notelanguagewithraw' ) );
+				}
+			} else {
+				$options['note-language'] = self::$defaultNoteLanguage;
+			}
+			if ( !in_array( $options['note-language'], array_keys( self::$supportedNoteLanguages ) ) ) {
+				throw new ScoreException(
+					wfMessage( 'score-invalidnotelanguage' )->plaintextParams(
+						$options['note-language'],
+						join( ', ', array_keys( self::$supportedNoteLanguages ) )
+					)
+				);
+			}
+
 			/* Override audio file? */
 			if ( array_key_exists( 'override_audio', $args )
 				|| array_key_exists( 'override_ogg', $args ) ) {
@@ -280,6 +323,7 @@ class Score {
 			$cacheOptions = [
 				'code' => $code,
 				'lang' => $options['lang'],
+				'note-language' => $options['note-language'],
 				'raw'  => $options['raw'],
 				'ExtVersion' => self::CACHE_VERSION,
 				'LyVersion' => self::getLilypondVersion(),
@@ -342,6 +386,7 @@ class Score {
 	 * 	- audio_name: string If override_audio is true, the audio file name
 	 * 	- raw: bool Whether to assume raw LilyPond code. Ignored if the
 	 * 		language is not lilypond, required otherwise.
+	 *	- note-language: language to use for notes (one of supported by LilyPond)
 	 *
 	 * @return string HTML.
 	 *
@@ -531,7 +576,7 @@ class Score {
 			if ( $options['raw'] ) {
 				$lilypondCode = $code;
 			} else {
-				$lilypondCode = self::embedLilypondCode( $code );
+				$lilypondCode = self::embedLilypondCode( $code, $options['note-language'] );
 			}
 			$rc = file_put_contents( $factoryLy, $lilypondCode );
 			if ( $rc === false ) {
@@ -708,12 +753,13 @@ class Score {
 	 * Embeds simple LilyPond code in a score block.
 	 *
 	 * @param string $lilypondCode Simple LilyPond code.
+	 * @param string $noteLanguage Language of notes.
 	 *
 	 * @return string Raw lilypond code.
 	 *
 	 * @throws ScoreException if determining the LilyPond version fails.
 	 */
-	private static function embedLilypondCode( $lilypondCode ) {
+	private static function embedLilypondCode( $lilypondCode, $noteLanguage ) {
 		$version = self::getLilypondVersion();
 
 		// Check if parameters have already been supplied (hybrid-raw mode)
@@ -741,6 +787,7 @@ LY;
 	indent = 0\mm
 }
 \\version "$version"
+\\language "$noteLanguage"
 \\score {
 	$lilypondCode
 	$options
