@@ -18,7 +18,6 @@
 	"score-error-category-desc": "Ocorreu um erro ao processar a partitura.",
 	"score-getcwderr": "Não é possível obter o diretório de trabalho atual",
 	"score-invalidlang": "Linguagem de partitura inválida lang=\"<nowiki>$1</nowiki>\". As linguagens reconhecidas são lang=\"lilypond\" (a padrão) e lang=\"ABC\".",
-	"score-invalidoggoverride": "O arquivo \"<nowiki>$1</nowiki>\" que você especificou com override_ogg é inválido. Por favor, especifique apenas o nome do arquivo, omita <nowiki>[[…]]</nowiki> e o prefixo \"{{ns:file}}:\".",
 	"score-midioverridenotfound": "O arquivo \"<nowiki>$1</nowiki>\" que você especificou com override_midi não pode ser encontrado. Por favor, especifique apenas o nome do arquivo, omita <nowiki>[[…]]</nowiki> e o prefixo\"{{ns:file}}:\".",
 	"score-noabcinput": "O arquivo de fonte ABC $1 não pode ser criado.",
 	"score-noimages": "Nenhuma imagem de partitura foi gerada. Por favor, verifique o código da partitura.",
@@ -29,7 +28,6 @@
 	"score-notexecutable": "Não foi possível executar o LilyPond: $1 não é um arquivo executável. Certifique-se que o <code>$wgScoreLilyPond</code> está configurado corretamente.",
 	"score-nocontent": "Não foi possível carregar o arquivo $1 do servidor.",
 	"score-oggconversionerr": "Não foi possível convertet MIDI para Ogg/Vorbis:\n$1",
-	"score-oggoverridenotfound": "O arquivo \"<nowiki>$1</nowiki>\" que você especificou com override_ogg não existe.",
 	"score-page": "Página $1",
 	"score-pregreplaceerr": "A substituição de expressão regular PCRE falhou",
 	"score-readerr": "Não foi possível ler o arquivo $1.",
@@ -51,6 +49,5 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Nome de arquivo de som existente (deve ser Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Este é um arquivo LilyPond completo",
 	"score-visualeditor-mwscoreinspector-title": "Notação musical",
-	"score-visualeditor-mwscoreinspector-vorbis": "Incluir um arquivo de som (autogerado por padrão)",
-	"score-vorbisoverrideogg": "Você não pode solicitar a renderização de Ogg/Vorbis e especificar override_ogg ao mesmo tempo."
+	"score-visualeditor-mwscoreinspector-vorbis": "Incluir um arquivo de som (autogerado por padrão)"
 }

@@ -21,7 +21,6 @@
 	"score-error-category-desc": "Er is een fout opgetreden bij het weergeven van de score.",
 	"score-getcwderr": "Het was niet mogelijk de ingestelde werkmap te gebruiken",
 	"score-invalidlang": "Er is een onjuiste taal voor bladmuziek opgegeven (lang=\"<nowiki>$1</nowiki>\"). Op dit moment worden lang=\"lilypond\" (standaard) en lang=\"ABC\" ondersteund.",
-	"score-invalidoggoverride": "Het bestand \"<nowiki>$1</nowiki>\" dat u hebt opgegeven met \"override_ogg\" is ongeldig. Geef alleen de bestandsnaam op, laat <nowiki>[[…]]</nowiki> en het voorvoegsel \"{{ns:file}}:\" weg.",
 	"score-midioverridenotfound": "Het bestand \"<nowiki>$1</nowiki>\" dat u hebt opgegeven met \"override_midi\" kon niet gevonden worden. Geef alleen de bestandsnaam op, laat <nowiki>[[…]]</nowiki> en het voorvoegsel \"{{ns:file}}:\" weg.",
 	"score-noabcinput": "Het ABC-bronbestand $1 kon niet aangemaakt worden",
 	"score-noimages": "Er zijn geen afbeeldingen met bladmuziek aangemaakt. Controleer uw notatie.",
@@ -32,7 +31,6 @@
 	"score-notexecutable": "Het was niet mogelijk om LilyPond uit te voeren: $1 is geen uitvoerbaar bestand. Zorg dat de instelling <code>$wgScoreLilyPond</code> correct is.",
 	"score-nocontent": "Het bestand $1 kon niet van de server geladen worden.",
 	"score-oggconversionerr": "Het was niet mogelijk MIDI naar Ogg/Vorbis om te zetten:\n$1",
-	"score-oggoverridenotfound": "Het bestand \"<nowiki>$1</nowiki>\" dat u hebt opgegeven met \"override_ogg\" bestaat niet.",
 	"score-page": "Pagina $1",
 	"score-pregreplaceerr": "Vervangen met behulp van een PCRE reguliere expressie is mislukt",
 	"score-readerr": "Het bestand $1 kan niet gelezen worden.",
@@ -50,6 +48,5 @@
 	"score-visualeditor-mwscoreinspector-override-ogg": "Gebruik een bestaand audiobestand",
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Naam van een bestaand audiobestan (moet Ogg/Vorbis zijn)",
 	"score-visualeditor-mwscoreinspector-raw": "Dit is een volledig LilyPond-bestand",
-	"score-visualeditor-mwscoreinspector-title": "Muzieknotatie",
-	"score-vorbisoverrideogg": "U kunt niet vragen om Ogg/Vorbisrendering en tegelijkertijd \"override_ogg\" gebruiken."
+	"score-visualeditor-mwscoreinspector-title": "Muzieknotatie"
 }

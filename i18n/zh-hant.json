@@ -19,7 +19,6 @@
 	"score-error-category-desc": "繪製樂譜時發生錯誤",
 	"score-getcwderr": "無法取得目前工作目錄",
 	"score-invalidlang": "無效的樂譜語言 lang=\"<nowiki>$1</nowiki>\"。 目前可辨識的語言有 lang=\"lilypond\" (預設) 與 lang=\"ABC\"。",
-	"score-invalidoggoverride": "您使用 override_ogg 參數指定的檔案 \"<nowiki>$1</nowiki>\" 無效。 請只指定檔案名稱，略過 <nowiki>[[…]]</nowiki> 與 \"{{ns:file}}:\" 字首。",
 	"score-midioverridenotfound": "您使用 override_midi 參數指定的檔案 \"<nowiki>$1</nowiki>\" 不存在。 請只指定檔案名稱，略過 <nowiki>[[…]]</nowiki> 與 \"{{ns:file}}:\" 字首。",
 	"score-noabcinput": "ABC 來源檔 $1 無法建立。",
 	"score-noimages": "未產生樂譜圖片，請檢查您的樂譜代碼。",
@@ -30,7 +29,6 @@
 	"score-notexecutable": "LilyPond 無法執行：$1 不是一個可執行檔，請確定 <code>$wgScoreLilyPond</code> 已設定正確。",
 	"score-nocontent": "無法從伺服器載入檔案 $1 。",
 	"score-oggconversionerr": "無法轉換 MIDI 為 Ogg/Vorbis：\n$1",
-	"score-oggoverridenotfound": "您使用 override_ogg 參數指定的檔案 \"<nowiki>$1</nowiki>\" 不存在。",
 	"score-page": "第 $1 頁",
 	"score-pregreplaceerr": "PCRE 正規表示法取代失敗",
 	"score-readerr": "無法讀取檔案 $1。",
@@ -42,6 +40,5 @@
 	"score-visualeditor-mwscoreinspector-lang": "語言",
 	"score-visualeditor-mwscoreinspector-midi": "連結至 MIDI 檔案",
 	"score-visualeditor-mwscoreinspector-title": "樂譜",
-	"score-visualeditor-mwscoreinspector-vorbis": "產生一個音訊檔",
-	"score-vorbisoverrideogg": "您無法同時請求 Ogg/Vorbis 繪圖時指定 override_ogg。"
+	"score-visualeditor-mwscoreinspector-vorbis": "產生一個音訊檔"
 }

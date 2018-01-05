@@ -15,7 +15,6 @@
 	"score-error-category-desc": "Đã xuất hiện lỗi khi kết xuất khuông nhạc.",
 	"score-getcwderr": "Không thể lấy thư mục làm việc hiện tại",
 	"score-invalidlang": "Ngôn ngữ nốt nhạc lang=\"<nowiki>$1</nowiki>\" không hợp lệ. Các ngôn ngữ đang được chấp nhận là lang=\"lilypond\" (mặc định) và lang=\"ABC\".",
-	"score-invalidoggoverride": "Tập tin “<nowiki>$1</nowiki>” mà bạn chỉ định override_ogg không hợp lệ. Xin vui lòng chỉ đưa vào tên tập tin; bỏ qua <nowiki>[[…]]</nowiki> và tiền tố “{{ns:file}}:”.",
 	"score-midioverridenotfound": "Tập tin “<nowiki>$1</nowiki>” mà bạn chỉ định override_midi không hợp lệ. Xin vui lòng chỉ đưa vào tên tập tin; bỏ qua <nowiki>[[…]]</nowiki> và tiền tố “{{ns:file}}:”.",
 	"score-noabcinput": "Không thể tạo ra tập tin mã nguồn ABC $1.",
 	"score-noimages": "Các hình tài liệu âm nhạc không được tạo ra. Xin vui lòng kiểm tra lại mã nguồn.",
@@ -26,7 +25,6 @@
 	"score-notexecutable": "Không thể thực thi LilyPond: $1 không phải là một tập tin thực thi. Hãy chắc chắn rằng <code>$wgScoreLilyPond</code> có giá trị chính xác.",
 	"score-nocontent": "Không thể tải tập tin $1 từ máy chủ.",
 	"score-oggconversionerr": "Không thể chuyển đổi MIDI qua Ogg/Vorbis:\n$1",
-	"score-oggoverridenotfound": "Tập tin “<nowiki>$1</nowiki>” mà bạn chỉ định override_ogg không tồn tại.",
 	"score-page": "Trang $1",
 	"score-pregreplaceerr": "Thất bại trong việc thay thế theo biểu thưc chính quy PCRE",
 	"score-readerr": "Không thể đọc tập tin $1.",
@@ -46,6 +44,5 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Tên tập tin âm thanh đã tồn tại (phải là Ogg Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Đây là một tập tin LilyPond đầy đủ",
 	"score-visualeditor-mwscoreinspector-title": "Khuông nhạc",
-	"score-visualeditor-mwscoreinspector-vorbis": "Bao gồm tập tin âm thanh (tự động tạo ra theo mặc định)",
-	"score-vorbisoverrideogg": "Bạn không thể yêu cầu kết xuất Ogg/Vorbis và định override_ogg cùng lúc."
+	"score-visualeditor-mwscoreinspector-vorbis": "Bao gồm tập tin âm thanh (tự động tạo ra theo mặc định)"
 }

@@ -15,7 +15,6 @@
 	"score-error-category-desc": "Hebo un error al dibuxar la partitura.",
 	"score-getcwderr": "Nun se pudo saber el direutoriu de trabayu actual",
 	"score-invalidlang": "La llingua de la partitura lang=\"<nowiki>$1</nowiki>\" ye inválida. Les llingües reconocíes nesti momentu son lang=\"lilypond\" (predeterminada) y lang=\"ABC\".",
-	"score-invalidoggoverride": "El ficheru «<nowiki>$1</nowiki>» qu'especificasti con override_ogg ye inválidu. Escribe namái el nome de ficheru, y non <nowiki>[[…]]</nowiki> nin el prefixu «{{ns:file}}:».",
 	"score-midioverridenotfound": "El ficheru «<nowiki>$1</nowiki>» qu'especificasti con override_midi nun se pudo alcontrar. Escribe namái el nome de ficheru, y non <nowiki>[[…]]</nowiki> nin el prefixu «{{ns:file}}:».",
 	"score-noabcinput": "Nun pudo crease'l ficheru fonte ABC \"$1\".",
 	"score-noimages": "Nun se xeneró denguna imaxe de partitura. Comprueba el códigu de la partitura.",
@@ -26,7 +25,6 @@
 	"score-notexecutable": "Nun se pudo executar LilyPond: $1 nun ye un ficheru executable. Asegurate de que <code>$wgScoreLilyPond</code> ta configuráu de mou correutu.",
 	"score-nocontent": "Nun pudo cargase'l ficheru \"$1\" dende'l sirvidor.",
 	"score-oggconversionerr": "Nun se pudo convertir el MIDI a Ogg/Vorbis:\n$1",
-	"score-oggoverridenotfound": "El ficheru «<nowiki>$1</nowiki>» qu'especificasti con override_ogg nun esiste.",
 	"score-page": "Páxina $1",
 	"score-pregreplaceerr": "Falló la sustitución de la espresión regular PCRE",
 	"score-readerr": "Nun se pudo lleer el ficheru $1.",
@@ -46,6 +44,5 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Nome del ficheru de soníu esistente (tien de ser Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Esti ye un ficheru de LilyPond completu",
 	"score-visualeditor-mwscoreinspector-title": "Notación musical",
-	"score-visualeditor-mwscoreinspector-vorbis": "Incluyir un ficheru de soníu (xeneráu automáticamente de mou predetermináu)",
-	"score-vorbisoverrideogg": "Nun pues solicitar una renderización Ogg/Vorbis y especificar override_ogg al mesmu tiempu."
+	"score-visualeditor-mwscoreinspector-vorbis": "Incluyir un ficheru de soníu (xeneráu automáticamente de mou predetermináu)"
 }

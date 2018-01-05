@@ -14,11 +14,13 @@
 	"score-compilererr": "Compilazione del file d'input LilyPond fallita:\n$1",
 	"score-backend-error": "Impossibile copiare i file generati nella loro destinazione finale:\n$1",
 	"score-desc": "Aggiunge un tag per il rendering di spartiti musicali con LilyPond",
+	"score-download-midi-file": "Scarica il file MIDI",
+	"score-download-source-file": "Scarica il file lilypond",
 	"score-error-category": "Pagine con errori di rendering della partitura",
 	"score-error-category-desc": "Si è verificato un errore durante il rendering della partitura.",
 	"score-getcwderr": "Impossibile accedere alla directory di lavoro corrente",
 	"score-invalidlang": "Risultato non valido per il linguaggio lang=\"<nowiki>$1</nowiki>\". I linguaggi attualmente riconosciuti sono lang=\"lilypond\" (predefinito) e lang=\"ABC\".",
-	"score-invalidoggoverride": "Il file \"<nowiki>$1</nowiki>\" che hai specificato con override_ogg non è valido. Per favore, specifica solo il nome del file, ometti <nowiki>[[…]]</nowiki> e il prefisso \"{{ns:file}}:\".",
+	"score-invalidaudiooverride": "Il file \"<nowiki>$1</nowiki>\" che hai specificato con override_audio non è valido. Per favore, specifica solo il nome del file, ometti <nowiki>[[…]]</nowiki> e il prefisso \"{{ns:file}}:\".",
 	"score-midioverridenotfound": "Il file \"<nowiki>$1</nowiki>\" che hai specificato con override_midi non è stato trovato. Per favore, specifica solo il nome del file, ometti <nowiki>[[…]]</nowiki> e il prefisso \"{{ns:file}}:\".",
 	"score-noabcinput": "Non è stato possibile creare $1, file sorgente ABC.",
 	"score-noimages": "Non si possono generare immagini di partiture, controllare il codice della partitura.",
@@ -29,7 +31,7 @@
 	"score-notexecutable": "LilyPond non può essere eseguito:  $1 non è un file eseguibile. Assicurarsi che <code>$wgScoreLilyPond</code> sia configurato correttamente.",
 	"score-nocontent": "Impossibile caricare il file $1 dal server.",
 	"score-oggconversionerr": "Conversione da MIDI a Ogg/Vorbis non riuscita:\n$1",
-	"score-oggoverridenotfound": "Il file \"<nowiki>$1</nowiki>\" indicato con override_ogg non esiste.",
+	"score-audiooverridenotfound": "Il file \"<nowiki>$1</nowiki>\" indicato con override_audio non esiste.",
 	"score-page": "Pagina $1",
 	"score-pregreplaceerr": "La sostituzione con espressione regolare PCRE non è riuscita",
 	"score-readerr": "Lettura del file $1 fallita.",
@@ -50,5 +52,5 @@
 	"score-visualeditor-mwscoreinspector-raw": "Questo è un file LilyPond completo",
 	"score-visualeditor-mwscoreinspector-title": "Notazione musicale",
 	"score-visualeditor-mwscoreinspector-vorbis": "Includi un file audio (generato automaticamente per default)",
-	"score-vorbisoverrideogg": "Non è possibile richiedere un rendering Ogg/Vorbis e specificare override_ogg allo stesso tempo."
+	"score-vorbisoverrideaudio": "Non è possibile richiedere un rendering audio e specificare override_audio allo stesso tempo."
 }
