@@ -87,6 +87,8 @@
 		"ScoreTrim": null,
 		"ScoreLilyPond": "/usr/bin/lilypond",
 		"ScoreAbc2Ly": "/usr/bin/abc2ly",
+		"ScoreFluidsynth": "/usr/bin/fluidsynth",
+		"ScoreSoundfont": "/usr/share/sounds/sf2/FluidR3_GM.sf2",
 		"ScoreTimidity": "/usr/bin/timidity",
 		"ScoreSafeMode": true,
 		"ScorePath": false,

@@ -798,7 +798,7 @@ LILYPOND;
 	}
 
 	/**
-	 * Generates an Ogg/Vorbis file from a MIDI file using timidity.
+	 * Generates an Ogg/Vorbis file from a MIDI file using fluidsynth with TiMidity as fallback.
 	 *
 	 * @param string $sourceFile The local filename of the MIDI file
 	 * @param array $options array of rendering options.
@@ -808,24 +808,43 @@ LILYPOND;
 	 * @throws ScoreException if an error occurs.
 	 */
 	private static function generateOgg( $sourceFile, $options, $remoteDest, &$metaData ) {
-		global $wgScoreTimidity;
-
-		if ( !is_executable( $wgScoreTimidity ) ) {
-			throw new ScoreException( wfMessage( 'score-timiditynotexecutable', $wgScoreTimidity ) );
-		}
+		global $wgScoreFluidsynth, $wgScoreSoundfont;
+		global $wgScoreTimidity; // TODO: Remove TiMidity++ as fallback
 
 		/* Working environment */
 		$factoryDir = $options['factory_directory'];
 		self::createDirectory( $factoryDir, 0700 );
 		$factoryOgg = "$factoryDir/file.ogg";
 
-		/* Run timidity */
-		$result = Shell::command(
-			$wgScoreTimidity,
-			'-Ov', // Vorbis output
-			'--output-file=' . $factoryOgg,
-			$sourceFile
-		)
+		if ( is_executable( $wgScoreFluidsynth ) ) {
+			if ( !file_exists( $wgScoreSoundfont ) ) {
+				throw new ScoreException( wfMessage( 'score-soundfontnotexists', $wgScoreSoundfont ) );
+			}
+
+			// Use fluidsynth
+			$cmdArgs = [
+				$wgScoreFluidsynth,
+				'-T',
+				'oga', // Vorbis output
+				'-F',
+				$factoryOgg,
+				$wgScoreSoundfont,
+				$sourceFile
+			];
+		} elseif ( is_executable( $wgScoreTimidity ) ) {
+			// Use TiMidity++ as a fallback
+			$cmdArgs = [
+				$wgScoreTimidity,
+				'-Ov', // Vorbis output
+				'--output-file=' . $factoryOgg,
+				$sourceFile
+			];
+		} else {
+			throw new ScoreException( wfMessage( 'score-fallbacknotexecutable', $wgScoreTimidity ) );
+		}
+
+		/* Run fluidsynth */
+		$result = Shell::command( $cmdArgs )
 			->includeStderr()
 			->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
 			->execute();
