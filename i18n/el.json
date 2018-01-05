@@ -21,5 +21,6 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Όνομα υπάρχοντος αρχείου ήχου (πρέπει να είναι Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Αυτό είναι ένα ολοκληρωμένο αρχείο LilyPond",
 	"score-visualeditor-mwscoreinspector-title": "Μουσική σημειογραφία",
-	"score-visualeditor-mwscoreinspector-vorbis": "Συμπερίληψη ενός αρχείου ήχου (αυτόματα παραγόμενου από προεπιλογή)"
+	"score-visualeditor-mwscoreinspector-vorbis": "Συμπερίληψη ενός αρχείου ήχου (αυτόματα παραγόμενου από προεπιλογή)",
+	"score-vorbisoverrideogg": "Δεν μπορείτε να ζητάτε απόδοση Ogg/Vorbis και να ορίζετε override_ogg την ίδια στιγμή."
 }

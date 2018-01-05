@@ -21,6 +21,7 @@
 	"score-nooutput": "Non ge riesche a ccrejà 'a cartelle d'u resultate $1.",
 	"score-nocontent": "Non ge pozze carecà 'u file $1 da 'u server.",
 	"score-oggconversionerr": "Non ge riesche a convertì MIDI jndr'à Ogg/Vorbis:\n$1",
+	"score-oggoverridenotfound": "'U file \"<nowiki>$1</nowiki>\" ca è specificate cu override_ogg non g'esiste.",
 	"score-page": "Pàgene $1",
 	"score-pregreplaceerr": "Sostituzione de l'espressione regolare PCRE non riuscite",
 	"score-readerr": "Non ge riesche a leggere 'u file $1.",

@@ -11,6 +11,7 @@
 	"score-noinput": "Zapodawanska dataja LilyPond $1 njeda so wutworić.",
 	"score-nooutput": "Wudawanski zapis $1 njeda so wutworić.",
 	"score-oggconversionerr": "MIDI njeda so do Ogg/Vorbis konwertować:\n$1",
+	"score-oggoverridenotfound": "Dataja \"<nowiki>$1</nowiki>\", kotruž sy z override_ogg podał, njeeksistuje.",
 	"score-page": "Strona $1",
 	"score-readerr": "Dataja $1 njeda so čitać.",
 	"score-versionerr": "Wersija LilyPond njeda so zwěsćić:\n$1"

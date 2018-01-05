@@ -14,6 +14,7 @@
 	"score-error-category-desc": "Hiba történt a kotta feldolgozása közben.",
 	"score-getcwderr": "Az aktuális munkakönyvtár lekérdezése sikertelen",
 	"score-invalidlang": "Érvénytelen kottanyelv: lang=\"<nowiki>$1</nowiki>\". Jelenleg a felismert nyelvek a következők: lang=\"lilypond\" (alapértelmezett) és lang=\"ABC\".",
+	"score-invalidoggoverride": "Az <code>override_ogg</code> attribútumban megadott „<nowiki>$1</nowiki>” fájl érvénytelen. Csak a fájlnevet add meg, <nowiki>[[…]]</nowiki> kód vagy „{{ns:file}}:” előtag nélkül.",
 	"score-midioverridenotfound": "Az <code>override_midi</code> attribútumban megadott „<nowiki>$1</nowiki>” fájl nem található. Csak a fájlnevet add meg, <nowiki>[[…]]</nowiki> kód vagy „{{ns:file}}:” előtag nélkül.",
 	"score-noabcinput": "A(z) $1 ABC-forrásfájl létrehozása sikertelen.",
 	"score-noimages": "Nem készültek kottaképek. Ellenőrizd a kottakódot.",
@@ -24,6 +25,7 @@
 	"score-notexecutable": "A LilyPond futtatása sikertelen: $1 nem egy végrehajtható fájl. Ellenőrizd, hogy a <code>$wgScoreLilyPond</code> változó jól van-e beállítva.",
 	"score-nocontent": "Nem sikerült betölteni a(z) $1 fájlt a szerverről.",
 	"score-oggconversionerr": "A MIDI átalakítása sikertelen Ogg/Vorbis formátumba:\n$1",
+	"score-oggoverridenotfound": "Az <code>override_ogg</code> attribútumban megadott „<nowiki>$1</nowiki>” fájl nem létezik.",
 	"score-page": "$1. oldal",
 	"score-pregreplaceerr": "A PCRE reguláris kifejezéses csere sikertelen",
 	"score-readerr": "A(z) $1 fájl olvasása sikertelen.",
@@ -42,5 +44,6 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Létező audiofájl neve (Ogg/Vorbis formátum)",
 	"score-visualeditor-mwscoreinspector-raw": "Ez egy teljes LilyPond-fájl",
 	"score-visualeditor-mwscoreinspector-title": "Kotta",
-	"score-visualeditor-mwscoreinspector-vorbis": "Audiofájl mellékelése (alapértelmezetten automatikusan generált)"
+	"score-visualeditor-mwscoreinspector-vorbis": "Audiofájl mellékelése (alapértelmezetten automatikusan generált)",
+	"score-vorbisoverrideogg": "Nem kérheted Ogg/Vorbis generálását, ha megadtad az <code>override_ogg</code> attribútumot."
 }

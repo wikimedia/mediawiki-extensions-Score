@@ -15,6 +15,7 @@
 	"score-error-category": "Halaman yang mempunyai ralat pemaparan skor",
 	"score-getcwderr": "Direktori berfungsi semasa tidak dapat diperoleh",
 	"score-invalidlang": "Bahasa skor lang=\"<nowiki>$1</nowiki>\" tidak sah. Bahasa-bahasa yang dikenali kini ialah lang=\"lilypond\" (asali) dan lang=\"ABC\".",
+	"score-invalidoggoverride": "Fail \"<nowiki>$1</nowiki>\" yang anda nyatakan dengan override_ogg tidak sah. Sila nyatakan nama fail sahaja, gugurkan <nowiki>[[…]]</nowiki> dan awalan \"{{ns:file}}:\".",
 	"score-midioverridenotfound": "Fail \"<nowiki>$1</nowiki>\" yang anda nyatakan dengan override_midi tidak dapat dijumpai. Sila nyatakan nama fail sahaja, gugurkan <nowiki>[[…]]</nowiki> dan awalan \"{{ns:file}}:\".",
 	"score-noabcinput": "Fail sumber ABC $1 tidak dapat diwujudkan.",
 	"score-noimages": "Tiada imej skor dihasilkan. Sila semak kod skor anda.",
@@ -25,11 +26,13 @@
 	"score-notexecutable": "LilyPond tidak dapat dilaksanakan: $1 bukan fail yang boleh dilaksanakan. Pastikan <code>$wgScoreLilyPond</code> diset dengan betul.",
 	"score-nocontent": "Fail $1 tidak dapat dimuatkan dari pelayan.",
 	"score-oggconversionerr": "MIDI tidak dapat ditukarkan kepada Ogg/Vorbis:\n$1",
+	"score-oggoverridenotfound": "Fail \"<nowiki>$1</nowiki>\" yang anda nyatakan dengan override_ogg tidak wujud.",
 	"score-page": "Halaman $1",
 	"score-pregreplaceerr": "Ungkapan nalar PCRE gagal digantikan",
 	"score-readerr": "Fail $1 tidak dapat dibaca.",
 	"score-timiditynotexecutable": "TiMidity++ tidak boleh dilaksanakan: $1 bukan fail yang boleh dilaksanakan. Pastikan <code>$wgScoreTimidity</code> diset dengan betul.",
 	"score-renameerr": "Ralat ketika memindahkan fail skor ke direktori muat naik.",
 	"score-trimerr": "Imej tidak dapat dirapikan:\n$1\nSetkan <code>$wgScoreTrim=false</code> jika masalah ini berterusan.",
-	"score-versionerr": "Versi LilyPond tidak dapat diperoleh:\n$1"
+	"score-versionerr": "Versi LilyPond tidak dapat diperoleh:\n$1",
+	"score-vorbisoverrideogg": "Anda tidak boleh memohon persembahan Ogg/Vorbis dan menyatakan override_ogg pada masa yang sama."
 }

@@ -19,6 +19,7 @@
 	"score-error-category-desc": "Ett fel uppstod under renderingen av partituret.",
 	"score-getcwderr": "Det gick inte att hämta den aktuella arbetskatalogen",
 	"score-invalidlang": "Ogiltigt partiturspråk lang=\"<nowiki>$1</nowiki>\". För närvarande accepterade språk är lang=\"lilypond\" (standard) och lang=\"ABC\".",
+	"score-invalidoggoverride": "Filen \"<nowiki>$1</nowiki>\" som du har angett med override_ogg är ogiltig. Vänligen ange endast filnamnet, utelämna <nowiki>[[…]]</nowiki> och prefixet \"{{ns:file}}:\".",
 	"score-midioverridenotfound": "Filen \"<nowiki>$1</nowiki>\" som du har angett med override_midi kunde inte hittas. Vänligen ange endast filnamnet, utelämna <nowiki>[[…]]</nowiki> och prefixet \"{{ns:file}}:\".",
 	"score-noabcinput": "ABC-källfilen $1 kunde inte skapas.",
 	"score-noimages": "Inga partiturbilder genererades. Kontrollera din partiturkod.",
@@ -29,6 +30,7 @@
 	"score-notexecutable": "Kunde inte köra LilyPond: $1 är inte en körbar fil. Kontrollera att <code>$wgScoreLilyPond</code> är korrekt inställd.",
 	"score-nocontent": "Kunde inte ladda filen $1 från servern.",
 	"score-oggconversionerr": "Det går inte att konvertera MIDI till Ogg/Vorbis:\n$1",
+	"score-oggoverridenotfound": "Filen \"<nowiki>$1</nowiki>\" du angett som override_ogg finns inte.",
 	"score-page": "Sida $1",
 	"score-pregreplaceerr": "Ersättning med PCRE reguljärt uttryck misslyckades",
 	"score-readerr": "Det gick inte att läsa filen $1.",
@@ -48,5 +50,6 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Namn på den befintliga ljudfilen (måste vara Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Detta är en komplett LilyPond-fil",
 	"score-visualeditor-mwscoreinspector-title": "Musiknotation",
-	"score-visualeditor-mwscoreinspector-vorbis": "Inkludera en ljudfil (genereras automatiskt som standard)"
+	"score-visualeditor-mwscoreinspector-vorbis": "Inkludera en ljudfil (genereras automatiskt som standard)",
+	"score-vorbisoverrideogg": "Du kan inte begära Ogg/Vorbis rendering och anger override_ogg på samma gång."
 }

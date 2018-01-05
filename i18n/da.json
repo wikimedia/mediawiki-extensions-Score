@@ -15,6 +15,7 @@
 	"score-error-category": "Sider med partiturvisningsfejl",
 	"score-getcwderr": "Kunne ikke bestemme navnet på den gældende arbejdsfolder",
 	"score-invalidlang": "lang=\"<nowiki>$1</nowiki>\" er et ugyldigt partitursprog. De sprog, der kan genkendes i øjeblikket, er lang=\"lilypond\" (standardværdien) og lang=\"ABC\".",
+	"score-invalidoggoverride": "Filen \"<nowiki>$1</nowiki>\", som du angav med override_ogg, er ugyldig. Angiv venligst kun filnavnet og udelad <nowiki>[[…]]</nowiki> og \"{{ns:file}}:\"-præfikset.",
 	"score-midioverridenotfound": "Kunne ikke finde filen \"<nowiki>$1</nowiki>\", som du angav med override_midi. Angiv venligst kun filnavnet og udelad <nowiki>[[…]]</nowiki> og \"{{ns:file}}:\"-præfikset.",
 	"score-noabcinput": "Kunne ikke oprette ABC-kildefilen $1.",
 	"score-noimages": "Ingen partiturbilleder blev dannet. Kontroller venligst om din kode er korrekt.",
@@ -25,11 +26,13 @@
 	"score-notexecutable": "Kunne ikke køre LilyPond: $1 er ikke en eksekverbar fil. Kontroller at <code>$wgScoreLilyPond</code> er sat korrekt.",
 	"score-nocontent": "Kunne ikke indlæse filen $1 fra serveren.",
 	"score-oggconversionerr": "Kunne ikke omdanne MIDI til Ogg/Vorbis:\n$1",
+	"score-oggoverridenotfound": "Filen \"<nowiki>$1</nowiki>\", som du angav med override_ogg, findes ikke.",
 	"score-page": "Side $1",
 	"score-pregreplaceerr": "Erstatning med PCRE regulært udtryk lykkedes ikke",
 	"score-readerr": "Kunne ikke læse filen $1.",
 	"score-timiditynotexecutable": "Kunne ikke køre TiMidity++: $1 er ikke en eksekverbar fil. Kontroller at <code>$wgScoreTimidity</code> er sat korrekt.",
 	"score-renameerr": "Der opstod en fejl under flytningen af partiturfiler til folderen for oplægning",
 	"score-trimerr": "Billedet kunne ikke beskæres:\n$1\nSæt $wgScoreTrim=false, hvis dette problem fortsætter.",
-	"score-versionerr": "Kunne ikke bestemme LilyPonds version:\n$1"
+	"score-versionerr": "Kunne ikke bestemme LilyPonds version:\n$1",
+	"score-vorbisoverrideogg": "Du kan ikke anmode om omdannelse til Ogg/Vorbis og bruge override_ogg samtidigt."
 }

@@ -19,6 +19,7 @@
 	"score-error-category-desc": "Сталася помилка під час візуалізації партитури.",
 	"score-getcwderr": "Не вдалося отримати поточний робочий каталог",
 	"score-invalidlang": "Невірна мова нот lang=\"<nowiki>$1</nowiki>\". В даний час визнаними мовами є lang=\"lilypond\" (типова) і lang=\"ABC\".",
+	"score-invalidoggoverride": "Невірний файл \"<nowiki>$1</nowiki>\", вказаний вами з  override_ogg. Будь ласка, вкажіть лише назву файлу, опустіть <nowiki>[[…]]</nowiki> та \"{{ns:file}}:\" префікс.",
 	"score-midioverridenotfound": "Не знайдено файл \"<nowiki>$1</nowiki>\", вказаний вами з  override_midi. Будь ласка, вкажіть лише назву файлу, опустіть <nowiki>[[…]]</nowiki> та \"{{ns:file}}:\".",
 	"score-noabcinput": "Вихідний ABC-файл $1 не вдалося створити.",
 	"score-noimages": "Не створено жодних нотних зображень. Будь ласка, перевірте ваш нотний код.",
@@ -29,6 +30,7 @@
 	"score-notexecutable": "Не вдалося виконати LilyPond:  $1  не є виконуваним файлом. Переконайтеся, що <code>$wgScoreLilyPond</code> правильно встановлено.",
 	"score-nocontent": "Не вдалося завантажити файл  $1  з сервера.",
 	"score-oggconversionerr": "Не можна перетворити MIDI Ogg/Vorbis:\n$1",
+	"score-oggoverridenotfound": "Файл \"<nowiki> $1 </nowiki>\", вказаний вами з override_ogg, не існує.",
 	"score-page": "Сторінка $1",
 	"score-pregreplaceerr": "Невдала заміна регулярного виразу PCRE",
 	"score-readerr": "Не можна прочитати файл  $1.",
@@ -48,5 +50,6 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Назва існуючого аудіофайлу (має бути Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Це — повний файл LilyPond",
 	"score-visualeditor-mwscoreinspector-title": "Нотний запис",
-	"score-visualeditor-mwscoreinspector-vorbis": "Включити аудіофайл (за замовчуванням генерується автоматично)"
+	"score-visualeditor-mwscoreinspector-vorbis": "Включити аудіофайл (за замовчуванням генерується автоматично)",
+	"score-vorbisoverrideogg": "Ви не можете запросити візуалізацію Ogg/Vorbis і вказати при цьому override_ogg."
 }

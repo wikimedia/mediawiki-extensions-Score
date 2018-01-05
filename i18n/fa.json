@@ -17,6 +17,7 @@
 	"score-error-category": "صفحه‌ها با خطاهای آهنگ",
 	"score-getcwderr": "قادر به به دست آوردن راهنمای کار فعلی نیست",
 	"score-invalidlang": "نمره زبان نامعتبر زبان=\"<nowiki>$1</nowiki>\". در حال حاضر زبانهای شناخته شده زبان=\"لیلی‌پوند\" (پیش‌فرض) و زبان=\"ای‌بی‌سی\" هستند.",
+	"score-invalidoggoverride": "پوشهٔ \"<nowiki>$1</nowiki>\" که شما با override_ogg مشخص کرده‌اید نامعتبر است.\nلطفاً فقط نام پوشه را مشخص کنید، <nowiki>[[…]]</nowiki> و پیش‌وند \"{{ns:file}}:\" را حذف کنید.",
 	"score-midioverridenotfound": "پوشهٔ \"<nowiki>$1</nowiki>\" که شما با override_midi مشخص کردید نتوانس پیدا شود. لطفاً فقط نام پوشه را مشخص کنید، <nowiki>[[…]]</nowiki> و پیش‌وند \"{{ns:file}}:\" را حذف کنید.",
 	"score-noabcinput": "منبع پوشهٔ  ای‌بی‌سی $1 نتوانست ایجاد شود.",
 	"score-noimages": "هیچ تصاویر نمره‌ای تولید نشد. لطفاً کد نمرهٔ خوذ را بررسی کنید.",
@@ -27,6 +28,7 @@
 	"score-notexecutable": "لیلی‌پوند نتوانست اجرا شود: $1 یک پوشه قابل اجرا نیست. وطمئن شوید <code>$wgScoreLilyPond</code> به درستی تنظیم شده‌است.",
 	"score-nocontent": "پوشهٔ $1 نتوانست از سرور بارگذاری شود.",
 	"score-oggconversionerr": "قادر به تبدیل ام‌آی‌دی به آگگ/وربیس نیست:\n$1",
+	"score-oggoverridenotfound": "پوشه \"<nowiki>$1</nowiki>\" که شما با override_ogg مشخص کردید، وجود ندارد.",
 	"score-page": "صفحهٔ $1",
 	"score-pregreplaceerr": "جایگزینی عبارت منظم پی‌سی‌آر‌ای انجام نشد",
 	"score-readerr": "قادر به خواندن پوشهٔ $1 نیست.",
@@ -36,5 +38,6 @@
 	"score-versionerr": "قادر به به دست آوردن نسخه لیلی‌پوند نیست:\n$1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "پیشرفته",
 	"score-visualeditor-mwscoreinspector-lang": "زبان",
-	"score-visualeditor-mwscoreinspector-title": "نت‌نویسی"
+	"score-visualeditor-mwscoreinspector-title": "نت‌نویسی",
+	"score-vorbisoverrideogg": "شما نمی توانید درخواست ارائه اُجی‌جی/وُربیس دهید و override_ogg را همزمان مشخص کنید."
 }

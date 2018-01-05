@@ -26,7 +26,7 @@
 	"score-error-category-desc": "Une erreur s'est produite lors du rendu de la partition.",
 	"score-getcwderr": "Impossible d’obtenir le répertoire de travail actuel",
 	"score-invalidlang": "Langage de partition invalide lang=\"<nowiki>$1</nowiki>\". Les langages actuellement reconnus sont lang=\"lilypond\" (par défaut) et lang=\"ABC\".",
-	"score-invalidaudiooverride": "Le fichier « <nowiki>$1</nowiki> » que vous avez spécifié avec override_audio n’est pas valide. Veuillez spécifier uniquement le nom du fichier, en omettant <nowiki>[[…]]</nowiki> et le préfixe « {{ns:file}}: ».",
+	"score-invalidoggoverride": "Le fichier « <nowiki>$1</nowiki> » que vous avez spécifié avec override_ogg n’est pas valide. Veuillez spécifier uniquement le nom du fichier, omettant <nowiki>[[…]]</nowiki> et le préfixe « {{ns:file}}: ».",
 	"score-midioverridenotfound": "Le fichier « <nowiki>$1</nowiki> » que vous avez spécifié avec override_midi est introuvable. Veuillez spécifier uniquement le nom du fichier, sans <nowiki>[[…]]</nowiki> ni le préfixe « {{ns:file}}: ».",
 	"score-noabcinput": "Le fichier source ABC $1 n'a pas pu être créé.",
 	"score-noimages": "Aucune image de résultat n'a été générée. Veuillez vérifier votre code de résultat.",
@@ -37,7 +37,7 @@
 	"score-notexecutable": "Impossible d’exécuter LilyPond: $1 n'est pas un fichier exécutable. Vérifiez que <code>$wgScoreLilyPond</code> est correctement configuré.",
 	"score-nocontent": "Impossible de charger le fichier $1 depuis le serveur.",
 	"score-oggconversionerr": "Impossible de convertir de MIDI en Ogg/Vorbis :\n$1",
-	"score-audiooverridenotfound": "Le fichier « <nowiki>$1</nowiki> » que vous avez spécifié avec override_audio n’existe pas.",
+	"score-oggoverridenotfound": "Le fichier « <nowiki>$1</nowiki> » que vous avez spécifié avec override_ogg n’existe pas.",
 	"score-page": "Page $1",
 	"score-pregreplaceerr": "Le remplacement de l'expression rationnelle PCRE a échoué",
 	"score-readerr": "Impossible de lire le fichier $1",
@@ -58,5 +58,5 @@
 	"score-visualeditor-mwscoreinspector-raw": "Interpréter comme fichier LilyPond complet",
 	"score-visualeditor-mwscoreinspector-title": "Notation musicale",
 	"score-visualeditor-mwscoreinspector-vorbis": "Inclure un fichier audio (généré automatiquement par défaut)",
-	"score-vorbisoverrideaudio": "Vous ne pouvez pas demander de rendu audio et spécifier override_audio en même temps."
+	"score-vorbisoverrideogg": "Vous ne peut pas demander de rendu de Ogg/Vorbis et spécifier override_ogg en même temps."
 }
