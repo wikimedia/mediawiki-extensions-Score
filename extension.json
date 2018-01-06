@@ -90,6 +90,7 @@
 		"ScoreFluidsynth": "/usr/bin/fluidsynth",
 		"ScoreSoundfont": "/usr/share/sounds/sf2/FluidR3_GM.sf2",
 		"ScoreTimidity": "/usr/bin/timidity",
+		"ScoreLame": "/usr/bin/lame",
 		"ScoreSafeMode": true,
 		"ScorePath": false,
 		"ScoreDirectory": false,

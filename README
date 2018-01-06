@@ -42,10 +42,11 @@ Setup
    $wgScoreAbc2Ly = '/path/to/your/abc2ly/executable'; /* if you want ABC to
                                                           LilyPond conversion */
    $wgScoreFluidsynth = '/path/to/your/fluidsynth/executable'; /* if you want MIDI to
-                                                                  Vorbis conversion */
+                                                                  MP3 conversion */
    $wgScoreSoundfont = '/path/to/your/soundfont/file'; /* required for Fluidsynth */
    $wgScoreTimidity = '/path/to/your/timidity/executable'; /* fallback when Fluidsynth
                                                               is not installed */
+   $wgScoreLame = '/path/to/your/lame/executable' /* required to convert sound */
    $wgScoreTrim = true; /* Set to false if you don't want score trimming */
    $wgScoreSafeMode = false; /* Set to true if the Lilypond executable is
                                 running in a Firejail or equivalent */
