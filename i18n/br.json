@@ -2,9 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Fohanno",
-			"Fulup"
+			"Fulup",
+			"Dishual"
 		]
 	},
+	"score-download-midi-file": "Pellkargañ ar restr MIDI",
+	"score-download-source-file": "Pellkargañ ar restr lilypond",
 	"score-nocontent": "N'eus ket bet gallet kargañ ar restr $1 diwar ar servijer.",
 	"score-page": "Pajenn $1",
 	"score-readerr": "Ne c'haller ket lenn ar restr $1."

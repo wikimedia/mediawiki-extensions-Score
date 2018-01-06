@@ -4,7 +4,8 @@
 			"Luckas",
 			"Dianakc",
 			"Almondega",
-			"Felipe L. Ewald"
+			"Felipe L. Ewald",
+			"Eduardo Addad de Oliveira"
 		]
 	},
 	"score-abc2lynotexecutable": "O conversor ABC para LilyPond não pode ser executado: executed: $1 não é um arquivo executável. Certifique-se que o <code>$wgScoreAbc2Ly</code> está configurado corretamente.",
@@ -14,11 +15,13 @@
 	"score-compilererr": "Não foi possível compilar o arquivo de entrada LilyPond:\n$1",
 	"score-backend-error": "Não é possível copiar os arquivos gerados para a sua localização final:\n$1",
 	"score-desc": "Adiciona uma tag para renderizar partituras musicais com LilyPond",
+	"score-download-midi-file": "Baixar arquivo MIDI",
+	"score-download-source-file": "Baixar o arquivo lilypond",
 	"score-error-category": "Páginas com erros de renderização de partitura",
 	"score-error-category-desc": "Ocorreu um erro ao processar a partitura.",
 	"score-getcwderr": "Não é possível obter o diretório de trabalho atual",
 	"score-invalidlang": "Linguagem de partitura inválida lang=\"<nowiki>$1</nowiki>\". As linguagens reconhecidas são lang=\"lilypond\" (a padrão) e lang=\"ABC\".",
-	"score-invalidoggoverride": "O arquivo \"<nowiki>$1</nowiki>\" que você especificou com override_ogg é inválido. Por favor, especifique apenas o nome do arquivo, omita <nowiki>[[…]]</nowiki> e o prefixo \"{{ns:file}}:\".",
+	"score-invalidaudiooverride": "O arquivo \"<nowiki>$1</nowiki>\" que especificou com override_audio é inválido. Especifique unicamente o nome do arquivo, por favor, omitindo <nowiki>[[…]]</nowiki> e o prefixo \"{{ns:file}}:\".",
 	"score-midioverridenotfound": "O arquivo \"<nowiki>$1</nowiki>\" que você especificou com override_midi não pode ser encontrado. Por favor, especifique apenas o nome do arquivo, omita <nowiki>[[…]]</nowiki> e o prefixo\"{{ns:file}}:\".",
 	"score-noabcinput": "O arquivo de fonte ABC $1 não pode ser criado.",
 	"score-noimages": "Nenhuma imagem de partitura foi gerada. Por favor, verifique o código da partitura.",
@@ -29,7 +32,6 @@
 	"score-notexecutable": "Não foi possível executar o LilyPond: $1 não é um arquivo executável. Certifique-se que o <code>$wgScoreLilyPond</code> está configurado corretamente.",
 	"score-nocontent": "Não foi possível carregar o arquivo $1 do servidor.",
 	"score-oggconversionerr": "Não foi possível convertet MIDI para Ogg/Vorbis:\n$1",
-	"score-oggoverridenotfound": "O arquivo \"<nowiki>$1</nowiki>\" que você especificou com override_ogg não existe.",
 	"score-page": "Página $1",
 	"score-pregreplaceerr": "A substituição de expressão regular PCRE falhou",
 	"score-readerr": "Não foi possível ler o arquivo $1.",
@@ -39,12 +41,11 @@
 	"score-versionerr": "Não foi possível obter a versão do LilyPond:\n$1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Avançado",
 	"score-visualeditor-mwscoreinspector-card-audio": "Áudio",
-	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-card-notation": "Notação",
 	"score-visualeditor-mwscoreinspector-lang": "Idioma",
 	"score-visualeditor-mwscoreinspector-lang-abc": "ABC",
 	"score-visualeditor-mwscoreinspector-lang-lilypond": "LilyPond",
-	"score-visualeditor-mwscoreinspector-midi": "Uma ligação para um arquivo MIDI (autogerado por padrão)",
+	"score-visualeditor-mwscoreinspector-notelanguage": "Linguagem de notação",
 	"score-visualeditor-mwscoreinspector-override-midi": "Use um arquivo MIDI existente",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Nome de arquivo MIDI existente",
 	"score-visualeditor-mwscoreinspector-override-ogg": "Use um arquivo de som existente",
@@ -52,5 +53,5 @@
 	"score-visualeditor-mwscoreinspector-raw": "Este é um arquivo LilyPond completo",
 	"score-visualeditor-mwscoreinspector-title": "Notação musical",
 	"score-visualeditor-mwscoreinspector-vorbis": "Incluir um arquivo de som (autogerado por padrão)",
-	"score-vorbisoverrideogg": "Você não pode solicitar a renderização de Ogg/Vorbis e especificar override_ogg ao mesmo tempo."
+	"score-vorbisoverrideaudio": "Não pode pedir a geração de áudio e especificar override_audio ao mesmo tempo."
 }

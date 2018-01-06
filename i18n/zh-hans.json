@@ -24,7 +24,7 @@
 	"score-error-category-desc": "生成乐谱时出错。",
 	"score-getcwderr": "无法获取当前工作目录",
 	"score-invalidlang": "lang=\"<nowiki>$1</nowiki>\"为不合法的score语言赋值。正确可用的赋值有lang=\"lilypond\" (默认的) 和lang=\"ABC\".",
-	"score-invalidoggoverride": "您用override_ogg指定的文件“<nowiki>$1</nowiki>”无效。请仅用override_ogg指定文件名，去掉<nowiki>[[…]]</nowiki>与“{{ns:file}}:”。",
+	"score-invalidaudiooverride": "您用override_audio指定的文件“<nowiki>$1</nowiki>”无效。请只指定文件名，去掉<nowiki>[[…]]</nowiki>与“{{ns:file}}:”前缀。",
 	"score-midioverridenotfound": "您用override_midi指定的文件“<nowiki>$1</nowiki>”无效。请仅用override_midi指定文件名，去掉<nowiki>[[…]]</nowiki>与“{{ns:file}}:”。",
 	"score-noabcinput": "ABC源文件 $1 无法创建。",
 	"score-noimages": "没有乐谱图像生成。请检查您的乐谱代码。",
@@ -35,7 +35,7 @@
 	"score-notexecutable": "LilyPond不能执行：$1不是可执行文件。请确认<code>$wgScoreLilyPond</code>设置正确。",
 	"score-nocontent": "无法从服务器加载文件$1。",
 	"score-oggconversionerr": "无法将 MIDI 转换为 Ogg/Vorbis：\n$1",
-	"score-oggoverridenotfound": "您用override_ogg指定的文件“<nowiki>$1</nowiki>”不存在。",
+	"score-audiooverridenotfound": "您用override_audio指定的文件“<nowiki>$1</nowiki>”不存在。",
 	"score-page": "页面$1",
 	"score-pregreplaceerr": "PCRE 正则表达式替换失败",
 	"score-readerr": "无法读取文件$1。",
@@ -45,10 +45,8 @@
 	"score-versionerr": "无法获取 LilyPond 版本：\n$1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "高级",
 	"score-visualeditor-mwscoreinspector-card-audio": "声音",
-	"score-visualeditor-mwscoreinspector-card-midi": "MIDI",
 	"score-visualeditor-mwscoreinspector-card-notation": "符号",
 	"score-visualeditor-mwscoreinspector-lang": "语言",
-	"score-visualeditor-mwscoreinspector-midi": "至MIDI文件的链接（默认自动生成）",
 	"score-visualeditor-mwscoreinspector-override-midi": "使用现有MIDI文件",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "现有的MIDI文件名",
 	"score-visualeditor-mwscoreinspector-override-ogg": "使用一个现有音频文件",
@@ -56,5 +54,5 @@
 	"score-visualeditor-mwscoreinspector-raw": "有完整的LilyPond文件",
 	"score-visualeditor-mwscoreinspector-title": "音乐符号",
 	"score-visualeditor-mwscoreinspector-vorbis": "包含一个音频文件（默认自动生成）",
-	"score-vorbisoverrideogg": "您不能要求Ogg/Vorbis成像时指定override_ogg。"
+	"score-vorbisoverrideaudio": "您不能在请求音频渲染的同时指定override_audio。"
 }
