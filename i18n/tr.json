@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"McAang"
+			"McAang",
+			"Hedda"
 		]
 	},
+	"score-download-midi-file": "MIDI dosyasını yükleyin",
+	"score-visualeditor-mwscoreinspector-notelanguage": "Gösterim Dili",
 	"score-visualeditor-mwscoreinspector-title": "Müziksel gösterim"
 }
