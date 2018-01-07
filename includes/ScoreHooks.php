@@ -34,7 +34,10 @@ class ScoreHooks {
 	 */
 	public static function onBeforePageDisplay( OutputPage &$output, Skin &$skin ) {
 		$output->addJsConfigVars( [
-			'wgScoreNoteLanguages' => Score::$supportedNoteLanguages,
+			'wgScoreNoteLanguages' => array_map(
+				'Language::fetchLanguageName',
+				Score::$supportedNoteLanguages
+			),
 			'wgScoreDefaultNoteLanguage' => Score::$defaultNoteLanguage,
 		] );
 		return true;

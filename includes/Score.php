@@ -46,21 +46,21 @@ class Score {
 
 	/**
 	 * Supported note languages.
-	 * Key is LilyPond filename. Value is native word
+	 * Key is LilyPond filename. Value is language code
 	 */
 	public static $supportedNoteLanguages = [
-		'arabic' => 'العربية',
-		'catalan' => 'Català',
-		'deutsch' => 'Deutsch',
-		'english' => 'English',
-		'espanol' => 'Español',
-		'italiano' => 'Italiano',
-		'nederlands' => 'Nederlands',
-		'norsk' => 'Norsk',
-		'portugues' => 'Português',
-		'suomi' => 'Suomi',
-		'svenska' => 'Svenska',
-		'vlaams' => 'Flemish',
+		'arabic' => 'ar',
+		'catalan' => 'ca',
+		'deutsch' => 'de',
+		'english' => 'en',
+		'espanol' => 'es',
+		'italiano' => 'it',
+		'nederlands' => 'nl',
+		'norsk' => 'no',
+		'portugues' => 'pt',
+		'suomi' => 'fi',
+		'svenska' => 'sv',
+		'vlaams' => 'vls',
 	];
 
 	/**
