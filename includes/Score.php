@@ -511,6 +511,14 @@ class Score {
 					'width' => self::DEFAULT_PLAYER_WIDTH
 				] );
 				$link .= $player->toHtml();
+
+				// This is a hack for T148716 to load the TMH frontend
+				// which we're sort of side-using here. In the future,
+				// we should use a clean standard interface for this.
+				$tmh = new TimedMediaHandler();
+				if ( method_exists( $tmh, 'parserTransformHook' ) ) {
+					$tmh->parserTransformHook( $parser, null );
+				}
 			}
 			if ( $options['override_audio'] !== false ) {
 				$link .= $parser->recursiveTagParse( "[[File:{$options['audio_name']}]]" );
