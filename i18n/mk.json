@@ -28,7 +28,6 @@
 	"score-page": "Страница $1",
 	"score-pregreplaceerr": "Не успеа замената на регуларниот израз PCRE",
 	"score-readerr": "Не можам да ја прочитам податотеката $1",
-	"score-timiditynotexecutable": "TiMidity++ не може да се изврши: $1 не е извршна податотека. Проверете дали <code>$wgScoreTimidity</code> е правилно зададено.",
 	"score-renameerr": "Грешка при преместувањето на партитурните податотеки во директориумот за подигања",
 	"score-trimerr": "Не можев да ја скастрам сликата. \n$1\nАко проблемот продолжи да се јавува, задајте <code>$wgScoreTrim=false</code>.",
 	"score-versionerr": "Не можам да ја добијам верзијата на LilyPond.\n$1",

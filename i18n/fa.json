@@ -30,7 +30,6 @@
 	"score-page": "صفحهٔ $1",
 	"score-pregreplaceerr": "جایگزینی عبارت منظم پی‌سی‌آر‌ای انجام نشد",
 	"score-readerr": "قادر به خواندن پوشهٔ $1 نیست.",
-	"score-timiditynotexecutable": "تای‌میدیتی++ نتوانست اجرا شود:‌ $1 یک پوشه قابل اجرا نیست. مطمئن شوید <code>$wgScoreTimidity</code> به درستی تنظیم شده‌است.",
 	"score-renameerr": "خطا در انتقال پوشه‌های نمره به انتقال راهنما.",
 	"score-trimerr": "تصویر نتوانست کوچک شود:\n$1\nتنظیم <code>$wgScoreTrim=false</code> اگر این مشکل ادامه یابد.",
 	"score-versionerr": "قادر به به دست آوردن نسخه لیلی‌پوند نیست:\n$1",

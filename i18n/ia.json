@@ -26,7 +26,6 @@
 	"score-page": "Pagina $1",
 	"score-pregreplaceerr": "Le reimplaciamento del expression regular PCRE ha fallite",
 	"score-readerr": "Impossibile leger le file $1.",
-	"score-timiditynotexecutable": "TiMidity++ non poteva esser executate: $1 non es un file executabile. Assecura te que <code>$wgScoreTimidity</code> es definite correctemente.",
 	"score-renameerr": "Error durante le displaciamento de files de partitura al directorio de incargamento.",
 	"score-trimerr": "Le imagine non poteva esser taliate:\n$1\nDefini <code>$wgScoreTrim=false</code> si iste problema persiste.",
 	"score-versionerr": "Impossibile obtener le version de LilyPond:\n$1"

@@ -28,7 +28,6 @@
 	"score-page": "Halaman $1",
 	"score-pregreplaceerr": "Ungkapan nalar PCRE gagal digantikan",
 	"score-readerr": "Fail $1 tidak dapat dibaca.",
-	"score-timiditynotexecutable": "TiMidity++ tidak boleh dilaksanakan: $1 bukan fail yang boleh dilaksanakan. Pastikan <code>$wgScoreTimidity</code> diset dengan betul.",
 	"score-renameerr": "Ralat ketika memindahkan fail skor ke direktori muat naik.",
 	"score-trimerr": "Imej tidak dapat dirapikan:\n$1\nSetkan <code>$wgScoreTrim=false</code> jika masalah ini berterusan.",
 	"score-versionerr": "Versi LilyPond tidak dapat diperoleh:\n$1"

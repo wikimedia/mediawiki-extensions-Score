@@ -32,7 +32,6 @@
 	"score-page": "第 $1 頁",
 	"score-pregreplaceerr": "PCRE 正規表示法取代失敗",
 	"score-readerr": "無法讀取檔案 $1。",
-	"score-timiditynotexecutable": "TiMidity++ 無法執行：$1 不是一個可執行檔，請確定 <code>$wgScoreTimidity</code> 已設定正確。",
 	"score-renameerr": "將樂譜檔移至上傳目錄錯誤。",
 	"score-trimerr": "無法裁切圖片：\n$1\n若問題仍持續存在，請設定 <code>$wgScoreTrim=false</code>。",
 	"score-versionerr": "無法取得 LilyPond 版本：\n$1",

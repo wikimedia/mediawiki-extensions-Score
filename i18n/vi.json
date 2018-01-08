@@ -28,7 +28,6 @@
 	"score-page": "Trang $1",
 	"score-pregreplaceerr": "Thất bại trong việc thay thế theo biểu thưc chính quy PCRE",
 	"score-readerr": "Không thể đọc tập tin $1.",
-	"score-timiditynotexecutable": "Không thể thực thi TiMidity++: $1 không phải là một tập tin thực thi. Hãy chắc chắn rằng <code>$wgScoreTimidity</code> có giá trị chính xác.",
 	"score-renameerr": "Lỗi khi di chuyển các tập tin tài liệu âm nhạc sang thư mục tải lên.",
 	"score-trimerr": "Không thể tỉa hình:\n$1\nNếu vấn đề này vẫn còn xuất hiện, hãy đặt <code>$wgScoreTrim=false</code>.",
 	"score-versionerr": "Không thể lấy phiên bản của LilyPond:\n$1",

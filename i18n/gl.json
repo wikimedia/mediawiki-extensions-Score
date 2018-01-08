@@ -32,7 +32,6 @@
 	"score-page": "Páxina $1",
 	"score-pregreplaceerr": "Fallou a substitución da expresión regular PCRE",
 	"score-readerr": "Non se puido ler o ficheiro \"$1\".",
-	"score-timiditynotexecutable": "Non se puido executar o TiMidity++: \"$1\" non é un ficheiro executable. Asegúrese de que <code>$wgScoreTimidity</code> está definido correctamente.",
 	"score-renameerr": "Erro ao mover os ficheiros das partituras ao directorio de cargas.",
 	"score-trimerr": "Non se puido axustar a imaxe:\n$1\nDefina <code>$wgScoreTrim=false</code> se o problema persiste.",
 	"score-versionerr": "Non se puido obter a versión do LilyPond:\n$1",

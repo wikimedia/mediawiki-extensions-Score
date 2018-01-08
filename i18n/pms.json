@@ -26,7 +26,6 @@
 	"score-page": "Pàgina $1",
 	"score-pregreplaceerr": "Falì ël rimpiassament ëd l'espression regolar PCRE",
 	"score-readerr": "As peul pa les-se l'archivi $1.",
-	"score-timiditynotexecutable": "As peul pa eseguisse TiMidity++: $1 a l'é pa n'archivi eseguìbil. Sigurte che <code>$wgScoreTimidity</code> a sia ampostà giust.",
 	"score-renameerr": "Eror durant ël tramud ëj'archivi ëd mùsica al dossié ëd caria.",
 	"score-trimerr": "As peul pa artajesse la figura:\n$1\nCh'a ampòsta <code>$wgScoreTrim=false</code> se 's problema a përsist.",
 	"score-versionerr": "As peul pa otense la version ëd LilyPond:\n$1"

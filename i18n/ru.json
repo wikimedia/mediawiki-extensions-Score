@@ -30,7 +30,6 @@
 	"score-page": "Страница $1",
 	"score-pregreplaceerr": "Замена регулярных выражений PCRE не удалось",
 	"score-readerr": "Не удаётся прочитать файл $1.",
-	"score-timiditynotexecutable": "Невозможно запустить TiMidity++: $1 — не исполняемый файл. Убедитесь, что <code>$wgScoreTimidity</code> установлен правильно.",
 	"score-renameerr": "Ошибка при перемещении файлов партитур в каталог загрузки.",
 	"score-trimerr": "Изображение не может быть обрезано:\n$1\nУстановите <code>$wgScoreTrim=false</code>, если эта проблема сохранится.",
 	"score-versionerr": "Не удаётся получить версию LilyPond:\n$1",

@@ -24,7 +24,6 @@
 	"score-page": "Pahinang $1",
 	"score-pregreplaceerr": "Nabigo ang pagpapalit ng karaniwang pagsasaad ng PCRE",
 	"score-readerr": "Hindi nagawang basahin ang talaksang $1.",
-	"score-timiditynotexecutable": "Hindi maisakatuparan ang TiMidity++: Ang $1 ay hindi isang talaksang maisasakatuparan. Tiyakin na nakatakda nang tama ang <code>$wgScoreTimidity</code>.",
 	"score-renameerr": "Kamalian sa paglilipat ng mga talaksan ng puntos papunta sa direktoryo ng pagkakargang papaitaas.",
 	"score-trimerr": "Hindi magupitan ang imahe:\n$1\nItakda ang <code>$wgScoreTrim=false</code> kapag nagtagal ang suliraning ito.",
 	"score-versionerr": "Hindi nagawang makamtan ang bersiyon ng LilyPond: $1"

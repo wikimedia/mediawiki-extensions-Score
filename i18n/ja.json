@@ -30,7 +30,6 @@
 	"score-page": "ページ $1",
 	"score-pregreplaceerr": "PCRE 正規表現置換に失敗しました",
 	"score-readerr": "ファイル $1 から読み取れません。",
-	"score-timiditynotexecutable": "TiMidity++ を実行できませんでした: $1 は実行可能ファイルではありません。<code>$wgScoreTimidity</code> が正しく設定されているか確認してください。",
 	"score-renameerr": "楽譜ファイルをアップロードディレクトリに移動する際にエラーが発生しました。",
 	"score-trimerr": "画像をトリミングできませんでした:\n$1\nこの問題が続く場合は、<code>$wgScoreTrim=false</code> を設定してください。",
 	"score-versionerr": "LilyPond のバージョンを取得できません:\n$1",

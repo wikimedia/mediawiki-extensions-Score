@@ -27,7 +27,6 @@
 	"score-page": "$1. oldal",
 	"score-pregreplaceerr": "A PCRE reguláris kifejezéses csere sikertelen",
 	"score-readerr": "A(z) $1 fájl olvasása sikertelen.",
-	"score-timiditynotexecutable": "A TiMidity++ futtatása sikertelen: $1 nem egy végrehajtható fájl. Ellenőrizd, hogy a <code>$wgScoreTimidity</code> változó jól van-e beállítva.",
 	"score-renameerr": "Hiba a kottafájlok feltöltési könyvtárba mozgatásakor.",
 	"score-versionerr": "A LilyPond-verzió lekérése sikertelen:\n$1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Haladó",

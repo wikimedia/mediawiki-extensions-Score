@@ -28,7 +28,6 @@
 	"score-page": "Strana $1",
 	"score-pregreplaceerr": "Chyba při náhradě pomocí regulárního výrazu PCRE",
 	"score-readerr": "Nepodařilo se přečíst soubor $1.",
-	"score-timiditynotexecutable": "Nepodařilo se spustit TiMidity++: $1 není spustitelný soubor. Ověřte, že máte správně nastaveno <code>$wgScoreTimidity</code>.",
 	"score-renameerr": "Chyba při přesouvání souborů partitury do adresáře pro načtené soubory.",
 	"score-trimerr": "Obrázek se nepodařilo oříznout:\n$1\nPokud problém přetrvává, nastavte <code>$wgScoreTrim=false</code>.",
 	"score-versionerr": "Nepodařilo se zjistit verzi programu LilyPond:\n$1",

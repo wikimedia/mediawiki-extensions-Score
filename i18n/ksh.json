@@ -28,7 +28,6 @@
 	"score-page": "Sigg $1",
 	"score-pregreplaceerr": "Ene Tuusch med enem rejolähre Ußdrok vun dä Zoot <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"Perl Compatible Regular Expressions\">PCRE</i> hät nit jeflupp.",
 	"score-readerr": "Mer kunnte di Dattei $1 nit lässe.",
-	"score-timiditynotexecutable": "<i xml:lang=\"en\" lang=\"en\" dir=\"ltr\">TiMidity++</i> kunnt nit ußjeföhrt wähde: <code>$1</code> es kein ußföhrbaa Dattei med enem Projramm dren. Bes sescher, dat <code xml:lang=\"en\" lang=\"en\" dir=\"ltr\">$wgScoreTimidity</code> reschtesch jesaz es.",
 	"score-renameerr": "Ene Fähler es opjetrodde, wi mer Datteije met Pattituhre med Mussik övver en et Verzeijschneß zum Huhlahde donn wullte.",
 	"score-trimerr": "Dat Beld kunnt nit beschnedde wähde:\n$1\nDonn <code xml:lang=\"en\" lang=\"en\" dir=\"ltr\">$wgScoreTrim=false</code> säze, wann dat Problem beschtonn bliht.",
 	"score-versionerr": "Mer kunnte de Projrammväsjohn vum <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"LilyPond\">LilyPond</i> nidd erus fenge:\n$1",

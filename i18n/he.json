@@ -30,7 +30,6 @@
 	"score-page": "עמוד $1",
 	"score-pregreplaceerr": "החלפה ביטויים רגולריים עם PCRE נכשלה",
 	"score-readerr": "לא ניתן לקרוא את הקובץ $1.",
-	"score-timiditynotexecutable": "לא ניתן להריץ את <span dir=\"ltr\">TiMidity++</span>: הקובץ $1 אינו בר־הרצה. נא לוודא שנמשתנה <code>$wgScoreLilyPond</code> מוגדר נכון.",
 	"score-renameerr": "שגיאה בהעברת קובצי תווים לתיקיית ההעלאה.",
 	"score-trimerr": "לא ניתן לקצץ את התמונה:\n$1\nיש להגדיר <code dir=\"ltr\">$wgScoreTrim=false</code> אם הבעיה ממשיכה.",
 	"score-versionerr": "לא ניתן לקבל את גרסת LilyPond:\n$1",

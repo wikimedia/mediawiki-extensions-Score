@@ -32,7 +32,6 @@
 	"score-page": "Сторінка $1",
 	"score-pregreplaceerr": "Невдала заміна регулярного виразу PCRE",
 	"score-readerr": "Не можна прочитати файл  $1.",
-	"score-timiditynotexecutable": "TiMidity++ не може бути виконаним: $1 не є виконуваним файлом. Переконайтеся, що <code>$wgScoreTimidity</code> задано вірно.",
 	"score-renameerr": "Помилка переміщення нотних файлів у каталог вивантаження",
 	"score-trimerr": "Зображення не може бути урізаним:\n$1\nЗадайте <code>$wgScoreTrim=false</code>, якщо ця проблема зберігається.",
 	"score-versionerr": "Не вдалося отримати версію LilyPond:\n$1",

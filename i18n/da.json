@@ -28,7 +28,6 @@
 	"score-page": "Side $1",
 	"score-pregreplaceerr": "Erstatning med PCRE regulært udtryk lykkedes ikke",
 	"score-readerr": "Kunne ikke læse filen $1.",
-	"score-timiditynotexecutable": "Kunne ikke køre TiMidity++: $1 er ikke en eksekverbar fil. Kontroller at <code>$wgScoreTimidity</code> er sat korrekt.",
 	"score-renameerr": "Der opstod en fejl under flytningen af partiturfiler til folderen for oplægning",
 	"score-trimerr": "Billedet kunne ikke beskæres:\n$1\nSæt $wgScoreTrim=false, hvis dette problem fortsætter.",
 	"score-versionerr": "Kunne ikke bestemme LilyPonds version:\n$1"

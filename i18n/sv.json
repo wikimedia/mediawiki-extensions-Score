@@ -32,7 +32,6 @@
 	"score-page": "Sida $1",
 	"score-pregreplaceerr": "Ersättning med PCRE reguljärt uttryck misslyckades",
 	"score-readerr": "Det gick inte att läsa filen $1.",
-	"score-timiditynotexecutable": "TiMidity++ kunde inte köras: $1 är inte en körbar fil. Kontrollera att <code>$wgScoreTimidity</code> är korrekt inställd.",
 	"score-renameerr": "Fel vid flytt av partiturfiler till upladdningskatalogen.",
 	"score-trimerr": "Bilden kunde inte trimmas:\n$1\nAnge <code>$wgScoreTrim=false</code> om problemet kvarstår.",
 	"score-versionerr": "Det gick inte att hämta LilyPond version:\n$1",

@@ -34,7 +34,6 @@
 	"score-page": "Pagina $1",
 	"score-pregreplaceerr": "Vervangen met behulp van een PCRE reguliere expressie is mislukt",
 	"score-readerr": "Het bestand $1 kan niet gelezen worden.",
-	"score-timiditynotexecutable": "TiMidity++ kon niet uitgevoerd worden: $1 is geen uitvoerbaar bestand. Zorg dat de instelling <code>$wgScoreTimidity</code> correct is.",
 	"score-renameerr": "Er is een fout opgetreden tijdens het verplaatsen van de bladmuziekbestanden naar de uploadmap",
 	"score-trimerr": "De afbeelding kon niet bijgesneden worden:\n$1\nStel de volgende waarde in als dit probleem blijft bestaan: <code>$wgScoreTrim=false</code>.",
 	"score-versionerr": "Het was niet mogelijk de LiliPond-versie te achterhalen:\n$1",

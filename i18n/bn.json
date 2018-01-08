@@ -31,7 +31,6 @@
 	"score-page": "পাতা $1",
 	"score-pregreplaceerr": "PCRE রেগুলার এক্সপ্রেশন প্রতিস্থাপন ব্যর্থ হয়েছে",
 	"score-readerr": "$1 ফাইল পড়তে অক্ষম।",
-	"score-timiditynotexecutable": "TiMidity++ কার্যকর করা যায়নি: $1 কার্যকর করার যোগ্য ফাইল নয়। নিশ্চিত করুন <code>$wgScoreTimidity</code> সঠিকভাবে নির্ধারণ করা হয়েছে।",
 	"score-renameerr": "আপলোড নির্দেশিকায় স্কোর ফাইল স্থানান্তর ত্রুটি।",
 	"score-trimerr": "চিত্র ছাঁটা যায়নি:\n$1\nযদি এই সমস্যাটি থেকে যায় তাহলে <code>$wgScoreTrim=false</code> নির্ধারণ করুন।",
 	"score-versionerr": "LilyPond সংস্করণ লাভ করা যায়নি:\n$1",
