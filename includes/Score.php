@@ -428,6 +428,10 @@ class Score {
 					!isset( $existingFiles[$imageFileName] )
 					&& !isset( $existingFiles[$multi1FileName] )
 				)
+				|| (
+					!isset( $metaData[$imageFileName]['size'] )
+					&& !isset( $metaData[$multi1FileName]['size'] )
+				)
 				|| !isset( $existingFiles[$midiFileName] ) ) {
 				$existingFiles += self::generatePngAndMidi( $code, $options, $metaData );
 			}
