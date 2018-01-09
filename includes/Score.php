@@ -219,7 +219,7 @@ class Score {
 	 * @return string Image link HTML, and possibly anchor to MIDI file.
 	 */
 	public static function render( $code, array $args, Parser $parser, PPFrame $frame ) {
-		global $wgTmpDirectory;
+		global $wgTmpDirectory, $wgScoreLame;
 
 		try {
 			$baseUrl = self::getBaseUrl();
@@ -242,6 +242,9 @@ class Score {
 					htmlspecialchars( $options['lang'] ) ) );
 			}
 
+			// Set extension for audio output
+			$options['audio_extension'] = is_executable( $wgScoreLame ) ? 'mp3' : 'ogg';
+
 			/* Override MIDI file? */
 			if ( array_key_exists( 'override_midi', $args ) ) {
 				$file = wfFindFile( $args['override_midi'] );
@@ -252,13 +255,13 @@ class Score {
 				$parser->getOutput()->addImage( $file->getName() );
 				$options['override_midi'] = true;
 				$options['midi_file'] = $file;
-				/* Set OGG stuff in case Vorbis rendering is requested */
+				/* Set output stuff in case audio rendering is requested */
 				$sha1 = $file->getSha1();
-				$oggRelDir = "override-midi/{$sha1[0]}/{$sha1[1]}";
-				$oggRel = "$oggRelDir/$sha1.ogg";
-				$options['audio_storage_dir'] = "$baseStoragePath/$oggRelDir";
-				$options['audio_storage_path'] = "$baseStoragePath/$oggRel";
-				$options['audio_url'] = "$baseUrl/$oggRel";
+				$audioRelDir = "override-midi/{$sha1[0]}/{$sha1[1]}";
+				$audioRel = "$audioRelDir/$sha1.{$options['audio_extension']}";
+				$options['audio_storage_dir'] = "$baseStoragePath/$audioRelDir";
+				$options['audio_storage_path'] = "$baseStoragePath/$audioRel";
+				$options['audio_url'] = "$baseUrl/$audioRel";
 			} else {
 				$options['override_midi'] = false;
 			}
@@ -307,16 +310,16 @@ class Score {
 			}
 
 			/* Audio rendering? */
-			$options['generate_ogg'] = array_key_exists( 'sound', $args )
+			$options['generate_audio'] = array_key_exists( 'sound', $args )
 				|| array_key_exists( 'vorbis', $args );
 
-			if ( $options['generate_ogg']
+			if ( $options['generate_audio']
 				&& !class_exists( 'TimedMediaTransformOutput' )
 			) {
 				throw new ScoreException( wfMessage( 'score-nomediahandler' ) );
 			}
-			if ( $options['generate_ogg'] && ( $options['override_audio'] !== false ) ) {
-				throw new ScoreException( wfMessage( 'score-vorbisoverrideaudio' ) );
+			if ( $options['generate_audio'] && ( $options['override_audio'] !== false ) ) {
+				throw new ScoreException( wfMessage( 'score-convertoverrideaudio' ) );
 			}
 
 			// Input for cache key
@@ -361,7 +364,7 @@ class Score {
 	 * 	- factory_directory: string Path to directory in which files
 	 * 		may be generated without stepping on someone else's
 	 * 		toes. The directory may not exist yet. Required.
-	 * 	- generate_ogg: bool Whether to create an Ogg/Vorbis file in
+	 * 	- generate_audio: bool Whether to create an audio file in
 	 * 		TimedMediaHandler. If set to true, the override_audio option
 	 * 		must be set to false. Required.
 	 *  - dest_storage_path: The path of the destination directory relative to
@@ -373,15 +376,17 @@ class Score {
 	 * 	- override_midi: bool Whether to use a user-provided MIDI file.
 	 * 		Required.
 	 * 	- midi_file: If override_midi is true, MIDI file object.
-	 * 	- audio_storage_dir: If override_midi and generate_ogg are true, the
+	 * 	- audio_extension: string If override_midi and generate_audio are true,
+	 * 		the audio output format in which the audio file is to be generated.
+	 * 	- audio_storage_dir: If override_midi and generate_audio are true, the
 	 * 		backend directory in which the audio file is to be stored.
-	 * 	- audio_storage_path: string If override_midi and generate_ogg are true,
+	 * 	- audio_storage_path: string If override_midi and generate_audio are true,
 	 * 		the backend path at which the generated audio file is to be
 	 * 		stored.
-	 * 	- audio_url: string If override_midi and generate_ogg is true,
+	 * 	- audio_url: string If override_midi and generate_audio is true,
 	 * 		the URL corresponding to audio_storage_path
 	 * 	- override_audio: bool Whether to generate a wikilink to a
-	 * 		user-provided audio file. If set to true, the vorbis
+	 * 		user-provided audio file. If set to true, the sound
 	 * 		option must be set to false. Required.
 	 * 	- audio_name: string If override_audio is true, the audio file name
 	 * 	- raw: bool Whether to assume raw LilyPond code. Ignored if the
@@ -436,24 +441,24 @@ class Score {
 				$existingFiles += self::generatePngAndMidi( $code, $options, $metaData );
 			}
 
-			/* Generate Ogg/Vorbis file if necessary */
-			if ( $options['generate_ogg'] ) {
+			/* Generate audio file if necessary */
+			if ( $options['generate_audio'] ) {
 				if ( $options['override_midi'] ) {
-					$oggUrl = $options['audio_url'];
-					$oggPath = $options['audio_storage_path'];
+					$audioUrl = $options['audio_url'];
+					$audioPath = $options['audio_storage_path'];
 					$exists = $backend->fileExists( [ 'src' => $options['audio_storage_path'] ] );
 					if ( !$exists ) {
 						$backend->prepare( [ 'dir' => $options['audio_storage_dir'] ] );
 						$sourcePath = $options['midi_file']->getLocalRefPath();
-						self::generateOgg( $sourcePath, $options, $oggPath, $metaData );
+						self::generateAudio( $sourcePath, $options, $audioPath, $metaData );
 					}
 				} else {
-					$oggFileName = "{$options['file_name_prefix']}.ogg";
-					$oggUrl = "{$options['dest_url']}/$oggFileName";
-					$oggPath = "{$options['dest_storage_path']}/$oggFileName";
+					$audioFileName = "{$options['file_name_prefix']}.{$options['audio_extension']}";
+					$audioUrl = "{$options['dest_url']}/$audioFileName";
+					$audioPath = "{$options['dest_storage_path']}/$audioFileName";
 					if (
-						!isset( $existingFiles[$oggFileName] ) ||
-						!isset( $metaData[$oggFileName]['length'] )
+						!isset( $existingFiles[$audioFileName] ) ||
+						!isset( $metaData[$audioFileName]['length'] )
 					) {
 						// Maybe we just generated it
 						$sourcePath = "{$options['factory_directory']}/file.midi";
@@ -463,7 +468,7 @@ class Score {
 								[ 'src' => "{$options['dest_storage_path']}/$midiFileName" ] );
 							$sourcePath = $sourceFileRef->getPath();
 						}
-						self::generateOgg( $sourcePath, $options, $oggPath, $metaData );
+						self::generateAudio( $sourcePath, $options, $audioPath, $metaData );
 					}
 				}
 			}
@@ -501,14 +506,17 @@ class Score {
 				/* No images; this may happen in raw mode or when the user omits the score code */
 				throw new ScoreException( wfMessage( 'score-noimages' ) );
 			}
-			if ( $options['generate_ogg'] ) {
-				$length = $metaData[basename( $oggPath )]['length'];
+			if ( $options['generate_audio'] ) {
+				$length = $metaData[basename( $audioPath )]['length'];
+				$mimetype = pathinfo( $audioUrl, PATHINFO_EXTENSION ) === 'mp3'
+					? 'audio/mpeg'
+					: 'audio/ogg; codecs="vorbis"';
 				$player = new TimedMediaTransformOutput( [
 					'length' => $length,
 					'sources' => [
 						[
-							'src' => $oggUrl,
-							'type' => 'audio/ogg; codecs="vorbis"'
+							'src' => $audioUrl,
+							'type' => $mimetype
 						]
 					],
 					'disablecontrols' => 'options,timedText',
@@ -639,7 +647,7 @@ class Score {
 				$options['factory_directory'] );
 		}
 		$needMidi = false;
-		if ( !$options['raw'] || $options['generate_ogg'] && !$options['override_midi'] ) {
+		if ( !$options['raw'] || $options['generate_audio'] && !$options['override_midi'] ) {
 			$needMidi = true;
 			if ( !file_exists( $factoryMidi ) ) {
 				throw new ScoreException( wfMessage( 'score-nomidi' ) );
@@ -810,23 +818,28 @@ LILYPOND;
 	}
 
 	/**
-	 * Generates an Ogg/Vorbis file from a MIDI file using fluidsynth with TiMidity as fallback.
+	 * Generates an audio file from a MIDI file using fluidsynth with TiMidity as fallback.
 	 *
 	 * @param string $sourceFile The local filename of the MIDI file
 	 * @param array $options array of rendering options.
-	 * @param string $remoteDest The backend storage path to upload the Ogg file to
+	 * @param string $remoteDest The backend storage path to upload the audio file to
 	 * @param array $metaData Array with metadata information
 	 *
 	 * @throws ScoreException if an error occurs.
 	 */
-	private static function generateOgg( $sourceFile, $options, $remoteDest, &$metaData ) {
-		global $wgScoreFluidsynth, $wgScoreSoundfont;
+	private static function generateAudio( $sourceFile, $options, $remoteDest, &$metaData ) {
+		global $wgScoreFluidsynth, $wgScoreSoundfont, $wgScoreLame;
 		global $wgScoreTimidity; // TODO: Remove TiMidity++ as fallback
+
+		// Check whether the output is mp3 or ogg by extension
+		$extension = pathinfo( $remoteDest, PATHINFO_EXTENSION );
+		$isOutputMp3 = $extension === 'mp3';
 
 		/* Working environment */
 		$factoryDir = $options['factory_directory'];
 		self::createDirectory( $factoryDir, 0700 );
-		$factoryOgg = "$factoryDir/file.ogg";
+		$factoryOutput = "$factoryDir/output.wav";
+		$factoryFile = "$factoryDir/file.$extension";
 
 		if ( is_executable( $wgScoreFluidsynth ) ) {
 			if ( !file_exists( $wgScoreSoundfont ) ) {
@@ -837,9 +850,9 @@ LILYPOND;
 			$cmdArgs = [
 				$wgScoreFluidsynth,
 				'-T',
-				'oga', // Vorbis output
+				$isOutputMp3 ? 'wav' : 'oga', // wav output if mp3
 				'-F',
-				$factoryOgg,
+				$factoryOutput,
 				$wgScoreSoundfont,
 				$sourceFile
 			];
@@ -847,8 +860,8 @@ LILYPOND;
 			// Use TiMidity++ as a fallback
 			$cmdArgs = [
 				$wgScoreTimidity,
-				'-Ov', // Vorbis output
-				'--output-file=' . $factoryOgg,
+				$isOutputMp3 ? '-Ow' : '-Ov', // wav output if mp3
+				'--output-file=' . $factoryOutput,
 				$sourceFile
 			];
 		} else {
@@ -859,32 +872,61 @@ LILYPOND;
 		$result = Shell::command( $cmdArgs )
 			->includeStderr()
 			->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
+			->limits( [ 'filesize' => 153600 ] ) // 150 MB max. filesize (for large MIDIs)
 			->execute();
 
-		if ( ( $result->getExitCode() != 0 ) || !file_exists( $factoryOgg ) ) {
+		if ( ( $result->getExitCode() != 0 ) || !file_exists( $factoryOutput ) ) {
 			self::throwCallException(
-				wfMessage( 'score-oggconversionerr' ), $result->getStdout(), $factoryDir
+				wfMessage( 'score-audioconversionerr' ), $result->getStdout(), $factoryDir
 			);
 		}
-		$ops = [];
-		// Move resultant file to proper place
-		$ops[] = [
+
+		if ( $isOutputMp3 ) {
+			if ( !is_executable( $wgScoreLame ) ) {
+				throw new ScoreException( wfMessage( 'score-lamenotexecutable', $wgScoreLame ) );
+			}
+
+			/* Convert wav -> mp3 using LAME */
+			$result = Shell::command( $wgScoreLame, $factoryOutput, $factoryFile )
+				->includeStderr()
+				->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
+				->execute();
+
+			if ( ( $result->getExitCode() != 0 ) || !file_exists( $factoryFile ) ) {
+				self::throwCallException(
+					wfMessage( 'score-audioconversionerr' ), $result->getStdout(), $factoryDir
+				);
+			}
+		} else {
+			// No conversion required for ogg
+			$factoryFile = $factoryOutput;
+		}
+
+		// Move file to the final destination
+		$backend = self::getBackend();
+		$status = $backend->doQuickOperation( [
 			'op' => 'store',
-			'src' => $factoryOgg,
-			'dst' => $remoteDest ];
+			'src' => $factoryFile,
+			'dst' => $remoteDest
+		] );
+
+		if ( !$status->isOK() ) {
+			throw new ScoreException( wfMessage( 'score-backend-error', $status->getWikiText() ) );
+		}
 
 		// Create metadata json
-		$metaData[basename( $remoteDest )]['length'] = self::getLength( $factoryOgg );
+		$metaData[basename( $remoteDest )]['length'] = self::getLength( $remoteDest );
 		$dstFileName = "{$options['file_name_prefix']}.json";
 		$dest = "{$options['dest_storage_path']}/$dstFileName";
-		$ops[] = [
+
+		// Store metadata in backend
+		$backend = self::getBackend();
+		$status = $backend->doQuickOperation( [
 			'op' => 'create',
 			'content' => FormatJson::encode( $metaData ),
-			'dst' => $dest ];
+			'dst' => $dest
+		] );
 
-		// Execute the batch
-		$backend = self::getBackend();
-		$status = $backend->doQuickOperations( $ops );
 		if ( !$status->isOK() ) {
 			throw new ScoreException( wfMessage( 'score-backend-error', $status->getWikiText() ) );
 		}
@@ -979,14 +1021,23 @@ LILYPOND;
 	}
 
 	/**
-	 * get length of ogg vorbis file
+	 * get length of audio file
 	 *
 	 * @param string $path file system path to file
 	 *
 	 * @return float duration in seconds
 	 */
 	private static function getLength( $path ) {
-		$f = new File_Ogg( $path );
+		$isFileMp3 = pathinfo( $path, PATHINFO_EXTENSION ) === 'mp3';
+		$repo = new FileRepo( [
+			'name' => 'foo',
+			'backend' => self::$backend
+		] );
+
+		$f = new UnregisteredLocalFile( false, $repo, $path, $isFileMp3
+			? 'audio/mpeg'
+			: 'audio/ogg'
+		);
 		return $f->getLength();
 	}
 
