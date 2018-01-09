@@ -17,6 +17,8 @@
 	"score-compilererr": "Het was niet mogelijk de LilyPondinvoer te compileren:\n$1",
 	"score-backend-error": "Het was niet mogelijk de gemaakte bestanden naar hun uiteindelijke plaats te kopiëren:\n$1",
 	"score-desc": "Voegt een label toe voor het weergeven van bladmuziek met LilyPond",
+	"score-download-midi-file": "MIDI-bestand downloaden",
+	"score-download-source-file": "Lilypond-bestand downloaden",
 	"score-error-category": "Pagina's met problemen in de verwerking van bladmuziek",
 	"score-error-category-desc": "Er is een fout opgetreden bij het weergeven van de score.",
 	"score-getcwderr": "Het was niet mogelijk de ingestelde werkmap te gebruiken",

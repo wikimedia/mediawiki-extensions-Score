@@ -43,6 +43,8 @@
 	"score-page": "Page $1",
 	"score-pregreplaceerr": "Le remplacement de l'expression rationnelle PCRE a échoué",
 	"score-readerr": "Impossible de lire le fichier $1",
+	"score-fallbacknotexecutable": "TiMidity++ ne peut pas être exécuter pour la récupération: $1 n'est pas un fichier executable. Veuillez vérifier que <code>$wgScoreTimidity</code> ou <code>$wgScoreFluidsynth</code> sont initialisés correctement.",
+	"score-soundfontnotexists": "Soundfont non trouvé: $1 n'existe pas. Veuillez vérifier que <code>$wgScoreSoundfont</code> est initialisé correctement.",
 	"score-renameerr": "Erreur lors du déplacement des fichiers de musique vers le répertoire de téléversement",
 	"score-trimerr": "L'image n'a pas pu être rognée :\n$1\nParamétrez <code>$wgScoreTrim=false</code> si ce problème persiste.",
 	"score-versionerr": "Impossible d'obtenir la version de LilyPond:\n$1",

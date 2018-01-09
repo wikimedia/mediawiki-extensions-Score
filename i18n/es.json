@@ -39,6 +39,8 @@
 	"score-page": "Página $1",
 	"score-pregreplaceerr": "Falló la substitución de la expresión regular PCRE",
 	"score-readerr": "No se pudo leer el archivo $1.",
+	"score-fallbacknotexecutable": "No se pudo ejecutar TiMidity++ como reserva: $1 no es un archivo ejecutable. Cerciórate de que o <code>$wgScoreTimidity</code> o <code>$wgScoreFluidsynth</code> estén definidos correctamente.",
+	"score-soundfontnotexists": "No se pudo encontrar Soundfont: $1 no existe. Cerciórate de que <code>$wgScoreSoundfont</code> esté definido correctamente.",
 	"score-renameerr": "Error al trasladar los archivos de partituras al directorio de subidas.",
 	"score-trimerr": "No se pudo ajustar la imagen:\n$1\nDefine <code>$wgScoreTrim=false</code> si persiste el problema.",
 	"score-versionerr": "No se pudo obtener la versión de LilyPond:\n$1",
