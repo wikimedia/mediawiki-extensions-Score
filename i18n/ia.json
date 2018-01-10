@@ -22,7 +22,6 @@
 	"score-nomidi": "Nulle file MIDI ha essite generate, malgrado que illo esseva requestate. Si tu travalia in modo LilyPond brute, assecura te de fornir un bloco \\midi correcte.",
 	"score-nooutput": "Le creation del directorio de output $1 ha fallite.",
 	"score-notexecutable": "Impossibile executar LilyPond: $1 non es un file executabile. Assecura te que <code>$wgScoreLilyPond</code> es definite correctemente.",
-	"score-oggconversionerr": "Impossibile converter MIDI in Ogg/Vorbis:\n$1",
 	"score-page": "Pagina $1",
 	"score-pregreplaceerr": "Le reimplaciamento del expression regular PCRE ha fallite",
 	"score-readerr": "Impossibile leger le file $1.",

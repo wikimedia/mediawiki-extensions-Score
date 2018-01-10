@@ -10,7 +10,6 @@
 	"score-noabcinput": "Žórłowa ABC-dataja $1 njeda so wutworić.",
 	"score-noinput": "Zapodawanska dataja LilyPond $1 njeda so wutworić.",
 	"score-nooutput": "Wudawanski zapis $1 njeda so wutworić.",
-	"score-oggconversionerr": "MIDI njeda so do Ogg/Vorbis konwertować:\n$1",
 	"score-page": "Strona $1",
 	"score-readerr": "Dataja $1 njeda so čitać.",
 	"score-versionerr": "Wersija LilyPond njeda so zwěsćić:\n$1"

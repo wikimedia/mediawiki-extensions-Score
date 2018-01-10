@@ -20,7 +20,6 @@
 	"score-nomidi": "Walang nalikha na talaksan ng MIDI kahit na hinihiling. Kung nagtatrabaho ka na nasa gawi ng hilaw na LilyPond, paki tiyakin na makapagbigay ka ng isang naaangkop na tipak ng \\midi.",
 	"score-nooutput": "Nabigo sa paglikha ng direktoryo ng kinalabasan na $1.",
 	"score-notexecutable": "Hindi maisakatuparan ang LilyPond: Ang $1 ay isang hindi naisasakatuparang talaksan. Paki tiyakin na nakatakda nang tama ang <code>$wgScoreLilyPond</code>",
-	"score-oggconversionerr": "Hindi nagawang palitan ang MIDI upang maging Ogg/Vorbis:\n$1",
 	"score-page": "Pahinang $1",
 	"score-pregreplaceerr": "Nabigo ang pagpapalit ng karaniwang pagsasaad ng PCRE",
 	"score-readerr": "Hindi nagawang basahin ang talaksang $1.",
