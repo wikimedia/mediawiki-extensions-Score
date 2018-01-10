@@ -245,8 +245,8 @@ ve.ui.MWScoreInspector.prototype.updateMwData = function ( mwData ) {
 	ve.ui.MWScoreInspector.super.prototype.updateMwData.call( this, mwData );
 
 	// Get data from inspector
-	lang = this.langSelect.getSelectedItem().getData();
-	noteLanguage = this.noteLanguageDropdown.getMenu().getSelectedItem().getData();
+	lang = this.langSelect.findSelectedItem().getData();
+	noteLanguage = this.noteLanguageDropdown.getMenu().findSelectedItem().getData();
 	raw = !this.rawCheckbox.isDisabled() && this.rawCheckbox.isSelected();
 	// audioCheckbox is selected if an audio file is being included, whether that file
 	// is being auto-generated or whether an existing file is being used; but the "vorbis"
@@ -272,7 +272,7 @@ ve.ui.MWScoreInspector.prototype.updateMwData = function ( mwData ) {
  */
 ve.ui.MWScoreInspector.prototype.toggleDisableRawCheckbox = function () {
 	// Disable the checkbox if the language is not LilyPond
-	this.rawCheckbox.setDisabled( this.langSelect.getSelectedItem().getData() !== 'lilypond' );
+	this.rawCheckbox.setDisabled( this.langSelect.findSelectedItem().getData() !== 'lilypond' );
 };
 
 /**
