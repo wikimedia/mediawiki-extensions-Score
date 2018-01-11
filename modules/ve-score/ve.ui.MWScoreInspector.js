@@ -44,7 +44,9 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 		vorbisField, overrideOggField,
 		rawField,
 		notationTabPanel, audioTabPanel, advancedTabPanel,
-		language, languages = mw.config.get( 'wgScoreNoteLanguages' );
+		language,
+		languageItems = [],
+		languages = mw.config.get( 'wgScoreNoteLanguages' );
 
 	// Parent method
 	ve.ui.MWScoreInspector.super.prototype.initialize.call( this );
@@ -97,12 +99,19 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 
 	// Note Language
 	this.noteLanguageDropdown = new OO.ui.DropdownWidget();
+	languageItems.push(
+		new OO.ui.MenuOptionWidget( {
+			data: null,
+			label: '\u00a0'
+		} )
+	);
 	for ( language in languages ) {
-		this.noteLanguageDropdown.getMenu().insertItem( new OO.ui.MenuOptionWidget( {
+		languageItems.push( new OO.ui.MenuOptionWidget( {
 			data: language,
 			label: languages[ language ]
 		} ) );
 	}
+	this.noteLanguageDropdown.getMenu().addItems( languageItems );
 
 	// Checkboxes
 	this.midiCheckbox = new OO.ui.CheckboxInputWidget();
@@ -177,7 +186,7 @@ ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
 		.next( function () {
 			var attributes = this.selectedNode.getAttribute( 'mw' ).attrs,
 				lang = attributes.lang || 'lilypond',
-				noteLanguage = attributes[ 'note-language' ] || mw.config.get( 'wgScoreDefaultNoteLanguage' ),
+				noteLanguage = attributes[ 'note-language' ] || null,
 				raw = attributes.raw !== undefined,
 				vorbis = attributes.vorbis === '1',
 				/* eslint-disable camelcase */
@@ -246,7 +255,7 @@ ve.ui.MWScoreInspector.prototype.updateMwData = function ( mwData ) {
 
 	// Get data from inspector
 	lang = this.langSelect.findSelectedItem().getData();
-	noteLanguage = this.noteLanguageDropdown.getMenu().findSelectedItem().getData();
+	noteLanguage = this.noteLanguageDropdown.getMenu().findSelectedItem().getData() || undefined;
 	raw = !this.rawCheckbox.isDisabled() && this.rawCheckbox.isSelected();
 	// audioCheckbox is selected if an audio file is being included, whether that file
 	// is being auto-generated or whether an existing file is being used; but the "vorbis"
