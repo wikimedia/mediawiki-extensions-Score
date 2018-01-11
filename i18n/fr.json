@@ -24,7 +24,7 @@
 	"score-convertoverrideaudio": "Vous ne pouvez pas demander de rendu audio et spécifier override_audio en même temps.",
 	"score-desc": "Ajoute une balise pour le rendu d’extraits musicaux avec LilyPond",
 	"score-download-midi-file": "Télécharger le fichier MIDI",
-	"score-download-source-file": "Télécharger le fichier lilypond",
+	"score-download-source-file": "Télécharger le fichier LilyPond",
 	"score-error-category": "Pages avec erreurs de rendu de partition",
 	"score-error-category-desc": "Une erreur s'est produite lors du rendu de la partition.",
 	"score-fallbacknotexecutable": "TiMidity++ ne peut pas être exécuter pour la récupération: $1 n'est pas un fichier executable. Veuillez vérifier que <code>$wgScoreTimidity</code> ou <code>$wgScoreFluidsynth</code> sont initialisés correctement.",

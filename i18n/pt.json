@@ -21,7 +21,7 @@
 	"score-convertoverrideaudio": "Não pode pedir a geração de áudio e especificar override_audio ao mesmo tempo.",
 	"score-desc": "Adiciona uma ''tag'' para apresentar partituras musicais com LilyPond",
 	"score-download-midi-file": "Descarregar ficheiro MIDI",
-	"score-download-source-file": "Descarregar ficheiro lilypond",
+	"score-download-source-file": "Descarregar ficheiro LilyPond",
 	"score-error-category": "Páginas com erros de processamento de partituras",
 	"score-error-category-desc": "Ocorreu um erro ao processar a partitura.",
 	"score-fallbacknotexecutable": "Não foi possível executar TiMidity++ como solução de recurso: $1 não é um ficheiro executável. Certifique-se de que <code>$wgScoreTimidity</code> ou <code>$wgScoreFluidsynth</code> estão definidos corretamente.",

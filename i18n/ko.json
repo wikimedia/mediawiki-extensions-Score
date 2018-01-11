@@ -16,7 +16,7 @@
 	"score-compilererr": "LilyPond 입력 파일을 컴파일할 수 없습니다:\n$1",
 	"score-desc": "LilyPond로 악보를 그리는 태그를 추가합니다",
 	"score-download-midi-file": "MIDI 파일 다운로드",
-	"score-download-source-file": "lilypond 파일 다운로드",
+	"score-download-source-file": "LilyPond  파일 다운로드",
 	"score-error-category": "악보 렌더링에 오류가 있는 문서 목록",
 	"score-error-category-desc": "악보를 렌더링하는 동안 오류가 발생했습니다.",
 	"score-getcwderr": "현재 작업 디렉토리를 얻을 수 없습니다",

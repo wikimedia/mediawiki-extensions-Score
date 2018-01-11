@@ -6,7 +6,10 @@
 			"Fitoschido"
 		]
 	},
+	"score-download-midi-file": "Baixa el fitxer MIDI",
+	"score-download-source-file": "Baixa el fitxer de Lilypond",
 	"score-error-category": "Pàgines amb errors de renderització de partitures",
+	"score-lamenotexecutable": "No s’ha pogut executar el LAME: $1 no és un fitxer executable. Assegureu-vos que <code>$wgScoreLame</code> s’hagi configurat adequadament.",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Avançat",
 	"score-visualeditor-mwscoreinspector-lang": "Llengua",
 	"score-visualeditor-mwscoreinspector-notelanguage": "Llenguatge de notació"

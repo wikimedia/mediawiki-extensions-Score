@@ -16,7 +16,7 @@
 	"score-compilererr": "Não foi possível compilar o arquivo de entrada LilyPond:\n$1",
 	"score-desc": "Adiciona uma tag para renderizar partituras musicais com LilyPond",
 	"score-download-midi-file": "Baixar arquivo MIDI",
-	"score-download-source-file": "Baixar o arquivo lilypond",
+	"score-download-source-file": "Baixar o arquivo LilyPond",
 	"score-error-category": "Páginas com erros de renderização de partitura",
 	"score-error-category-desc": "Ocorreu um erro ao processar a partitura.",
 	"score-getcwderr": "Não é possível obter o diretório de trabalho atual",

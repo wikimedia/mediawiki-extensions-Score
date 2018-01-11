@@ -18,7 +18,7 @@
 	"score-convertoverrideaudio": "Non è possibile richiedere un rendering audio e specificare override_audio allo stesso tempo.",
 	"score-desc": "Aggiunge un tag per il rendering di spartiti musicali con LilyPond",
 	"score-download-midi-file": "Scarica il file MIDI",
-	"score-download-source-file": "Scarica il file lilypond",
+	"score-download-source-file": "Scarica il file LilyPond",
 	"score-error-category": "Pagine con errori di rendering della partitura",
 	"score-error-category-desc": "Si è verificato un errore durante il rendering della partitura.",
 	"score-getcwderr": "Impossibile accedere alla directory di lavoro corrente",
