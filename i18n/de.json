@@ -19,7 +19,7 @@
 	"score-convertoverrideaudio": "Du kannst nicht gleichzeitig eine Audiorenderung anfordern und override_audio angeben.",
 	"score-desc": "Erweitert das Wiki um einen Befehl zum Einbetten und Zeigen von Partituren mit LilyPond",
 	"score-download-midi-file": "MIDI-Datei herunterladen",
-	"score-download-source-file": "Lilypond-Datei herunterladen",
+	"score-download-source-file": "LilyPond-Datei herunterladen",
 	"score-error-category": "Seiten mit Fehlern beim Anzeigen von Partituren",
 	"score-error-category-desc": "Beim Ausgeben der Partitur gab es einen Fehler.",
 	"score-fallbacknotexecutable": "TiMidity++ konnte nicht als Fallback ausgeführt werden: $1 ist keine ausführbare Datei. Stelle sicher, dass <code>$wgScoreTimidity</code> oder <code>$wgScoreFluidsynth</code> korrekt festgelegt sind.",

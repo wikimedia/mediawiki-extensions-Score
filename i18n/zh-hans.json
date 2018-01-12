@@ -23,7 +23,7 @@
 	"score-convertoverrideaudio": "您不能在请求音频渲染的同时指定override_audio。",
 	"score-desc": "添加一个标记来以LilyPond呈现乐谱",
 	"score-download-midi-file": "下载MIDI文件",
-	"score-download-source-file": "下载LilyPond 文件",
+	"score-download-source-file": "下载LilyPond文件",
 	"score-error-category": "有乐谱生成错误的页面",
 	"score-error-category-desc": "生成乐谱时出错。",
 	"score-fallbacknotexecutable": "TiMidity++无法执行为备选：$1不是可执行文件。请确保<code>$wgScoreTimidity</code>或<code>$wgScoreFluidsynth</code>正确设置。",

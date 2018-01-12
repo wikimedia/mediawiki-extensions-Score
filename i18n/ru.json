@@ -3,7 +3,8 @@
 		"authors": [
 			"Okras",
 			"Kaganer",
-			"INS Pirat"
+			"INS Pirat",
+			"Edible Melon"
 		]
 	},
 	"score-abc2lynotexecutable": "Не удалось запустить перекодировку из ABC в LilyPond: $1 — не исполняемый файл. Убедитесь, что <code>$wgScoreAbc2Ly</code> установлен правильно.",
@@ -17,12 +18,13 @@
 	"score-error-category-desc": "Произошла ошибка при визуализации партитур.",
 	"score-getcwderr": "Не удается получить текущий рабочий каталог",
 	"score-invalidlang": "Недопустимый язык партитуры lang=\"<nowiki>$1</nowiki>\". Распозноваемые в настоящее время языки: lang=\"lilypond\" (по умолчанию) и lang=\"ABC\".",
+	"score-lamenotexecutable": "Невозможно запустить LAME: $1 — не исполняемый файл. Убедитесь, что <code>$wgScoreLame</code> установлен правильно.",
 	"score-midioverridenotfound": "Файл «<nowiki>$1</nowiki>», который вы определили через override_midi, не найден. Пожалуйста, укажите только имя файла, опустив <nowiki>[[…]]</nowiki> и префикс «{{ns:file}}:».",
 	"score-noabcinput": "Исходный ABC-файл $1 не может быть создан.",
 	"score-nocontent": "Не удалось загрузить с сервера файл $1.",
 	"score-noimages": "Изображения партитур не были созданы. Пожалуйста, проверьте код партитур.",
 	"score-noinput": "Не удалось создать входной файл LilyPond $1.",
-	"score-nomediahandler": "Ogg/Vorbis-преобразование требует установленной и настроенной версии [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler-расширения] или [https://www.mediawiki.org/wiki/Extension:OggHandler OggHandler-расширения].",
+	"score-nomediahandler": "Аудио-преобразование требует установленной и настроенной версии [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler расширения TimedMediaHandler]",
 	"score-nomidi": "Запрошенный MIDI-файл не был создан. Если вы работаете в LilyPond в raw-режиме, убедитесь, что предоставили правильный \\midi блок.",
 	"score-nooutput": "Не удалось создать выходной каталог $1.",
 	"score-notexecutable": "Не удалось запустить LilyPond: $1 — не исполняемый файл. Убедитесь, что <code>$wgScoreLilyPond</code> установлен правильно.",
