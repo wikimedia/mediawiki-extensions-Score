@@ -27,7 +27,7 @@
 	"score-nocontent": "Não foi possível carregar o arquivo $1 do servidor.",
 	"score-noimages": "Nenhuma imagem de partitura foi gerada. Por favor, verifique o código da partitura.",
 	"score-noinput": "Falha ao criar o arquivo de entrada LilyPond $1.",
-	"score-nomediahandler": "A conversão Ogg/Vorbis requer uma versão instalada e configurada da extensão [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler/pt TimedMediaHandler].",
+	"score-nomediahandler": "A conversão de áudio requer uma versão instalada e configurada da [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler/pt extensão TimedMediaHandler].",
 	"score-nomidi": "Nenhum arquivo MIDI foi gerado, apesar de ter sido solicitado. Se você estiver trabalhando no modo LilyPond ''raw'', certifique-se de fornecer um bloco \\midi adequado.",
 	"score-nooutput": "Falha ao criar o diretório de saída $1.",
 	"score-notexecutable": "Não foi possível executar o LilyPond: $1 não é um arquivo executável. Certifique-se que o <code>$wgScoreLilyPond</code> está configurado corretamente.",
