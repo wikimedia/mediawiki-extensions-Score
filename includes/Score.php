@@ -1034,7 +1034,7 @@ LILYPOND;
 		$isFileMp3 = pathinfo( $path, PATHINFO_EXTENSION ) === 'mp3';
 		$repo = new FileRepo( [
 			'name' => 'foo',
-			'backend' => self::$backend
+			'backend' => self::getBackend()
 		] );
 
 		$f = new UnregisteredLocalFile( false, $repo, $path, $isFileMp3
