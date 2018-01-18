@@ -10,6 +10,7 @@
 	},
 	"score-abc2lynotexecutable": "O conversor ABC para LilyPond não pode ser executado: executed: $1 não é um arquivo executável. Certifique-se que o <code>$wgScoreAbc2Ly</code> está configurado corretamente.",
 	"score-abcconversionerr": "Não foi possível converter o arquivo ABC para o formato LilyPond:\n$1",
+	"score-audioconversionerr": "Não foi possível converter de MIDI para MP3:\n$1",
 	"score-backend-error": "Não é possível copiar os arquivos gerados para a sua localização final:\n$1",
 	"score-chdirerr": "Não foi possível mudar para o diretório $1",
 	"score-cleanerr": "Não foi possível limpar os arquivos antigos antes de renderizar novamente",
