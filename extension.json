@@ -58,7 +58,6 @@
 		"ext.score.popup": {
 			"scripts": "ext.score.popup.js",
 			"styles": "ext.score.popup.css",
-			"position": "bottom",
 			"dependencies": [
 				"mediawiki.api"
 			],
