@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"គីមស៊្រុន"
+		]
+	},
+	"score-visualeditor-mwscoreinspector-card-advanced": "ថ្នាក់ខ្ពស់",
+	"score-visualeditor-mwscoreinspector-card-audio": "ឯកសារសម្លេង",
+	"score-visualeditor-mwscoreinspector-card-notation": "សញ្ញាភ្លេងតន្ត្រី",
+	"score-visualeditor-mwscoreinspector-lang": "ភាសា​",
+	"score-visualeditor-mwscoreinspector-notelanguage": "ភាសាសរសេរភ្លេងតន្ត្រី",
+	"score-visualeditor-mwscoreinspector-override-midi": "ប្រើឯកសារប្រភេទ MIDI មានស្រាប់",
+	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "ឈ្មោះឯកសារប្រភេទ MIDI មានស្រាប់",
+	"score-visualeditor-mwscoreinspector-override-ogg": "ប្រើឯកសារសម្លេងមានស្រាប់",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "ឈ្មោះឯកសារសម្លេងមានស្រាប់ (ត្រូវតែជាប្រភេទ Ogg/Vorbis)",
+	"score-visualeditor-mwscoreinspector-raw": "នេះជាឯកសារប្រភេទ LilyPond ពេញលេញ",
+	"score-visualeditor-mwscoreinspector-title": "សញ្ញាភ្លេងតន្ត្រី",
+	"score-visualeditor-mwscoreinspector-vorbis": "បញ្ចូលឯកសារសម្លេង (បង្កើតដោយស្វ័យប្រវត្តិតាមលំនាំដើម)"
+}
