@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"زكريا"
+			"زكريا",
+			"Abanima"
 		]
 	},
+	"score-error-category": "صفحات بها خطأ في تحويل الحرز",
 	"score-visualeditor-mwscoreinspector-title": "علامة موسيقية"
 }
