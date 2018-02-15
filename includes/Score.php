@@ -283,7 +283,7 @@ class Score {
 				throw new ScoreException(
 					wfMessage( 'score-invalidnotelanguage' )->plaintextParams(
 						$options['note-language'],
-						join( ', ', array_keys( self::$supportedNoteLanguages ) )
+						implode( ', ', array_keys( self::$supportedNoteLanguages ) )
 					)
 				);
 			}
