@@ -5,7 +5,8 @@
 			"Simon Shek",
 			"Cwlin0416",
 			"LNDDYL",
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Hello903hello"
 		]
 	},
 	"score-abc2lynotexecutable": "ABC 轉 LilyPond 的轉換器無法執行：$1 不是一個可執行檔，請確定 <code>$wgScoreAbc2Ly</code> 已設定正確。",
@@ -24,7 +25,7 @@
 	"score-nocontent": "無法從伺服器載入檔案 $1 。",
 	"score-noimages": "未產生樂譜圖片，請檢查您的樂譜代碼。",
 	"score-noinput": "無法建立 LilyPond 輸出檔 $1。",
-	"score-nomediahandler": "Ogg/Vorbis 轉換需要安裝並設定 [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler 擴充套件] 或 [https://www.mediawiki.org/wiki/Extension:OggHandler OggHandler 擴充套件] 其中一個版本",
+	"score-nomediahandler": "音訊轉換需要安裝並設定好的[https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler 擴充套件]。",
 	"score-nomidi": "雖已完成請求但未產生 MIDI 檔案，若您使用原始 LilyPond 模式作業，請確定您提供了正確的 \\midi 區塊。",
 	"score-nooutput": "無法建立輸入目錄 $1。",
 	"score-notexecutable": "LilyPond 無法執行：$1 不是一個可執行檔，請確定 <code>$wgScoreLilyPond</code> 已設定正確。",
@@ -37,5 +38,5 @@
 	"score-visualeditor-mwscoreinspector-card-audio": "音訊",
 	"score-visualeditor-mwscoreinspector-lang": "語言",
 	"score-visualeditor-mwscoreinspector-title": "樂譜",
-	"score-visualeditor-mwscoreinspector-vorbis": "產生一個音訊檔"
+	"score-visualeditor-mwscoreinspector-vorbis": "包含一個音訊檔（預設自動產生）"
 }
