@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sveinn í Felli"
+		]
+	},
+	"score-page": "Síða $1",
+	"score-readerr": "Gat ekki lesið skrána $1.",
+	"score-visualeditor-mwscoreinspector-card-advanced": "Nánar",
+	"score-visualeditor-mwscoreinspector-card-audio": "Hljóð",
+	"score-visualeditor-mwscoreinspector-card-notation": "Einkunnaspjald",
+	"score-visualeditor-mwscoreinspector-lang": "Tungumál",
+	"score-visualeditor-mwscoreinspector-lang-abc": "ABC",
+	"score-visualeditor-mwscoreinspector-lang-lilypond": "LilyPond"
+}
