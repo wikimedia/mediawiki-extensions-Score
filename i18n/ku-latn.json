@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bikarhêner"
+			"Bikarhêner",
+			"Ghybu"
 		]
 	},
+	"score-page": "Rûpela $1",
 	"score-visualeditor-mwscoreinspector-lang": "Ziman"
 }
