@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Les Meloures"
 		]
 	},
 	"score-audioconversionerr": "MIDI konnt net an MP3 ëmgewandelt ginn:\n$1",
@@ -12,7 +13,7 @@
 	"score-noabcinput": "Den ABC-Quellfichier $1 konnt net ugeluecht ginn.",
 	"score-nocontent": "De Fichier $1 konnt net vum Server geluede ginn.",
 	"score-page": "Säit $1",
-	"score-readerr": "De Fichier $1 konnt net geliest ginn.",
+	"score-readerr": "De Fichier $1 konnt net gelies ginn.",
 	"score-visualeditor-mwscoreinspector-card-audio": "Audio",
 	"score-visualeditor-mwscoreinspector-lang": "Sprooch",
 	"score-visualeditor-mwscoreinspector-notelanguage": "Notatiounssprooch",
