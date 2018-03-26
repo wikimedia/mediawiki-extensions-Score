@@ -11,6 +11,7 @@
 	},
 	"score-abc2lynotexecutable": "ABC から LilyPond へのコンバーターを実行できません: $1 は実行可能ファイルではありません。<code>$wgScoreAbc2Ly</code> が正しく設定されているか確認してください。",
 	"score-abcconversionerr": "ABC ファイルを LilyPond 形式に変換できません:\n$1",
+	"score-audioconversionerr": "MIDI を MP3 に変換できません:\n$1",
 	"score-backend-error": "生成したファイルを最終的な出力先にコピーできません:\n$1",
 	"score-chdirerr": "現在のディレクトリを $1 に変更できません",
 	"score-cleanerr": "再レンダリングの前に、古いファイルを消去できませんでした",
