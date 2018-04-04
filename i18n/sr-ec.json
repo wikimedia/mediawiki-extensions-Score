@@ -2,11 +2,20 @@
 	"@metadata": {
 		"authors": [
 			"Сербијана",
-			"Prevodim"
+			"Prevodim",
+			"BadDog"
 		]
 	},
 	"score-visualeditor-mwscoreinspector-card-advanced": "Напредно",
+	"score-visualeditor-mwscoreinspector-card-audio": "Аудио",
+	"score-visualeditor-mwscoreinspector-card-notation": "Ноте",
 	"score-visualeditor-mwscoreinspector-lang": "Језик",
-	"score-visualeditor-mwscoreinspector-override-ogg": "Користите постојећу аудио датотеку",
-	"score-visualeditor-mwscoreinspector-title": "Нотни запис"
+	"score-visualeditor-mwscoreinspector-notelanguage": "Језик нота",
+	"score-visualeditor-mwscoreinspector-override-midi": "Коришћење постојеће MIDI датотеке",
+	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Име постојеће MIDI датотеке",
+	"score-visualeditor-mwscoreinspector-override-ogg": "Коришћење постојеће аудио датотеке",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Име постојеће аудио датотеке (мора бити у Ogg/Vorbis формату)",
+	"score-visualeditor-mwscoreinspector-raw": "Потпуна LilyPond датотека",
+	"score-visualeditor-mwscoreinspector-title": "Нотни запис",
+	"score-visualeditor-mwscoreinspector-vorbis": "Укључи аудио датотеку (подразумевано је да се аутоматски производи)"
 }
