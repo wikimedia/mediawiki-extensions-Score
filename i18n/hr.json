@@ -10,6 +10,7 @@
 	"score-visualeditor-mwscoreinspector-card-audio": "Zvuk",
 	"score-visualeditor-mwscoreinspector-card-notation": "Zapis",
 	"score-visualeditor-mwscoreinspector-lang": "Jezik",
+	"score-visualeditor-mwscoreinspector-notelanguage": "Jezik nota",
 	"score-visualeditor-mwscoreinspector-override-midi": "Rabi postojeću MIDI datoteku",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Ime postojeće MIDI datoteke",
 	"score-visualeditor-mwscoreinspector-override-ogg": "Rabi postojeću zvukovnu datoteku",
