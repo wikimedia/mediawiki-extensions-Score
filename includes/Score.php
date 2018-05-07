@@ -677,7 +677,9 @@ class Score {
 		$backend = self::getBackend();
 		$status = $backend->prepare( [ 'dir' => $options['dest_storage_path'] ] );
 		if ( !$status->isOK() ) {
-			throw new ScoreException( wfMessage( 'score-backend-error', $status->getWikiText() ) );
+			throw new ScoreException(
+				wfMessage( 'score-backend-error', Status::wrap( $status )->getWikitext() )
+			);
 		}
 
 		// File names of generated files
@@ -701,7 +703,9 @@ class Score {
 				'dst' => "{$options['dest_storage_path']}/{$options['file_name_prefix']}.midi" ];
 			$newFiles["{$options['file_name_prefix']}.midi"] = true;
 			if ( !$status->isOK() ) {
-				throw new ScoreException( wfMessage( 'score-backend-error', $status->getWikiText() ) );
+				throw new ScoreException(
+					wfMessage( 'score-backend-error', Status::wrap( $status )->getWikitext() )
+				);
 			}
 		}
 
@@ -756,7 +760,9 @@ class Score {
 		// Execute the batch
 		$status = $backend->doQuickOperations( $ops );
 		if ( !$status->isOK() ) {
-			throw new ScoreException( wfMessage( 'score-backend-error', $status->getWikiText() ) );
+			throw new ScoreException(
+				wfMessage( 'score-backend-error', Status::wrap( $status )->getWikitext() )
+			);
 		}
 		return $newFiles;
 	}
@@ -914,7 +920,9 @@ LILYPOND;
 		] );
 
 		if ( !$status->isOK() ) {
-			throw new ScoreException( wfMessage( 'score-backend-error', $status->getWikiText() ) );
+			throw new ScoreException(
+				wfMessage( 'score-backend-error', Status::wrap( $status )->getWikitext() )
+			);
 		}
 
 		// Create metadata json
@@ -931,7 +939,9 @@ LILYPOND;
 		] );
 
 		if ( !$status->isOK() ) {
-			throw new ScoreException( wfMessage( 'score-backend-error', $status->getWikiText() ) );
+			throw new ScoreException(
+				wfMessage( 'score-backend-error', Status::wrap( $status )->getWikitext() )
+			);
 		}
 	}
 
