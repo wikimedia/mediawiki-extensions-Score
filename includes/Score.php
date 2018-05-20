@@ -798,9 +798,9 @@ class Score {
 		}
 		if ( !strpos( $lilypondCode, "\\midi" ) ) {
 			$options .= <<<LY
-				\\midi {
-					\\context { \Score tempoWholesPerMinute = #(ly:make-moment 100 4) }
-				}\n
+	\\midi {
+		\\context { \Score tempoWholesPerMinute = #(ly:make-moment 100 4) }
+	}
 LY;
 		}
 
