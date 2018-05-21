@@ -24,6 +24,7 @@
 		if ( typeof source !== 'undefined' ) {
 			$popup.append( $( '<a>' )
 				.attr( 'href', source )
+				.attr( 'download', '' )
 				.html( $( '<span>' ).text( mw.msg( 'score-download-source-file' ) ) )
 			);
 		}
