@@ -3,7 +3,8 @@
 		"authors": [
 			"Aftabuzzaman",
 			"Rasal Lia",
-			"Muktogayn"
+			"Muktogayn",
+			"আফতাবুজ্জামান"
 		]
 	},
 	"score-abc2lynotexecutable": "ABC থেকে LilyPond রূপান্তরকারী কার্যকর করা যায়নি: $1 কার্যকর করার যোগ্য ফাইল নয়। নিশ্চিত করুন <code>$wgScoreAbc2Ly</code> সঠিকভাবে নির্ধারণ করা হয়েছে।",
