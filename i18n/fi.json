@@ -2,9 +2,39 @@
 	"@metadata": {
 		"authors": [
 			"Crt",
-			"VezonThunder"
+			"VezonThunder",
+			"Hunsvotti"
 		]
 	},
+	"score-abcconversionerr": "ABC-tiedoston muuttaminen LilyPond-muotoon ei onnistunut: $1",
+	"score-audioconversionerr": "Muunnos MIDIstä MP3:ksi ei onnistunut: $1",
+	"score-audiooverridenotfound": "Parametrissa ''override_audio'' antamaasi tiedostoa ”<nowiki>$1</nowiki>” ei ole olemassa.",
+	"score-convertoverrideaudio": "Parametreja  ''sound'' ja ''override_audio'' ei voi käyttää yhtä aikaa.",
+	"score-desc": "Lisää tagin, jonka avulla wikisivulle voi lisätä nuottikirjoitusta LilyPondin renderöimänä.",
+	"score-download-midi-file": "Lataa MIDI-tiedostona",
+	"score-download-source-file": "Lataa LilyPond-tiedostona",
+	"score-error-category": "Sivut, joilla on virheellistä koodia score-tageissa",
+	"score-error-category-desc": "Virhe score-koodin tulkinnassa",
+	"score-invalidaudiooverride": "Parametrissa override_audio antamasi tiedosto \"<nowiki>$1</nowiki>\" ei ole kelvollinen. Huomaa, että tiedostonimi tulee antaa ilman <nowiki>[[…]]</nowiki>-merkkejä ja \"{{ns:file}}:\"-etuliitettä.",
+	"score-invalidlang": "Virheellinen ''lang''-parametrin arvo (”<nowiki>$1</nowiki>”). Hyväksyttyjä arvoja ovat ”lilypond” (oletus) ja ”ABC\".",
+	"score-invalidnotelanguage": "Virheellinen ''note-language''-parametrin arvo (”<nowiki>$1</nowiki>”). Hyväksyttyjä arvoja ovat $2.",
+	"score-midioverridenotfound": "Parametrissa ''override_midi'' antamaasi tiedostoa ”<nowiki>$1</nowiki>” ei löytynyt. Huomaa, että tiedstonimi tulee antaa ilman <nowiki>[[…]]</nowiki>-merkkejä ja \"{{ns:file}}:\"-etuliitettä.",
+	"score-noabcinput": "ABC-lähdekooditiedoston $1 luonti ei onnistunut.",
+	"score-nocontent": "Tiedostoa $1 ei saatu ladattua palvelimelta",
+	"score-noimages": "Nuottikuvia ei syntynyt. Tarkista, että lähdekoodisi on oikein.",
+	"score-noinput": "LilyPond-syöttötiedoston $1 luonti epäonnistui.",
 	"score-page": "Sivu $1",
-	"score-readerr": "Tiedostoa $1 ei voitu lukea."
+	"score-readerr": "Tiedostoa $1 ei voitu lukea.",
+	"score-visualeditor-mwscoreinspector-card-advanced": "Edistynyt",
+	"score-visualeditor-mwscoreinspector-card-audio": "Ääni",
+	"score-visualeditor-mwscoreinspector-card-notation": "Nuotinnus",
+	"score-visualeditor-mwscoreinspector-lang": "Kieli",
+	"score-visualeditor-mwscoreinspector-notelanguage": "Nuotinnuskieli",
+	"score-visualeditor-mwscoreinspector-override-midi": "Käytä olemassa olevaa MIDI-tiedostoa",
+	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Olemassa olevan MIDI-tiedoston nimi",
+	"score-visualeditor-mwscoreinspector-override-ogg": "Käytä olemassa olevaa ääntitiedostoa",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Olemassa olevan äänitiedoston nimi (täytyy olla tyypiltään Ogg/Vorbis)",
+	"score-visualeditor-mwscoreinspector-raw": "Tämä on täydellinen LilyPond-tiedosto",
+	"score-visualeditor-mwscoreinspector-title": "Nuottikirjoitus",
+	"score-visualeditor-mwscoreinspector-vorbis": "Sisällytä äänitiedosto (luodaan oletuksena automaattisesti)"
 }
