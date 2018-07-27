@@ -279,7 +279,7 @@ class Score {
 			} else {
 				$options['note-language'] = self::$defaultNoteLanguage;
 			}
-			if ( !in_array( $options['note-language'], array_keys( self::$supportedNoteLanguages ) ) ) {
+			if ( !isset( self::$supportedNoteLanguages[$options['note-language']] ) ) {
 				throw new ScoreException(
 					wfMessage( 'score-invalidnotelanguage' )->plaintextParams(
 						$options['note-language'],
