@@ -443,6 +443,7 @@ class Score {
 
 			/* Generate audio file if necessary */
 			if ( $options['generate_audio'] ) {
+				$audioFileName = "{$options['file_name_prefix']}.{$options['audio_extension']}";
 				if ( $options['override_midi'] ) {
 					$audioUrl = $options['audio_url'];
 					$audioPath = $options['audio_storage_path'];
@@ -453,7 +454,6 @@ class Score {
 						self::generateAudio( $sourcePath, $options, $audioPath, $metaData );
 					}
 				} else {
-					$audioFileName = "{$options['file_name_prefix']}.{$options['audio_extension']}";
 					$audioUrl = "{$options['dest_url']}/$audioFileName";
 					$audioPath = "{$options['dest_storage_path']}/$audioFileName";
 					if (
@@ -504,10 +504,10 @@ class Score {
 				}
 			}
 			if ( $options['generate_audio'] ) {
-				$length = $metaData[basename( $audioPath )]['length'];
+				$length = $metaData[$audioFileName]['length'];
 				$mimetype = pathinfo( $audioUrl, PATHINFO_EXTENSION ) === 'mp3'
 					? 'audio/mpeg'
-					: 'audio/ogg; codecs="vorbis"';
+					: 'application/ogg; codecs="vorbis"'; // TMH needs application/ogg
 				$player = new TimedMediaTransformOutput( [
 					'length' => $length,
 					'sources' => [
@@ -1049,8 +1049,9 @@ LILYPOND;
 
 		$f = new UnregisteredLocalFile( false, $repo, $path, $isFileMp3
 			? 'audio/mpeg'
-			: 'audio/ogg'
+			: 'application/ogg' // Wrong MIME type, but used in TMH
 		);
+
 		return $f->getLength();
 	}
 
