@@ -555,9 +555,7 @@ class Score {
 		}
 
 		// Wrap score in div container.
-		$link = HTML::rawElement( 'div', $attributes, $link );
-
-		return $link;
+		return Html::rawElement( 'div', $attributes, $link );
 	}
 
 	/**
