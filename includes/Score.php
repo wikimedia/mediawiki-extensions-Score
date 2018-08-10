@@ -507,7 +507,7 @@ class Score {
 				$length = $metaData[$audioFileName]['length'];
 				$mimetype = pathinfo( $audioUrl, PATHINFO_EXTENSION ) === 'mp3'
 					? 'audio/mpeg'
-					: 'application/ogg; codecs="vorbis"'; // TMH needs application/ogg
+					: 'application/ogg'; // TMH needs application/ogg
 				$player = new TimedMediaTransformOutput( [
 					'length' => $length,
 					'sources' => [
