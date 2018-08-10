@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Christian List",
-			"Peter Alberti"
+			"Peter Alberti",
+			"Saederup92"
 		]
 	},
 	"score-abc2lynotexecutable": "Kunne ikke køre programmet til at konvertere fra ABC til LilyPond: $1 er ikke en eksekverbar fil. Kontroller at <code>$wgScoreAbc2Ly</code> er sat korrekt.",
@@ -29,5 +30,8 @@
 	"score-readerr": "Kunne ikke læse filen $1.",
 	"score-renameerr": "Der opstod en fejl under flytningen af partiturfiler til folderen for oplægning",
 	"score-trimerr": "Billedet kunne ikke beskæres:\n$1\nSæt $wgScoreTrim=false, hvis dette problem fortsætter.",
-	"score-versionerr": "Kunne ikke bestemme LilyPonds version:\n$1"
+	"score-versionerr": "Kunne ikke bestemme LilyPonds version:\n$1",
+	"score-visualeditor-mwscoreinspector-card-advanced": "Avanceret",
+	"score-visualeditor-mwscoreinspector-card-audio": "Lyd",
+	"score-visualeditor-mwscoreinspector-lang": "Sprog"
 }
