@@ -458,7 +458,8 @@ class Score {
 					$audioPath = "{$options['dest_storage_path']}/$audioFileName";
 					if (
 						!isset( $existingFiles[$audioFileName] ) ||
-						!isset( $metaData[$audioFileName]['length'] )
+						!isset( $metaData[$audioFileName]['length'] ) ||
+						!$metaData[$audioFileName]['length']
 					) {
 						// Maybe we just generated it
 						$sourcePath = "{$options['factory_directory']}/file.midi";
