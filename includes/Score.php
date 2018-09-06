@@ -262,6 +262,7 @@ class Score {
 				$options['audio_storage_dir'] = "$baseStoragePath/$audioRelDir";
 				$options['audio_storage_path'] = "$baseStoragePath/$audioRel";
 				$options['audio_url'] = "$baseUrl/$audioRel";
+				$options['audio_sha_name'] = "$sha1.{$options['audio_extension']}";
 			} else {
 				$options['override_midi'] = false;
 			}
@@ -385,6 +386,7 @@ class Score {
 	 * 		stored.
 	 * 	- audio_url: string If override_midi and generate_audio is true,
 	 * 		the URL corresponding to audio_storage_path
+	 *  - audio_sha_name: string If override_midi, generated audio file name.
 	 * 	- override_audio: bool Whether to generate a wikilink to a
 	 * 		user-provided audio file. If set to true, the sound
 	 * 		option must be set to false. Required.
@@ -448,7 +450,11 @@ class Score {
 					$audioUrl = $options['audio_url'];
 					$audioPath = $options['audio_storage_path'];
 					$exists = $backend->fileExists( [ 'src' => $options['audio_storage_path'] ] );
-					if ( !$exists ) {
+					if (
+						!$exists ||
+						!isset( $metaData[$options['audio_sha_name']]['length'] ) ||
+						!$metaData[$options['audio_sha_name']]['length']
+					) {
 						$backend->prepare( [ 'dir' => $options['audio_storage_dir'] ] );
 						$sourcePath = $options['midi_file']->getLocalRefPath();
 						self::generateAudio( $sourcePath, $options, $audioPath, $metaData );
