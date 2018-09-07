@@ -452,8 +452,8 @@ class Score {
 					$exists = $backend->fileExists( [ 'src' => $options['audio_storage_path'] ] );
 					if (
 						!$exists ||
-						!isset( $metaData[$options['audio_sha_name']]['length'] ) ||
-						!$metaData[$options['audio_sha_name']]['length']
+						!isset( $metaData[ $options['audio_sha_name'] ]['length'] ) ||
+						!$metaData[ $options['audio_sha_name'] ]['length']
 					) {
 						$backend->prepare( [ 'dir' => $options['audio_storage_dir'] ] );
 						$sourcePath = $options['midi_file']->getLocalRefPath();
@@ -464,7 +464,8 @@ class Score {
 					$audioPath = "{$options['dest_storage_path']}/$audioFileName";
 					if (
 						!isset( $existingFiles[$audioFileName] ) ||
-						!isset( $metaData[$audioFileName]['length'] )
+						!isset( $metaData[$audioFileName]['length'] ) ||
+						!$metaData[$audioFileName]['length']
 					) {
 						// Maybe we just generated it
 						$sourcePath = "{$options['factory_directory']}/file.midi";
@@ -510,7 +511,8 @@ class Score {
 				}
 			}
 			if ( $options['generate_audio'] ) {
-				$length = $metaData[$audioFileName]['length'];
+				$audioHash = $options['override_midi'] ? $options['audio_sha_name'] : $audioFileName;
+				$length = $metaData[$audioHash]['length'];
 				$mimetype = pathinfo( $audioUrl, PATHINFO_EXTENSION ) === 'mp3'
 					? 'audio/mpeg'
 					: 'application/ogg'; // TMH needs application/ogg
