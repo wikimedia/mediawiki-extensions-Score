@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Zygimantus",
-			"Eitvys200"
+			"Eitvys200",
+			"Manvydasz"
 		]
 	},
 	"score-download-midi-file": "Atsisiųsti MIDI failą",
@@ -11,7 +12,7 @@
 	"score-visualeditor-mwscoreinspector-lang": "Kalba",
 	"score-visualeditor-mwscoreinspector-override-midi": "Naudoti esamą MIDI failą",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Esamo MIDI failo pavadinimas",
-	"score-visualeditor-mwscoreinspector-override-ogg": "Naudoti esamą garso failą (turi būti Ogg/Vorbis formatas)",
+	"score-visualeditor-mwscoreinspector-override-ogg": "Naudoti esamą garso failą",
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Esamo garso failo pavadinimas",
 	"score-visualeditor-mwscoreinspector-raw": "Tai yra pilnas LilyPond failas",
 	"score-visualeditor-mwscoreinspector-title": "Muzikos notacija",
