@@ -6,6 +6,8 @@
 	},
 	"score-abc2lynotexecutable": "'U convertitore ABC jndr'à LilyPond non ge pò essere langiate: $1 non g'è 'nu file eseguibbile. Condrolle ca <code>$wgScoreAbc2Ly</code> ha state configurate accumme se deve.",
 	"score-abcconversionerr": "'Mbossibbile convertì 'u file ABC jndr'à 'u formate LilyPond:\n$1",
+	"score-audioconversionerr": "Non ge riesche a convertì MIDI jndr'à MP3:\n$1",
+	"score-audiooverridenotfound": "'U file \"<nowiki>$1</nowiki>\" ca è specificate cu override_audio non g'esiste.",
 	"score-backend-error": "'Mbossibbele cupiù le file generate jndr'à destinaziona lore finale:\n$1",
 	"score-chdirerr": "'Mbossibbile cangià jndr'à cartelle $1",
 	"score-cleanerr": "'Mbossibbele pulezzà le vecchie file apprime de refà 'u rendering",
