@@ -8,6 +8,7 @@
 	},
 	"score-abc2lynotexecutable": "Kunne ikke køre programmet til at konvertere fra ABC til LilyPond: $1 er ikke en eksekverbar fil. Kontroller at <code>$wgScoreAbc2Ly</code> er sat korrekt.",
 	"score-abcconversionerr": "Kunne ikke konvertere ABC-fil til LilyPond-format:\n$1",
+	"score-audioconversionerr": "Kunne ikke omdanne MIDI til MP3:\n$1",
 	"score-backend-error": "Ikke i stand til at kopiere de genererede filer til deres endelige placering:\n$1",
 	"score-chdirerr": "Kunne ikke skifte folder til $1",
 	"score-cleanerr": "Kunne ikke rense ud i gamle filer før genrendering",

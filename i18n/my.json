@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ninjastrikers"
+			"Ninjastrikers",
+			"Dr Lotus Black"
 		]
 	},
-	"score-page": "စာမျက်နှာ $1"
+	"score-page": "စာမျက်နှာ $1",
+	"score-visualeditor-mwscoreinspector-card-advanced": "အဆင့်မြင့်"
 }
