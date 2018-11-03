@@ -28,11 +28,11 @@
 				"ve-score/ve.ui.MWScoreInspectorTool.js"
 			],
 			"styles": [
-				"ve-score/ve.ui.MWScoreIcons.css",
 				"ve-score/ve.ui.MWScoreInspector.css"
 			],
 			"dependencies": [
-				"ext.visualEditor.mwcore"
+				"ext.visualEditor.mwcore",
+				"ext.score.visualEditor.icons"
 			],
 			"messages": [
 				"score-visualeditor-mwscoreinspector-card-advanced",
@@ -54,6 +54,25 @@
 				"desktop",
 				"mobile"
 			]
+		},
+		"ext.score.visualEditor.icons": {
+			"class": "ResourceLoaderImageModule",
+			"selectorWithoutVariant": ".oo-ui-icon-{name}",
+			"selectorWithVariant": ".oo-ui-image-{variant}.oo-ui-icon-{name}",
+			"variants": {
+				"progressive": {
+					"color": "#36c"
+				},
+				"invert": {
+					"color": "#fff"
+				}
+			},
+			"images": {
+				"score": {
+					"file": "ve-score/score.svg",
+					"variants": [ "progressive" ]
+				}
+			}
 		},
 		"ext.score.popup": {
 			"scripts": "ext.score.popup.js",
