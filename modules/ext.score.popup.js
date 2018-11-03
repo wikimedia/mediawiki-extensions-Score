@@ -1,4 +1,4 @@
-( function ( $ ) {
+( function () {
 	var popupShown = false;
 
 	function showPopup( $score ) {
@@ -71,7 +71,8 @@
 
 		e.stopPropagation();
 
-		// Hide popup on second click, and if it was on the other score, then show new popup immediately.
+		// Hide popup on second click, and if it was on the other score,
+		// then show new popup immediately.
 		if ( popupShown ) {
 			sameScore = $score.is( $( '.mw-ext-score-popup' ).parent() );
 
@@ -97,4 +98,4 @@
 
 		hidePopups();
 	} );
-}( jQuery ) );
+}() );
