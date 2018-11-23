@@ -33,6 +33,7 @@
 	"score-visualeditor-mwscoreinspector-card-audio": "Audio",
 	"score-visualeditor-mwscoreinspector-card-notation": "Notazione",
 	"score-visualeditor-mwscoreinspector-lang": "Lènghe",
+	"score-visualeditor-mwscoreinspector-notelanguage": "Notazione d'a lènghe",
 	"score-visualeditor-mwscoreinspector-override-midi": "Ause 'nu file MIDI esistende",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Nome d'u file MIDI esistende",
 	"score-visualeditor-mwscoreinspector-override-ogg": "Ause 'nu file audio esistende",
