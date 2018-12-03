@@ -1,7 +1,10 @@
 {
 	"name": "Score",
 	"version": "0.3.0",
-	"author": "Alexander Klauer",
+	"author": [
+		"Alexander Klauer",
+		"Étienne Beaulé"
+	],
 	"url": "https://www.mediawiki.org/wiki/Extension:Score",
 	"descriptionmsg": "score-desc",
 	"license-name": "GPL-3.0-or-later",
