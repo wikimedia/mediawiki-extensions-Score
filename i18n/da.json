@@ -3,7 +3,8 @@
 		"authors": [
 			"Christian List",
 			"Peter Alberti",
-			"Saederup92"
+			"Saederup92",
+			"Weblars"
 		]
 	},
 	"score-abc2lynotexecutable": "Kunne ikke køre programmet til at konvertere fra ABC til LilyPond: $1 er ikke en eksekverbar fil. Kontroller at <code>$wgScoreAbc2Ly</code> er sat korrekt.",
@@ -34,5 +35,6 @@
 	"score-versionerr": "Kunne ikke bestemme LilyPonds version:\n$1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Avanceret",
 	"score-visualeditor-mwscoreinspector-card-audio": "Lyd",
-	"score-visualeditor-mwscoreinspector-lang": "Sprog"
+	"score-visualeditor-mwscoreinspector-lang": "Sprog",
+	"score-visualeditor-mwscoreinspector-title": "Nodeskrift"
 }
