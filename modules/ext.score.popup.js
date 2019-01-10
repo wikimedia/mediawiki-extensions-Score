@@ -31,6 +31,8 @@
 
 		$score.append( $popup );
 
+		// FIXME: Use CSS transition
+		// eslint-disable-next-line jquery/no-animate
 		$popup.animate( {
 			opacity: 1
 		}, {
@@ -45,8 +47,11 @@
 	}
 
 	function hidePopups( callback ) {
+		// eslint-disable-next-line jquery/no-global-selector
 		var $popup = $( '.mw-ext-score-popup' ), $score = $popup.closest( '.mw-ext-score' );
 
+		// FIXME: Use CSS transition
+		// eslint-disable-next-line jquery/no-animate
 		$popup.animate( {
 			opacity: 0
 		}, {
@@ -74,6 +79,7 @@
 		// Hide popup on second click, and if it was on the other score,
 		// then show new popup immediately.
 		if ( popupShown ) {
+			// eslint-disable-next-line jquery/no-global-selector
 			sameScore = $score.is( $( '.mw-ext-score-popup' ).parent() );
 
 			hidePopups( function () {
@@ -88,7 +94,7 @@
 		showPopup( $score );
 	} );
 
-	$( document ).click( 'click', function ( e ) {
+	$( document ).on( 'click', function ( e ) {
 		var $target = $( e.target );
 
 		// Don't hide popup when clicked inside it.
