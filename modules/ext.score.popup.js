@@ -10,9 +10,7 @@
 		}
 
 		$popup = $( '<div>' )
-			.addClass( 'mw-ext-score-popup' )
-			.attr( 'id', 'mw-ext-score-popup' )
-			.css( 'opacity', 0 );
+			.addClass( 'mw-ext-score-popup' );
 
 		if ( typeof midi !== 'undefined' ) {
 			$popup.append( $( '<a>' )
@@ -31,15 +29,8 @@
 
 		$score.append( $popup );
 
-		// FIXME: Use CSS transition
-		// eslint-disable-next-line jquery/no-animate
-		$popup.animate( {
-			opacity: 1
-		}, {
-			duration: 300,
-			step: function ( now ) {
-				$( this ).css( 'transform', 'translateY( ' + ( -20 + now * 20 ) + 'px )' );
-			}
+		setTimeout( function () {
+			$popup.addClass( 'mw-ext-score-popup-open' );
 		} );
 
 		popupShown = true;
@@ -50,25 +41,17 @@
 		// eslint-disable-next-line jquery/no-global-selector
 		var $popup = $( '.mw-ext-score-popup' ), $score = $popup.closest( '.mw-ext-score' );
 
-		// FIXME: Use CSS transition
-		// eslint-disable-next-line jquery/no-animate
-		$popup.animate( {
-			opacity: 0
-		}, {
-			duration: 300,
-			step: function ( now ) {
-				$( this ).css( 'transform', 'translateY( ' + ( -20 + now * 20 ) + 'px )' );
-			},
-			complete: function () {
-				$score.children( 'img' ).removeAttr( 'aria-describedby' );
-				$popup.remove();
-				popupShown = false;
+		$popup.removeClass( 'mw-ext-score-popup-open' );
 
-				if ( callback ) {
-					callback();
-				}
+		setTimeout( function () {
+			$score.children( 'img' ).removeAttr( 'aria-describedby' );
+			$popup.remove();
+			popupShown = false;
+
+			if ( callback ) {
+				callback();
 			}
-		} );
+		}, 100 );
 	}
 
 	$( document ).on( 'click', '.mw-ext-score img', function ( e ) {

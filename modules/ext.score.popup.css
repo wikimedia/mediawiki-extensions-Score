@@ -25,6 +25,16 @@
 	background: #fff;
 	box-shadow: 0 3px 15px rgba( 0, 0, 0, 0.2 );
 	text-align: center;
+	transform: translateY( -20px );
+	opacity: 0;
+}
+
+.mw-ext-score-popup-open {
+	-webkit-transition: transform 100ms, opacity 100ms;
+	-moz-transition: transform 100ms, opacity 100ms;
+	transition: transform 100ms, opacity 100ms;
+	transform: translateY( 0 );
+	opacity: 1;
 }
 
 /* Triangle on the bottom of popup */
