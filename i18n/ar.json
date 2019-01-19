@@ -3,7 +3,8 @@
 		"authors": [
 			"زكريا",
 			"Abanima",
-			"ديفيد"
+			"ديفيد",
+			"Meno25"
 		]
 	},
 	"score-abc2lynotexecutable": "تعذر تنفيذ ABC لمحول LilyPond: $1 ليس ملفًا قابلا للتنفيذ; تأكد من تعيين <code>$wgScoreAbc2Ly</code> بشكل صحيح.",
@@ -47,6 +48,7 @@
 	"score-visualeditor-mwscoreinspector-card-audio": "صوت",
 	"score-visualeditor-mwscoreinspector-card-notation": "تدوين",
 	"score-visualeditor-mwscoreinspector-lang": "لغة",
+	"score-visualeditor-mwscoreinspector-lang-lilypond": "ليلي بوند",
 	"score-visualeditor-mwscoreinspector-notelanguage": "لغة ترميز",
 	"score-visualeditor-mwscoreinspector-override-midi": "استخدم ملف MIDI موجودا",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "اسم ملف MIDI موجود",
