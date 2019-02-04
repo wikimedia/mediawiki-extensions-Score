@@ -2,8 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Erdemaslancan",
-			"Asmen"
+			"Asmen",
+			"Mirzali"
 		]
 	},
-	"score-page": "Pela $1"
+	"score-page": "Pela $1",
+	"score-visualeditor-mwscoreinspector-card-audio": "Veng"
 }
