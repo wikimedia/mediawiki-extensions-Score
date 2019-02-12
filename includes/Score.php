@@ -208,7 +208,7 @@ class Score {
 	}
 
 	/**
-	 * Renders the score code (LilyPond, ABC, etc.) in a <score>…</score> tag.
+	 * Callback for Parser's hook on 'score' tags. Renders the score code.
 	 *
 	 * @param string $code score code.
 	 * @param array $args array of score tag attributes.
@@ -219,6 +219,20 @@ class Score {
 	 * @return string Image link HTML, and possibly anchor to MIDI file.
 	 */
 	public static function render( $code, array $args, Parser $parser, PPFrame $frame ) {
+		return self::renderScore( $code, $args, $parser );
+	}
+
+	/**
+	 * Renders the score code (LilyPond, ABC, etc.) in a <score>…</score> tag.
+	 *
+	 * @param string $code score code.
+	 * @param array $args array of score tag attributes.
+	 * @param Parser $parser Parser of Mediawiki.
+	 *
+	 * @throws ScoreException
+	 * @return string Image link HTML, and possibly anchor to MIDI file.
+	 */
+	public static function renderScore( $code, array $args, Parser $parser ) {
 		global $wgTmpDirectory, $wgScoreLame;
 
 		try {
@@ -252,7 +266,10 @@ class Score {
 					throw new ScoreException( wfMessage( 'score-midioverridenotfound',
 						htmlspecialchars( $args['override_midi'] ) ) );
 				}
-				$parser->getOutput()->addImage( $file->getName() );
+				if ( $parser->getOutput() !== null ) {
+					$parser->getOutput()->addImage( $file->getName() );
+				}
+
 				$options['override_midi'] = true;
 				$options['midi_file'] = $file;
 				/* Set output stuff in case audio rendering is requested */
@@ -343,14 +360,18 @@ class Score {
 
 			$html = self::generateHTML( $parser, $code, $options );
 		} catch ( ScoreException $e ) {
-			$parser->addTrackingCategory( 'score-error-category' );
+			if ( $parser->getOutput() !== null ) {
+				$parser->addTrackingCategory( 'score-error-category' );
+			}
 			$html = "$e";
 		}
 
 		// Mark the page as using the score extension, it makes easier
 		// to track all those pages.
-		$scoreNum = $parser->getOutput()->getProperty( 'score' );
-		$parser->getOutput()->setProperty( 'score', $scoreNum += 1 );
+		if ( $parser->getOutput() !== null ) {
+			$scoreNum = $parser->getOutput()->getProperty( 'score' );
+			$parser->getOutput()->setProperty( 'score', $scoreNum += 1 );
+		}
 
 		return $html;
 	}
@@ -402,7 +423,9 @@ class Score {
 	 */
 	private static function generateHTML( &$parser, $code, $options ) {
 		try {
-			$parser->getOutput()->addModules( 'ext.score.popup' );
+			if ( $parser->getOutput() !== null ) {
+				$parser->getOutput()->addModules( 'ext.score.popup' );
+			}
 
 			$backend = self::getBackend();
 			$fileIter = $backend->getFileList(

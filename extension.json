@@ -20,7 +20,8 @@
 	"AutoloadClasses": {
 		"Score": "includes/Score.php",
 		"ScoreException": "includes/ScoreException.php",
-		"ScoreHooks": "includes/ScoreHooks.php"
+		"ScoreHooks": "includes/ScoreHooks.php",
+		"ScoreFormatter": "includes/ScoreFormatter.php"
 	},
 	"ResourceModules": {
 		"ext.score.visualEditor": {
@@ -102,6 +103,12 @@
 		],
 		"SoftwareInfo": [
 			"ScoreHooks::onSoftwareInfo"
+		],
+		"WikibaseClientDataTypes": [
+			"ScoreHooks::onWikibaseClientDataTypes"
+		],
+		"WikibaseRepoDataTypes": [
+			"ScoreHooks::onWikibaseRepoDataTypes"
 		]
 	},
 	"config": {
@@ -115,7 +122,9 @@
 		"ScoreSafeMode": true,
 		"ScorePath": false,
 		"ScoreDirectory": false,
-		"ScoreFileBackend": false
+		"ScoreFileBackend": false,
+		"ScoreMaxLength": 400,
+		"MusicalNotationEnableWikibaseDataType": false
 	},
 	"TrackingCategories": [
 		"score-error-category"
