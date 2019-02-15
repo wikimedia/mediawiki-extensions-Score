@@ -59,5 +59,7 @@
 	"score-visualeditor-mwscoreinspector-raw": "Label for the raw attribute of the score node",
 	"score-visualeditor-mwscoreinspector-title": "Title for the inspector to edit <nowiki><score></nowiki> blocks.",
 	"score-visualeditor-mwscoreinspector-vorbis": "Label for the vorbis attribute of the score node",
-	"datatypes-type-musical-notation": "Name of musical notation data type in Wikibase"
+	"datatypes-type-musical-notation": "Name of musical notation data type in Wikibase",
+	"wikibase-listdatatypes-musical-notation-head": "Label of Musical Notation data type in Special:ListDatatypes page",
+	"wikibase-listdatatypes-musical-notation-body": "Description of Musical Notation data type in Special:ListDataTypes page"
 }
