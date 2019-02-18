@@ -21,7 +21,8 @@
 		"Score": "includes/Score.php",
 		"ScoreException": "includes/ScoreException.php",
 		"ScoreHooks": "includes/ScoreHooks.php",
-		"ScoreFormatter": "includes/ScoreFormatter.php"
+		"ScoreFormatter": "includes/ScoreFormatter.php",
+		"LilypondErrorMessageBeautifier": "includes/LilypondErrorMessageBeautifier.php"
 	},
 	"ResourceModules": {
 		"ext.score.visualEditor": {
