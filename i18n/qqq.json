@@ -58,5 +58,6 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Placeholder for the label for the override_ogg attribute of the score node",
 	"score-visualeditor-mwscoreinspector-raw": "Label for the raw attribute of the score node",
 	"score-visualeditor-mwscoreinspector-title": "Title for the inspector to edit <nowiki><score></nowiki> blocks.",
-	"score-visualeditor-mwscoreinspector-vorbis": "Label for the vorbis attribute of the score node"
+	"score-visualeditor-mwscoreinspector-vorbis": "Label for the vorbis attribute of the score node",
+	"datatypes-type-musical-notation": "Name of musical notation data type in Wikibase"
 }
