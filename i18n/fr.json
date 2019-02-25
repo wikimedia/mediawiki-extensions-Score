@@ -61,5 +61,8 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Nom de fichier audio existant (uniquement au format Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Interpréter comme fichier LilyPond complet",
 	"score-visualeditor-mwscoreinspector-title": "Notation musicale",
-	"score-visualeditor-mwscoreinspector-vorbis": "Inclure un fichier audio (généré automatiquement par défaut)"
+	"score-visualeditor-mwscoreinspector-vorbis": "Inclure un fichier audio (généré automatiquement par défaut)",
+	"datatypes-type-musical-notation": "Notation musicale",
+	"wikibase-listdatatypes-musical-notation-head": "Notation musicale",
+	"wikibase-listdatatypes-musical-notation-body": "Champ de données littéral pour une partition musicale écrite en notation Lilypond."
 }

@@ -42,8 +42,8 @@
 	"score-trimerr": "Не можев да ја скастрам сликата. \n$1\nАко проблемот продолжи да се јавува, задајте <code>$wgScoreTrim=false</code>.",
 	"score-versionerr": "Не можам да ја добијам верзијата на LilyPond.\n$1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Напредно",
-	"score-visualeditor-mwscoreinspector-card-audio": "Аудио",
-	"score-visualeditor-mwscoreinspector-card-notation": "Запис",
+	"score-visualeditor-mwscoreinspector-card-audio": "Звук",
+	"score-visualeditor-mwscoreinspector-card-notation": "Нотација",
 	"score-visualeditor-mwscoreinspector-lang": "Јазик",
 	"score-visualeditor-mwscoreinspector-notelanguage": "Нотен јазик",
 	"score-visualeditor-mwscoreinspector-override-midi": "Користи постоечка MIDI-податотека",
@@ -51,6 +51,9 @@
 	"score-visualeditor-mwscoreinspector-override-ogg": "Користи постоечка аудиоподатотека",
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Назив на постоечката аудиоподатотека (мора да биде Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Ова е целосна LilyPond-податотека",
-	"score-visualeditor-mwscoreinspector-title": "Музички запис",
-	"score-visualeditor-mwscoreinspector-vorbis": "Вклучи аудиоподатотека (се самосоздава по основно)"
+	"score-visualeditor-mwscoreinspector-title": "Музичка нотација",
+	"score-visualeditor-mwscoreinspector-vorbis": "Вклучи аудиоподатотека (се самосоздава по основно)",
+	"datatypes-type-musical-notation": "Музичка нотација",
+	"wikibase-listdatatypes-musical-notation-head": "Музичка нотација",
+	"wikibase-listdatatypes-musical-notation-body": "Поле со буквални податоци за партитири запишани во нотацијата Lilypond."
 }

@@ -11,7 +11,7 @@
 		]
 	},
 	"score-abc2lynotexecutable": "ABC 轉 LilyPond 的轉換器無法執行：$1 不是一個可執行檔，請確定 <code>$wgScoreAbc2Ly</code> 已設定正確。",
-	"score-abcconversionerr": "無法轉換 ABC 檔案為 LilyPond 格式：\n$1",
+	"score-abcconversionerr": "無法轉換 ABC 檔案成 LilyPond 格式：\n$1",
 	"score-audioconversionerr": "無法轉換 MIDI 為 MP3：\n$1",
 	"score-audiooverridenotfound": "您使用 override_audio 參數指定的檔案 \"<nowiki>$1</nowiki>\" 不存在。",
 	"score-backend-error": "無法複製產生的檔案至其最後位置：\n$1",
@@ -57,6 +57,9 @@
 	"score-visualeditor-mwscoreinspector-override-ogg": "使用現有的音訊檔案",
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "使用現有音訊的檔案（需為 Ogg/Vorbis 格式）",
 	"score-visualeditor-mwscoreinspector-raw": "此為完整的 LilyPond 檔案",
-	"score-visualeditor-mwscoreinspector-title": "樂譜",
-	"score-visualeditor-mwscoreinspector-vorbis": "包含一個音訊檔（預設自動產生）"
+	"score-visualeditor-mwscoreinspector-title": "音樂記譜法",
+	"score-visualeditor-mwscoreinspector-vorbis": "包含一個音訊檔（預設自動產生）",
+	"datatypes-type-musical-notation": "音樂記譜法",
+	"wikibase-listdatatypes-musical-notation-head": "音樂記譜法",
+	"wikibase-listdatatypes-musical-notation-body": "用於在 Lilypond 記譜法所編寫樂譜的字面資料欄位。"
 }

@@ -20,5 +20,8 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Olemasoleva helifaili nimi",
 	"score-visualeditor-mwscoreinspector-raw": "See on täielik LilyPondi fail",
 	"score-visualeditor-mwscoreinspector-title": "Noodistik",
-	"score-visualeditor-mwscoreinspector-vorbis": "Lisa helifail (vaikimisi automaatselt genereeritud)"
+	"score-visualeditor-mwscoreinspector-vorbis": "Lisa helifail (vaikimisi automaatselt genereeritud)",
+	"datatypes-type-musical-notation": "Noodistik",
+	"wikibase-listdatatypes-musical-notation-head": "Noodistik",
+	"wikibase-listdatatypes-musical-notation-body": "Literaalandmete väli Lilypondi süntaksis kirjutatud nootide jaoks."
 }

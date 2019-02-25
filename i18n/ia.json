@@ -27,5 +27,7 @@
 	"score-readerr": "Impossibile leger le file $1.",
 	"score-renameerr": "Error durante le displaciamento de files de partitura al directorio de incargamento.",
 	"score-trimerr": "Le imagine non poteva esser taliate:\n$1\nDefini <code>$wgScoreTrim=false</code> si iste problema persiste.",
-	"score-versionerr": "Impossibile obtener le version de LilyPond:\n$1"
+	"score-versionerr": "Impossibile obtener le version de LilyPond:\n$1",
+	"datatypes-type-musical-notation": "Notation musical",
+	"wikibase-listdatatypes-musical-notation-head": "Notation musical"
 }

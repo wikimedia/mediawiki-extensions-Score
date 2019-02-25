@@ -2,9 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Лорд Бъмбъри",
-			"StanProg"
+			"StanProg",
+			"Vlad5250"
 		]
 	},
 	"score-visualeditor-mwscoreinspector-lang": "Език",
-	"score-visualeditor-mwscoreinspector-title": "Музикална нотация"
+	"score-visualeditor-mwscoreinspector-title": "Музикална нотация",
+	"datatypes-type-musical-notation": "Музикална нотация",
+	"wikibase-listdatatypes-musical-notation-head": "Музикална нотация",
+	"wikibase-listdatatypes-musical-notation-body": "Поле с литерални данни за дялове, записани в нотацията Lilypond."
 }

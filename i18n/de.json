@@ -57,5 +57,7 @@
 	"score-visualeditor-mwscoreinspector-raw": "Dies ist eine vollständige LilyPond-Datei",
 	"score-visualeditor-mwscoreinspector-title": "Notenschrift",
 	"score-visualeditor-mwscoreinspector-vorbis": "Eine Audiodatei einbinden (standardmäßig automatisch erzeugt)",
-	"datatypes-type-musical-notation": "Musikalische Notation"
+	"datatypes-type-musical-notation": "Musikalische Notation",
+	"wikibase-listdatatypes-musical-notation-head": "Musikalische Notation",
+	"wikibase-listdatatypes-musical-notation-body": "Literales Datenfeld für eine musikalische Partitur, geschrieben in der Lilypond-Notation."
 }

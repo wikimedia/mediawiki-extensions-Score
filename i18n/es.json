@@ -6,7 +6,8 @@
 			"Macofe",
 			"Ryo567",
 			"Fitoschido",
-			"2axterix2"
+			"2axterix2",
+			"Mynor Archila"
 		]
 	},
 	"score-abc2lynotexecutable": "No se pudo ejecutar el conversor ABC a LilyPond: \"$1\" no es un archivo ejecutable. Asegúrate de que <code>$wgScoreAbc2Ly</code> esté definido correctamente.",
@@ -56,5 +57,7 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Nombre del archivo de audio existente (debe ser Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Este es un archivo completo de LilyPond",
 	"score-visualeditor-mwscoreinspector-title": "Notación musical",
-	"score-visualeditor-mwscoreinspector-vorbis": "Incluir un archivo de audio (generado automáticamente por defecto)"
+	"score-visualeditor-mwscoreinspector-vorbis": "Incluir un archivo de audio (generado automáticamente por defecto)",
+	"datatypes-type-musical-notation": "Notación musical",
+	"wikibase-listdatatypes-musical-notation-head": "Notación musical"
 }

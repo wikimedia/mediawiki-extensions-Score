@@ -56,5 +56,8 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "اسم ملف صوت موجود (يجب أن يكون Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "هذا ملف LilyPond كامل",
 	"score-visualeditor-mwscoreinspector-title": "علامة موسيقية",
-	"score-visualeditor-mwscoreinspector-vorbis": "تضمين ملف صوتي (يتم إنشاؤه آليا بشكل افتراضي)"
+	"score-visualeditor-mwscoreinspector-vorbis": "تضمين ملف صوتي (يتم إنشاؤه آليا بشكل افتراضي)",
+	"datatypes-type-musical-notation": "تدوين موسيقي",
+	"wikibase-listdatatypes-musical-notation-head": "كتابة موسيقية",
+	"wikibase-listdatatypes-musical-notation-body": "مجال بيانات حرفي لمقطوعة موسيقية مكتوبة بأسلوب Lilypond."
 }

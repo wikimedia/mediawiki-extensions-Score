@@ -43,5 +43,7 @@
 	"score-visualeditor-mwscoreinspector-card-audio": "소리",
 	"score-visualeditor-mwscoreinspector-card-notation": "기보",
 	"score-visualeditor-mwscoreinspector-lang": "언어",
-	"score-visualeditor-mwscoreinspector-title": "기보"
+	"score-visualeditor-mwscoreinspector-title": "기보",
+	"datatypes-type-musical-notation": "기보",
+	"wikibase-listdatatypes-musical-notation-head": "기보"
 }
