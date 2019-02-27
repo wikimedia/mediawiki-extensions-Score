@@ -94,7 +94,7 @@ class Score {
 			$output = str_replace( $factoryDir, '...', $output );
 		}
 		throw new ScoreException(
-			$message->params(
+			$message->rawParams(
 				Html::rawElement( 'pre',
 					// Error messages from LilyPond & abc2ly are always English
 					[ 'lang' => 'en', 'dir' => 'ltr' ],
@@ -658,7 +658,6 @@ class Score {
 			$mode,
 			'--png',
 			'--header=texidoc',
-			'--loglevel=ERROR',
 			$factoryLy
 		)
 			->includeStderr()
@@ -670,18 +669,9 @@ class Score {
 			throw new ScoreException( wfMessage( 'score-chdirerr', $oldcwd ) );
 		}
 		if ( $result->getExitCode() != 0 ) {
-			// when input is not raw, we build the final lilypond file content in self::embedLilypondCode
-			// in which the user score input is inserted on the 13th line,  (=> offseted 12 lines).
-			$scoreFirstLineOffset = $options['raw'] ? 0 : 12;
-			$errMsgBeautifier = new LilypondErrorMessageBeautifier( $scoreFirstLineOffset );
-
-			$beautifiedMessage = $errMsgBeautifier->beautifyMessage( $result->getStdout() );
-
-			self::throwCallException(
-				wfMessage( 'score-compilererr' ),
-				$beautifiedMessage,
-				$options['factory_directory']
-			);
+			$output = $result->getStdout() . "\nexited with status: " . $result->getExitCode();
+			self::throwCallException( wfMessage( 'score-compilererr' ), $output,
+				$options['factory_directory'] );
 		}
 
 		if ( !file_exists( $factoryImage ) && !file_exists( $factoryPage1 ) ) {
@@ -857,10 +847,8 @@ LY;
 \\version "$version"
 \\language "$noteLanguage"
 \\score {
-
-$lilypondCode
-$options
-
+	$lilypondCode
+	$options
 }
 LILYPOND;
 
