@@ -62,7 +62,7 @@ class LilypondErrorMessageBeautifier {
 			self::LILYPOND_ERR_REGEX,
 			$message,
 			$errorMatches,
-			PREG_SET_ORDER | PREG_UNMATCHED_AS_NULL
+			PREG_SET_ORDER
 		) ) {
 			return '';
 		}
@@ -76,7 +76,11 @@ class LilypondErrorMessageBeautifier {
 		return implode( self::BEAUTIFIED_ERR_SEPARATOR, $beautifiedMessages );
 	}
 
-	private function formatErrorMatchLine( $errorMatch ) {
+	/**
+	 * @param array $errorMatch
+	 * @return string
+	 */
+	private function formatErrorMatchLine( array $errorMatch ) {
 		return sprintf(
 			self::BEAUTIFIED_ERR_FORMAT,
 			intval( $errorMatch[ 'line' ] ) - $this->scoreFirstLineOffset,
