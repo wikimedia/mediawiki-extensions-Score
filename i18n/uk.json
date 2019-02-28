@@ -5,7 +5,8 @@
 			"Steve.rusyn",
 			"SteveR",
 			"Ата",
-			"Piramidion"
+			"Piramidion",
+			"Vlad5250"
 		]
 	},
 	"score-abc2lynotexecutable": "Не вдалося виконати конвертер ABC у LilyPond:  $1  не є виконуваним файлом. Переконайтеся, що <code>$wgScoreAbc2Ly</code> правильно встановлено.",
@@ -56,5 +57,7 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Назва існуючого аудіофайлу (має бути Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Це — повний файл LilyPond",
 	"score-visualeditor-mwscoreinspector-title": "Нотний запис",
-	"score-visualeditor-mwscoreinspector-vorbis": "Включити аудіофайл (за замовчуванням генерується автоматично)"
+	"score-visualeditor-mwscoreinspector-vorbis": "Включити аудіофайл (за замовчуванням генерується автоматично)",
+	"datatypes-type-musical-notation": "Музична нотація",
+	"wikibase-listdatatypes-musical-notation-head": "Музична нотація"
 }
