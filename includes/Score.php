@@ -332,7 +332,7 @@ class Score {
 				|| array_key_exists( 'vorbis', $args );
 
 			if ( $options['generate_audio']
-				&& !class_exists( TimedMediaTransformOutput::class )
+				&& !ExtensionRegistry::getInstance()->isLoaded( 'TimedMediaHandler' )
 			) {
 				throw new ScoreException( wfMessage( 'score-nomediahandler' ) );
 			}
