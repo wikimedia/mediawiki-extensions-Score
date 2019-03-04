@@ -3,9 +3,12 @@
 		"authors": [
 			"Лорд Бъмбъри",
 			"StanProg",
-			"Vlad5250"
+			"Vlad5250",
+			"Ted Masters"
 		]
 	},
+	"score-error-category": "Страници с грешки при визуализирането на партитура",
+	"score-error-category-desc": "Грешка при визуализирането на партитурата.",
 	"score-visualeditor-mwscoreinspector-lang": "Език",
 	"score-visualeditor-mwscoreinspector-title": "Музикална нотация",
 	"datatypes-type-musical-notation": "Музикална нотация",

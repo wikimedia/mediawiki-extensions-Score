@@ -52,5 +52,8 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Nome d'u file audio esistende (adda essere Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Quiste jè 'nu file LilyPond comblete",
 	"score-visualeditor-mwscoreinspector-title": "Notazione musecale",
-	"score-visualeditor-mwscoreinspector-vorbis": "'Nglude 'nu file audie (autogenerate cumme base)"
+	"score-visualeditor-mwscoreinspector-vorbis": "'Nglude 'nu file audie (autogenerate cumme base)",
+	"datatypes-type-musical-notation": "Notazione musecale",
+	"wikibase-listdatatypes-musical-notation-head": "Notazione musecale",
+	"wikibase-listdatatypes-musical-notation-body": "Cambe de date letterale pe 'nu scritte musecale scritte cu 'na notaizone Lilypond."
 }
