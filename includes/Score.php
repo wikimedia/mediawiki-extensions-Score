@@ -527,7 +527,8 @@ class Score {
 						'width' => $width,
 						'height' => $height,
 						'alt' => $pageNumb,
-						'title' => $pageNumb
+						'title' => $pageNumb,
+						'style' => "margin-bottom:1em"
 					] );
 				}
 			}
