@@ -309,9 +309,7 @@ class Score {
 			/* Override audio file? */
 			if ( array_key_exists( 'override_audio', $args )
 				|| array_key_exists( 'override_ogg', $args ) ) {
-				$overrideAudio = isset( $args['override_ogg'] )
-					? $args['override_ogg']
-					: $args['override_audio'];
+				$overrideAudio = $args['override_ogg'] ?? $args['override_audio'];
 				$t = Title::newFromText( $overrideAudio, NS_FILE );
 				if ( is_null( $t ) ) {
 					throw new ScoreException( wfMessage( 'score-invalidaudiooverride',
