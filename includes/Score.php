@@ -830,10 +830,10 @@ class Score {
 
 		// Check if parameters have already been supplied (hybrid-raw mode)
 		$options = "";
-		if ( !strpos( $lilypondCode, "\\layout" ) ) {
+		if ( strpos( $lilypondCode, "\\layout" ) === false ) {
 			$options .= "\\layout { }\n";
 		}
-		if ( !strpos( $lilypondCode, "\\midi" ) ) {
+		if ( strpos( $lilypondCode, "\\midi" ) === false ) {
 			$options .= <<<LY
 	\\midi {
 		\\context { \Score tempoWholesPerMinute = #(ly:make-moment 100 4) }
