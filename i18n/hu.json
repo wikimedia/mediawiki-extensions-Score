@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Tacsipacsi"
+			"Tacsipacsi",
+			"Máté"
 		]
 	},
 	"score-abc2lynotexecutable": "Az ABC–LilyPond konverter nem futtatható: $1 nem egy végrehajtható fájl. Ellenőrizd, hogy a <code>$wgScoreAbc2Ly</code> változó jól van-e beállítva.",
@@ -47,5 +48,8 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Létező audiofájl neve (Ogg/Vorbis formátum)",
 	"score-visualeditor-mwscoreinspector-raw": "Ez egy teljes LilyPond-fájl",
 	"score-visualeditor-mwscoreinspector-title": "Kotta",
-	"score-visualeditor-mwscoreinspector-vorbis": "Audiofájl mellékelése (alapértelmezetten automatikusan generált)"
+	"score-visualeditor-mwscoreinspector-vorbis": "Audiofájl mellékelése (alapértelmezetten automatikusan generált)",
+	"datatypes-type-musical-notation": "Kotta",
+	"wikibase-listdatatypes-musical-notation-head": "Kotta",
+	"wikibase-listdatatypes-musical-notation-body": "Dallam leírása Lilypond szöveges formátumban."
 }
