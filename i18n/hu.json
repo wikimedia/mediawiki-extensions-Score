@@ -51,5 +51,5 @@
 	"score-visualeditor-mwscoreinspector-vorbis": "Audiofájl mellékelése (alapértelmezetten automatikusan generált)",
 	"datatypes-type-musical-notation": "Kotta",
 	"wikibase-listdatatypes-musical-notation-head": "Kotta",
-	"wikibase-listdatatypes-musical-notation-body": "Dallam leírása Lilypond szöveges formátumban."
+	"wikibase-listdatatypes-musical-notation-body": "Dallam leírása LilyPond szöveges formátumban."
 }

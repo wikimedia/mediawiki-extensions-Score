@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mormegil"
+			"Mormegil",
+			"Matěj Suchánek"
 		]
 	},
 	"score-abc2lynotexecutable": "Nepodařilo se spustit převodník z ABC na LilyPond: $1 není spustitelný soubor. Ověřte, že máte správně nastaveno <code>$wgScoreAbc2Ly</code>.",
@@ -52,5 +53,7 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Název existujícího zvukového souboru (musí to být Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Toto je kompletní soubor ve formátu LilyPond",
 	"score-visualeditor-mwscoreinspector-title": "Hudební notace",
-	"score-visualeditor-mwscoreinspector-vorbis": "Zahrnout zvukový soubor (implicitně vygenerovaný automaticky)"
+	"score-visualeditor-mwscoreinspector-vorbis": "Zahrnout zvukový soubor (implicitně vygenerovaný automaticky)",
+	"datatypes-type-musical-notation": "Hudební notace",
+	"wikibase-listdatatypes-musical-notation-head": "Hudební notace"
 }

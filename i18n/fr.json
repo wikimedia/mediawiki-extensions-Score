@@ -64,5 +64,5 @@
 	"score-visualeditor-mwscoreinspector-vorbis": "Inclure un fichier audio (généré automatiquement par défaut)",
 	"datatypes-type-musical-notation": "Notation musicale",
 	"wikibase-listdatatypes-musical-notation-head": "Notation musicale",
-	"wikibase-listdatatypes-musical-notation-body": "Champ de données littéral pour une partition musicale écrite en notation Lilypond."
+	"wikibase-listdatatypes-musical-notation-body": "Champ de données littéral pour une partition musicale écrite en notation LilyPond."
 }

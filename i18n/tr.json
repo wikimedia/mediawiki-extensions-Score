@@ -7,5 +7,6 @@
 	},
 	"score-download-midi-file": "MIDI dosyasını yükleyin",
 	"score-visualeditor-mwscoreinspector-notelanguage": "Gösterim Dili",
-	"score-visualeditor-mwscoreinspector-title": "Müziksel gösterim"
+	"score-visualeditor-mwscoreinspector-title": "Müziksel gösterim",
+	"wikibase-listdatatypes-musical-notation-body": "LilyPond notasyonunda yazılmış müzik notaları için hazır bilgi alanı."
 }
