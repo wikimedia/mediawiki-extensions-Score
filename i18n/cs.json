@@ -55,5 +55,6 @@
 	"score-visualeditor-mwscoreinspector-title": "Hudební notace",
 	"score-visualeditor-mwscoreinspector-vorbis": "Zahrnout zvukový soubor (implicitně vygenerovaný automaticky)",
 	"datatypes-type-musical-notation": "Hudební notace",
-	"wikibase-listdatatypes-musical-notation-head": "Hudební notace"
+	"wikibase-listdatatypes-musical-notation-head": "Hudební notace",
+	"wikibase-listdatatypes-musical-notation-body": "Literálová datová položka pro hudební partitury zapsané v jazyce LilyPond."
 }
