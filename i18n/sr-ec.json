@@ -3,7 +3,8 @@
 		"authors": [
 			"Сербијана",
 			"Prevodim",
-			"BadDog"
+			"BadDog",
+			"Милан Јелисавчић"
 		]
 	},
 	"score-download-midi-file": "Преузми MIDI датотеку",
@@ -20,5 +21,7 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Име постојеће звучне датотеке (мора бити у Ogg/Vorbis формату)",
 	"score-visualeditor-mwscoreinspector-raw": "Ово је потпуна датотека у LilyPond формату",
 	"score-visualeditor-mwscoreinspector-title": "Нотни запис",
-	"score-visualeditor-mwscoreinspector-vorbis": "Укључи и звучну датотеку (подразумевано се аутоматски генерише)"
+	"score-visualeditor-mwscoreinspector-vorbis": "Укључи и звучну датотеку (подразумевано се аутоматски генерише)",
+	"datatypes-type-musical-notation": "Нотни запис",
+	"wikibase-listdatatypes-musical-notation-head": "Нотни запис"
 }

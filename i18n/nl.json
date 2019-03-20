@@ -7,7 +7,8 @@
 			"Siebrand",
 			"Southparkfan",
 			"Sjoerddebruin",
-			"Mainframe98"
+			"Mainframe98",
+			"Romaine"
 		]
 	},
 	"score-abc2lynotexecutable": "Het conversieprogramma voor ABC naar LilyPond kon niet uitgevoerd worden: $1 is geen uitvoerbaar bestand. Zorg dat de instelling <code>$wgScoreAbc2Ly</code> correct is.",
@@ -50,5 +51,6 @@
 	"score-visualeditor-mwscoreinspector-override-ogg": "Gebruik een bestaand audiobestand",
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Naam van een bestaand audiobestan (moet Ogg/Vorbis zijn)",
 	"score-visualeditor-mwscoreinspector-raw": "Dit is een volledig LilyPond-bestand",
-	"score-visualeditor-mwscoreinspector-title": "Muzieknotatie"
+	"score-visualeditor-mwscoreinspector-title": "Muzieknotatie",
+	"datatypes-type-musical-notation": "muzieknotatie"
 }
