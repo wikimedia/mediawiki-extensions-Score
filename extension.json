@@ -125,7 +125,8 @@
 		"ScoreDirectory": false,
 		"ScoreFileBackend": false,
 		"ScoreMaxLength": 400,
-		"MusicalNotationEnableWikibaseDataType": false
+		"MusicalNotationEnableWikibaseDataType": false,
+		"WikibaseMusicalNotationLineWidthInches": 0
 	},
 	"TrackingCategories": [
 		"score-error-category"

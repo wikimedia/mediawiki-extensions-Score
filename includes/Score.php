@@ -241,6 +241,13 @@ class Score {
 
 			$options = []; // options to self::generateHTML()
 
+			if ( isset( $args['line_width_inches'] ) ) {
+				$lineWidthInches = abs( (float)$args[ 'line_width_inches' ] );
+				if ( $lineWidthInches > 0 ) {
+					$options['line_width_inches'] = $lineWidthInches;
+				}
+			}
+
 			/* temporary working directory to use */
 			$fuzz = md5( mt_rand() );
 			$options['factory_directory'] = $wgTmpDirectory . "/MWLP.$fuzz";
@@ -621,7 +628,13 @@ class Score {
 			if ( $options['raw'] ) {
 				$lilypondCode = $code;
 			} else {
-				$lilypondCode = self::embedLilypondCode( $code, $options['note-language'] );
+				$paperConfig = [];
+				if ( isset( $options['line_width_inches'] ) ) {
+					$paperConfig['line-width'] = $options['line_width_inches'] . "\in";
+				}
+				$paperCode = self::getPaperCode( $paperConfig );
+
+				$lilypondCode = self::embedLilypondCode( $code, $options['note-language'], $paperCode );
 			}
 			$rc = file_put_contents( $factoryLy, $lilypondCode );
 			if ( $rc === false ) {
@@ -668,9 +681,11 @@ class Score {
 			throw new ScoreException( wfMessage( 'score-chdirerr', $oldcwd ) );
 		}
 		if ( $result->getExitCode() != 0 ) {
-			// when input is not raw, we build the final lilypond file content in self::embedLilypondCode
-			// in which the user score input is inserted on the 13th line,  (=> offseted 12 lines).
-			$scoreFirstLineOffset = $options['raw'] ? 0 : 12;
+			// when input is not raw, we build the final lilypond file content
+			// in self::embedLilypondCode. The user input then is not inserted
+			// on the first line in the file we pass to lilypond and so we need
+			// to offset error messages back.
+			$scoreFirstLineOffset = $options['raw'] ? 0 : 7;
 			$errMsgBeautifier = new LilypondErrorMessageBeautifier( $scoreFirstLineOffset );
 
 			$beautifiedMessage = $errMsgBeautifier->beautifyMessage( $result->getStdout() );
@@ -815,17 +830,34 @@ class Score {
 		return [ $width, $height ];
 	}
 
+	private static function getPaperCode( $paperConfig = [] ) {
+		$config = array_merge( [
+			"raggedright" => "##t",
+			"raggedbottom" => "##t",
+			"indent" => "0\\mm",
+		], $paperConfig );
+
+		$paperCode = "\\paper {\n";
+		foreach ( $config as $key => $value ) {
+			$paperCode .= "\t$key = $value\n";
+		}
+		$paperCode .= "}";
+
+		return $paperCode;
+	}
+
 	/**
 	 * Embeds simple LilyPond code in a score block.
 	 *
 	 * @param string $lilypondCode Simple LilyPond code.
 	 * @param string $noteLanguage Language of notes.
+	 * @param string $paperCode
 	 *
 	 * @return string Raw lilypond code.
 	 *
 	 * @throws ScoreException if determining the LilyPond version fails.
 	 */
-	private static function embedLilypondCode( $lilypondCode, $noteLanguage ) {
+	private static function embedLilypondCode( $lilypondCode, $noteLanguage, $paperCode ) {
 		$version = self::getLilypondVersion();
 
 		// Check if parameters have already been supplied (hybrid-raw mode)
@@ -847,11 +879,6 @@ LY;
 \\header {
 	tagline = ##f
 }
-\\paper {
-	raggedright = ##t
-	raggedbottom = ##t
-	indent = 0\mm
-}
 \\version "$version"
 \\language "$noteLanguage"
 \\score {
@@ -860,6 +887,7 @@ $lilypondCode
 $options
 
 }
+$paperCode
 LILYPOND;
 
 		return $raw;
