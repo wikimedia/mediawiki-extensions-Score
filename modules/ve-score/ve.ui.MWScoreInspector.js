@@ -189,10 +189,8 @@ ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
 				noteLanguage = attributes[ 'note-language' ] || null,
 				raw = attributes.raw !== undefined,
 				vorbis = attributes.vorbis === '1',
-				/* eslint-disable camelcase */
 				overrideMidi = attributes.override_midi || '',
 				overrideOgg = attributes.override_ogg || '';
-				/* eslint-enable camelcase */
 
 			// Populate form
 			this.langSelect.selectItemByData( lang );

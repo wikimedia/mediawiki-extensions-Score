@@ -38,7 +38,7 @@
 	}
 
 	function hidePopups( callback ) {
-		// eslint-disable-next-line jquery/no-global-selector
+		// eslint-disable-next-line no-jquery/no-global-selector
 		var $popup = $( '.mw-ext-score-popup' ), $score = $popup.closest( '.mw-ext-score' );
 
 		$popup.removeClass( 'mw-ext-score-popup-open' );
@@ -62,7 +62,7 @@
 		// Hide popup on second click, and if it was on the other score,
 		// then show new popup immediately.
 		if ( popupShown ) {
-			// eslint-disable-next-line jquery/no-global-selector
+			// eslint-disable-next-line no-jquery/no-global-selector
 			sameScore = $score.is( $( '.mw-ext-score-popup' ).parent() );
 
 			hidePopups( function () {
