@@ -26,14 +26,20 @@
 	},
 	"ResourceModules": {
 		"ext.score.visualEditor": {
-			"scripts": [
-				"ve-score/ve.dm.MWScoreNode.js",
-				"ve-score/ve.ce.MWScoreNode.js",
-				"ve-score/ve.ui.MWScoreInspector.js",
-				"ve-score/ve.ui.MWScoreInspectorTool.js"
+			"localBasePath": "modules/ve-score",
+			"remoteExtPath": "Score/modules/ve-score",
+			"packageFiles": [
+				"ve.dm.MWScoreNode.js",
+				"ve.ce.MWScoreNode.js",
+				"ve.ui.MWScoreInspector.js",
+				"ve.ui.MWScoreInspectorTool.js",
+				{
+					"name": "data.json",
+					"callback": "ScoreHooks::getConfigVars"
+				}
 			],
 			"styles": [
-				"ve-score/ve.ui.MWScoreInspector.css"
+				"ve.ui.MWScoreInspector.css"
 			],
 			"dependencies": [
 				"ext.visualEditor.mwcore",
@@ -96,9 +102,6 @@
 		"remoteExtPath": "Score/modules"
 	},
 	"Hooks": {
-		"BeforePageDisplay": [
-			"ScoreHooks::onBeforePageDisplay"
-		],
 		"ParserFirstCallInit": [
 			"ScoreHooks::onParserFirstCallInit"
 		],

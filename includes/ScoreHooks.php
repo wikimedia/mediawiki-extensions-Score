@@ -35,23 +35,17 @@ class ScoreHooks {
 	}
 
 	/**
-	 * Adds needed config variables to the output.
+	 * Provides config variables to JS Score VE code that requires it.
 	 *
-	 * This is attached to the MediaWiki 'BeforePageDisplay' hook.
-	 *
-	 * @param OutputPage &$output The page view.
-	 * @param Skin &$skin The skin that's going to build the UI.
-	 * @return bool Always true.
+	 * @return array
 	 */
-	public static function onBeforePageDisplay( OutputPage &$output, Skin &$skin ) {
-		$output->addJsConfigVars( [
-			'wgScoreNoteLanguages' => array_map(
+	public static function getConfigVars() {
+		return [
+			'noteLanguages' => array_map(
 				'Language::fetchLanguageName',
 				Score::$supportedNoteLanguages
-			),
-			'wgScoreDefaultNoteLanguage' => Score::$defaultNoteLanguage,
-		] );
-		return true;
+			)
+		];
 	}
 
 	/**
