@@ -25,7 +25,7 @@ class LilypondErrorMessageBeautifier {
 	/**
 	 * Lilyponds error reporting line regex, only the line with the error line, column and message.
 	 */
-	const LILYPOND_ERR_REGEX = '/\.ly:(?<line>[0-9]+):(?<column>[0-9]+): error: (?<message>.+)$/m';
+	const LILYPOND_ERR_REGEX = '/\.ly:(?<line>\d+):(?<column>\d+): error: (?<message>.+)$/m';
 
 	const BEAUTIFIED_ERR_FORMAT = "line %d - column %d:\n%s";
 	const BEAUTIFIED_ERR_SEPARATOR = "\n--------\n";
