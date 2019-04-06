@@ -29,8 +29,6 @@
 class ScoreException extends Exception {
 
 	/**
-	 * Constructor.
-	 *
 	 * @param Message $message Message to create error message from. Should have one $1 parameter.
 	 * @param int $code optionally, an error code.
 	 * @param Exception|null $previous Exception that caused this exception.
