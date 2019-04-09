@@ -833,8 +833,6 @@ class Score {
 
 	private static function getPaperCode( $paperConfig = [] ) {
 		$config = array_merge( [
-			"raggedright" => "##t",
-			"raggedbottom" => "##t",
 			"indent" => "0\\mm",
 		], $paperConfig );
 
