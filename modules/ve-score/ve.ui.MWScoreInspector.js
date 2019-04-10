@@ -46,7 +46,7 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 		notationTabPanel, audioTabPanel, advancedTabPanel,
 		language,
 		languageItems = [],
-		languages = require( './data.json' ).noteLanguages;
+		languages = mw.config.get( 'wgScoreNoteLanguages' );
 
 	// Parent method
 	ve.ui.MWScoreInspector.super.prototype.initialize.call( this );
