@@ -1,5 +1,11 @@
 {
 	"root": true,
+	"env": {
+		"commonjs": true
+	},
+	"parserOptions": {
+		"sourceType": "module"
+	},
 	"extends": [
 		"wikimedia/client",
 		"wikimedia/jquery"

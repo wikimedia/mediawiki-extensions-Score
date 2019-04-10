@@ -26,14 +26,15 @@
 	},
 	"ResourceModules": {
 		"ext.score.visualEditor": {
-			"scripts": [
-				"ve-score/ve.dm.MWScoreNode.js",
-				"ve-score/ve.ce.MWScoreNode.js",
-				"ve-score/ve.ui.MWScoreInspector.js",
-				"ve-score/ve.ui.MWScoreInspectorTool.js"
+			"packageFiles": [
+				"ve-score/index.js",
+				"ve-score/ScoreDmNode.js",
+				"ve-score/ScoreCeNode.js",
+				"ve-score/ScoreInspector.js",
+				"ve-score/ScoreInspectorTool.js"
 			],
 			"styles": [
-				"ve-score/ve.ui.MWScoreInspector.css"
+				"ve-score/ScoreInspector.css"
 			],
 			"dependencies": [
 				"ext.visualEditor.mwcore",
