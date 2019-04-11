@@ -22,10 +22,12 @@
 		"ScoreException": "includes/ScoreException.php",
 		"ScoreHooks": "includes/ScoreHooks.php",
 		"ScoreFormatter": "includes/ScoreFormatter.php",
+		"ScoreVeResourceLoaderModule": "includes/ScoreVeResourceLoaderModule.php",
 		"LilypondErrorMessageBeautifier": "includes/LilypondErrorMessageBeautifier.php"
 	},
 	"ResourceModules": {
 		"ext.score.visualEditor": {
+			"class": "ScoreVeResourceLoaderModule",
 			"scripts": [
 				"ve-score/ve.dm.MWScoreNode.js",
 				"ve-score/ve.ce.MWScoreNode.js",
@@ -96,9 +98,6 @@
 		"remoteExtPath": "Score/modules"
 	},
 	"Hooks": {
-		"BeforePageDisplay": [
-			"ScoreHooks::onBeforePageDisplay"
-		],
 		"ParserFirstCallInit": [
 			"ScoreHooks::onParserFirstCallInit"
 		],
