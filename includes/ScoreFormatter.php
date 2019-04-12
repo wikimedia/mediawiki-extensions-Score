@@ -66,22 +66,31 @@ class ScoreFormatter implements ValueFormatter {
 			case SnakFormatter::FORMAT_WIKI:
 				return "<score>$valueString</score>";
 			default:
-				try {
-					$valueHtml = Score::renderScore(
-						$valueString,
-						[],
-						MediaWikiServices::getInstance()->getParser()
-					);
-				} catch ( ScoreException $exception ) {
-					return (string)$exception;
-				}
-
-				if ( $this->format === SnakFormatter::FORMAT_HTML_DIFF ) {
-					$valueHtml = $this->formatDetails( $valueHtml, $valueString );
-				}
-
-				return $valueHtml;
+				return $this->formatAsHtml( $valueString );
 		}
+	}
+
+	private function formatAsHtml( $valueString ) {
+		$args = [];
+
+		global $wgWikibaseMusicalNotationLineWidthInches;
+		$args['line_width_inches'] = $wgWikibaseMusicalNotationLineWidthInches;
+
+		try {
+			$valueHtml = Score::renderScore(
+				$valueString,
+				$args,
+				MediaWikiServices::getInstance()->getParser()
+			);
+		} catch ( ScoreException $exception ) {
+			return (string)$exception;
+		}
+
+		if ( $this->format === SnakFormatter::FORMAT_HTML_DIFF ) {
+			$valueHtml = $this->formatDetails( $valueHtml, $valueString );
+		}
+
+		return $valueHtml;
 	}
 
 	/**
