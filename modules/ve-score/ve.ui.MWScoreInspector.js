@@ -190,18 +190,20 @@ ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
 				raw = attributes.raw !== undefined,
 				vorbis = attributes.vorbis === '1',
 				overrideMidi = attributes.override_midi || '',
-				overrideOgg = attributes.override_ogg || '';
+				overrideOgg = attributes.override_ogg || '',
+				isReadOnly = this.isReadOnly();
 
 			// Populate form
-			this.langSelect.selectItemByData( lang );
-			this.noteLanguageDropdown.getMenu().selectItemByData( noteLanguage );
-			this.rawCheckbox.setSelected( raw );
+			this.langSelect.selectItemByData( lang ).setDisabled( isReadOnly );
+			this.noteLanguageDropdown.getMenu().selectItemByData( noteLanguage )
+				.setDisabled( isReadOnly );
+			this.rawCheckbox.setSelected( raw ).setDisabled( isReadOnly );
 			// vorbis is only set to 1 if an audio file is being auto-generated, but
 			// the checkbox should be checked if an audio file is being auto-generated
 			// OR if an existing file has been specified.
-			this.audioCheckbox.setSelected( vorbis || overrideOgg );
-			this.overrideMidiInput.setValue( overrideMidi );
-			this.overrideOggInput.setValue( overrideOgg );
+			this.audioCheckbox.setSelected( vorbis || overrideOgg ).setDisabled( isReadOnly );
+			this.overrideMidiInput.setValue( overrideMidi ).setReadOnly( isReadOnly );
+			this.overrideOggInput.setValue( overrideOgg ).setReadOnly( isReadOnly );
 
 			// Disable any fields that should be disabled
 			this.toggleDisableRawCheckbox();
@@ -279,7 +281,7 @@ ve.ui.MWScoreInspector.prototype.updateMwData = function ( mwData ) {
  */
 ve.ui.MWScoreInspector.prototype.toggleDisableRawCheckbox = function () {
 	// Disable the checkbox if the language is not LilyPond
-	this.rawCheckbox.setDisabled( this.langSelect.findSelectedItem().getData() !== 'lilypond' );
+	this.rawCheckbox.setDisabled( this.isReadOnly() || this.langSelect.findSelectedItem().getData() !== 'lilypond' );
 };
 
 /**
@@ -287,7 +289,7 @@ ve.ui.MWScoreInspector.prototype.toggleDisableRawCheckbox = function () {
  */
 ve.ui.MWScoreInspector.prototype.toggleDisableNoteLanguageDropdown = function () {
 	// Disable the dropdown if raw mode is used
-	this.noteLanguageDropdown.setDisabled( this.rawCheckbox.isSelected() );
+	this.noteLanguageDropdown.setDisabled( this.isReadOnly() || this.rawCheckbox.isSelected() );
 };
 
 /**
