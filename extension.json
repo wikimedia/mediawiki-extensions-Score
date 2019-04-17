@@ -80,8 +80,10 @@
 			}
 		},
 		"ext.score.popup": {
-			"scripts": "ext.score.popup.js",
-			"styles": "ext.score.popup.css",
+			"localBasePath": "modules/ext.score.popup",
+			"remoteExtPath": "Score/modules/ext.score.popup",
+			"scripts": "popup.js",
+			"styles": "popup.css",
 			"dependencies": [
 				"mediawiki.api"
 			],
