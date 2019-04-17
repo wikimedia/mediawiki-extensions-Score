@@ -82,7 +82,7 @@
 		"ext.score.popup": {
 			"localBasePath": "modules/ext.score.popup",
 			"remoteExtPath": "Score/modules/ext.score.popup",
-			"scripts": "popup.js",
+			"packageFiles": [ "popup.js" ],
 			"styles": "popup.css",
 			"dependencies": [
 				"mediawiki.api"
