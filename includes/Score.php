@@ -37,7 +37,7 @@ class Score {
 	/**
 	 * Version for cache invalidation.
 	 */
-	const CACHE_VERSION = 0;
+	const CACHE_VERSION = 1;
 
 	/**
 	 * Supported score languages.
