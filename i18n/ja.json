@@ -6,7 +6,8 @@
 			"Sujiniku",
 			"Whym",
 			"Otokoume",
-			"Yusuke1109"
+			"Yusuke1109",
+			"Afaz"
 		]
 	},
 	"score-abc2lynotexecutable": "ABC から LilyPond へのコンバーターを実行できません: $1 は実行可能ファイルではありません。<code>$wgScoreAbc2Ly</code> が正しく設定されているか確認してください。",
@@ -43,5 +44,8 @@
 	"score-visualeditor-mwscoreinspector-override-ogg": "存在する音声ファイルを使用",
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "存在する音声ファイルの名前 (Ogg/Vorbis 必須)",
 	"score-visualeditor-mwscoreinspector-title": "楽譜",
-	"score-visualeditor-mwscoreinspector-vorbis": "音声ファイルをふくむ (デフォルトでは自動生成)"
+	"score-visualeditor-mwscoreinspector-vorbis": "音声ファイルをふくむ (デフォルトでは自動生成)",
+	"datatypes-type-musical-notation": "楽譜",
+	"wikibase-listdatatypes-musical-notation-head": "楽譜",
+	"wikibase-listdatatypes-musical-notation-body": "LilyPond形式の楽譜のリテラルデータ。"
 }
