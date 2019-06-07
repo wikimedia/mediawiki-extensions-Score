@@ -21,7 +21,7 @@
 use DataValues\StringValue;
 use MediaWiki\MediaWikiServices;
 use ValueFormatters\ValueFormatter;
-use Wikibase\Lib\SnakFormatter;
+use Wikibase\Lib\Formatters\SnakFormatter;
 
 /**
  * Formats Lilypond string based on the known formats
