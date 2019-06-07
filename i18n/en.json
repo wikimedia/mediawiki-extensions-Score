@@ -11,6 +11,8 @@
 	"score-cleanerr": "Unable to clean out old files before re-rendering",
 	"score-compilererr": "Unable to compile LilyPond input file:\n$1",
 	"score-convertoverrideaudio": "You cannot request audio rendering and specify override_audio at the same time.",
+	"score-deprecated-category": "Pages using deprecated score attributes",
+	"score-deprecated-category-desc": "These pages use options provided by the Score extension which are deprecated. These are: \"override_audio\", \"override_ogg\", and \"override_midi\".",
 	"score-desc": "Adds a tag for rendering musical scores with LilyPond",
 	"score-download-midi-file": "Download MIDI file",
 	"score-download-source-file": "Download LilyPond file",

@@ -287,6 +287,7 @@ class Score {
 				$options['audio_storage_path'] = "$baseStoragePath/$audioRel";
 				$options['audio_url'] = "$baseUrl/$audioRel";
 				$options['audio_sha_name'] = "$sha1.{$options['audio_extension']}";
+				$parser->addTrackingCategory( 'score-deprecated-category' );
 			} else {
 				$options['override_midi'] = false;
 			}
@@ -328,6 +329,7 @@ class Score {
 				}
 				$options['override_audio'] = true;
 				$options['audio_name'] = $overrideAudio;
+				$parser->addTrackingCategory( 'score-deprecated-category' );
 			} else {
 				$options['override_audio'] = false;
 			}

@@ -130,6 +130,7 @@
 		"WikibaseMusicalNotationLineWidthInches": 0
 	},
 	"TrackingCategories": [
+		"score-deprecated-category",
 		"score-error-category"
 	],
 	"VisualEditorPluginModules": [
