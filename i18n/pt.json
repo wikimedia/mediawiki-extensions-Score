@@ -7,7 +7,8 @@
 			"Vitorvicentevalente",
 			"Hamilton Abreu",
 			"MokaAkashiyaPT",
-			"Athena in Wonderland"
+			"Athena in Wonderland",
+			"Waldyrious"
 		]
 	},
 	"score-abc2lynotexecutable": "Não foi possível executar o conversor de ABC para LilyPond: $1 não é um ficheiro executável. Certifique-se de que <code>$wgScoreAbc2Ly</code> está definido corretamente.",
