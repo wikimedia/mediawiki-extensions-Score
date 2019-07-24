@@ -13,6 +13,8 @@
 	"score-cleanerr": "Не можам да ги исчистам старите податотеки пред да извршам повторен испис",
 	"score-compilererr": "Не можам да составам влезна податотека за LilyPond:\n$1",
 	"score-convertoverrideaudio": "Не можете истовремено да побарате звучен испис и да укажете override_audio.",
+	"score-deprecated-category": "Страници со застарени партитурни атрибути",
+	"score-deprecated-category-desc": "Овие страници користат можности што ги дава додатокот „Партитура“ кои се застарени. Тие се: „override_audio“, „override_ogg“ и „override_midi“.",
 	"score-desc": "Додава ознака за испис на музички партитури со LilyPond",
 	"score-download-midi-file": "Преземи MIDI-податотека",
 	"score-download-source-file": "Преземи LilyPond-податотека",

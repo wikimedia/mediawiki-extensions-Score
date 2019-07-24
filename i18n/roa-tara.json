@@ -13,6 +13,8 @@
 	"score-cleanerr": "'Mbossibbele pulezzà le vecchie file apprime de refà 'u rendering",
 	"score-compilererr": "Non ge se riesce a combilà 'u file de ingresse LilyPond:\n$1",
 	"score-convertoverrideaudio": "Non g'è possibbele cercà 'nu rendering audie e specificà override_aufio jndr'à 'u stesse mumende.",
+	"score-deprecated-category": "Pàgene ca ausane le attrebbute de pundegge deprecate",
+	"score-deprecated-category-desc": "Ste pàggene ausane opziune date da l'estenzione Pundegge ca sò deprecate. Chiste sò: \"override_audio\", \"override_ogg\" e \"override_midi\".",
 	"score-desc": "Aggiunge 'nu tag pe renderizzà le spartite musecale cu LilyPond",
 	"score-download-midi-file": "Scareche 'u file MIDI",
 	"score-download-source-file": "Scareche 'u file LilyPond",

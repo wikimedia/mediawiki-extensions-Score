@@ -16,6 +16,8 @@
 	"score-cleanerr": "غير قادر على تنظيف الملفات القديمة قبل إعادة التقديم",
 	"score-compilererr": "غير قادر على ترجمة ملف إدخال LilyPond:\n$1",
 	"score-convertoverrideaudio": "لا يمكنك طلب تقديم الصوت وتحديد override_audio في نفس الوقت.",
+	"score-deprecated-category": "الصفحات التي تستخدم سمات النقاط المهملة",
+	"score-deprecated-category-desc": "تستخدم هذه الصفحات الخيارات التي يوفرها امتداد النقاط التي تم إهمالها، هذه هي: \"override_audio\" و\"override_ogg\" و\"override_midi\".",
 	"score-desc": "يضيف وسم لتقديم نتائج موسيقية بـLilyPond",
 	"score-download-midi-file": "تنزيل ملف MIDI",
 	"score-download-source-file": "تنزيل ملف LilyPond",
