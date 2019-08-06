@@ -18,6 +18,8 @@
 	"score-cleanerr": "Не в змозі очистити старі файли перед повторною візуалізацією",
 	"score-compilererr": "Не вдалося компілювати вхідний файл LilyPond:\n$1",
 	"score-convertoverrideaudio": "Не можна надсилати запит на рендеринг аудіофайлу і водночас вказувати override_audio.",
+	"score-deprecated-category": "Сторінки, що використовують застарілі нотні атрибути",
+	"score-deprecated-category-desc": "Ці сторінки використовують опції розширення Score, які вже застаріли, а саме: «override_audio», «override_ogg» та «override_midi».",
 	"score-desc": "Додає тег для відтворення музичних партитур з LilyPond",
 	"score-download-midi-file": "Завантажити файл MIDI",
 	"score-download-source-file": "Завантажити файл LilyPond",
@@ -59,5 +61,6 @@
 	"score-visualeditor-mwscoreinspector-title": "Нотний запис",
 	"score-visualeditor-mwscoreinspector-vorbis": "Включити аудіофайл (за замовчуванням генерується автоматично)",
 	"datatypes-type-musical-notation": "Музична нотація",
-	"wikibase-listdatatypes-musical-notation-head": "Музична нотація"
+	"wikibase-listdatatypes-musical-notation-head": "Музична нотація",
+	"wikibase-listdatatypes-musical-notation-body": "Буквене поле даних для нотного запису, написаного у нотації LilyPond."
 }
