@@ -4,7 +4,8 @@
 			"Crt",
 			"VezonThunder",
 			"Hunsvotti",
-			"Valtlait"
+			"Valtlait",
+			"Stryn"
 		]
 	},
 	"score-abcconversionerr": "ABC-tiedoston muuttaminen LilyPond-muotoon ei onnistunut: $1",
@@ -34,7 +35,7 @@
 	"score-visualeditor-mwscoreinspector-override-midi": "Käytä olemassa olevaa MIDI-tiedostoa",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Olemassa olevan MIDI-tiedoston nimi",
 	"score-visualeditor-mwscoreinspector-override-ogg": "Käytä olemassa olevaa ääntitiedostoa",
-	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Olemassa olevan äänitiedoston nimi (täytyy olla tyypiltään Ogg/Vorbis)",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Olemassa olevan äänitiedoston nimi (täytyy olla Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Tämä on täydellinen LilyPond-tiedosto",
 	"score-visualeditor-mwscoreinspector-title": "Nuottikirjoitus",
 	"score-visualeditor-mwscoreinspector-vorbis": "Sisällytä äänitiedosto (luodaan oletuksena automaattisesti)"
