@@ -10,7 +10,8 @@
 			"Sherbrooke",
 			"Macofe",
 			"Wladek92",
-			"Urhixidur"
+			"Urhixidur",
+			"Thibaut120094"
 		]
 	},
 	"score-abc2lynotexecutable": "Le convertisseur ABC vers LilyPond n'a pas pu être exécuté: $1 n'est pas un fichier exécutable. Assurez-vous que <code>$wgScoreAbc2Ly</code> est défini correctement.",
@@ -23,7 +24,7 @@
 	"score-compilererr": "Impossible de compiler le fichier d’entrée LilyPond :\n$1",
 	"score-convertoverrideaudio": "Vous ne pouvez pas demander de rendu audio et spécifier override_audio en même temps.",
 	"score-deprecated-category": "Pages utilisant des attributs de score obsolètes",
-	"score-deprecated-category-desc": "Ces pages utilisent des options fournies par l’extension Score qui est obsolète. Ce sont « override_audio », « override_ogg » et « override_midi ».",
+	"score-deprecated-category-desc": "Ces pages utilisent des options fournies par l’extension Score qui est obsolète. Ce sont « override_audio », « override_ogg » et « override_midi ».",
 	"score-desc": "Ajoute une balise pour le rendu d’extraits musicaux avec LilyPond",
 	"score-download-midi-file": "Télécharger le fichier MIDI",
 	"score-download-source-file": "Télécharger le fichier LilyPond",
