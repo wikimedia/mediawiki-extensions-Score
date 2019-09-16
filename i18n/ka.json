@@ -11,6 +11,7 @@
 	"score-visualeditor-mwscoreinspector-lang": "ენა",
 	"score-visualeditor-mwscoreinspector-lang-abc": "ABC",
 	"score-visualeditor-mwscoreinspector-lang-lilypond": "LilyPond",
+	"score-visualeditor-mwscoreinspector-notelanguage": "აღნიშვნის ენა",
 	"score-visualeditor-mwscoreinspector-override-midi": "არსებული MIDI ფაილის გამოყენება",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "არსებული MIDI ფაილის სახელი",
 	"score-visualeditor-mwscoreinspector-override-ogg": "არსებული აუდიო ფაილის გამოყენება",
