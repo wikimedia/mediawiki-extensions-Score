@@ -15,7 +15,7 @@ module.exports = function ( grunt ) {
 				cache: true
 			},
 			all: [
-				'**/*.js{,on}',
+				'**/*.{js,json}',
 				'!{vendor,node_modules}/**'
 			]
 		},
