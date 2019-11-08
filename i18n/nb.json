@@ -14,6 +14,8 @@
 	"score-cleanerr": "Klarte ikke å fjerne gamle filer før ny rendering",
 	"score-compilererr": "Klarte ikke å kompilere LilyPond-inndatafil:\n$1",
 	"score-convertoverrideaudio": "Du kan ikke be om lydrendering og spesifisere override_audio samtidig.",
+	"score-deprecated-category": "Sider som bruker avleggse musikkattributter",
+	"score-deprecated-category-desc": "Disse sidene bruker alternativer fra Score-utvidelsen som er avleggse. Disse er: «override_audio», «override_ogg» og «override_midi».",
 	"score-desc": "Legger til en tagg for å gjengi partiturer ved hjelp av LilyPond",
 	"score-download-midi-file": "Last ned MIDI-fil",
 	"score-download-source-file": "Last ned LilyPond-fil",
@@ -53,5 +55,8 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Eksisterende lydfil (må være Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Dette er en fullstendig LilyPond-fil",
 	"score-visualeditor-mwscoreinspector-title": "Musikknotasjon",
-	"score-visualeditor-mwscoreinspector-vorbis": "Inkluder en lydfil (autogenerert som standard)"
+	"score-visualeditor-mwscoreinspector-vorbis": "Inkluder en lydfil (autogenerert som standard)",
+	"datatypes-type-musical-notation": "Musikknotasjon",
+	"wikibase-listdatatypes-musical-notation-head": "Musikknotasjon",
+	"wikibase-listdatatypes-musical-notation-body": "Bokstavelig datafelt for musikknoter skrevet med LilyPond-notasjon."
 }
