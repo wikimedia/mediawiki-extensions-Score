@@ -428,7 +428,7 @@ class Score {
 	 * @throws Exception
 	 * @throws ScoreException if an error occurs.
 	 */
-	private static function generateHTML( &$parser, $code, $options ) {
+	private static function generateHTML( Parser $parser, $code, $options ) {
 		try {
 			if ( $parser->getOutput() !== null ) {
 				$parser->getOutput()->addModules( 'ext.score.popup' );
