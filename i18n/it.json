@@ -4,7 +4,8 @@
 			"Beta16",
 			"F. Cosoleto",
 			"Gianfranco",
-			"Macofe"
+			"Macofe",
+			"Daimona Eaytoy"
 		]
 	},
 	"score-abc2lynotexecutable": "Il convertitore ABC a LilyPond non può essere eseguito: $1 non è un file eseguibile. Assicurarsi che <code>$wgScoreAbc2Ly</code> è configurato correttamente.",
@@ -16,6 +17,7 @@
 	"score-cleanerr": "Impossibile ripulire i vecchi file prima di rifare il rendering",
 	"score-compilererr": "Compilazione del file d'input LilyPond fallita:\n$1",
 	"score-convertoverrideaudio": "Non è possibile richiedere un rendering audio e specificare override_audio allo stesso tempo.",
+	"score-deprecated-category": "Pagine che utilizzano attributi deprecati per le partiture",
 	"score-desc": "Aggiunge un tag per il rendering di spartiti musicali con LilyPond",
 	"score-download-midi-file": "Scarica il file MIDI",
 	"score-download-source-file": "Scarica il file LilyPond",
@@ -23,7 +25,7 @@
 	"score-error-category-desc": "Si è verificato un errore durante il rendering della partitura.",
 	"score-getcwderr": "Impossibile accedere alla directory di lavoro corrente",
 	"score-invalidaudiooverride": "Il file \"<nowiki>$1</nowiki>\" che hai specificato con override_audio non è valido. Per favore, specifica solo il nome del file, ometti <nowiki>[[…]]</nowiki> e il prefisso \"{{ns:file}}:\".",
-	"score-invalidlang": "Risultato non valido per il linguaggio lang=\"<nowiki>$1</nowiki>\". I linguaggi attualmente riconosciuti sono lang=\"lilypond\" (predefinito) e lang=\"ABC\".",
+	"score-invalidlang": "Valore non valido per il linguaggio lang=\"<nowiki>$1</nowiki>\". I linguaggi attualmente riconosciuti sono lang=\"lilypond\" (predefinito) e lang=\"ABC\".",
 	"score-lamenotexecutable": "LAME non può essere eseguito: $1 non è un file eseguibile. Assicurarsi che <code>$wgScoreLame</code> sia configurato correttamente.",
 	"score-midioverridenotfound": "Il file \"<nowiki>$1</nowiki>\" che hai specificato con override_midi non è stato trovato. Per favore, specifica solo il nome del file, ometti <nowiki>[[…]]</nowiki> e il prefisso \"{{ns:file}}:\".",
 	"score-noabcinput": "Non è stato possibile creare $1, file sorgente ABC.",
