@@ -56,7 +56,7 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "שם קובץ השמע הקיים (חייב להיות Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "זהו קובץ LilyPond שלם",
 	"score-visualeditor-mwscoreinspector-title": "תווי מוזיקה",
-	"score-visualeditor-mwscoreinspector-vorbis": "לכלול קובץ שמע (מחולל אוטומטית לפי בררת מחדל)",
+	"score-visualeditor-mwscoreinspector-vorbis": "לכלול קובץ שמע (מחולל אוטומטית לפי ברירת מחדל)",
 	"datatypes-type-musical-notation": "תווים מוזיקליים",
 	"wikibase-listdatatypes-musical-notation-head": "תווים מוזיקליים",
 	"wikibase-listdatatypes-musical-notation-body": "שדה נתונים מפורשים לתווים מוזיקליים כתובים בתסדיר LilyPond."
