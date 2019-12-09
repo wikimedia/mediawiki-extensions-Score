@@ -52,5 +52,6 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Naam van een bestaand audiobestan (moet Ogg/Vorbis zijn)",
 	"score-visualeditor-mwscoreinspector-raw": "Dit is een volledig LilyPond-bestand",
 	"score-visualeditor-mwscoreinspector-title": "Muzieknotatie",
-	"datatypes-type-musical-notation": "muzieknotatie"
+	"datatypes-type-musical-notation": "muzieknotatie",
+	"wikibase-listdatatypes-musical-notation-head": "Muzieknotatie"
 }

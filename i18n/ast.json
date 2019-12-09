@@ -13,6 +13,8 @@
 	"score-cleanerr": "Non se pudieron llimpiar los ficheros vieyos enantes de volver a renderizar",
 	"score-compilererr": "Nun se pudo compilar el ficheru d'entrada LilyPond:\n$1",
 	"score-convertoverrideaudio": "Nun puedes solicitar una renderización de soníu y especificar override_audio al mesmu tiempu.",
+	"score-deprecated-category": "Páxines qu'usen atributos de notación anticuaos",
+	"score-deprecated-category-desc": "Estes páxines usen opciones proporcionaes pola estensión Score que tán anticuaes. Estes son: \"override_audio\", \"override_ogg\", y \"override_midi\".",
 	"score-desc": "Amiesta una etiqueta pa renderizar partitures musicales con LilyPond",
 	"score-download-midi-file": "Descargar el ficheru MIDI",
 	"score-download-source-file": "Descargar el ficheru de Lilypond",
@@ -52,5 +54,8 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Nome del ficheru de soníu esistente (tien de ser Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Esti ye un ficheru de LilyPond completu",
 	"score-visualeditor-mwscoreinspector-title": "Notación musical",
-	"score-visualeditor-mwscoreinspector-vorbis": "Incluyir un ficheru de soníu (xeneráu automáticamente de mou predetermináu)"
+	"score-visualeditor-mwscoreinspector-vorbis": "Incluyir un ficheru de soníu (xeneráu automáticamente de mou predetermináu)",
+	"datatypes-type-musical-notation": "Notación musical",
+	"wikibase-listdatatypes-musical-notation-head": "Notación musical",
+	"wikibase-listdatatypes-musical-notation-body": "Campu de datos lliteral d'una partitura musical escrita en notación LilyPond."
 }
