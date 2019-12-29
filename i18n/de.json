@@ -17,6 +17,8 @@
 	"score-cleanerr": "Die alten Dateien konnten vor dem erneuten Berechnen nicht bereinigt werden",
 	"score-compilererr": "Die Eingabedatei von LilyPond konnte nicht kompiliert werden:\n$1",
 	"score-convertoverrideaudio": "Du kannst nicht gleichzeitig eine Audiorenderung anfordern und override_audio angeben.",
+	"score-deprecated-category": "Seiten mit veralteten score-Attributen",
+	"score-deprecated-category-desc": "Diese Seiten verwenden Optionen der Score-Extension, die veraltet sind. Dies sind  \"override_audio\", \"override_ogg\" und \"override_midi\".",
 	"score-desc": "Erweitert das Wiki um einen Befehl zum Einbetten und Zeigen von Partituren mit LilyPond",
 	"score-download-midi-file": "MIDI-Datei herunterladen",
 	"score-download-source-file": "LilyPond-Datei herunterladen",
