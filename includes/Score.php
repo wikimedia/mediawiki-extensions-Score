@@ -249,7 +249,7 @@ class Score {
 			}
 
 			/* temporary working directory to use */
-			$fuzz = md5( mt_rand() );
+			$fuzz = md5( (string)mt_rand() );
 			$options['factory_directory'] = $wgTmpDirectory . "/MWLP.$fuzz";
 
 			/* Score language selection */
