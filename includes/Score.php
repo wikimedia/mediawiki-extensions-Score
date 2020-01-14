@@ -150,7 +150,7 @@ class Score {
 	 * Otherwise does nothing.
 	 *
 	 * @param string $path Local path to directory to be created.
-	 * @param int $mode Chmod value of the new directory.
+	 * @param int|null $mode Chmod value of the new directory.
 	 *
 	 * @throws ScoreException if the directory does not exist and could not
 	 * 	be created.
@@ -319,7 +319,7 @@ class Score {
 				|| array_key_exists( 'override_ogg', $args ) ) {
 				$overrideAudio = $args['override_ogg'] ?? $args['override_audio'];
 				$t = Title::newFromText( $overrideAudio, NS_FILE );
-				if ( is_null( $t ) ) {
+				if ( $t === null ) {
 					throw new ScoreException( wfMessage( 'score-invalidaudiooverride',
 						htmlspecialchars( $overrideAudio ) ) );
 				}
