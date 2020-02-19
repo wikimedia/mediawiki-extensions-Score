@@ -9,7 +9,8 @@
 			"Hudafu",
 			"Liuxinyu970226",
 			"Duolaimi",
-			"Suesue"
+			"Suesue",
+			"Xiplus"
 		]
 	},
 	"score-abc2lynotexecutable": "无法运行ABC转LilyPond转换器：$1不是可执行文件。请确认<code>$wgScoreAbc2Ly</code>设置正确。",
@@ -21,6 +22,8 @@
 	"score-cleanerr": "在重新渲染前无法清空旧文件",
 	"score-compilererr": "无法编译 LilyPond 输入的文件：\n$1",
 	"score-convertoverrideaudio": "您不能在请求音频渲染的同时指定override_audio。",
+	"score-deprecated-category": "使用弃用乐谱属性的页面",
+	"score-deprecated-category-desc": "这些页面使用乐谱扩展弃用的选项“override_audio”、“override_ogg”和“override_midi”。",
 	"score-desc": "添加一个标记来以LilyPond呈现乐谱",
 	"score-download-midi-file": "下载MIDI文件",
 	"score-download-source-file": "下载LilyPond文件",
@@ -60,5 +63,8 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "现有的音频文件名（必须是Ogg/Vorbis格式）",
 	"score-visualeditor-mwscoreinspector-raw": "有完整的LilyPond文件",
 	"score-visualeditor-mwscoreinspector-title": "音乐符号",
-	"score-visualeditor-mwscoreinspector-vorbis": "包含一个音频文件（默认自动生成）"
+	"score-visualeditor-mwscoreinspector-vorbis": "包含一个音频文件（默认自动生成）",
+	"datatypes-type-musical-notation": "音乐记谱法",
+	"wikibase-listdatatypes-musical-notation-head": "音乐记谱法",
+	"wikibase-listdatatypes-musical-notation-body": "用于在LilyPond记谱法所编写乐谱的字面数据字段。"
 }

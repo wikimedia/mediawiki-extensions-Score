@@ -65,5 +65,5 @@
 	"score-visualeditor-mwscoreinspector-vorbis": "包含一個音訊檔（預設自動產生）",
 	"datatypes-type-musical-notation": "音樂記譜法",
 	"wikibase-listdatatypes-musical-notation-head": "音樂記譜法",
-	"wikibase-listdatatypes-musical-notation-body": "用於在 LilyPond 記譜法所編寫樂譜的字面資料欄位。"
+	"wikibase-listdatatypes-musical-notation-body": "用於在LilyPond記譜法所編寫樂譜的字面資料欄位。"
 }

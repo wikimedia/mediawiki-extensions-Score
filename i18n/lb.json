@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Robby",
-			"Les Meloures"
+			"Les Meloures",
+			"Soued031"
 		]
 	},
 	"score-audioconversionerr": "MIDI konnt net an MP3 ëmgewandelt ginn:\n$1",
@@ -19,6 +20,6 @@
 	"score-visualeditor-mwscoreinspector-notelanguage": "Notatiounssprooch",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Numm vum MIDI-Fichier deen do ass",
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Numm vum Audio-Fichier deen do ass (muss am OGG/Vorbis-Format sinn)",
-	"score-visualeditor-mwscoreinspector-title": "Nouteschréft",
+	"score-visualeditor-mwscoreinspector-title": "Nouteschrëft",
 	"score-visualeditor-mwscoreinspector-vorbis": "En Audio-Fichier abannen (am Standard automatesch generéiert)"
 }
