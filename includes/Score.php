@@ -429,6 +429,7 @@ class Score {
 	 * @throws ScoreException if an error occurs.
 	 */
 	private static function generateHTML( Parser $parser, $code, $options ) {
+		$link = '';
 		try {
 			if ( $parser->getOutput() !== null ) {
 				$parser->getOutput()->addModules( 'ext.score.popup' );
@@ -447,6 +448,8 @@ class Score {
 			$multi1FileName = "{$options['file_name_prefix']}-page1.png";
 			$midiFileName = "{$options['file_name_prefix']}.midi";
 			$metaDataFileName = "{$options['file_name_prefix']}.json";
+			$audioFileName = '';
+			$audioUrl = '';
 
 			if ( isset( $existingFiles[$metaDataFileName] ) ) {
 				$metaDataFile = $backend->getFileContents(
