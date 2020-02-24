@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"NehalDaveND"
+			"NehalDaveND",
+			"हिमाल सुबेदी"
 		]
 	},
-	"score-page": "पृष्ठ $1"
+	"score-page": "पृष्ठ $1",
+	"score-visualeditor-mwscoreinspector-lang": "भाषा"
 }
