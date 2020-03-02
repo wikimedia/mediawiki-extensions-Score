@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"MaGa"
+			"MaGa",
+			"Bugoslav"
 		]
 	},
 	"score-abcconversionerr": "Nije moguće pretvoriti ABC datoteku u LilyPond format:\n$1",
 	"score-compilererr": "Nije moguće sastaviti ulaznu LilyPond datoteku:\n$1",
+	"score-error-category": "Stranice s pogrješkama u ispisu partitura",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Napredno",
 	"score-visualeditor-mwscoreinspector-card-audio": "Zvuk",
 	"score-visualeditor-mwscoreinspector-card-notation": "Zapis",
