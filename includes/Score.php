@@ -23,6 +23,7 @@
 
  */
 
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Shell\Shell;
 
 /**
@@ -268,7 +269,8 @@ class Score {
 
 			/* Override MIDI file? */
 			if ( array_key_exists( 'override_midi', $args ) ) {
-				$file = wfFindFile( $args['override_midi'] );
+				$file = MediaWikiServices::getInstance()->getRepoGroup()
+					->findFile( $args['override_midi'] );
 				if ( $file === false ) {
 					throw new ScoreException( wfMessage( 'score-midioverridenotfound',
 						htmlspecialchars( $args['override_midi'] ) ) );
