@@ -184,7 +184,8 @@ class Score {
 		global $wgScoreFileBackend;
 
 		if ( $wgScoreFileBackend ) {
-			return FileBackendGroup::singleton()->get( $wgScoreFileBackend );
+			return MediaWikiServices::getInstance()->getFileBackendGroup()
+				->get( $wgScoreFileBackend );
 		} else {
 			if ( !self::$backend ) {
 				global $wgScoreDirectory, $wgUploadDirectory;
