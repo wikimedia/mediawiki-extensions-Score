@@ -4,6 +4,8 @@
 			"Pikne"
 		]
 	},
+	"score-deprecated-category": "Vananenud noodiatribuutidega leheküljed",
+	"score-deprecated-category-desc": "Lehekülg kasutab tarkvaralisa Score pakutavaid noodiatribuute, mis on vananenud. Need on: \"override_audio\", \"override_ogg\" ja \"override_midi\".",
 	"score-desc": "Lisab sildi, mis vormistab noodid LilyPondi abil.",
 	"score-download-midi-file": "Laadi alla MIDI-fail",
 	"score-download-source-file": "Laadi alla LilyPondi fail",
