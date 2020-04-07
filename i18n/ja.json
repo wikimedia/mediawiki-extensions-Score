@@ -1,14 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Shirayuki",
+			"Afaz",
 			"Dude1717",
+			"Kkairri",
+			"Otokoume",
+			"Shirayuki",
 			"Sujiniku",
 			"Whym",
-			"Otokoume",
-			"Yusuke1109",
-			"Afaz",
-			"Kkairri"
+			"Yusuke1109"
 		]
 	},
 	"score-abc2lynotexecutable": "ABC から LilyPond へのコンバーターを実行できません: $1 は実行可能ファイルではありません。<code>$wgScoreAbc2Ly</code> が正しく設定されているか確認してください。",

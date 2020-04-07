@@ -2,11 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"BeginaFelicysym",
-			"Matma Rex",
 			"Chrumps",
-			"The Polish",
+			"Matma Rex",
+			"Rail",
 			"Railfail536",
-			"Rail"
+			"The Polish"
 		]
 	},
 	"score-audioconversionerr": "Nie można przekonwertować MIDI na MP3:\n$1",

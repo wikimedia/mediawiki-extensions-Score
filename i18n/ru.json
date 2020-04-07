@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Okras",
-			"Kaganer",
-			"INS Pirat",
+			"Diralik",
 			"Edible Melon",
-			"Diralik"
+			"INS Pirat",
+			"Kaganer",
+			"Okras"
 		]
 	},
 	"score-abc2lynotexecutable": "Не удалось запустить перекодировку из ABC в LilyPond: $1 — не исполняемый файл. Убедитесь, что <code>$wgScoreAbc2Ly</code> установлен правильно.",

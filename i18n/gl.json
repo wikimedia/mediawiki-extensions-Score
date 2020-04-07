@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Toliño",
-			"Elisardojm",
+			"Athena in Wonderland",
 			"Banjo",
-			"Athena in Wonderland"
+			"Elisardojm",
+			"Toliño"
 		]
 	},
 	"score-abc2lynotexecutable": "Non se puido executar o conversor ABC a LilyPond: \"$1\" non é un ficheiro executable. Asegúrese de que <code>$wgScoreAbc2Ly</code> está definido correctamente.",

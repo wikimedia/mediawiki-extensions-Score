@@ -2,13 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Konovalov",
+			"Mainframe98",
 			"Patio",
+			"Romaine",
 			"SPQRobin",
 			"Siebrand",
-			"Southparkfan",
 			"Sjoerddebruin",
-			"Mainframe98",
-			"Romaine"
+			"Southparkfan"
 		]
 	},
 	"score-abc2lynotexecutable": "Het conversieprogramma voor ABC naar LilyPond kon niet uitgevoerd worden: $1 is geen uitvoerbaar bestand. Zorg dat de instelling <code>$wgScoreAbc2Ly</code> correct is.",

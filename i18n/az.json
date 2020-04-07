@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Wertuose",
-			"Neriman2003"
+			"Neriman2003",
+			"Wertuose"
 		]
 	},
 	"score-invalidnotelanguage": "Yanlış note-language = \"<nowiki> $1 </ nowiki>\". Hal-hazırda tanınan note-language-lar: $2",

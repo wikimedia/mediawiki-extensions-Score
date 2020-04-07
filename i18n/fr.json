@@ -4,15 +4,15 @@
 			"Crochet.david",
 			"Gomoko",
 			"Hello71",
+			"Macofe",
 			"Od1n",
 			"Orlodrim",
 			"Seb35",
 			"Sherbrooke",
-			"Macofe",
-			"Wladek92",
-			"Urhixidur",
 			"Thibaut120094",
-			"Verdy p"
+			"Urhixidur",
+			"Verdy p",
+			"Wladek92"
 		]
 	},
 	"score-abc2lynotexecutable": "Le convertisseur ABC vers LilyPond n'a pas pu être exécuté: $1 n'est pas un fichier exécutable. Assurez-vous que <code>$wgScoreAbc2Ly</code> est défini correctement.",

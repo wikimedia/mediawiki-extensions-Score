@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kghbln",
-			"Metalhead64",
-			"Purodha",
 			"Inkowik",
-			"Macofe"
+			"Kghbln",
+			"Macofe",
+			"Metalhead64",
+			"Purodha"
 		]
 	},
 	"score-abc2lynotexecutable": "Der Konverter von ABC nach LilyPond konnte nicht ausgeführt werden: $1 ist keine ausführbare Datei. Es muss sichergestellt sein, dass <code>$wgScoreAbc2Ly</code> in der Konfigurationsdatei richtig eingestellt wurde.",

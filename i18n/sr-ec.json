@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Сербијана",
-			"Prevodim",
 			"BadDog",
-			"Милан Јелисавчић"
+			"Prevodim",
+			"Милан Јелисавчић",
+			"Сербијана"
 		]
 	},
 	"score-download-midi-file": "Преузми MIDI датотеку",

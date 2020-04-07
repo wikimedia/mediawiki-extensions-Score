@@ -1,13 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"2axterix2",
 			"Armando-Martin",
 			"Dalton2",
-			"Macofe",
-			"Ryo567",
 			"Fitoschido",
-			"2axterix2",
-			"Mynor Archila"
+			"Macofe",
+			"Mynor Archila",
+			"Ryo567"
 		]
 	},
 	"score-abc2lynotexecutable": "No se pudo ejecutar el conversor ABC a LilyPond: \"$1\" no es un archivo ejecutable. Asegúrate de que <code>$wgScoreAbc2Ly</code> esté definido correctamente.",

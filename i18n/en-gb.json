@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"Hunsvotti",
 			"Shirayuki",
-			"Tom29739",
-			"Hunsvotti"
+			"Tom29739"
 		]
 	},
 	"score-download-midi-file": "Download MIDI file",

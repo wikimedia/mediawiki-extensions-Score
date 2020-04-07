@@ -2,10 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
+			"Daimona Eaytoy",
 			"F. Cosoleto",
 			"Gianfranco",
-			"Macofe",
-			"Daimona Eaytoy"
+			"Macofe"
 		]
 	},
 	"score-abc2lynotexecutable": "Il convertitore ABC a LilyPond non può essere eseguito: $1 non è un file eseguibile. Assicurarsi che <code>$wgScoreAbc2Ly</code> è configurato correttamente.",

@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Shirayuki",
-			"Umherirrender",
-			"Robby",
+			"Liuxinyu970226",
 			"Raymond",
-			"Liuxinyu970226"
+			"Robby",
+			"Shirayuki",
+			"Umherirrender"
 		]
 	},
 	"score-abc2lynotexecutable": "{{doc-important|Do not translate \"$wgScoreAbc2Ly\" argument.}}\nDisplayed if the ABC to LilyPond converter could not be executed. $1 is the path to the abc2ly binary.",

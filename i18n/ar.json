@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"زكريا",
 			"Abanima",
+			"Meno25",
 			"ديفيد",
-			"Meno25"
+			"زكريا"
 		]
 	},
 	"score-abc2lynotexecutable": "تعذر تنفيذ ABC لمحول LilyPond: $1 ليس ملفًا قابلا للتنفيذ; تأكد من تعيين <code>$wgScoreAbc2Ly</code> بشكل صحيح.",

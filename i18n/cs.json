@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mormegil",
-			"Matěj Suchánek"
+			"Matěj Suchánek",
+			"Mormegil"
 		]
 	},
 	"score-abc2lynotexecutable": "Nepodařilo se spustit převodník z ABC na LilyPond: $1 není spustitelný soubor. Ověřte, že máte správně nastaveno <code>$wgScoreAbc2Ly</code>.",

@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Tacsipacsi",
-			"Máté"
+			"Máté",
+			"Tacsipacsi"
 		]
 	},
 	"score-abc2lynotexecutable": "Az ABC–LilyPond konverter nem futtatható: $1 nem egy végrehajtható fájl. Ellenőrizd, hogy a <code>$wgScoreAbc2Ly</code> változó jól van-e beállítva.",

@@ -2,11 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Andriykopanytsia",
+			"Piramidion",
 			"Steve.rusyn",
 			"SteveR",
-			"Ата",
-			"Piramidion",
-			"Vlad5250"
+			"Vlad5250",
+			"Ата"
 		]
 	},
 	"score-abc2lynotexecutable": "Не вдалося виконати конвертер ABC у LilyPond:  $1  не є виконуваним файлом. Переконайтеся, що <code>$wgScoreAbc2Ly</code> правильно встановлено.",

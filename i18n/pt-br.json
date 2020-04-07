@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Luckas",
-			"Dianakc",
 			"Almondega",
+			"Dianakc",
+			"Eduardo Addad de Oliveira",
 			"Felipe L. Ewald",
-			"Eduardo Addad de Oliveira"
+			"Luckas"
 		]
 	},
 	"score-abc2lynotexecutable": "O conversor ABC para LilyPond não pode ser executado: executed: $1 não é um arquivo executável. Certifique-se que o <code>$wgScoreAbc2Ly</code> está configurado corretamente.",

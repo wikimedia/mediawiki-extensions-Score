@@ -2,10 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Crt",
-			"VezonThunder",
 			"Hunsvotti",
+			"Stryn",
 			"Valtlait",
-			"Stryn"
+			"VezonThunder"
 		]
 	},
 	"score-abcconversionerr": "ABC-tiedoston muuttaminen LilyPond-muotoon ei onnistunut: $1",
