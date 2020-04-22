@@ -609,7 +609,7 @@ class Score {
 	 * @param string $code Score code.
 	 * @param array $options Rendering options. They are the same as for
 	 * 	Score::generateHTML().
-	 * @param array $metaData array to hold information about images
+	 * @param array &$metaData array to hold information about images
 	 *
 	 * @return array of file names placed in the remote dest dir, with the
 	 * 	file names in each key.
@@ -906,7 +906,7 @@ LILYPOND;
 	 * @param string $sourceFile The local filename of the MIDI file
 	 * @param array $options array of rendering options.
 	 * @param string $remoteDest The backend storage path to upload the audio file to
-	 * @param array $metaData Array with metadata information
+	 * @param array &$metaData Array with metadata information
 	 *
 	 * @throws ScoreException if an error occurs.
 	 */
