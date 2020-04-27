@@ -29,7 +29,7 @@
 	"score-nocontent": "서버에서 $1 파일을 불러올 수 없습니다.",
 	"score-noimages": "악보 그림을 생성할 수 없습니다. 악보 코드를 확인하세요.",
 	"score-noinput": "$1 LilyPond 입력 파일을 만드는 데 실패했습니다.",
-	"score-nomediahandler": "Ogg/Vorbis 변환기는 \n[https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler 확장 기능]이나 [https://www.mediawiki.org/wiki/Extension:OggHandler OggHandler 확장 기능] 중 하나의 버전의 설치와 설정이 필요합니다.",
+	"score-nomediahandler": "Ogg/Vorbis 변환기는 \n[https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler TimedMediaHandler 확장 기능]이나 [https://www.mediawiki.org/wiki/Extension:OggHandler OggHandler 확장 기능] 중 하나의 버전의 설치와 설정이 필요합니다.",
 	"score-nomidi": "요청했음에도 생성한 MIDI 파일이 없습니다. 원본 LilyPond 모드에서 작업하려면 적절한 \\midi 블록을 제공해야 합니다.",
 	"score-nooutput": "$1 출력 디렉토리를 만드는 데 실패했습니다.",
 	"score-notexecutable": "LilyPond를 실행할 수 없습니다: $1은(는) 실행 파일이 아닙니다. <code>$wgScoreLilyPond</code>가 올바르게 설정되어 있는지 확인하세요.",

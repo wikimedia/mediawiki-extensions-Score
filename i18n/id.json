@@ -29,7 +29,7 @@
 	"score-nocontent": "Tidak dapat memuat berkas $1 dari peladen.",
 	"score-noimages": "Tidak ada citra partitur yang dihasilkan. Harap periksa kode partitur Anda.",
 	"score-noinput": "Gagal membuat berkas masukan LilyPond $1.",
-	"score-nomediahandler": "Konversi audio memerlukan versi [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler ekstensi TimedMediaHandler] yang sudah dikonfigurasi dan dipasang.",
+	"score-nomediahandler": "Konversi audio memerlukan versi [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler ekstensi TimedMediaHandler] yang sudah dikonfigurasi dan dipasang.",
 	"score-nomidi": "Tidak ada berkas MIDI yang dihasilkan meski sudah diminta. Jika Anda bekerja dalam mode LilyPond mentah, jangan lupa untuk menyediakan blok \\midi yang layak.",
 	"score-nooutput": "Gagal membuat direktori keluaran $1.",
 	"score-notelanguagewithraw": "Atribut \"note-language\" tidak dapat digunakan untuk partitur mode mentah",

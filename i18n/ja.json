@@ -34,7 +34,7 @@
 	"score-nocontent": "サーバーからファイル $1 を読み込めません。",
 	"score-noimages": "楽譜画像を生成できませんでした。ソースコードを確認してください。",
 	"score-noinput": "LilyPond 入力ファイル $1 の作成に失敗しました。",
-	"score-nomediahandler": "オーディオ変換には、[https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler 拡張機能]のバージョンのインストールおよび設定が必要です。",
+	"score-nomediahandler": "オーディオ変換には、[https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler TimedMediaHandler 拡張機能]のバージョンのインストールおよび設定が必要です。",
 	"score-nooutput": "出力ディレクトリ $1 の作成に失敗しました。",
 	"score-notexecutable": "LilyPond を実行できませんでした: $1 は実行可能ファイルではありません。<code>$wgScoreLilyPond</code> が正しく設定されているか確認してください。",
 	"score-page": "ページ $1",

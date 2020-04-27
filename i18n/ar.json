@@ -34,7 +34,7 @@
 	"score-nocontent": "تعذر تحميل الملف $1 من الخادم.",
 	"score-noimages": "لم يتم إنشاء أية صورلنتيجة; يرجى التحقق من رمز نقاطك.",
 	"score-noinput": "أخفق إنشاء ملف إدخال LilyPond $1.",
-	"score-nomediahandler": "يتطلب التحويل الصوتي إصدارا تم تثبيته وتكوينه من  [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler تمديد TimedMediaHandler].",
+	"score-nomediahandler": "يتطلب التحويل الصوتي إصدارا تم تثبيته وتكوينه من  [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler تمديد TimedMediaHandler].",
 	"score-nomidi": "لم يتم إنشاء أي ملف MIDI بالرغم من طلبه، إذا كنت تعمل في وضع LilyPond الخام، تأكد من توفير كتلة \\midi مناسبة.",
 	"score-nooutput": "فشل إنشاء دليل المخرجات $1.",
 	"score-notelanguagewithraw": "لا يمكن استخدام سمة \"note-language\" لنقاط وضع خام",

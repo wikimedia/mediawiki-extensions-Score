@@ -8,7 +8,7 @@
 	},
 	"score-download-source-file": "Λήψη αρχείου LilyPond",
 	"score-error-category": "Σελίδες με σφάλματα απόδοσης παρτιτούρας",
-	"score-nomediahandler": " Η μετατροπή Ogg/Vorbis απαιτεί εγκαταστημένη και διαμορφωμένη εκδοχή του  [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler extension].",
+	"score-nomediahandler": " Η μετατροπή Ogg/Vorbis απαιτεί εγκαταστημένη και διαμορφωμένη εκδοχή του  [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler TimedMediaHandler extension].",
 	"score-page": "Σελίδα $1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Προχωρημένο",
 	"score-visualeditor-mwscoreinspector-card-audio": "Ήχος",

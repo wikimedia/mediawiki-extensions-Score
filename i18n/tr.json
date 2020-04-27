@@ -33,7 +33,7 @@
 	"score-nocontent": "Sunucudan $1 dosyası yüklenemedi.",
 	"score-noimages": "Hiçbir skor görüntüsü oluşturulmadı. Lütfen puan kodunuzu kontrol edin.",
 	"score-noinput": "$1 LilyPond girdi dosyası oluşturulamadı.",
-	"score-nomediahandler": "Ses dönüşümü için [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler uzantısının] kurulu ve yapılandırılmış bir sürümü gerekiyor.",
+	"score-nomediahandler": "Ses dönüşümü için [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler TimedMediaHandler uzantısının] kurulu ve yapılandırılmış bir sürümü gerekiyor.",
 	"score-nomidi": "İstenmesine rağmen hiçbir MIDI dosyası oluşturulmadı. Ham LilyPond modunda çalışıyorsanız, uygun bir \\midi bloğu sağladığınızdan emin olun.",
 	"score-nooutput": "$1 çıkış dizini oluşturulamadı.",
 	"score-notelanguagewithraw": "\"note-language\" özelliği ham mod puanları için kullanılamaz",

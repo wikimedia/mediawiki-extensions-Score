@@ -31,7 +31,7 @@
 	"score-nocontent": "Non ge pozze carecà 'u file $1 da 'u server.",
 	"score-noimages": "Nisciune immaggine de pundegge ha state generate. Pe piacere condrolle 'u codece d'u pundegge tune.",
 	"score-noinput": "Non ge riesche a ccrejà 'u file de ingresse de LilyPound $1.",
-	"score-nomediahandler": "'A conversione audio vole ca ha state installate e configurate l'[https://www.mediawiki.org/wiki/Extension:TimedMediaHandler estenzione TimedMediaHandler].",
+	"score-nomediahandler": "'A conversione audio vole ca ha state installate e configurate l'[https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler estenzione TimedMediaHandler].",
 	"score-nomidi": "Nisciune file MIDI generate pure ca ha state vulute. Ce se fatìe a màne cu codece LilyPond, condrolle 'a presenze de 'nu corrette blocche \\midi.",
 	"score-nooutput": "Non ge riesche a ccrejà 'a cartelle d'u resultate $1.",
 	"score-notelanguagewithraw": "L'attribbute \"note-language\" non ge pò essere ausate pe le pundegge grezze",

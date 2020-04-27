@@ -40,7 +40,7 @@
 	"score-nocontent": "无法从服务器加载文件$1。",
 	"score-noimages": "没有乐谱图像生成。请检查您的乐谱代码。",
 	"score-noinput": "创建 LilyPond 输入的文件 $1 失败。",
-	"score-nomediahandler": "音频转换需要安装并配置好的[https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler扩展]版本。",
+	"score-nomediahandler": "音频转换需要安装并配置好的[https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler TimedMediaHandler扩展]版本。",
 	"score-nomidi": "虽然已请求但MIDI文件没有生成。如果您正在使用原始LilyPond模式，确保\\midi已提供正确。",
 	"score-nooutput": "创建输出目录 $1 失败。",
 	"score-notelanguagewithraw": "属性“note-language”不能用于原始模式乐谱",

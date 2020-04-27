@@ -30,7 +30,7 @@
 	"score-nocontent": "Nelze načíst soubor $1 ze serveru.",
 	"score-noimages": "Nevytvořily se žádné obrázky partitury. Zkontrolujte svůj zdrojový kód.",
 	"score-noinput": "Nepodařilo se vytvořit soubor $1 se zdrojovým kódem pro LilyPond.",
-	"score-nomediahandler": "Konverze zvuku vyžaduje nainstalovanou a nakonfigurovanou kopii rozšíření [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler].",
+	"score-nomediahandler": "Konverze zvuku vyžaduje nainstalovanou a nakonfigurovanou kopii rozšíření [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler TimedMediaHandler].",
 	"score-nomidi": "Přestože byl vyžádán, nevytvořil se MIDI soubor. Pokud pracujete v přímém režimu LilyPond, nezapomeňte uvést platný blok \\midi.",
 	"score-nooutput": "Nepodařilo se vytvořit výstupní adresář $1.",
 	"score-notelanguagewithraw": "Atribut „note-language“ nelze používat u partitur v syrovém režimu",

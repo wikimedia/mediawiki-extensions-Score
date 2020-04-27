@@ -31,7 +31,7 @@
 	"score-nocontent": "Не можев да ја вчитам податотеката „$1“ од опслужувачот.",
 	"score-noimages": "Не создадов партитурни слики. Проверете го кодот.",
 	"score-noinput": "Не можев да ја создадам влезната податотека $1 за LilyPond.",
-	"score-nomediahandler": "Аудиопретворањето бара воспоставена и наместена верзија на додатокот [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler]",
+	"score-nomediahandler": "Аудиопретворањето бара воспоставена и наместена верзија на додатокот [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler TimedMediaHandler]",
 	"score-nomidi": "Не е создадена MIDI податотека и покрај барањето. Ако работите во сиров режим на LilyPond, не заборавајте да ставите соодветен \\midi блок.",
 	"score-nooutput": "Не можев да го создадам излезниот директориум $1",
 	"score-notelanguagewithraw": "Атрибутот „note-language“ не може да се користи за партитури во сиров режим",

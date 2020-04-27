@@ -32,7 +32,7 @@
 	"score-nocontent": "Impossibile caricare il file $1 dal server.",
 	"score-noimages": "Non si possono generare immagini di partiture, controllare il codice della partitura.",
 	"score-noinput": "Creazione del file d'input LilyPond $1 non riuscita.",
-	"score-nomediahandler": "La conversione audio richiede che sia installata e configurata l'[https://www.mediawiki.org/wiki/Extension:TimedMediaHandler estensione TimedMediaHandler].",
+	"score-nomediahandler": "La conversione audio richiede che sia installata e configurata l'[https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler estensione TimedMediaHandler].",
 	"score-nomidi": "Nessun file MIDI generato sebbene sia richiesto. Se si lavora manualmente con codice LilyPond, assicurarsi della presenza di un corretto blocco \\midi.",
 	"score-nooutput": "Creazione della directory di output $1 non riuscita.",
 	"score-notexecutable": "LilyPond non può essere eseguito:  $1 non è un file eseguibile. Assicurarsi che <code>$wgScoreLilyPond</code> sia configurato correttamente.",

@@ -33,7 +33,7 @@
 	"score-nocontent": "טעינת הקובץ $1 מהשרת לא הצליחה.",
 	"score-noimages": "לא נוצרו תמונות של תווים. נא לבדוק את קוד התווים שלך.",
 	"score-noinput": "יצירת הקובץ $1 עם קלט של LilyPond לא הצליחה.",
-	"score-nomediahandler": "המרת שמע דורשת התקנה והגדרה של גרסה של [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler ההרחבה TimedMediaHandler].",
+	"score-nomediahandler": "המרת שמע דורשת התקנה והגדרה של גרסה של [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler ההרחבה TimedMediaHandler].",
 	"score-nomidi": "לא נוצר שום קובץ MIDI, למקות ש התבקש כזה. אם זה מצב LilyPond טהור, יש לספק גוש <span dir=\"ltr\">\\midi</span> מתאים.",
 	"score-nooutput": "לא ניתן היה ליצור את תיקיית הפלט $1.",
 	"score-notelanguagewithraw": "המאפיין \"note-language\" אינו יכול לשמש לגיליונות תווים גולמיים",

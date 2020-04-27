@@ -32,7 +32,7 @@
 	"score-nocontent": "Non se puido cargar o ficheiro \"$1\" desde o servidor.",
 	"score-noimages": "Non se xerou ningunha imaxe de partitura. Comprobe o código.",
 	"score-noinput": "Erro ao crear o ficheiro de entrada \"$1\" do LilyPond.",
-	"score-nomediahandler": "Para a conversión do audio cómpre unha versión instalada e configurada da [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler extensión TimedMediaHandler].",
+	"score-nomediahandler": "Para a conversión do audio cómpre unha versión instalada e configurada da [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler extensión TimedMediaHandler].",
 	"score-nomidi": "Non se xerou ficheiro MIDI ningún malia a solicitude. Se está a traballar no modo LilyPond en bruto asegúrese de proporcionar un bloque \\midi axeitado.",
 	"score-nooutput": "Erro ao crear o directorio de saída \"$1\".",
 	"score-notelanguagewithraw": "Non se pode utilizar o atributo \"note-language\" en partituras en modo sen formato",

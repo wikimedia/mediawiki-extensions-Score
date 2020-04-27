@@ -35,7 +35,7 @@
 	"score-nocontent": "Die Datei „$1“ konnte nicht vom Server geladen werden.",
 	"score-noimages": "Es wurden keine Bilder zur Partitur generiert. Bitte prüfe den Code zur Partitur.",
 	"score-noinput": "Die Eingabedatei $1 für LilyPond konnte nicht erstellt werden.",
-	"score-nomediahandler": "Eine Audiokonvertierung erfordert eine installierte und konfigurierte Version der [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler-Erweiterung].",
+	"score-nomediahandler": "Eine Audiokonvertierung erfordert eine installierte und konfigurierte Version der [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler TimedMediaHandler-Erweiterung].",
 	"score-nomidi": "Ungeachtet einer entsprechenden Anforderung wurde keine MIDI-Datei generiert. Sofern der reine LilyPond-Modus genutzt wird, muss ein richtiger „\\midi“-Block angegeben werden.",
 	"score-nooutput": "Das Ausgabeverzeichnis $1 konnte nicht erstellt werden.",
 	"score-notelanguagewithraw": "Das Attribut „note-language“ kann nicht für Rohmodus-Partituren verwendet werden.",

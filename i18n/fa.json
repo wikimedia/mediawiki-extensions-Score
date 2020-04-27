@@ -34,7 +34,7 @@
 	"score-nocontent": "پوشهٔ $1 نتوانست از سرور بارگذاری شود.",
 	"score-noimages": "هیچ تصاویر نمره‌ای تولید نشد. لطفاً کد نمرهٔ خوذ را بررسی کنید.",
 	"score-noinput": "عدم موفقیت در ایجاد پوشهٔ مدخل لیلی‌پوند $1.",
-	"score-nomediahandler": "ٔتبدیل صوت، نیازمند یک نسخهٔ نصب شده و پیکربندی شده  [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler افزونهٔ TimedMediaHandler]",
+	"score-nomediahandler": "ٔتبدیل صوت، نیازمند یک نسخهٔ نصب شده و پیکربندی شده  [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler افزونهٔ TimedMediaHandler]",
 	"score-nomidi": "هیچ پوشه آم‌آی‌دی‌آی علی‌رغم درخواست تولید نشده. اگر شما در حالت خام لیلی‌پوند کار می کنید، برای ارائه یک مسدود واقعی/میدی مطمئن شوید.",
 	"score-nooutput": "عدم موفقیت در ایجاد راهنمای خروجی  $1.",
 	"score-notelanguagewithraw": "مشخصه note-language نمی‌تواند برای آهنگ‌های در حالت خام استفاده شود.",

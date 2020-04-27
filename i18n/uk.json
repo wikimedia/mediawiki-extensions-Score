@@ -36,7 +36,7 @@
 	"score-nocontent": "Не вдалося завантажити файл  $1  з сервера.",
 	"score-noimages": "Не створено жодних зображень партитур. Будь ласка, перевірте код Вашої партитури.",
 	"score-noinput": "Не вдалося створити вхідний файл LilyPond $1 .",
-	"score-nomediahandler": "Перетворення аудіофайлів вимагає встановленої та налаштованої версії [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler розширення TimedMediaHandler].",
+	"score-nomediahandler": "Перетворення аудіофайлів вимагає встановленої та налаштованої версії [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler розширення TimedMediaHandler].",
 	"score-nomidi": "Не створено жодного файл MIDI, незважаючи на запит. Якщо ви працюєте з чистим LilyPond, то переконайтеся у правильному забезпеченні блоку \\midi.",
 	"score-nooutput": "Не вдалося створити вихідний каталог  $1.",
 	"score-notelanguagewithraw": "Атрибут «note-language» не можна використовувати для партитур у сирому режимі",

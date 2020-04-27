@@ -31,7 +31,7 @@
 	"score-nocontent": "Nem sikerült betölteni a(z) $1 fájlt a szerverről.",
 	"score-noimages": "Nem készültek kottaképek. Ellenőrizd a kottakódot.",
 	"score-noinput": "A(z) $1 LilyPond bemeneti fájl létrehozása sikertelen.",
-	"score-nomediahandler": "Az audiokonverzióhoz szükség van a [https://www.mediawiki.org/wiki/Extension:TimedMediaHandler TimedMediaHandler kiterjesztés] telepített és konfigurált verziójára.",
+	"score-nomediahandler": "Az audiokonverzióhoz szükség van a [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler TimedMediaHandler kiterjesztés] telepített és konfigurált verziójára.",
 	"score-nomidi": "Nem készült MIDI-fájl, pedig kérted. Ha nyers LilyPond módban dolgozol, ellenőrizd, hogy megadtál-e megfelelő \\midi blokkot.",
 	"score-nooutput": "A(z) $1 kimeneti könyvtár létrehozása sikertelen.",
 	"score-notelanguagewithraw": "A „note-language” attribútum nem használható nyers módú kottákhoz",
