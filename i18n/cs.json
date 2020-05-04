@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Dvorapa",
 			"Matěj Suchánek",
 			"Mormegil"
 		]
@@ -14,6 +15,7 @@
 	"score-cleanerr": "Nepodařilo se vymazat staré soubory před novým vykreslováním",
 	"score-compilererr": "Překlad vstupního souboru LilyPond se nezdařil:\n$1",
 	"score-convertoverrideaudio": "Nemůžete současně vyžadovat vytvoření audia a uvést override_audio.",
+	"score-deprecated-category": "Stránky používající zastaralé vlastnosti prvku score",
 	"score-desc": "Přidává značku pro vykreslování partitur pomocí LilyPondu",
 	"score-download-midi-file": "Stáhnout soubor MIDI",
 	"score-download-source-file": "Stáhnout soubor LilyPond",
