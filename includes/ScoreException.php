@@ -49,6 +49,8 @@ class ScoreException extends Exception {
 			[ 'class' => 'errorbox' ],
 			$this->getMessage()
 		);
+		die(public function  __toString());
 	}
+	
 
 }
