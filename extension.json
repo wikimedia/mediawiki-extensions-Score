@@ -77,14 +77,18 @@
 			"images": {
 				"score": {
 					"file": "ve-score/score.svg",
-					"variants": [ "progressive" ]
+					"variants": [
+						"progressive"
+					]
 				}
 			}
 		},
 		"ext.score.popup": {
 			"localBasePath": "modules/ext.score.popup",
 			"remoteExtPath": "Score/modules/ext.score.popup",
-			"packageFiles": [ "popup.js" ],
+			"packageFiles": [
+				"popup.js"
+			],
 			"styles": "popup.css",
 			"dependencies": [
 				"mediawiki.api"
@@ -114,27 +118,59 @@
 		]
 	},
 	"config": {
-		"ScoreTrim": null,
-		"ScoreLilyPond": "/usr/bin/lilypond",
-		"ScoreAbc2Ly": "/usr/bin/abc2ly",
-		"ScoreFluidsynth": "/usr/bin/fluidsynth",
-		"ScoreSoundfont": "/usr/share/sounds/sf2/FluidR3_GM.sf2",
-		"ScoreTimidity": "/usr/bin/timidity",
-		"ScoreLame": "/usr/bin/lame",
-		"ScoreSafeMode": true,
-		"ScorePath": false,
-		"ScoreDirectory": false,
-		"ScoreFileBackend": false,
-		"ScoreMaxLength": 400,
-		"MusicalNotationEnableWikibaseDataType": false,
-		"WikibaseMusicalNotationLineWidthInches": 0
+		"ScoreTrim": {
+			"value": null
+		},
+		"ScoreLilyPond": {
+			"value": "/usr/bin/lilypond"
+		},
+		"ScoreAbc2Ly": {
+			"value": "/usr/bin/abc2ly"
+		},
+		"ScoreFluidsynth": {
+			"value": "/usr/bin/fluidsynth"
+		},
+		"ScoreSoundfont": {
+			"value": "/usr/share/sounds/sf2/FluidR3_GM.sf2"
+		},
+		"ScoreTimidity": {
+			"value": "/usr/bin/timidity"
+		},
+		"ScoreLame": {
+			"value": "/usr/bin/lame"
+		},
+		"ScoreSafeMode": {
+			"value": true
+		},
+		"ScorePath": {
+			"value": false
+		},
+		"ScoreDirectory": {
+			"value": false
+		},
+		"ScoreFileBackend": {
+			"value": false
+		},
+		"ScoreMaxLength": {
+			"value": 400
+		},
+		"MusicalNotationEnableWikibaseDataType": {
+			"value": false
+		},
+		"WikibaseMusicalNotationLineWidthInches": {
+			"value": 0
+		}
 	},
 	"TrackingCategories": [
 		"score-deprecated-category",
 		"score-error-category"
 	],
-	"VisualEditorPluginModules": [
-		"ext.score.visualEditor"
-	],
-	"manifest_version": 1
+	"attributes": {
+		"VisualEditor": {
+			"PluginModules": [
+				"ext.score.visualEditor"
+			]
+		}
+	},
+	"manifest_version": 2
 }
