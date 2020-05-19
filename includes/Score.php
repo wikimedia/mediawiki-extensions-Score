@@ -33,12 +33,12 @@ class Score {
 	/**
 	 * Default audio player width.
 	 */
-	const DEFAULT_PLAYER_WIDTH = 300;
+	private const DEFAULT_PLAYER_WIDTH = 300;
 
 	/**
 	 * Version for cache invalidation.
 	 */
-	const CACHE_VERSION = 1;
+	private const CACHE_VERSION = 1;
 
 	/**
 	 * Supported score languages.

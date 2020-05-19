@@ -25,10 +25,10 @@ class LilypondErrorMessageBeautifier {
 	/**
 	 * Lilyponds error reporting line regex, only the line with the error line, column and message.
 	 */
-	const LILYPOND_ERR_REGEX = '/\.ly:(?<line>\d+):(?<column>\d+): error: (?<message>.+)$/m';
+	private const LILYPOND_ERR_REGEX = '/\.ly:(?<line>\d+):(?<column>\d+): error: (?<message>.+)$/m';
 
-	const BEAUTIFIED_ERR_FORMAT = "line %d - column %d:\n%s";
-	const BEAUTIFIED_ERR_SEPARATOR = "\n--------\n";
+	private const BEAUTIFIED_ERR_FORMAT = "line %d - column %d:\n%s";
+	private const BEAUTIFIED_ERR_SEPARATOR = "\n--------\n";
 
 	/**
 	 * @var int $scoreFirstLineOffset
