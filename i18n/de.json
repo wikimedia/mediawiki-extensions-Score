@@ -19,7 +19,7 @@
 	"score-convertoverrideaudio": "Du kannst nicht gleichzeitig eine Audiorenderung anfordern und override_audio angeben.",
 	"score-deprecated-category": "Seiten mit veralteten score-Attributen",
 	"score-deprecated-category-desc": "Diese Seiten verwenden Optionen der Score-Extension, die veraltet sind. Dies sind  \"override_audio\", \"override_ogg\" und \"override_midi\".",
-	"score-desc": "Erweitert das Wiki um einen Befehl zum Einbetten und Zeigen von Partituren mit LilyPond",
+	"score-desc": "Ergänzt das Tag <code>&lt;score&gt;</code> zum Einbetten LilyPond-gestützter Partituren",
 	"score-download-midi-file": "MIDI-Datei herunterladen",
 	"score-download-source-file": "LilyPond-Datei herunterladen",
 	"score-error-category": "Seiten mit Fehlern beim Anzeigen von Partituren",
