@@ -16,6 +16,7 @@
 	"score-compilererr": "Překlad vstupního souboru LilyPond se nezdařil:\n$1",
 	"score-convertoverrideaudio": "Nemůžete současně vyžadovat vytvoření audia a uvést override_audio.",
 	"score-deprecated-category": "Stránky používající zastaralé vlastnosti prvku score",
+	"score-deprecated-category-desc": "Tyto stránky používají následující funkce rozšíření Score, které jsou zastaralé: „override_audio“, „override_ogg“ a „override_midi“.",
 	"score-desc": "Přidává značku pro vykreslování partitur pomocí LilyPondu",
 	"score-download-midi-file": "Stáhnout soubor MIDI",
 	"score-download-source-file": "Stáhnout soubor LilyPond",
