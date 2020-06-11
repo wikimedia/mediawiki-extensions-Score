@@ -2,11 +2,11 @@
 
 use ValueFormatters\FormatterOptions;
 use ValueParsers\StringParser;
-use Wikibase\Rdf\DedupeBag;
-use Wikibase\Rdf\EntityMentionListener;
-use Wikibase\Rdf\NullEntityRdfBuilder;
-use Wikibase\Rdf\RdfVocabulary;
 use Wikibase\Repo\Parsers\WikibaseStringValueNormalizer;
+use Wikibase\Repo\Rdf\DedupeBag;
+use Wikibase\Repo\Rdf\EntityMentionListener;
+use Wikibase\Repo\Rdf\NullEntityRdfBuilder;
+use Wikibase\Repo\Rdf\RdfVocabulary;
 use Wikibase\Repo\WikibaseRepo;
 use Wikimedia\Purtle\RdfWriter;
 
