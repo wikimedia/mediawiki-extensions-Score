@@ -3,6 +3,7 @@
 		"authors": [
 			"Fitoschido",
 			"Macofe",
+			"Ssola",
 			"Vriullop"
 		]
 	},
@@ -11,6 +12,17 @@
 	"score-error-category": "Pàgines amb errors de renderització de partitures",
 	"score-lamenotexecutable": "No s’ha pogut executar el LAME: $1 no és un fitxer executable. Assegureu-vos que <code>$wgScoreLame</code> s’hagi configurat adequadament.",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Avançat",
+	"score-visualeditor-mwscoreinspector-card-audio": "Àudio",
+	"score-visualeditor-mwscoreinspector-card-notation": "Notació",
 	"score-visualeditor-mwscoreinspector-lang": "Llengua",
-	"score-visualeditor-mwscoreinspector-notelanguage": "Llenguatge de notació"
+	"score-visualeditor-mwscoreinspector-notelanguage": "Llenguatge de notació",
+	"score-visualeditor-mwscoreinspector-override-midi": "Utilitza un fitxer MIDI existent",
+	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Nom del fitxer MIDI existent",
+	"score-visualeditor-mwscoreinspector-override-ogg": "Utilitza un fitxer d'àudio existent",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Nom del fitxer d'àudio existent (ha de ser Ogg/Vorbis)",
+	"score-visualeditor-mwscoreinspector-raw": "Interpreta com a fitxer LilyPond complet",
+	"score-visualeditor-mwscoreinspector-title": "Notació musical",
+	"score-visualeditor-mwscoreinspector-vorbis": "Inclou un fitxer d'àudio (generat automàticament per defecte)",
+	"datatypes-type-musical-notation": "Notació musical",
+	"wikibase-listdatatypes-musical-notation-head": "Notació musical"
 }
