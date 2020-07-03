@@ -121,7 +121,8 @@
 	},
 	"config": {
 		"ScoreTrim": {
-			"value": null
+			"value": null,
+			"description": "Set to false to keep margins on the generated PNG files"
 		},
 		"ScoreLilyPond": {
 			"value": "/usr/bin/lilypond"
@@ -145,7 +146,8 @@
 			"value": "/usr/bin/gs"
 		},
 		"ScoreSafeMode": {
-			"value": true
+			"value": true,
+			"description": "Set to false if LilyPond inputs are trusted, sanitized, or sandboxed. This disables LilyPond's safe mode, enabling some features"
 		},
 		"ScoreDisableExec": {
 			"value": false,
