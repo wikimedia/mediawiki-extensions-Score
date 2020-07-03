@@ -180,7 +180,7 @@ class Score {
 	/**
 	 * @return FileBackend
 	 */
-	private static function getBackend() {
+	public static function getBackend() {
 		global $wgScoreFileBackend;
 
 		if ( $wgScoreFileBackend ) {
