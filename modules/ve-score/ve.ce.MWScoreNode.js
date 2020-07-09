@@ -49,7 +49,8 @@ ve.ce.MWScoreNode.prototype.onSetup = function () {
  * @inheritdoc ve.ce.GeneratedContentNode
  */
 ve.ce.MWScoreNode.prototype.validateGeneratedContents = function ( $element ) {
-	if ( $element.is( 'div' ) && $element.hasClass( 'errorbox' ) ) {
+	// eslint-disable-next-line no-jquery/no-class-state
+	if ( $element.is( 'div' ) && $element.hasClass( 'mw-ext-score-error' ) ) {
 		return false;
 	}
 	return true;
