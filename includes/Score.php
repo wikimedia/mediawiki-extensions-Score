@@ -23,6 +23,7 @@
 
  */
 
+use MediaWiki\Shell\Command;
 use MediaWiki\Shell\Shell;
 
 /**
@@ -123,13 +124,17 @@ class Score {
 	 * @throws ScoreException if LilyPond could not be executed properly.
 	 */
 	private static function fetchLilypondVersion() {
-		global $wgScoreLilyPond;
+		global $wgScoreLilyPond, $wgScoreLilyPondFakeVersion;
 
+		if ( strlen( $wgScoreLilyPondFakeVersion ) ) {
+			self::$lilypondVersion = $wgScoreLilyPondFakeVersion;
+			return;
+		}
 		if ( !is_executable( $wgScoreLilyPond ) ) {
 			throw new ScoreException( wfMessage( 'score-notexecutable', $wgScoreLilyPond ) );
 		}
 
-		$result = Shell::command( $wgScoreLilyPond, '--version' )
+		$result = self::command( $wgScoreLilyPond, '--version' )
 			->includeStderr()
 			->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
 			->execute();
@@ -143,6 +148,29 @@ class Score {
 			self::$lilypondVersion = null;
 			self::throwCallException( wfMessage( 'score-versionerr' ), $output );
 		}
+	}
+
+	/**
+	 * Return a Command object, or throw an exception if shell execution is
+	 * disabled.
+	 *
+	 * The check for $wgScoreDisableExec should be redundant with checks in the
+	 * callers, since the callers generally need to avoid writing input files.
+	 * We check twice to be safe.
+	 *
+	 * @param string|string[] ...$params String or array of strings representing the command to
+	 *   be executed, each value will be escaped.
+	 * @return Command
+	 * @throws ScoreDisabledException
+	 */
+	private static function command( ...$params ) {
+		global $wgScoreDisableExec;
+
+		if ( $wgScoreDisableExec ) {
+			throw new ScoreDisabledException( wfMessage( 'score-exec-disabled' ) );
+		}
+
+		return Shell::command( ...$params );
 	}
 
 	/**
@@ -342,7 +370,10 @@ class Score {
 
 			$html = self::generateHTML( $parser, $code, $options );
 		} catch ( ScoreException $e ) {
-			$parser->addTrackingCategory( 'score-error-category' );
+			if ( $parser->getOutput() !== null && $e->isTracked() ) {
+				$parser->addTrackingCategory( 'score-error-category' );
+			}
+			$parser->getOutput()->addModules( 'ext.score.errors' );
 			$html = "$e";
 		}
 
@@ -574,7 +605,11 @@ class Score {
 	 * @throws ScoreException on error.
 	 */
 	private static function generatePngAndMidi( $code, $options, &$metaData ) {
-		global $wgScoreLilyPond, $wgScoreTrim, $wgScoreSafeMode;
+		global $wgScoreLilyPond, $wgScoreTrim, $wgScoreSafeMode, $wgScoreDisableExec;
+
+		if ( $wgScoreDisableExec ) {
+			throw new ScoreDisabledException( wfMessage( 'score-exec-disabled' ) );
+		}
 
 		if ( !is_executable( $wgScoreLilyPond ) ) {
 			throw new ScoreException( wfMessage( 'score-notexecutable', $wgScoreLilyPond ) );
@@ -623,7 +658,7 @@ class Score {
 		$env = [ 'LILYPOND_GC_YIELD' => '25' ];
 		$mode = $wgScoreSafeMode ? '-dsafe' : null;
 
-		$result = Shell::command(
+		$result = self::command(
 			$wgScoreLilyPond,
 			'-dmidi-extension=midi', // midi needed for Windows to generate the file
 			$mode,
@@ -831,8 +866,12 @@ LILYPOND;
 	 * @throws ScoreException if an error occurs.
 	 */
 	private static function generateAudio( $sourceFile, $options, $remoteDest, &$metaData ) {
-		global $wgScoreFluidsynth, $wgScoreSoundfont, $wgScoreLame;
+		global $wgScoreFluidsynth, $wgScoreSoundfont, $wgScoreLame, $wgScoreDisableExec;
 		global $wgScoreTimidity; // TODO: Remove TiMidity++ as fallback
+
+		if ( $wgScoreDisableExec ) {
+			throw new ScoreDisabledException( wfMessage( 'score-exec-disabled' ) );
+		}
 
 		// Check whether the output is mp3 or ogg by extension
 		$extension = pathinfo( $remoteDest, PATHINFO_EXTENSION );
@@ -872,7 +911,7 @@ LILYPOND;
 		}
 
 		/* Run fluidsynth */
-		$result = Shell::command( $cmdArgs )
+		$result = self::command( $cmdArgs )
 			->includeStderr()
 			->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
 			->limits( [ 'filesize' => 153600 ] ) // 150 MB max. filesize (for large MIDIs)
@@ -890,7 +929,7 @@ LILYPOND;
 			}
 
 			/* Convert wav -> mp3 using LAME */
-			$result = Shell::command( $wgScoreLame, $factoryOutput, $factoryFile )
+			$result = self::command( $wgScoreLame, $factoryOutput, $factoryFile )
 				->includeStderr()
 				->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
 				->execute();
@@ -975,8 +1014,11 @@ LILYPOND;
 	 * @throws ScoreException if the conversion fails.
 	 */
 	private static function generateLilypondFromAbc( $code, $factoryDirectory, $destFile ) {
-		global $wgScoreAbc2Ly;
+		global $wgScoreAbc2Ly, $wgScoreDisableExec;
 
+		if ( $wgScoreDisableExec ) {
+			throw new ScoreDisabledException( wfMessage( 'score-exec-disabled' ) );
+		}
 		if ( !is_executable( $wgScoreAbc2Ly ) ) {
 			throw new ScoreException( wfMessage( 'score-abc2lynotexecutable', $wgScoreAbc2Ly ) );
 		}
@@ -991,7 +1033,7 @@ LILYPOND;
 		}
 
 		/* Convert to LilyPond file */
-		$result = Shell::command(
+		$result = self::command(
 			$wgScoreAbc2Ly,
 			'-s',
 			'-o',
@@ -1055,7 +1097,7 @@ LILYPOND;
 	private static function trimImage( $source, $dest ) {
 		global $wgImageMagickConvertCommand;
 
-		$result = Shell::command(
+		$result = self::command(
 			$wgImageMagickConvertCommand,
 			'-trim',
 			'-transparent',

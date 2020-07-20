@@ -16,6 +16,7 @@
 	"score-download-source-file": "Download LilyPond file",
 	"score-error-category": "Pages with score rendering errors",
 	"score-error-category-desc": "There was an error while rendering the score.",
+	"score-exec-disabled": "Musical scores are temporarily disabled.",
 	"score-fallbacknotexecutable": "TiMidity++ could not be executed as fallback: $1 is not an executable file. Make sure <code>$wgScoreTimidity</code> or <code>$wgScoreFluidsynth</code> is set correctly.",
 	"score-getcwderr": "Unable to obtain current working directory",
 	"score-invalidaudiooverride": "The file \"<nowiki>$1</nowiki>\" you specified with override_audio is invalid. Please specify the file name only, omit <nowiki>[[…]]</nowiki> and the \"{{ns:file}}:\" prefix.",
