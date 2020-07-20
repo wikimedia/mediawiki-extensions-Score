@@ -24,6 +24,7 @@
 	"score-download-source-file": "LilyPond-Datei herunterladen",
 	"score-error-category": "Seiten mit Fehlern beim Anzeigen von Partituren",
 	"score-error-category-desc": "Beim Ausgeben der Partitur gab es einen Fehler.",
+	"score-exec-disabled": "Musiknoten sind vorübergehend deaktiviert.",
 	"score-fallbacknotexecutable": "TiMidity++ konnte nicht als Fallback ausgeführt werden: $1 ist keine ausführbare Datei. Stelle sicher, dass <code>$wgScoreTimidity</code> oder <code>$wgScoreFluidsynth</code> korrekt festgelegt sind.",
 	"score-getcwderr": "Das aktuelle Arbeitsverzeichnis konnte nicht abgerufen werden",
 	"score-invalidaudiooverride": "Die angegebene Datei „<nowiki>$1</nowiki>“ mit override_audio ist ungültig. Bitte gib nur den Dateinamen an und lasse <nowiki>[[…]]</nowiki> sowie das Präfix „{{ns:file}}:“ weg.",
