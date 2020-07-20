@@ -51,4 +51,13 @@ class ScoreException extends Exception {
 		);
 	}
 
+	/**
+	 * Whether to add a tracking category
+	 *
+	 * @return bool
+	 */
+	public function isTracked() {
+		return true;
+	}
+
 }
