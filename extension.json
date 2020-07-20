@@ -68,9 +68,7 @@
 			]
 		},
 		"ext.score.errors": {
-			"localBasePath": "modules/ext.score.errors",
-			"remoteExtPath": "Score/modules/ext.score.errors",
-			"styles": "ext.score.errors.css"
+			"styles": "ext.score.errors/ext.score.errors.css"
 		}
 	},
 	"ResourceFileModulePaths": {
