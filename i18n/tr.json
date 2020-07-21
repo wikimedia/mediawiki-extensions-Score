@@ -22,6 +22,7 @@
 	"score-download-source-file": "LilyPond dosyasını indir",
 	"score-error-category": "Puan oluşturma hataları olan sayfalar",
 	"score-error-category-desc": "Skor oluşturulurken bir hata oluştu.",
+	"score-exec-disabled": "Müzik notaları geçici olarak devre dışıdır.",
 	"score-fallbacknotexecutable": "TiMidity++ yedek olarak yürütülemedi: $1 yürütülebilir bir dosya değil. <code>$wgScoreTimidity</code> veya <code>$wgScoreFluidsynth </code> öğelerinin doğru ayarlandığından emin olun.",
 	"score-getcwderr": "Geçerli çalışma dizini alınamıyor",
 	"score-invalidaudiooverride": "override_audio ile belirttiğiniz \"<nowiki>$1</nowiki>\" dosyası geçersiz. Lütfen yalnızca dosya adını belirtin, <nowiki>[[…]]</nowiki> ve \"{{ns:file}}:\" önekini atlayın.",

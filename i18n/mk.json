@@ -20,6 +20,7 @@
 	"score-download-source-file": "Преземи LilyPond-податотека",
 	"score-error-category": "Страници со грешки при испис на партитура",
 	"score-error-category-desc": "Се јави грешка при исписот на исходот.",
+	"score-exec-disabled": "Музичките партитури се времено оневозможени.",
 	"score-fallbacknotexecutable": "Не можев да го извршам TiMidity++ како резерва: $1 не е извршна податотека. Проверете дали <code>$wgScoreTimidity</code> или <code>$wgScoreFluidsynth</code> е правилно поставено.",
 	"score-getcwderr": "Не можам да го добијам тековниот работен директориум",
 	"score-invalidaudiooverride": "Податотеката „<nowiki>$1</nowiki>“ што ја укажавте со override_audio е неважечка. Укажете го само нејзиното име, изоставувајќи го <nowiki>[[…]]</nowiki> и претставката „{{ns:file}}:“.",

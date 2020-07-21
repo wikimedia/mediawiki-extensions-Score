@@ -21,6 +21,7 @@
 	"score-download-source-file": "LilyPond-fájl letöltése",
 	"score-error-category": "Lapok kottafeldolgozási hibákkal",
 	"score-error-category-desc": "Hiba történt a kotta feldolgozása közben.",
+	"score-exec-disabled": "A kották ideiglenesen le vannak tiltva.",
 	"score-getcwderr": "Az aktuális munkakönyvtár lekérdezése sikertelen",
 	"score-invalidaudiooverride": "Az <var>override_audio</var> attribútumban megadott „<nowiki>$1</nowiki>” fájl érvénytelen. Csak a fájlnevet add meg, <nowiki>[[…]]</nowiki> kód vagy „{{ns:file}}:” előtag nélkül.",
 	"score-invalidlang": "Érvénytelen kottanyelv: lang=\"<nowiki>$1</nowiki>\". Jelenleg a felismert nyelvek a következők: lang=\"lilypond\" (alapértelmezett) és lang=\"ABC\".",

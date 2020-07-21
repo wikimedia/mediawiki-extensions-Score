@@ -28,6 +28,7 @@
 	"score-download-source-file": "下載 LilyPond 檔案",
 	"score-error-category": "樂譜繪圖錯誤的頁面",
 	"score-error-category-desc": "繪製樂譜時發生錯誤。",
+	"score-exec-disabled": "樂譜臨時停用。",
 	"score-fallbacknotexecutable": "TiMidity++ 無法執行為備選：$1 不是個可執行檔案。請確認 <code>$wgScoreTimidity</code> 或 <code>$wgScoreFluidsynth</code> 有設定正確。",
 	"score-getcwderr": "無法取得目前工作目錄",
 	"score-invalidaudiooverride": "您使用 override_audio 參數指定的檔案 \"<nowiki>$1</nowiki>\" 無效。請僅指定檔案名稱即可，並略過 <nowiki>[[…]]</nowiki> 以及 \"{{ns:file}}:\" 字首。",
