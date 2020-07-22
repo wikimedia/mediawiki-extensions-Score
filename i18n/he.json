@@ -22,6 +22,7 @@
 	"score-download-source-file": "הורדת קובץ LilyPond",
 	"score-error-category": "דפים עם שגיאות בהכנת תווים",
 	"score-error-category-desc": "אירעה שגיאה בעת הכנת התווים להצגה.",
+	"score-exec-disabled": "תווים מוזיקליים כבויים זמנית.",
 	"score-fallbacknotexecutable": "לא היה אפשר להריץ את TiMidity++‎ בתור גיבוי: $1 הוא לא קובץ בר־הרצה. יש לוודא ש־<code dir=\"ltr\">$wgScoreTimidity</code> או <code dir=\"ltr\">$wgScoreFluidsynth</code> מוגדרים נכון.",
 	"score-getcwderr": "לא ניתן לקבל את התיקייה הנוכחית",
 	"score-invalidaudiooverride": "הקובץ \"<nowiki>$1</nowiki>\" שציינת עם override_audio אינו תקין. נא לציין את שם הקובץ בלבד, להשמיט את <nowiki>[[…]]</nowiki> ואת התחילית \"{{ns:file}}:\".",
