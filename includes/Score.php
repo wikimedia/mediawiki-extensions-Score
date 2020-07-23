@@ -458,6 +458,9 @@ class Score {
 	 * @throws ScoreException if an error occurs.
 	 */
 	private static function generateHTML( &$parser, $code, $options ) {
+		global $wgScoreOfferSourceDownload;
+
+		$link = '';
 		try {
 			if ( $parser->getOutput() !== null ) {
 				$parser->getOutput()->addModules( 'ext.score.popup' );
@@ -618,7 +621,9 @@ class Score {
 				: "{$options['dest_url']}/{$options['file_name_prefix']}.midi";
 		}
 
-		if ( isset( $existingFiles["{$options['file_name_prefix']}.ly"] ) ) {
+		if ( $wgScoreOfferSourceDownload
+			&& isset( $existingFiles["{$options['file_name_prefix']}.ly"] )
+		) {
 			$attributes['data-source'] = "{$options['dest_url']}/{$options['file_name_prefix']}.ly";
 		}
 

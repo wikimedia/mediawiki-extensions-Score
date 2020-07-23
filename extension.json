@@ -132,6 +132,7 @@
 		"ScoreDirectory": false,
 		"ScoreFileBackend": false,
 		"ScoreMaxLength": 400,
+		"ScoreOfferSourceDownload": false,
 		"MusicalNotationEnableWikibaseDataType": false,
 		"WikibaseMusicalNotationLineWidthInches": 0
 	},
