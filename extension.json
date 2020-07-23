@@ -125,6 +125,7 @@
 		"ScoreSoundfont": "/usr/share/sounds/sf2/FluidR3_GM.sf2",
 		"ScoreTimidity": "/usr/bin/timidity",
 		"ScoreLame": "/usr/bin/lame",
+		"ScoreGhostscript": "/usr/bin/gs",
 		"ScoreSafeMode": true,
 		"ScoreDisableExec": false,
 		"ScoreLilyPondFakeVersion": false,
