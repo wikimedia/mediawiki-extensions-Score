@@ -145,6 +145,9 @@
 		"ScoreLame": {
 			"value": "/usr/bin/lame"
 		},
+		"ScoreGhostscript": {
+			"value": "/usr/bin/gs"
+		},
 		"ScoreSafeMode": {
 			"value": true
 		},
