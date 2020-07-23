@@ -99,7 +99,8 @@
 		"ScoreLilyPondFakeVersion": false,
 		"ScorePath": false,
 		"ScoreDirectory": false,
-		"ScoreFileBackend": false
+		"ScoreFileBackend": false,
+		"ScoreOfferSourceDownload": false
 	},
 	"TrackingCategories": [
 		"score-error-category"
