@@ -21,6 +21,7 @@
 	"score-download-source-file": "Last ned LilyPond-fil",
 	"score-error-category": "Sider med musikknotasjonsfeil",
 	"score-error-category-desc": "Partituret lot seg ikke tegne opp på grunn av en feil.",
+	"score-exec-disabled": "Musikknoter er midlertidig slått av.",
 	"score-fallbacknotexecutable": "TiMidity++ kunne ikke kjøres som reserve: $1 er ikke en kjørbar fil. Sjekk at <code>$wgScoreTimidity</code> eller <code>$wgScoreFluidsynth</code> er satt riktig.",
 	"score-getcwderr": "Klarte ikke finne navnet på den nåværende arbeidsmappen",
 	"score-invalidaudiooverride": "Fila «<nowiki>$1</nowiki>», som du anga med override_audio, er ugyldig. Angi kun filnavnet, uten <nowiki>[[…]]</nowiki> og prefikset «{{ns:file}}:».",
