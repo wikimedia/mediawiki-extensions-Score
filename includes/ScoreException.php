@@ -33,7 +33,7 @@ class ScoreException extends Exception {
 	 *
 	 * @param Message $message Message to create error message from. Should have one $1 parameter.
 	 * @param int $code optionally, an error code.
-	 * @param Exception $previous Exception that caused this exception.
+	 * @param Exception|null $previous Exception that caused this exception.
 	 */
 	public function __construct( $message, $code = 0, Exception $previous = null ) {
 		parent::__construct( $message->inContentLanguage()->parse(), $code, $previous );
