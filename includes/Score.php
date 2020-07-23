@@ -610,7 +610,8 @@ class Score {
 	 * @throws ScoreException on error.
 	 */
 	private static function generatePngAndMidi( $code, $options, &$metaData ) {
-		global $wgScoreLilyPond, $wgScoreTrim, $wgScoreSafeMode, $wgScoreDisableExec;
+		global $wgScoreLilyPond, $wgScoreTrim, $wgScoreSafeMode, $wgScoreDisableExec,
+			$wgScoreGhostscript;
 
 		if ( $wgScoreDisableExec ) {
 			throw new ScoreDisabledException( wfMessage( 'score-exec-disabled' ) );
@@ -624,10 +625,9 @@ class Score {
 		$factoryDirectory = $options['factory_directory'];
 		self::createDirectory( $factoryDirectory, 0700 );
 		$factoryLy = "$factoryDirectory/file.ly";
+		$factoryPs = "$factoryDirectory/file.ps";
 		$factoryMidi = "$factoryDirectory/file.midi";
-		$factoryImage = "$factoryDirectory/file.png";
-		$factoryPage1 = "$factoryDirectory/file-page1.png";
-		$factoryImageTrimmed = "$factoryDirectory/file-trimmed.png";
+		$factoryImagePattern = "$factoryDirectory/file-page%d.png";
 
 		/* Generate LilyPond input file */
 		if ( $options['lang'] == 'lilypond' ) {
@@ -667,7 +667,7 @@ class Score {
 			$wgScoreLilyPond,
 			'-dmidi-extension=midi', // midi needed for Windows to generate the file
 			$mode,
-			'--png',
+			'--ps',
 			'--header=texidoc',
 			$factoryLy
 		)
@@ -685,7 +685,51 @@ class Score {
 				$options['factory_directory'] );
 		}
 
-		if ( !file_exists( $factoryImage ) && !file_exists( $factoryPage1 ) ) {
+		if ( !file_exists( $factoryPs ) ) {
+			throw new ScoreException( wfMessage( 'score-nops' ) );
+		}
+
+		// Extract the page size in points from the PS header
+		$pageSize = self::extractPostScriptPageSize( $factoryPs );
+
+		$result = self::command(
+			$wgScoreGhostscript,
+			'-q',
+			'-dGraphicsAlphaBits=4',
+			'-dTextAlphaBits=4',
+			"-dDEVICEWIDTHPOINTS={$pageSize['width']}",
+			"-dDEVICEHEIGHTPOINTS={$pageSize['height']}",
+			'-dNOPAUSE',
+			'-dSAFER',
+			'-sDEVICE=png16m',
+			"-sOutputFile=$factoryImagePattern",
+			// Match LilyPond's default resolution of 101 DPI
+			'-r101',
+			$factoryPs,
+			'-c', 'quit'
+		)
+			->includeStderr()
+			->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK | Shell::NO_EXECVE )
+			->execute();
+
+		if ( $result->getExitCode() != 0 ) {
+			self::throwCallException(
+				wfMessage( 'score-gs-error' ),
+				$result->getStdout(),
+				$options['factory_directory']
+			);
+		}
+
+		$numPages = 0;
+		for ( $i = 1; ; $i++ ) {
+			if ( !file_exists( "$factoryDirectory/file-page$i.png" ) ) {
+				$numPages = $i - 1;
+				break;
+			}
+		}
+
+		// @phan-file-suppress PhanRedundantCondition
+		if ( !$numPages ) {
 			throw new ScoreException( wfMessage( 'score-noimages' ) );
 		}
 
@@ -699,17 +743,10 @@ class Score {
 
 		/* trim output images if wanted */
 		if ( $wgScoreTrim ) {
-			if ( file_exists( $factoryImage ) ) {
-				self::trimImage( $factoryImage, $factoryImageTrimmed );
-			} else {
-				for ( $i = 1; ; ++$i ) {
-					$src = "$factoryDirectory/file-page$i.png";
-					if ( !file_exists( $src ) ) {
-						break;
-					}
-					$dest = "$factoryDirectory/file-page$i-trimmed.png";
-					self::trimImage( $src, $dest );
-				}
+			for ( $i = 1; $i <= $numPages; ++$i ) {
+				$src = "$factoryDirectory/file-page$i.png";
+				$dest = "$factoryDirectory/file-page$i-trimmed.png";
+				self::trimImage( $src, $dest );
 			}
 		}
 
@@ -746,42 +783,26 @@ class Score {
 		}
 
 		// Add the PNGs
-		if ( $wgScoreTrim ) {
-			$src = $factoryImageTrimmed;
-		} else {
-			$src = $factoryImage;
-		}
-		if ( file_exists( $src ) ) {
-			$dstFileName = "{$options['file_name_prefix']}.png";
+		for ( $i = 1; $i <= $numPages; ++$i ) {
+			if ( $wgScoreTrim ) {
+				$src = "$factoryDirectory/file-page$i-trimmed.png";
+			} else {
+				$src = "$factoryDirectory/file-page$i.png";
+			}
+			if ( $numPages === 1 ) {
+				$dstFileName = "{$options['file_name_prefix']}.png";
+			} else {
+				$dstFileName = "{$options['file_name_prefix']}-page$i.png";
+			}
+			$dest = "{$options['dest_storage_path']}/$dstFileName";
 			$ops[] = [
 				'op' => 'store',
 				'src' => $src,
-				'dst' => "{$options['dest_storage_path']}/$dstFileName" ];
+				'dst' => $dest ];
 
 			list( $width, $height ) = self::imageSize( $src );
 			$metaData[$dstFileName]['size'] = [ $width, $height ];
 			$newFiles[$dstFileName] = true;
-		} else {
-			for ( $i = 1; ; ++$i ) {
-				if ( $wgScoreTrim ) {
-					$src = "$factoryDirectory/file-page$i-trimmed.png";
-				} else {
-					$src = "$factoryDirectory/file-page$i.png";
-				}
-				if ( !file_exists( $src ) ) {
-					break;
-				}
-				$dstFileName = "{$options['file_name_prefix']}-page$i.png";
-				$dest = "{$options['dest_storage_path']}/$dstFileName";
-				$ops[] = [
-					'op' => 'store',
-					'src' => $src,
-					'dst' => $dest ];
-
-				list( $width, $height ) = self::imageSize( $src );
-				$metaData[$dstFileName]['size'] = [ $width, $height ];
-				$newFiles[$dstFileName] = true;
-			}
 		}
 
 		$dstFileName = "{$options['file_name_prefix']}.json";
@@ -799,6 +820,32 @@ class Score {
 			throw new ScoreException( wfMessage( 'score-backend-error', $status->getWikiText() ) );
 		}
 		return $newFiles;
+	}
+
+	/**
+	 * Get the page size from the header of a PostScript file
+	 *
+	 * @param string $fileName
+	 * @return array
+	 */
+	private static function extractPostScriptPageSize( $fileName ) {
+		$f = fopen( $fileName, 'r' );
+		if ( !$f ) {
+			throw new ScoreException( wfMessage( 'score-readerr', basename( $fileName ) ) );
+		}
+		while ( !feof( $f ) ) {
+			$line = fgets( $f );
+			if ( $line === false ) {
+				throw new ScoreException( wfMessage( 'score-readerr', basename( $fileName ) ) );
+			}
+			if ( preg_match( '/^%%DocumentMedia: [^ ]* ([\d.]+) ([\d.]+)/', $line, $m ) ) {
+				return [
+					'width' => $m[1],
+					'height' => $m[2]
+				];
+			}
+		}
+		throw new ScoreException( wfMessage( 'score-readerr', basename( $fileName ) ) );
 	}
 
 	/**
