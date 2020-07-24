@@ -83,10 +83,10 @@
 			}
 		},
 		"ext.score.popup": {
-			"localBasePath": "modules/ext.score.popup",
-			"remoteExtPath": "Score/modules/ext.score.popup",
-			"packageFiles": [ "popup.js" ],
-			"styles": "popup.css",
+			"packageFiles": [
+				"ext.score.popup/popup.js"
+			],
+			"styles": "ext.score.popup/popup.css",
 			"dependencies": [
 				"mediawiki.api"
 			],
@@ -96,9 +96,7 @@
 			]
 		},
 		"ext.score.errors": {
-			"localBasePath": "modules/ext.score.errors",
-			"remoteExtPath": "Score/modules/ext.score.errors",
-			"styles": "ext.score.errors.css"
+			"styles": "ext.score.errors/ext.score.errors.css"
 		}
 	},
 	"ResourceFileModulePaths": {
