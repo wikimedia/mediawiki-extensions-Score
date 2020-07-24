@@ -19,6 +19,7 @@
 	},
 	"AutoloadClasses": {
 		"Score": "includes/Score.php",
+		"ScoreDisabledException": "includes/ScoreDisabledException.php",
 		"ScoreException": "includes/ScoreException.php",
 		"ScoreHooks": "includes/ScoreHooks.php",
 		"ScoreFormatter": "includes/ScoreFormatter.php",
@@ -93,6 +94,11 @@
 				"score-download-midi-file",
 				"score-download-source-file"
 			]
+		},
+		"ext.score.errors": {
+			"localBasePath": "modules/ext.score.errors",
+			"remoteExtPath": "Score/modules/ext.score.errors",
+			"styles": "ext.score.errors.css"
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -122,6 +128,8 @@
 		"ScoreTimidity": "/usr/bin/timidity",
 		"ScoreLame": "/usr/bin/lame",
 		"ScoreSafeMode": true,
+		"ScoreDisableExec": false,
+		"ScoreLilyPondFakeVersion": false,
 		"ScorePath": false,
 		"ScoreDirectory": false,
 		"ScoreFileBackend": false,
