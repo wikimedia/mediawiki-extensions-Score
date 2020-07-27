@@ -7,6 +7,7 @@
 			"Otokoume",
 			"Shirayuki",
 			"Sujiniku",
+			"Tmv",
 			"Whym",
 			"Yusuke1109"
 		]
@@ -26,7 +27,9 @@
 	"score-download-source-file": "LilyPondファイルをダウンロード",
 	"score-error-category": "楽譜のレンダリングエラーのあるページ",
 	"score-error-category-desc": "楽譜のレンダリング中にエラーがありました。",
+	"score-exec-disabled": "楽譜は一時的に使用不能です。",
 	"score-getcwderr": "現在のディレクトリを取得できません",
+	"score-gs-error": "Ghostscript の実行エラー: $1",
 	"score-invalidaudiooverride": "override_audio で指定されたファイル「<nowiki>$1</nowiki>」が見つかりません。<nowiki>[[…]]</nowiki> や「{{ns:file}}:」を省略して、ファイル名のみを指定してください。",
 	"score-invalidlang": "楽譜の言語 lang=\"<nowiki>$1</nowiki>\" は無効です。現在認識できる言語は lang=\"lilypond\" (既定) および lang=\"ABC\" です。",
 	"score-midioverridenotfound": "override_midi で指定されたファイル「<nowiki>$1</nowiki>」が見つかりません。<nowiki>[[…]]</nowiki> や「{{ns:file}}:」を省略して、ファイル名のみを指定してください。",
