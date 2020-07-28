@@ -3,9 +3,20 @@ Score, a MediaWiki extension for rendering musical scores with LilyPond.
 Prerequisites
 =============
 
+The following packages are recommended:
+
+* LilyPond
+* Ghostscript
+* ImageMagick
+* FluidSynth
+* Firejail
+
 This extension uses LilyPond to render score images, so you need a working
-LilyPond installation. If you want the extension to trim the score files for
-you, you will also need ImageMagick.
+LilyPond installation. If you install LilyPond from a package, Ghostscript
+will also be installed, since LilyPond depends on Ghostscript.
+
+ImageMagick should be installed to trim the images, otherwise they will contain
+an excessive amount of whitespace.
 
 By default, this extension runs in a safe mode, preventing malicious code in
 tags, but also preventing many of Lilypond's features. It is recommended to run
@@ -18,6 +29,9 @@ to have the TimedMediaHandler extension installed, see
 https://www.mediawiki.org/wiki/Extension:TimedMediaHandler
 
 for more information.
+
+FluidSynth is the preferred method to convert MIDI files to audio files, however
+TiMidity++ is also supported.
 
 The extension also provides a way to download MIDI file generated from the score
 from the popup that is shown on score click.
@@ -38,18 +52,9 @@ Setup
 4. Add the lines
 
    wfLoadExtension( 'score' );
-   $wgScoreLilyPond = '/path/to/your/lilypond/executable'; /* required */
-   $wgScoreAbc2Ly = '/path/to/your/abc2ly/executable'; /* if you want ABC to
-                                                          LilyPond conversion */
-   $wgScoreFluidsynth = '/path/to/your/fluidsynth/executable'; /* if you want MIDI to
-                                                                  MP3 conversion */
-   $wgScoreSoundfont = '/path/to/your/soundfont/file'; /* required for Fluidsynth */
-   $wgScoreTimidity = '/path/to/your/timidity/executable'; /* fallback when Fluidsynth
-                                                              is not installed */
-   $wgScoreLame = '/path/to/your/lame/executable' /* required to convert sound */
-   $wgScoreTrim = true; /* Set to false if you don't want score trimming */
-   $wgScoreSafeMode = false; /* Set to true if the Lilypond executable is
-                                running in a Firejail or equivalent */
+   $wgScoreTrim = true;
+   $wgImageMagickConvertCommand = '/usr/bin/convert';
+   $wgShellRestrictionMethod = 'firejail';
 
    to your LocalSettings.php file. If you get unexpected out-of-memory errors,
    you may also have to increase $wgMaxShellMemory (see
@@ -57,6 +62,16 @@ Setup
    https://www.mediawiki.org/wiki/Manual:$wgMaxShellMemory
 
    for more information.
+
+By default, Score will look for binaries by their usual names in /usr/bin. If
+you need to customise the locations of any of the binaries, you can copy the
+lines below and change them as necessary:
+
+$wgScoreLilyPond = '/usr/bin/lilypond';
+$wgScoreAbc2Ly = '/usr/bin/abc2ly'; /* part of LilyPond */
+$wgScoreFluidsynth = '/usr/bin/fluidsynth';
+$wgScoreSoundfont = '/usr/share/sounds/sf2/FluidR3_GM.sf2'; /* for FluidSynth */
+$wgScoreGhostScript = '/usr/bin/gs';
 
 
 Usage
