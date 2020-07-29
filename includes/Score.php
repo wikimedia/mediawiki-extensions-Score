@@ -709,7 +709,7 @@ class Score {
 			'-c', 'quit'
 		)
 			->includeStderr()
-			->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK | Shell::NO_EXECVE )
+			->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
 			->execute();
 
 		if ( $result->getExitCode() != 0 ) {
