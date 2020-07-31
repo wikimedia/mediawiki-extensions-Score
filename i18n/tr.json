@@ -3,7 +3,8 @@
 		"authors": [
 			"BaRaN6161 TURK",
 			"Hedda",
-			"McAang"
+			"McAang",
+			"MuratTheTurkish"
 		]
 	},
 	"score-abc2lynotexecutable": "ABC to LilyPond dönüştürücü yürütülemedi: $1 yürütülebilir bir dosya değil. <code>$wgScoreAbc2Ly</code> öğesinin doğru ayarlandığından emin olun.",
@@ -52,7 +53,7 @@
 	"score-visualeditor-mwscoreinspector-card-audio": "Ses",
 	"score-visualeditor-mwscoreinspector-card-notation": "Gösterim",
 	"score-visualeditor-mwscoreinspector-lang": "Dil",
-	"score-visualeditor-mwscoreinspector-notelanguage": "Gösterim Dili",
+	"score-visualeditor-mwscoreinspector-notelanguage": "Gösterim dili",
 	"score-visualeditor-mwscoreinspector-override-midi": "Mevcut bir MIDI dosyasını kullan",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Mevcut MIDI dosyasının adı",
 	"score-visualeditor-mwscoreinspector-override-ogg": "Mevcut bir ses dosyasını kullan",
