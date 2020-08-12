@@ -4,7 +4,8 @@
 			"BaRaN6161 TURK",
 			"Hedda",
 			"McAang",
-			"MuratTheTurkish"
+			"MuratTheTurkish",
+			"Vito Genovese"
 		]
 	},
 	"score-abc2lynotexecutable": "ABC to LilyPond dönüştürücü yürütülemedi: $1 yürütülebilir bir dosya değil. <code>$wgScoreAbc2Ly</code> öğesinin doğru ayarlandığından emin olun.",
@@ -42,7 +43,7 @@
 	"score-nops": "LilyPond herhangi bir çıkış dosyası üretmedi. Lütfen puan kodunuzu kontrol edin.",
 	"score-notelanguagewithraw": "\"note-language\" özelliği ham mod puanları için kullanılamaz",
 	"score-notexecutable": "LilyPond yürütülemedi: $1 yürütülebilir bir dosya değil. <code>$wgScoreLilyPond</code> öğesinin doğru ayarlandığından emin olun.",
-	"score-page": "Sayfa $1",
+	"score-page": "$1 adlı sayfa",
 	"score-pregreplaceerr": "PCRE normal ifade değişimi başarısız oldu",
 	"score-readerr": "$1 dosyası okunamıyor.",
 	"score-renameerr": "Dizini yüklemek için skor dosyaları taşınırken hata oluştu.",
