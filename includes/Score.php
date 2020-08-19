@@ -398,10 +398,12 @@ class Score {
 
 			$html = self::generateHTML( $parser, $code, $options );
 		} catch ( ScoreException $e ) {
-			if ( $parser->getOutput() !== null && $e->isTracked() ) {
-				$parser->addTrackingCategory( 'score-error-category' );
+			if ( $parser->getOutput() !== null ) {
+				$parser->getOutput()->addModules( 'ext.score.errors' );
+				if ( $e->isTracked() ) {
+					$parser->addTrackingCategory( 'score-error-category' );
+				}
 			}
-			$parser->getOutput()->addModules( 'ext.score.errors' );
 			$html = "$e";
 		}
 
