@@ -10,7 +10,7 @@
 	"license-name": "GPL-3.0-or-later",
 	"type": "parserhook",
 	"requires": {
-		"MediaWiki": ">= 1.35.0"
+		"MediaWiki": ">= 1.36.0"
 	},
 	"MessagesDirs": {
 		"Score": [
@@ -124,6 +124,10 @@
 			"value": null,
 			"description": "Set to false to keep margins on the generated PNG files"
 		},
+		"ScoreShell": {
+			"value": "/bin/sh",
+			"description": "The shell to use to run the rendering script. On Windows this should be the full path to bash.exe, not git-bash.exe."
+		},
 		"ScoreLilyPond": {
 			"value": "/usr/bin/lilypond"
 		},
@@ -136,14 +140,15 @@
 		"ScoreSoundfont": {
 			"value": "/usr/share/sounds/sf2/FluidR3_GM.sf2"
 		},
-		"ScoreTimidity": {
-			"value": "/usr/bin/timidity"
-		},
 		"ScoreLame": {
 			"value": "/usr/bin/lame"
 		},
 		"ScoreGhostscript": {
 			"value": "/usr/bin/gs"
+		},
+		"ScoreEnvironment": {
+			"value": [],
+			"description": "A name/value map of environment variables to be passed to all shell commands"
 		},
 		"ScoreSafeMode": {
 			"value": true,
