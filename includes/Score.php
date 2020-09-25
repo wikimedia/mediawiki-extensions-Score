@@ -32,11 +32,6 @@ use MediaWiki\Shell\Shell;
  */
 class Score {
 	/**
-	 * Default audio player width.
-	 */
-	private const DEFAULT_PLAYER_WIDTH = 300;
-
-	/**
 	 * Version for cache invalidation.
 	 */
 	private const CACHE_VERSION = 1;
@@ -263,7 +258,7 @@ class Score {
 	 * @return string Image link HTML, and possibly anchor to MIDI file.
 	 */
 	public static function renderScore( $code, array $args, Parser $parser ) {
-		global $wgTmpDirectory, $wgScoreLame;
+		global $wgTmpDirectory;
 
 		try {
 			$baseUrl = self::getBaseUrl();
@@ -293,9 +288,6 @@ class Score {
 					htmlspecialchars( $options['lang'] ) ) );
 			}
 
-			// Set extension for audio output
-			$options['audio_extension'] = is_executable( $wgScoreLame ) ? 'mp3' : 'ogg';
-
 			/* Override MIDI file? */
 			if ( array_key_exists( 'override_midi', $args ) ) {
 				$file = MediaWikiServices::getInstance()->getRepoGroup()
@@ -313,11 +305,11 @@ class Score {
 				/* Set output stuff in case audio rendering is requested */
 				$sha1 = $file->getSha1();
 				$audioRelDir = "override-midi/{$sha1[0]}/{$sha1[1]}";
-				$audioRel = "$audioRelDir/$sha1.{$options['audio_extension']}";
+				$audioRel = "$audioRelDir/$sha1.mp3";
 				$options['audio_storage_dir'] = "$baseStoragePath/$audioRelDir";
 				$options['audio_storage_path'] = "$baseStoragePath/$audioRel";
 				$options['audio_url'] = "$baseUrl/$audioRel";
-				$options['audio_sha_name'] = "$sha1.{$options['audio_extension']}";
+				$options['audio_sha_name'] = "$sha1.mp3";
 				$parser->addTrackingCategory( 'score-deprecated-category' );
 			} else {
 				$options['override_midi'] = false;
@@ -369,11 +361,6 @@ class Score {
 			$options['generate_audio'] = array_key_exists( 'sound', $args )
 				|| array_key_exists( 'vorbis', $args );
 
-			if ( $options['generate_audio']
-				&& !ExtensionRegistry::getInstance()->isLoaded( 'TimedMediaHandler' )
-			) {
-				throw new ScoreException( wfMessage( 'score-nomediahandler' ) );
-			}
 			if ( $options['generate_audio'] && ( $options['override_audio'] !== false ) ) {
 				throw new ScoreException( wfMessage( 'score-convertoverrideaudio' ) );
 			}
@@ -439,8 +426,6 @@ class Score {
 	 * 	- override_midi: bool Whether to use a user-provided MIDI file.
 	 * 		Required.
 	 * 	- midi_file: If override_midi is true, MIDI file object.
-	 * 	- audio_extension: string If override_midi and generate_audio are true,
-	 * 		the audio output format in which the audio file is to be generated.
 	 * 	- audio_storage_dir: If override_midi and generate_audio are true, the
 	 * 		backend directory in which the audio file is to be stored.
 	 * 	- audio_storage_path: string If override_midi and generate_audio are true,
@@ -484,7 +469,6 @@ class Score {
 			$multi1FileName = "{$options['file_name_prefix']}-page1.png";
 			$midiFileName = "{$options['file_name_prefix']}.midi";
 			$metaDataFileName = "{$options['file_name_prefix']}.json";
-			$audioFileName = '';
 			$audioUrl = '';
 
 			if ( isset( $existingFiles[$metaDataFileName] ) ) {
@@ -514,7 +498,7 @@ class Score {
 
 			/* Generate audio file if necessary */
 			if ( $options['generate_audio'] ) {
-				$audioFileName = "{$options['file_name_prefix']}.{$options['audio_extension']}";
+				$audioFileName = "{$options['file_name_prefix']}.mp3";
 				if ( $options['override_midi'] ) {
 					$audioUrl = $options['audio_url'];
 					$audioPath = $options['audio_storage_path'];
@@ -581,31 +565,30 @@ class Score {
 				}
 			}
 			if ( $options['generate_audio'] ) {
-				$audioHash = $options['override_midi'] ? $options['audio_sha_name'] : $audioFileName;
-				$length = $metaData[$audioHash]['length'];
-				$mimetype = pathinfo( $audioUrl, PATHINFO_EXTENSION ) === 'mp3'
-					? 'audio/mpeg'
-					: 'application/ogg'; // TMH needs application/ogg
-				$player = new TimedMediaTransformOutput( [
-					'length' => $length,
-					'sources' => [
+				$link .= '<div style="margin-top: 3px;">' .
+					Html::rawElement(
+						'audio',
 						[
-							'src' => $audioUrl,
-							'type' => $mimetype
-						]
-					],
-					'disablecontrols' => 'options,timedText',
-					'width' => self::DEFAULT_PLAYER_WIDTH
-				] );
-				$link .= $player->toHtml();
-
-				// This is a hack for T148716 to load the TMH frontend
-				// which we're sort of side-using here. In the future,
-				// we should use a clean standard interface for this.
-				$tmh = new TimedMediaHandler();
-				if ( method_exists( $tmh, 'parserTransformHook' ) ) {
-					$tmh->parserTransformHook( $parser, null );
-				}
+							'controls' => true
+						],
+						Html::openElement(
+							'source',
+							[
+								'src' => $audioUrl,
+								'type' => 'audio/mpeg',
+							]
+						) .
+						"\n<div>" .
+						wfMessage( 'score-audio-alt' )
+							->rawParams(
+								Html::element( 'a', [ 'href' => $audioUrl ],
+									wfMessage( 'score-audio-alt-link' )->text()
+								)
+							)
+							->escaped() .
+						'</div>'
+					) .
+					'</div>';
 			}
 			if ( $options['override_audio'] !== false ) {
 				$link .= $parser->recursiveTagParse( "[[File:{$options['audio_name']}]]" );
@@ -1004,15 +987,11 @@ LILYPOND;
 			throw new ScoreDisabledException( wfMessage( 'score-exec-disabled' ) );
 		}
 
-		// Check whether the output is mp3 or ogg by extension
-		$extension = pathinfo( $remoteDest, PATHINFO_EXTENSION );
-		$isOutputMp3 = $extension === 'mp3';
-
 		/* Working environment */
 		$factoryDir = $options['factory_directory'];
 		self::createDirectory( $factoryDir, 0700 );
 		$factoryOutput = "$factoryDir/output.wav";
-		$factoryFile = "$factoryDir/file.$extension";
+		$factoryFile = "$factoryDir/file.mp3";
 
 		if ( is_executable( $wgScoreFluidsynth ) ) {
 			if ( !file_exists( $wgScoreSoundfont ) ) {
@@ -1022,10 +1001,9 @@ LILYPOND;
 			// Use fluidsynth
 			$cmdArgs = [
 				$wgScoreFluidsynth,
-				'-T',
-				$isOutputMp3 ? 'wav' : 'oga', // wav output if mp3
-				'-F',
-				$factoryOutput,
+				'-T', 'wav',
+				'-F', $factoryOutput,
+				'-r', '44100',
 				$wgScoreSoundfont,
 				$sourceFile
 			];
@@ -1033,7 +1011,7 @@ LILYPOND;
 			// Use TiMidity++ as a fallback
 			$cmdArgs = [
 				$wgScoreTimidity,
-				$isOutputMp3 ? '-Ow' : '-Ov', // wav output if mp3
+				'-Ow',
 				'--output-file=' . $factoryOutput,
 				$sourceFile
 			];
@@ -1054,25 +1032,20 @@ LILYPOND;
 			);
 		}
 
-		if ( $isOutputMp3 ) {
-			if ( !is_executable( $wgScoreLame ) ) {
-				throw new ScoreException( wfMessage( 'score-lamenotexecutable', $wgScoreLame ) );
-			}
+		if ( !is_executable( $wgScoreLame ) ) {
+			throw new ScoreException( wfMessage( 'score-lamenotexecutable', $wgScoreLame ) );
+		}
 
-			/* Convert wav -> mp3 using LAME */
-			$result = self::command( $wgScoreLame, $factoryOutput, $factoryFile )
-				->includeStderr()
-				->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
-				->execute();
+		/* Convert wav -> mp3 using LAME */
+		$result = self::command( $wgScoreLame, $factoryOutput, $factoryFile )
+			->includeStderr()
+			->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
+			->execute();
 
-			if ( ( $result->getExitCode() != 0 ) || !file_exists( $factoryFile ) ) {
-				self::throwCallException(
-					wfMessage( 'score-audioconversionerr' ), $result->getStdout(), $factoryDir
-				);
-			}
-		} else {
-			// No conversion required for ogg
-			$factoryFile = $factoryOutput;
+		if ( ( $result->getExitCode() != 0 ) || !file_exists( $factoryFile ) ) {
+			self::throwCallException(
+				wfMessage( 'score-audioconversionerr' ), $result->getStdout(), $factoryDir
+			);
 		}
 
 		// Move file to the final destination
@@ -1090,7 +1063,7 @@ LILYPOND;
 		}
 
 		// Create metadata json
-		$metaData[basename( $remoteDest )]['length'] = self::getLength( $remoteDest );
+		$metaData[basename( $remoteDest )]['length'] = self::getWavDuration( $factoryOutput );
 		$dstFileName = "{$options['file_name_prefix']}.json";
 		$dest = "{$options['dest_storage_path']}/$dstFileName";
 
@@ -1201,25 +1174,15 @@ LILYPOND;
 	}
 
 	/**
-	 * get length of audio file
+	 * Estimate the duration of an uncompressed WAV file from its length
 	 *
 	 * @param string $path file system path to file
 	 *
 	 * @return float duration in seconds
 	 */
-	private static function getLength( $path ) {
-		$isFileMp3 = pathinfo( $path, PATHINFO_EXTENSION ) === 'mp3';
-		$repo = new FileRepo( [
-			'name' => 'foo',
-			'backend' => self::getBackend()
-		] );
-
-		$f = new UnregisteredLocalFile( false, $repo, $path, $isFileMp3
-			? 'audio/mpeg'
-			: 'application/ogg' // Wrong MIME type, but used in TMH
-		);
-
-		return $f->getLength();
+	private static function getWavDuration( $path ) {
+		$size = filesize( $path );
+		return ( $size >= 36 ? $size - 36 : 0 ) / 44100 / 4;
 	}
 
 	/**
