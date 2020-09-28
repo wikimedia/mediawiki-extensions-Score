@@ -25,7 +25,6 @@
 	"score-nocontent": "Không thể tải tập tin $1 từ máy chủ.",
 	"score-noimages": "Các hình tài liệu âm nhạc không được tạo ra. Xin vui lòng kiểm tra lại mã nguồn.",
 	"score-noinput": "Thất bại trong việc tạo ra tập tin đầu vào LilyPond $1.",
-	"score-nomediahandler": "Tính năng chuyển đổi âm thanh cần cài đặt và thiết lập phần mở rộng [//www.mediawiki.org/wiki/Extension:TimedMediaHandler?uselang=vi TimedMediaHandler].",
 	"score-nomidi": "Tập tin MIDI đã yêu cầu không được tạo ra. Nếu bạn đang làm việc trong chế độ LilyPond nguyên văn, hãy chắc chắn cung cấp một khối \\midi hợp lệ.",
 	"score-nooutput": "Thất bại trong việc tạo ra thư mục đầu ra $1.",
 	"score-notexecutable": "Không thể thực thi LilyPond: $1 không phải là một tập tin thực thi. Hãy chắc chắn rằng <code>$wgScoreLilyPond</code> có giá trị chính xác.",

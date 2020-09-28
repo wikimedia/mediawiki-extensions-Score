@@ -34,7 +34,6 @@
 	"score-nocontent": "Klarte ikke laste filen $1 fra serveren.",
 	"score-noimages": "Ingen partiturbilder ble generert. Sjekk om koden din er korrekt.",
 	"score-noinput": "Klarte ikke å opprette LilyPond-inndatafilen $1.",
-	"score-nomediahandler": "Lydkonvertering krever en installert og konfigurert versjon av [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler TimedMediaHandler-tillegget].",
 	"score-nomidi": "Ingen MIDI-fil ble generert. Hvis du arbeider i rå LilyPond-modus; sjekk at du har angir en passende \\midi-blokk.",
 	"score-nooutput": "Klarte ikke å opprette målmappen $1.",
 	"score-nops": "LilyPond produserte ikke noen resultatfil. Sjekk notekoden.",

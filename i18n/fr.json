@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Crochet.david",
+			"Florian COLLIN",
 			"Gomoko",
 			"Hello71",
 			"Macofe",
@@ -20,6 +21,8 @@
 	"score-abcconversionerr": "Impossible de convertir le fichier ABC au format LilyPond :\n$1",
 	"score-audioconversionerr": "Impossible de convertir de MIDI en MP3 :\n$1",
 	"score-audiooverridenotfound": "Le fichier « <nowiki>$1</nowiki> » que vous avez spécifié avec override_audio n’existe pas.",
+	"score-audio-alt": "La lecture audio n'est pas prise en charge dans votre navigateur. Vous pouvez $1.",
+	"score-audio-alt-link": "télécharger le fichier audio",
 	"score-backend-error": "Impossible de copier les fichiers générés vers leur emplacement cible :\n$1",
 	"score-chdirerr": "Impossible de changer de répertoire vers $1",
 	"score-cleanerr": "Impossible d’effacer les anciens fichiers avant de regénérer",
@@ -45,7 +48,6 @@
 	"score-nocontent": "Impossible de charger le fichier $1 depuis le serveur.",
 	"score-noimages": "Aucune image de résultat n'a été générée. Veuillez vérifier votre code de résultat.",
 	"score-noinput": "Erreur lors de la création du fichier d’entrée $1 LilyPond",
-	"score-nomediahandler": "La conversion audio nécessite une version installée et configurée de l'[https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler extension TimedMediaHandler].",
 	"score-nomidi": "Pas de fichier MIDI généré malgré la demande. Si vous travaillez en mode brut de LilyPond, assurez-vous de fournir un bloc \\midi correct.",
 	"score-nooutput": "Erreur lors de la création du répertoire de sortie $1.",
 	"score-nops": "LilyPond n’a produit aucun fichier en sortie. Veuillez vérifier le format de votre partition.",

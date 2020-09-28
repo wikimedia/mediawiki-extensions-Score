@@ -20,7 +20,6 @@
 	"score-nocontent": "ไม่สามารถโหลดไฟล์ $1 จากเซิร์ฟเวอร์",
 	"score-noimages": "ไม่ได้สร้างรูปภาพโน้ตเพลง กรุณาตรวจสอบรหัสโน้ตเพลงของคุณ",
 	"score-noinput": "ไม่สามารถสร้างไฟล์อินพุต LilyPond $1",
-	"score-nomediahandler": "การแปลงข้อมูลเสียงจำเป็นต้องติดตั้งและกำหนดค่า[https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler ส่วนขยาย TimedMediaHandler]",
 	"score-nooutput": "ไม่สามารถสร้างไดเรกทอรีเอาต์พุต $1",
 	"score-notexecutable": "ไม่สามารถดำเนินการ LilyPond: $1 ไม่ใช่ไฟล์ปฏิบัติการ ตรวจสอบให้แน่ใจว่า <code>$wgScoreLilyPond</code> ถูกกำหนดไว้อย่างถูกต้อง",
 	"score-page": "หน้า $1",

@@ -18,7 +18,6 @@
 	"score-noabcinput": "L'archivi sorgiss ABC $1 a l'han nen podù esse creà.",
 	"score-noimages": "Gnun-e figure d'arzultà a son stàite generà. Për piasì, ch'a contròla sò còdes d'arzultà.",
 	"score-noinput": "Falì a creé l'archivi d'anseriment LilyPond $1.",
-	"score-nomediahandler": "La conversion Ogg/Vorbis a l'ha damanca ëd n'estension OggHandler istalà e configurà, ch'a varda [https://www.mediawiki.org/wiki/Extension:OggHandler Extension:OggHandler].",
 	"score-nomidi": "Gnun archivi MIDI generà malgré l'arcesta. S'a l'é an camin ch'a travaja an manera sëcca LilyPond, ch'as sigura ëd dé un blòch \\midi bon.",
 	"score-nooutput": "Falì a creé ël dossié ëd surtìa $1.",
 	"score-notexecutable": "As peul pa eseguisse LilyPond: $1 a l'é pa n'archivi eseguìbil. Sigurte che <code>$wgScoreLilyPond</code> a sia ampostà giust.",

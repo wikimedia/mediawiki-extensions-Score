@@ -23,7 +23,6 @@
 	"score-nocontent": "Kunne ikke indlæse filen $1 fra serveren.",
 	"score-noimages": "Ingen partiturbilleder blev dannet. Kontroller venligst om din kode er korrekt.",
 	"score-noinput": "Kunne ikke oprette inddatafil til LilyPond, $1.",
-	"score-nomediahandler": "Omdannelse til Ogg/Vorbis kræver at enten [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler TimedMediaHandler-udvidelsen] eller [https://www.mediawiki.org/wiki/Extension:OggHandler OggHandler-udvidelsen] er installeret og sat op.",
 	"score-nomidi": "Ingen MIDI blev dannet på trods af anmodning. Hvis du arbejder i rå LilyPond-tilstand, sørg for at angive en passende \\midi-blok.",
 	"score-nooutput": "Kunne ikke oprette folderen $1 til uddata.",
 	"score-notexecutable": "Kunne ikke køre LilyPond: $1 er ikke en eksekverbar fil. Kontroller at <code>$wgScoreLilyPond</code> er sat korrekt.",

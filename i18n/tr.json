@@ -5,6 +5,7 @@
 			"Hedda",
 			"McAang",
 			"MuratTheTurkish",
+			"Selcuksntrk",
 			"Vito Genovese"
 		]
 	},
@@ -12,6 +13,8 @@
 	"score-abcconversionerr": "ABC dosyası LilyPond biçimine dönüştürülemiyor:\n$1",
 	"score-audioconversionerr": "MIDI MP3'e dönüştürülemiyor:\n$1",
 	"score-audiooverridenotfound": "override_audio ile belirttiğiniz \"<nowiki>$1</nowiki>\" dosyası mevcut değil.",
+	"score-audio-alt": "Tarayıcınız ses oynatma özelliğini desteklemiyor. $1 yapabilirsiniz.",
+	"score-audio-alt-link": "Ses dosyasını indir",
 	"score-backend-error": "Oluşturulan dosyalar nihai konumlarına kopyalanamıyor:\n$1",
 	"score-chdirerr": "$1 dizinine değiştirilemiyor",
 	"score-cleanerr": "Yeniden oluşturmadan önce eski dosyalar temizlenemiyor",
@@ -37,7 +40,6 @@
 	"score-nocontent": "Sunucudan $1 dosyası yüklenemedi.",
 	"score-noimages": "Hiçbir skor görüntüsü oluşturulmadı. Lütfen puan kodunuzu kontrol edin.",
 	"score-noinput": "$1 LilyPond girdi dosyası oluşturulamadı.",
-	"score-nomediahandler": "Ses dönüşümü için [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler TimedMediaHandler uzantısının] kurulu ve yapılandırılmış bir sürümü gerekiyor.",
 	"score-nomidi": "İstenmesine rağmen hiçbir MIDI dosyası oluşturulmadı. Ham LilyPond modunda çalışıyorsanız, uygun bir \\midi bloğu sağladığınızdan emin olun.",
 	"score-nooutput": "$1 çıkış dizini oluşturulamadı.",
 	"score-nops": "LilyPond herhangi bir çıkış dosyası üretmedi. Lütfen puan kodunuzu kontrol edin.",

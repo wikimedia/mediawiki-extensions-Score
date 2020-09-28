@@ -16,7 +16,6 @@
 	"score-noabcinput": "Hindi malikha ang talaksang pinagmulan ng ABC na $1.",
 	"score-noimages": "Walang malikha na mga imahe ng iskor. Paki siyasatin ang iyong kodigo ng iskor.",
 	"score-noinput": "Nabigo sa paglikha ng talaksan ng pagpapasok na $1 ng LilyPond.",
-	"score-nomediahandler": "Ang pagpapalit ng Ogg/Vorbis ay nangangailangan ng isang naitalaga at naisaayos na dugtong ng OggHandler, tingnan ang  [https://www.mediawiki.org/wiki/Extension:OggHandler Dugtong:OggHandler].",
 	"score-nomidi": "Walang nalikha na talaksan ng MIDI kahit na hinihiling. Kung nagtatrabaho ka na nasa gawi ng hilaw na LilyPond, paki tiyakin na makapagbigay ka ng isang naaangkop na tipak ng \\midi.",
 	"score-nooutput": "Nabigo sa paglikha ng direktoryo ng kinalabasan na $1.",
 	"score-notexecutable": "Hindi maisakatuparan ang LilyPond: Ang $1 ay isang hindi naisasakatuparang talaksan. Paki tiyakin na nakatakda nang tama ang <code>$wgScoreLilyPond</code>",

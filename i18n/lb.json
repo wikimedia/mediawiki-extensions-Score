@@ -7,6 +7,7 @@
 		]
 	},
 	"score-audioconversionerr": "MIDI konnt net an MP3 ëmgewandelt ginn:\n$1",
+	"score-audio-alt-link": "den Audiofichier eroflueden",
 	"score-chdirerr": "Et konnt net op de Repertoire $1 gewiesselt ginn",
 	"score-cleanerr": "Déi al Fichiere konnten net geläscht ginn ier se nei generéiert goufen",
 	"score-download-midi-file": "MDI-Fichier eroflueden",

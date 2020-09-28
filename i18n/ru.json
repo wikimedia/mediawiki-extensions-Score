@@ -35,7 +35,6 @@
 	"score-nocontent": "Не удалось загрузить с сервера файл $1.",
 	"score-noimages": "Изображения партитур не были созданы. Пожалуйста, проверьте код партитур.",
 	"score-noinput": "Не удалось создать входной файл LilyPond $1.",
-	"score-nomediahandler": "Аудио-преобразование требует установленной и настроенной версии [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler расширения TimedMediaHandler]",
 	"score-nomidi": "Запрошенный MIDI-файл не был создан. Если вы работаете в LilyPond в raw-режиме, убедитесь, что предоставили правильный \\midi блок.",
 	"score-nooutput": "Не удалось создать выходной каталог $1.",
 	"score-notexecutable": "Не удалось запустить LilyPond: $1 — не исполняемый файл. Убедитесь, что <code>$wgScoreLilyPond</code> установлен правильно.",

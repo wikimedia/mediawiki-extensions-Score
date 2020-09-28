@@ -31,7 +31,6 @@
 	"score-nocontent": "Nun pudo cargase'l ficheru \"$1\" dende'l sirvidor.",
 	"score-noimages": "Nun se xeneró denguna imaxe de partitura. Comprueba el códigu de la partitura.",
 	"score-noinput": "Hebo un fallu al crear el ficheru d'entrada de LilyPond $1.",
-	"score-nomediahandler": "La conversión de soníu necesita una versión instalada y configurada de la [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler estensión TimedMediaHandler]",
 	"score-nomidi": "Nun se xeneró dengún ficheru MIDI anque se pidió. Si tas trabayando en mou LilyPond en bruto, asegurate de dar un bloque \\midi afayadizu.",
 	"score-nooutput": "Hebo un fallu al crear el direutoriu de salida $1.",
 	"score-notelanguagewithraw": "Nun puede utilizase l'atributu «note-language» en partitures en mou ensin formatu",
