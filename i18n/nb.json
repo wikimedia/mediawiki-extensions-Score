@@ -9,6 +9,8 @@
 	"score-abcconversionerr": "Kunne ikke konvertere ABC-fil til LilyPond-format:\n$1",
 	"score-audioconversionerr": "Kunne ikke konvertere MIDI til MP3:\n$1",
 	"score-audiooverridenotfound": "Fila «<nowiki>$1</nowiki>», som du anga med override_audio, finnes ikke.",
+	"score-audio-alt": "Lydavspilling støttes ikke av netteleseren din. Du kan $1.",
+	"score-audio-alt-link": "laste ned lydfila",
 	"score-backend-error": "Klarte ikke kopiere de genererte filene til deres målplassering:\n$1",
 	"score-chdirerr": "Kunne ikke åpne mappen $1",
 	"score-cleanerr": "Klarte ikke å fjerne gamle filer før ny rendering",
