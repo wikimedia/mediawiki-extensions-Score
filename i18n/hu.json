@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Hanna Tardos",
 			"Máté",
 			"Tacsipacsi"
 		]
@@ -9,6 +10,8 @@
 	"score-abcconversionerr": "Az ABC fájl átalakítása LilyPond formátumra sikertelen:\n$1",
 	"score-audioconversionerr": "A MIDI MP3-má alakítása sikertelen:\n$1",
 	"score-audiooverridenotfound": "Az <var>override_audio</var> attribútumban megadott „<nowiki>$1</nowiki>” fájl nem létezik.",
+	"score-audio-alt": "Keresőd nem támogatja a hangfáljok lejátszását. Más opció: $1",
+	"score-audio-alt-link": "Hangfájl letöltése",
 	"score-backend-error": "Nem sikerült a generált fájlokat a végleges helyükre másolni:\n$1",
 	"score-chdirerr": "Nem sikerült a(z) $1 könyvtárra váltani",
 	"score-cleanerr": "A régi fájlok törlése sikertelen az újrafeldolgozás előtt",

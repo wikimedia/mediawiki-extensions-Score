@@ -14,6 +14,8 @@
 	"score-abcconversionerr": "No se ha podido convertir el archivo ABC a formato LilyPond:\n$1",
 	"score-audioconversionerr": "No se pudo convertir de MIDI a MP3:\n$1",
 	"score-audiooverridenotfound": "El archivo «<nowiki>$1</nowiki>» especificado a través de override_audio no existe.",
+	"score-audio-alt": "No se admite la reproducción de audio en este navegador. Se puede $1.",
+	"score-audio-alt-link": "descargar el archivo de audio",
 	"score-backend-error": "No se pueden copiar los archivos generados en su ubicación final:\n$1",
 	"score-chdirerr": "No se pudo cambiar al directorio $1",
 	"score-cleanerr": "No se han podido limpiar los archivos antiguos antes de volver a representar la imagen",
