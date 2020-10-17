@@ -195,9 +195,9 @@ class Score {
 		global $wgScorePath, $wgUploadPath;
 		if ( $wgScorePath === false ) {
 			return "{$wgUploadPath}/lilypond";
-		} else {
-			return $wgScorePath;
 		}
+
+		return $wgScorePath;
 	}
 
 	/**
@@ -209,27 +209,28 @@ class Score {
 		if ( $wgScoreFileBackend ) {
 			return MediaWikiServices::getInstance()->getFileBackendGroup()
 				->get( $wgScoreFileBackend );
-		} else {
-			if ( !self::$backend ) {
-				global $wgScoreDirectory, $wgUploadDirectory;
-				if ( $wgScoreDirectory === false ) {
-					$dir = "{$wgUploadDirectory}/lilypond";
-				} else {
-					$dir = $wgScoreDirectory;
-				}
-				self::$backend = new FSFileBackend( [
-					'name'           => 'score-backend',
-					'wikiId'         => wfWikiID(),
-					'lockManager'    => new NullLockManager( [] ),
-					'containerPaths' => [ 'score-render' => $dir ],
-					'fileMode'       => 0777,
-					'obResetFunc' => 'wfResetOutputBuffers',
-					'streamMimeFunc' => [ 'StreamFile', 'contentTypeFromPath' ],
-					'statusWrapper' => [ 'Status', 'wrap' ],
-				] );
-			}
-			return self::$backend;
 		}
+
+		if ( !self::$backend ) {
+			global $wgScoreDirectory, $wgUploadDirectory;
+			if ( $wgScoreDirectory === false ) {
+				$dir = "{$wgUploadDirectory}/lilypond";
+			} else {
+				$dir = $wgScoreDirectory;
+			}
+			self::$backend = new FSFileBackend( [
+				'name'           => 'score-backend',
+				'wikiId'         => wfWikiID(),
+				'lockManager'    => new NullLockManager( [] ),
+				'containerPaths' => [ 'score-render' => $dir ],
+				'fileMode'       => 0777,
+				'obResetFunc' => 'wfResetOutputBuffers',
+				'streamMimeFunc' => [ 'StreamFile', 'contentTypeFromPath' ],
+				'statusWrapper' => [ 'Status', 'wrap' ],
+			] );
+		}
+
+		return self::$backend;
 	}
 
 	/**
@@ -264,7 +265,8 @@ class Score {
 			$baseUrl = self::getBaseUrl();
 			$baseStoragePath = self::getBackend()->getRootStoragePath() . '/score-render';
 
-			$options = []; // options to self::generateHTML()
+			// options to self::generateHTML()
+			$options = [];
 
 			if ( isset( $args['line_width_inches'] ) ) {
 				$lineWidthInches = abs( (float)$args[ 'line_width_inches' ] );
@@ -696,7 +698,8 @@ class Score {
 
 		$result = self::command(
 			$wgScoreLilyPond,
-			'-dmidi-extension=midi', // midi needed for Windows to generate the file
+			// midi needed for Windows to generate the file
+			'-dmidi-extension=midi',
 			$mode,
 			'--ps',
 			'--header=texidoc',
@@ -876,6 +879,7 @@ class Score {
 	 *
 	 * @param string $fileName
 	 * @return array
+	 * @throws ScoreException
 	 */
 	private static function extractPostScriptPageSize( $fileName ) {
 		$f = fopen( $fileName, 'r' );
@@ -908,6 +912,10 @@ class Score {
 		return [ $width, $height ];
 	}
 
+	/**
+	 * @param array $paperConfig
+	 * @return string
+	 */
 	private static function getPaperCode( $paperConfig = [] ) {
 		$config = array_merge( [
 			"indent" => "0\\mm",
@@ -981,7 +989,8 @@ LILYPOND;
 	 */
 	private static function generateAudio( $sourceFile, $options, $remoteDest, &$metaData ) {
 		global $wgScoreFluidsynth, $wgScoreSoundfont, $wgScoreLame, $wgScoreDisableExec;
-		global $wgScoreTimidity; // TODO: Remove TiMidity++ as fallback
+		// TODO: Remove TiMidity++ as fallback
+		global $wgScoreTimidity;
 
 		if ( $wgScoreDisableExec ) {
 			throw new ScoreDisabledException( wfMessage( 'score-exec-disabled' ) );
@@ -1019,11 +1028,12 @@ LILYPOND;
 			throw new ScoreException( wfMessage( 'score-fallbacknotexecutable', $wgScoreTimidity ) );
 		}
 
-		/* Run fluidsynth */
+		/* Run fluidsynth/timidity */
 		$result = self::command( $cmdArgs )
 			->includeStderr()
 			->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
-			->limits( [ 'filesize' => 153600 ] ) // 150 MB max. filesize (for large MIDIs)
+			// 150 MB max. filesize (for large MIDIs)
+			->limits( [ 'filesize' => 153600 ] )
 			->execute();
 
 		if ( ( $result->getExitCode() != 0 ) || !file_exists( $factoryOutput ) ) {
@@ -1227,11 +1237,10 @@ LILYPOND;
 				self::debug( "Unable to remove directory $dir\n." );
 			}
 			return $rc;
-
-		} else {
-			/* Nothing to do */
-			return true;
 		}
+
+		/* Nothing to do */
+		return true;
 	}
 
 	/**

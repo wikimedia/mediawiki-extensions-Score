@@ -48,7 +48,7 @@ class LilypondErrorMessageBeautifier {
 	}
 
 	/**
-	 * Beautifies lilypond executale error messages by:
+	 * Beautifies lilypond executable error messages by:
 	 * - adjusting line numbers fit the user's input
 	 * - stripping out all echoed erroneous code
 	 * - stripping out unnecessary keywords
