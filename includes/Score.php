@@ -774,7 +774,7 @@ class Score {
 			}
 		}
 
-		// @phan-file-suppress PhanRedundantCondition
+		// @phan-suppress-next-line PhanImpossibleCondition
 		if ( !$numPages ) {
 			throw new ScoreException( wfMessage( 'score-noimages' ) );
 		}
