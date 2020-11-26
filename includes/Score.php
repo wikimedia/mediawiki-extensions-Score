@@ -23,6 +23,7 @@
 
  */
 
+use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Shell\Command;
 use MediaWiki\Shell\Shell;
@@ -227,6 +228,7 @@ class Score {
 				'obResetFunc' => 'wfResetOutputBuffers',
 				'streamMimeFunc' => [ 'StreamFile', 'contentTypeFromPath' ],
 				'statusWrapper' => [ 'Status', 'wrap' ],
+				'logger' => LoggerFactory::getInstance( 'score' ),
 			] );
 		}
 
@@ -462,6 +464,9 @@ class Score {
 			$backend = self::getBackend();
 			$fileIter = $backend->getFileList(
 				[ 'dir' => $options['dest_storage_path'], 'topOnly' => true ] );
+			if ( $fileIter === null ) {
+				throw new ScoreException( wfMessage( 'score-file-list-error' ) );
+			}
 			$existingFiles = [];
 			foreach ( $fileIter as $file ) {
 				$existingFiles[$file] = true;

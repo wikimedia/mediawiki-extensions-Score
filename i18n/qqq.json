@@ -29,6 +29,7 @@
 	"score-error-category-desc": "Description on [[Special:TrackingCategories]] for the {{msg-mw|score-error-category}} tracking category.",
 	"score-exec-disabled": "Message shown in the page when rendering of new score files is disabled",
 	"score-fallbacknotexecutable": "{{doc-important|Do not translate \"$wgScoreTimidity\" and \"$wgScoreFluidsynth\" arguments.}}\nDisplayed if TiMidity++ could not be executed as fallback. $1 is the path to the TiMidity++ binary.",
+	"score-file-list-error": "Displayed if the extension cannot read from a directory.",
 	"score-getcwderr": "Displayed if the extension cannot obtain the current working directory.",
 	"score-gs-error": "Displayed if there is an error when running Ghostscript.",
 	"score-invalidaudiooverride": "Displayed if the file specified with the override_audio=\"…\" attribute is invalid. $1 is the value of the override_audio attribute.",

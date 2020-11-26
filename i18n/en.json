@@ -21,6 +21,7 @@
 	"score-error-category": "Pages with score rendering errors",
 	"score-error-category-desc": "There was an error while rendering the score.",
 	"score-exec-disabled": "Musical scores are temporarily disabled.",
+	"score-file-list-error": "Unable to read from the Score images directory.",
 	"score-fallbacknotexecutable": "TiMidity++ could not be executed as fallback: $1 is not an executable file. Make sure <code>$wgScoreTimidity</code> or <code>$wgScoreFluidsynth</code> is set correctly.",
 	"score-getcwderr": "Unable to obtain current working directory",
 	"score-gs-error": "Error running Ghostscript:\n$1",
