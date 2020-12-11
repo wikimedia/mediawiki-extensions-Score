@@ -245,6 +245,7 @@ class Score {
 	 * @return string Image link HTML, and possibly anchor to MIDI file.
 	 */
 	public static function render( $code, array $args, Parser $parser, PPFrame $frame ) {
+		// @phan-suppress-next-line SecurityCheck-OTHER
 		return self::renderScore( $code, $args, $parser );
 	}
 
