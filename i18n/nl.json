@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Bdijkstra",
 			"Konovalov",
 			"Mainframe98",
 			"Patio",
@@ -23,6 +24,7 @@
 	"score-download-source-file": "Lilypond-bestand downloaden",
 	"score-error-category": "Pagina's met problemen in de verwerking van bladmuziek",
 	"score-error-category-desc": "Er is een fout opgetreden bij het weergeven van de score.",
+	"score-exec-disabled": "Muzieknotatie is tijdelijk niet beschikbaar.",
 	"score-getcwderr": "Het was niet mogelijk de ingestelde werkmap te gebruiken",
 	"score-invalidlang": "Er is een onjuiste taal voor bladmuziek opgegeven (lang=\"<nowiki>$1</nowiki>\"). Op dit moment worden lang=\"lilypond\" (standaard) en lang=\"ABC\" ondersteund.",
 	"score-lamenotexecutable": "LAME kon niet worden uitgevoerd: $1 is geen uitvoerbaar bestand. Zorg er voor dat de instelling <code>$wgScoreLame</code> correct is.",

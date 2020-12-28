@@ -3,6 +3,7 @@
 		"authors": [
 			"Eitvys200",
 			"Manvydasz",
+			"Tomasdd",
 			"Zygimantus"
 		]
 	},
@@ -13,7 +14,7 @@
 	"score-visualeditor-mwscoreinspector-override-midi": "Naudoti esamą MIDI failą",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Esamo MIDI failo pavadinimas",
 	"score-visualeditor-mwscoreinspector-override-ogg": "Naudoti esamą garso failą",
-	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Esamo garso failo pavadinimas",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Esamo garso failo pavadinimas (turi būti Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Tai yra pilnas LilyPond failas",
 	"score-visualeditor-mwscoreinspector-title": "Muzikos notacija",
 	"score-visualeditor-mwscoreinspector-vorbis": "Sukurti garso failą"
