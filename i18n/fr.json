@@ -36,6 +36,7 @@
 	"score-error-category": "Pages avec erreurs de rendu de partition",
 	"score-error-category-desc": "Une erreur s'est produite lors du rendu de la partition.",
 	"score-exec-disabled": "Les partitions musicales sont temporairement désactivées.",
+	"score-file-list-error": "Impossible de lire le répertoire des images Score.",
 	"score-fallbacknotexecutable": "TiMidity++ ne peut pas être exécuter pour la récupération: $1 n'est pas un fichier executable. Veuillez vérifier que <code>$wgScoreTimidity</code> ou <code>$wgScoreFluidsynth</code> sont initialisés correctement.",
 	"score-getcwderr": "Impossible d’obtenir le répertoire de travail actuel",
 	"score-gs-error": "Erreur d'exécution Ghostscript :\n$1",
