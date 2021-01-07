@@ -25,6 +25,7 @@
 	"score-error-category": "דפים עם שגיאות בהכנת תווים",
 	"score-error-category-desc": "אירעה שגיאה בעת הכנת התווים להצגה.",
 	"score-exec-disabled": "תווים מוזיקליים כבויים זמנית.",
+	"score-file-list-error": "לא ניתן לקרוא מתיקיית התמונות של Score.",
 	"score-fallbacknotexecutable": "לא היה אפשר להריץ את TiMidity++‎ בתור גיבוי: $1 הוא לא קובץ בר־הרצה. יש לוודא ש־<code dir=\"ltr\">$wgScoreTimidity</code> או <code dir=\"ltr\">$wgScoreFluidsynth</code> מוגדרים נכון.",
 	"score-getcwderr": "לא ניתן לקבל את התיקייה הנוכחית",
 	"score-gs-error": "שגיאה בהרצת Ghostscript:\n$1",

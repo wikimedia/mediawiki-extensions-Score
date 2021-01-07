@@ -27,6 +27,7 @@
 	"score-error-category": "Páginas com erros de renderização de partitura",
 	"score-error-category-desc": "Ocorreu um erro ao processar a partitura.",
 	"score-exec-disabled": "As partituras musicais estão temporariamente desativadas.",
+	"score-file-list-error": "Incapaz de ler do diretório de imagens Score.",
 	"score-fallbacknotexecutable": "Não foi possível executar TiMidity++ como solução de recurso: $1 não é um arquivo executável. Certifique-se de que <code>$wgScoreTimidity</code> ou <code>$wgScoreFluidsynth</code> estão definidos corretamente.",
 	"score-getcwderr": "Não é possível obter o diretório de trabalho atual",
 	"score-gs-error": "Erro ao executar o Ghostscript:\n$1",

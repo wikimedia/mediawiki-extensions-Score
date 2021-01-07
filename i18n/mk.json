@@ -23,6 +23,7 @@
 	"score-error-category": "Страници со грешки при испис на партитура",
 	"score-error-category-desc": "Се јави грешка при исписот на исходот.",
 	"score-exec-disabled": "Музичките партитури се времено оневозможени.",
+	"score-file-list-error": "Не можам да ја прочитам папката со слики на Score.",
 	"score-fallbacknotexecutable": "Не можев да го извршам TiMidity++ како резерва: $1 не е извршна податотека. Проверете дали <code>$wgScoreTimidity</code> или <code>$wgScoreFluidsynth</code> е правилно поставено.",
 	"score-getcwderr": "Не можам да го добијам тековниот работен директориум",
 	"score-gs-error": "Грешка во работата на Ghostscript:\n$1",
