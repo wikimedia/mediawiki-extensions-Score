@@ -43,5 +43,6 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Namn på den befintliga ljudfilen (måste vara Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Detta är en komplett LilyPond-fil",
 	"score-visualeditor-mwscoreinspector-title": "Musiknotation",
-	"score-visualeditor-mwscoreinspector-vorbis": "Inkludera en ljudfil (genereras automatiskt som standard)"
+	"score-visualeditor-mwscoreinspector-vorbis": "Inkludera en ljudfil (genereras automatiskt som standard)",
+	"datatypes-type-musical-notation": "Musiknotation"
 }
