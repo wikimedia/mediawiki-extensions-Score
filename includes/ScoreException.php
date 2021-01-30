@@ -49,7 +49,7 @@ class ScoreException extends Exception {
 	 *
 	 * @return string Error message HTML.
 	 */
-	public function  __toString() {
+	public function __toString() {
 		return Html::rawElement(
 			'div',
 			[ 'class' => [ 'errorbox', 'mw-ext-score-error' ] ],
