@@ -1,8 +1,22 @@
 {
 	"@metadata": {
 		"authors": [
+			"NGC 54",
 			"Stelistcristi"
 		]
 	},
-	"score-page": "Pagina $1"
+	"score-page": "Pagina $1",
+	"score-visualeditor-mwscoreinspector-card-advanced": "Avansat",
+	"score-visualeditor-mwscoreinspector-card-audio": "Audio",
+	"score-visualeditor-mwscoreinspector-card-notation": "Notație",
+	"score-visualeditor-mwscoreinspector-lang": "Limbă",
+	"score-visualeditor-mwscoreinspector-notelanguage": "Limbă pentru notație",
+	"score-visualeditor-mwscoreinspector-override-midi": "Utilizează un fișier MIDI existent",
+	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Numele fișierului MIDI existent",
+	"score-visualeditor-mwscoreinspector-override-ogg": "Utilizează un fișier audio existent",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Numele fișierului audio existent (trebuie să fie Ogg/Vorbis)",
+	"score-visualeditor-mwscoreinspector-raw": "Acesta este un fișier LilyPond complet",
+	"score-visualeditor-mwscoreinspector-title": "Notație muzicală",
+	"score-visualeditor-mwscoreinspector-vorbis": "Include un fișier audio (implicit, generat automat)",
+	"datatypes-type-musical-notation": "Notație muzicală"
 }
