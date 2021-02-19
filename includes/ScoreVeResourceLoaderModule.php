@@ -20,7 +20,7 @@ class ScoreVeResourceLoaderModule extends ResourceLoaderFileModule {
 					Score::$supportedNoteLanguages
 				),
 			] ],
-			ResourceLoader::inDebugMode()
+			(bool)ResourceLoader::inDebugMode()
 		);
 	}
 
