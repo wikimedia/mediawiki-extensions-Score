@@ -12,8 +12,6 @@
 	},
 	"score-audioconversionerr": "Nie można przekonwertować MIDI na MP3:\n$1",
 	"score-backend-error": "Kopiowanie wygenerowanych plików do ich końcowych lokalizacji nie powiodło się:\n$1",
-	"score-chdirerr": "Nie można zmienić do katalogu $1",
-	"score-cleanerr": "Nie można usunąć starych plików przed ponownym wyrenderowaniem",
 	"score-compilererr": "Kompilowanie pliku wejściowego LiliPond nie powiodło się:\n$1",
 	"score-desc": "Dodaje tag <code>&lt;score&gt;</code>, umożliwiający renderowanie nut muzycznych za pośrednictwem LilyPond",
 	"score-download-midi-file": "Pobierz plik MIDI",

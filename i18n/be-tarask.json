@@ -9,8 +9,6 @@
 	},
 	"score-abc2lynotexecutable": "Пераўтваральнік з ABC у LilyPond ня можа быць выкліканы: $1 не зьяўляецца выканальным файлам. Праверце, ці <code>$wgScoreAbc2Ly</code> устаноўлены слушна.",
 	"score-abcconversionerr": "Немагчыма пераўтварыць ABC-файл у фармат LilyPond:\n$1",
-	"score-chdirerr": "Немагчыма зьмяніць дырэкторыю $1",
-	"score-cleanerr": "Немагчыма ачысьціць старыя файлы перад паказам",
 	"score-compilererr": "Немагчыма скампіляваць зыходны файл LilyPond:\n$1",
 	"score-desc": "Дадае тэг для паказу музычных нот праз LilyPond",
 	"score-error-category": "Старонкі з памылкамі візуалізацыі нотаў",

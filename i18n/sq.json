@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eraldkerciku"
+		]
+	},
+	"score-fallbacknotexecutable": "FluidSynth nuk mund të ekzekutohej: $1 nuk është një skedar i ekzekutueshëm. Sigurohuni që <code> $ wgScoreFluidsynth </code> është vendosur si duhet.",
+	"score-scripterr": "E pamundur të ekzekutohet skripti nga larg : $1 i ndaluar sipas kodit të statusit $2 $3",
+	"score-soundfontnotexists": "Soundfont nuk mund të gjendej: $1 nuk ekziston. Sigurohuni që <code> $ wgScoreSoundfont </code> të jetë vendosur si duhet."
+}

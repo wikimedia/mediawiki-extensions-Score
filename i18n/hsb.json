@@ -5,10 +5,7 @@
 		]
 	},
 	"score-abcconversionerr": "ABC-dataja njeda so do formata LilyPond konwertować: $1",
-	"score-chdirerr": "Njejo móžno do zapisa $1 přeńć",
 	"score-compilererr": "Zapodawanska dataja LilyPond njeda so kompilować:\n$1",
-	"score-noabcinput": "Žórłowa ABC-dataja $1 njeda so wutworić.",
-	"score-noinput": "Zapodawanska dataja LilyPond $1 njeda so wutworić.",
 	"score-nooutput": "Wudawanski zapis $1 njeda so wutworić.",
 	"score-page": "Strona $1",
 	"score-readerr": "Dataja $1 njeda so čitać.",
