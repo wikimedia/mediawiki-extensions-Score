@@ -45,6 +45,7 @@
 	"score-page": "$1 adlı sayfa",
 	"score-pregreplaceerr": "PCRE normal ifade değişimi başarısız oldu",
 	"score-readerr": "$1 dosyası okunamıyor.",
+	"score-scripterr": "Uzak komut dizisi çalıştırılamıyor: $1 sonlandırıldı, durum kodu: $2\n$3",
 	"score-soundfontnotexists": "Ses yazı tipi bulunamadı: $1 mevcut değil. <code>$wgScoreSoundfont</code> öğesinin doğru ayarlandığından emin olun.",
 	"score-trimerr": "Görüntü kırpılamadı:\n$1\nBu sorun devam ederse <code>$wgScoreTrim=false</code> olarak ayarlayın.",
 	"score-versionerr": "LilyPond sürümü alınamıyor:\n$1",
