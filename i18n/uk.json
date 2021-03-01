@@ -26,7 +26,7 @@
 	"score-error-category": "Сторінки з помилками візуалізації партитур",
 	"score-error-category-desc": "Сталася помилка під час візуалізації партитури.",
 	"score-exec-disabled": "Музичні ноти тимчасово вимкнено.",
-	"score-fallbacknotexecutable": "TiMidity++ не вдалося виконати як фолбек: $1 не є файлом, який можна виконати. Переконайтесь, що <code>$wgScoreTimidity</code> або <code>$wgScoreFluidsynth</code> встановлено коректно.",
+	"score-fallbacknotexecutable": "FluidSynth не вдалося виконати: $1 не є файлом, який можна виконати. Переконайтесь, що <code>$wgScoreFluidsynth</code> встановлено коректно.",
 	"score-gs-error": "Помилка виконання Ghostscript:\n$1",
 	"score-invalidaudiooverride": "Вказаний Вами файл «<nowiki>$1</nowiki>» з override_audio — недійсний. Будь ласка, вкажіть лише назву файлу, уникайте квадратних дужок <nowiki>[[…]]</nowiki> і префікса «{{ns:file}}:».",
 	"score-invalidlang": "Недійсна мова партитури lang=\"<nowiki>$1</nowiki>\". Наразі розпізнаються мови lang=\"lilypond\" (стандартна) і lang=\"ABC\".",
