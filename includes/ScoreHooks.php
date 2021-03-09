@@ -57,8 +57,7 @@ class ScoreHooks {
 				return $validators;
 			},
 			'parser-factory-callback' => function ( ParserOptions $options ) {
-				$repo = WikibaseRepo::getDefaultInstance();
-				$normalizer = new WikibaseStringValueNormalizer( $repo->getStringNormalizer() );
+				$normalizer = new WikibaseStringValueNormalizer( WikibaseRepo::getStringNormalizer() );
 				return new StringParser( $normalizer );
 			},
 			'formatter-factory-callback' => function ( $format, FormatterOptions $options ) {
