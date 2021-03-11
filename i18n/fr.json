@@ -60,6 +60,8 @@
 	"score-visualeditor-mwscoreinspector-card-audio": "Audio",
 	"score-visualeditor-mwscoreinspector-card-notation": "Notation",
 	"score-visualeditor-mwscoreinspector-lang": "Langue",
+	"score-visualeditor-mwscoreinspector-lang-abc": "ABC",
+	"score-visualeditor-mwscoreinspector-lang-lilypond": "LilyPond",
 	"score-visualeditor-mwscoreinspector-notelanguage": "Langage de notation",
 	"score-visualeditor-mwscoreinspector-override-midi": "Utiliser un fichier MIDI existant",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Nom de fichier MIDI existant",
