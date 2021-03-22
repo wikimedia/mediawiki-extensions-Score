@@ -17,6 +17,10 @@ function extractPostScriptPageSize() {
 		fwrite( STDERR, "Usage: extractPostScriptPageSize.php <filename>\n" );
 		exit( 1 );
 	}
+
+	// Lower backtracking limit as extra hardening
+	ini_set( 'pcre.backtrack_limit', '500' );
+
 	$fileName = $argv[1];
 	$f = fopen( $fileName, 'r' );
 	if ( !$f ) {
