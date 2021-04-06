@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"2axterix2",
+			"Agabi10",
 			"Armando-Martin",
 			"Dalton2",
 			"Dgstranz",
@@ -19,6 +20,8 @@
 	"score-audio-alt-link": "descargar el archivo de audio",
 	"score-backend-error": "No se pueden copiar los archivos generados en su ubicación final:\n$1",
 	"score-compilererr": "No se pudo compilar el archivo de entrada LilyPond:\n$1",
+	"score-deprecated-category": "Páginas que utilizan atributos de score obsoletos",
+	"score-deprecated-category-desc": "Estas páginas utilizan opciones provenientes de la extensión Score que están obsoletas. Estas son: \"override_audio\", \"override_ogg\" y \"override_midi\".",
 	"score-desc": "Agrega una etiqueta para representar partituras musicales con LilyPond",
 	"score-download-midi-file": "Descargar archivo MIDI",
 	"score-download-source-file": "Descargar archivo de Lilypond",
@@ -35,6 +38,7 @@
 	"score-noimages": "No se generó ninguna imagen de partitura. Comprueba tu código de partitura.",
 	"score-nomidi": "No se generó el archivo MIDI a pesar de que fue solicitado. Si estás a trabajando en modo LilyPond en bruto, asegúrate de proporcionar un bloque \\midi adecuado.",
 	"score-nooutput": "Error al crear el directorio de salida $1.",
+	"score-nops": "LilyPond no ha generado ningún archivo de salida. Por favor, revisa tu código de score.",
 	"score-notelanguagewithraw": "No se puede utilizar el atributo «note-language» en partituras en modo sin formato",
 	"score-notexecutable": "No se pudo ejecutar LilyPond: $1 no es un archivo ejecutable. Asegúrate de que <code>$wgScoreLilyPond</code> esté definido correctamente.",
 	"score-page": "Página $1",
