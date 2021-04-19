@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Danny B.",
 			"Dvorapa",
 			"Matěj Suchánek",
 			"Mormegil"
@@ -20,6 +21,7 @@
 	"score-download-source-file": "Stáhnout soubor LilyPond",
 	"score-error-category": "Stránky s chybami při vykreslování partitur",
 	"score-error-category-desc": "Při vykreslování partitury došlo k chybě.",
+	"score-exec-disabled": "Vykreslování partitur je dočasně vypnuto.",
 	"score-fallbacknotexecutable": "Nepodařilo se spustit FluidSynth: $1 není spustitelný soubor. Ověřte, že máte správně nastaveno <code>$wgScoreFluidsynth</code>.",
 	"score-invalidaudiooverride": "Soubor „<nowiki>$1</nowiki>“ uvedený pomocí override_audio je neplatný. Uveďte jen název souboru bez <nowiki>[[…]]</nowiki> a prefixu „{{ns:file}}“.",
 	"score-invalidlang": "Neplatný jazyk partitury lang=\"<nowiki>$1</nowiki>\". V současné době jsou podporovány jazyky lang=\"lilypond\" (implicitní hodnota) a lang=\"ABC\".",
