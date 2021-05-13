@@ -44,7 +44,7 @@ class ScoreHooks {
 
 		$dataTypeDefinitions['PT:musical-notation'] = [
 			'value-type'                 => 'string',
-			'validator-factory-callback' => function () {
+			'validator-factory-callback' => static function () {
 				global $wgScoreMaxLength;
 				// load validator builders
 				$factory = WikibaseRepo::getDefaultValidatorBuilders();
@@ -56,14 +56,14 @@ class ScoreHooks {
 				// TODO: Take out the validation out of Score
 				return $validators;
 			},
-			'parser-factory-callback' => function ( ParserOptions $options ) {
+			'parser-factory-callback' => static function ( ParserOptions $options ) {
 				$normalizer = new WikibaseStringValueNormalizer( WikibaseRepo::getStringNormalizer() );
 				return new StringParser( $normalizer );
 			},
-			'formatter-factory-callback' => function ( $format, FormatterOptions $options ) {
+			'formatter-factory-callback' => static function ( $format, FormatterOptions $options ) {
 				return new ScoreFormatter( $format );
 			},
-			'rdf-builder-factory-callback' => function (
+			'rdf-builder-factory-callback' => static function (
 				$mode,
 				RdfVocabulary $vocab,
 				RdfWriter $writer,
@@ -87,7 +87,7 @@ class ScoreHooks {
 		}
 		$dataTypeDefinitions['PT:musical-notation'] = [
 			'value-type'                 => 'string',
-			'formatter-factory-callback' => function ( $format, FormatterOptions $options ) {
+			'formatter-factory-callback' => static function ( $format, FormatterOptions $options ) {
 				return new ScoreFormatter( $format );
 			},
 		];
