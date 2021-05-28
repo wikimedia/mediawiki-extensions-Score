@@ -15,6 +15,7 @@
 	"score-abc2lynotexecutable": "Het conversieprogramma voor ABC naar LilyPond kon niet uitgevoerd worden: $1 is geen uitvoerbaar bestand. Zorg dat de instelling <code>$wgScoreAbc2Ly</code> correct is.",
 	"score-abcconversionerr": "Het was niet mogelijk het ABC-bestand om te zetten naar LilyPond:\n$1",
 	"score-audioconversionerr": "Het was niet mogelijk MIDI naar MP3 om te zetten:\n$1",
+	"score-audio-alt-link": "audiobestand downloaden",
 	"score-backend-error": "Het was niet mogelijk de gemaakte bestanden naar hun uiteindelijke plaats te kopiëren:\n$1",
 	"score-compilererr": "Het was niet mogelijk de LilyPondinvoer te compileren:\n$1",
 	"score-deprecated-category": "Pagina's met verouderde bladmuziek-attributen",
