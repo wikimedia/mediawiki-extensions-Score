@@ -656,7 +656,7 @@ class Score {
 	private static function generatePngAndMidi( $code, $options, &$metaData ) {
 		global $wgScoreLilyPond, $wgScoreTrim, $wgScoreSafeMode, $wgScoreDisableExec,
 			$wgScoreGhostscript, $wgScoreAbc2Ly, $wgImageMagickConvertCommand,
-			$wgScoreShell, $wgPhpCli, $wgScoreEnvironment;
+			$wgScoreShell, $wgPhpCli, $wgScoreEnvironment, $wgScoreImageMagickConvert;
 
 		if ( $wgScoreDisableExec ) {
 			throw new ScoreDisabledException( wfMessage( 'score-exec-disabled' ) );
@@ -680,7 +680,7 @@ class Score {
 				'SCORE_LILYPOND' => $wgScoreLilyPond,
 				'SCORE_SAFE' => $wgScoreSafeMode ? 'yes' : 'no',
 				'SCORE_GHOSTSCRIPT' => $wgScoreGhostscript,
-				'SCORE_CONVERT' => $wgImageMagickConvertCommand,
+				'SCORE_CONVERT' => $wgScoreImageMagickConvert ?: $wgImageMagickConvertCommand,
 				'SCORE_TRIM' => $wgScoreTrim ? 'yes' : 'no',
 				'SCORE_PHP' => $wgPhpCli
 			] + $wgScoreEnvironment );
