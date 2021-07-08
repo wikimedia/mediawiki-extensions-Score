@@ -146,6 +146,10 @@
 		"ScoreGhostscript": {
 			"value": "/usr/bin/gs"
 		},
+		"ScoreImageMagickConvert": {
+			"value": false,
+			"description": "Path to ImageMagick's convert command. If not set, will fallback to $wgImageMagickConvertCommand"
+		},
 		"ScoreEnvironment": {
 			"value": [],
 			"description": "A name/value map of environment variables to be passed to all shell commands"
