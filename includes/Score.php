@@ -39,7 +39,7 @@ class Score {
 	/**
 	 * Cache expiry time for the LilyPond version
 	 */
-	private const VERSION_TTL = 60;
+	private const VERSION_TTL = 3600;
 
 	/**
 	 * Supported score languages.
