@@ -54,6 +54,8 @@
 	"score-visualeditor-mwscoreinspector-card-audio": "Аудіо",
 	"score-visualeditor-mwscoreinspector-card-notation": "Ноти",
 	"score-visualeditor-mwscoreinspector-lang": "Мова",
+	"score-visualeditor-mwscoreinspector-lang-abc": "ABC",
+	"score-visualeditor-mwscoreinspector-lang-lilypond": "LilyPond",
 	"score-visualeditor-mwscoreinspector-notelanguage": "Мова нот",
 	"score-visualeditor-mwscoreinspector-override-midi": "Використати існуючий MIDI-файл",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Назва існуючого MIDI-файлу",
