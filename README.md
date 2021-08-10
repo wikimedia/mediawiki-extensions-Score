@@ -9,19 +9,12 @@ is recommended that LilyPond is run as an unprivileged user inside an isolated
 container with no external network access.
 
 MediaWiki's system for remote execution of shell commands is called Shellbox.
+Instructions to set up a Shellbox server can be found at:
+<https://www.mediawiki.org/wiki/Shellbox>.
 
-Easy container setup
-====================
 
-Docker images may some day be available to download.
+Ensure the following additional packages are installed in your Shellbox container:
 
-Container setup
-===============
-
-The following packages should be installed inside the container:
-
-* Apache
-* PHP-FPM
 * LilyPond
 * Ghostscript
 * ImageMagick
@@ -29,88 +22,6 @@ The following packages should be installed inside the container:
 * A SoundFont for FluidSynth, for example Fluid (R3) General MIDI SoundFont (GM)
 * LAME
 
-In the following examples we use shellbox.internal as the container hostname.
-
-Get the Shellbox source and its dependencies:
-
-```
-cd /srv
-git clone https://gerrit.wikimedia.org/r/mediawiki/libs/Shellbox shellbox
-cd shellbox
-composer install --no-dev
-```
-
-Create an unprivileged user for Shellbox:
-
-```
-useradd -r shellbox
-```
-
-Create a temporary directory:
-
-```
-install -o shellbox -g shellbox -d /var/tmp/shellbox
-```
-
-Create the Shellbox configuration file `/srv/shellbox/config/config.json`:
-
-```
-{
-	"url": "http://shellbox.internal/shellbox",
-	"tempDir": "/var/tmp/shellbox"
-}
-```
-
-Generate a secret key:
-
-```
-php -r 'print bin2hex(fread(fopen("/dev/urandom","r"),16))."\n";'
-```
-
-Create the Apache configuration `/etc/apache2/sites-available/shellbox.internal.conf`
-
-```
-<VirtualHost *:80>
-	ServerName shellbox.internal
-	DocumentRoot /srv/shellbox/public_html
-	Alias /shellbox /srv/shellbox/shellbox.php
-	SetEnv SHELLBOX_SECRET_KEY "...YOUR SECRET KEY HERE..."
-	<Directory /srv/shellbox/public_html>
-		Order deny,allow
-		Satisfy Any
-	</Directory>
-	<FilesMatch ".+\.php$">
-		SetHandler "proxy:unix:/run/php/shellbox.sock|fcgi://localhost"
-	</FilesMatch>
-
-	RewriteEngine On
-	RewriteCond %{HTTP:Authorization} ^(.*)
-	RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
-
-</VirtualHost>
-```
-
-Protect the secret key against unprivileged reads:
-
-```
-chown root:root /etc/apache2/sites-available/shellbox.internal.conf
-chmod 600 /etc/apache2/sites-available/shellbox.internal.conf
-```
-
-Create the PHP-FPM pool configuration:
-
-```
-[shellbox]
-user = shellbox
-group = shellbox
-listen = /run/php/shellbox.sock
-listen.owner = www-data
-listen.group = www-data
-pm = static
-pm.max_children = 1
-```
-
-When configured in this way, Shellbox does not have permission to connect to the PHP-FPM socket.
 
 Running on Windows
 ==================
