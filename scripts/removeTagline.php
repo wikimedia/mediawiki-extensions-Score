@@ -22,6 +22,10 @@ function removeTagline() {
 	if ( $lyData === false ) {
 		errorExit( 'score-abcconversionerr' );
 	}
+
+	// Lower backtracking limit as extra hardening
+	ini_set( 'pcre.backtrack_limit', '500' );
+
 	$lyData = preg_replace( '/^(\s*tagline\s*=).*/m', '$1 ##f', $lyData );
 	if ( $lyData === null ) {
 		errorExit( 'score-pregreplaceerr' );
