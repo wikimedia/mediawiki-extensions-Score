@@ -599,7 +599,7 @@ class Score {
 								'type' => 'audio/mpeg',
 							]
 						) .
-						"\n<div>" .
+						"<div>" .
 						wfMessage( 'score-audio-alt' )
 							->rawParams(
 								Html::element( 'a', [ 'href' => $audioUrl ],
