@@ -758,7 +758,10 @@ class Score {
 		$ops[] = [
 			'op' => 'create',
 			'content' => $lilypondCode,
-			'dst' => "{$options['dest_storage_path']}/{$options['file_name_prefix']}.ly"
+			'dst' => "{$options['dest_storage_path']}/{$options['file_name_prefix']}.ly",
+			'headers' => [
+				'Content-Type' => 'text/x-lilypond; charset=utf-8'
+			]
 		];
 		$newFiles["{$options['file_name_prefix']}.ly"] = true;
 
