@@ -4,6 +4,7 @@
 			"Alifakoor",
 			"Armin1392",
 			"Ebraminio",
+			"Jeeputer",
 			"MohammadtheEditor",
 			"Reza1615",
 			"درفش کاویانی"
@@ -19,7 +20,7 @@
 	"score-desc": "افزودن برچسب برای ارائه نمرات گوش‌نواز با لیلی‌پوند",
 	"score-download-midi-file": "بارگذاری پرونده MIDI",
 	"score-download-source-file": "بارگذاری پرونده LilyPond",
-	"score-error-category": "صفحه‌ها با خطاهای آهنگ",
+	"score-error-category": "صفحه‌های دارای خطای تفسیر نت‌نویسی",
 	"score-error-category-desc": "در هنگام پردازش آهنگ خطایی رخ داد.",
 	"score-fallbacknotexecutable": "اجرای iMidity++ به این دلیل ممکن نیست: $1 یک فایل اجرایی نیست، مطمئن شوید <code>$wgScoreTimidity</code> یا <code>$wgScoreFluidsynth</code> به درستی مشخص شده‌اند.",
 	"score-invalidaudiooverride": "پرونده «<nowiki>$1</nowiki>» که با override_audio مشخص کردید نامعتبر است. لطفا فقط اسم پرونده را مشخص کنید، <nowiki>[[…]]</nowiki> و پسوند «{{ns:file}}:» را حذف کنید.",
