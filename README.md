@@ -22,6 +22,8 @@ Ensure the following additional packages are installed in your Shellbox containe
 * A SoundFont for FluidSynth, for example Fluid (R3) General MIDI SoundFont (GM)
 * LAME
 
+You'll also want fonts for whatever characters are used in lyrics. The Noto
+font family may be a good choice as it aims to cover all scripts.
 
 Running on Windows
 ==================
