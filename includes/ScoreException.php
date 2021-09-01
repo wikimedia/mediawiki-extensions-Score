@@ -28,19 +28,16 @@
  */
 class ScoreException extends Exception {
 
+	/** @var array */
+	private $args;
+
 	/**
-	 * @param Message $message Message to create error message from. Should have one $1 parameter.
-	 * @param int $code optionally, an error code.
-	 * @param Exception|null $previous Exception that caused this exception.
+	 * @param string $message Message key of error message Should have one $1 parameter.
+	 * @param array $args Parameters to the message
 	 */
-	public function __construct( $message, $code = 0, Exception $previous = null ) {
-		parent::__construct(
-			$message->inContentLanguage()
-				->title( Title::makeTitle( NS_SPECIAL, 'Badtitle' ) )
-				->parse(),
-			$code,
-			$previous
-		);
+	public function __construct( $message, array $args = [] ) {
+		parent::__construct( $message );
+		$this->args = $args;
 	}
 
 	/**
@@ -49,12 +46,24 @@ class ScoreException extends Exception {
 	 *
 	 * @return string Error message HTML.
 	 */
-	public function __toString() {
+	public function getHtml() {
 		return Html::rawElement(
 			'div',
-			[ 'class' => [ 'errorbox', 'mw-ext-score-error' ] ],
-			$this->getMessage()
+			[ 'class' => $this->getCSSClasses() ],
+			wfMessage( $this->getMessage(), ...$this->args )
+				->inContentLanguage()
+				->title( Title::makeTitle( NS_SPECIAL, 'Badtitle' ) )
+				->parse()
 		);
+	}
+
+	/**
+	 * Get CSS classes that should apply to this error
+	 *
+	 * @return array
+	 */
+	protected function getCSSClasses(): array {
+		return [ 'errorbox', 'mw-ext-score-error' ];
 	}
 
 	/**
@@ -66,4 +75,13 @@ class ScoreException extends Exception {
 		return true;
 	}
 
+	/**
+	 * Key for use in statsd metrics
+	 *
+	 * @return string|bool false if it shouldn't be recorded
+	 */
+	public function getStatsdKey() {
+		// Normalize message key into _ for statsd
+		return str_replace( '-', '_', $this->getMessage() );
+	}
 }

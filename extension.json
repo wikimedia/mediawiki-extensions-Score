@@ -19,6 +19,7 @@
 	},
 	"AutoloadClasses": {
 		"Score": "includes/Score.php",
+		"ScoreBackendException": "includes/ScoreBackendException.php",
 		"ScoreDisabledException": "includes/ScoreDisabledException.php",
 		"ScoreException": "includes/ScoreException.php",
 		"ScoreHooks": "includes/ScoreHooks.php",
