@@ -180,7 +180,8 @@ class Score {
 			throw new ScoreDisabledException( wfMessage( 'score-exec-disabled' ) );
 		}
 
-		return MediaWikiServices::getInstance()->getShellCommandFactory()->createBoxed()
+		return MediaWikiServices::getInstance()->getShellCommandFactory()
+			->createBoxed( 'score' )
 			->disableNetwork()
 			->firejailDefaultSeccomp();
 	}
