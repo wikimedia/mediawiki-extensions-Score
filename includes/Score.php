@@ -90,6 +90,7 @@ class Score {
 	 * @param string|bool $factoryDir The factory directory to replace with "..."
 	 *
 	 * @throws ScoreException always.
+	 * @return never
 	 */
 	private static function throwCallException( $message, $output, $factoryDir = false ) {
 		/* clean up the output a bit */
@@ -295,6 +296,7 @@ class Score {
 
 			/* temporary working directory to use */
 			$fuzz = md5( (string)mt_rand() );
+			// @phan-suppress-next-line PhanTypeSuspiciousStringExpression
 			$options['factory_directory'] = $wgTmpDirectory . "/MWLP.$fuzz";
 
 			/* Score language selection */
@@ -381,7 +383,7 @@ class Score {
 			$options['generate_audio'] = array_key_exists( 'sound', $args )
 				|| array_key_exists( 'vorbis', $args );
 
-			if ( $options['generate_audio'] && ( $options['override_audio'] !== false ) ) {
+			if ( $options['generate_audio'] && $options['override_audio'] ) {
 				throw new ScoreException( wfMessage( 'score-convertoverrideaudio' ) );
 			}
 
@@ -470,7 +472,6 @@ class Score {
 	private static function generateHTML( Parser $parser, $code, $options ) {
 		global $wgScoreOfferSourceDownload;
 
-		$link = '';
 		$cleanup = new ScopedCallback( function () use ( $options ) {
 			self::eraseDirectory( $options['factory_directory'] );
 		} );
@@ -588,6 +589,8 @@ class Score {
 					'style' => "margin-bottom:1em"
 				] );
 			}
+		} else {
+			$link = '';
 		}
 		if ( $options['generate_audio'] ) {
 			$link .= '<div style="margin-top: 3px;">' .
@@ -1115,6 +1118,7 @@ LILYPOND;
 	 */
 	private static function eraseDirectory( $dir ) {
 		if ( file_exists( $dir ) ) {
+			// @phan-suppress-next-line PhanPluginUseReturnValueInternalKnown
 			array_map( 'unlink', glob( "$dir/*", GLOB_NOSORT ) );
 			$rc = rmdir( $dir );
 			if ( !$rc ) {
