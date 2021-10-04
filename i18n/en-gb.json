@@ -6,9 +6,5 @@
 			"Tom29739"
 		]
 	},
-	"score-download-midi-file": "Download MIDI file",
-	"score-download-source-file": "Download LilyPond file",
-	"score-error-category": "Pages with score rendering errors",
-	"score-error-category-desc": "There was an error while rendering the score.",
 	"score-invalidlang": "Invalid score language lang=\"<nowiki>$1</nowiki>\". Currently recognised languages are lang=\"lilypond\" (the default) and lang=\"ABC\"."
 }
