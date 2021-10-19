@@ -33,7 +33,7 @@ class UpdateLYFileHeaders extends Maintenance {
 	public function __construct() {
 		parent::__construct();
 		$this->addDescription(
-			"Gets a count of the number of ly files and optionally writes them to disk"
+			"Updates the file headers of lilypond files"
 		);
 		$this->requireExtension( "Score" );
 	}
