@@ -82,7 +82,7 @@ class DeleteOldScoreFiles extends Maintenance {
 			} else {
 				$status = Status::wrap( $ret );
 				$this->output( "Deleting old score files errored.\n" );
-				$this->output( $status->getWikiText( false, false, 'en' ) );
+				$this->error( $status->getWikiText( false, false, 'en' ) );
 			}
 		}
 
