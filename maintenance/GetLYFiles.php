@@ -87,7 +87,6 @@ class GetLYFiles extends Maintenance {
 
 			$count = 0;
 			foreach ( array_chunk( $targetFiles, 1000 ) as $chunk ) {
-
 				$fileContents = $backend->getFileContentsMulti(
 					[
 						'srcs' => $chunk,

@@ -49,7 +49,6 @@ class UpdateLYFileHeaders extends Maintenance {
 
 		$backendOperations = [];
 		foreach ( $files as $file ) {
-
 			$fullPath = $baseStoragePath . '/' . $file;
 
 			if (
@@ -63,10 +62,12 @@ class UpdateLYFileHeaders extends Maintenance {
 		$count = count( $backendOperations );
 		$this->output( "Updating the headers of $count lilypond files\n" );
 
-		$status = $backend->doQuickOperations( $backendOperations );
+		foreach ( array_chunk( $backendOperations, 1000 ) as $chunk ) {
+			$status = $backend->doQuickOperations( $chunk );
 
-		if ( !$status->isGood() ) {
-			$this->error( "Encountered error: " . print_r( $status, true ) );
+			if ( !$status->isGood() ) {
+				$this->error( "Encountered error: " . print_r( $status, true ) );
+			}
 		}
 		$this->output( "Done!\n" );
 	}
