@@ -97,7 +97,6 @@ class GetLYFiles extends Maintenance {
 					$pathNoPrefix = str_replace( $baseStoragePath . '/', '', $path );
 					wfMkdirParents( $outputDir . '/' . dirname( $pathNoPrefix ) );
 					file_put_contents( $outputDir . '/' . $pathNoPrefix, $contents );
-
 				}
 				$count += count( $chunk );
 				$this->output( "$count...\n" );
