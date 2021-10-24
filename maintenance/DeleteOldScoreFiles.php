@@ -76,9 +76,8 @@ class DeleteOldScoreFiles extends Maintenance {
 			$ret = $backend->doQuickOperations( $chunk );
 
 			if ( $ret->isOK() ) {
-				$chunkCount = count( $chunk );
-				$this->output( "$chunkCount...\n" );
-				$deletedCount += $deletedCount;
+				$deletedCount += count( $chunk );
+				$this->output( "$deletedCount...\n" );
 			} else {
 				$status = Status::wrap( $ret );
 				$this->output( "Deleting old score files errored.\n" );
