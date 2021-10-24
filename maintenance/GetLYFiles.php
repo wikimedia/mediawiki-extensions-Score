@@ -66,7 +66,6 @@ class GetLYFiles extends Maintenance {
 		$targetFiles = [];
 
 		foreach ( $files as $file ) {
-
 			$fullPath = $baseStoragePath . '/' . $file;
 
 			if (
