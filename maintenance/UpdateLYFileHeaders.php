@@ -44,8 +44,6 @@ class UpdateLYFileHeaders extends Maintenance {
 		$baseStoragePath = $backend->getRootStoragePath() . '/score-render';
 
 		$files = $backend->getFileList( [ 'dir' => $baseStoragePath ] );
-		$count = iterator_count( $files );
-		$this->output( "Total files (all extensions): $count\n" );
 
 		$backendOperations = [];
 		foreach ( $files as $file ) {
