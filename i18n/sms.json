@@ -5,5 +5,7 @@
 		]
 	},
 	"score-download-midi-file": "Laadd MIDI-teâttõõzz",
-	"score-download-source-file": "Laadd LilyPond-teâttõõzz"
+	"score-download-source-file": "Laadd LilyPond-teâttõõzz",
+	"score-page": "Seidd $1",
+	"score-visualeditor-mwscoreinspector-lang": "Ǩiõll"
 }

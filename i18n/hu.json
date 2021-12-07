@@ -32,6 +32,7 @@
 	"score-noimages": "Nem készültek kottaképek. Ellenőrizd a kottakódot.",
 	"score-nomidi": "Nem készült MIDI-fájl, pedig kérted. Ha nyers LilyPond módban dolgozol, ellenőrizd, hogy megadtál-e megfelelő \\midi blokkot.",
 	"score-nooutput": "A(z) $1 kimeneti könyvtár létrehozása sikertelen.",
+	"score-nops": "A LilyPond nem készített kimeneti fájlt. Ellenőrizd a kottakódodat.",
 	"score-notelanguagewithraw": "A „note-language” attribútum nem használható nyers módú kottákhoz",
 	"score-notexecutable": "A LilyPond futtatása sikertelen: $1 nem egy végrehajtható fájl. Ellenőrizd, hogy a <code>$wgScoreLilyPond</code> változó jól van-e beállítva.",
 	"score-page": "$1. oldal",

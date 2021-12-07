@@ -6,7 +6,8 @@
 			"Edible Melon",
 			"INS Pirat",
 			"Kaganer",
-			"Okras"
+			"Okras",
+			"DDPAT"
 		]
 	},
 	"score-abc2lynotexecutable": "Не удалось запустить перекодировку из ABC в LilyPond: $1 — не исполняемый файл. Убедитесь, что <code>$wgScoreAbc2Ly</code> установлен правильно.",
@@ -23,7 +24,7 @@
 	"score-download-source-file": "Загрузить файл LilyPond",
 	"score-error-category": "Страницы с ошибками рендеринга партитур",
 	"score-error-category-desc": "Произошла ошибка при визуализации партитур.",
-	"score-fallbacknotexecutable": "TiMidity++ не может быть выполнен как запасной вариант: $1 не является исполняемым файлом. Убедитесь, что <code>$wgScoreTimidity</code> или <code>$wgScoreFluidsynth</code> установлены правильно.",
+	"score-fallbacknotexecutable": "Не удалось выполнить FluidSynth: $1 не является исполняемым файлом. Убедитесь, что <code>$wgScoreFluidsynth</code> установлен правильно.",
 	"score-invalidaudiooverride": "Файл \"<nowiki>$1</nowiki>\", указанный с помощью override_audio, недействителен. Пожалуйста, укажите только имя файла, пропустив <nowiki>[[…]]</nowiki> и префикс \"{{ns:file}}:\".",
 	"score-invalidlang": "Недопустимый язык партитуры lang=\"<nowiki>$1</nowiki>\". Распозноваемые в настоящее время языки: lang=\"lilypond\" (по умолчанию) и lang=\"ABC\".",
 	"score-lamenotexecutable": "Невозможно запустить LAME: $1 — не исполняемый файл. Убедитесь, что <code>$wgScoreLame</code> установлен правильно.",
