@@ -7,7 +7,9 @@
 			"Fitoschido",
 			"Macofe",
 			"Mynor Archila",
-			"Ryo567"
+			"Ryo567",
+			"Agabi10",
+			"Dgstranz"
 		]
 	},
 	"score-abc2lynotexecutable": "No se pudo ejecutar el conversor ABC a LilyPond: \"$1\" no es un archivo ejecutable. Asegúrate de que <code>$wgScoreAbc2Ly</code> esté definido correctamente.",
@@ -18,11 +20,14 @@
 	"score-chdirerr": "No se pudo cambiar al directorio $1",
 	"score-cleanerr": "No se han podido limpiar los archivos antiguos antes de volver a representar la imagen",
 	"score-compilererr": "No se pudo compilar el archivo de entrada LilyPond:\n$1",
+	"score-deprecated-category": "Páginas que utilizan atributos de score obsoletos",
+	"score-deprecated-category-desc": "Estas páginas utilizan opciones provenientes de la extensión Score que están obsoletas. Estas son: \"override_audio\", \"override_ogg\" y \"override_midi\".",
 	"score-desc": "Agrega una etiqueta para representar partituras musicales con LilyPond",
 	"score-download-midi-file": "Descargar archivo MIDI",
 	"score-download-source-file": "Descargar archivo de Lilypond",
 	"score-error-category": "Páginas con errores de representación de partituras",
 	"score-error-category-desc": "Hubo un error al representar la partitura.",
+	"score-exec-disabled": "Las partituras musicales están temporalmente deshabilitadas.",
 	"score-fallbacknotexecutable": "No se pudo ejecutar TiMidity++ como reserva: $1 no es un archivo ejecutable. Cerciórate de que o <code>$wgScoreTimidity</code> o <code>$wgScoreFluidsynth</code> estén definidos correctamente.",
 	"score-getcwderr": "No se ha podido obtener el directorio de trabajo actual",
 	"score-invalidaudiooverride": "El archivo «<nowiki>$1</nowiki>» especificado a través de override_audio no es válido. Especifica únicamente el nombre del archivo; omite <nowiki>[[…]]</nowiki> y el prefijo «{{ns:file}}:».",
@@ -37,6 +42,7 @@
 	"score-nomediahandler": "La conversión de audio necesita una versión instalada y configurada de la [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler extensión TimedMediaHandler].",
 	"score-nomidi": "No se generó el archivo MIDI a pesar de que fue solicitado. Si estás a trabajando en modo LilyPond en bruto, asegúrate de proporcionar un bloque \\midi adecuado.",
 	"score-nooutput": "Error al crear el directorio de salida $1.",
+	"score-nops": "LilyPond no ha generado ningún archivo de salida. Por favor, revisa tu código de score.",
 	"score-notelanguagewithraw": "No se puede utilizar el atributo «note-language» en partituras en modo sin formato",
 	"score-notexecutable": "No se pudo ejecutar LilyPond: $1 no es un archivo ejecutable. Asegúrate de que <code>$wgScoreLilyPond</code> esté definido correctamente.",
 	"score-page": "Página $1",

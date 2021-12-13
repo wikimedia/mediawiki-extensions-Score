@@ -3,7 +3,8 @@
 		"authors": [
 			"Dvorapa",
 			"Matěj Suchánek",
-			"Mormegil"
+			"Mormegil",
+			"Danny B."
 		]
 	},
 	"score-abc2lynotexecutable": "Nepodařilo se spustit převodník z ABC na LilyPond: $1 není spustitelný soubor. Ověřte, že máte správně nastaveno <code>$wgScoreAbc2Ly</code>.",
@@ -22,6 +23,7 @@
 	"score-download-source-file": "Stáhnout soubor LilyPond",
 	"score-error-category": "Stránky s chybami při vykreslování partitur",
 	"score-error-category-desc": "Při vykreslování partitury došlo k chybě.",
+	"score-exec-disabled": "Vykreslování partitur je dočasně vypnuto.",
 	"score-fallbacknotexecutable": "Nepodařilo se spustit TiMidity++ jako náhradu: $1 není spustitelný soubor. Ověřte, že máte správně nastaveno <code>$wgScoreTimidity</code> nebo že je správně nastaveno <code>$wgScoreFluidsynth</code>.",
 	"score-getcwderr": "Nepodařilo se zjistit aktuální pracovní adresář",
 	"score-invalidaudiooverride": "Soubor „<nowiki>$1</nowiki>“ uvedený pomocí override_audio je neplatný. Uveďte jen název souboru bez <nowiki>[[…]]</nowiki> a prefixu „{{ns:file}}“.",

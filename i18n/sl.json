@@ -5,5 +5,16 @@
 		]
 	},
 	"score-page": "Stran $1",
-	"score-visualeditor-mwscoreinspector-title": "Notni zapis"
+	"score-visualeditor-mwscoreinspector-card-advanced": "Napredno",
+	"score-visualeditor-mwscoreinspector-card-audio": "Zvok",
+	"score-visualeditor-mwscoreinspector-card-notation": "Notni zapis",
+	"score-visualeditor-mwscoreinspector-lang": "Jezik",
+	"score-visualeditor-mwscoreinspector-notelanguage": "Jezik zapisa",
+	"score-visualeditor-mwscoreinspector-override-midi": "Uporabi obstoječo MIDI datoteko",
+	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Ime obstoječe MIDI datoteke",
+	"score-visualeditor-mwscoreinspector-override-ogg": "Uporabi obstoječo zvočno datoteko",
+	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Ime obstoječe zvočne datoteke (biti mora Ogg/Vorbis)",
+	"score-visualeditor-mwscoreinspector-raw": "To je popolna datoteka LilyPond",
+	"score-visualeditor-mwscoreinspector-title": "Notni zapis",
+	"score-visualeditor-mwscoreinspector-vorbis": "Vključuje zvočno datoteko (po privzetem samodejno generirano)"
 }

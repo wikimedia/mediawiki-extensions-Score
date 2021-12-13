@@ -3,11 +3,13 @@
 		"authors": [
 			"Dishual",
 			"Fohanno",
-			"Fulup"
+			"Fulup",
+			"Gwendal"
 		]
 	},
 	"score-download-midi-file": "Pellkargañ ar restr MIDI",
 	"score-download-source-file": "Pellkargañ ar restr LilyPond",
+	"score-exec-disabled": "Ar skridoù-sonerezh zo diweredekaet evit poent.",
 	"score-nocontent": "N'eus ket bet gallet kargañ ar restr $1 diwar ar servijer.",
 	"score-nomediahandler": "Evit an emdreiñ son eo rekis staliañ ha kefluniañ ur stumm eus [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler an astenn TimedMediaHandler].",
 	"score-page": "Pajenn $1",

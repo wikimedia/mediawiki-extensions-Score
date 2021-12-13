@@ -4,13 +4,16 @@
 			"StanProg",
 			"Ted Masters",
 			"Vlad5250",
-			"Лорд Бъмбъри"
+			"Лорд Бъмбъри",
+			"Kareyac"
 		]
 	},
 	"score-deprecated-category": "Страници, използващи непрепоръчителни атрибути за партитура",
 	"score-deprecated-category-desc": "Страниците използват опции от разширението „Score“, които са непрепоръчителни. Такива са: „override_audio“, „override_ogg“, и „override_midi“.",
 	"score-error-category": "Страници с грешки при визуализирането на партитура",
 	"score-error-category-desc": "Грешка при визуализирането на партитурата.",
+	"score-page": "Страница $1",
+	"score-visualeditor-mwscoreinspector-card-audio": "Аудио",
 	"score-visualeditor-mwscoreinspector-lang": "Език",
 	"score-visualeditor-mwscoreinspector-title": "Музикална нотация",
 	"datatypes-type-musical-notation": "Музикална нотация",

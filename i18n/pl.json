@@ -6,7 +6,8 @@
 			"Matma Rex",
 			"Rail",
 			"Railfail536",
-			"The Polish"
+			"The Polish",
+			"Tar Lócesilion"
 		]
 	},
 	"score-audioconversionerr": "Nie można przekonwertować MIDI na MP3:\n$1",
@@ -18,6 +19,7 @@
 	"score-download-midi-file": "Pobierz plik MIDI",
 	"score-download-source-file": "Pobierz plik LilyPond",
 	"score-error-category": "Strony z błędami w zapisie muzycznym",
+	"score-exec-disabled": "Zapis nutowy jest tymczasowo wyłączony.",
 	"score-nooutput": "Nie można utworzyć katalogu docelowego  $1 .",
 	"score-page": "Strona $1",
 	"score-readerr": "Nie można odczytać pliku  $1 .",
