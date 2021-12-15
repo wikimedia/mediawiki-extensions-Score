@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Դավիթ Սարոյան"
+			"Դավիթ Սարոյան",
+			"Kareyac"
 		]
 	},
+	"score-visualeditor-mwscoreinspector-card-audio": "Աուդիո",
 	"score-visualeditor-mwscoreinspector-title": "Նոտագրում"
 }
