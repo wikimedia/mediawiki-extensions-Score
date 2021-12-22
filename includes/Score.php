@@ -236,7 +236,7 @@ class Score {
 			}
 			self::$backend = new FSFileBackend( [
 				'name'           => 'score-backend',
-				'wikiId'         => wfWikiID(),
+				'wikiId'         => WikiMap::getCurrentWikiId(),
 				'lockManager'    => new NullLockManager( [] ),
 				'containerPaths' => [ 'score-render' => $dir ],
 				'fileMode'       => 0777,
