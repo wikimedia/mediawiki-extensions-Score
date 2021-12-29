@@ -1,22 +1,27 @@
 {
 	"@metadata": {
 		"authors": [
-			"William Surya Permana"
+			"William Surya Permana",
+			"Daud I.F. Argana"
 		]
 	},
 	"score-abc2lynotexecutable": "Konverter ABC ke LilyPond tidak dapat dieksekusi: $1 bukan merupakan berkas yang dapat dieksekusi. Pastikan <code>$wgScoreAbc2Ly</code> diatur dengan benar.",
 	"score-abcconversionerr": "Tidak dapat mengkonversi berkas ABC ke format LilyPond:\n$1",
 	"score-audioconversionerr": "Tidak dapat mengkonversi MIDI ke MP3:\n$1",
 	"score-audiooverridenotfound": "Berkas \"<nowiki>$1</nowiki>\" yang Anda sediakan dengan override_audio tidak tersedia.",
+	"score-audio-alt": "Pemutaran audio tidak didukung di penjelajah Anda. Anda bisa $1.",
+	"score-audio-alt-link": "mengunduh berkas audio",
 	"score-backend-error": "Tidak dapat menyalin berkas yang dihasilkan ke lokasi akhir:\n$1",
 	"score-compilererr": "Tidak dapat mengkompilasi berkas masukan LilyPond:\n$1",
 	"score-convertoverrideaudio": "Anda tidak dapat meminta penampilan audio dan menentukan override_audio dalam waktu bersamaan.",
+	"score-deprecated-category": "Halaman yang menggunakan atribut skor usang",
 	"score-desc": "Tambah tag untuk menampilkan partitur musik dengan LilyPond",
 	"score-download-midi-file": "Unduh berkas MIDI",
 	"score-download-source-file": "Unduh berkas LilyPond",
 	"score-error-category": "Halaman dengan kesalahan tampilan partitur",
 	"score-error-category-desc": "Terjadi galat ketika menampilkan partitur.",
-	"score-fallbacknotexecutable": "TiMidity++ tidak dapat dieksekusi sebagai cadangan: $1 bukan merupakan berkas yang dapat dieksekusi. Pastikan <code>$wgScoreTimidity</code> atau <code>$wgScoreFluidsynth</code> diatur dengan benar.",
+	"score-fallbacknotexecutable": "FluidSynth tidak dapat dieksekusi: $1 bukan merupakan berkas yang dapat dieksekusi. Pastikan <code>$wgScoreFluidsynth</code> diatur dengan benar.",
+	"score-gs-error": "Galat ketika menjalankan Ghostscript:\n$1",
 	"score-invalidaudiooverride": "Berkas \"<nowiki>$1</nowiki>\" yang Anda sediakan dengan override_audio tidak sah. Harap masukkan nama berkasnya saja, abaikan <nowiki>[[…]]</nowiki> dan awalan \"{{ns:file}}:\".",
 	"score-invalidlang": "Bahasa partitur tidak sah lang=\"<nowiki>$1</nowiki>\". Bahasa yang dikenali saat ini adalah lang=\"lilypond\" (baku) dan lang=\"ABC\".",
 	"score-invalidnotelanguage": "note-language=\"<nowiki>$1</nowiki>\" tidak sah. Bahasa notasi yang dikenali saat ini adalah: $2",
@@ -45,5 +50,7 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Nama berkas audo yang tersedia (harus Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Ini adalah berkas LilyPond yang lengkap",
 	"score-visualeditor-mwscoreinspector-title": "Notasi musik",
-	"score-visualeditor-mwscoreinspector-vorbis": "Sertakan berkas audio (dihasilkan secara otomatis)"
+	"score-visualeditor-mwscoreinspector-vorbis": "Sertakan berkas audio (dihasilkan secara otomatis)",
+	"datatypes-type-musical-notation": "Notasi Musik",
+	"wikibase-listdatatypes-musical-notation-head": "Notasi Musik"
 }
