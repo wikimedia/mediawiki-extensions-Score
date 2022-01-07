@@ -6,6 +6,7 @@
 			"Jopparn",
 			"Lokal Profil",
 			"Skalman",
+			"Thurs",
 			"WikiPhoenix"
 		]
 	},
@@ -18,7 +19,7 @@
 	"score-backend-error": "Det går inte att kopiera de genererade filerna till sin slutliga plats:\n$1",
 	"score-compilererr": "Det gick inte att kompilera LilyPond-indatafilen:\n$1",
 	"score-convertoverrideaudio": "Du kan inte begära ljud-framställning och ange override_audio samtidigt.",
-	"score-deprecated-category": "Sidor som använder utfasade poängattributer",
+	"score-deprecated-category": "Sidor som använder utfasade alternativ för Score-tillägget",
 	"score-deprecated-category-desc": "Dessa sidor använder alternativ som tillhandahålls av Score -tillägget som föråldras. Dessa är: \"override_audio\", \"override_ogg\" och \"override_midi\".",
 	"score-desc": "Lägger till en tagg för rendering av partitur med LilyPond",
 	"score-download-midi-file": "Ladda ned MIDI-fil",
