@@ -406,7 +406,7 @@ class Score {
 			$html = self::generateHTML( $parser, $code, $options );
 		} catch ( ScoreException $e ) {
 			if ( $parser->getOutput() !== null ) {
-				$parser->getOutput()->addModules( 'ext.score.errors' );
+				$parser->getOutput()->addModules( [ 'ext.score.errors' ] );
 				if ( $e->isTracked() ) {
 					$parser->addTrackingCategory( 'score-error-category' );
 				}
@@ -475,7 +475,7 @@ class Score {
 			self::eraseDirectory( $options['factory_directory'] );
 		} );
 		if ( $parser->getOutput() !== null ) {
-			$parser->getOutput()->addModules( 'ext.score.popup' );
+			$parser->getOutput()->addModules( [ 'ext.score.popup' ] );
 		}
 
 		$backend = self::getBackend();
