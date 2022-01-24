@@ -15,11 +15,13 @@
 	"score-compilererr": "Tidak dapat mengkompilasi berkas masukan LilyPond:\n$1",
 	"score-convertoverrideaudio": "Anda tidak dapat meminta penampilan audio dan menentukan override_audio dalam waktu bersamaan.",
 	"score-deprecated-category": "Halaman yang menggunakan atribut skor usang",
+	"score-deprecated-category-desc": "Halaman-halaman ini menggunakan opsi yang pernah diberikan oleh ekstensi Score dan sekarang usang. Opsi tersebut adalah: \"override_audio\", \"override_ogg\", dan \"override_midi\".",
 	"score-desc": "Tambah tag untuk menampilkan partitur musik dengan LilyPond",
 	"score-download-midi-file": "Unduh berkas MIDI",
 	"score-download-source-file": "Unduh berkas LilyPond",
 	"score-error-category": "Halaman dengan kesalahan tampilan partitur",
 	"score-error-category-desc": "Terjadi galat ketika menampilkan partitur.",
+	"score-exec-disabled": "Partitur musik sedang dimatikan untuk sementara.",
 	"score-fallbacknotexecutable": "TiMidity++ tidak dapat dieksekusi sebagai cadangan: $1 bukan merupakan berkas yang dapat dieksekusi. Pastikan <code>$wgScoreTimidity</code> atau <code>$wgScoreFluidsynth</code> diatur dengan benar.",
 	"score-getcwderr": "Tidak dapat mengambil direktori kerja saat ini",
 	"score-gs-error": "Galat ketika menjalankan Ghostscript:\n$1",
@@ -35,6 +37,7 @@
 	"score-nomediahandler": "Konversi audio memerlukan versi [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler ekstensi TimedMediaHandler] yang sudah dikonfigurasi dan dipasang.",
 	"score-nomidi": "Tidak ada berkas MIDI yang dihasilkan meski sudah diminta. Jika Anda bekerja dalam mode LilyPond mentah, jangan lupa untuk menyediakan blok \\midi yang layak.",
 	"score-nooutput": "Gagal membuat direktori keluaran $1.",
+	"score-nops": "LilyPond tidak menghasilkan berkas keluaran apa pun. Tolong periksa kode partitur Anda.",
 	"score-notelanguagewithraw": "Atribut \"note-language\" tidak dapat digunakan untuk partitur mode mentah",
 	"score-notexecutable": "LilyPond tidak dapat dieksekusi: $1 bukan merupakan berkas yang dapat dieksekusi. Pastikan <code>$wgScoreLilyPond</code> diatur dengan benar.",
 	"score-page": "Halaman $1",
@@ -57,5 +60,6 @@
 	"score-visualeditor-mwscoreinspector-title": "Notasi musik",
 	"score-visualeditor-mwscoreinspector-vorbis": "Sertakan berkas audio (dihasilkan secara otomatis)",
 	"datatypes-type-musical-notation": "Notasi Musik",
-	"wikibase-listdatatypes-musical-notation-head": "Notasi Musik"
+	"wikibase-listdatatypes-musical-notation-head": "Notasi Musik",
+	"wikibase-listdatatypes-musical-notation-body": "Isian data literal untuk partitur musik yang ditulis dalam notasi LilyPond."
 }
