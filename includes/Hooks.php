@@ -1,5 +1,9 @@
 <?php
 
+namespace MediaWiki\Extension\Score;
+
+use Parser;
+use ParserOptions;
 use ValueFormatters\FormatterOptions;
 use ValueParsers\StringParser;
 use Wikibase\Repo\Parsers\WikibaseStringValueNormalizer;
@@ -10,7 +14,7 @@ use Wikibase\Repo\Rdf\RdfVocabulary;
 use Wikibase\Repo\WikibaseRepo;
 use Wikimedia\Purtle\RdfWriter;
 
-class ScoreHooks {
+class Hooks {
 	/**
 	 * @param Parser $parser
 	 */
@@ -20,7 +24,7 @@ class ScoreHooks {
 			// Default to if we use Image Magick, since it requires Image Magick.
 			$wgScoreTrim = $wgUseImageMagick;
 		}
-		$parser->setHook( 'score', 'Score::render' );
+		$parser->setHook( 'score', [ Score::class, 'render' ] );
 	}
 
 	public static function onSoftwareInfo( array &$software ) {

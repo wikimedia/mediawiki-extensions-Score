@@ -1,5 +1,10 @@
 <?php
 
+namespace MediaWiki\Extension\Score;
+
+use Status;
+use StatusValue;
+
 /**
  * Convenient wrapper for score-backend-error
  */

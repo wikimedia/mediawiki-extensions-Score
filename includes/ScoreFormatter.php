@@ -18,7 +18,11 @@
 
 */
 
+namespace MediaWiki\Extension\Score;
+
 use DataValues\StringValue;
+use Html;
+use InvalidArgumentException;
 use MediaWiki\MediaWikiServices;
 use ValueFormatters\ValueFormatter;
 use Wikibase\Lib\Formatters\SnakFormatter;

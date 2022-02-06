@@ -1,5 +1,12 @@
 <?php
 
+namespace MediaWiki\Extension\Score;
+
+use ResourceLoader;
+use ResourceLoaderContext;
+use ResourceLoaderFileModule;
+use Xml;
+
 class ScoreVeResourceLoaderModule extends ResourceLoaderFileModule {
 
 	/**

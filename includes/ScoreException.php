@@ -23,6 +23,12 @@
 
  */
 
+namespace MediaWiki\Extension\Score;
+
+use Exception;
+use Html;
+use Title;
+
 /**
  * Score exception
  */
