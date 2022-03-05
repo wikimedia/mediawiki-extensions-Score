@@ -23,9 +23,22 @@
 
  */
 
+namespace MediaWiki\Extension\Score;
+
+use Exception;
+use FileBackend;
+use FormatJson;
+use FSFileBackend;
+use Html;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
+use Message;
+use NullLockManager;
+use Parser;
+use PPFrame;
 use Shellbox\Command\BoxedCommand;
+use Title;
+use WikiMap;
 use Wikimedia\ScopedCallback;
 
 /**
@@ -230,6 +243,7 @@ class Score {
 		if ( !self::$backend ) {
 			global $wgScoreDirectory, $wgUploadDirectory;
 			if ( $wgScoreDirectory === false ) {
+				// @phan-suppress-next-line PhanPossiblyUndeclaredVariable
 				$dir = "{$wgUploadDirectory}/lilypond";
 			} else {
 				$dir = $wgScoreDirectory;
@@ -294,7 +308,6 @@ class Score {
 
 			/* temporary working directory to use */
 			$fuzz = md5( (string)mt_rand() );
-			// @phan-suppress-next-line PhanTypeSuspiciousStringExpression
 			$options['factory_directory'] = $wgTmpDirectory . "/MWLP.$fuzz";
 
 			/* Score language selection */
@@ -396,7 +409,7 @@ class Score {
 			];
 
 			/* image file path and URL prefixes */
-			$imageCacheName = Wikimedia\base_convert( sha1( serialize( $cacheOptions ) ), 16, 36, 31 );
+			$imageCacheName = \Wikimedia\base_convert( sha1( serialize( $cacheOptions ) ), 16, 36, 31 );
 			$imagePrefixEnd = "{$imageCacheName[0]}/" .
 				"{$imageCacheName[1]}/$imageCacheName";
 			$options['dest_storage_path'] = "$baseStoragePath/$imagePrefixEnd";

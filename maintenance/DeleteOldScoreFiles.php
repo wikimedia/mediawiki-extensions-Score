@@ -20,6 +20,9 @@
  * @file
  * @ingroup Maintenance
  */
+
+use MediaWiki\Extension\Score\Score;
+
 if ( getenv( 'MW_INSTALL_PATH' ) ) {
 	$IP = getenv( 'MW_INSTALL_PATH' );
 } else {

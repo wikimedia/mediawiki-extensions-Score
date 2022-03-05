@@ -17,19 +17,12 @@
 			"i18n"
 		]
 	},
-	"AutoloadClasses": {
-		"Score": "includes/Score.php",
-		"ScoreBackendException": "includes/ScoreBackendException.php",
-		"ScoreDisabledException": "includes/ScoreDisabledException.php",
-		"ScoreException": "includes/ScoreException.php",
-		"ScoreHooks": "includes/ScoreHooks.php",
-		"ScoreFormatter": "includes/ScoreFormatter.php",
-		"ScoreVeResourceLoaderModule": "includes/ScoreVeResourceLoaderModule.php",
-		"LilypondErrorMessageBeautifier": "includes/LilypondErrorMessageBeautifier.php"
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\Score\\": "includes/"
 	},
 	"ResourceModules": {
 		"ext.score.visualEditor": {
-			"class": "ScoreVeResourceLoaderModule",
+			"class": "MediaWiki\\Extension\\Score\\ScoreVeResourceLoaderModule",
 			"scripts": [
 				"ve-score/ve.dm.MWScoreNode.js",
 				"ve-score/ve.ce.MWScoreNode.js",
@@ -108,16 +101,16 @@
 	},
 	"Hooks": {
 		"ParserFirstCallInit": [
-			"ScoreHooks::onParserFirstCallInit"
+			"MediaWiki\\Extension\\Score\\Hooks::onParserFirstCallInit"
 		],
 		"SoftwareInfo": [
-			"ScoreHooks::onSoftwareInfo"
+			"MediaWiki\\Extension\\Score\\Hooks::onSoftwareInfo"
 		],
 		"WikibaseClientDataTypes": [
-			"ScoreHooks::onWikibaseClientDataTypes"
+			"MediaWiki\\Extension\\Score\\Hooks::onWikibaseClientDataTypes"
 		],
 		"WikibaseRepoDataTypes": [
-			"ScoreHooks::onWikibaseRepoDataTypes"
+			"MediaWiki\\Extension\\Score\\Hooks::onWikibaseRepoDataTypes"
 		]
 	},
 	"config": {

@@ -18,6 +18,8 @@
 
 */
 
+namespace MediaWiki\Extension\Score;
+
 /**
  * Convert the std error output of lilypond into a concise html form.
  */

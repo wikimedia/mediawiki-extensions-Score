@@ -1,5 +1,7 @@
 <?php
 
+namespace MediaWiki\Extension\Score;
+
 class ScoreDisabledException extends ScoreException {
 	public function __construct() {
 		parent::__construct( 'score-exec-disabled' );
