@@ -1,8 +1,7 @@
 var popupShown = false;
 
 function showPopup( $score ) {
-	var $popup,
-		midi = $score.data( 'midi' ),
+	var midi = $score.data( 'midi' ),
 		source = $score.data( 'source' );
 
 	// Don't show popup when there is no midi or source.
@@ -10,7 +9,7 @@ function showPopup( $score ) {
 		return;
 	}
 
-	$popup = $( '<div>' ).addClass( 'mw-ext-score-popup' );
+	var $popup = $( '<div>' ).addClass( 'mw-ext-score-popup' );
 
 	if ( midi !== undefined ) {
 		$popup.append( $( '<a>' )
@@ -55,8 +54,7 @@ function hidePopups( callback ) {
 }
 
 $( document ).on( 'click', '.mw-ext-score img', function ( e ) {
-	var sameScore,
-		$target = $( e.target ),
+	var $target = $( e.target ),
 		$score = $target.parent();
 
 	e.stopPropagation();
@@ -65,7 +63,7 @@ $( document ).on( 'click', '.mw-ext-score img', function ( e ) {
 	// then show new popup immediately.
 	if ( popupShown ) {
 		// eslint-disable-next-line no-jquery/no-global-selector
-		sameScore = $score.is( $( '.mw-ext-score-popup' ).parent() );
+		var sameScore = $score.is( $( '.mw-ext-score-popup' ).parent() );
 
 		hidePopups( function () {
 			if ( !sameScore ) {

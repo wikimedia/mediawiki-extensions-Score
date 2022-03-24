@@ -39,15 +39,6 @@ ve.ui.MWScoreInspector.static.dir = 'ltr';
  * @inheritdoc
  */
 ve.ui.MWScoreInspector.prototype.initialize = function () {
-	var inputField, langField,
-		noteLanguageField, overrideMidiField,
-		vorbisField, overrideOggField,
-		rawField,
-		notationTabPanel, audioTabPanel, advancedTabPanel,
-		language,
-		languageItems = [],
-		languages = mw.config.get( 'wgScoreNoteLanguages' );
-
 	// Parent method
 	ve.ui.MWScoreInspector.super.prototype.initialize.call( this );
 
@@ -58,19 +49,19 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 	} );
 
 	// TabPanels
-	notationTabPanel = new OO.ui.TabPanelLayout( 'notation', {
+	var notationTabPanel = new OO.ui.TabPanelLayout( 'notation', {
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-card-notation' ),
 		expanded: false,
 		scrollable: false,
 		padded: true
 	} );
-	audioTabPanel = new OO.ui.TabPanelLayout( 'audio', {
+	var audioTabPanel = new OO.ui.TabPanelLayout( 'audio', {
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-card-audio' ),
 		expanded: false,
 		scrollable: false,
 		padded: true
 	} );
-	advancedTabPanel = new OO.ui.TabPanelLayout( 'advanced', {
+	var advancedTabPanel = new OO.ui.TabPanelLayout( 'advanced', {
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-card-advanced' ),
 		expanded: false,
 		scrollable: false,
@@ -97,6 +88,7 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 		]
 	} );
 
+	var languageItems = [];
 	// Note Language
 	this.noteLanguageDropdown = new OO.ui.DropdownWidget();
 	languageItems.push(
@@ -105,7 +97,9 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 			label: '\u00a0'
 		} )
 	);
-	for ( language in languages ) {
+
+	var languages = mw.config.get( 'wgScoreNoteLanguages' );
+	for ( var language in languages ) {
 		languageItems.push( new OO.ui.MenuOptionWidget( {
 			data: language,
 			label: languages[ language ]
@@ -127,31 +121,31 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 	} );
 
 	// Field layouts
-	inputField = new OO.ui.FieldLayout( this.input, {
+	var inputField = new OO.ui.FieldLayout( this.input, {
 		align: 'top',
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-title' )
 	} );
-	langField = new OO.ui.FieldLayout( this.langSelect, {
+	var langField = new OO.ui.FieldLayout( this.langSelect, {
 		align: 'left',
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-lang' )
 	} );
-	noteLanguageField = new OO.ui.FieldLayout( this.noteLanguageDropdown, {
+	var noteLanguageField = new OO.ui.FieldLayout( this.noteLanguageDropdown, {
 		align: 'left',
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-notelanguage' )
 	} );
-	vorbisField = new OO.ui.FieldLayout( this.audioCheckbox, {
+	var vorbisField = new OO.ui.FieldLayout( this.audioCheckbox, {
 		align: 'inline',
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-vorbis' )
 	} );
-	overrideOggField = new OO.ui.FieldLayout( this.overrideOggInput, {
+	var overrideOggField = new OO.ui.FieldLayout( this.overrideOggInput, {
 		align: 'top',
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-override-ogg' )
 	} );
-	overrideMidiField = new OO.ui.FieldLayout( this.overrideMidiInput, {
+	var overrideMidiField = new OO.ui.FieldLayout( this.overrideMidiInput, {
 		align: 'top',
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-override-midi' )
 	} );
-	rawField = new OO.ui.FieldLayout( this.rawCheckbox, {
+	var rawField = new OO.ui.FieldLayout( this.rawCheckbox, {
 		align: 'inline',
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-raw' )
 	} );
@@ -248,22 +242,21 @@ ve.ui.MWScoreInspector.prototype.getTeardownProcess = function ( data ) {
  * @inheritdoc
  */
 ve.ui.MWScoreInspector.prototype.updateMwData = function ( mwData ) {
-	var lang, noteLanguage, raw, vorbis, overrideMidi, overrideOgg;
-
 	// Parent method
 	ve.ui.MWScoreInspector.super.prototype.updateMwData.call( this, mwData );
 
 	// Get data from inspector
-	lang = this.langSelect.findSelectedItem().getData();
-	noteLanguage = this.noteLanguageDropdown.getMenu().findSelectedItem().getData() || undefined;
-	raw = !this.rawCheckbox.isDisabled() && this.rawCheckbox.isSelected();
+	var lang = this.langSelect.findSelectedItem().getData();
+	var noteLanguage =
+		this.noteLanguageDropdown.getMenu().findSelectedItem().getData() || undefined;
+	var raw = !this.rawCheckbox.isDisabled() && this.rawCheckbox.isSelected();
 	// audioCheckbox is selected if an audio file is being included, whether that file
 	// is being auto-generated or whether an existing file is being used; but the "vorbis"
 	// attribute is only set to 1 if an audio file is being included AND that file is
 	// being auto-generated.
-	vorbis = this.audioCheckbox.isSelected() && this.overrideOggInput.getValue() === '';
-	overrideOgg = !this.overrideOggInput.isDisabled() && this.overrideOggInput.getValue();
-	overrideMidi = !this.overrideMidiInput.isDisabled() && this.overrideMidiInput.getValue();
+	var vorbis = this.audioCheckbox.isSelected() && this.overrideOggInput.getValue() === '';
+	var overrideOgg = !this.overrideOggInput.isDisabled() && this.overrideOggInput.getValue();
+	var overrideMidi = !this.overrideMidiInput.isDisabled() && this.overrideMidiInput.getValue();
 
 	// Update attributes
 	mwData.attrs.lang = lang;
