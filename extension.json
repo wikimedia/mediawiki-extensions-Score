@@ -26,10 +26,12 @@
 			"scripts": [
 				"ve-score/ve.dm.MWScoreNode.js",
 				"ve-score/ve.ce.MWScoreNode.js",
+				"ve-score/ve.ui.MWScoreContextItem.js",
 				"ve-score/ve.ui.MWScoreInspector.js",
 				"ve-score/ve.ui.MWScoreInspectorTool.js"
 			],
 			"styles": [
+				"ve-score/ve.ui.MWScoreContextItem.css",
 				"ve-score/ve.ui.MWScoreInspector.css"
 			],
 			"dependencies": [
