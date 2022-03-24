@@ -1,78 +1,55 @@
 /*!
- * VisualEditor UserInterface MWScoreInspector class.
+ * VisualEditor UserInterface MWScoreDialog class.
  *
  * @copyright 2015 VisualEditor Team and others; see AUTHORS.txt
  * @license The MIT License (MIT); see LICENSE.txt
  */
 
 /**
- * MediaWiki score inspector.
+ * MediaWiki score dialog.
  *
  * @class
- * @extends ve.ui.MWLiveExtensionInspector
+ * @extends ve.ui.MWExtensionPreviewDialog
  *
  * @constructor
  * @param {Object} [config] Configuration options
  */
-ve.ui.MWScoreInspector = function VeUiMWScoreInspector( config ) {
+ve.ui.MWScoreDialog = function VeUiMWScoreDialog( config ) {
 	// Parent constructor
-	ve.ui.MWScoreInspector.super.call( this, ve.extendObject( { padded: false }, config ) );
+	ve.ui.MWScoreDialog.super.call( this, ve.extendObject( { padded: false }, config ) );
 };
 
 /* Inheritance */
 
-OO.inheritClass( ve.ui.MWScoreInspector, ve.ui.MWLiveExtensionInspector );
+OO.inheritClass( ve.ui.MWScoreDialog, ve.ui.MWExtensionPreviewDialog );
 
 /* Static properties */
 
-ve.ui.MWScoreInspector.static.name = 'score';
+ve.ui.MWScoreDialog.static.size = 'larger';
 
-ve.ui.MWScoreInspector.static.title = OO.ui.deferMsg( 'score-visualeditor-mwscoreinspector-title' );
+ve.ui.MWScoreDialog.static.name = 'score';
 
-ve.ui.MWScoreInspector.static.modelClasses = [ ve.dm.MWScoreNode ];
+ve.ui.MWScoreDialog.static.title = OO.ui.deferMsg( 'score-visualeditor-mwscoreinspector-title' );
 
-ve.ui.MWScoreInspector.static.dir = 'ltr';
+ve.ui.MWScoreDialog.static.modelClasses = [ ve.dm.MWScoreNode ];
+
+ve.ui.MWScoreDialog.static.dir = 'ltr';
 
 /* Methods */
 
 /**
  * @inheritdoc
  */
-ve.ui.MWScoreInspector.prototype.initialize = function () {
+ve.ui.MWScoreDialog.prototype.initialize = function () {
 	// Parent method
-	ve.ui.MWScoreInspector.super.prototype.initialize.call( this );
+	ve.ui.MWScoreDialog.super.prototype.initialize.call( this );
 
 	// Index layout
-	this.indexLayout = new OO.ui.IndexLayout( {
+	this.panel = new OO.ui.PanelLayout( {
+		padded: true,
 		scrollable: false,
 		expanded: false
 	} );
-
-	// TabPanels
-	var notationTabPanel = new OO.ui.TabPanelLayout( 'notation', {
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-card-notation' ),
-		expanded: false,
-		scrollable: false,
-		padded: true
-	} );
-	var audioTabPanel = new OO.ui.TabPanelLayout( 'audio', {
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-card-audio' ),
-		expanded: false,
-		scrollable: false,
-		padded: true
-	} );
-	var advancedTabPanel = new OO.ui.TabPanelLayout( 'advanced', {
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-card-advanced' ),
-		expanded: false,
-		scrollable: false,
-		padded: true
-	} );
-
-	this.indexLayout.addTabPanels( [
-		notationTabPanel,
-		audioTabPanel,
-		advancedTabPanel
-	] );
 
 	// Language
 	this.langSelect = new OO.ui.ButtonSelectWidget( {
@@ -120,7 +97,12 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 		placeholder: ve.msg( 'score-visualeditor-mwscoreinspector-override-audio-placeholder' )
 	} );
 
+	this.input = new ve.ui.MWAceEditorWidget( {
+		rows: 8
+	} );
+
 	// Field layouts
+	var basicFieldset = new OO.ui.FieldsetLayout();
 	var inputField = new OO.ui.FieldLayout( this.input, {
 		align: 'top',
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-title' )
@@ -129,56 +111,59 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 		align: 'left',
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-lang' )
 	} );
+	basicFieldset.addItems( [ inputField, langField ] );
+
+	var advancedFieldset = new OO.ui.FieldsetLayout( {
+		label: ve.msg( 'score-visualeditor-mwscoreinspector-card-advanced' )
+	} );
+	var rawField = new OO.ui.FieldLayout( this.rawCheckbox, {
+		align: 'left',
+		label: ve.msg( 'score-visualeditor-mwscoreinspector-raw' )
+	} );
 	var noteLanguageField = new OO.ui.FieldLayout( this.noteLanguageDropdown, {
 		align: 'left',
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-notelanguage' )
 	} );
+	advancedFieldset.addItems( [ rawField, noteLanguageField ] );
+
+	var audioFieldset = new OO.ui.FieldsetLayout( {
+		label: ve.msg( 'score-visualeditor-mwscoreinspector-card-audio' )
+	} );
 	var audioField = new OO.ui.FieldLayout( this.audioCheckbox, {
-		align: 'inline',
+		align: 'left',
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-audio' )
 	} );
 	var overrideAudioField = new OO.ui.FieldLayout( this.overrideAudioInput, {
-		align: 'top',
+		align: 'left',
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-override-audio' )
 	} );
 	var overrideMidiField = new OO.ui.FieldLayout( this.overrideMidiInput, {
-		align: 'top',
+		align: 'left',
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-override-midi' )
 	} );
-	var rawField = new OO.ui.FieldLayout( this.rawCheckbox, {
-		align: 'inline',
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-raw' )
-	} );
+	audioFieldset.addItems( [ audioField, overrideAudioField, overrideMidiField ] );
 
 	// Initialization
 	this.$content.addClass( 've-ui-mwScoreInspector-content' );
 
-	notationTabPanel.$element.append(
-		inputField.$element,
-		langField.$element,
-		noteLanguageField.$element,
-		this.generatedContentsError.$element
+	this.panel.$element.append(
+		this.previewElement.$element,
+		basicFieldset.$element,
+		advancedFieldset.$element,
+		audioFieldset.$element
 	);
-	audioTabPanel.$element.append(
-		audioField.$element,
-		overrideAudioField.$element
-	);
-	advancedTabPanel.$element.append(
-		rawField.$element,
-		overrideMidiField.$element
-	);
-	this.form.$element.append(
-		this.indexLayout.$element
+	this.$body.append(
+		this.panel.$element
 	);
 };
 
 /**
  * @inheritdoc
  */
-ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
-	return ve.ui.MWScoreInspector.super.prototype.getSetupProcess.call( this, data )
+ve.ui.MWScoreDialog.prototype.getSetupProcess = function ( data ) {
+	return ve.ui.MWScoreDialog.super.prototype.getSetupProcess.call( this, data )
 		.next( function () {
-			var attributes = this.selectedNode.getAttribute( 'mw' ).attrs,
+			var attributes = this.selectedNode ? this.selectedNode.getAttribute( 'mw' ).attrs : {},
 				lang = attributes.lang || 'lilypond',
 				noteLanguage = attributes[ 'note-language' ] || null,
 				raw = attributes.raw !== undefined,
@@ -200,7 +185,7 @@ ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
 			this.overrideAudioInput.setValue( overrideAudio ).setReadOnly( isReadOnly );
 
 			// Disable any fields that should be disabled
-			this.toggleDisableRawCheckbox();
+			this.onLangSelectChoose();
 			this.toggleDisableNoteLanguageDropdown();
 			this.toggleDisableOverrideAudioInput();
 
@@ -212,10 +197,10 @@ ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
 			this.overrideMidiInput.on( 'change', this.onChangeHandler );
 			this.overrideAudioInput.on( 'change', this.onChangeHandler );
 
+			this.previewElement.connect( this, { render: 'updateSize' } );
+
 			this.rawCheckbox.connect( this, { change: 'toggleDisableNoteLanguageDropdown' } );
-			this.indexLayout.connect( this, { set: 'onTabPanelSet' } );
-			this.indexLayout.connect( this, { set: 'updateSize' } );
-			this.langSelect.connect( this, { choose: 'toggleDisableRawCheckbox' } );
+			this.langSelect.connect( this, { choose: 'onLangSelectChoose' } );
 			this.audioCheckbox.connect( this, { change: 'toggleDisableOverrideAudioInput' } );
 		}, this );
 };
@@ -223,8 +208,8 @@ ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
 /**
  * @inheritdoc
  */
-ve.ui.MWScoreInspector.prototype.getTeardownProcess = function ( data ) {
-	return ve.ui.MWScoreInspector.super.prototype.getTeardownProcess.call( this, data )
+ve.ui.MWScoreDialog.prototype.getTeardownProcess = function ( data ) {
+	return ve.ui.MWScoreDialog.super.prototype.getTeardownProcess.call( this, data )
 		.first( function () {
 			this.langSelect.off( 'choose', this.onChangeHandler );
 			this.noteLanguageDropdown.off( 'labelChange', this.onChangeHandler );
@@ -232,7 +217,8 @@ ve.ui.MWScoreInspector.prototype.getTeardownProcess = function ( data ) {
 			this.overrideMidiInput.off( 'change', this.onChangeHandler );
 			this.overrideAudioInput.off( 'change', this.onChangeHandler );
 
-			this.indexLayout.disconnect( this );
+			this.previewElement.disconnect( this );
+
 			this.langSelect.disconnect( this );
 			this.audioCheckbox.disconnect( this );
 		}, this );
@@ -241,11 +227,11 @@ ve.ui.MWScoreInspector.prototype.getTeardownProcess = function ( data ) {
 /**
  * @inheritdoc
  */
-ve.ui.MWScoreInspector.prototype.updateMwData = function ( mwData ) {
+ve.ui.MWScoreDialog.prototype.updateMwData = function ( mwData ) {
 	// Parent method
-	ve.ui.MWScoreInspector.super.prototype.updateMwData.call( this, mwData );
+	ve.ui.MWScoreDialog.super.prototype.updateMwData.call( this, mwData );
 
-	// Get data from inspector
+	// Get data from dialog
 	var lang = this.langSelect.findSelectedItem().getData();
 	var noteLanguage =
 		this.noteLanguageDropdown.getMenu().findSelectedItem().getData() || undefined;
@@ -274,17 +260,25 @@ ve.ui.MWScoreInspector.prototype.updateMwData = function ( mwData ) {
 };
 
 /**
- * Set the disabled status of this.rawCheckbox based on the lang attribute
+ * Handle choose events from the language select widget
  */
-ve.ui.MWScoreInspector.prototype.toggleDisableRawCheckbox = function () {
+ve.ui.MWScoreDialog.prototype.onLangSelectChoose = function () {
+	var lang = this.langSelect.findSelectedItem().getData();
 	// Disable the checkbox if the language is not LilyPond
-	this.rawCheckbox.setDisabled( this.isReadOnly() || this.langSelect.findSelectedItem().getData() !== 'lilypond' );
+	this.rawCheckbox.setDisabled( this.isReadOnly() || lang !== 'lilypond' );
+
+	var langMap = {
+		lilypond: 'latex',
+		ABC: 'abc'
+	};
+
+	this.input.setLanguage( langMap[ lang ] || 'text' );
 };
 
 /**
  * Set the disabled status of this.noteLanguage based on the raw attribute
  */
-ve.ui.MWScoreInspector.prototype.toggleDisableNoteLanguageDropdown = function () {
+ve.ui.MWScoreDialog.prototype.toggleDisableNoteLanguageDropdown = function () {
 	// Disable the dropdown if raw mode is used
 	this.noteLanguageDropdown.setDisabled( this.isReadOnly() || this.rawCheckbox.isSelected() );
 };
@@ -292,25 +286,11 @@ ve.ui.MWScoreInspector.prototype.toggleDisableNoteLanguageDropdown = function ()
 /**
  * Set the disabled status of this.overrideAudioInput based on the audio attribute
  */
-ve.ui.MWScoreInspector.prototype.toggleDisableOverrideAudioInput = function () {
+ve.ui.MWScoreDialog.prototype.toggleDisableOverrideAudioInput = function () {
 	// Disable the input if we ARE generating an audio file
 	this.overrideAudioInput.setDisabled( !this.audioCheckbox.isSelected() );
 };
 
-/**
- * @inheritdoc
- */
-ve.ui.MWScoreInspector.prototype.formatGeneratedContentsError = function ( $element ) {
-	return $element.text().trim();
-};
-
-/**
- * Append the error to the current tab panel.
- */
-ve.ui.MWScoreInspector.prototype.onTabPanelSet = function () {
-	this.indexLayout.getCurrentTabPanel().$element.append( this.generatedContentsError.$element );
-};
-
 /* Registration */
 
-ve.ui.windowFactory.register( ve.ui.MWScoreInspector );
+ve.ui.windowFactory.register( ve.ui.MWScoreDialog );

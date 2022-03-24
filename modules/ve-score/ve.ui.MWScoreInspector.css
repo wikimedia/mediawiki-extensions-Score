@@ -5,7 +5,16 @@
  * @license The MIT License (MIT); see LICENSE.txt
  */
 
-.ve-ui-mwScoreInspector-content .ve-ui-mwExtensionWindow-input textarea {
-	/* See T176636 */
-	font-family: monospace, monospace;
+.ve-ui-mwScoreInspector-content .oo-ui-textInputWidget {
+	max-width: none;
+}
+
+.ve-ui-mwScoreInspector-content .ve-ui-previewElement {
+	max-height: 25em;
+	overflow: auto;
+}
+
+.ve-ui-mwScoreInspector-content .mw-ext-score {
+	display: block;
+	text-align: center;
 }

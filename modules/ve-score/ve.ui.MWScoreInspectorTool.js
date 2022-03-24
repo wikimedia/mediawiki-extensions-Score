@@ -1,5 +1,5 @@
 /*!
- * VisualEditor UserInterface MWScoreInspectorTool class.
+ * VisualEditor UserInterface MWScoreDialogTool class.
  *
  * @copyright 2015 VisualEditor Team and others; see AUTHORS.txt
  * @license The MIT License (MIT); see LICENSE.txt
@@ -9,25 +9,25 @@
  * MediaWiki UserInterface score tool.
  *
  * @class
- * @extends ve.ui.FragmentInspectorTool
+ * @extends ve.ui.FragmentDialogTool
  * @constructor
  * @param {OO.ui.ToolGroup} toolGroup
  * @param {Object} [config] Configuration options
  */
 
-ve.ui.MWScoreInspectorTool = function VeUiMWScoreInspectorTool( toolGroup, config ) {
-	ve.ui.MWScoreInspectorTool.super.call( this, toolGroup, config );
+ve.ui.MWScoreDialogTool = function VeUiMWScoreDialogTool( toolGroup, config ) {
+	ve.ui.MWScoreDialogTool.super.call( this, toolGroup, config );
 };
-OO.inheritClass( ve.ui.MWScoreInspectorTool, ve.ui.FragmentInspectorTool );
-ve.ui.MWScoreInspectorTool.static.name = 'score';
-ve.ui.MWScoreInspectorTool.static.group = 'object';
-ve.ui.MWScoreInspectorTool.static.icon = 'score';
-ve.ui.MWScoreInspectorTool.static.title = OO.ui.deferMsg(
+OO.inheritClass( ve.ui.MWScoreDialogTool, ve.ui.FragmentWindowTool );
+ve.ui.MWScoreDialogTool.static.name = 'score';
+ve.ui.MWScoreDialogTool.static.group = 'object';
+ve.ui.MWScoreDialogTool.static.icon = 'score';
+ve.ui.MWScoreDialogTool.static.title = OO.ui.deferMsg(
 	'score-visualeditor-mwscoreinspector-title'
 );
-ve.ui.MWScoreInspectorTool.static.modelClasses = [ ve.dm.MWScoreNode ];
-ve.ui.MWScoreInspectorTool.static.commandName = 'score';
-ve.ui.toolFactory.register( ve.ui.MWScoreInspectorTool );
+ve.ui.MWScoreDialogTool.static.modelClasses = [ ve.dm.MWScoreNode ];
+ve.ui.MWScoreDialogTool.static.commandName = 'score';
+ve.ui.toolFactory.register( ve.ui.MWScoreDialogTool );
 
 ve.ui.commandRegistry.register(
 	new ve.ui.Command(
