@@ -53,9 +53,7 @@ class ScoreException extends Exception {
 	 * @return string Error message HTML.
 	 */
 	public function getHtml() {
-		return Html::rawElement(
-			'div',
-			[ 'class' => $this->getCSSClasses() ],
+		return $this->getBox(
 			wfMessage( $this->getMessage(), ...$this->args )
 				->inContentLanguage()
 				->title( Title::makeTitle( NS_SPECIAL, 'Badtitle' ) )
@@ -64,12 +62,12 @@ class ScoreException extends Exception {
 	}
 
 	/**
-	 * Get CSS classes that should apply to this error
-	 *
-	 * @return array
+	 * Get the error box.
+	 * @param string $content Content of the box (raw HTML)
+	 * @return string The error box (raw HTML)
 	 */
-	protected function getCSSClasses(): array {
-		return [ 'errorbox', 'mw-ext-score-error' ];
+	protected function getBox( string $content ): string {
+		return Html::errorBox( $content, '', 'mw-ext-score-error' );
 	}
 
 	/**
