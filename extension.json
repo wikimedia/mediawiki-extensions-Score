@@ -39,6 +39,7 @@
 				"ext.score.visualEditor.icons"
 			],
 			"messages": [
+				"score-visualeditor-mwscoreinspector-audio",
 				"score-visualeditor-mwscoreinspector-card-advanced",
 				"score-visualeditor-mwscoreinspector-card-audio",
 				"score-visualeditor-mwscoreinspector-card-notation",
@@ -46,13 +47,12 @@
 				"score-visualeditor-mwscoreinspector-lang-abc",
 				"score-visualeditor-mwscoreinspector-lang-lilypond",
 				"score-visualeditor-mwscoreinspector-notelanguage",
+				"score-visualeditor-mwscoreinspector-override-audio",
+				"score-visualeditor-mwscoreinspector-override-audio-placeholder",
 				"score-visualeditor-mwscoreinspector-override-midi",
 				"score-visualeditor-mwscoreinspector-override-midi-placeholder",
-				"score-visualeditor-mwscoreinspector-override-ogg",
-				"score-visualeditor-mwscoreinspector-override-ogg-placeholder",
 				"score-visualeditor-mwscoreinspector-raw",
-				"score-visualeditor-mwscoreinspector-title",
-				"score-visualeditor-mwscoreinspector-vorbis"
+				"score-visualeditor-mwscoreinspector-title"
 			],
 			"targets": [
 				"desktop",

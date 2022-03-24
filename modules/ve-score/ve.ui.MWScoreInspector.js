@@ -116,8 +116,8 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 	this.overrideMidiInput = new OO.ui.TextInputWidget( {
 		placeholder: ve.msg( 'score-visualeditor-mwscoreinspector-override-midi-placeholder' )
 	} );
-	this.overrideOggInput = new OO.ui.TextInputWidget( {
-		placeholder: ve.msg( 'score-visualeditor-mwscoreinspector-override-ogg-placeholder' )
+	this.overrideAudioInput = new OO.ui.TextInputWidget( {
+		placeholder: ve.msg( 'score-visualeditor-mwscoreinspector-override-audio-placeholder' )
 	} );
 
 	// Field layouts
@@ -133,13 +133,13 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 		align: 'left',
 		label: ve.msg( 'score-visualeditor-mwscoreinspector-notelanguage' )
 	} );
-	var vorbisField = new OO.ui.FieldLayout( this.audioCheckbox, {
+	var audioField = new OO.ui.FieldLayout( this.audioCheckbox, {
 		align: 'inline',
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-vorbis' )
+		label: ve.msg( 'score-visualeditor-mwscoreinspector-audio' )
 	} );
-	var overrideOggField = new OO.ui.FieldLayout( this.overrideOggInput, {
+	var overrideAudioField = new OO.ui.FieldLayout( this.overrideAudioInput, {
 		align: 'top',
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-override-ogg' )
+		label: ve.msg( 'score-visualeditor-mwscoreinspector-override-audio' )
 	} );
 	var overrideMidiField = new OO.ui.FieldLayout( this.overrideMidiInput, {
 		align: 'top',
@@ -160,8 +160,8 @@ ve.ui.MWScoreInspector.prototype.initialize = function () {
 		this.generatedContentsError.$element
 	);
 	audioTabPanel.$element.append(
-		vorbisField.$element,
-		overrideOggField.$element
+		audioField.$element,
+		overrideAudioField.$element
 	);
 	advancedTabPanel.$element.append(
 		rawField.$element,
@@ -182,9 +182,9 @@ ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
 				lang = attributes.lang || 'lilypond',
 				noteLanguage = attributes[ 'note-language' ] || null,
 				raw = attributes.raw !== undefined,
-				vorbis = attributes.vorbis === '1',
+				audio = attributes.audio === '1' || attributes.vorbis === '1',
 				overrideMidi = attributes.override_midi || '',
-				overrideOgg = attributes.override_ogg || '',
+				overrideAudio = attributes.override_audio || attributes.override_ogg || '',
 				isReadOnly = this.isReadOnly();
 
 			// Populate form
@@ -192,17 +192,17 @@ ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
 			this.noteLanguageDropdown.getMenu().selectItemByData( noteLanguage )
 				.setDisabled( isReadOnly );
 			this.rawCheckbox.setSelected( raw ).setDisabled( isReadOnly );
-			// vorbis is only set to 1 if an audio file is being auto-generated, but
+			// 'audio' is only set to 1 if an audio file is being auto-generated, but
 			// the checkbox should be checked if an audio file is being auto-generated
 			// OR if an existing file has been specified.
-			this.audioCheckbox.setSelected( vorbis || overrideOgg ).setDisabled( isReadOnly );
+			this.audioCheckbox.setSelected( audio || overrideAudio ).setDisabled( isReadOnly );
 			this.overrideMidiInput.setValue( overrideMidi ).setReadOnly( isReadOnly );
-			this.overrideOggInput.setValue( overrideOgg ).setReadOnly( isReadOnly );
+			this.overrideAudioInput.setValue( overrideAudio ).setReadOnly( isReadOnly );
 
 			// Disable any fields that should be disabled
 			this.toggleDisableRawCheckbox();
 			this.toggleDisableNoteLanguageDropdown();
-			this.toggleDisableOverrideOggInput();
+			this.toggleDisableOverrideAudioInput();
 
 			// Add event handlers
 			this.langSelect.on( 'choose', this.onChangeHandler );
@@ -210,13 +210,13 @@ ve.ui.MWScoreInspector.prototype.getSetupProcess = function ( data ) {
 			this.rawCheckbox.on( 'change', this.onChangeHandler );
 			this.audioCheckbox.on( 'change', this.onChangeHandler );
 			this.overrideMidiInput.on( 'change', this.onChangeHandler );
-			this.overrideOggInput.on( 'change', this.onChangeHandler );
+			this.overrideAudioInput.on( 'change', this.onChangeHandler );
 
 			this.rawCheckbox.connect( this, { change: 'toggleDisableNoteLanguageDropdown' } );
 			this.indexLayout.connect( this, { set: 'onTabPanelSet' } );
 			this.indexLayout.connect( this, { set: 'updateSize' } );
 			this.langSelect.connect( this, { choose: 'toggleDisableRawCheckbox' } );
-			this.audioCheckbox.connect( this, { change: 'toggleDisableOverrideOggInput' } );
+			this.audioCheckbox.connect( this, { change: 'toggleDisableOverrideAudioInput' } );
 		}, this );
 };
 
@@ -230,7 +230,7 @@ ve.ui.MWScoreInspector.prototype.getTeardownProcess = function ( data ) {
 			this.noteLanguageDropdown.off( 'labelChange', this.onChangeHandler );
 			this.audioCheckbox.off( 'change', this.onChangeHandler );
 			this.overrideMidiInput.off( 'change', this.onChangeHandler );
-			this.overrideOggInput.off( 'change', this.onChangeHandler );
+			this.overrideAudioInput.off( 'change', this.onChangeHandler );
 
 			this.indexLayout.disconnect( this );
 			this.langSelect.disconnect( this );
@@ -251,22 +251,26 @@ ve.ui.MWScoreInspector.prototype.updateMwData = function ( mwData ) {
 		this.noteLanguageDropdown.getMenu().findSelectedItem().getData() || undefined;
 	var raw = !this.rawCheckbox.isDisabled() && this.rawCheckbox.isSelected();
 	// audioCheckbox is selected if an audio file is being included, whether that file
-	// is being auto-generated or whether an existing file is being used; but the "vorbis"
+	// is being auto-generated or whether an existing file is being used; but the "audio"
 	// attribute is only set to 1 if an audio file is being included AND that file is
 	// being auto-generated.
-	var vorbis = this.audioCheckbox.isSelected() && this.overrideOggInput.getValue() === '';
-	var overrideOgg = !this.overrideOggInput.isDisabled() && this.overrideOggInput.getValue();
+	var audio = this.audioCheckbox.isSelected() && this.overrideAudioInput.getValue() === '';
+	var overrideAudio = !this.overrideAudioInput.isDisabled() && this.overrideAudioInput.getValue();
 	var overrideMidi = !this.overrideMidiInput.isDisabled() && this.overrideMidiInput.getValue();
 
 	// Update attributes
 	mwData.attrs.lang = lang;
 	mwData.attrs[ 'note-language' ] = raw ? undefined : noteLanguage;
 	mwData.attrs.raw = raw ? '1' : undefined;
-	mwData.attrs.vorbis = vorbis ? '1' : undefined;
+	mwData.attrs.audio = audio ? '1' : undefined;
 	/* eslint-disable camelcase */
 	mwData.attrs.override_midi = overrideMidi || undefined;
-	mwData.attrs.override_ogg = overrideOgg || undefined;
+	mwData.attrs.override_audio = overrideAudio || undefined;
 	/* eslint-enable camelcase */
+
+	// Deprecated
+	delete mwData.attrs.override_ogg;
+	delete mwData.attrs.vorbis;
 };
 
 /**
@@ -286,11 +290,11 @@ ve.ui.MWScoreInspector.prototype.toggleDisableNoteLanguageDropdown = function ()
 };
 
 /**
- * Set the disabled status of this.overrideOggInput based on the vorbis attribute
+ * Set the disabled status of this.overrideAudioInput based on the audio attribute
  */
-ve.ui.MWScoreInspector.prototype.toggleDisableOverrideOggInput = function () {
-	// Disable the input if we ARE generating an Ogg/Vorbis file
-	this.overrideOggInput.setDisabled( !this.audioCheckbox.isSelected() );
+ve.ui.MWScoreInspector.prototype.toggleDisableOverrideAudioInput = function () {
+	// Disable the input if we ARE generating an audio file
+	this.overrideAudioInput.setDisabled( !this.audioCheckbox.isSelected() );
 };
 
 /**
