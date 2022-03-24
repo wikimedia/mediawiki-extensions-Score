@@ -144,7 +144,7 @@ ve.ui.MWScoreDialog.prototype.initialize = function () {
 	audioFieldset.addItems( [ audioField, overrideAudioField, overrideMidiField ] );
 
 	// Initialization
-	this.$content.addClass( 've-ui-mwScoreInspector-content' );
+	this.$content.addClass( 've-ui-mwScoreDialog-content' );
 
 	this.panel.$element.append(
 		this.previewElement.$element,
