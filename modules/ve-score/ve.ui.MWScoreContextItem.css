@@ -1,0 +1,13 @@
+/*!
+ * VisualEditor UserInterface MWScoreContextItem styles.
+ *
+ * @copyright 2015 VisualEditor Team and others; see AUTHORS.txt
+ * @license The MIT License (MIT); see LICENSE.txt
+ */
+
+.ve-ui-mwScoreContextItem .ve-ui-linearContextItem-body {
+	/* See T176636 */
+	font-family: monospace, monospace;
+	white-space: pre-wrap;
+	max-height: 10em;
+}
