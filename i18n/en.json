@@ -40,6 +40,8 @@
 	"score-scripterr": "Unable to run remote script: $1 exited with status code $2\n$3",
 	"score-soundfontnotexists": "Soundfont could not be found: $1 does not exist. Make sure <code>$wgScoreSoundfont</code> is set correctly.",
 	"score-trimerr": "Image could not be trimmed:\n$1\nSet <code>$wgScoreTrim=false</code> if this problem persists.",
+	"score-use-category": "Pages which use score",
+	"score-use-category-desc": "These pages use the [[:mw:Extension:Score|Score]] extension.",
 	"score-versionerr": "Unable to obtain LilyPond version:\n$1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Advanced",
 	"score-visualeditor-mwscoreinspector-card-audio": "Audio",

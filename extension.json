@@ -187,6 +187,7 @@
 	},
 	"TrackingCategories": [
 		"score-deprecated-category",
+		"score-use-category",
 		"score-error-category"
 	],
 	"attributes": {
