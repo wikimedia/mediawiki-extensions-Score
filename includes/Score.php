@@ -431,8 +431,9 @@ class Score {
 		// Mark the page as using the score extension, it makes easier
 		// to track all those pages.
 		if ( $parser->getOutput() !== null ) {
-			$scoreNum = $parser->getOutput()->getPageProperty( 'score' ) ?? 0;
-			$parser->getOutput()->setPageProperty( 'score', $scoreNum += 1 );
+			$scoreNum = (int)( $parser->getOutput()->getPageProperty( 'score' ) ?? 0 );
+			$scoreNum += 1;
+			$parser->getOutput()->setPageProperty( 'score', (string)$scoreNum );
 		}
 
 		return $html;
