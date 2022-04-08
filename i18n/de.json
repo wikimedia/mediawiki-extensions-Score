@@ -47,6 +47,8 @@
 	"score-scripterr": "Remote-Skript kann nicht ausgeführt werden: $1 wurde mit Statuscode $2 beendet\n$3",
 	"score-soundfontnotexists": "Soundfont konnte nicht gefunden werden: $1 ist nicht vorhanden. Stelle sicher, dass <code>$wgScoreSoundfont</code> korrekt festgelegt wurde.",
 	"score-trimerr": "Das Bild konnte nicht zugeschnitten werden:\n$1 \nIn der Konfigurationsdatei muss <code>$wgScoreTrim = false;</code> festgelegt werden, sofern das Problem bestehen bleibt.",
+	"score-use-category": "Seiten, die Score verwenden",
+	"score-use-category-desc": "Diese Seiten verwenden die Erweiterung [[:mw:Extension:Score|Score]].",
 	"score-versionerr": "Die Version von LilyPond konnte nicht ermittelt werden:\n$1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Erweitert",
 	"score-visualeditor-mwscoreinspector-card-audio": "Audio",
