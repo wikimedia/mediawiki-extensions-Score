@@ -42,6 +42,8 @@
 	"score-scripterr": "Не можам да ја пуштам оддалечената скрипта: $1 излезе со состојбениот код $2\n$3",
 	"score-soundfontnotexists": "Не го најдов Soundfont: $1 не постои. Проверете дали <code>$wgScoreSoundfont</code> е правилно поставено.",
 	"score-trimerr": "Не можев да ја скастрам сликата. \n$1\nАко проблемот продолжи да се јавува, задајте <code>$wgScoreTrim=false</code>.",
+	"score-use-category": "Страници со партитури",
+	"score-use-category-desc": "Овие страници го користат додатокот [[:mw:Extension:Score|Score]].",
 	"score-versionerr": "Не можам да ја добијам верзијата на LilyPond.\n$1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Напредно",
 	"score-visualeditor-mwscoreinspector-card-audio": "Звук",

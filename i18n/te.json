@@ -4,6 +4,8 @@
 			"Chaduvari"
 		]
 	},
+	"score-use-category": "Pages which use score",
+	"score-use-category-desc": "ఈ పేజీలు [[:mw:Extension:Score|స్కోరు]] పొడిగింతను వాడతాయి.",
 	"score-visualeditor-mwscoreinspector-title": "స్వరలిపి",
 	"datatypes-type-musical-notation": "స్వరలిపి",
 	"wikibase-listdatatypes-musical-notation-head": "స్వరలిపి"

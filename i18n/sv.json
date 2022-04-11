@@ -5,6 +5,7 @@
 			"JRyan",
 			"Jopparn",
 			"Lokal Profil",
+			"Sabelöga",
 			"Skalman",
 			"Thurs",
 			"WikiPhoenix"
@@ -48,6 +49,8 @@
 	"score-scripterr": "Gick inte att köra remote skript. $1 lämnade med statuskod $2\n$3",
 	"score-soundfontnotexists": "Soundfont kunde inte hittas. $1 existerar inte. Se till att <code>$wgScoreSoundfont</code> är inställd rätt.",
 	"score-trimerr": "Bilden kunde inte trimmas:\n$1\nAnge <code>$wgScoreTrim=false</code> om problemet kvarstår.",
+	"score-use-category": "Sidor som använder Score",
+	"score-use-category-desc": "Dessa sidor använder tillägget [[:mw:Extension:Score|Score]].",
 	"score-versionerr": "Det gick inte att hämta LilyPond version:\n$1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Avancerad",
 	"score-visualeditor-mwscoreinspector-card-audio": "Ljud",

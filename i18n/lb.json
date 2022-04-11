@@ -13,6 +13,8 @@
 	"score-nocontent": "De Fichier $1 konnt net vum Server geluede ginn.",
 	"score-page": "Säit $1",
 	"score-readerr": "De Fichier $1 konnt net gelies ginn.",
+	"score-use-category": "Säiten déi e Benotzer-Score benotzen",
+	"score-use-category-desc": "Dës Säite benotzen d'Erweiderung [[:mw:Extension:Score|Score]].",
 	"score-visualeditor-mwscoreinspector-card-audio": "Audio",
 	"score-visualeditor-mwscoreinspector-lang": "Sprooch",
 	"score-visualeditor-mwscoreinspector-notelanguage": "Notatiounssprooch",
