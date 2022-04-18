@@ -4,7 +4,8 @@
 			"Dishual",
 			"Fohanno",
 			"Fulup",
-			"Gwendal"
+			"Gwendal",
+			"Huñvreüs"
 		]
 	},
 	"score-download-midi-file": "Pellkargañ ar restr MIDI",
@@ -14,5 +15,6 @@
 	"score-nomediahandler": "Evit an emdreiñ son eo rekis staliañ ha kefluniañ ur stumm eus [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler an astenn TimedMediaHandler].",
 	"score-page": "Pajenn $1",
 	"score-readerr": "Ne c'haller ket lenn ar restr $1.",
+	"score-visualeditor-mwscoreinspector-card-advanced": "Araokaet",
 	"score-visualeditor-mwscoreinspector-notelanguage": "Yezh notenniñ"
 }
