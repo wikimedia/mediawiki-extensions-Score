@@ -10,14 +10,15 @@
 			"Sujiniku",
 			"Tmv",
 			"Whym",
-			"Yusuke1109"
+			"Yusuke1109",
+			"Marine-Blue"
 		]
 	},
 	"score-abc2lynotexecutable": "ABC記法 から LilyPond へのコンバーターを実行できません: $1 は実行可能ファイルではありません。<code>$wgScoreAbc2Ly</code> が正しく設定されているか確認してください。",
 	"score-abcconversionerr": "ABC ファイルを LilyPond 形式に変換できません:\n$1",
 	"score-audioconversionerr": "MIDI を MP3 に変換できません:\n$1",
 	"score-audiooverridenotfound": "あなたが上書き音声ファイルに指定した \"<nowiki>$1</nowiki>\" は存在しません。",
-	"score-audio-alt": "お使いのブラウザでは、音声再生がサポートされていません。$1をお試しください。",
+	"score-audio-alt": "お使いのブラウザーでは、音声再生がサポートされていません。$1をお試しください。",
 	"score-audio-alt-link": "音声ファイルをダウンロード",
 	"score-backend-error": "生成したファイルを最終的な出力先にコピーできません:\n$1",
 	"score-compilererr": "LilyPond 入力ファイルをコンパイルできません:\n$1",
