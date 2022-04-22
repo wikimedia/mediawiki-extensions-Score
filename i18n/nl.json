@@ -37,6 +37,7 @@
 	"score-pregreplaceerr": "Vervangen met behulp van een PCRE reguliere expressie is mislukt",
 	"score-readerr": "Het bestand $1 kan niet gelezen worden.",
 	"score-trimerr": "De afbeelding kon niet bijgesneden worden:\n$1\nStel de volgende waarde in als dit probleem blijft bestaan: <code>$wgScoreTrim=false</code>.",
+	"score-use-category": "Pagina's die bladmuziek gebruiken",
 	"score-versionerr": "Het was niet mogelijk de LiliPond-versie te achterhalen:\n$1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Geavanceerd",
 	"score-visualeditor-mwscoreinspector-card-audio": "Audio",
