@@ -39,6 +39,7 @@
 	"score-pregreplaceerr": "A PCRE reguláris kifejezéses csere sikertelen",
 	"score-readerr": "A(z) $1 fájl olvasása sikertelen.",
 	"score-trimerr": "A kép megvágása sikertelen:\n$1\nHa tartósan fennáll ez a hiba, állítsd a <code>$wgScoreTrim</code> változót <code>false</code>-ra a LocalSettings.php-ban.",
+	"score-use-category": "Lapok kottákkal",
 	"score-versionerr": "A LilyPond-verzió lekérése sikertelen:\n$1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Haladó",
 	"score-visualeditor-mwscoreinspector-card-audio": "Audió",
