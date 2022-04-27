@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
+			"Candalua",
 			"Daimona Eaytoy",
 			"F. Cosoleto",
 			"Gianfranco",
@@ -34,6 +35,7 @@
 	"score-pregreplaceerr": "La sostituzione con espressione regolare PCRE non è riuscita",
 	"score-readerr": "Lettura del file $1 fallita.",
 	"score-trimerr": "Non si è potuto ritagliare questa immagine:\n$1\nDefinisci <code>$wgScoreTrim=false</code> se il problema persiste.",
+	"score-use-category": "Pagine che usano Score",
 	"score-use-category-desc": "Queste pagine utilizzano l'estensione [[:mw:Extension:Score|Score]].",
 	"score-versionerr": "Impossibile ottenere la versione di LilyPond:\n$1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Avanzate",
