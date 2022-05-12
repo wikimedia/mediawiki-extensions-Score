@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Kakonjo"
 		]
 	},
 	"score-use-category": "Embaju eziri kwejunisibwa hamwe",
-	"score-use-category-desc": "Ezi Embaju nizejunisa [[:me: Extension:score|score]] extension."
+	"score-use-category-desc": "Ezi embaju nizejunisa [[:mw:Extension:Score|Score]] extension."
 }
