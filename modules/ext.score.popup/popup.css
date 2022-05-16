@@ -30,8 +30,6 @@
 }
 
 .mw-ext-score-popup-open {
-	-webkit-transition: transform 100ms, opacity 100ms;
-	-moz-transition: transform 100ms, opacity 100ms;
 	transition: transform 100ms, opacity 100ms;
 	transform: translateY( 0 );
 	opacity: 1;
