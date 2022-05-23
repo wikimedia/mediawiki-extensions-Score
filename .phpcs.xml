@@ -4,6 +4,7 @@
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPrivate" />
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic" />
 		<exclude name="MediaWiki.Commenting.PropertyDocumentation.MissingVar" />
+		<exclude name="MediaWiki.Usage.StaticClosure.StaticClosure" />
 	</rule>
 	<file>.</file>
 	<arg name="extensions" value="php" />
