@@ -10,7 +10,8 @@
 			"Whym",
 			"Yusuke1109",
 			"Omotecho",
-			"Tmv"
+			"Tmv",
+			"Marine-Blue"
 		]
 	},
 	"score-abc2lynotexecutable": "ABC記法 から LilyPond へのコンバーターを実行できません: $1 は実行可能ファイルではありません。<code>$wgScoreAbc2Ly</code> が正しく設定されているか確認してください。",
@@ -54,7 +55,7 @@
 	"score-trimerr": "画像をトリミングできませんでした:\n$1\nこの問題が続く場合は、<code>$wgScoreTrim=false</code> を設定してください。",
 	"score-versionerr": "LilyPond のバージョンを取得できません:\n$1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "高等",
-	"score-visualeditor-mwscoreinspector-card-audio": "オーディオ",
+	"score-visualeditor-mwscoreinspector-card-audio": "音声",
 	"score-visualeditor-mwscoreinspector-card-notation": "表記",
 	"score-visualeditor-mwscoreinspector-lang": "言語",
 	"score-visualeditor-mwscoreinspector-notelanguage": "記法の言語",
