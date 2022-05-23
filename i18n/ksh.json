@@ -23,14 +23,13 @@
 	"score-readerr": "Mer kunnte di Dattei $1 nit lässe.",
 	"score-trimerr": "Dat Beld kunnt nit beschnedde wähde:\n$1\nDonn <code xml:lang=\"en\" lang=\"en\" dir=\"ltr\">$wgScoreTrim=false</code> säze, wann dat Problem beschtonn bliht.",
 	"score-versionerr": "Mer kunnte de Projrammväsjohn vum <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"LilyPond\">LilyPond</i> nidd erus fenge:\n$1",
+	"score-visualeditor-mwscoreinspector-audio": "Donn en Datteij met Töhn ennschlehße, schtandattmähßesch es di automattesch aanjelaht.",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Fottjeschredde",
 	"score-visualeditor-mwscoreinspector-card-audio": "Tohndatteije",
 	"score-visualeditor-mwscoreinspector-card-notation": "Buhteschreff <!__  https://translatewiki.net/wiki/Thread:Translating_talk:MediaWiki/About_MediaWiki:Score-visualeditor-mwscoreinspector-notation/ksh -->",
 	"score-visualeditor-mwscoreinspector-lang": "Schprohch",
+	"score-visualeditor-mwscoreinspector-override-audio": "Nemm en Datteij met Töhn, di alld doh es.",
 	"score-visualeditor-mwscoreinspector-override-midi": "Ene Lengk op en Datteij met <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"Musical Instrument Digital Interface\">MIDI</i>-Dahte, di alld doh es. <!--  \thttps://translatewiki.net/wiki/Thread:Translating_talk:MediaWiki/About_MediaWiki:Score-visualeditor-mwscoreinspector-override-midi/ksh -->",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Dä Nahme vun ene Datteij met <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"Musical Instrument Digital Interface\">MIDI</i>-Dahte, di alld doh es",
-	"score-visualeditor-mwscoreinspector-override-ogg": "Nemm en Datteij met Töhn, di alld doh es.",
-	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Dä Nahme vun ene Datteij met Töhn em <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"Ogg Vorbis\">Ogg/Vorbis</i>-Fommaht, di alld doh es",
-	"score-visualeditor-mwscoreinspector-title": "Mussik_Nuhte",
-	"score-visualeditor-mwscoreinspector-vorbis": "Donn en Datteij met Töhn ennschlehße, schtandattmähßesch es di automattesch aanjelaht."
+	"score-visualeditor-mwscoreinspector-title": "Mussik_Nuhte"
 }

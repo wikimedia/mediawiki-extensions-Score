@@ -45,10 +45,9 @@
 	"score-visualeditor-mwscoreinspector-card-notation": "Запись",
 	"score-visualeditor-mwscoreinspector-lang": "Язык",
 	"score-visualeditor-mwscoreinspector-notelanguage": "Язык записи",
+	"score-visualeditor-mwscoreinspector-override-audio": "Использовать существующий аудиофайл",
 	"score-visualeditor-mwscoreinspector-override-midi": "Использовать существующий файл MIDI",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Имя существующего файла MIDI",
-	"score-visualeditor-mwscoreinspector-override-ogg": "Использовать существующий аудиофайл",
-	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Имя существующего аудиофайла (должен быть в формате Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-title": "Нотная запись",
 	"datatypes-type-musical-notation": "Нотная запись",
 	"wikibase-listdatatypes-musical-notation-head": "Нотная запись"

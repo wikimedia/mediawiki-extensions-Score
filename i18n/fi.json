@@ -25,16 +25,15 @@
 	"score-noimages": "Nuottikuvia ei syntynyt. Tarkista, että lähdekoodisi on oikein.",
 	"score-page": "Sivu $1",
 	"score-readerr": "Tiedostoa $1 ei voitu lukea.",
+	"score-visualeditor-mwscoreinspector-audio": "Sisällytä äänitiedosto (luodaan oletuksena automaattisesti)",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Edistynyt",
 	"score-visualeditor-mwscoreinspector-card-audio": "Ääni",
 	"score-visualeditor-mwscoreinspector-card-notation": "Nuotinnus",
 	"score-visualeditor-mwscoreinspector-lang": "Kieli",
 	"score-visualeditor-mwscoreinspector-notelanguage": "Nuotinnuskieli",
+	"score-visualeditor-mwscoreinspector-override-audio": "Käytä olemassa olevaa ääntitiedostoa",
 	"score-visualeditor-mwscoreinspector-override-midi": "Käytä olemassa olevaa MIDI-tiedostoa",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Olemassa olevan MIDI-tiedoston nimi",
-	"score-visualeditor-mwscoreinspector-override-ogg": "Käytä olemassa olevaa ääntitiedostoa",
-	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Olemassa olevan äänitiedoston nimi (täytyy olla Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Tämä on täydellinen LilyPond-tiedosto",
-	"score-visualeditor-mwscoreinspector-title": "Nuottikirjoitus",
-	"score-visualeditor-mwscoreinspector-vorbis": "Sisällytä äänitiedosto (luodaan oletuksena automaattisesti)"
+	"score-visualeditor-mwscoreinspector-title": "Nuottikirjoitus"
 }

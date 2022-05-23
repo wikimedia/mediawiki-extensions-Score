@@ -4,15 +4,14 @@
 			"Fwolff"
 		]
 	},
+	"score-visualeditor-mwscoreinspector-audio": "Sluit 'n oudiolêer in (outomaties gegenereer by verstek)",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Gevorderd",
 	"score-visualeditor-mwscoreinspector-card-audio": "Oudio",
 	"score-visualeditor-mwscoreinspector-card-notation": "Notasie",
 	"score-visualeditor-mwscoreinspector-lang": "Taal",
+	"score-visualeditor-mwscoreinspector-override-audio": "Geruik 'n bestaande oudiolêer",
 	"score-visualeditor-mwscoreinspector-override-midi": "Gebruik 'n bestaande MIDI-lêer",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Naam van 'n bestaande MIDI-lêer",
-	"score-visualeditor-mwscoreinspector-override-ogg": "Geruik 'n bestaande oudiolêer",
-	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Naam van 'n bestaande oudiolêer (moet Ogg/Vorbis wees)",
 	"score-visualeditor-mwscoreinspector-raw": "Hierdie is 'n volledige LilyPond-lêer",
-	"score-visualeditor-mwscoreinspector-title": "Musieknotasie",
-	"score-visualeditor-mwscoreinspector-vorbis": "Sluit 'n oudiolêer in (outomaties gegenereer by verstek)"
+	"score-visualeditor-mwscoreinspector-title": "Musieknotasie"
 }

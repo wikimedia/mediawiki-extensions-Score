@@ -42,16 +42,15 @@
 	"score-trimerr": "تصویر نتوانست کوچک شود:\n$1\nتنظیم <code>$wgScoreTrim=false</code> اگر این مشکل ادامه یابد.",
 	"score-use-category": "صفحه‌هایی که از برچسب نت‌نویسی استفاده می‌کنند",
 	"score-versionerr": "قادر به به دست آوردن نسخه لیلی‌پوند نیست:\n$1",
+	"score-visualeditor-mwscoreinspector-audio": "همراه‌کردن با یک پرونده صوتی (به شکل پیش‌فرض خودکار ایجاد می‌شود)",
 	"score-visualeditor-mwscoreinspector-card-advanced": "پیشرفته",
 	"score-visualeditor-mwscoreinspector-card-audio": "صدا",
 	"score-visualeditor-mwscoreinspector-card-notation": "نشانه",
 	"score-visualeditor-mwscoreinspector-lang": "زبان",
 	"score-visualeditor-mwscoreinspector-notelanguage": "زبان نشانه",
+	"score-visualeditor-mwscoreinspector-override-audio": "استفاده از یک پرونده صوتی از پیش موجود",
 	"score-visualeditor-mwscoreinspector-override-midi": "استفاده از یک پرونده MIDI از پیش موجود",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "نام پرونده MIDI از پیش موجود",
-	"score-visualeditor-mwscoreinspector-override-ogg": "استفاده از یک پرونده صوتی از پیش موجود",
-	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "نام پرونده از پیش موجود (باید Ogg/Vorbis باشد)",
 	"score-visualeditor-mwscoreinspector-raw": "این یک پرونده کامل LilyPond است",
-	"score-visualeditor-mwscoreinspector-title": "نت‌نویسی",
-	"score-visualeditor-mwscoreinspector-vorbis": "همراه‌کردن با یک پرونده صوتی (به شکل پیش‌فرض خودکار ایجاد می‌شود)"
+	"score-visualeditor-mwscoreinspector-title": "نت‌نویسی"
 }

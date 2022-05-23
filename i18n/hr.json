@@ -8,16 +8,15 @@
 	"score-abcconversionerr": "Nije moguće pretvoriti ABC datoteku u LilyPond format:\n$1",
 	"score-compilererr": "Nije moguće sastaviti ulaznu LilyPond datoteku:\n$1",
 	"score-error-category": "Stranice s pogrješkama u ispisu partitura",
+	"score-visualeditor-mwscoreinspector-audio": "Postavi zvukovnu datoteku (zadano se automatski izvodi)",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Napredno",
 	"score-visualeditor-mwscoreinspector-card-audio": "Zvuk",
 	"score-visualeditor-mwscoreinspector-card-notation": "Zapis",
 	"score-visualeditor-mwscoreinspector-lang": "Jezik",
 	"score-visualeditor-mwscoreinspector-notelanguage": "Jezik nota",
+	"score-visualeditor-mwscoreinspector-override-audio": "Rabi postojeću zvukovnu datoteku",
 	"score-visualeditor-mwscoreinspector-override-midi": "Rabi postojeću MIDI datoteku",
 	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Ime postojeće MIDI datoteke",
-	"score-visualeditor-mwscoreinspector-override-ogg": "Rabi postojeću zvukovnu datoteku",
-	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Ime postojeće zvukovne datoteke (mora biti Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Ovo je u cijelosti LilyPond datoteka",
-	"score-visualeditor-mwscoreinspector-title": "Glazbeni zapis",
-	"score-visualeditor-mwscoreinspector-vorbis": "Postavi zvukovnu datoteku (zadano se automatski izvodi)"
+	"score-visualeditor-mwscoreinspector-title": "Glazbeni zapis"
 }

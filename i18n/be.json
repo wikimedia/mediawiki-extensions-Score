@@ -1,12 +1,26 @@
 {
 	"@metadata": {
 		"authors": [
-			"Artsiom91"
+			"Artsiom91",
+			"Chadyka"
 		]
 	},
+	"score-abcconversionerr": "Немагчыма пераўтварыць ABC-файл у фармат LilyPond:\n$1",
+	"score-audioconversionerr": "Немагчыма пераўтварыць MIDI у MP3:\n$1",
+	"score-compilererr": "Немагчыма скампіляваць уваходны файл LilyPond:\n$1",
 	"score-deprecated-category": "Старонкі, якія ўжываюць састарэлыя атрыбуты score",
+	"score-desc": "Дадае тэг для паказу музычных нотаў праз LilyPond",
+	"score-download-midi-file": "Спампаваць MIDI-файл",
+	"score-download-source-file": "Спампаваць LilyPond-файл",
 	"score-error-category": "Старонкі з памылкамі візуалізацыі нот",
 	"score-error-category-desc": "На старонцы адбылася памылка пры спробы адлюстраваць ноты",
+	"score-page": "Старонка $1",
+	"score-readerr": "Немагчыма прачытаць файл $1.",
+	"score-scripterr": "Немагчыма запусціць аддалены скрыпт: $1 выйшаў з кодам стану $2\n$3",
 	"score-use-category": "Старонкі, якія ўжываюць пашырэнне Score",
-	"score-visualeditor-mwscoreinspector-lang": "Мова"
+	"score-visualeditor-mwscoreinspector-card-advanced": "Пашыранае",
+	"score-visualeditor-mwscoreinspector-card-audio": "Аўдыё",
+	"score-visualeditor-mwscoreinspector-card-notation": "Ноты",
+	"score-visualeditor-mwscoreinspector-lang": "Мова",
+	"score-visualeditor-mwscoreinspector-notelanguage": "Мова нотаў"
 }
