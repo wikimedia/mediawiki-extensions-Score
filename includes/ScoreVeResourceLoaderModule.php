@@ -2,18 +2,17 @@
 
 namespace MediaWiki\Extension\Score;
 
-use ResourceLoader;
-use ResourceLoaderContext;
-use ResourceLoaderFileModule;
+use MediaWiki\ResourceLoader as RL;
+use MediaWiki\ResourceLoader\ResourceLoader;
 use Xml;
 
-class ScoreVeResourceLoaderModule extends ResourceLoaderFileModule {
+class ScoreVeResourceLoaderModule extends RL\FileModule {
 
 	/**
-	 * @param ResourceLoaderContext $context
+	 * @param RL\Context $context
 	 * @return string JavaScript code
 	 */
-	public function getScript( ResourceLoaderContext $context ) {
+	public function getScript( RL\Context $context ) {
 		return $this->getDataScript() . parent::getScript( $context );
 	}
 
@@ -32,10 +31,10 @@ class ScoreVeResourceLoaderModule extends ResourceLoaderFileModule {
 	}
 
 	/**
-	 * @param ResourceLoaderContext $context
+	 * @param RL\Context $context
 	 * @return array
 	 */
-	public function getDefinitionSummary( ResourceLoaderContext $context ) {
+	public function getDefinitionSummary( RL\Context $context ) {
 		// Used for the module version hash
 		$summary = parent::getDefinitionSummary( $context );
 		$summary[] = [
