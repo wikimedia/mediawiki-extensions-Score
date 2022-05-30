@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Avilena",
 			"Danmichaelo",
 			"Jon Harald Søby"
 		]
@@ -41,11 +42,12 @@
 	"score-readerr": "Klarte ikek å lese filen $1.",
 	"score-soundfontnotexists": "Soundfont ble ikke funnet: $1 finnes ikke. Sjekk at <code>$wgScoreSoundfont</code> er satt riktig.",
 	"score-trimerr": "Bildet kunne ikke beskjæres:\n$1\nHvis problemet vedvarer kan du prøve å sette <code>$wgScoreTrim=false</code>.",
+	"score-use-category": "Sider som bruker Score",
+	"score-use-category-desc": "Disse sider bruker tillegget [[:mw:Extension:Score|Score]].",
 	"score-versionerr": "Klarte ikke å finne LilyPond-versjon:\n$1",
 	"score-visualeditor-mwscoreinspector-audio": "Inkluder en lydfil (autogenerert som standard)",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Avansert",
 	"score-visualeditor-mwscoreinspector-card-audio": "Lyd",
-	"score-visualeditor-mwscoreinspector-card-notation": "Notasjon",
 	"score-visualeditor-mwscoreinspector-lang": "Språk",
 	"score-visualeditor-mwscoreinspector-notelanguage": "Notespråk",
 	"score-visualeditor-mwscoreinspector-override-audio": "Bruk en eksisterende lydfil",

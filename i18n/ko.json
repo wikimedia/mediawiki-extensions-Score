@@ -44,7 +44,6 @@
 	"score-versionerr": "LilyPond 버전을 얻을 수 없습니다:\n$1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "고급",
 	"score-visualeditor-mwscoreinspector-card-audio": "소리",
-	"score-visualeditor-mwscoreinspector-card-notation": "기보",
 	"score-visualeditor-mwscoreinspector-lang": "언어",
 	"score-visualeditor-mwscoreinspector-override-audio-placeholder": "기존 오디오 파일 이름",
 	"score-visualeditor-mwscoreinspector-title": "기보",

@@ -60,7 +60,6 @@
 	"score-visualeditor-mwscoreinspector-audio": "包含一个音频文件（默认自动生成）",
 	"score-visualeditor-mwscoreinspector-card-advanced": "高级",
 	"score-visualeditor-mwscoreinspector-card-audio": "声音",
-	"score-visualeditor-mwscoreinspector-card-notation": "符号",
 	"score-visualeditor-mwscoreinspector-lang": "语言",
 	"score-visualeditor-mwscoreinspector-notelanguage": "符号语言",
 	"score-visualeditor-mwscoreinspector-override-audio": "使用一个现有音频文件",

@@ -42,7 +42,6 @@
 	"score-versionerr": "Не удаётся получить версию LilyPond:\n$1",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Дополнительно",
 	"score-visualeditor-mwscoreinspector-card-audio": "Аудио",
-	"score-visualeditor-mwscoreinspector-card-notation": "Запись",
 	"score-visualeditor-mwscoreinspector-lang": "Язык",
 	"score-visualeditor-mwscoreinspector-notelanguage": "Язык записи",
 	"score-visualeditor-mwscoreinspector-override-audio": "Использовать существующий аудиофайл",
