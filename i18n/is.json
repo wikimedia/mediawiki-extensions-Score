@@ -6,9 +6,9 @@
 	},
 	"score-page": "Síða $1",
 	"score-readerr": "Gat ekki lesið skrána $1.",
-	"score-visualeditor-mwscoreinspector-card-advanced": "Nánar",
-	"score-visualeditor-mwscoreinspector-card-audio": "Hljóð",
-	"score-visualeditor-mwscoreinspector-lang": "Tungumál",
-	"score-visualeditor-mwscoreinspector-lang-abc": "ABC",
-	"score-visualeditor-mwscoreinspector-lang-lilypond": "LilyPond"
+	"score-visualeditor-mwscoredialog-card-advanced": "Nánar",
+	"score-visualeditor-mwscoredialog-card-audio": "Hljóð",
+	"score-visualeditor-mwscoredialog-lang": "Tungumál",
+	"score-visualeditor-mwscoredialog-lang-abc": "ABC",
+	"score-visualeditor-mwscoredialog-lang-lilypond": "LilyPond"
 }

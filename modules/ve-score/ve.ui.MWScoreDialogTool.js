@@ -23,7 +23,7 @@ ve.ui.MWScoreDialogTool.static.name = 'score';
 ve.ui.MWScoreDialogTool.static.group = 'object';
 ve.ui.MWScoreDialogTool.static.icon = 'score';
 ve.ui.MWScoreDialogTool.static.title = OO.ui.deferMsg(
-	'score-visualeditor-mwscoreinspector-title'
+	'score-visualeditor-mwscoredialog-title'
 );
 ve.ui.MWScoreDialogTool.static.modelClasses = [ ve.dm.MWScoreNode ];
 ve.ui.MWScoreDialogTool.static.commandName = 'score';
@@ -42,5 +42,5 @@ ve.ui.sequenceRegistry.register(
 
 ve.ui.commandHelpRegistry.register( 'insert', 'score', {
 	sequences: [ 'wikitextScore' ],
-	label: OO.ui.deferMsg( 'score-visualeditor-mwscoreinspector-title' )
+	label: OO.ui.deferMsg( 'score-visualeditor-mwscoredialog-title' )
 } );

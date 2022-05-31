@@ -5,16 +5,16 @@
 		]
 	},
 	"score-page": "გვერდი $1",
-	"score-visualeditor-mwscoreinspector-audio": "აუდიო ფაილის ჩართვა (ჩვეულებრივ ავტომატურად გენერირდება)",
-	"score-visualeditor-mwscoreinspector-card-advanced": "გაფართოებული",
-	"score-visualeditor-mwscoreinspector-card-audio": "აუდიო",
-	"score-visualeditor-mwscoreinspector-lang": "ენა",
-	"score-visualeditor-mwscoreinspector-lang-abc": "ABC",
-	"score-visualeditor-mwscoreinspector-lang-lilypond": "LilyPond",
-	"score-visualeditor-mwscoreinspector-notelanguage": "აღნიშვნის ენა",
-	"score-visualeditor-mwscoreinspector-override-audio": "არსებული აუდიო ფაილის გამოყენება",
-	"score-visualeditor-mwscoreinspector-override-midi": "არსებული MIDI ფაილის გამოყენება",
-	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "არსებული MIDI ფაილის სახელი",
-	"score-visualeditor-mwscoreinspector-raw": "ეს არის დასრულებული LilyPond ფაილი",
-	"score-visualeditor-mwscoreinspector-title": "მუსიკალური ნოტები"
+	"score-visualeditor-mwscoredialog-audio": "აუდიო ფაილის ჩართვა (ჩვეულებრივ ავტომატურად გენერირდება)",
+	"score-visualeditor-mwscoredialog-card-advanced": "გაფართოებული",
+	"score-visualeditor-mwscoredialog-card-audio": "აუდიო",
+	"score-visualeditor-mwscoredialog-lang": "ენა",
+	"score-visualeditor-mwscoredialog-lang-abc": "ABC",
+	"score-visualeditor-mwscoredialog-lang-lilypond": "LilyPond",
+	"score-visualeditor-mwscoredialog-notelanguage": "აღნიშვნის ენა",
+	"score-visualeditor-mwscoredialog-override-audio": "არსებული აუდიო ფაილის გამოყენება",
+	"score-visualeditor-mwscoredialog-override-midi": "არსებული MIDI ფაილის გამოყენება",
+	"score-visualeditor-mwscoredialog-override-midi-placeholder": "არსებული MIDI ფაილის სახელი",
+	"score-visualeditor-mwscoredialog-raw": "ეს არის დასრულებული LilyPond ფაილი",
+	"score-visualeditor-mwscoredialog-title": "მუსიკალური ნოტები"
 }

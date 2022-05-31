@@ -26,8 +26,8 @@
 	"score-readerr": "Kunne ikke læse filen $1.",
 	"score-trimerr": "Billedet kunne ikke beskæres:\n$1\nSæt $wgScoreTrim=false, hvis dette problem fortsætter.",
 	"score-versionerr": "Kunne ikke bestemme LilyPonds version:\n$1",
-	"score-visualeditor-mwscoreinspector-card-advanced": "Avanceret",
-	"score-visualeditor-mwscoreinspector-card-audio": "Lyd",
-	"score-visualeditor-mwscoreinspector-lang": "Sprog",
-	"score-visualeditor-mwscoreinspector-title": "Nodeskrift"
+	"score-visualeditor-mwscoredialog-card-advanced": "Avanceret",
+	"score-visualeditor-mwscoredialog-card-audio": "Lyd",
+	"score-visualeditor-mwscoredialog-lang": "Sprog",
+	"score-visualeditor-mwscoredialog-title": "Nodeskrift"
 }

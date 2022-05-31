@@ -4,14 +4,14 @@
 			"គីមស៊្រុន"
 		]
 	},
-	"score-visualeditor-mwscoreinspector-audio": "បញ្ចូលឯកសារសម្លេង (បង្កើតដោយស្វ័យប្រវត្តិតាមលំនាំដើម)",
-	"score-visualeditor-mwscoreinspector-card-advanced": "ថ្នាក់ខ្ពស់",
-	"score-visualeditor-mwscoreinspector-card-audio": "ឯកសារសម្លេង",
-	"score-visualeditor-mwscoreinspector-lang": "ភាសា​",
-	"score-visualeditor-mwscoreinspector-notelanguage": "ភាសាសរសេរភ្លេងតន្ត្រី",
-	"score-visualeditor-mwscoreinspector-override-audio": "ប្រើឯកសារសម្លេងមានស្រាប់",
-	"score-visualeditor-mwscoreinspector-override-midi": "ប្រើឯកសារប្រភេទ MIDI មានស្រាប់",
-	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "ឈ្មោះឯកសារប្រភេទ MIDI មានស្រាប់",
-	"score-visualeditor-mwscoreinspector-raw": "នេះជាឯកសារប្រភេទ LilyPond ពេញលេញ",
-	"score-visualeditor-mwscoreinspector-title": "សញ្ញាភ្លេងតន្ត្រី"
+	"score-visualeditor-mwscoredialog-audio": "បញ្ចូលឯកសារសម្លេង (បង្កើតដោយស្វ័យប្រវត្តិតាមលំនាំដើម)",
+	"score-visualeditor-mwscoredialog-card-advanced": "ថ្នាក់ខ្ពស់",
+	"score-visualeditor-mwscoredialog-card-audio": "ឯកសារសម្លេង",
+	"score-visualeditor-mwscoredialog-lang": "ភាសា​",
+	"score-visualeditor-mwscoredialog-notelanguage": "ភាសាសរសេរភ្លេងតន្ត្រី",
+	"score-visualeditor-mwscoredialog-override-audio": "ប្រើឯកសារសម្លេងមានស្រាប់",
+	"score-visualeditor-mwscoredialog-override-midi": "ប្រើឯកសារប្រភេទ MIDI មានស្រាប់",
+	"score-visualeditor-mwscoredialog-override-midi-placeholder": "ឈ្មោះឯកសារប្រភេទ MIDI មានស្រាប់",
+	"score-visualeditor-mwscoredialog-raw": "នេះជាឯកសារប្រភេទ LilyPond ពេញលេញ",
+	"score-visualeditor-mwscoredialog-title": "សញ្ញាភ្លេងតន្ត្រី"
 }

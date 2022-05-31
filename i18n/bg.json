@@ -13,9 +13,9 @@
 	"score-error-category": "Страници с грешки при визуализирането на партитура",
 	"score-error-category-desc": "Грешка при визуализирането на партитурата.",
 	"score-page": "Страница $1",
-	"score-visualeditor-mwscoreinspector-card-audio": "Аудио",
-	"score-visualeditor-mwscoreinspector-lang": "Език",
-	"score-visualeditor-mwscoreinspector-title": "Музикална нотация",
+	"score-visualeditor-mwscoredialog-card-audio": "Аудио",
+	"score-visualeditor-mwscoredialog-lang": "Език",
+	"score-visualeditor-mwscoredialog-title": "Музикална нотация",
 	"datatypes-type-musical-notation": "Музикална нотация",
 	"wikibase-listdatatypes-musical-notation-head": "Музикална нотация",
 	"wikibase-listdatatypes-musical-notation-body": "Буквално поле за данни за музикална партитура, написана в LilyPond нотация"

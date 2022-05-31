@@ -42,11 +42,11 @@
 	"score-use-category": "악보를 사용하는 페이지",
 	"score-use-category-desc": "다음 문서들이 [[:mw:Extension:Score|Score]] 확장 기능을 사용하고 있습니다.",
 	"score-versionerr": "LilyPond 버전을 얻을 수 없습니다:\n$1",
-	"score-visualeditor-mwscoreinspector-card-advanced": "고급",
-	"score-visualeditor-mwscoreinspector-card-audio": "소리",
-	"score-visualeditor-mwscoreinspector-lang": "언어",
-	"score-visualeditor-mwscoreinspector-override-audio-placeholder": "기존 오디오 파일 이름",
-	"score-visualeditor-mwscoreinspector-title": "기보",
+	"score-visualeditor-mwscoredialog-card-advanced": "고급",
+	"score-visualeditor-mwscoredialog-card-audio": "소리",
+	"score-visualeditor-mwscoredialog-lang": "언어",
+	"score-visualeditor-mwscoredialog-override-audio-placeholder": "기존 오디오 파일 이름",
+	"score-visualeditor-mwscoredialog-title": "기보",
 	"datatypes-type-musical-notation": "기보",
 	"wikibase-listdatatypes-musical-notation-head": "기보"
 }

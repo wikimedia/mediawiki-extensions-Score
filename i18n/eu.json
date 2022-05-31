@@ -7,6 +7,6 @@
 	},
 	"score-download-midi-file": "MIDI fitxategia deskargatu",
 	"score-download-source-file": "Lilypond fitxategia deskargatu",
-	"score-visualeditor-mwscoreinspector-card-audio": "Audioa",
-	"score-visualeditor-mwscoreinspector-lang": "Hizkuntza"
+	"score-visualeditor-mwscoredialog-card-audio": "Audioa",
+	"score-visualeditor-mwscoredialog-lang": "Hizkuntza"
 }

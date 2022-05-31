@@ -29,7 +29,7 @@ ve.ui.MWScoreDialog.static.size = 'larger';
 
 ve.ui.MWScoreDialog.static.name = 'score';
 
-ve.ui.MWScoreDialog.static.title = OO.ui.deferMsg( 'score-visualeditor-mwscoreinspector-title' );
+ve.ui.MWScoreDialog.static.title = OO.ui.deferMsg( 'score-visualeditor-mwscoredialog-title' );
 
 ve.ui.MWScoreDialog.static.modelClasses = [ ve.dm.MWScoreNode ];
 
@@ -56,11 +56,11 @@ ve.ui.MWScoreDialog.prototype.initialize = function () {
 		items: [
 			new OO.ui.ButtonOptionWidget( {
 				data: 'lilypond',
-				label: ve.msg( 'score-visualeditor-mwscoreinspector-lang-lilypond' )
+				label: ve.msg( 'score-visualeditor-mwscoredialog-lang-lilypond' )
 			} ),
 			new OO.ui.ButtonOptionWidget( {
 				data: 'ABC',
-				label: ve.msg( 'score-visualeditor-mwscoreinspector-lang-abc' )
+				label: ve.msg( 'score-visualeditor-mwscoredialog-lang-abc' )
 			} )
 		]
 	} );
@@ -91,10 +91,10 @@ ve.ui.MWScoreDialog.prototype.initialize = function () {
 
 	// Text inputs
 	this.overrideMidiInput = new OO.ui.TextInputWidget( {
-		placeholder: ve.msg( 'score-visualeditor-mwscoreinspector-override-midi-placeholder' )
+		placeholder: ve.msg( 'score-visualeditor-mwscoredialog-override-midi-placeholder' )
 	} );
 	this.overrideAudioInput = new OO.ui.TextInputWidget( {
-		placeholder: ve.msg( 'score-visualeditor-mwscoreinspector-override-audio-placeholder' )
+		placeholder: ve.msg( 'score-visualeditor-mwscoredialog-override-audio-placeholder' )
 	} );
 
 	this.input = new ve.ui.MWAceEditorWidget( {
@@ -105,41 +105,41 @@ ve.ui.MWScoreDialog.prototype.initialize = function () {
 	var basicFieldset = new OO.ui.FieldsetLayout();
 	var inputField = new OO.ui.FieldLayout( this.input, {
 		align: 'top',
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-title' )
+		label: ve.msg( 'score-visualeditor-mwscoredialog-title' )
 	} );
 	var langField = new OO.ui.FieldLayout( this.langSelect, {
 		align: 'left',
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-lang' )
+		label: ve.msg( 'score-visualeditor-mwscoredialog-lang' )
 	} );
 	basicFieldset.addItems( [ inputField, langField ] );
 
 	var advancedFieldset = new OO.ui.FieldsetLayout( {
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-card-advanced' )
+		label: ve.msg( 'score-visualeditor-mwscoredialog-card-advanced' )
 	} );
 	var rawField = new OO.ui.FieldLayout( this.rawCheckbox, {
 		align: 'left',
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-raw' )
+		label: ve.msg( 'score-visualeditor-mwscoredialog-raw' )
 	} );
 	var noteLanguageField = new OO.ui.FieldLayout( this.noteLanguageDropdown, {
 		align: 'left',
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-notelanguage' )
+		label: ve.msg( 'score-visualeditor-mwscoredialog-notelanguage' )
 	} );
 	advancedFieldset.addItems( [ rawField, noteLanguageField ] );
 
 	var audioFieldset = new OO.ui.FieldsetLayout( {
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-card-audio' )
+		label: ve.msg( 'score-visualeditor-mwscoredialog-card-audio' )
 	} );
 	var audioField = new OO.ui.FieldLayout( this.audioCheckbox, {
 		align: 'left',
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-audio' )
+		label: ve.msg( 'score-visualeditor-mwscoredialog-audio' )
 	} );
 	var overrideAudioField = new OO.ui.FieldLayout( this.overrideAudioInput, {
 		align: 'left',
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-override-audio' )
+		label: ve.msg( 'score-visualeditor-mwscoredialog-override-audio' )
 	} );
 	var overrideMidiField = new OO.ui.FieldLayout( this.overrideMidiInput, {
 		align: 'left',
-		label: ve.msg( 'score-visualeditor-mwscoreinspector-override-midi' )
+		label: ve.msg( 'score-visualeditor-mwscoredialog-override-midi' )
 	} );
 	audioFieldset.addItems( [ audioField, overrideAudioField, overrideMidiField ] );
 

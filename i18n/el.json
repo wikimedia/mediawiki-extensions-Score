@@ -10,13 +10,13 @@
 	"score-download-source-file": "Λήψη αρχείου LilyPond",
 	"score-error-category": "Σελίδες με σφάλματα απόδοσης παρτιτούρας",
 	"score-page": "Σελίδα $1",
-	"score-visualeditor-mwscoreinspector-audio": "Συμπερίληψη ενός αρχείου ήχου (αυτόματα παραγόμενου από προεπιλογή)",
-	"score-visualeditor-mwscoreinspector-card-advanced": "Προχωρημένο",
-	"score-visualeditor-mwscoreinspector-card-audio": "Ήχος",
-	"score-visualeditor-mwscoreinspector-lang": "Γλώσσα",
-	"score-visualeditor-mwscoreinspector-override-audio": "Χρήση υπάρχοντος αρχείου ήχου",
-	"score-visualeditor-mwscoreinspector-override-midi": "Χρήση υπάρχοντος αρχείου MIDI",
-	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Όνομα υπάρχοντος αρχείου MIDI",
-	"score-visualeditor-mwscoreinspector-raw": "Αυτό είναι ένα ολοκληρωμένο αρχείο LilyPond",
-	"score-visualeditor-mwscoreinspector-title": "Μουσική σημειογραφία"
+	"score-visualeditor-mwscoredialog-audio": "Συμπερίληψη ενός αρχείου ήχου (αυτόματα παραγόμενου από προεπιλογή)",
+	"score-visualeditor-mwscoredialog-card-advanced": "Προχωρημένο",
+	"score-visualeditor-mwscoredialog-card-audio": "Ήχος",
+	"score-visualeditor-mwscoredialog-lang": "Γλώσσα",
+	"score-visualeditor-mwscoredialog-override-audio": "Χρήση υπάρχοντος αρχείου ήχου",
+	"score-visualeditor-mwscoredialog-override-midi": "Χρήση υπάρχοντος αρχείου MIDI",
+	"score-visualeditor-mwscoredialog-override-midi-placeholder": "Όνομα υπάρχοντος αρχείου MIDI",
+	"score-visualeditor-mwscoredialog-raw": "Αυτό είναι ένα ολοκληρωμένο αρχείο LilyPond",
+	"score-visualeditor-mwscoredialog-title": "Μουσική σημειογραφία"
 }

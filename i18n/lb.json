@@ -15,10 +15,10 @@
 	"score-readerr": "De Fichier $1 konnt net gelies ginn.",
 	"score-use-category": "Säiten déi e Benotzer-Score benotzen",
 	"score-use-category-desc": "Dës Säite benotzen d'Erweiderung [[:mw:Extension:Score|Score]].",
-	"score-visualeditor-mwscoreinspector-audio": "En Audio-Fichier abannen (am Standard automatesch generéiert)",
-	"score-visualeditor-mwscoreinspector-card-audio": "Audio",
-	"score-visualeditor-mwscoreinspector-lang": "Sprooch",
-	"score-visualeditor-mwscoreinspector-notelanguage": "Notatiounssprooch",
-	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Numm vum MIDI-Fichier deen do ass",
-	"score-visualeditor-mwscoreinspector-title": "Nouteschrëft"
+	"score-visualeditor-mwscoredialog-audio": "En Audio-Fichier abannen (am Standard automatesch generéiert)",
+	"score-visualeditor-mwscoredialog-card-audio": "Audio",
+	"score-visualeditor-mwscoredialog-lang": "Sprooch",
+	"score-visualeditor-mwscoredialog-notelanguage": "Notatiounssprooch",
+	"score-visualeditor-mwscoredialog-override-midi-placeholder": "Numm vum MIDI-Fichier deen do ass",
+	"score-visualeditor-mwscoredialog-title": "Nouteschrëft"
 }

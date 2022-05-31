@@ -31,7 +31,7 @@ ve.ui.MWScoreContextItem.static.name = 'score';
 
 ve.ui.MWScoreContextItem.static.icon = 'score';
 
-ve.ui.MWScoreContextItem.static.label = OO.ui.deferMsg( 'score-visualeditor-mwscoreinspector-title' );
+ve.ui.MWScoreContextItem.static.label = OO.ui.deferMsg( 'score-visualeditor-mwscoredialog-title' );
 
 ve.ui.MWScoreContextItem.static.modelClasses = [ ve.dm.MWScoreNode ];
 

@@ -5,14 +5,14 @@
 		]
 	},
 	"score-page": "Stran $1",
-	"score-visualeditor-mwscoreinspector-audio": "Vključuje zvočno datoteko (po privzetem samodejno generirano)",
-	"score-visualeditor-mwscoreinspector-card-advanced": "Napredno",
-	"score-visualeditor-mwscoreinspector-card-audio": "Zvok",
-	"score-visualeditor-mwscoreinspector-lang": "Jezik",
-	"score-visualeditor-mwscoreinspector-notelanguage": "Jezik zapisa",
-	"score-visualeditor-mwscoreinspector-override-audio": "Uporabi obstoječo zvočno datoteko",
-	"score-visualeditor-mwscoreinspector-override-midi": "Uporabi obstoječo MIDI datoteko",
-	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Ime obstoječe MIDI datoteke",
-	"score-visualeditor-mwscoreinspector-raw": "To je popolna datoteka LilyPond",
-	"score-visualeditor-mwscoreinspector-title": "Notni zapis"
+	"score-visualeditor-mwscoredialog-audio": "Vključuje zvočno datoteko (po privzetem samodejno generirano)",
+	"score-visualeditor-mwscoredialog-card-advanced": "Napredno",
+	"score-visualeditor-mwscoredialog-card-audio": "Zvok",
+	"score-visualeditor-mwscoredialog-lang": "Jezik",
+	"score-visualeditor-mwscoredialog-notelanguage": "Jezik zapisa",
+	"score-visualeditor-mwscoredialog-override-audio": "Uporabi obstoječo zvočno datoteko",
+	"score-visualeditor-mwscoredialog-override-midi": "Uporabi obstoječo MIDI datoteko",
+	"score-visualeditor-mwscoredialog-override-midi-placeholder": "Ime obstoječe MIDI datoteke",
+	"score-visualeditor-mwscoredialog-raw": "To je popolna datoteka LilyPond",
+	"score-visualeditor-mwscoredialog-title": "Notni zapis"
 }

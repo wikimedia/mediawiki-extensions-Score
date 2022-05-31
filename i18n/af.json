@@ -4,13 +4,13 @@
 			"Fwolff"
 		]
 	},
-	"score-visualeditor-mwscoreinspector-audio": "Sluit 'n oudiolêer in (outomaties gegenereer by verstek)",
-	"score-visualeditor-mwscoreinspector-card-advanced": "Gevorderd",
-	"score-visualeditor-mwscoreinspector-card-audio": "Oudio",
-	"score-visualeditor-mwscoreinspector-lang": "Taal",
-	"score-visualeditor-mwscoreinspector-override-audio": "Geruik 'n bestaande oudiolêer",
-	"score-visualeditor-mwscoreinspector-override-midi": "Gebruik 'n bestaande MIDI-lêer",
-	"score-visualeditor-mwscoreinspector-override-midi-placeholder": "Naam van 'n bestaande MIDI-lêer",
-	"score-visualeditor-mwscoreinspector-raw": "Hierdie is 'n volledige LilyPond-lêer",
-	"score-visualeditor-mwscoreinspector-title": "Musieknotasie"
+	"score-visualeditor-mwscoredialog-audio": "Sluit 'n oudiolêer in (outomaties gegenereer by verstek)",
+	"score-visualeditor-mwscoredialog-card-advanced": "Gevorderd",
+	"score-visualeditor-mwscoredialog-card-audio": "Oudio",
+	"score-visualeditor-mwscoredialog-lang": "Taal",
+	"score-visualeditor-mwscoredialog-override-audio": "Geruik 'n bestaande oudiolêer",
+	"score-visualeditor-mwscoredialog-override-midi": "Gebruik 'n bestaande MIDI-lêer",
+	"score-visualeditor-mwscoredialog-override-midi-placeholder": "Naam van 'n bestaande MIDI-lêer",
+	"score-visualeditor-mwscoredialog-raw": "Hierdie is 'n volledige LilyPond-lêer",
+	"score-visualeditor-mwscoredialog-title": "Musieknotasie"
 }

@@ -39,19 +39,19 @@
 				"ext.score.visualEditor.icons"
 			],
 			"messages": [
-				"score-visualeditor-mwscoreinspector-audio",
-				"score-visualeditor-mwscoreinspector-card-advanced",
-				"score-visualeditor-mwscoreinspector-card-audio",
-				"score-visualeditor-mwscoreinspector-lang",
-				"score-visualeditor-mwscoreinspector-lang-abc",
-				"score-visualeditor-mwscoreinspector-lang-lilypond",
-				"score-visualeditor-mwscoreinspector-notelanguage",
-				"score-visualeditor-mwscoreinspector-override-audio",
-				"score-visualeditor-mwscoreinspector-override-audio-placeholder",
-				"score-visualeditor-mwscoreinspector-override-midi",
-				"score-visualeditor-mwscoreinspector-override-midi-placeholder",
-				"score-visualeditor-mwscoreinspector-raw",
-				"score-visualeditor-mwscoreinspector-title"
+				"score-visualeditor-mwscoredialog-audio",
+				"score-visualeditor-mwscoredialog-card-advanced",
+				"score-visualeditor-mwscoredialog-card-audio",
+				"score-visualeditor-mwscoredialog-lang",
+				"score-visualeditor-mwscoredialog-lang-abc",
+				"score-visualeditor-mwscoredialog-lang-lilypond",
+				"score-visualeditor-mwscoredialog-notelanguage",
+				"score-visualeditor-mwscoredialog-override-audio",
+				"score-visualeditor-mwscoredialog-override-audio-placeholder",
+				"score-visualeditor-mwscoredialog-override-midi",
+				"score-visualeditor-mwscoredialog-override-midi-placeholder",
+				"score-visualeditor-mwscoredialog-raw",
+				"score-visualeditor-mwscoredialog-title"
 			],
 			"targets": [
 				"desktop",

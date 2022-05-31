@@ -10,6 +10,6 @@
 	"score-download-source-file": "LilyPond faylını yüklə",
 	"score-invalidnotelanguage": "Yanlış note-language = \"<nowiki> $1 </ nowiki>\". Hal-hazırda tanınan note-language-lar: $2",
 	"score-notelanguagewithraw": "\"note-language\" xarakteri xammal rejimi xalları üçün istifadə edilə bilməz",
-	"score-visualeditor-mwscoreinspector-notelanguage": "Notasiya dili",
-	"score-visualeditor-mwscoreinspector-title": "Not yazısı"
+	"score-visualeditor-mwscoredialog-notelanguage": "Notasiya dili",
+	"score-visualeditor-mwscoredialog-title": "Not yazısı"
 }
