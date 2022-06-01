@@ -7,6 +7,8 @@
 	},
 	"score-abcconversionerr": "Nije moguće pretvoriti ABC datoteku u LilyPond format:\n$1",
 	"score-compilererr": "Nije moguće sastaviti ulaznu LilyPond datoteku:\n$1",
+	"score-deprecated-category": "Stranice koje rabe zastarjele atribute partitura",
+	"score-deprecated-category-desc": "Ove stranice rabe mogućnosti proširenja ''Score'' koje su zastarjele. \nTo su: \"override_audio\", \"override_ogg\" i \"override_midi\".",
 	"score-error-category": "Stranice s pogrješkama u ispisu partitura",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Napredno",
 	"score-visualeditor-mwscoreinspector-card-audio": "Zvuk",
@@ -19,5 +21,7 @@
 	"score-visualeditor-mwscoreinspector-override-ogg-placeholder": "Ime postojeće zvukovne datoteke (mora biti Ogg/Vorbis)",
 	"score-visualeditor-mwscoreinspector-raw": "Ovo je u cijelosti LilyPond datoteka",
 	"score-visualeditor-mwscoreinspector-title": "Glazbeni zapis",
-	"score-visualeditor-mwscoreinspector-vorbis": "Postavi zvukovnu datoteku (zadano se automatski izvodi)"
+	"score-visualeditor-mwscoreinspector-vorbis": "Postavi zvukovnu datoteku (zadano se automatski izvodi)",
+	"datatypes-type-musical-notation": "Glazbeni zapis",
+	"wikibase-listdatatypes-musical-notation-head": "Glazbeni zapis"
 }
