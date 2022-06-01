@@ -11,6 +11,8 @@
 	"score-download-source-file": "Laadi alla LilyPondi fail",
 	"score-error-category": "Nootide viimistlemise tõrkega leheküljed",
 	"score-error-category-desc": "Nootide viimistlemise juures esines tõrge.",
+	"score-use-category": "Nootidega leheküljed",
+	"score-use-category-desc": "Lehekülg kasutab tarkvaralisa [[:mw:Extension:Score|Score]].",
 	"score-visualeditor-mwscoreinspector-audio": "Lisa helifail (vaikimisi automaatselt genereeritud)",
 	"score-visualeditor-mwscoreinspector-card-advanced": "Täpsemalt",
 	"score-visualeditor-mwscoreinspector-card-audio": "Heli",
