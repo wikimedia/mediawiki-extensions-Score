@@ -62,8 +62,6 @@
 	"score-visualeditor-mwscoredialog-card-advanced": "Avancé",
 	"score-visualeditor-mwscoredialog-card-audio": "Audio",
 	"score-visualeditor-mwscoredialog-lang": "Langue",
-	"score-visualeditor-mwscoredialog-lang-abc": "ABC",
-	"score-visualeditor-mwscoredialog-lang-lilypond": "LilyPond",
 	"score-visualeditor-mwscoredialog-notelanguage": "Langage de notation",
 	"score-visualeditor-mwscoredialog-override-audio": "Utiliser un fichier audio existant",
 	"score-visualeditor-mwscoredialog-override-audio-placeholder": "Nom de fichier audio existant",

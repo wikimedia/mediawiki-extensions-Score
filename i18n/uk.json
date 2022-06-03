@@ -57,8 +57,6 @@
 	"score-visualeditor-mwscoredialog-card-advanced": "Додатково",
 	"score-visualeditor-mwscoredialog-card-audio": "Аудіо",
 	"score-visualeditor-mwscoredialog-lang": "Мова",
-	"score-visualeditor-mwscoredialog-lang-abc": "ABC",
-	"score-visualeditor-mwscoredialog-lang-lilypond": "LilyPond",
 	"score-visualeditor-mwscoredialog-notelanguage": "Мова нот",
 	"score-visualeditor-mwscoredialog-override-audio": "Використати існуючий аудіофайл",
 	"score-visualeditor-mwscoredialog-override-midi": "Використати існуючий MIDI-файл",
