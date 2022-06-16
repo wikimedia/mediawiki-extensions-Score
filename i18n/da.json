@@ -4,7 +4,8 @@
 			"Christian List",
 			"Peter Alberti",
 			"Saederup92",
-			"Weblars"
+			"Weblars",
+			"Steenth"
 		]
 	},
 	"score-abc2lynotexecutable": "Kunne ikke køre programmet til at konvertere fra ABC til LilyPond: $1 er ikke en eksekverbar fil. Kontroller at <code>$wgScoreAbc2Ly</code> er sat korrekt.",
@@ -12,6 +13,7 @@
 	"score-audioconversionerr": "Kunne ikke omdanne MIDI til MP3:\n$1",
 	"score-backend-error": "Ikke i stand til at kopiere de genererede filer til deres endelige placering:\n$1",
 	"score-compilererr": "Kunne ikke kompilere inddatafil til LilyPond:\n$1",
+	"score-deprecated-category": "Sider, der bruger forældede score-attributter",
 	"score-desc": "Tilføjer et tag til at gengive partiturer ved hjælp af LilyPond",
 	"score-error-category": "Sider med partiturvisningsfejl",
 	"score-invalidlang": "lang=\"<nowiki>$1</nowiki>\" er et ugyldigt partitursprog. De sprog, der kan genkendes i øjeblikket, er lang=\"lilypond\" (standardværdien) og lang=\"ABC\".",
