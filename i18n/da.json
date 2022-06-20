@@ -4,7 +4,8 @@
 			"Christian List",
 			"Peter Alberti",
 			"Saederup92",
-			"Weblars"
+			"Weblars",
+			"Steenth"
 		]
 	},
 	"score-abc2lynotexecutable": "Kunne ikke køre programmet til at konvertere fra ABC til LilyPond: $1 er ikke en eksekverbar fil. Kontroller at <code>$wgScoreAbc2Ly</code> er sat korrekt.",
@@ -14,6 +15,7 @@
 	"score-chdirerr": "Kunne ikke skifte folder til $1",
 	"score-cleanerr": "Kunne ikke rense ud i gamle filer før genrendering",
 	"score-compilererr": "Kunne ikke kompilere inddatafil til LilyPond:\n$1",
+	"score-deprecated-category": "Sider, der bruger forældede score-attributter",
 	"score-desc": "Tilføjer et tag til at gengive partiturer ved hjælp af LilyPond",
 	"score-error-category": "Sider med partiturvisningsfejl",
 	"score-getcwderr": "Kunne ikke bestemme navnet på den gældende arbejdsfolder",
