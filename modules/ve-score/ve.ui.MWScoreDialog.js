@@ -17,6 +17,9 @@
 ve.ui.MWScoreDialog = function VeUiMWScoreDialog( config ) {
 	// Parent constructor
 	ve.ui.MWScoreDialog.super.call( this, ve.extendObject( { padded: false }, config ) );
+
+	// Use a slower debounce (T312319)
+	this.updatePreviewDebounced = ve.debounce( this.updatePreview.bind( this ), 2000 );
 };
 
 /* Inheritance */
