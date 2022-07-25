@@ -3,7 +3,8 @@
 		"authors": [
 			"Amire80",
 			"Guycn1",
-			"Guycn2"
+			"Guycn2",
+			"Eli"
 		]
 	},
 	"score-abc2lynotexecutable": "המרה מ־ABC ל־LilyPond לא יכלה להתבצע: $1 אינו קובץ בר־הרצה. נא לוודא שהמשתנה <code>$wgScoreAbc2Ly</code> מוגדר נכון.",
@@ -36,7 +37,7 @@
 	"score-noimages": "לא נוצרו תמונות של תווים. נא לבדוק את קוד התווים שלך.",
 	"score-noinput": "יצירת הקובץ $1 עם קלט של LilyPond לא הצליחה.",
 	"score-nomediahandler": "המרת שמע דורשת התקנה והגדרה של גרסה של [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler ההרחבה TimedMediaHandler].",
-	"score-nomidi": "לא נוצר שום קובץ MIDI, למקות ש התבקש כזה. אם זה מצב LilyPond טהור, יש לספק גוש <span dir=\"ltr\">\\midi</span> מתאים.",
+	"score-nomidi": "לא נוצר שום קובץ MIDI, למרות שהתבקש כזה. אם זה מצב LilyPond טהור, יש לספק גוש <span dir=\"ltr\">\\midi</span> מתאים.",
 	"score-nooutput": "לא ניתן היה ליצור את תיקיית הפלט $1.",
 	"score-nops": "LilyPond לא ייצר שום קובץ פלט. נא לבדוק את קוד התווים שלך.",
 	"score-notelanguagewithraw": "המאפיין \"note-language\" אינו יכול לשמש לגיליונות תווים גולמיים",
