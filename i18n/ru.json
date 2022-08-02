@@ -7,7 +7,9 @@
 			"INS Pirat",
 			"Kaganer",
 			"Okras",
-			"DDPAT"
+			"DDPAT",
+			"Ice bulldog",
+			"Pacha Tchernof"
 		]
 	},
 	"score-abc2lynotexecutable": "Не удалось запустить перекодировку из ABC в LilyPond: $1 — не исполняемый файл. Убедитесь, что <code>$wgScoreAbc2Ly</code> установлен правильно.",
@@ -20,8 +22,8 @@
 	"score-deprecated-category": "Страницы, использующие устаревшие атрибуты оценки",
 	"score-deprecated-category-desc": "На этих страницах используются параметры, предоставляемые расширением Score, которые устарели. Это: \"override_audio\", \"override_ogg\" и \"override_midi\".",
 	"score-desc": "Добавляет тег для визуализации музыкальных партитур с LilyPond",
-	"score-download-midi-file": "Загрузить файл MIDI",
-	"score-download-source-file": "Загрузить файл LilyPond",
+	"score-download-midi-file": "Скачать MIDI-файл",
+	"score-download-source-file": "Скачать LilyPond-файл",
 	"score-error-category": "Страницы с ошибками рендеринга партитур",
 	"score-error-category-desc": "Произошла ошибка при визуализации партитур.",
 	"score-fallbacknotexecutable": "Не удалось выполнить FluidSynth: $1 не является исполняемым файлом. Убедитесь, что <code>$wgScoreFluidsynth</code> установлен правильно.",
