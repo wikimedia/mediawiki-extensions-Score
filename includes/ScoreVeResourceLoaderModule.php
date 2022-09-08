@@ -3,8 +3,6 @@
 namespace MediaWiki\Extension\Score;
 
 use MediaWiki\ResourceLoader as RL;
-use MediaWiki\ResourceLoader\ResourceLoader;
-use Xml;
 
 class ScoreVeResourceLoaderModule extends RL\FileModule {
 
@@ -13,21 +11,22 @@ class ScoreVeResourceLoaderModule extends RL\FileModule {
 	 * @return string JavaScript code
 	 */
 	public function getScript( RL\Context $context ) {
-		return $this->getDataScript() . parent::getScript( $context );
+		return $this->getDataScript( $context ) . parent::getScript( $context );
 	}
 
-	/** @return string JavaScript code */
-	private function getDataScript() {
-		return Xml::encodeJsCall(
-			'mw.config.set',
-			[ [
+	/**
+	 * @param RL\Context $context
+	 * @return string JavaScript code
+	 */
+	private function getDataScript( RL\Context $context ) {
+		return 'mw.config.set('
+			. $context->encodeJson( [
 				'wgScoreNoteLanguages' => array_map(
 					'Language::fetchLanguageName',
 					Score::$supportedNoteLanguages
 				),
-			] ],
-			(bool)ResourceLoader::inDebugMode()
-		);
+			] )
+			. ');';
 	}
 
 	/**
@@ -38,7 +37,7 @@ class ScoreVeResourceLoaderModule extends RL\FileModule {
 		// Used for the module version hash
 		$summary = parent::getDefinitionSummary( $context );
 		$summary[] = [
-			'dataScript' => $this->getDataScript(),
+			'data' => $this->getDataScript( $context ),
 		];
 		return $summary;
 	}
