@@ -292,11 +292,6 @@ class Score {
 	public static function renderScore( $code, array $args, Parser $parser ) {
 		global $wgTmpDirectory;
 
-		if ( !$parser->incrementExpensiveFunctionCount() ) {
-			// Generating score files is expensive
-			return \CoreTagHooks::pre( $code, [], $parser );
-		}
-
 		try {
 			$baseUrl = self::getBaseUrl();
 			$baseStoragePath = self::getBackend()->getRootStoragePath() . '/score-render';
