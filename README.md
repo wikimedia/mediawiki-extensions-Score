@@ -67,7 +67,7 @@ Extension setup
    wfLoadExtension( 'score' );
    $wgScoreTrim = true;
    $wgImageMagickConvertCommand = '/usr/bin/convert';
-   $wgShellboxUrl = 'http://shellbox.internal/shellbox';
+   $wgShellboxUrls['score'] = 'http://shellbox.internal/shellbox';
    $wgShellboxSecretKey = '... your secret key ...';
 ```
    to your LocalSettings.php file.
