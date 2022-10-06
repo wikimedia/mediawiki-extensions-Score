@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Shypoetess"
+			"Shypoetess",
+			"Saurmandal"
 		]
 	},
 	"score-download-midi-file": "MIDI फ़ाइल डाउनलोड करें",
-	"score-download-source-file": "लिलीपोंड फाइल डाउनलोड करें"
+	"score-download-source-file": "लिलीपोंड फाइल डाउनलोड करें",
+	"score-visualeditor-mwscoredialog-title": "संगीत नोटेशन"
 }
