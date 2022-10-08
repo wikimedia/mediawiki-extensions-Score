@@ -243,7 +243,6 @@ class Score {
 		if ( !self::$backend ) {
 			global $wgScoreDirectory, $wgUploadDirectory;
 			if ( $wgScoreDirectory === false ) {
-				// @phan-suppress-next-line PhanPossiblyUndeclaredVariable
 				$dir = "{$wgUploadDirectory}/lilypond";
 			} else {
 				$dir = $wgScoreDirectory;
