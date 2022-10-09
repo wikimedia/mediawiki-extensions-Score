@@ -266,10 +266,10 @@ class Score {
 	/**
 	 * Callback for Parser's hook on 'score' tags. Renders the score code.
 	 *
-	 * @param string $code score code.
-	 * @param array $args array of score tag attributes.
-	 * @param Parser $parser Parser of Mediawiki.
-	 * @param PPFrame $frame expansion frame, not used by this extension.
+	 * @param string $code Score code.
+	 * @param array $args Array of score tag attributes.
+	 * @param Parser $parser
+	 * @param PPFrame $frame Expansion frame, not used by this extension.
 	 *
 	 * @throws ScoreException
 	 * @return string Image link HTML, and possibly anchor to MIDI file.
@@ -281,14 +281,14 @@ class Score {
 	/**
 	 * Renders the score code (LilyPond, ABC, etc.) in a <score>…</score> tag.
 	 *
-	 * @param string $code score code.
-	 * @param array $args array of score tag attributes.
-	 * @param Parser $parser Parser of Mediawiki.
+	 * @param string $code Score code.
+	 * @param array $args Array of score tag attributes.
+	 * @param Parser|null $parser Parser must be set when called during a wiki page parse.
 	 *
 	 * @throws ScoreException
 	 * @return string Image link HTML, and possibly anchor to MIDI file.
 	 */
-	public static function renderScore( $code, array $args, Parser $parser ) {
+	public static function renderScore( $code, array $args, ?Parser $parser = null ) {
 		global $wgTmpDirectory;
 
 		try {
@@ -328,7 +328,7 @@ class Score {
 					throw new ScoreException( 'score-midioverridenotfound',
 						[ htmlspecialchars( $args['override_midi'] ) ] );
 				}
-				if ( $parser->getOutput() !== null ) {
+				if ( $parser && $parser->getOutput() !== null ) {
 					$parser->getOutput()->addImage( $file->getName() );
 				}
 
@@ -342,7 +342,9 @@ class Score {
 				$options['audio_storage_path'] = "$baseStoragePath/$audioRel";
 				$options['audio_url'] = "$baseUrl/$audioRel";
 				$options['audio_sha_name'] = "$sha1.mp3";
-				$parser->addTrackingCategory( 'score-deprecated-category' );
+				if ( $parser ) {
+					$parser->addTrackingCategory( 'score-deprecated-category' );
+				}
 			} else {
 				$options['override_midi'] = false;
 			}
@@ -384,7 +386,9 @@ class Score {
 				}
 				$options['override_audio'] = true;
 				$options['audio_name'] = $overrideAudio;
-				$parser->addTrackingCategory( 'score-deprecated-category' );
+				if ( $parser ) {
+					$parser->addTrackingCategory( 'score-deprecated-category' );
+				}
 			} else {
 				$options['override_audio'] = false;
 			}
@@ -417,7 +421,7 @@ class Score {
 
 			$html = self::generateHTML( $parser, $code, $options );
 		} catch ( ScoreException $e ) {
-			if ( $parser->getOutput() !== null ) {
+			if ( $parser && $parser->getOutput() !== null ) {
 				$parser->getOutput()->addModules( [ 'ext.score.errors' ] );
 				if ( $e->isTracked() ) {
 					$parser->addTrackingCategory( 'score-error-category' );
@@ -429,7 +433,7 @@ class Score {
 
 		// Mark the page as using the score extension, it makes easier
 		// to track all those pages.
-		if ( $parser->getOutput() !== null ) {
+		if ( $parser && $parser->getOutput() !== null ) {
 			$parser->getOutput()->setPageProperty( 'score', '' );
 			// Transition to a tracking category
 			$parser->addTrackingCategory( 'score-use-category' );
@@ -441,7 +445,7 @@ class Score {
 	/**
 	 * Generates the HTML code for a score tag.
 	 *
-	 * @param Parser $parser MediaWiki parser.
+	 * @param Parser|null $parser MediaWiki parser, provide when inside parse of wiki page
 	 * @param string $code Score code.
 	 * @param array $options array of rendering options.
 	 * 	The options keys are:
@@ -481,13 +485,13 @@ class Score {
 	 * @throws Exception
 	 * @throws ScoreException if an error occurs.
 	 */
-	private static function generateHTML( Parser $parser, $code, $options ) {
+	private static function generateHTML( ?Parser $parser, $code, $options ) {
 		global $wgScoreOfferSourceDownload, $wgScoreUseSvg;
 
 		$cleanup = new ScopedCallback( function () use ( $options ) {
 			self::eraseDirectory( $options['factory_directory'] );
 		} );
-		if ( $parser->getOutput() !== null ) {
+		if ( $parser && $parser->getOutput() !== null ) {
 			$parser->getOutput()->addModules( [ 'ext.score.popup' ] );
 		}
 
@@ -646,7 +650,7 @@ class Score {
 				) .
 				'</div>';
 		}
-		if ( $options['override_audio'] !== false ) {
+		if ( $parser && $options['override_audio'] !== false ) {
 			$link .= $parser->recursiveTagParse( "[[File:{$options['audio_name']}]]" );
 		}
 

@@ -23,7 +23,6 @@ namespace MediaWiki\Extension\Score;
 use DataValues\StringValue;
 use Html;
 use InvalidArgumentException;
-use MediaWiki\MediaWikiServices;
 use ValueFormatters\ValueFormatter;
 use Wikibase\Lib\Formatters\SnakFormatter;
 
@@ -83,8 +82,7 @@ class ScoreFormatter implements ValueFormatter {
 		try {
 			$valueHtml = Score::renderScore(
 				$valueString,
-				$args,
-				MediaWikiServices::getInstance()->getParser()
+				$args
 			);
 		} catch ( ScoreException $exception ) {
 			return (string)$exception;
