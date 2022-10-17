@@ -20,6 +20,7 @@
 	"score-cleanerr": "قادر به تمیز کردن پوشه‌های قدیمی قبل از دوباره ارائه کردن نیست",
 	"score-compilererr": "قادر به گردآوری پوشه ورودی لیلی‌پوند نیست:\n$1",
 	"score-convertoverrideaudio": "شما نمی‌توانید همزمان درخواست پردازش صدا دهید و override_audio مشخص کنید.",
+	"score-deprecated-category": "صفحه‌هایی که از ویژگی‌های منسوخ نت‌نویسی استفاده می‌کنند",
 	"score-desc": "افزودن برچسب برای ارائه نمرات گوش‌نواز با لیلی‌پوند",
 	"score-download-midi-file": "بارگذاری پرونده MIDI",
 	"score-download-source-file": "بارگذاری پرونده LilyPond",
