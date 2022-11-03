@@ -6,7 +6,8 @@
 			"Eduardo Addad de Oliveira",
 			"Eduardoaddad",
 			"Felipe L. Ewald",
-			"Luckas"
+			"Luckas",
+			"Luan"
 		]
 	},
 	"score-abc2lynotexecutable": "O conversor ABC para LilyPond não pode ser executado: executed: $1 não é um arquivo executável. Certifique-se que o <code>$wgScoreAbc2Ly</code> está configurado corretamente.",
@@ -46,6 +47,7 @@
 	"score-readerr": "Não foi possível ler o arquivo $1.",
 	"score-soundfontnotexists": "Não foi possível encontrar Soundfont: $1 não existe. Certifique-se de que <code>$wgScoreSoundfont</code> está definido corretamente.",
 	"score-trimerr": "A imagem não pode ser cortada:\n$1\nDefina <code>$wgScoreTrim=false</code> se este problema persistir.",
+	"score-use-category": "Páginas que usam partitura",
 	"score-versionerr": "Não foi possível obter a versão do LilyPond:\n$1",
 	"score-visualeditor-mwscoredialog-audio": "Incluir um arquivo de som (autogerado por padrão)",
 	"score-visualeditor-mwscoredialog-card-advanced": "Avançado",

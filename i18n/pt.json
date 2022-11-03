@@ -8,7 +8,8 @@
 			"MokaAkashiyaPT",
 			"Vitorvicentevalente",
 			"Waldir",
-			"Waldyrious"
+			"Waldyrious",
+			"Luan"
 		]
 	},
 	"score-abc2lynotexecutable": "Não foi possível executar o conversor de ABC para LilyPond: $1 não é um ficheiro executável. Certifique-se de que <code>$wgScoreAbc2Ly</code> está definido corretamente.",
@@ -49,7 +50,7 @@
 	"score-scripterr": "Não foi possível executar o ficheiro de comandos remoto: $1 terminou com o código de estado $2\n$3",
 	"score-soundfontnotexists": "Não foi possível encontrar Soundfont: $1 não existe. Certifique-se de que <code>$wgScoreSoundfont</code> está definido corretamente.",
 	"score-trimerr": "Não foi possível cortar a imagem:\n$1\nDefina <code>$wgScoreTrim=false</code> se este problema persistir.",
-	"score-use-category": "Páginas que usam Partitura",
+	"score-use-category": "Páginas que usam partitura",
 	"score-use-category-desc": "Estas páginas usam a extensão [[:mw:Extension:Score|Partitura]].",
 	"score-versionerr": "Não foi possível obter a versão do LilyPond:\n$1",
 	"score-visualeditor-mwscoredialog-audio": "Incluir um ficheiro de áudio (gerado automaticamente por padrão)",
