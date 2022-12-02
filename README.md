@@ -1,32 +1,49 @@
+# Score extension
+
 Score, a MediaWiki extension for rendering musical scores with LilyPond.
 
-Security
-========
+## Security
 
-By default, this extension runs LilyPond in safe mode, however there are known
-unfixed safe mode escape vulnerabilities leading to arbitrary execution. So it
-is recommended that LilyPond is run as an unprivileged user inside an isolated
-container with no external network access.
+By default, this extension runs LilyPond in safe mode, however it is unsafe to
+rely on it due to unfixed vulnerabilities, and indeed safe mode was removed in
+LilyPond version 2.23.12 and causes an error when used.
+
+It is recommended that LilyPond is run as an unprivileged user inside an
+isolated container with no external network access.
 
 MediaWiki's system for remote execution of shell commands is called Shellbox.
 Instructions to set up a Shellbox server can be found at:
 <https://www.mediawiki.org/wiki/Shellbox>.
 
 
+### Installing LilyPond and prerequisites
+
 Ensure the following additional packages are installed in your Shellbox container:
 
-* LilyPond
-* Ghostscript
-* ImageMagick
+* LilyPond (version 2.23.82 or later is required for SVG)
 * FluidSynth
 * A SoundFont for FluidSynth, for example Fluid (R3) General MIDI SoundFont (GM)
 * LAME
 
+If you are *not* using SVG output, you will also need to install:
+
+* Ghostscript
+* ImageMagick
+
 You'll also want fonts for whatever characters are used in lyrics. The Noto
 font family may be a good choice as it aims to cover all scripts.
 
-Running on Windows
-==================
+Note that upstream packaging changed for versions 2.23 and later; a tarball
+can be downloaded directly from the GitLab
+[releases page](https://gitlab.com/lilypond/lilypond/-/releases) and extracted
+into `/usr/local/lilypond` (for example). In this case, the binary locations for
+the extension setup (see below) will be:
+```
+/usr/local/lilypond/bin/lilypond
+/usr/local/lilypond/bin/abc2ly
+```
+
+## Running on Windows
 
 Running the Score extension on Windows is possible, although inadvisable.
 
@@ -52,8 +69,7 @@ $wgScoreEnvironment = [
 ];
 ```
 
-Extension setup
-===============
+## Extension setup
 
 1. Change to the "extensions" directory of your MediaWiki installation.
 2. Clone this repository.
@@ -63,15 +79,23 @@ Extension setup
    directory, the Score extension will attempt to create it for you with the
    rights available to it.
 4. Add the lines
-```
-   wfLoadExtension( 'score' );
+```php
+   wfLoadExtension( 'Score' );
    $wgScoreTrim = true;
-   $wgImageMagickConvertCommand = '/usr/bin/convert';
+```
+5. If you want SVG output, make sure your version of LilyPond is 2.23.82 or
+   newer, and add:
+```php
+   $wgScoreUseSvg = true;
+   $wgScoreSafeMode = false;
+```
+   if you are not using SVG, you will need to ensure Score knows where to find
+   Ghostscript and ImageMagick binaries (see below).
+6. If you are using shellbox to sandbox your lilypond processes, add:
+```php
    $wgShellboxUrls['score'] = 'http://shellbox.internal/shellbox';
    $wgShellboxSecretKey = '... your secret key ...';
 ```
-   to your LocalSettings.php file.
-
 
 If you get unexpected out-of-memory errors, you may also have to increase
 [$wgMaxShellMemory](https://www.mediawiki.org/wiki/Manual:$wgMaxShellMemory).
@@ -80,7 +104,8 @@ By default, Score will look for binaries by their usual names in /usr/bin. If
 you need to customise the locations of any of the binaries, you can copy the
 lines below and change them as necessary:
 
-```
+```php
+$wgImageMagickConvertCommand = '/usr/bin/convert';
 $wgScoreLilyPond = '/usr/bin/lilypond';
 $wgScoreAbc2Ly = '/usr/bin/abc2ly'; /* part of LilyPond */
 $wgScoreFluidsynth = '/usr/bin/fluidsynth';
@@ -88,8 +113,7 @@ $wgScoreSoundfont = '/usr/share/sounds/sf2/FluidR3_GM.sf2'; /* for FluidSynth */
 $wgScoreGhostScript = '/usr/bin/gs';
 ```
 
-Usage
-=====
+## Usage
 
 After setup, you can use the <score>…</score> tags in your wiki markup.
 For a simple score, use e.g.

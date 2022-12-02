@@ -119,6 +119,10 @@
 			"value": null,
 			"description": "Set to false to keep margins on the generated PNG files"
 		},
+		"ScoreUseSvg": {
+			"value": false,
+			"description": "Set to true to output SVG images with PNG fallback. Requires LilyPond version >= 2.23.82 with libcairo support"
+		},
 		"ScoreShell": {
 			"value": "/bin/sh",
 			"description": "The shell to use to run the rendering script. On Windows this should be the full path to bash.exe, not git-bash.exe."
@@ -151,7 +155,7 @@
 		},
 		"ScoreSafeMode": {
 			"value": true,
-			"description": "Set to false if LilyPond inputs are trusted, sanitized, or sandboxed. This disables LilyPond's safe mode, enabling some features"
+			"description": "Must be set to false for LilyPond versions 2.23.12 or newer (safe mode was removed in 2.23.12 as it could no longer be guaranteed safe). For older versions, set this to true to enable LilyPond's safe mode (default). NOTE: if set to false, all inputs should be sanitized and/or trusted, and the LilyPond binary must be appropriately sandboxed."
 		},
 		"ScoreDisableExec": {
 			"value": false,
