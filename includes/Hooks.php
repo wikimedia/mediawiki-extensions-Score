@@ -19,7 +19,11 @@ class Hooks {
 	 * @param Parser $parser
 	 */
 	public static function onParserFirstCallInit( Parser $parser ) {
-		global $wgUseImageMagick, $wgScoreTrim;
+		global $wgUseImageMagick, $wgScoreTrim, $wgScoreUseSvg;
+		if ( $wgScoreUseSvg ) {
+			// For SVG, always set true
+			$wgScoreTrim = true;
+		}
 		if ( $wgScoreTrim === null ) {
 			// Default to if we use Image Magick, since it requires Image Magick.
 			$wgScoreTrim = $wgUseImageMagick;
