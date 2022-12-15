@@ -186,6 +186,10 @@
 		},
 		"WikibaseMusicalNotationLineWidthInches": {
 			"value": 0
+		},
+		"ScoreDebugOutput": {
+			"value": false,
+			"description": "Show the full command output when a shell command fails"
 		}
 	},
 	"TrackingCategories": [

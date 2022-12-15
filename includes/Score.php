@@ -697,6 +697,12 @@ class Score {
 			throw new ScoreDisabledException();
 		}
 
+		if ( $wgScoreSafeMode
+			&& version_compare( self::getLilypondVersion(), '2.23.12', '>=' )
+		) {
+			throw new ScoreException( 'score-safe-mode' );
+		}
+
 		/* Create the working environment */
 		$factoryDirectory = $options['factory_directory'];
 		self::createDirectory( $factoryDirectory, 0700 );
@@ -891,10 +897,12 @@ class Score {
 	 * @throws ScoreException
 	 */
 	private static function throwCompileException( $stdout, $options ) {
+		global $wgScoreDebugOutput;
+
 		$message = self::extractMessage( $stdout );
 		if ( !$message ) {
 			$message = [ 'score-compilererr', [] ];
-		} elseif ( $message[0] === 'score-compilererr' ) {
+		} elseif ( !$wgScoreDebugOutput && $message[0] === 'score-compilererr' ) {
 			// when input is not raw, we build the final lilypond file content
 			// in self::embedLilypondCode. The user input then is not inserted
 			// on the first line in the file we pass to lilypond and so we need

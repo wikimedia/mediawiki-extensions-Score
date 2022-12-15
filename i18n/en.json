@@ -37,6 +37,7 @@
 	"score-page": "Page $1",
 	"score-pregreplaceerr": "PCRE regular expression replacement failed",
 	"score-readerr": "Unable to read file $1.",
+	"score-safe-mode": "Safe mode has been removed from LilyPond as of version 2.23.12. LilyPond files can run arbitrary code. Please sandbox your LilyPond installation using [https://www.mediawiki.org/wiki/Shellbox Shellbox] and set $wgScoreSafeMode = false.",
 	"score-scripterr": "Unable to run remote script: $1 exited with status code $2\n$3",
 	"score-soundfontnotexists": "Soundfont could not be found: $1 does not exist. Make sure <code>$wgScoreSoundfont</code> is set correctly.",
 	"score-trimerr": "Image could not be trimmed:\n$1\nSet <code>$wgScoreTrim=false</code> if this problem persists.",
