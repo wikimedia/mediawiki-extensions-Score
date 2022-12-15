@@ -9,7 +9,8 @@
 			"Liuxinyu970226",
 			"Simon Shek",
 			"Winston Sung",
-			"Xiplus"
+			"Xiplus",
+			"捍粵者"
 		]
 	},
 	"score-abc2lynotexecutable": "ABC 轉 LilyPond 的轉換器無法執行：$1 不是一個可執行檔，請確定 <code>$wgScoreAbc2Ly</code> 已正確設定。",
@@ -31,7 +32,7 @@
 	"score-exec-disabled": "樂譜臨時停用。",
 	"score-file-list-error": "無法從 Score 圖片目錄讀取。",
 	"score-fallbacknotexecutable": "FluidSynth 無法執行：$1 不是個可執行檔案。請確認 <code>$wgScoreFluidsynth</code> 有設定正確。",
-	"score-gs-error": "執行 Ghostscript 錯誤：\n$1",
+	"score-gs-error": "執行Ghostscript出錯：$1",
 	"score-invalidaudiooverride": "您使用 override_audio 參數指定的檔案 \"<nowiki>$1</nowiki>\" 無效。請僅指定檔案名稱即可，並略過 <nowiki>[[…]]</nowiki> 以及 \"{{ns:file}}:\" 字首。",
 	"score-invalidlang": "無效的樂譜語言 lang=\"<nowiki>$1</nowiki>\"。 目前可辨識的語言有 lang=\"lilypond\" (預設) 與 lang=\"ABC\"。",
 	"score-invalidnotelanguage": "無效的 note-language=\"<nowiki>$1</nowiki>\"：目前可識別的音符語言為：$2",
