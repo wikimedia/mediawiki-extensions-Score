@@ -53,6 +53,7 @@
 	"score-page": "Page $1",
 	"score-pregreplaceerr": "Le remplacement de l'expression rationnelle PCRE a échoué",
 	"score-readerr": "Impossible de lire le fichier $1",
+	"score-safe-mode": "Le mode sécurisé a été supprimé de LilyPond depuis la version 2.23.12. Les fichiers LilyPond peuvent exécuter du code arbitraire. Veuillez placer votre installation de LilyPond dans un bac à sable en utilisant [https://www.mediawiki.org/wiki/Shellbox Shellbox] et définir « $wgScoreSafeMode=false ».",
 	"score-scripterr": "Impossible d’exécuter le script distant : $1 terminé avec le code d’état $2\n$3",
 	"score-soundfontnotexists": "Soundfont n’a pas pu être trouvé : $1 n’existe pas. Veuillez vérifier que <code>$wgScoreSoundfont</code> est initialisé correctement.",
 	"score-trimerr": "L’image n’a pas pu être rognée :\n$1\nParamétrez <code>$wgScoreTrim=false</code> si ce problème persiste.",

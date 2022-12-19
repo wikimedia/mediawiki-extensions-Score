@@ -42,6 +42,7 @@
 	"score-page": "דף $1",
 	"score-pregreplaceerr": "החלפה ביטויים רגולריים עם PCRE נכשלה",
 	"score-readerr": "לא ניתן לקרוא את הקובץ $1.",
+	"score-safe-mode": "המצב הבטוח הוסר מ־LilyPond בגרסה 2.23.12. קובצי LilyPond יכולים להריץ קוד שרירותי. נא לאבטח את התקנת ה־LilyPond שלך באמצעות [https://www.mediawiki.org/wiki/Shellbox Shellbox] ולהגדיר את <code dir=\"ltr\">$wgScoreSafeMode = false</code>.",
 	"score-scripterr": "לא ניתן להריץ תסריט מרוחק: $1 יצא עם קוד מצב $2\n$3",
 	"score-soundfontnotexists": "לא היה אפשר למצוא soundfont‏: $1 אינו קיים. יש לוודא ש־<code dir=\"ltr\">$wgScoreSoundfont</code> מוגדר נכון.",
 	"score-trimerr": "לא ניתן לקצץ את התמונה:\n$1\nיש להגדיר <code dir=\"ltr\">$wgScoreTrim=false</code> אם הבעיה ממשיכה.",
