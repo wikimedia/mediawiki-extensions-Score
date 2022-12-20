@@ -39,6 +39,7 @@
 	"score-page": "Stran $1",
 	"score-pregreplaceerr": "Zamenjava regularnega izraza PCRE ni uspela",
 	"score-readerr": "Datoteke $1 ni mogoče prebrati.",
+	"score-safe-mode": "Varni način je bil z različico 2.23.12 odstranjen iz LilyPonda. Datoteke LilyPond lahko izvajajo poljubno kodo. Prosimo, da namestite peskovnik za svojo namestitev LilyPond z [https://www.mediawiki.org/wiki/Shellbox Shellbox] in nastavite $wgScoreSafeMode = false.",
 	"score-scripterr": "Oddaljenega skripta ni bilo mogoče zagnati: $1 se je prekinil z oznako stanja $2 \n $3",
 	"score-soundfontnotexists": "Soundfonta ni bilo mogoče najti: $1 ne obstaja. Prepričajte se, da je pot <code>$wgScoreSoundfont</code> pravilno določena.",
 	"score-trimerr": "Slike ni bilo mogoče obrezati:\n$1 \nČe se ta težava ponovi, nastavite <code>$wgScoreTrim=false</code>.",

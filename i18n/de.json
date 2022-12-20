@@ -44,6 +44,7 @@
 	"score-page": "Seite $1",
 	"score-pregreplaceerr": "Die PCRE-Musterersetzung ist gescheitert.",
 	"score-readerr": "Die Datei $1 kann nicht gelesen werden.",
+	"score-safe-mode": "Ab Version 2.23.12 wurde der abgesicherte Modus von LilyPond entfernt. LilyPond-Dateien können beliebigen Code ausführen. Bitte lasse deine LilyPond-Installation in der Sandbox [https://www.mediawiki.org/wiki/Shellbox Shellbox] laufen und setze $wgScoreSafeMode = false.",
 	"score-scripterr": "Remote-Skript kann nicht ausgeführt werden: $1 wurde mit Statuscode $2 beendet\n$3",
 	"score-soundfontnotexists": "Soundfont konnte nicht gefunden werden: $1 ist nicht vorhanden. Stelle sicher, dass <code>$wgScoreSoundfont</code> korrekt festgelegt wurde.",
 	"score-trimerr": "Das Bild konnte nicht zugeschnitten werden:\n$1 \nIn der Konfigurationsdatei muss <code>$wgScoreTrim = false;</code> festgelegt werden, sofern das Problem bestehen bleibt.",

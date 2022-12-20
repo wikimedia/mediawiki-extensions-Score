@@ -39,6 +39,7 @@
 	"score-page": "Страница $1",
 	"score-pregreplaceerr": "Не успеа замената на регуларниот израз PCRE",
 	"score-readerr": "Не можам да ја прочитам податотеката $1",
+	"score-safe-mode": "Безбеднио режим е отстранет од LilyPond, почнувајќи од верзијата 2.23.12. Податотеките на LilyPond можат да работат со произволен код. Ставете ја вашата воспоставка на LilyPond во песочинк користејќи го [https://www.mediawiki.org/wiki/Shellbox Shellbox] и задајте $wgScoreSafeMode = false.",
 	"score-scripterr": "Не можам да ја пуштам оддалечената скрипта: $1 излезе со состојбениот код $2\n$3",
 	"score-soundfontnotexists": "Не го најдов Soundfont: $1 не постои. Проверете дали <code>$wgScoreSoundfont</code> е правилно поставено.",
 	"score-trimerr": "Не можев да ја скастрам сликата. \n$1\nАко проблемот продолжи да се јавува, задајте <code>$wgScoreTrim=false</code>.",
