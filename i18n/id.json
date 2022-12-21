@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Agam Riyandana",
 			"Daud I.F. Argana",
 			"William Surya Permana"
 		]
@@ -40,6 +41,7 @@
 	"score-page": "Halaman $1",
 	"score-pregreplaceerr": "Gagal mengganti ''regular expression'' PCRE",
 	"score-readerr": "Tidak dapat membaca berkas $1.",
+	"score-safe-mode": "Mode aman telah dihapus dari LilyPond pada versi 2.23.12. File LilyPond dapat menjalankan kode arbitrer. Silakan sandbox instalasi LilyPond Anda menggunakan [https://www.mediawiki.org/wiki/Shellbox Shellbox] dan atur $wgScoreSafeMode = false.",
 	"score-scripterr": "Tidak dapat menjalankan skrip: $1 keluar dengan kode status $2 $3",
 	"score-soundfontnotexists": "Soundfont tidak dapat ditemukan: $1 tidak tersedia. Pastikan <code>$wgScoreSoundfont</code> diatur dengan benar.",
 	"score-trimerr": "Citra tidak dapat dipangkas:\n$1\nAtur <code>$wgScoreTrim=false</code> jika masalah ini terus muncul.",
