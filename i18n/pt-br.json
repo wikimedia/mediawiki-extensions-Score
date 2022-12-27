@@ -45,6 +45,7 @@
 	"score-page": "Página $1",
 	"score-pregreplaceerr": "A substituição de expressão regular PCRE falhou",
 	"score-readerr": "Não foi possível ler o arquivo $1.",
+	"score-safe-mode": "O modo de segurança foi removido do LilyPond na versão 2.23.12 e posteriores. Os ficheiros LilyPond podem executar código arbitrário. Proteja a sua instalação LilyPond usando [https://www.mediawiki.org/wiki/Shellbox Shellbox] e defina $wgScoreSafeMode = false, por favor.",
 	"score-soundfontnotexists": "Não foi possível encontrar Soundfont: $1 não existe. Certifique-se de que <code>$wgScoreSoundfont</code> está definido corretamente.",
 	"score-trimerr": "A imagem não pode ser cortada:\n$1\nDefina <code>$wgScoreTrim=false</code> se este problema persistir.",
 	"score-use-category": "Páginas que usam partitura",

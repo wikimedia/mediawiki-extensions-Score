@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"score-download-midi-file": "Preuzmi MIDI datoteku",
+	"score-download-source-file": "Preuzmi LilyPond datoteku",
+	"score-page": "Stranica $1",
+	"score-visualeditor-mwscoredialog-audio": "Uključi i zvučnu datoteku (podrazumevano se automatski generiše)",
+	"score-visualeditor-mwscoredialog-card-advanced": "Napredno",
+	"score-visualeditor-mwscoredialog-card-audio": "Zvuk",
+	"score-visualeditor-mwscoredialog-lang": "Jezik",
+	"score-visualeditor-mwscoredialog-notelanguage": "Jezik nota",
+	"score-visualeditor-mwscoredialog-override-audio": "Koristi postojeću zvučnu datoteku",
+	"score-visualeditor-mwscoredialog-override-midi": "Koristi postojeću MIDI datoteku",
+	"score-visualeditor-mwscoredialog-override-midi-placeholder": "Ime postojeće MIDI datoteke",
+	"score-visualeditor-mwscoredialog-raw": "Ovo je potpuna datoteka u LilyPond formatu",
+	"score-visualeditor-mwscoredialog-title": "Notni zapis",
+	"datatypes-type-musical-notation": "Notni zapis",
+	"wikibase-listdatatypes-musical-notation-head": "Notni zapis"
+}
