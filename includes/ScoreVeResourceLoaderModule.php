@@ -2,6 +2,7 @@
 
 namespace MediaWiki\Extension\Score;
 
+use MediaWiki\MediaWikiServices;
 use MediaWiki\ResourceLoader as RL;
 
 class ScoreVeResourceLoaderModule extends RL\FileModule {
@@ -22,7 +23,7 @@ class ScoreVeResourceLoaderModule extends RL\FileModule {
 		return 'mw.config.set('
 			. $context->encodeJson( [
 				'wgScoreNoteLanguages' => array_map(
-					'Language::fetchLanguageName',
+					[ MediaWikiServices::getInstance()->getLanguageNameUtils(), 'getLanguageName' ],
 					Score::$supportedNoteLanguages
 				),
 			] )
