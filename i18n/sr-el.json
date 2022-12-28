@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"score-download-midi-file": "Preuzmi MIDI datoteku",
+	"score-download-source-file": "Preuzmi LilyPond datoteku",
+	"score-page": "Stranica $1",
+	"datatypes-type-musical-notation": "Notni zapis",
+	"wikibase-listdatatypes-musical-notation-head": "Notni zapis"
+}

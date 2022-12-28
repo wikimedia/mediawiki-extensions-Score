@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Artsiom91",
-			"Chadyka"
+			"Chadyka",
+			"Maksim L."
 		]
 	},
 	"score-abc2lynotexecutable": "Пераўтваральнік з ABC у LilyPond не можа быць выкліканы: $1 не з’яўляецца выканальным файлам. Пераканайцеся, што зменная <code>$wgScoreAbc2Ly</code> вызначана правільна.",
@@ -51,5 +52,5 @@
 	"score-visualeditor-mwscoreinspector-notelanguage": "Мова нотаў",
 	"datatypes-type-musical-notation": "Нотны запіс",
 	"wikibase-listdatatypes-musical-notation-head": "Нотны запіс",
-	"wikibase-listdatatypes-musical-notation-body": "Поле літаральных дадзеных для нотнага запісу музыкі ў фармаце LilyPond."
+	"wikibase-listdatatypes-musical-notation-body": "Поле літаральных даных для нотнага запісу музыкі ў фармаце LilyPond."
 }
