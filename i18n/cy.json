@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Afalau"
+		]
+	},
+	"score-audio-alt-link": "lawrlwytho'r ffeil sain",
+	"score-download-midi-file": "Lawrlwytho ffeil MIDI",
+	"score-download-source-file": "Lawrlwytho ffeil LilyPond",
+	"score-page": "Tudalen $1"
+}
