@@ -19,6 +19,7 @@
 	"score-visualeditor-mwscoredialog-lang": "Keel",
 	"score-visualeditor-mwscoredialog-notelanguage": "Noodinimede keel",
 	"score-visualeditor-mwscoredialog-override-audio": "Kasuta olemasolevat helifaili",
+	"score-visualeditor-mwscoredialog-override-audio-placeholder": "Olemasoleva helifaili nimi",
 	"score-visualeditor-mwscoredialog-override-midi": "Kasuta olemasolevat MIDI-faili",
 	"score-visualeditor-mwscoredialog-override-midi-placeholder": "Olemasoleva MIDI-faili nimi",
 	"score-visualeditor-mwscoredialog-raw": "See on täielik LilyPondi fail",
