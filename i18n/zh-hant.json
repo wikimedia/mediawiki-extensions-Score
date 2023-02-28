@@ -48,6 +48,7 @@
 	"score-page": "第 $1 頁",
 	"score-pregreplaceerr": "PCRE 正規表示法取代失敗",
 	"score-readerr": "無法讀取檔案 $1。",
+	"score-safe-mode": "從 2.23.12 版本開始，安全模式已從 LilyPond 中移除。LilyPond 檔案可以執行任意代碼。要測試您的 LilyPond 安裝請使用 [https://www.mediawiki.org/wiki/Shellbox Shellbox]，並設定 $wgScoreSafeMode = false。",
 	"score-scripterr": "無法執行遠端腳本：$1 以狀態代碼 $2 退出\n$3",
 	"score-soundfontnotexists": "查無 Soundfont：$1 不存在。請確認 <code>$wgScoreSoundfont</code> 有設定正確。",
 	"score-trimerr": "無法裁切圖片：\n$1\n若問題仍持續存在，請設定 <code>$wgScoreTrim=false</code>。",
