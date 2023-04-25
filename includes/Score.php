@@ -32,13 +32,13 @@ use FSFileBackend;
 use Html;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\WikiMap\WikiMap;
 use Message;
 use NullLockManager;
 use Parser;
 use PPFrame;
 use Shellbox\Command\BoxedCommand;
 use Title;
-use WikiMap;
 use Wikimedia\ScopedCallback;
 
 /**
