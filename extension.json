@@ -22,8 +22,11 @@
 	},
 	"ResourceModules": {
 		"ext.score.visualEditor": {
-			"class": "MediaWiki\\Extension\\Score\\ScoreVeResourceLoaderModule",
 			"scripts": [
+				{
+					"name": "ve-score/MWScoreConfig.js",
+					"callback": "MediaWiki\\Extension\\Score\\ScoreVeConfig::makeScript"
+				},
 				"ve-score/ve.dm.MWScoreNode.js",
 				"ve-score/ve.ce.MWScoreNode.js",
 				"ve-score/ve.ui.MWScoreContextItem.js",
