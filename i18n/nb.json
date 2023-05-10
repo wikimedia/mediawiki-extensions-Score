@@ -51,6 +51,7 @@
 	"score-visualeditor-mwscoredialog-lang": "Språk",
 	"score-visualeditor-mwscoredialog-notelanguage": "Notespråk",
 	"score-visualeditor-mwscoredialog-override-audio": "Bruk en eksisterende lydfil",
+	"score-visualeditor-mwscoredialog-override-audio-placeholder": "Navn på eksisterende lydfil",
 	"score-visualeditor-mwscoredialog-override-midi": "Bruk en eksisterende MIDI-fil",
 	"score-visualeditor-mwscoredialog-override-midi-placeholder": "Eksisterende MIDI-fil",
 	"score-visualeditor-mwscoredialog-raw": "Dette er en fullstendig LilyPond-fil",
