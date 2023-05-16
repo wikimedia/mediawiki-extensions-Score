@@ -9,7 +9,8 @@
 			"Fitoschido",
 			"Macofe",
 			"Mynor Archila",
-			"Ryo567"
+			"Ryo567",
+			"Ninovolador"
 		]
 	},
 	"score-abc2lynotexecutable": "No se pudo ejecutar el conversor ABC a LilyPond: \"$1\" no es un archivo ejecutable. Asegúrate de que <code>$wgScoreAbc2Ly</code> esté definido correctamente.",
@@ -20,6 +21,7 @@
 	"score-audio-alt-link": "descargar el archivo de audio",
 	"score-backend-error": "No se pueden copiar los archivos generados en su ubicación final:\n$1",
 	"score-compilererr": "No se pudo compilar el archivo de entrada LilyPond:\n$1",
+	"score-convertoverrideaudio": "No puede solicitar el procesamiento de audio y especificar override_audio al mismo tiempo.",
 	"score-deprecated-category": "Páginas que utilizan atributos de score obsoletos",
 	"score-deprecated-category-desc": "Estas páginas utilizan opciones provenientes de la extensión Score que están obsoletas. Estas son: \"override_audio\", \"override_ogg\" y \"override_midi\".",
 	"score-desc": "Agrega una etiqueta para representar partituras musicales con LilyPond",
@@ -28,7 +30,9 @@
 	"score-error-category": "Páginas con errores de representación de partituras",
 	"score-error-category-desc": "Hubo un error al representar la partitura.",
 	"score-exec-disabled": "Las partituras musicales están temporalmente deshabilitadas.",
-	"score-fallbacknotexecutable": "No se pudo ejecutar TiMidity++ como reserva: $1 no es un archivo ejecutable. Cerciórate de que o <code>$wgScoreTimidity</code> o <code>$wgScoreFluidsynth</code> estén definidos correctamente.",
+	"score-file-list-error": "No se puede leer desde el directorio de imágenes de Score.",
+	"score-fallbacknotexecutable": "No se pudo ejecutar FluidSynth: $1 no es un archivo ejecutable. Cerciórate de que <code>$wgScoreFluidsynth</code> esté definido correctamente.",
+	"score-gs-error": "Error al ejecutar Ghostscript:\n$1",
 	"score-invalidaudiooverride": "El archivo «<nowiki>$1</nowiki>» especificado a través de override_audio no es válido. Especifica únicamente el nombre del archivo; omite <nowiki>[[…]]</nowiki> y el prefijo «{{ns:file}}:».",
 	"score-invalidlang": "El idioma de la partitura lang=\"<nowiki>$1</nowiki>\" es incorrecto. Los únicos idiomas reconocidos en estos momentos son lang=\"lilypond\" (predeterminado) y lang=\"ABC\".",
 	"score-invalidnotelanguage": "El valor de note-language=\"<nowiki>$1</nowiki>\" no es válido. Las lenguas de notas reconocidas actualmente son: $2",
@@ -44,8 +48,12 @@
 	"score-page": "Página $1",
 	"score-pregreplaceerr": "Falló la substitución de la expresión regular PCRE",
 	"score-readerr": "No se pudo leer el archivo $1.",
+	"score-safe-mode": "El modo seguro se eliminó de LilyPond a partir de la versión 2.23.12. Los archivos de LilyPond pueden ejecutar código arbitrario. Utilice [https://www.mediawiki.org/wiki/Shellbox Shellbox] para su instalación de LilyPond y configure $wgScoreSafeMode = false.",
+	"score-scripterr": "No se pudo ejecutar el script remoto: $1 salió con el código de estado $2\n$3",
 	"score-soundfontnotexists": "No se pudo encontrar Soundfont: $1 no existe. Cerciórate de que <code>$wgScoreSoundfont</code> esté definido correctamente.",
 	"score-trimerr": "No se pudo ajustar la imagen:\n$1\nDefine <code>$wgScoreTrim=false</code> si persiste el problema.",
+	"score-use-category": "Páginas que usan score",
+	"score-use-category-desc": "Estas páginas usan la extensión [[:mw:Extension:Score|Score]].",
 	"score-versionerr": "No se pudo obtener la versión de LilyPond:\n$1",
 	"score-visualeditor-mwscoredialog-audio": "Incluir un archivo de audio (generado automáticamente por defecto)",
 	"score-visualeditor-mwscoredialog-card-advanced": "Avanzado",
@@ -53,10 +61,12 @@
 	"score-visualeditor-mwscoredialog-lang": "Idioma",
 	"score-visualeditor-mwscoredialog-notelanguage": "Lenguaje de notación",
 	"score-visualeditor-mwscoredialog-override-audio": "Usar un archivo de audio existente",
+	"score-visualeditor-mwscoredialog-override-audio-placeholder": "Nombre del archivo de audio existente",
 	"score-visualeditor-mwscoredialog-override-midi": "Usar un archivo MIDI existente",
 	"score-visualeditor-mwscoredialog-override-midi-placeholder": "Nombre del archivo MIDI existente",
 	"score-visualeditor-mwscoredialog-raw": "Este es un archivo completo de LilyPond",
 	"score-visualeditor-mwscoredialog-title": "Notación musical",
 	"datatypes-type-musical-notation": "Notación musical",
-	"wikibase-listdatatypes-musical-notation-head": "Notación musical"
+	"wikibase-listdatatypes-musical-notation-head": "Notación musical",
+	"wikibase-listdatatypes-musical-notation-body": "Campo de datos literal para una partitura musical escrita en notación LilyPond."
 }
