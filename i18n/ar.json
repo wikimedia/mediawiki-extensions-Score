@@ -4,7 +4,8 @@
 			"Abanima",
 			"Meno25",
 			"ديفيد",
-			"زكريا"
+			"زكريا",
+			"Alshamiri1"
 		]
 	},
 	"score-abc2lynotexecutable": "تعذر تنفيذ ABC لمحول LilyPond: $1 ليس ملفًا قابلا للتنفيذ; تأكد من تعيين <code>$wgScoreAbc2Ly</code> بشكل صحيح.",
@@ -23,8 +24,10 @@
 	"score-download-source-file": "تنزيل ملف LilyPond",
 	"score-error-category": "صفحات بها خطأ في تحويل الحرز",
 	"score-error-category-desc": "حدث خطأ أثناء عرض النتيجة.",
+	"score-exec-disabled": "النوتات الموسيقية معطلة مؤقتًا.",
 	"score-fallbacknotexecutable": "تعذر تنفيذ TiMidity++ كتراجع: $1; ليس ملفا قابلا للتنفيذ; تأكد من تعيين <code>$wgScoreTimidity</code> أو <code>$wgScoreFluidsynth</code> is set بشكل صحيح.",
 	"score-getcwderr": "غير قادر على الحصول على دليل العمل الحالي",
+	"score-gs-error": "خطأ في تشغيل Ghostscript:! N! $1",
 	"score-invalidaudiooverride": "الملف \"<nowiki>$1</nowiki>\" الذي حددته بـoverride_audio غير صالح; الرجاء تحديد اسم الملف فقط، وحذف البادئة <nowiki>[[…]]</nowiki> و\"{{ns:file}}:\".",
 	"score-invalidlang": "لغة النتيجة غير صالحة lang=\"<nowiki>$1</nowiki>\"، اللغات المعترف بها حاليا هي lang=\"lilypond\" (الافتراضية) وlang=\"ABC\".",
 	"score-invalidnotelanguage": "Invalid note-language=\"<nowiki>$1</nowiki>\"غير صالحة; لغات الملاحظة المعترف بها حاليًا هي: $2",
@@ -37,6 +40,7 @@
 	"score-nomediahandler": "يتطلب التحويل الصوتي إصدارا تم تثبيته وتكوينه من  [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler تمديد TimedMediaHandler].",
 	"score-nomidi": "لم يتم إنشاء أي ملف MIDI بالرغم من طلبه، إذا كنت تعمل في وضع LilyPond الخام، تأكد من توفير كتلة \\midi مناسبة.",
 	"score-nooutput": "فشل إنشاء دليل المخرجات $1.",
+	"score-nops": "لم ينتج LilyPond أي ملف إخراج. يرجى التحقق من رمز درجاتك.",
 	"score-notelanguagewithraw": "لا يمكن استخدام سمة \"note-language\" لنقاط وضع خام",
 	"score-notexecutable": "تعذر تنفيذ LilyPond: $1 ليس ملفًا قابلا للتنفيذ; تأكد من تعيين <code>$wgScoreLilyPond</code> بشكل صحيح.",
 	"score-page": "صفحة $1",
