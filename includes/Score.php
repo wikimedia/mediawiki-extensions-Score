@@ -315,7 +315,7 @@ class Score {
 			} else {
 				$options['lang'] = 'lilypond';
 			}
-			if ( !in_array( $options['lang'], self::$supportedLangs ) ) {
+			if ( !in_array( $options['lang'], self::$supportedLangs, true ) ) {
 				throw new ScoreException( 'score-invalidlang',
 					[ htmlspecialchars( $options['lang'] ) ] );
 			}
