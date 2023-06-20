@@ -48,7 +48,7 @@
 	"score-use-category": "Старонкі, якія ўжываюць пашырэнне Score",
 	"score-use-category-desc": "На гэтых старонках выкарыстоўваецца пашырэнне [[:mw:Extension:Score|Score]].",
 	"score-versionerr": "Немагчыма атрымаць версію LilyPond:\n$1",
-	"score-visualeditor-mwscoredialog-audio": "Уключыць аўдыёфайл (ствараецца аўтаматычна па змаўчанні)",
+	"score-visualeditor-mwscoredialog-audio": "Уключыць аўдыёфайл (прадвызначана, ствараецца аўтаматычна)",
 	"score-visualeditor-mwscoredialog-card-advanced": "Пашыранае",
 	"score-visualeditor-mwscoredialog-card-audio": "Аўдыя",
 	"score-visualeditor-mwscoredialog-lang": "Мова",
