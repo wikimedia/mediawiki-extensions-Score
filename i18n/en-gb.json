@@ -3,8 +3,10 @@
 		"authors": [
 			"Hunsvotti",
 			"Shirayuki",
-			"Tom29739"
+			"Tom29739",
+			"Reedy"
 		]
 	},
-	"score-invalidlang": "Invalid score language lang=\"<nowiki>$1</nowiki>\". Currently recognised languages are lang=\"lilypond\" (the default) and lang=\"ABC\"."
+	"score-invalidlang": "Invalid score language lang=\"<nowiki>$1</nowiki>\". Currently recognised languages are lang=\"lilypond\" (the default) and lang=\"ABC\".",
+	"score-invalidnotelanguage": "Invalid note-language=\"<nowiki>$1</nowiki>\". Currently recognised note languages are: $2"
 }
