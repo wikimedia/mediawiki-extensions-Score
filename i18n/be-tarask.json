@@ -9,8 +9,14 @@
 	},
 	"score-abc2lynotexecutable": "Пераўтваральнік з ABC у LilyPond ня можа быць выкліканы: $1 не зьяўляецца выканальным файлам. Праверце, ці <code>$wgScoreAbc2Ly</code> устаноўлены слушна.",
 	"score-abcconversionerr": "Немагчыма пераўтварыць ABC-файл у фармат LilyPond:\n$1",
+	"score-audioconversionerr": "Немагчыма пераўтварыць MIDI ў MP3:\n$1",
+	"score-audiooverridenotfound": "Файл „<nowiki>$1</nowiki>“, які вы пазначылі з override_audio, не існуе.",
+	"score-audio-alt": "Ваш броўзэр не падтрымлівае прайграваньне аўдыё. Вы можаце $1.",
+	"score-audio-alt-link": "спампаваць аўдыёфайл",
+	"score-backend-error": "Немагчыма скампіяваць згенэраваныя файлы ў канчатковае месца прызначэньня:\n$1",
 	"score-compilererr": "Немагчыма скампіляваць зыходны файл LilyPond:\n$1",
 	"score-desc": "Дадае тэг для паказу музычных нот праз LilyPond",
 	"score-error-category": "Старонкі з памылкамі візуалізацыі нотаў",
-	"score-error-category-desc": "Адбылася памылка пры адлюстраваньні партытуры."
+	"score-error-category-desc": "Адбылася памылка пры адлюстраваньні партытуры.",
+	"score-use-category": "Вікіпэдыя:Старонкі, якія выкарыстоўваюць нотны запіс"
 }
