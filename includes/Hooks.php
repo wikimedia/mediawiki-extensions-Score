@@ -2,6 +2,8 @@
 
 namespace MediaWiki\Extension\Score;
 
+use MediaWiki\Hook\ParserFirstCallInitHook;
+use MediaWiki\Hook\SoftwareInfoHook;
 use Parser;
 use ParserOptions;
 use ValueFormatters\FormatterOptions;
@@ -14,11 +16,14 @@ use Wikibase\Repo\Rdf\RdfVocabulary;
 use Wikibase\Repo\WikibaseRepo;
 use Wikimedia\Purtle\RdfWriter;
 
-class Hooks {
+class Hooks implements
+	ParserFirstCallInitHook,
+	SoftwareInfoHook
+{
 	/**
 	 * @param Parser $parser
 	 */
-	public static function onParserFirstCallInit( Parser $parser ) {
+	public function onParserFirstCallInit( $parser ) {
 		global $wgUseImageMagick, $wgScoreTrim, $wgScoreUseSvg;
 		if ( $wgScoreUseSvg ) {
 			// For SVG, always set true
@@ -31,7 +36,7 @@ class Hooks {
 		$parser->setHook( 'score', [ Score::class, 'render' ] );
 	}
 
-	public static function onSoftwareInfo( array &$software ) {
+	public function onSoftwareInfo( &$software ) {
 		try {
 			$software[ '[http://lilypond.org/ LilyPond]' ] = Score::getLilypondVersion();
 		} catch ( ScoreException $ex ) {

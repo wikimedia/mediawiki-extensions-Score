@@ -104,18 +104,19 @@
 		"remoteExtPath": "Score/modules"
 	},
 	"Hooks": {
-		"ParserFirstCallInit": [
-			"MediaWiki\\Extension\\Score\\Hooks::onParserFirstCallInit"
-		],
-		"SoftwareInfo": [
-			"MediaWiki\\Extension\\Score\\Hooks::onSoftwareInfo"
-		],
+		"ParserFirstCallInit": "main",
+		"SoftwareInfo": "main",
 		"WikibaseClientDataTypes": [
 			"MediaWiki\\Extension\\Score\\Hooks::onWikibaseClientDataTypes"
 		],
 		"WikibaseRepoDataTypes": [
 			"MediaWiki\\Extension\\Score\\Hooks::onWikibaseRepoDataTypes"
 		]
+	},
+	"HookHandlers": {
+		"main": {
+			"class": "MediaWiki\\Extension\\Score\\Hooks"
+		}
 	},
 	"config": {
 		"ScoreTrim": {
