@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"З. ӘЙЛЕ"
 		]
 	},
-	"score-page": "Бит $1"
+	"score-page": "$1 бит"
 }
