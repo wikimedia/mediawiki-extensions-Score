@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Bugoslav",
-			"MaGa"
+			"MaGa",
+			"Ponor"
 		]
 	},
 	"score-abcconversionerr": "Nije moguće pretvoriti ABC datoteku u LilyPond format:\n$1",
@@ -16,7 +17,7 @@
 	"score-deprecated-category-desc": "Ove stranice rabe mogućnosti proširenja ''Score'' koje su zastarjele. \nTo su: \"override_audio\", \"override_ogg\" i \"override_midi\".",
 	"score-download-midi-file": "Preuzmi MIDI datoteku",
 	"score-download-source-file": "Preuzmi LilyPond datoteku",
-	"score-error-category": "Stranice s pogrješkama u ispisu partitura",
+	"score-error-category": "Stranice s pogreškama u ispisu partitura",
 	"score-exec-disabled": "Glazbeni zapisi privremeno su onemogućeni.",
 	"score-gs-error": "Pogreška pri pokretanju Ghostscripta:\n$1",
 	"score-nocontent": "Nije moguće učitati datoteku $1 s poslužitelja.",
