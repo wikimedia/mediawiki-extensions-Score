@@ -39,7 +39,7 @@
 	"score-page": "Pagina $1",
 	"score-pregreplaceerr": "Le reimplaciamento del expression regular PCRE ha fallite",
 	"score-readerr": "Impossibile leger le file $1.",
-	"score-safe-mode": "Le modo secur ha essite eliminate de LilyPond a partir del version 2.23.12. Le files de LilyPond pote executar qualcunque codice. Per favor, mitte tu installation de LilyPond in cassa a sablo usante [https://www.mediawiki.org/wiki/Shellbox Shellbox] e configura $wgScoreSafeMode = false.",
+	"score-safe-mode": "Le modo secur ha essite eliminate de LilyPond a partir del version 2.23.12. Le files de LilyPond pote executar qualcunque codice. Per favor, mitte tu installation de LilyPond in sabliera usante [https://www.mediawiki.org/wiki/Shellbox Shellbox] e configura $wgScoreSafeMode = false.",
 	"score-scripterr": "Impossibile executar le script remote: $1 ha terminate con le codice de stato $2.\n$3",
 	"score-soundfontnotexists": "Soundfont non poteva esser trovate: $1 non existe. Assecura te que <code>$wgScoreSoundfont</code> es definite correctemente.",
 	"score-trimerr": "Le imagine non poteva esser taliate:\n$1\nDefini <code>$wgScoreTrim=false</code> si iste problema persiste.",
