@@ -248,11 +248,11 @@ class Score {
 				$dir = $wgScoreDirectory;
 			}
 			self::$backend = new FSFileBackend( [
-				'name'           => 'score-backend',
-				'wikiId'         => WikiMap::getCurrentWikiId(),
-				'lockManager'    => new NullLockManager( [] ),
+				'name' => 'score-backend',
+				'wikiId' => WikiMap::getCurrentWikiId(),
+				'lockManager' => new NullLockManager( [] ),
 				'containerPaths' => [ 'score-render' => $dir ],
-				'fileMode'       => 0777,
+				'fileMode' => 0777,
 				'obResetFunc' => 'wfResetOutputBuffers',
 				'streamMimeFunc' => [ 'StreamFile', 'contentTypeFromPath' ],
 				'statusWrapper' => [ 'Status', 'wrap' ],
@@ -406,7 +406,7 @@ class Score {
 				'code' => $code,
 				'lang' => $options['lang'],
 				'note-language' => $options['note-language'],
-				'raw'  => $options['raw'],
+				'raw' => $options['raw'],
 				'ExtVersion' => self::CACHE_VERSION,
 				'LyVersion' => self::getLilypondVersion(),
 			];

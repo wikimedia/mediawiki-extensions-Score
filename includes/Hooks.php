@@ -56,7 +56,7 @@ class Hooks implements
 		}
 
 		$dataTypeDefinitions['PT:musical-notation'] = [
-			'value-type'                 => 'string',
+			'value-type' => 'string',
 			'validator-factory-callback' => static function () {
 				global $wgScoreMaxLength;
 				// load validator builders
@@ -99,7 +99,7 @@ class Hooks implements
 			return;
 		}
 		$dataTypeDefinitions['PT:musical-notation'] = [
-			'value-type'                 => 'string',
+			'value-type' => 'string',
 			'formatter-factory-callback' => static function ( $format, FormatterOptions $options ) {
 				return new ScoreFormatter( $format );
 			},
