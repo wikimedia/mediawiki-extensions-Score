@@ -29,7 +29,7 @@
 	"score-fallbacknotexecutable": "Немагчыма выканаць FluidSynth: $1 не з’яўляецца выканальным файлам. Пераканайцеся, што зменная <code>$wgScoreFluidsynth</code> вызначана правільна.",
 	"score-gs-error": "Памылка пры выкананні Ghostscript:\n$1",
 	"score-invalidaudiooverride": "Файл «<nowiki>$1</nowiki>», які вы ўказалі з override_audio, няслушны. Калі ласка, укажыце толькі імя файла, апусціце <nowiki>[[…]]</nowiki> і прэфікс «{{ns:file}}:».",
-	"score-invalidlang": "Няправільная нотная мова lang=\"<nowiki>$1</nowiki>\". У цяперашні час, прызнаныя мовы — lang=\"lilypond\" (па змаўчанні) і lang=\"ABC\".",
+	"score-invalidlang": "Няправільная мова партытуры lang=\"<nowiki>$1</nowiki>\". У цяперашні час, прызнаныя мовы — lang=\"lilypond\" (прадвызначана) і lang=\"ABC\".",
 	"score-invalidnotelanguage": "Няслушны note-language=\"<nowiki>$1</nowiki>\". У цяперашні час, прызнаныя мовы: $2",
 	"score-lamenotexecutable": "Немагчыма выканаць FluidSynth: $1 не з’яўляецца выканальным файлам. Пераканайцеся, што зменная <code>$wgScoreLame</code> вызначана правільна.",
 	"score-midioverridenotfound": "Файл «<nowiki>$1</nowiki>», які вы ўказалі з override_midi, не знойдзены. Калі ласка, укажыце толькі імя файла, апусціце <nowiki>[[…]]</nowiki> і прэфікс «{{ns:file}}:».",
