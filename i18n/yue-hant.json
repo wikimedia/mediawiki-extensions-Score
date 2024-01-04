@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Winston Sung"
+			"Winston Sung",
+			"H78c67c"
 		]
 	},
-	"score-use-category": "有樂譜（score）標籤嘅文章"
+	"score-use-category": "有樂譜（score）標籤嘅文章",
+	"score-visualeditor-mwscoredialog-title": "音樂符號"
 }
