@@ -22,6 +22,7 @@
  */
 
 use MediaWiki\Extension\Score\Score;
+use MediaWiki\Status\Status;
 
 if ( getenv( 'MW_INSTALL_PATH' ) ) {
 	$IP = getenv( 'MW_INSTALL_PATH' );

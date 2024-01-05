@@ -29,7 +29,7 @@ use Exception;
 use FileBackend;
 use FormatJson;
 use FSFileBackend;
-use Html;
+use MediaWiki\Html\Html;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;

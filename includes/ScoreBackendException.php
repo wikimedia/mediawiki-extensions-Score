@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\Score;
 
-use Status;
+use MediaWiki\Status\Status;
 use StatusValue;
 
 /**

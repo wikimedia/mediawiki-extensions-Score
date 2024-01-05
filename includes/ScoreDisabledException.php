@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\Score;
 
-use Html;
+use MediaWiki\Html\Html;
 
 class ScoreDisabledException extends ScoreException {
 	public function __construct() {
