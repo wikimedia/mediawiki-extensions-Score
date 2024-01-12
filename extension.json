@@ -55,10 +55,6 @@
 				"score-visualeditor-mwscoredialog-override-midi-placeholder",
 				"score-visualeditor-mwscoredialog-raw",
 				"score-visualeditor-mwscoredialog-title"
-			],
-			"targets": [
-				"desktop",
-				"mobile"
 			]
 		},
 		"ext.score.visualEditor.icons": {
