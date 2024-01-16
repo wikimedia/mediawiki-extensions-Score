@@ -4,12 +4,14 @@
 			"Geraki",
 			"KATRINE1992",
 			"NikosLikomitros",
-			"Nikosgranturismogt"
+			"Nikosgranturismogt",
+			"Αντιγόνη"
 		]
 	},
 	"score-download-source-file": "Λήψη αρχείου LilyPond",
 	"score-error-category": "Σελίδες με σφάλματα απόδοσης παρτιτούρας",
 	"score-page": "Σελίδα $1",
+	"score-use-category": "Σελίδες που χρησιμοποιούν παρτιτούρα",
 	"score-visualeditor-mwscoredialog-audio": "Συμπερίληψη ενός αρχείου ήχου (αυτόματα παραγόμενου από προεπιλογή)",
 	"score-visualeditor-mwscoredialog-card-advanced": "Προχωρημένο",
 	"score-visualeditor-mwscoredialog-card-audio": "Ήχος",
