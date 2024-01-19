@@ -694,7 +694,7 @@ class Score {
 	private static function generatePngAndMidi( $code, $options, &$metaData ) {
 		global $wgScoreLilyPond, $wgScoreTrim, $wgScoreSafeMode, $wgScoreDisableExec,
 			$wgScoreGhostscript, $wgScoreAbc2Ly, $wgImageMagickConvertCommand, $wgScoreUseSvg,
-			$wgScoreShell, $wgPhpCli, $wgScoreEnvironment, $wgScoreImageMagickConvert;
+			$wgShellboxShell, $wgPhpCli, $wgScoreEnvironment, $wgScoreImageMagickConvert;
 
 		if ( $wgScoreDisableExec ) {
 			throw new ScoreDisabledException();
@@ -714,7 +714,7 @@ class Score {
 		$command = self::boxedCommand()
 			->routeName( 'score-lilypond' )
 			->params(
-				$wgScoreShell,
+				$wgShellboxShell,
 				'scripts/generatePngAndMidi.sh' )
 			->outputFileToFile( 'file.midi', $factoryMidi )
 			->outputGlobToFile( 'file', 'png', $factoryDirectory )
@@ -1076,7 +1076,7 @@ LILYPOND;
 	 */
 	private static function generateAudio( $sourceFile, $options, $remoteDest, &$metaData ) {
 		global $wgScoreFluidsynth, $wgScoreSoundfont, $wgScoreLame, $wgScoreDisableExec,
-			$wgScoreEnvironment, $wgScoreShell, $wgPhpCli;
+			$wgScoreEnvironment, $wgShellboxShell, $wgPhpCli;
 
 		if ( $wgScoreDisableExec ) {
 			throw new ScoreDisabledException();
@@ -1091,7 +1091,7 @@ LILYPOND;
 		$command = self::boxedCommand()
 			->routeName( 'score-fluidsynth' )
 			->params(
-				$wgScoreShell,
+				$wgShellboxShell,
 				'scripts/synth.sh'
 			)
 			->environment( [
