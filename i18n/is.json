@@ -2,12 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Snævar",
+			"Stefán Örvar Sigmundsson",
 			"Sveinn í Felli"
 		]
 	},
+	"score-deprecated-category": "Síður sem nota úreld score-eigindi",
+	"score-error-category": "Síður með birtingarvillur nótnablaða",
 	"score-page": "Síða $1",
 	"score-readerr": "Gat ekki lesið skrána $1.",
-	"score-use-category": "Síður sem nota Score",
+	"score-use-category": "Síður sem nota nótnablöð",
 	"score-visualeditor-mwscoredialog-card-advanced": "Nánar",
 	"score-visualeditor-mwscoredialog-card-audio": "Hljóð",
 	"score-visualeditor-mwscoredialog-lang": "Tungumál"
