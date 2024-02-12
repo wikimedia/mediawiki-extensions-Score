@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sveinn í Felli"
+			"Sveinn í Felli",
+			"Snævar"
 		]
 	},
 	"score-page": "Síða $1",
 	"score-readerr": "Gat ekki lesið skrána $1.",
+	"score-use-category": "Síður sem nota Score",
 	"score-visualeditor-mwscoredialog-card-advanced": "Nánar",
 	"score-visualeditor-mwscoredialog-card-audio": "Hljóð",
 	"score-visualeditor-mwscoredialog-lang": "Tungumál"
