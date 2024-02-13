@@ -1,10 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Cedric31"
+			"Cedric31",
+			"Lhanars"
 		]
 	},
 	"score-error-category": "Paginas amb d'errors de rendut de particion",
 	"score-error-category-desc": "Una error s'es produita al moment del rendut de la particion.",
-	"score-visualeditor-mwscoredialog-lang": "Lenga"
+	"score-visualeditor-mwscoredialog-lang": "Lenga",
+	"score-visualeditor-mwscoredialog-title": "Notacion musicala",
+	"datatypes-type-musical-notation": "Notacion musicala",
+	"wikibase-listdatatypes-musical-notation-head": "Notacion musicala"
 }
