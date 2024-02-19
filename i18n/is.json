@@ -2,12 +2,18 @@
 	"@metadata": {
 		"authors": [
 			"Sveinn í Felli",
-			"Snævar"
+			"Snævar",
+			"Stefán Örvar Sigmundsson"
 		]
 	},
+	"score-deprecated-category": "Síður sem nota úreld score-eigindi",
+	"score-deprecated-category-desc": "Þessar síður nota valmöguleika sem boðið er upp á af Score-viðbótinni sem eru úreldir. Þeir eru „override_audio“, „override_ogg“ og „override_midi“.",
+	"score-error-category": "Síður með myndgerðarvillur nótnablaða",
+	"score-error-category-desc": "Það kom upp villa við myndgerð nótnablaðsins.",
 	"score-page": "Síða $1",
 	"score-readerr": "Gat ekki lesið skrána $1.",
-	"score-use-category": "Síður sem nota Score",
+	"score-use-category": "Síður sem nota nótnablöð",
+	"score-use-category-desc": "Þessar síður nota [[:mw:Extension:Score|Score]]-viðbótina.",
 	"score-visualeditor-mwscoredialog-card-advanced": "Nánar",
 	"score-visualeditor-mwscoredialog-card-audio": "Hljóð",
 	"score-visualeditor-mwscoredialog-lang": "Tungumál"
