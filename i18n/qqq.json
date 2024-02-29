@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"BaRaN6161 TURK",
 			"Jon Harald Søby",
 			"Liuxinyu970226",
@@ -32,7 +33,7 @@
 	"score-gs-error": "Displayed if there is an error when running Ghostscript.",
 	"score-invalidaudiooverride": "Displayed if the file specified with the override_audio=\"…\" attribute is invalid. $1 is the value of the override_audio attribute.",
 	"score-invalidlang": "Displayed if the lang=\"…\" attribute contains an unrecognized score language. $1 is the unrecognized language.",
-	"score-invalidnotelanguage": "Displayed if the note-language=\"…\" attribute contains an unrecognized note language. $1 is the unrecognized note language. $2 is comma separated list of available languages.",
+	"score-invalidnotelanguage": "Displayed if the note-language=\"...\" attribute contains an unrecognized note language.\n\n* $1 is the unrecognized note language.\n* $2 is a comma-separated list of available languages.",
 	"score-lamenotexecutable": "Displayed if LAME could not be executed. $1 is the path to the LAME binary.",
 	"score-midioverridenotfound": "Displayed if the file specified with the override_midi=\"…\" attribute could not be found. $1 is the value of the override_midi attribute.",
 	"score-nocontent": "Parameters:\n* $1 - filename",
