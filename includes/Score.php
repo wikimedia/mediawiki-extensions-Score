@@ -584,7 +584,7 @@ class Score {
 
 		/* return output link(s) */
 		if ( isset( $existingFiles[$imageFileName] ) ) {
-			list( $width, $height ) = $metaData[$imageFileName]['size'];
+			[ $width, $height ] = $metaData[$imageFileName]['size'];
 			$attribs = [
 				'src' => "{$options['dest_url']}/$imageFileName",
 				'width' => $width,
@@ -606,7 +606,7 @@ class Score {
 					->inContentLanguage()
 					->numParams( $i )
 					->plain();
-				list( $width, $height ) = $metaData[$fileName]['size'];
+				[ $width, $height ] = $metaData[$fileName]['size'];
 				$attribs = [
 					'src' => "{$options['dest_url']}/$fileName",
 					'width' => $width,
@@ -845,7 +845,7 @@ class Score {
 				'src' => $srcPng,
 				'dst' => $destPng
 			];
-			list( $width, $height ) = self::imageSize( $srcPng );
+			[ $width, $height ] = self::imageSize( $srcPng );
 			$metaData[$dstPngFileName]['size'] = [ $width, $height ];
 			$newFiles[$dstPngFileName] = true;
 
@@ -995,7 +995,7 @@ class Score {
 	 * @return array of ints (width, height)
 	 */
 	private static function imageSize( $filename ) {
-		list( $width, $height ) = getimagesize( $filename );
+		[ $width, $height ] = getimagesize( $filename );
 		return [ $width, $height ];
 	}
 
