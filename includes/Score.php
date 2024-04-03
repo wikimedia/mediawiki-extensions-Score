@@ -783,7 +783,7 @@ class Score {
 
 		$needMidi = false;
 		$haveMidi = $result->wasReceived( 'file.midi' );
-		if ( !$options['raw'] || $options['generate_audio'] && !$options['override_midi'] ) {
+		if ( !$options['raw'] || ( $options['generate_audio'] && !$options['override_midi'] ) ) {
 			$needMidi = true;
 			if ( !$haveMidi ) {
 				throw new ScoreException( 'score-nomidi' );
