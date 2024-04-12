@@ -5,10 +5,7 @@ namespace MediaWiki\Extension\Score;
 use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\Hook\SoftwareInfoHook;
 use Parser;
-use ParserOptions;
 use ValueFormatters\FormatterOptions;
-use ValueParsers\StringParser;
-use Wikibase\Repo\Parsers\WikibaseStringValueNormalizer;
 use Wikibase\Repo\Rdf\DedupeBag;
 use Wikibase\Repo\Rdf\EntityMentionListener;
 use Wikibase\Repo\Rdf\NullEntityRdfBuilder;
@@ -68,10 +65,6 @@ class Hooks implements
 				// $validators[] = new ScoreValidator();
 				// TODO: Take out the validation out of Score
 				return $validators;
-			},
-			'parser-factory-callback' => static function ( ParserOptions $options ) {
-				$normalizer = new WikibaseStringValueNormalizer( WikibaseRepo::getStringNormalizer() );
-				return new StringParser( $normalizer );
 			},
 			'formatter-factory-callback' => static function ( $format, FormatterOptions $options ) {
 				return new ScoreFormatter( $format );
