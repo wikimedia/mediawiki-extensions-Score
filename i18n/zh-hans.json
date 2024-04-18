@@ -13,7 +13,8 @@
 			"Suesue",
 			"Xiaomingyan",
 			"Xiplus",
-			"Yfdyh000"
+			"Yfdyh000",
+			"Anterdc99"
 		]
 	},
 	"score-abc2lynotexecutable": "无法运行ABC转LilyPond转换器：$1不是可执行文件。请确认<code>$wgScoreAbc2Ly</code>设置正确。",
@@ -63,6 +64,7 @@
 	"score-visualeditor-mwscoredialog-lang": "语言",
 	"score-visualeditor-mwscoredialog-notelanguage": "符号语言",
 	"score-visualeditor-mwscoredialog-override-audio": "使用一个现有音频文件",
+	"score-visualeditor-mwscoredialog-override-audio-placeholder": "现有的音频文件名称",
 	"score-visualeditor-mwscoredialog-override-midi": "使用现有MIDI文件",
 	"score-visualeditor-mwscoredialog-override-midi-placeholder": "现有的MIDI文件名",
 	"score-visualeditor-mwscoredialog-raw": "有完整的LilyPond文件",
