@@ -14,7 +14,8 @@
 			"Xiaomingyan",
 			"Xiplus",
 			"Yfdyh000",
-			"Anterdc99"
+			"Anterdc99",
+			"沈澄心"
 		]
 	},
 	"score-abc2lynotexecutable": "无法运行ABC转LilyPond转换器：$1不是可执行文件。请确认<code>$wgScoreAbc2Ly</code>设置正确。",
@@ -52,6 +53,7 @@
 	"score-page": "页面$1",
 	"score-pregreplaceerr": "PCRE 正则表达式替换失败",
 	"score-readerr": "无法读取文件$1。",
+	"score-safe-mode": "从2.23.12版本起，安全模式已从LilyPond中移除。LilyPond文件可以运行任意代码。要测试您的LilyPond安装请使用[https://www.mediawiki.org/wiki/Shellbox Shellbox]，并设置$wgScoreSafeMode = false。",
 	"score-scripterr": "无法运行远程脚本：$1以状态码$2退出了\n$3",
 	"score-soundfontnotexists": "找不到Soundfont：$1不存在。请确保<code>$wgScoreSoundfont</code>正确设置。",
 	"score-trimerr": "图像不能被剪裁：\n$1\n如果此问题仍然存在，设置 <code>$wgScoreTrim=false</code>。",
