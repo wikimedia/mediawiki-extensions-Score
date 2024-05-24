@@ -656,7 +656,7 @@ class Score {
 		ScopedCallback::consume( $cleanup );
 
 		$attributes = [
-			'class' => 'mw-ext-score'
+			'class' => 'mw-ext-score noresize'
 		];
 
 		if ( $options['override_midi']
