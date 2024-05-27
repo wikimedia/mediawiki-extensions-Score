@@ -47,7 +47,7 @@
 	"score-soundfontnotexists": "לא היה אפשר למצוא soundfont‏: $1 אינו קיים. יש לוודא ש־<code dir=\"ltr\">$wgScoreSoundfont</code> מוגדר נכון.",
 	"score-trimerr": "לא ניתן לקצץ את התמונה:\n$1\nיש להגדיר <code dir=\"ltr\">$wgScoreTrim=false</code> אם הבעיה ממשיכה.",
 	"score-use-category": "דפים שמשתמשים בתווים מוזיקליים",
-	"score-use-category-desc": "הדפים האלה משתמשים בהרחבה [[:mw:Extension:Score|Score]]",
+	"score-use-category-desc": "הדפים האלה משתמשים בהרחבה [https://www.mediawiki.org/wiki/Extension:Score Score].",
 	"score-versionerr": "לא ניתן לקבל את גרסת LilyPond:\n$1",
 	"score-visualeditor-mwscoredialog-audio": "לכלול קובץ שמע (מחולל אוטומטית לפי ברירת מחדל)",
 	"score-visualeditor-mwscoredialog-card-advanced": "מתקדם",
