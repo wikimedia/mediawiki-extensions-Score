@@ -18,10 +18,12 @@ class ScoreDisabledException extends ScoreException {
 		);
 	}
 
+	/** @inheritDoc */
 	public function isTracked() {
 		return false;
 	}
 
+	/** @inheritDoc */
 	public function getStatsdKey() {
 		return false;
 	}

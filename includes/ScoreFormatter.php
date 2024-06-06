@@ -73,6 +73,10 @@ class ScoreFormatter implements ValueFormatter {
 		}
 	}
 
+	/**
+	 * @param string $valueString
+	 * @return string
+	 */
 	private function formatAsHtml( $valueString ) {
 		$args = [];
 

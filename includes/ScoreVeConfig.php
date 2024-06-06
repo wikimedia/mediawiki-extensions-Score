@@ -14,7 +14,7 @@ class ScoreVeConfig {
 	public static function makeScript( RL\Context $context ) {
 		$utils = MediaWikiServices::getInstance()->getLanguageNameUtils();
 		$supportedLangs = [];
-		foreach ( Score::$supportedNoteLanguages as $lilyName => $code ) {
+		foreach ( Score::SUPPORTED_NOTE_LANGUAGES as $lilyName => $code ) {
 			$supportedLangs[$lilyName] = $utils->getLanguageName( $code );
 		}
 		return 'mw.config.set('

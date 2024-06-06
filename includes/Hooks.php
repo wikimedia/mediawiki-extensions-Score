@@ -33,6 +33,7 @@ class Hooks implements
 		$parser->setHook( 'score', [ Score::class, 'render' ] );
 	}
 
+	/** @inheritDoc */
 	public function onSoftwareInfo( &$software ) {
 		try {
 			$software[ '[https://lilypond.org/ LilyPond]' ] = Score::getLilypondVersion();

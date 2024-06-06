@@ -2,6 +2,9 @@
 
 namespace MediaWiki\Extension\Score;
 
+/**
+ * @param string $msg
+ */
 function errorExit( $msg ) {
 	fwrite( STDERR, "mw-msg:\t$msg\n" );
 	exit( 20 );

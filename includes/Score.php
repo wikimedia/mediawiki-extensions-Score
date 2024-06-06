@@ -58,13 +58,13 @@ class Score {
 	/**
 	 * Supported score languages.
 	 */
-	private static $supportedLangs = [ 'lilypond', 'ABC' ];
+	private const SUPPORTED_LANGS = [ 'lilypond', 'ABC' ];
 
 	/**
 	 * Supported note languages.
 	 * Key is LilyPond filename. Value is language code
 	 */
-	public static $supportedNoteLanguages = [
+	public const SUPPORTED_NOTE_LANGUAGES = [
 		'arabic' => 'ar',
 		'catalan' => 'ca',
 		'deutsch' => 'de',
@@ -82,16 +82,18 @@ class Score {
 	/**
 	 * Default language used for notes.
 	 */
-	public static $defaultNoteLanguage = 'nederlands';
+	private const DEFAULT_NOTE_LANGUAGE = 'nederlands';
 
 	/**
 	 * LilyPond version string.
 	 * It defaults to null and is set the first time it is required.
+	 * @var string|null
 	 */
 	private static $lilypondVersion = null;
 
 	/**
 	 * FileBackend instance cache
+	 * @var FileBackend|null
 	 */
 	private static $backend;
 
@@ -315,7 +317,7 @@ class Score {
 			} else {
 				$options['lang'] = 'lilypond';
 			}
-			if ( !in_array( $options['lang'], self::$supportedLangs, true ) ) {
+			if ( !in_array( $options['lang'], self::SUPPORTED_LANGS, true ) ) {
 				throw new ScoreException( 'score-invalidlang',
 					[ htmlspecialchars( $options['lang'] ) ] );
 			}
@@ -360,13 +362,13 @@ class Score {
 					throw new ScoreException( 'score-notelanguagewithraw' );
 				}
 			} else {
-				$options['note-language'] = self::$defaultNoteLanguage;
+				$options['note-language'] = self::DEFAULT_NOTE_LANGUAGE;
 			}
-			if ( !isset( self::$supportedNoteLanguages[$options['note-language']] ) ) {
+			if ( !isset( self::SUPPORTED_NOTE_LANGUAGES[$options['note-language']] ) ) {
 				throw new ScoreException(
 					'score-invalidnotelanguage', [
 						Message::plaintextParam( $options['note-language'] ),
-						Message::plaintextParam( implode( ', ', array_keys( self::$supportedNoteLanguages ) ) )
+						Message::plaintextParam( implode( ', ', array_keys( self::SUPPORTED_NOTE_LANGUAGES ) ) )
 					]
 				);
 			}
