@@ -17,7 +17,7 @@
 	"score-compilererr": "לא ניתן להדר קובץ קלט של LilyPond:\n$1",
 	"score-convertoverrideaudio": "לא ניתן לבקש תיצוג שמע ולציין override_audio באותו זמן.",
 	"score-deprecated-category": "דפים שמשתמשים בתכונות תווים מיושנות",
-	"score-deprecated-category-desc": "הדפים האלה משתמשים באפשרויות של ההרחבה Score שהוכרזו בתור מיושנות (deprecated). אלה האפשרויות: \"override_audio\"‏, \"override_ogg\", ו־\"override_midi\".",
+	"score-deprecated-category-desc": "הדפים האלה משתמשים באפשרויות של ההרחבה Score שהוכרזו בתור מיושנות. אלה האפשרויות: \"override_audio\"‏, \"override_ogg\", ו־\"override_midi\".",
 	"score-desc": "הוספת תג להצגת תווים מוזיקליים באמצעות LilyPond",
 	"score-download-midi-file": "הורדת קובץ MIDI",
 	"score-download-source-file": "הורדת קובץ LilyPond",
