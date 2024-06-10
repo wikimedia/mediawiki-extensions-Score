@@ -113,7 +113,10 @@
 	},
 	"HookHandlers": {
 		"main": {
-			"class": "MediaWiki\\Extension\\Score\\Hooks"
+			"class": "MediaWiki\\Extension\\Score\\Hooks",
+			"services": [
+				"MainConfig"
+			]
 		}
 	},
 	"config": {
