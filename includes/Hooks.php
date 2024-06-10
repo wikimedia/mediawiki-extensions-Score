@@ -6,7 +6,7 @@ use MediaWiki\Config\Config;
 use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\Hook\SoftwareInfoHook;
 use MediaWiki\MainConfigNames;
-use Parser;
+use MediaWiki\Parser\Parser;
 use ValueFormatters\FormatterOptions;
 use Wikibase\Repo\Rdf\DedupeBag;
 use Wikibase\Repo\Rdf\EntityMentionListener;
