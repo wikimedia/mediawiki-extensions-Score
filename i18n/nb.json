@@ -46,7 +46,7 @@
 	"score-soundfontnotexists": "Soundfont ble ikke funnet: $1 finnes ikke. Sjekk at <code>$wgScoreSoundfont</code> er satt riktig.",
 	"score-trimerr": "Bildet kunne ikke beskjæres:\n$1\nHvis problemet vedvarer kan du prøve å sette <code>$wgScoreTrim=false</code>.",
 	"score-use-category": "Sider som bruker Score",
-	"score-use-category-desc": "Disse sider bruker tillegget [[:mw:Extension:Score|Score]].",
+	"score-use-category-desc": "Disse sidene bruker utvidelsen [https://www.mediawiki.org/wiki/Extension:Score Score].",
 	"score-versionerr": "Klarte ikke å finne LilyPond-versjon:\n$1",
 	"score-visualeditor-mwscoredialog-audio": "Inkluder en lydfil (autogenerert som standard)",
 	"score-visualeditor-mwscoredialog-card-advanced": "Avansert",
