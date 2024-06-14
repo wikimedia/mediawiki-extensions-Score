@@ -68,7 +68,7 @@ ve.ui.MWScoreDialog.prototype.initialize = function () {
 		]
 	} );
 
-	var languageItems = [];
+	const languageItems = [];
 	// Note Language
 	this.noteLanguageDropdown = new OO.ui.DropdownWidget();
 	languageItems.push(
@@ -78,8 +78,8 @@ ve.ui.MWScoreDialog.prototype.initialize = function () {
 		} )
 	);
 
-	var languages = mw.config.get( 'wgScoreNoteLanguages' );
-	for ( var language in languages ) {
+	const languages = mw.config.get( 'wgScoreNoteLanguages' );
+	for ( const language in languages ) {
 		languageItems.push( new OO.ui.MenuOptionWidget( {
 			data: language,
 			label: languages[ language ]
@@ -105,42 +105,42 @@ ve.ui.MWScoreDialog.prototype.initialize = function () {
 	} );
 
 	// Field layouts
-	var basicFieldset = new OO.ui.FieldsetLayout();
-	var inputField = new OO.ui.FieldLayout( this.input, {
+	const basicFieldset = new OO.ui.FieldsetLayout();
+	const inputField = new OO.ui.FieldLayout( this.input, {
 		align: 'top',
 		label: ve.msg( 'score-visualeditor-mwscoredialog-title' )
 	} );
-	var langField = new OO.ui.FieldLayout( this.langSelect, {
+	const langField = new OO.ui.FieldLayout( this.langSelect, {
 		align: 'left',
 		label: ve.msg( 'score-visualeditor-mwscoredialog-lang' )
 	} );
 	basicFieldset.addItems( [ inputField, langField ] );
 
-	var advancedFieldset = new OO.ui.FieldsetLayout( {
+	const advancedFieldset = new OO.ui.FieldsetLayout( {
 		label: ve.msg( 'score-visualeditor-mwscoredialog-card-advanced' )
 	} );
-	var rawField = new OO.ui.FieldLayout( this.rawCheckbox, {
+	const rawField = new OO.ui.FieldLayout( this.rawCheckbox, {
 		align: 'left',
 		label: ve.msg( 'score-visualeditor-mwscoredialog-raw' )
 	} );
-	var noteLanguageField = new OO.ui.FieldLayout( this.noteLanguageDropdown, {
+	const noteLanguageField = new OO.ui.FieldLayout( this.noteLanguageDropdown, {
 		align: 'left',
 		label: ve.msg( 'score-visualeditor-mwscoredialog-notelanguage' )
 	} );
 	advancedFieldset.addItems( [ rawField, noteLanguageField ] );
 
-	var audioFieldset = new OO.ui.FieldsetLayout( {
+	const audioFieldset = new OO.ui.FieldsetLayout( {
 		label: ve.msg( 'score-visualeditor-mwscoredialog-card-audio' )
 	} );
-	var audioField = new OO.ui.FieldLayout( this.audioCheckbox, {
+	const audioField = new OO.ui.FieldLayout( this.audioCheckbox, {
 		align: 'left',
 		label: ve.msg( 'score-visualeditor-mwscoredialog-audio' )
 	} );
-	var overrideAudioField = new OO.ui.FieldLayout( this.overrideAudioInput, {
+	const overrideAudioField = new OO.ui.FieldLayout( this.overrideAudioInput, {
 		align: 'left',
 		label: ve.msg( 'score-visualeditor-mwscoredialog-override-audio' )
 	} );
-	var overrideMidiField = new OO.ui.FieldLayout( this.overrideMidiInput, {
+	const overrideMidiField = new OO.ui.FieldLayout( this.overrideMidiInput, {
 		align: 'left',
 		label: ve.msg( 'score-visualeditor-mwscoredialog-override-midi' )
 	} );
@@ -166,7 +166,7 @@ ve.ui.MWScoreDialog.prototype.initialize = function () {
 ve.ui.MWScoreDialog.prototype.getSetupProcess = function ( data ) {
 	return ve.ui.MWScoreDialog.super.prototype.getSetupProcess.call( this, data )
 		.next( function () {
-			var attributes = this.selectedNode ? this.selectedNode.getAttribute( 'mw' ).attrs : {},
+			const attributes = this.selectedNode ? this.selectedNode.getAttribute( 'mw' ).attrs : {},
 				lang = attributes.lang || 'lilypond',
 				noteLanguage = attributes[ 'note-language' ] || null,
 				raw = attributes.raw !== undefined,
@@ -235,17 +235,17 @@ ve.ui.MWScoreDialog.prototype.updateMwData = function ( mwData ) {
 	ve.ui.MWScoreDialog.super.prototype.updateMwData.call( this, mwData );
 
 	// Get data from dialog
-	var lang = this.langSelect.findSelectedItem().getData();
-	var noteLanguage =
+	const lang = this.langSelect.findSelectedItem().getData();
+	const noteLanguage =
 		this.noteLanguageDropdown.getMenu().findSelectedItem().getData() || undefined;
-	var raw = !this.rawCheckbox.isDisabled() && this.rawCheckbox.isSelected();
+	const raw = !this.rawCheckbox.isDisabled() && this.rawCheckbox.isSelected();
 	// audioCheckbox is selected if an audio file is being included, whether that file
 	// is being auto-generated or whether an existing file is being used; but the "audio"
 	// attribute is only set to 1 if an audio file is being included AND that file is
 	// being auto-generated.
-	var audio = this.audioCheckbox.isSelected() && this.overrideAudioInput.getValue() === '';
-	var overrideAudio = !this.overrideAudioInput.isDisabled() && this.overrideAudioInput.getValue();
-	var overrideMidi = !this.overrideMidiInput.isDisabled() && this.overrideMidiInput.getValue();
+	const audio = this.audioCheckbox.isSelected() && this.overrideAudioInput.getValue() === '';
+	const overrideAudio = !this.overrideAudioInput.isDisabled() && this.overrideAudioInput.getValue();
+	const overrideMidi = !this.overrideMidiInput.isDisabled() && this.overrideMidiInput.getValue();
 
 	// Update attributes
 	mwData.attrs.lang = lang;
@@ -266,11 +266,11 @@ ve.ui.MWScoreDialog.prototype.updateMwData = function ( mwData ) {
  * Handle choose events from the language select widget
  */
 ve.ui.MWScoreDialog.prototype.onLangSelectChoose = function () {
-	var lang = this.langSelect.findSelectedItem().getData();
+	const lang = this.langSelect.findSelectedItem().getData();
 	// Disable the checkbox if the language is not LilyPond
 	this.rawCheckbox.setDisabled( this.isReadOnly() || lang !== 'lilypond' );
 
-	var langMap = {
+	const langMap = {
 		lilypond: 'latex',
 		ABC: 'abc'
 	};

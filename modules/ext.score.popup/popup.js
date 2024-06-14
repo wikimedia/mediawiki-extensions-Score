@@ -1,7 +1,7 @@
-var popupShown = false;
+let popupShown = false;
 
 function showPopup( $score ) {
-	var midi = $score.data( 'midi' ),
+	const midi = $score.data( 'midi' ),
 		source = $score.data( 'source' );
 
 	// Don't show popup when there is no midi or source.
@@ -9,7 +9,7 @@ function showPopup( $score ) {
 		return;
 	}
 
-	var $popup = $( '<div>' ).addClass( 'mw-ext-score-popup' );
+	const $popup = $( '<div>' ).addClass( 'mw-ext-score-popup' );
 
 	if ( midi !== undefined ) {
 		$popup.append( $( '<a>' )
@@ -27,7 +27,7 @@ function showPopup( $score ) {
 
 	$score.append( $popup );
 
-	setTimeout( function () {
+	setTimeout( () => {
 		$popup.addClass( 'mw-ext-score-popup-open' );
 	} );
 
@@ -37,12 +37,12 @@ function showPopup( $score ) {
 
 function hidePopups( callback ) {
 	// eslint-disable-next-line no-jquery/no-global-selector
-	var $popup = $( '.mw-ext-score-popup' ),
+	const $popup = $( '.mw-ext-score-popup' ),
 		$score = $popup.closest( '.mw-ext-score' );
 
 	$popup.removeClass( 'mw-ext-score-popup-open' );
 
-	setTimeout( function () {
+	setTimeout( () => {
 		$score.children( 'img' ).removeAttr( 'aria-describedby' );
 		$popup.remove();
 		popupShown = false;
@@ -53,8 +53,8 @@ function hidePopups( callback ) {
 	}, 100 );
 }
 
-$( document ).on( 'click', '.mw-ext-score img', function ( e ) {
-	var $target = $( e.target ),
+$( document ).on( 'click', '.mw-ext-score img', ( e ) => {
+	const $target = $( e.target ),
 		$score = $target.parent();
 
 	e.stopPropagation();
@@ -63,9 +63,9 @@ $( document ).on( 'click', '.mw-ext-score img', function ( e ) {
 	// then show new popup immediately.
 	if ( popupShown ) {
 		// eslint-disable-next-line no-jquery/no-global-selector
-		var sameScore = $score.is( $( '.mw-ext-score-popup' ).parent() );
+		const sameScore = $score.is( $( '.mw-ext-score-popup' ).parent() );
 
-		hidePopups( function () {
+		hidePopups( () => {
 			if ( !sameScore ) {
 				showPopup( $score );
 			}
@@ -77,8 +77,8 @@ $( document ).on( 'click', '.mw-ext-score img', function ( e ) {
 	showPopup( $score );
 } );
 
-$( document ).on( 'click', function ( e ) {
-	var $target = $( e.target );
+$( document ).on( 'click', ( e ) => {
+	const $target = $( e.target );
 
 	if ( !$target.closest( '.mw-ext-score-popup' ).length ) {
 		// Only hide popup when clicked outside of it.
