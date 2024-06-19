@@ -3,7 +3,8 @@
 		"authors": [
 			"Les Meloures",
 			"Robby",
-			"Soued031"
+			"Soued031",
+			"Volvox"
 		]
 	},
 	"score-audioconversionerr": "MIDI konnt net an MP3 ëmgewandelt ginn:\n$1",
@@ -13,7 +14,7 @@
 	"score-nocontent": "De Fichier $1 konnt net vum Server geluede ginn.",
 	"score-page": "Säit $1",
 	"score-readerr": "De Fichier $1 konnt net gelies ginn.",
-	"score-use-category": "Säiten déi e Benotzer-Score benotzen",
+	"score-use-category": "Säiten, déi Score benotzen",
 	"score-use-category-desc": "Dës Säite benotzen d'Erweiderung [[:mw:Extension:Score|Score]].",
 	"score-visualeditor-mwscoredialog-audio": "En Audio-Fichier abannen (am Standard automatesch generéiert)",
 	"score-visualeditor-mwscoredialog-card-audio": "Audio",
