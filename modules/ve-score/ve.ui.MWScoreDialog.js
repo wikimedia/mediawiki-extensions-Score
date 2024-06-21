@@ -244,8 +244,10 @@ ve.ui.MWScoreDialog.prototype.updateMwData = function ( mwData ) {
 	// attribute is only set to 1 if an audio file is being included AND that file is
 	// being auto-generated.
 	const audio = this.audioCheckbox.isSelected() && this.overrideAudioInput.getValue() === '';
-	const overrideAudio = !this.overrideAudioInput.isDisabled() && this.overrideAudioInput.getValue();
-	const overrideMidi = !this.overrideMidiInput.isDisabled() && this.overrideMidiInput.getValue();
+	const overrideAudio =
+		!this.overrideAudioInput.isDisabled() && this.overrideAudioInput.getValue();
+	const overrideMidi =
+		!this.overrideMidiInput.isDisabled() && this.overrideMidiInput.getValue();
 
 	// Update attributes
 	mwData.attrs.lang = lang;
