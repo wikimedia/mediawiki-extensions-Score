@@ -3,6 +3,7 @@
 		"authors": [
 			"Crt",
 			"Hunsvotti",
+			"Samoasambia",
 			"Stryn",
 			"Valtlai",
 			"Valtlait",
@@ -31,7 +32,8 @@
 	"score-visualeditor-mwscoredialog-card-audio": "Ääni",
 	"score-visualeditor-mwscoredialog-lang": "Kieli",
 	"score-visualeditor-mwscoredialog-notelanguage": "Nuotinnuskieli",
-	"score-visualeditor-mwscoredialog-override-audio": "Käytä olemassa olevaa ääntitiedostoa",
+	"score-visualeditor-mwscoredialog-override-audio": "Käytä olemassa olevaa äänitiedostoa",
+	"score-visualeditor-mwscoredialog-override-audio-placeholder": "Olemassa olevan äänitiedoston nimi",
 	"score-visualeditor-mwscoredialog-override-midi": "Käytä olemassa olevaa MIDI-tiedostoa",
 	"score-visualeditor-mwscoredialog-override-midi-placeholder": "Olemassa olevan MIDI-tiedoston nimi",
 	"score-visualeditor-mwscoredialog-raw": "Tämä on täydellinen LilyPond-tiedosto",
