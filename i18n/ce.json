@@ -5,6 +5,8 @@
 		]
 	},
 	"score-desc": "Музыкан LilyPond партитур кечян тег тӀетуху",
+	"score-download-midi-file": "Схьаэца MIDI-файл",
+	"score-download-source-file": "Схьаэца LilyPond-файл",
 	"score-error-category": "Рендеринган партитурийн гӀалаташ долу агӀонаш",
 	"score-error-category-desc": "Партитурийн визуализаци ечу хенахь гӀалат даьлла.",
 	"score-versionerr": "LilyPond верси схьаэца аьтто ца баьлла: LilyPond:\n$1",
