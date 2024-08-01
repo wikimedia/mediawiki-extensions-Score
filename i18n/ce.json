@@ -5,11 +5,18 @@
 		]
 	},
 	"score-desc": "Музыкан LilyPond партитур кечян тег тӀетуху",
+	"score-download-midi-file": "Схьаэца MIDI-файл",
+	"score-download-source-file": "Схьаэца LilyPond-файл",
 	"score-error-category": "Рендеринган партитурийн гӀалаташ долу агӀонаш",
 	"score-error-category-desc": "Партитурийн визуализаци ечу хенахь гӀалат даьлла.",
+	"score-versionerr": "LilyPond верси схьаэца аьтто ца баьлла: LilyPond:\n$1",
 	"score-visualeditor-mwscoredialog-card-advanced": "Кхин тӀе",
 	"score-visualeditor-mwscoredialog-card-audio": "Аудио",
 	"score-visualeditor-mwscoredialog-lang": "Мотт",
+	"score-visualeditor-mwscoredialog-notelanguage": "ДӀайаздаран мотт",
+	"score-visualeditor-mwscoredialog-override-audio": "Йолуш йолу аудиофайл лелайе",
+	"score-visualeditor-mwscoredialog-override-midi": "Йолуш йолу MIDI файл лелайе",
+	"score-visualeditor-mwscoredialog-override-midi-placeholder": "Йолуш йолчу MIDI файлан цӀе",
 	"score-visualeditor-mwscoredialog-title": "Нотийн дӀайаздар",
 	"datatypes-type-musical-notation": "Нотийн дӀайаздар",
 	"wikibase-listdatatypes-musical-notation-head": "Нотийн дӀайаздар"
