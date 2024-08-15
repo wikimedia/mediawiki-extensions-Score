@@ -52,7 +52,7 @@
 	"score-scripterr": "Kan extern script niet uitvoeren: $1 is afgesloten met statuscode $2\n$3",
 	"score-soundfontnotexists": "Soundfont kon niet worden gevonden: $1 bestaat niet. Zorg dat <code>$wgScoreSoundfont</code> juist is ingesteld.",
 	"score-trimerr": "De afbeelding kon niet bijgesneden worden:\n$1\nStel de volgende waarde in als dit probleem blijft bestaan: <code>$wgScoreTrim=false</code>.",
-	"score-use-category": "Pagina's die bladmuziek gebruiken",
+	"score-use-category": "Pagina's die de uitbreiding Score gebruiken",
 	"score-use-category-desc": "Deze pagina’s gebruiken de uitbreiding [https://www.mediawiki.org/wiki/Extension:Score Score].",
 	"score-versionerr": "Het was niet mogelijk de LiliPond-versie te achterhalen:\n$1",
 	"score-visualeditor-mwscoredialog-audio": "Een audiobestand bijsluiten (standaard automatisch gegenereerd)",
