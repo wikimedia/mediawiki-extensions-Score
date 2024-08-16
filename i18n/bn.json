@@ -28,6 +28,7 @@
 	"score-pregreplaceerr": "PCRE রেগুলার এক্সপ্রেশন প্রতিস্থাপন ব্যর্থ হয়েছে",
 	"score-readerr": "$1 ফাইল পড়তে অক্ষম।",
 	"score-trimerr": "চিত্র ছাঁটা যায়নি:\n$1\nযদি এই সমস্যাটি থেকে যায় তাহলে <code>$wgScoreTrim=false</code> নির্ধারণ করুন।",
+	"score-use-category": "স্কোর এক্সটেনশন ব্যবহার করা পাতা",
 	"score-versionerr": "LilyPond সংস্করণ লাভ করা যায়নি:\n$1",
 	"score-visualeditor-mwscoredialog-audio": "একটি অডিও ফাইল অন্তর্ভুক্ত করুন (ডিফল্ট অনুযায়ী স্বয়ংক্রিয়ভাবে উত্পন্ন)",
 	"score-visualeditor-mwscoredialog-card-advanced": "উচ্চতর",
