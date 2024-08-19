@@ -52,7 +52,7 @@
 	"score-scripterr": "リモートスクリプトの実行に失敗しました: $1 はステータスコード$2を示して終了しています\n$3",
 	"score-soundfontnotexists": "Soundfont が見つかりません: $1 がありません。.<code>$wgScoreSoundfont</code> の設定が正しいかご確認ください。",
 	"score-trimerr": "画像をトリミングできませんでした:\n$1\nこの問題が続く場合は、<code>$wgScoreTrim=false</code> を設定してください。",
-	"score-use-category": "楽譜を使用しているページ",
+	"score-use-category": "Score拡張機能を使用しているページ",
 	"score-versionerr": "LilyPond のバージョンを取得できません:\n$1",
 	"score-visualeditor-mwscoredialog-audio": "音声ファイルを含む (既定では自動生成)",
 	"score-visualeditor-mwscoredialog-card-advanced": "高等",

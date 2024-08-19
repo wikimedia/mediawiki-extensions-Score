@@ -46,7 +46,7 @@
 	"score-scripterr": "Spuštění vzdáleného skriptu se nezdařilo: $1 byl ukončen se stavovým kódem $2\n$3",
 	"score-soundfontnotexists": "Nebyl nalezen Soundfont: $1 neexistuje. Ověřte, že máte správně nastaveno <code>$wgScoreSoundfont</code>.",
 	"score-trimerr": "Obrázek se nepodařilo oříznout:\n$1\nPokud problém přetrvává, nastavte <code>$wgScoreTrim=false</code>.",
-	"score-use-category": "Stránky s partiturami",
+	"score-use-category": "Stránky používající rozšíření Score",
 	"score-use-category-desc": "Tyto stránky používají rozšíření [[:mw:Extension:Score|Score]].",
 	"score-versionerr": "Nepodařilo se zjistit verzi programu LilyPond:\n$1",
 	"score-visualeditor-mwscoredialog-audio": "Zahrnout zvukový soubor (implicitně vygenerovaný automaticky)",
