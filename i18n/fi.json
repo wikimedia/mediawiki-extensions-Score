@@ -27,7 +27,7 @@
 	"score-noimages": "Nuottikuvia ei syntynyt. Tarkista, että lähdekoodisi on oikein.",
 	"score-page": "Sivu $1",
 	"score-readerr": "Tiedostoa $1 ei voitu lukea.",
-	"score-use-category": "Nuottikirjoitusta käyttävät sivut",
+	"score-use-category": "Score-laajennusta käyttävät sivut",
 	"score-use-category-desc": "Nämä sivut käyttävät [https://www.mediawiki.org/wiki/Extension:Score Score]-laajennusta.",
 	"score-visualeditor-mwscoredialog-audio": "Sisällytä äänitiedosto (luodaan oletuksena automaattisesti)",
 	"score-visualeditor-mwscoredialog-card-advanced": "Edistynyt",

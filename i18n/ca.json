@@ -12,7 +12,7 @@
 	"score-download-source-file": "Baixa el fitxer de Lilypond",
 	"score-error-category": "Pàgines amb errors de renderització de partitures",
 	"score-lamenotexecutable": "No s’ha pogut executar el LAME: $1 no és un fitxer executable. Assegureu-vos que <code>$wgScoreLame</code> s’hagi configurat adequadament.",
-	"score-use-category": "Pàgines que usen Score",
+	"score-use-category": "Pàgines que usen l'extensió Score",
 	"score-visualeditor-mwscoredialog-audio": "Inclou un fitxer d'àudio (generat automàticament per defecte)",
 	"score-visualeditor-mwscoredialog-card-advanced": "Avançat",
 	"score-visualeditor-mwscoredialog-card-audio": "Àudio",
