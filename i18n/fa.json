@@ -42,7 +42,7 @@
 	"score-readerr": "قادر به خواندن پوشهٔ $1 نیست.",
 	"score-soundfontnotexists": "Soundfont یافت نشد: $1 وجود ندارد. مطمئن شوید <code>$wgScoreSoundfont</code> به درستی تنظیم شده است.",
 	"score-trimerr": "تصویر نتوانست کوچک شود:\n$1\nتنظیم <code>$wgScoreTrim=false</code> اگر این مشکل ادامه یابد.",
-	"score-use-category": "صفحه‌هایی که از برچسب نت‌نویسی استفاده می‌کنند",
+	"score-use-category": "صفحه‌هایی که از افزونه نت‌نویسی استفاده می‌کنند",
 	"score-versionerr": "قادر به به دست آوردن نسخه لیلی‌پوند نیست:\n$1",
 	"score-visualeditor-mwscoredialog-audio": "همراه‌کردن با یک پرونده صوتی (به شکل پیش‌فرض خودکار ایجاد می‌شود)",
 	"score-visualeditor-mwscoredialog-card-advanced": "پیشرفته",
