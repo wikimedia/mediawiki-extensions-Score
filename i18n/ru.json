@@ -9,7 +9,8 @@
 			"Ice bulldog",
 			"Kaganer",
 			"Okras",
-			"Pacha Tchernof"
+			"Pacha Tchernof",
+			"Stjn"
 		]
 	},
 	"score-abc2lynotexecutable": "Не удалось запустить перекодировку из ABC в LilyPond: $1 — не исполняемый файл. Убедитесь, что <code>$wgScoreAbc2Ly</code> установлен правильно.",
@@ -40,6 +41,7 @@
 	"score-pregreplaceerr": "Замена регулярных выражений PCRE не удалось",
 	"score-readerr": "Не удаётся прочитать файл $1.",
 	"score-trimerr": "Изображение не может быть обрезано:\n$1\nУстановите <code>$wgScoreTrim=false</code>, если эта проблема сохранится.",
+	"score-use-category": "Страницы, использующие расширение Score",
 	"score-versionerr": "Не удаётся получить версию LilyPond:\n$1",
 	"score-visualeditor-mwscoredialog-card-advanced": "Дополнительно",
 	"score-visualeditor-mwscoredialog-card-audio": "Аудио",
