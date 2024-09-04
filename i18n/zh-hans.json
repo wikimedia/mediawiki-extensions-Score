@@ -58,7 +58,7 @@
 	"score-scripterr": "无法运行远程脚本：$1以状态码$2退出了\n$3",
 	"score-soundfontnotexists": "找不到Soundfont：$1不存在。请确保<code>$wgScoreSoundfont</code>正确设置。",
 	"score-trimerr": "图像不能被剪裁：\n$1\n如果此问题仍然存在，设置 <code>$wgScoreTrim=false</code>。",
-	"score-use-category": "使用score的页面",
+	"score-use-category": "使用Score扩展的页面",
 	"score-use-category-desc": "这些页面使用了[https://www.mediawiki.org/wiki/Extension:Score Score]扩展。",
 	"score-versionerr": "无法获取 LilyPond 版本：\n$1",
 	"score-visualeditor-mwscoredialog-audio": "包含一个音频文件（默认自动生成）",
