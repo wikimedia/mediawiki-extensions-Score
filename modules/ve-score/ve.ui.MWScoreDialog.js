@@ -205,6 +205,14 @@ ve.ui.MWScoreDialog.prototype.getSetupProcess = function ( data ) {
 			this.rawCheckbox.connect( this, { change: 'toggleDisableNoteLanguageDropdown' } );
 			this.langSelect.connect( this, { choose: 'onLangSelectChoose' } );
 			this.audioCheckbox.connect( this, { change: 'toggleDisableOverrideAudioInput' } );
+		}, this )
+		.next( function () {
+			if ( this.originalMwData === null ) {
+				const mwData = this.getNewElement().attributes.mw;
+				this.updateMwData( mwData );
+				this.originalMwData = mwData;
+				this.updateActions();
+			}
 		}, this );
 };
 
