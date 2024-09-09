@@ -43,7 +43,7 @@
 	"score-scripterr": "Impossibile executar le script remote: $1 ha terminate con le codice de stato $2.\n$3",
 	"score-soundfontnotexists": "Soundfont non poteva esser trovate: $1 non existe. Assecura te que <code>$wgScoreSoundfont</code> es definite correctemente.",
 	"score-trimerr": "Le imagine non poteva esser taliate:\n$1\nDefini <code>$wgScoreTrim=false</code> si iste problema persiste.",
-	"score-use-category": "Paginas con partituras",
+	"score-use-category": "Paginas que usa le extension Score",
 	"score-use-category-desc": "Iste paginas usa le extension [https://www.mediawiki.org/wiki/Extension:Score Score] (Partitura).",
 	"score-versionerr": "Impossibile obtener le version de LilyPond:\n$1",
 	"score-visualeditor-mwscoredialog-audio": "Includer un file audio (generate automaticamente per predefinition)",
