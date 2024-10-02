@@ -258,7 +258,7 @@ ve.ui.MWScoreDialog.prototype.updateMwData = function ( mwData ) {
 		!this.overrideMidiInput.isDisabled() && this.overrideMidiInput.getValue();
 
 	// Update attributes
-	mwData.attrs.lang = lang;
+	mwData.attrs.lang = lang === 'lilypond' ? undefined : lang;
 	mwData.attrs[ 'note-language' ] = raw ? undefined : noteLanguage;
 	mwData.attrs.raw = raw ? '1' : undefined;
 	mwData.attrs.audio = audio ? '1' : undefined;
