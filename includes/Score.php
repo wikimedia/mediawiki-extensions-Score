@@ -26,19 +26,19 @@
 namespace MediaWiki\Extension\Score;
 
 use Exception;
-use FileBackend;
-use FormatJson;
-use FSFileBackend;
 use MediaWiki\Html\Html;
+use MediaWiki\Json\FormatJson;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MediaWiki\Parser\Parser;
+use MediaWiki\Parser\PPFrame;
 use MediaWiki\Title\Title;
 use MediaWiki\WikiMap\WikiMap;
 use NullLockManager;
-use PPFrame;
 use Shellbox\Command\BoxedCommand;
+use Wikimedia\FileBackend\FileBackend;
+use Wikimedia\FileBackend\FSFileBackend;
 use Wikimedia\ScopedCallback;
 
 /**
