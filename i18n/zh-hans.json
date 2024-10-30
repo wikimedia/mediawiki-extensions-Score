@@ -15,7 +15,9 @@
 			"Xiplus",
 			"Yfdyh000",
 			"Anterdc99",
-			"沈澄心"
+			"沈澄心",
+			"GuoPC",
+			"TimWu007"
 		]
 	},
 	"score-abc2lynotexecutable": "无法运行ABC转LilyPond转换器：$1不是可执行文件。请确认<code>$wgScoreAbc2Ly</code>设置正确。",
