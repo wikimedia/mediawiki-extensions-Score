@@ -3,7 +3,8 @@
 		"authors": [
 			"Daud I.F. Argana",
 			"William Surya Permana",
-			"Agam Riyandana"
+			"Agam Riyandana",
+			"Rtnf"
 		]
 	},
 	"score-abc2lynotexecutable": "Konverter ABC ke LilyPond tidak dapat dieksekusi: $1 bukan merupakan berkas yang dapat dieksekusi. Pastikan <code>$wgScoreAbc2Ly</code> diatur dengan benar.",

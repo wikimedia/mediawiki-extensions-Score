@@ -10,7 +10,8 @@
 			"Macofe",
 			"Mynor Archila",
 			"Ryo567",
-			"Ninovolador"
+			"Ninovolador",
+			"-jem-"
 		]
 	},
 	"score-abc2lynotexecutable": "No se pudo ejecutar el conversor ABC a LilyPond: \"$1\" no es un archivo ejecutable. Asegúrate de que <code>$wgScoreAbc2Ly</code> esté definido correctamente.",

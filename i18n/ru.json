@@ -9,7 +9,8 @@
 			"Ice bulldog",
 			"Kaganer",
 			"Okras",
-			"Pacha Tchernof"
+			"Pacha Tchernof",
+			"Stjn"
 		]
 	},
 	"score-abc2lynotexecutable": "Не удалось запустить перекодировку из ABC в LilyPond: $1 — не исполняемый файл. Убедитесь, что <code>$wgScoreAbc2Ly</code> установлен правильно.",
