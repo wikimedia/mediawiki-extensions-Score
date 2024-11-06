@@ -48,7 +48,7 @@
 	"score-soundfontnotexists": "تعذر العثور على Soundfont: $1 غير موجود; تأكد من تعيين <code>$wgScoreSoundfont</code> بشكل صحيح.",
 	"score-trimerr": "تعذر قطع الصورة:\n$1\nعين <code>$wgScoreTrim=false</code> إذا استمرت هذه المشكلة.",
 	"score-use-category": "الصفحات التي تستخدم النقاط",
-	"score-use-category-desc": "تستخدم هذه الصفحات الامتداد [[: mw: Extension: Score | Score]].",
+	"score-use-category-desc": "تستخدم هذه الصفحات امتداد [https://www.mediawiki.org/wiki/Extension:Score Score].",
 	"score-versionerr": "غير قادر على الحصول على إصدار LilyPond:\n$1",
 	"score-visualeditor-mwscoredialog-audio": "تضمين ملف صوتي (يتم إنشاؤه آليا بشكل افتراضي)",
 	"score-visualeditor-mwscoredialog-card-advanced": "متقدمة",
