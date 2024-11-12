@@ -16,7 +16,8 @@
 			"Thibaut120094",
 			"Urhixidur",
 			"Verdy p",
-			"Wladek92"
+			"Wladek92",
+			"Mahabarata"
 		]
 	},
 	"score-abc2lynotexecutable": "Le convertisseur ABC vers LilyPond n'a pas pu être exécuté: $1 n'est pas un fichier exécutable. Assurez-vous que <code>$wgScoreAbc2Ly</code> est défini correctement.",
@@ -59,7 +60,7 @@
 	"score-soundfontnotexists": "Soundfont n’a pas pu être trouvé : $1 n’existe pas. Veuillez vérifier que <code>$wgScoreSoundfont</code> est initialisé correctement.",
 	"score-trimerr": "L’image n’a pas pu être rognée :\n$1\nParamétrez <code>$wgScoreTrim=false</code> si ce problème persiste.",
 	"score-use-category": "Pages utilisant l'extension Score",
-	"score-use-category-desc": "Ces pages utilisent l’extension [[:mw:Extension:Score|Score]].",
+	"score-use-category-desc": "Ces pages utilisent l'extension [https://www.mediawiki.org/wiki/Extension:Score Score].",
 	"score-versionerr": "Impossible d'obtenir la version de LilyPond:\n$1",
 	"score-visualeditor-mwscoredialog-audio": "Inclure un fichier audio (généré automatiquement par défaut)",
 	"score-visualeditor-mwscoredialog-card-advanced": "Avancé",
