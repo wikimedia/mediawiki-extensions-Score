@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Kareyac",
 			"Դավիթ Սարոյան"
 		]
 	},
+	"score-visualeditor-mwscoredialog-lang": "Լեզու",
 	"datatypes-type-musical-notation": "Ձայնանիշ",
 	"wikibase-listdatatypes-musical-notation-head": "Ձայնանիշ"
 }
