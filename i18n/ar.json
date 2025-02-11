@@ -5,7 +5,8 @@
 			"Alshamiri1",
 			"Meno25",
 			"ديفيد",
-			"زكريا"
+			"زكريا",
+			"BAB ZAA"
 		]
 	},
 	"score-abc2lynotexecutable": "تعذر تنفيذ ABC لمحول LilyPond: $1 ليس ملفًا قابلا للتنفيذ; تأكد من تعيين <code>$wgScoreAbc2Ly</code> بشكل صحيح.",
@@ -55,14 +56,14 @@
 	"score-visualeditor-mwscoredialog-card-audio": "صوت",
 	"score-visualeditor-mwscoredialog-lang": "لغة",
 	"score-visualeditor-mwscoredialog-lang-lilypond": "ليلي بوند",
-	"score-visualeditor-mwscoredialog-notelanguage": "لغة ترميز",
+	"score-visualeditor-mwscoredialog-notelanguage": "لغة التدوين",
 	"score-visualeditor-mwscoredialog-override-audio": "استخدم ملفا صوتيا موجودا",
 	"score-visualeditor-mwscoredialog-override-audio-placeholder": "اسم ملف الصوت الموجود",
 	"score-visualeditor-mwscoredialog-override-midi": "استخدم ملف MIDI موجودا",
 	"score-visualeditor-mwscoredialog-override-midi-placeholder": "اسم ملف MIDI موجود",
 	"score-visualeditor-mwscoredialog-raw": "هذا ملف LilyPond كامل",
-	"score-visualeditor-mwscoredialog-title": "علامة موسيقية",
+	"score-visualeditor-mwscoredialog-title": "تدوين موسيقي",
 	"datatypes-type-musical-notation": "تدوين موسيقي",
-	"wikibase-listdatatypes-musical-notation-head": "كتابة موسيقية",
+	"wikibase-listdatatypes-musical-notation-head": "تدوين موسيقي",
 	"wikibase-listdatatypes-musical-notation-body": "مجال بيانات حرفي لمقطوعة موسيقية مكتوبة بأسلوب LilyPond."
 }
