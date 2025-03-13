@@ -266,7 +266,7 @@ class Score {
 	/**
 	 * Callback for Parser's hook on 'score' tags. Renders the score code.
 	 *
-	 * @param string $code Score code.
+	 * @param string|null $code Score code.
 	 * @param array $args Array of score tag attributes.
 	 * @param Parser $parser
 	 * @param PPFrame $frame Expansion frame, not used by this extension.
@@ -281,7 +281,7 @@ class Score {
 	/**
 	 * Renders the score code (LilyPond, ABC, etc.) in a <score>…</score> tag.
 	 *
-	 * @param string $code Score code.
+	 * @param string|null $code Score code.
 	 * @param array $args Array of score tag attributes.
 	 * @param Parser|null $parser Parser must be set when called during a wiki page parse.
 	 *
@@ -290,6 +290,11 @@ class Score {
 	 */
 	public static function renderScore( $code, array $args, ?Parser $parser = null ) {
 		global $wgTmpDirectory;
+
+		// T388821
+		if ( $code === null ) {
+			return '';
+		}
 
 		try {
 			$baseUrl = self::getBaseUrl();
