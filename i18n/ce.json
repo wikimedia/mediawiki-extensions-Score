@@ -34,6 +34,7 @@
 	"score-pregreplaceerr": "PCRE рогӀера алар хийца аьтто ца баьлла",
 	"score-readerr": "$1 файл йеша йиш йац.",
 	"score-trimerr": "Сурт хадо йиш йац:\n$1\n<code>$wgScoreTrim=false</code> хӀоттаде, нагахь санна и проблема лаьтташ йелахь.",
+	"score-use-category": "Score шордар лелош йолу агӀонаш",
 	"score-versionerr": "LilyPond верси схьаэца аьтто ца баьлла: LilyPond:\n$1",
 	"score-visualeditor-mwscoredialog-card-advanced": "Кхин тӀе",
 	"score-visualeditor-mwscoredialog-card-audio": "Аудио",
