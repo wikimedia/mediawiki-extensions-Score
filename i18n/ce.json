@@ -8,6 +8,7 @@
 	"score-abcconversionerr": "ABC файл LilyPond формате йерзо йиш йац:\n$1",
 	"score-audioconversionerr": "MIDI - MP3 хийца аьтто бац:\n$1",
 	"score-audiooverridenotfound": "Override_audio гӀоьнца билгалйаьккхина йолу \"<nowiki>$1</nowiki>\" файл йац.",
+	"score-audio-alt": "Хьан браузеро ловш дац аудио лакхитар. Хьан йиш йу $1.",
 	"score-audio-alt-link": "аудиофайл схьаэца",
 	"score-backend-error": "Кхоьллина файлаш шайн чаккхенан метте копеш йан тарлуш дац:\n$1",
 	"score-compilererr": "Чуйуьллу LilyPond файл хӀотто тарлуш дац:\n$1",
@@ -19,6 +20,8 @@
 	"score-download-source-file": "Схьаэца LilyPond-файл",
 	"score-error-category": "Рендеринган партитурийн гӀалаташ долу агӀонаш",
 	"score-error-category-desc": "Партитурийн визуализаци ечу хенахь гӀалат даьлла.",
+	"score-exec-disabled": "Музыкин партитураш цхьана ханна дӀайаьхна йу.",
+	"score-file-list-error": "Score суьртийн каталог чуьра хаамаш беша аьтто бац.",
 	"score-fallbacknotexecutable": "FluidSynth кхочушйан аьтто ца баьлла: $1 кхочушйан йиш йолу файл йац. <code>$wgScoreFluidsynth</code> нийса дӀахӀоттийна хиларх тешна хила.",
 	"score-gs-error": "Ghostscript лелош гӀалат:\n$1",
 	"score-invalidaudiooverride": "Override_audio гӀоьнца билгалйаьккхина йолу \"<nowiki>$1</nowiki>\" файл нийса йац. Дехар до, файлан цӀе бен билгал ма йаккха,  <nowiki>[[…]]</nowiki> а, \"{{ns:file}}:\" префикс а дӀа а йоккхуш.",
@@ -34,7 +37,9 @@
 	"score-pregreplaceerr": "PCRE рогӀера алар хийца аьтто ца баьлла",
 	"score-readerr": "$1 файл йеша йиш йац.",
 	"score-trimerr": "Сурт хадо йиш йац:\n$1\n<code>$wgScoreTrim=false</code> хӀоттаде, нагахь санна и проблема лаьтташ йелахь.",
+	"score-use-category": "Score шордар лелош йолу агӀонаш",
 	"score-versionerr": "LilyPond верси схьаэца аьтто ца баьлла: LilyPond:\n$1",
+	"score-visualeditor-mwscoredialog-audio": "Аудиофайл йукъайаккха (авто генераци йина стандартан кепара)",
 	"score-visualeditor-mwscoredialog-card-advanced": "Кхин тӀе",
 	"score-visualeditor-mwscoredialog-card-audio": "Аудио",
 	"score-visualeditor-mwscoredialog-lang": "Мотт",
@@ -46,5 +51,6 @@
 	"score-visualeditor-mwscoredialog-raw": "ХӀара йуьззина LilyPond файл йу",
 	"score-visualeditor-mwscoredialog-title": "Нотийн дӀайаздар",
 	"datatypes-type-musical-notation": "Нотийн дӀайаздар",
-	"wikibase-listdatatypes-musical-notation-head": "Нотийн дӀайаздар"
+	"wikibase-listdatatypes-musical-notation-head": "Нотийн дӀайаздар",
+	"wikibase-listdatatypes-musical-notation-body": "LilyPond нотацехь йазйинчу музыкин партитуран литералан хаамийн меттиг."
 }
