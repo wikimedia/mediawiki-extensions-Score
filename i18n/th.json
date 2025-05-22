@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aefgh39622"
+			"Aefgh39622",
+			"Siam2019"
 		]
 	},
 	"score-abc2lynotexecutable": "ไม่สามารถดำเนินการตัวแปลง ABC เป็น LilyPond ได้: $1 ไม่ใช่ไฟล์ปฏิบัติการ ตรวจสอบให้แน่ใจว่า <code>$wgScoreAbc2Ly</code> ถูกกำหนดไว้อย่างถูกต้อง",
@@ -21,6 +22,7 @@
 	"score-pregreplaceerr": "การแทนที่นิพจน์ธรรมดาของ PCRE ล้มเหลว",
 	"score-readerr": "ไม่สามารถอ่านไฟล์ $1",
 	"score-trimerr": "ไม่สามารถตัดแต่งรูปภาพได้:\n$1\nกำหนด <code>$wgScoreTrim=false</code> ถ้าปัญหานี้ยังคงเกิดขึ้น",
+	"score-use-category": "หน้าที่ใช้ส่วนขยาย Score",
 	"score-versionerr": "ไม่สามารถดึงข้อมูลรุ่น LilyPond:\n$1",
 	"score-visualeditor-mwscoredialog-audio": "รวมไฟล์เสียง (สร้างอัตโนมัติโดยปริยาย)",
 	"score-visualeditor-mwscoredialog-card-advanced": "ขั้นสูง",
