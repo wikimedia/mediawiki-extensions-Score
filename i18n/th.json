@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aefgh39622"
+			"Aefgh39622",
+			"Siam2019"
 		]
 	},
 	"score-abc2lynotexecutable": "ไม่สามารถดำเนินการตัวแปลง ABC เป็น LilyPond ได้: $1 ไม่ใช่ไฟล์ปฏิบัติการ ตรวจสอบให้แน่ใจว่า <code>$wgScoreAbc2Ly</code> ถูกกำหนดไว้อย่างถูกต้อง",
