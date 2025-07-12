@@ -47,7 +47,7 @@ class Hooks implements
 	public function onSoftwareInfo( &$software ) {
 		try {
 			$software[ '[https://lilypond.org/ LilyPond]' ] = Score::getLilypondVersion();
-		} catch ( ScoreException $ex ) {
+		} catch ( ScoreException ) {
 			// LilyPond executable can't found
 		}
 	}
