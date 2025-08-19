@@ -53,7 +53,7 @@
 	"score-scripterr": "無法執行遠端腳本：$1 以狀態代碼 $2 退出\n$3",
 	"score-soundfontnotexists": "查無 Soundfont：$1 不存在。請確認 <code>$wgScoreSoundfont</code> 有設定正確。",
 	"score-trimerr": "無法裁切圖片：\n$1\n若問題仍持續存在，請設定 <code>$wgScoreTrim=false</code>。",
-	"score-use-category": "使用score的頁面",
+	"score-use-category": "使用Score擴充功能的頁面",
 	"score-use-category-desc": "這些頁面使用 [https://www.mediawiki.org/wiki/Extension:Score Score] 擴充功能。",
 	"score-versionerr": "無法取得 LilyPond 版本：\n$1",
 	"score-visualeditor-mwscoredialog-audio": "包含一個音訊檔（預設自動產生）",
