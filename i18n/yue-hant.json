@@ -2,9 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"H78c67c",
-			"Winston Sung"
+			"Winston Sung",
+			"Yueman"
 		]
 	},
 	"score-use-category": "有樂譜（score）標籤嘅文章",
-	"score-visualeditor-mwscoredialog-title": "音樂符號"
+	"score-visualeditor-mwscoredialog-title": "音樂符號",
+	"datatypes-type-musical-notation": "音樂符號",
+	"wikibase-listdatatypes-musical-notation-head": "音樂符號"
 }
