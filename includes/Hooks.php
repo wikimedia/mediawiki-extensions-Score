@@ -19,12 +19,9 @@ class Hooks implements
 	ParserFirstCallInitHook,
 	SoftwareInfoHook
 {
-	private Config $config;
-
 	public function __construct(
-		Config $config
+		private readonly Config $config,
 	) {
-		$this->config = $config;
 	}
 
 	/**
