@@ -13,7 +13,7 @@
 	"score-error-category": "Страници с грешки при визуализирането на партитура",
 	"score-error-category-desc": "Грешка при визуализирането на партитурата.",
 	"score-page": "Страница $1",
-	"score-use-category": "Страници с партитура",
+	"score-use-category": "Страници, използващи разширение Score",
 	"score-use-category-desc": "Страниците използват разширението [[:mw:Extension:Score|Score]].",
 	"score-visualeditor-mwscoredialog-card-audio": "Аудио",
 	"score-visualeditor-mwscoredialog-lang": "Език",
