@@ -39,7 +39,7 @@
 	"score-page": "$1 агӀо",
 	"score-pregreplaceerr": "PCRE рогӀера алар хийца аьтто ца баьлла",
 	"score-readerr": "$1 файл йеша йиш йац.",
-	"score-safe-mode": "Кхерамзаллин раж дӀайаьккхина LilyPond чуьра 2.23.12 версица. LilyPond файлаш лело йиш йу лаамза код. Дехар до, хьайн LilyPond дӀахӀоттор сацаде [https://www.mediawiki.org/wiki/Shellbox Shellbox] лелош, $wgScoreSafeMode = харц хӀоттайе.",
+	"score-safe-mode": "Кхерамазаллин раж дӀайаьккхина LilyPond чуьра 2.23.12 версица. LilyPond файлаш лело йиш йу лаамза код. Дехар до, хьайн LilyPond дӀахӀоттор сацаде [https://www.mediawiki.org/wiki/Shellbox Shellbox] лелош, $wgScoreSafeMode = харц хӀоттайе.",
 	"score-scripterr": "ДӀайаьккхина скрипт йолайалийта аьтто бац: $1 статусан кодца чекхдаьккхина $2\n$3",
 	"score-soundfontnotexists": "Soundfont ца карийна: $1 йац. <code>$wgScoreSoundfont</code> нийса хӀоттийна хиларх тешна хила.",
 	"score-trimerr": "Сурт хадо йиш йац:\n$1\n<code>$wgScoreTrim=false</code> хӀоттаде, нагахь санна и проблема лаьтташ йелахь.",
