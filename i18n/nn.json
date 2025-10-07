@@ -7,5 +7,7 @@
 	"score-abc2lynotexecutable": "Kunne ikkje køyra programmet for å konvertera frå ABC til LilyPond: $1 er ikkje ei eksekverbar fil. Sjekk at <code>$wgScoreAbc2Ly</code> er rett.",
 	"score-abcconversionerr": "Kunne ikkje konverterar ABC-fil til LilyPond-format:\n$1",
 	"score-audioconversionerr": "Kunne ikkje konvertera MIDI til MP3:\n$1",
-	"score-exec-disabled": "Musikknotar er mellombels slått av."
+	"score-audio-alt-link": "lasta ned lydfila",
+	"score-exec-disabled": "Musikknotar er mellombels slått av.",
+	"score-use-category": "Sider som bruker Score-utvidinga"
 }
