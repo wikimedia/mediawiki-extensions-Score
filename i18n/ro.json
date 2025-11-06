@@ -3,10 +3,12 @@
 		"authors": [
 			"NGC 54",
 			"Paloi Sciurala",
-			"Stelistcristi"
+			"Stelistcristi",
+			"Strainu"
 		]
 	},
 	"score-page": "Pagina $1",
+	"score-use-category": "Pagini ce folosesc extensia Score",
 	"score-visualeditor-mwscoredialog-audio": "Include un fișier audio (implicit, generat automat)",
 	"score-visualeditor-mwscoredialog-card-advanced": "Avansat",
 	"score-visualeditor-mwscoredialog-card-audio": "Audio",
