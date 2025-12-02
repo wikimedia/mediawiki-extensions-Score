@@ -13,7 +13,7 @@
 	"score-abcconversionerr": "ABC-tiedoston muuttaminen LilyPond-muotoon ei onnistunut: $1",
 	"score-audioconversionerr": "Muunnos MIDIstä MP3:ksi ei onnistunut: $1",
 	"score-audiooverridenotfound": "Parametrissa ''override_audio'' antamaasi tiedostoa ”<nowiki>$1</nowiki>” ei ole olemassa.",
-	"score-convertoverrideaudio": "Parametreja  ''sound'' ja ''override_audio'' ei voi käyttää yhtä aikaa.",
+	"score-convertoverrideaudio": "Parametreja ''sound'' ja ''override_audio'' ei voi käyttää yhtä aikaa.",
 	"score-desc": "Lisää tagin, jonka avulla wikisivulle voi lisätä nuottikirjoitusta LilyPondin renderöimänä.",
 	"score-download-midi-file": "Lataa MIDI-tiedostona",
 	"score-download-source-file": "Lataa LilyPond-tiedostona",
