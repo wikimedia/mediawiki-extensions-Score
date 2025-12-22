@@ -4,7 +4,8 @@
 			"Daud I.F. Argana",
 			"William Surya Permana",
 			"Agam Riyandana",
-			"Rtnf"
+			"Rtnf",
+			"Penyuwangi"
 		]
 	},
 	"score-abc2lynotexecutable": "Konverter ABC ke LilyPond tidak dapat dieksekusi: $1 bukan merupakan berkas yang dapat dieksekusi. Pastikan <code>$wgScoreAbc2Ly</code> diatur dengan benar.",
@@ -59,5 +60,5 @@
 	"score-visualeditor-mwscoredialog-title": "Notasi musik",
 	"datatypes-type-musical-notation": "Notasi Musik",
 	"wikibase-listdatatypes-musical-notation-head": "Notasi Musik",
-	"wikibase-listdatatypes-musical-notation-body": "Isian data literal untuk partitur musik yang ditulis dalam notasi LilyPond."
+	"wikibase-listdatatypes-musical-notation-body": "Bidang data harfiah untuk skor musik yang ditulis dalam notasi LilyPond."
 }
