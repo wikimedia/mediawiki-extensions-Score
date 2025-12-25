@@ -7,6 +7,7 @@
 			"Hwangjy9",
 			"Priviet",
 			"Revi",
+			"YeBoy371",
 			"Ykhwong",
 			"아라"
 		]
@@ -41,7 +42,7 @@
 	"score-scripterr": "원격 스크립트를 실행할 수 없음: $1이 $2 $3 상태 코드로 종료됨",
 	"score-soundfontnotexists": "Soundfont를 찾을 수 없음: $1은(는) 존재하지 않습니다. <code>$wgScoreSoundfont</code>를 올바르게 설정해 주세요.",
 	"score-trimerr": "그림을 자를 수 없습니다:\n$1\n이 문제가 계속되면 <code>$wgScoreTrim=false</code>를 설정하세요.",
-	"score-use-category": "악보를 사용하는 페이지",
+	"score-use-category": "Score 확장 기능을 사용하는 문서",
 	"score-use-category-desc": "다음 문서들이 [[:mw:Extension:Score|Score]] 확장 기능을 사용하고 있습니다.",
 	"score-versionerr": "LilyPond 버전을 얻을 수 없습니다:\n$1",
 	"score-visualeditor-mwscoredialog-card-advanced": "고급",
