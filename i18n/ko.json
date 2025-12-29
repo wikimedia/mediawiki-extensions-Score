@@ -8,7 +8,8 @@
 			"Priviet",
 			"Revi",
 			"Ykhwong",
-			"아라"
+			"아라",
+			"YeBoy371"
 		]
 	},
 	"score-abc2lynotexecutable": "ABC에서 LilyPond로의 변환기를 실행할 수 없습니다: $1은(는) 실행 파일이 아닙니다. <code>$wgScoreAbc2Ly</code>가 올바르게 설정되어 있는지 확인하세요.",
