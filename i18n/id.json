@@ -19,7 +19,7 @@
 	"score-convertoverrideaudio": "Anda tidak dapat meminta penampilan audio dan menentukan override_audio dalam waktu bersamaan.",
 	"score-deprecated-category": "Halaman yang menggunakan atribut skor usang",
 	"score-deprecated-category-desc": "Halaman-halaman ini menggunakan opsi yang pernah diberikan oleh ekstensi Score dan sekarang usang. Opsi tersebut adalah: \"override_audio\", \"override_ogg\", dan \"override_midi\".",
-	"score-desc": "Tambah tag untuk menampilkan partitur musik dengan LilyPond",
+	"score-desc": "Menambahkan tanda untuk merender partitur musik dengan LilyPond.",
 	"score-download-midi-file": "Unduh berkas MIDI",
 	"score-download-source-file": "Unduh berkas LilyPond",
 	"score-error-category": "Halaman dengan kesalahan tampilan partitur",
