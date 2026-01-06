@@ -6,6 +6,7 @@
 		"wikimedia/mediawiki"
 	],
 	"globals": {
-		"ve": "readonly"
+		"ve": "readonly",
+		"wikibase": "readonly"
 	}
 }

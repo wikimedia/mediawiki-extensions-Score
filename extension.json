@@ -20,6 +20,9 @@
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\Score\\": "includes/"
 	},
+	"TestAutoloadNamespaces": {
+		"MediaWiki\\Extension\\Score\\Tests\\": "tests/phpunit/"
+	},
 	"ResourceModules": {
 		"ext.score.visualEditor": {
 			"scripts": [
@@ -103,13 +106,15 @@
 	},
 	"Hooks": {
 		"ParserFirstCallInit": "main",
+		"ResourceLoaderRegisterModules": "ResourceLoaderRegisterModulesHookHandler",
 		"SoftwareInfo": "main",
 		"WikibaseClientDataTypes": [
 			"MediaWiki\\Extension\\Score\\Hooks::onWikibaseClientDataTypes"
 		],
 		"WikibaseRepoDataTypes": [
 			"MediaWiki\\Extension\\Score\\Hooks::onWikibaseRepoDataTypes"
-		]
+		],
+		"WikibaseRepoWbui2025InitResourceDependenciesHook": "WikibaseRepoWbui2025InitResourceDependenciesHookHandler"
 	},
 	"HookHandlers": {
 		"main": {
@@ -117,6 +122,15 @@
 			"services": [
 				"MainConfig"
 			]
+		},
+		"ResourceLoaderRegisterModulesHookHandler": {
+			"class": "MediaWiki\\Extension\\Score\\ResourceLoaderRegisterModulesHookHandler",
+			"optional_services": [
+				"WikibaseRepo.Settings"
+			]
+		},
+		"WikibaseRepoWbui2025InitResourceDependenciesHookHandler": {
+			"class": "MediaWiki\\Extension\\Score\\WikibaseRepoWbui2025InitResourceDependenciesHookHandler"
 		}
 	},
 	"config": {
