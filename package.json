@@ -4,9 +4,17 @@
 	"scripts": {
 		"test": "npm-run-all -p test-fast:*",
 		"test-fast:grunt": "grunt test",
-		"test-fast:jest": "jest -c tests/jest/jest.config.js"
+		"test-fast:jest": "jest -c tests/jest/jest.config.js",
+		"cypress:install": "cypress install",
+		"cypress:open": "cypress open",
+		"cypress:run": "cypress run",
+		"selenium-test": "npm run cypress:run"
 	},
 	"devDependencies": {
+		"api-testing": "^1.7.0",
+		"cypress": "^15.8.2",
+		"cypress-axe": "^1.7.0",
+		"cypress-wikibase-api": "^0.0.7",
 		"eslint-config-wikimedia": "0.32.3",
 		"grunt": "1.6.1",
 		"grunt-banana-checker": "0.13.0",

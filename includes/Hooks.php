@@ -56,7 +56,11 @@ class Hooks implements
 	public static function onWikibaseRepoDataTypes( array &$dataTypeDefinitions ) {
 		global $wgMusicalNotationEnableWikibaseDataType;
 
-		if ( !$wgMusicalNotationEnableWikibaseDataType ) {
+		/**
+		 * Enable the datatype in Quibble (CI) contexts so that we can test the integration
+		 * of Score with Wikibase.
+		 */
+		if ( !$wgMusicalNotationEnableWikibaseDataType && !defined( 'MW_QUIBBLE_CI' ) ) {
 			return;
 		}
 
@@ -96,7 +100,12 @@ class Hooks implements
 	 */
 	public static function onWikibaseClientDataTypes( array &$dataTypeDefinitions ) {
 		global $wgMusicalNotationEnableWikibaseDataType;
-		if ( !$wgMusicalNotationEnableWikibaseDataType ) {
+
+		/**
+		 * Enable the datatype in Quibble (CI) contexts so that we can test the integration
+		 * of Score with Wikibase.
+		 */
+		if ( !$wgMusicalNotationEnableWikibaseDataType && !defined( 'MW_QUIBBLE_CI' ) ) {
 			return;
 		}
 		$dataTypeDefinitions['PT:musical-notation'] = [
