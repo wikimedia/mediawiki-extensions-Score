@@ -176,3 +176,17 @@ The following attributes are available:
   - Effect: If included in the tag, an audio file will be generated for the
           score. An audio player will be embedded in the HTML below
           the score image(s).
+
+## Unit Testing
+
+The Score extension includes unit tests for the musical-notation datatype functionality.
+
+### Running Tests
+
+- **Run tests from MediaWiki core:**
+   ```bash
+   # From the MediaWiki core directory
+   php tests/phpunit/phpunit.php extensions/Score/tests/phpunit/includes
+   # or run a specific test file
+   composer phpunit:entrypoint -- extensions/Score/tests/phpunit/includes/ScoreFormatterTest.php
+   ```
