@@ -9,7 +9,8 @@
 			"Jeeputer",
 			"MohammadtheEditor",
 			"Reza1615",
-			"درفش کاویانی"
+			"درفش کاویانی",
+			"Huji"
 		]
 	},
 	"score-abc2lynotexecutable": "ای بی‌سی به لیلی‌پوند مبدل نمی‌تواند اجرا شود: $1 یک پوشهٔ اجرایی نیست.\nمطمئن شوید که <code>$wgScoreAbc2Ly</code> به درستی تنظیم شده است.",
