@@ -14,7 +14,7 @@
 		"api-testing": "1.7.2",
 		"cypress": "^15.8.2",
 		"cypress-axe": "^1.7.0",
-		"cypress-wikibase-api": "^0.0.7",
+		"cypress-wikibase-api": "0.0.9",
 		"eslint-config-wikimedia": "0.32.3",
 		"grunt": "1.6.1",
 		"grunt-banana-checker": "0.13.0",
