@@ -186,7 +186,7 @@ The Score extension includes unit tests for the musical-notation datatype functi
 - **Run tests from MediaWiki core:**
    ```bash
    # From the MediaWiki core directory
-   php tests/phpunit/phpunit.php extensions/Score/tests/phpunit/includes
+   composer phpunit -- extensions/Score/tests/phpunit/includes
    # or run a specific test file
-   composer phpunit:entrypoint -- extensions/Score/tests/phpunit/includes/ScoreFormatterTest.php
+   composer phpunit -- extensions/Score/tests/phpunit/includes/ScoreFormatterTest.php
    ```
