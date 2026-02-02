@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Afaz",
+			"Ant176",
 			"Dude1717",
 			"Kkairri",
 			"Marine-Blue",
@@ -53,6 +54,7 @@
 	"score-soundfontnotexists": "Soundfont が見つかりません: $1 がありません。.<code>$wgScoreSoundfont</code> の設定が正しいかご確認ください。",
 	"score-trimerr": "画像をトリミングできませんでした:\n$1\nこの問題が続く場合は、<code>$wgScoreTrim=false</code> を設定してください。",
 	"score-use-category": "Score拡張機能を使用しているページ",
+	"score-use-category-desc": "これらのページでは[https://www.mediawiki.org/wiki/Extension:Score Score]拡張機能が使用されています。",
 	"score-versionerr": "LilyPond のバージョンを取得できません:\n$1",
 	"score-visualeditor-mwscoredialog-audio": "音声ファイルを含む (既定では自動生成)",
 	"score-visualeditor-mwscoredialog-card-advanced": "高等",
