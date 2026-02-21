@@ -108,12 +108,8 @@
 		"ParserFirstCallInit": "main",
 		"ResourceLoaderRegisterModules": "ResourceLoaderRegisterModulesHookHandler",
 		"SoftwareInfo": "main",
-		"WikibaseClientDataTypes": [
-			"MediaWiki\\Extension\\Score\\WikibaseHookHandler::onWikibaseClientDataTypes"
-		],
-		"WikibaseRepoDataTypes": [
-			"MediaWiki\\Extension\\Score\\WikibaseHookHandler::onWikibaseRepoDataTypes"
-		],
+		"WikibaseClientDataTypes": "wikibase",
+		"WikibaseRepoDataTypes": "wikibase",
 		"WikibaseRepoWbui2025InitResourceDependenciesHook": "WikibaseRepoWbui2025InitResourceDependenciesHookHandler"
 	},
 	"HookHandlers": {
@@ -127,6 +123,12 @@
 			"class": "MediaWiki\\Extension\\Score\\ResourceLoaderRegisterModulesHookHandler",
 			"optional_services": [
 				"WikibaseRepo.Settings"
+			]
+		},
+		"wikibase": {
+			"class": "MediaWiki\\Extension\\Score\\WikibaseHookHandler",
+			"services": [
+				"MainConfig"
 			]
 		},
 		"WikibaseRepoWbui2025InitResourceDependenciesHookHandler": {
