@@ -31,8 +31,8 @@ class WikibaseClientHookHandler implements
 		}
 		$dataTypeDefinitions['PT:musical-notation'] = [
 			'value-type' => 'string',
-			'formatter-factory-callback' => static function ( $format, FormatterOptions $options ) {
-				return new ScoreFormatter( $format );
+			'formatter-factory-callback' => function ( $format, FormatterOptions $options ) {
+				return new ScoreFormatter( $this->config, $format );
 			},
 		];
 	}

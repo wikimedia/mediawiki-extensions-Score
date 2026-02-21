@@ -22,6 +22,7 @@ namespace MediaWiki\Extension\Score;
 
 use DataValues\StringValue;
 use InvalidArgumentException;
+use MediaWiki\Config\Config;
 use MediaWiki\Html\Html;
 use ValueFormatters\ValueFormatter;
 use Wikibase\Lib\Formatters\SnakFormatter;
@@ -39,9 +40,11 @@ class ScoreFormatter implements ValueFormatter {
 	/**
 	 * Loads format to distinguish the type of formatting
 	 *
+	 * @param Config $config
 	 * @param string $format One of the SnakFormatter::FORMAT_... constants.
 	 */
 	public function __construct(
+		private readonly Config $config,
 		private readonly string $format,
 	) {
 	}
@@ -76,8 +79,7 @@ class ScoreFormatter implements ValueFormatter {
 	private function formatAsHtml( $valueString ) {
 		$args = [];
 
-		global $wgWikibaseMusicalNotationLineWidthInches;
-		$args['line_width_inches'] = $wgWikibaseMusicalNotationLineWidthInches;
+		$args['line_width_inches'] = $this->config->get( 'WikibaseMusicalNotationLineWidthInches' );
 
 		try {
 			$valueHtml = Score::renderScore(

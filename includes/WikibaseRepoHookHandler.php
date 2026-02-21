@@ -49,8 +49,8 @@ class WikibaseRepoHookHandler implements
 				// TODO: Take out the validation out of Score
 				return $validators;
 			},
-			'formatter-factory-callback' => static function ( $format, FormatterOptions $options ) {
-				return new ScoreFormatter( $format );
+			'formatter-factory-callback' => function ( $format, FormatterOptions $options ) {
+				return new ScoreFormatter( $this->config, $format );
 			},
 			'rdf-builder-factory-callback' => static function (
 				$mode,

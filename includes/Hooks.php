@@ -21,8 +21,8 @@ class Hooks implements
 	 * @param Parser $parser
 	 */
 	public function onParserFirstCallInit( $parser ) {
-		global $wgScoreTrim, $wgScoreUseSvg;
-		if ( $wgScoreUseSvg ) {
+		global $wgScoreTrim;
+		if ( $this->config->get( 'ScoreUseSvg' ) ) {
 			// For SVG, always set true
 			$wgScoreTrim = true;
 		}

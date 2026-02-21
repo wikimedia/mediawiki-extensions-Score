@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\Score\Tests;
 
 use DataValues\StringValue;
 use InvalidArgumentException;
+use MediaWiki\Config\HashConfig;
 use MediaWiki\Extension\Score\ScoreFormatter;
 use MediaWikiIntegrationTestCase;
 use Wikibase\Lib\Formatters\SnakFormatter;
@@ -106,7 +107,7 @@ LY;
 	 * @param string $expected Expected output
 	 */
 	public function testFormat( string $format, string $input, string $expected ): void {
-		$formatter = new ScoreFormatter( $format );
+		$formatter = new ScoreFormatter( new HashConfig(), $format );
 		$value = new StringValue( $input );
 		$result = $formatter->format( $value );
 
@@ -120,7 +121,7 @@ LY;
 	 * @param string $format Format type to test
 	 */
 	public function testGetFormat( string $format ): void {
-		$formatter = new ScoreFormatter( $format );
+		$formatter = new ScoreFormatter( new HashConfig(), $format );
 		$this->assertEquals( $format, $formatter->getFormat() );
 	}
 
@@ -131,7 +132,7 @@ LY;
 	 * @param mixed $invalidValue Invalid input value
 	 */
 	public function testFormatInvalidValue( mixed $invalidValue ): void {
-		$formatter = new ScoreFormatter( SnakFormatter::FORMAT_PLAIN );
+		$formatter = new ScoreFormatter( new HashConfig(), SnakFormatter::FORMAT_PLAIN );
 
 		$this->expectException( InvalidArgumentException::class );
 		$this->expectExceptionMessage( '$value must be a StringValue' );
