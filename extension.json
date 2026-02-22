@@ -109,10 +109,10 @@
 		"ResourceLoaderRegisterModules": "ResourceLoaderRegisterModulesHookHandler",
 		"SoftwareInfo": "main",
 		"WikibaseClientDataTypes": [
-			"MediaWiki\\Extension\\Score\\Hooks::onWikibaseClientDataTypes"
+			"MediaWiki\\Extension\\Score\\WikibaseHookHandler::onWikibaseClientDataTypes"
 		],
 		"WikibaseRepoDataTypes": [
-			"MediaWiki\\Extension\\Score\\Hooks::onWikibaseRepoDataTypes"
+			"MediaWiki\\Extension\\Score\\WikibaseHookHandler::onWikibaseRepoDataTypes"
 		],
 		"WikibaseRepoWbui2025InitResourceDependenciesHook": "WikibaseRepoWbui2025InitResourceDependenciesHookHandler"
 	},
