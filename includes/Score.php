@@ -31,8 +31,10 @@ use MediaWiki\Json\FormatJson;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
+use MediaWiki\Output\StreamFile;
 use MediaWiki\Parser\Parser;
 use MediaWiki\Parser\PPFrame;
+use MediaWiki\Status\Status;
 use MediaWiki\Title\Title;
 use MediaWiki\WikiMap\WikiMap;
 use NullLockManager;
@@ -255,9 +257,9 @@ class Score {
 				'lockManager' => new NullLockManager( [] ),
 				'containerPaths' => [ 'score-render' => $dir ],
 				'fileMode' => 0777,
-				'obResetFunc' => 'wfResetOutputBuffers',
-				'streamMimeFunc' => [ 'StreamFile', 'contentTypeFromPath' ],
-				'statusWrapper' => [ 'Status', 'wrap' ],
+				'obResetFunc' => wfResetOutputBuffers( ... ),
+				'streamMimeFunc' => StreamFile::contentTypeFromPath( ... ),
+				'statusWrapper' => Status::wrap( ... ),
 				'logger' => LoggerFactory::getInstance( 'score' ),
 			] );
 		}
