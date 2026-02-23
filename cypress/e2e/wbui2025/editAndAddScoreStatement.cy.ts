@@ -69,7 +69,7 @@ describe( 'add score statement', () => {
 			/* Wait for the form to close, and check the value is changed */
 			editFormPage.formHeading().should( 'not.exist' );
 			/* CI has no support for lilypond, so what we actually see here is an error */
-			itemViewPage.mainSnakValues().first().should( 'contain.text', 'Unable to obtain LilyPond version' );
+			itemViewPage.mainSnakValues().first().should( 'contain.text', 'Unable to display the value' );
 
 			/* Now try adding a new statement */
 			itemViewPage.addStatementButton().click();
@@ -84,7 +84,9 @@ describe( 'add score statement', () => {
 			addStatementFormPage.setSnakValue( '\\relative c\' { e f e f }' );
 			addStatementFormPage.publishButton().click();
 			addStatementFormPage.form().should( 'not.exist' );
-			itemViewPage.mainSnakValues().eq( 1 ).should( 'contain.text', 'Unable to obtain LilyPond version' );
+			itemViewPage.mainSnakValues().eq( 1 ).should( 'contain.text', 'Unable to display the value' );
+			itemViewPage.mainSnakIndicators().eq( 1 ).click();
+			itemViewPage.mainSnakIndicatorPopover().should( 'contain.text', 'Unable to obtain LilyPond version' );
 		} );
 	} );
 } );

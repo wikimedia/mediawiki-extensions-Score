@@ -8,7 +8,10 @@ export class ItemViewPage {
 			STATEMENTS: '#wikibase-wbui2025-statementgrouplistview',
 			VUE_CLIENTSIDE_RENDERED: '[data-v-app]',
 			EDIT_LINKS: '.wikibase-wbui2025-edit-link',
-			MAIN_SNAK_VALUES: '.wikibase-wbui2025-main-snak .wikibase-wbui2025-snak-value',
+			MAIN_SNAK: '.wikibase-wbui2025-main-snak',
+			SNAK_VALUE: '.wikibase-wbui2025-snak-value',
+			INDICATORS: '.indicators',
+			INDICATOR_POPOVER: '.wikibase-wbui2025-indicator-popover',
 		};
 	}
 
@@ -36,7 +39,21 @@ export class ItemViewPage {
 	}
 
 	public mainSnakValues(): Chainable {
-		return cy.get( ItemViewPage.SELECTORS.MAIN_SNAK_VALUES );
+		return cy.get(
+			ItemViewPage.SELECTORS.MAIN_SNAK + ' ' + ItemViewPage.SELECTORS.SNAK_VALUE,
+		);
+	}
+
+	public mainSnakIndicators(): Chainable {
+		return cy.get(
+			ItemViewPage.SELECTORS.MAIN_SNAK + ' ' + ItemViewPage.SELECTORS.INDICATORS,
+		);
+	}
+
+	public mainSnakIndicatorPopover(): Chainable {
+		return cy.get(
+			ItemViewPage.SELECTORS.MAIN_SNAK + ' ' + ItemViewPage.SELECTORS.INDICATOR_POPOVER,
+		);
 	}
 
 	public addStatementButton(): Chainable {
