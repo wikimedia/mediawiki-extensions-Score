@@ -17,11 +17,12 @@
 			"Xiaomingyan",
 			"Xiplus",
 			"Yfdyh000",
-			"沈澄心"
+			"沈澄心",
+			"Pawsdt"
 		]
 	},
-	"score-abc2lynotexecutable": "无法运行ABC转LilyPond转换器：$1不是可执行文件。请确认<code>$wgScoreAbc2Ly</code>设置正确。",
-	"score-abcconversionerr": "无法将ABC文件转换为LilyPond格式： $1",
+	"score-abc2lynotexecutable": "无法运行ABC转LilyPond转换器：$1不是可执行文件。请确认<code>$wgScoreAbc2Ly</code>是否设置正确。",
+	"score-abcconversionerr": "无法将ABC文件转换为LilyPond格式：$1",
 	"score-audioconversionerr": "无法将MIDI转换为MP3：$1",
 	"score-audiooverridenotfound": "您用override_audio指定的文件“<nowiki>$1</nowiki>”不存在。",
 	"score-audio-alt": "您的浏览器不支持播放音频。您可以$1。",
