@@ -1,8 +1,8 @@
 let popupShown = false;
 
 function showPopup( $score ) {
-	const midi = $score.data( 'midi' ),
-		source = $score.data( 'source' );
+	const midi = $score.data( 'mw-midi' ),
+		source = $score.data( 'mw-source' );
 
 	// Don't show popup when there is no midi or source.
 	if ( midi === undefined && source === undefined ) {
