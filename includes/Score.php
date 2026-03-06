@@ -668,7 +668,7 @@ class Score {
 
 		if ( $options['override_midi']
 			|| isset( $existingFiles["{$options['file_name_prefix']}.midi"] ) ) {
-			$attributes['data-midi'] = $options['override_midi'] ?
+			$attributes['data-mw-midi'] = $options['override_midi'] ?
 				$options['midi_file']->getUrl()
 				: "{$options['dest_url']}/{$options['file_name_prefix']}.midi";
 		}
@@ -676,7 +676,7 @@ class Score {
 		if ( $wgScoreOfferSourceDownload
 			&& isset( $existingFiles["{$options['file_name_prefix']}.ly"] )
 		) {
-			$attributes['data-source'] = "{$options['dest_url']}/{$options['file_name_prefix']}.ly";
+			$attributes['data-mw-source'] = "{$options['dest_url']}/{$options['file_name_prefix']}.ly";
 		}
 
 		// Wrap score in div container.
