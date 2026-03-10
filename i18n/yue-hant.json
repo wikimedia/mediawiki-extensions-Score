@@ -3,10 +3,21 @@
 		"authors": [
 			"H78c67c",
 			"Winston Sung",
-			"Yueman"
+			"Yueman",
+			"JeffreyKim"
 		]
 	},
-	"score-use-category": "有樂譜（score）標籤嘅文章",
+	"score-use-category": "用Score擴充功能嘅版",
+	"score-visualeditor-mwscoredialog-audio": "加音頻檔案（預設自動生成）",
+	"score-visualeditor-mwscoredialog-card-advanced": "進階",
+	"score-visualeditor-mwscoredialog-card-audio": "音頻",
+	"score-visualeditor-mwscoredialog-lang": "話",
+	"score-visualeditor-mwscoredialog-notelanguage": "記譜嘅話",
+	"score-visualeditor-mwscoredialog-override-audio": "用現有嘅音頻檔案",
+	"score-visualeditor-mwscoredialog-override-audio-placeholder": "現有嘅音頻檔案名",
+	"score-visualeditor-mwscoredialog-override-midi": "用現有嘅MIDI檔案",
+	"score-visualeditor-mwscoredialog-override-midi-placeholder": "現有嘅MIDI檔案名",
+	"score-visualeditor-mwscoredialog-raw": "呢個係完整啲嘅LilyPond檔案",
 	"score-visualeditor-mwscoredialog-title": "音樂符號",
 	"datatypes-type-musical-notation": "音樂符號",
 	"wikibase-listdatatypes-musical-notation-head": "音樂符號"
