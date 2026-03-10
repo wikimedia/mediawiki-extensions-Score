@@ -455,20 +455,6 @@ class ScoreTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * Test renderScore() with parser without output
-	 * @throws ScoreException
-	 */
-	public function testRenderScoreWithParserWithoutOutput(): void {
-		$parser = $this->createMock( \MediaWiki\Parser\Parser::class );
-		$parser->method( 'getOutput' )
-			->willReturn( null );
-
-		$result = Score::renderScore( 'c d e f', [], $parser );
-		$this->assertIsString( $result );
-		$this->assertStringContainsString( 'mw-ext-score-disabled', $result );
-	}
-
-	/**
 	 * Test renderScore() with empty string code
 	 * @throws ScoreException
 	 */

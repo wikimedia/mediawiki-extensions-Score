@@ -337,7 +337,7 @@ class Score {
 					throw new ScoreException( 'score-midioverridenotfound',
 						[ htmlspecialchars( $args['override_midi'] ) ] );
 				}
-				if ( $parser && $parser->getOutput() !== null ) {
+				if ( $parser ) {
 					$parser->getOutput()->addImage( $file->getName() );
 				}
 
@@ -430,7 +430,7 @@ class Score {
 
 			$html = self::generateHTML( $parser, $code, $options );
 		} catch ( ScoreException $e ) {
-			if ( $parser && $parser->getOutput() !== null ) {
+			if ( $parser ) {
 				if ( $e->isTracked() ) {
 					$parser->addTrackingCategory( 'score-error-category' );
 				}
@@ -441,7 +441,7 @@ class Score {
 
 		// Mark the page as using the score extension, it makes easier
 		// to track all those pages.
-		if ( $parser && $parser->getOutput() !== null ) {
+		if ( $parser ) {
 			$parser->addTrackingCategory( 'score-use-category' );
 		}
 
@@ -497,7 +497,7 @@ class Score {
 		$cleanup = new ScopedCallback( function () use ( $options ) {
 			self::eraseDirectory( $options['factory_directory'] );
 		} );
-		if ( $parser && $parser->getOutput() !== null ) {
+		if ( $parser ) {
 			$parser->getOutput()->addModuleStyles( [ 'ext.score.styles' ] );
 			$parser->getOutput()->addModules( [ 'ext.score.popup' ] );
 		}
