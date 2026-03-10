@@ -108,9 +108,8 @@ class Score {
 	 * @param string|bool $factoryDir The factory directory to replace with "..."
 	 *
 	 * @throws ScoreException always.
-	 * @return never
 	 */
-	private static function throwCallException( $message, array $params, $output, $factoryDir = false ) {
+	private static function throwCallException( $message, array $params, $output, $factoryDir = false ): never {
 		/* clean up the output a bit */
 		if ( $factoryDir ) {
 			$output = str_replace( $factoryDir, '...', $output );
@@ -906,7 +905,7 @@ class Score {
 	 * @param array $options
 	 * @throws ScoreException
 	 */
-	private static function throwCompileException( $stdout, $options ) {
+	private static function throwCompileException( $stdout, $options ): never {
 		global $wgScoreDebugOutput;
 
 		$message = self::extractMessage( $stdout );
@@ -936,7 +935,7 @@ class Score {
 	 * @param string $stdout
 	 * @throws ScoreException
 	 */
-	private static function throwSynthException( $stdout ) {
+	private static function throwSynthException( $stdout ): never {
 		$message = self::extractMessage( $stdout );
 		if ( !$message ) {
 			$message = [ 'score-audioconversionerr', [] ];
