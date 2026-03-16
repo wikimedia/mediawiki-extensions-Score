@@ -34,16 +34,15 @@ use MediaWiki\Title\Title;
  */
 class ScoreException extends Exception {
 
-	/** @var array */
-	private $args;
-
 	/**
 	 * @param string $message Message key of error message Should have one $1 parameter.
 	 * @param array $args Parameters to the message
 	 */
-	public function __construct( $message, array $args = [] ) {
+	public function __construct(
+		$message,
+		private readonly array $args = [],
+	) {
 		parent::__construct( $message );
-		$this->args = $args;
 	}
 
 	/**

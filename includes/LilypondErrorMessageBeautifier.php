@@ -33,20 +33,15 @@ class LilypondErrorMessageBeautifier {
 	private const BEAUTIFIED_ERR_SEPARATOR = "\n--------\n";
 
 	/**
-	 * @var int
-	 *
-	 * The line number where user's score input is inserted, within the final
-	 * lilypond file that is passed to lilypond executable.
-	 *
-	 * The first line is assumed to start at the first column (no column offset).
-	 */
-	private $scoreFirstLineOffset;
-
-	/**
 	 * @param int $scoreFirstLineOffset
+	 *   The line number where user's score input is inserted, within the final
+	 *   lilypond file that is passed to lilypond executable.
+	 *
+	 *   The first line is assumed to start at the first column (no column offset).
 	 */
-	public function __construct( $scoreFirstLineOffset = 0 ) {
-		$this->scoreFirstLineOffset = $scoreFirstLineOffset;
+	public function __construct(
+		private readonly int $scoreFirstLineOffset = 0,
+	) {
 	}
 
 	/**

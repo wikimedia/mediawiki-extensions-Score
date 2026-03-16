@@ -37,17 +37,13 @@ use Wikibase\Lib\Formatters\SnakFormatter;
 class ScoreFormatter implements ValueFormatter {
 
 	/**
-	 * @var string One of the SnakFormatter::FORMAT_... constants.
-	 */
-	private $format;
-
-	/**
 	 * Loads format to distinguish the type of formatting
 	 *
 	 * @param string $format One of the SnakFormatter::FORMAT_... constants.
 	 */
-	public function __construct( $format ) {
-		$this->format = $format;
+	public function __construct(
+		private readonly string $format,
+	) {
 	}
 
 	/**

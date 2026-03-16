@@ -13,10 +13,9 @@ use Wikibase\Lib\SettingsArray;
  */
 class ResourceLoaderRegisterModulesHookHandler implements ResourceLoaderRegisterModulesHook {
 
-	private ?SettingsArray $settings;
-
-	public function __construct( ?SettingsArray $settings ) {
-		$this->settings = $settings;
+	public function __construct(
+		private readonly ?SettingsArray $settings,
+	) {
 	}
 
 	public function onResourceLoaderRegisterModules( ResourceLoader $rl ): void {
