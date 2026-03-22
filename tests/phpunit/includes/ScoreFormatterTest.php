@@ -21,7 +21,7 @@ class ScoreFormatterTest extends MediaWikiIntegrationTestCase {
 	 *
 	 * @return array[]
 	 */
-	public function provideFormatTests(): array {
+	public static function provideFormatTests(): array {
 		$simpleNotation = 'c d e f g';
 		$complexLilypond = <<<LY
 \\relative c' {
