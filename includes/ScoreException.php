@@ -39,7 +39,7 @@ class ScoreException extends Exception {
 	 * @param array $args Parameters to the message
 	 */
 	public function __construct(
-		$message,
+		string $message,
 		private readonly array $args = [],
 	) {
 		parent::__construct( $message );
