@@ -3,10 +3,10 @@
 namespace MediaWiki\Extension\Score;
 
 use MediaWiki\Config\Config;
-use MediaWiki\Hook\ParserFirstCallInitHook;
-use MediaWiki\Hook\SoftwareInfoHook;
 use MediaWiki\MainConfigNames;
+use MediaWiki\Parser\Hook\ParserFirstCallInitHook;
 use MediaWiki\Parser\Parser;
+use MediaWiki\Specials\Hook\SoftwareInfoHook;
 
 class Hooks implements
 	ParserFirstCallInitHook,

@@ -37,10 +37,10 @@ use MediaWiki\Parser\PPFrame;
 use MediaWiki\Status\Status;
 use MediaWiki\Title\Title;
 use MediaWiki\WikiMap\WikiMap;
-use NullLockManager;
 use Shellbox\Command\BoxedCommand;
 use Wikimedia\FileBackend\FileBackend;
 use Wikimedia\FileBackend\FSFileBackend;
+use Wikimedia\LockManager\NullLockManager;
 use Wikimedia\ScopedCallback;
 
 /**
