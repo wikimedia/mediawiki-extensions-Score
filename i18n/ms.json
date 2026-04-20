@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Anakmalaysia",
+			"Hakimi97",
 			"Jeluang Terluang"
 		]
 	},
@@ -22,5 +23,6 @@
 	"score-pregreplaceerr": "Ungkapan nalar PCRE gagal digantikan",
 	"score-readerr": "Fail $1 tidak dapat dibaca.",
 	"score-trimerr": "Imej tidak dapat dirapikan:\n$1\nSetkan <code>$wgScoreTrim=false</code> jika masalah ini berterusan.",
-	"score-versionerr": "Versi LilyPond tidak dapat diperoleh:\n$1"
+	"score-versionerr": "Versi LilyPond tidak dapat diperoleh:\n$1",
+	"score-visualeditor-mwscoredialog-title": "Tatatanda muzik"
 }
