@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Anakmalaysia",
-			"Jeluang Terluang"
+			"Jeluang Terluang",
+			"Hakimi97"
 		]
 	},
 	"score-abc2lynotexecutable": "Penukar ABC ke LilyPond tidak boleh dilaksanakan: $1 bukan fail yang boleh dilaksanakan. Pastikan <code>$wgScoreAbc2Ly</code> diset dengan betul.",
@@ -22,5 +23,6 @@
 	"score-pregreplaceerr": "Ungkapan nalar PCRE gagal digantikan",
 	"score-readerr": "Fail $1 tidak dapat dibaca.",
 	"score-trimerr": "Imej tidak dapat dirapikan:\n$1\nSetkan <code>$wgScoreTrim=false</code> jika masalah ini berterusan.",
-	"score-versionerr": "Versi LilyPond tidak dapat diperoleh:\n$1"
+	"score-versionerr": "Versi LilyPond tidak dapat diperoleh:\n$1",
+	"score-visualeditor-mwscoredialog-title": "Tatatanda muzik"
 }
