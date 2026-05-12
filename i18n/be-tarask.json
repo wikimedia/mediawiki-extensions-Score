@@ -18,6 +18,6 @@
 	"score-compilererr": "Немагчыма скампіляваць зыходны файл LilyPond:\n$1",
 	"score-desc": "Дадае тэг для паказу музычных нот праз LilyPond",
 	"score-error-category": "Старонкі з памылкамі візуалізацыі нотаў",
-	"score-error-category-desc": "Адбылася памылка пры адлюстраваньні партытуры.",
+	"score-error-category-desc": "Адбылася памылка пры адмаляваньні партытуры.",
 	"score-use-category": "Старонкі, якія выкарыстоўваюць пашырэньне Score"
 }

@@ -7,7 +7,8 @@
 			"Macofe",
 			"Metalhead64",
 			"Purodha",
-			"Umherirrender"
+			"Umherirrender",
+			"Schniggendiller"
 		]
 	},
 	"score-abc2lynotexecutable": "Der Konverter von ABC nach LilyPond konnte nicht ausgeführt werden: $1 ist keine ausführbare Datei. Es muss sichergestellt sein, dass <code>$wgScoreAbc2Ly</code> in der Konfigurationsdatei richtig eingestellt wurde.",
@@ -20,7 +21,7 @@
 	"score-compilererr": "Die Eingabedatei von LilyPond konnte nicht kompiliert werden:\n$1",
 	"score-convertoverrideaudio": "Du kannst nicht gleichzeitig eine Audiorenderung anfordern und override_audio angeben.",
 	"score-deprecated-category": "Seiten mit veralteten score-Attributen",
-	"score-deprecated-category-desc": "Diese Seiten verwenden Optionen der Score-Extension, die veraltet sind. Dies sind \"override_audio\", \"override_ogg\" und \"override_midi\".",
+	"score-deprecated-category-desc": "Diese Seiten verwenden Optionen der Score-Extension, die veraltet sind. Dies sind „override_audio“, „override_ogg“ und „override_midi“.",
 	"score-desc": "Ergänzt das Tag <code>&lt;score&gt;</code> zum Einbetten LilyPond-gestützter Partituren",
 	"score-download-midi-file": "MIDI-Datei herunterladen",
 	"score-download-source-file": "LilyPond-Datei herunterladen",
