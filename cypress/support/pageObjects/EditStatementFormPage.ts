@@ -8,7 +8,7 @@ export class EditStatementFormPage {
 			FORM_HEADING: '.wikibase-wbui2025-edit-statement-heading',
 			PROPERTY_NAME: '.wikibase-wbui2025-property-name > a',
 			SUBMIT_BUTTONS: '.wikibase-wbui2025-edit-form-actions > .cdx-button',
-			TEXT_INPUT: '.wikibase-wbui2025-edit-statement-value-input .cdx-text-input input',
+			TEXT_INPUT: '.wikibase-wbui2025-edit-statement-value-input .cdx-text-input input, .wikibase-wbui2025-edit-statement-value-input textarea',
 			LOOKUP_INPUT: '.wikibase-wbui2025-edit-statement-value-input .cdx-lookup input',
 		};
 	}

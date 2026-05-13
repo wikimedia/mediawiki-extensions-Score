@@ -5,7 +5,7 @@ export class AddStatementFormPage {
 		PROPERTY_LOOKUP: '.wikibase-wbui2025-add-statement-form_property-selector',
 		PROPERTY_INPUT: '.wikibase-wbui2025-property-lookup input',
 		SUBMIT_BUTTONS: '.wikibase-wbui2025-modal-overlay__footer__actions > .cdx-button',
-		SNAK_VALUE_INPUT: '.wikibase-wbui2025-edit-statement-snak-value input',
+		SNAK_VALUE_INPUT: '.wikibase-wbui2025-edit-statement-snak-value input, .wikibase-wbui2025-edit-statement-snak-value textarea',
 		FORM: '.wikibase-wbui2025-add-statement-form',
 	};
 
