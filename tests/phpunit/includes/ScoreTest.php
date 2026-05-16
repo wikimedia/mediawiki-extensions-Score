@@ -20,6 +20,8 @@ class ScoreTest extends MediaWikiIntegrationTestCase {
 	protected function setUp(): void {
 		parent::setUp();
 
+		$this->markTestSkippedIfExtensionNotLoaded( 'WikibaseRepository' );
+
 		// Set up common globals for all tests
 		$tempDir = sys_get_temp_dir() . '/mw-score-test-' . uniqid();
 		$this->setMwGlobals( [

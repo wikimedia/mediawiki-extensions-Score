@@ -7,6 +7,7 @@ use DataValues\StringValue;
 use InvalidArgumentException;
 use MediaWiki\Config\HashConfig;
 use MediaWiki\Extension\Score\ScoreFormatter;
+use MediaWiki\Registration\ExtensionRegistry;
 use MediaWikiIntegrationTestCase;
 use Wikibase\Lib\Formatters\SnakFormatter;
 
@@ -16,6 +17,23 @@ use Wikibase\Lib\Formatters\SnakFormatter;
  * @covers \MediaWiki\Extension\Score\ScoreFormatter
  */
 class ScoreFormatterTest extends MediaWikiIntegrationTestCase {
+
+	private array $constMapping;
+
+	protected function setUp(): void {
+		parent::setUp();
+
+		if ( !ExtensionRegistry::getInstance()->isLoaded( 'WikibaseClient' ) &&
+			!ExtensionRegistry::getInstance()->isLoaded( 'WikibaseRepository' )
+		) {
+			$this->markTestSkipped( "Extension WikibaseClient or WikibaseRepository are required for this test" );
+		}
+		$this->constMapping = [
+			'FORMAT_PLAIN' => SnakFormatter::FORMAT_PLAIN,
+			'FORMAT_WIKI' => SnakFormatter::FORMAT_WIKI,
+			'FORMAT_HTML' => SnakFormatter::FORMAT_HTML,
+		];
+	}
 
 	/**
 	 * Data provider for format() tests with different formats and inputs
@@ -38,32 +56,32 @@ LY;
 
 		return [
 			'Plain format with simple notation' => [
-				SnakFormatter::FORMAT_PLAIN,
+				'FORMAT_PLAIN',
 				$simpleNotation,
 				$simpleNotation
 			],
 			'Plain format with empty string' => [
-				SnakFormatter::FORMAT_PLAIN,
+				'FORMAT_PLAIN',
 				'',
 				''
 			],
 			'Plain format with complex LilyPond' => [
-				SnakFormatter::FORMAT_PLAIN,
+				'FORMAT_PLAIN',
 				$complexLilypond,
 				$complexLilypond
 			],
 			'Wiki format with simple notation' => [
-				SnakFormatter::FORMAT_WIKI,
+				'FORMAT_WIKI',
 				$simpleNotation,
 				"<score>$simpleNotation</score>"
 			],
 			'Wiki format with empty string' => [
-				SnakFormatter::FORMAT_WIKI,
+				'FORMAT_WIKI',
 				'',
 				'<score></score>'
 			],
 			'Wiki format with complex LilyPond' => [
-				SnakFormatter::FORMAT_WIKI,
+				'FORMAT_WIKI',
 				$singleLineComplex,
 				"<score>$singleLineComplex</score>"
 			],
@@ -77,9 +95,9 @@ LY;
 	 */
 	public static function provideGetFormatTests(): array {
 		return [
-			'Plain format' => [ SnakFormatter::FORMAT_PLAIN ],
-			'Wiki format' => [ SnakFormatter::FORMAT_WIKI ],
-			'HTML format' => [ SnakFormatter::FORMAT_HTML ],
+			'Plain format' => [ 'FORMAT_PLAIN' ],
+			'Wiki format' => [ 'FORMAT_WIKI' ],
+			'HTML format' => [ 'FORMAT_HTML' ],
 		];
 	}
 
@@ -107,7 +125,7 @@ LY;
 	 * @param string $expected Expected output
 	 */
 	public function testFormat( string $format, string $input, string $expected ): void {
-		$formatter = new ScoreFormatter( new HashConfig(), $format );
+		$formatter = new ScoreFormatter( new HashConfig(), $this->constMapping[$format] );
 		$value = new StringValue( $input );
 		$result = $formatter->format( $value );
 
@@ -121,6 +139,7 @@ LY;
 	 * @param string $format Format type to test
 	 */
 	public function testGetFormat( string $format ): void {
+		$format = $this->constMapping[$format];
 		$formatter = new ScoreFormatter( new HashConfig(), $format );
 		$this->assertEquals( $format, $formatter->getFormat() );
 	}

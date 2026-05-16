@@ -3,6 +3,7 @@
 declare( strict_types = 1 );
 
 use MediaWiki\Extension\Score\ResourceLoaderRegisterModulesHookHandler;
+use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\ResourceLoader\ResourceLoader;
 use PHPUnit\Framework\TestCase;
 use Wikibase\Lib\SettingsArray;
@@ -12,6 +13,16 @@ use Wikibase\Lib\SettingsArray;
  * @covers \MediaWiki\Extension\Score\ResourceLoaderRegisterModulesHookHandler
  */
 class ResourceLoaderRegisterModulesHookHandlerTest extends TestCase {
+
+	protected function setUp(): void {
+		parent::setUp();
+
+		if ( !ExtensionRegistry::getInstance()->isLoaded( 'WikibaseClient' ) &&
+			!ExtensionRegistry::getInstance()->isLoaded( 'WikibaseRepository' )
+		) {
+			$this->markTestSkipped( "Extension WikibaseClient or WikibaseRepository are required for this test" );
+		}
+	}
 
 	public function testRegistersNoModulesIfWbuiFeatureDisabled(): void {
 		$settings = new SettingsArray( [
