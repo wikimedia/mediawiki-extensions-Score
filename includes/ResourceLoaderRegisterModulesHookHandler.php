@@ -36,6 +36,9 @@ class ResourceLoaderRegisterModulesHookHandler implements ResourceLoaderRegister
 					'packageFiles' => [
 						'modules/wikibase.wbui2025/score.wbui2025.entityViewInit.js',
 					],
+					'styles' => [
+						'modules/wikibase.wbui2025/score.wbui2025.less',
+					],
 					'dependencies' => [
 						'wikibase.wbui2025.lib',
 					],
