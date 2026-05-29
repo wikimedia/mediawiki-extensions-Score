@@ -11,7 +11,8 @@
 			"Macofe",
 			"Mynor Archila",
 			"Ninovolador",
-			"Ryo567"
+			"Ryo567",
+			"Aleator"
 		]
 	},
 	"score-abc2lynotexecutable": "No se pudo ejecutar el conversor ABC a LilyPond: \"$1\" no es un archivo ejecutable. Asegúrate de que <code>$wgScoreAbc2Ly</code> esté definido correctamente.",
@@ -54,7 +55,7 @@
 	"score-soundfontnotexists": "No se pudo encontrar Soundfont: $1 no existe. Cerciórate de que <code>$wgScoreSoundfont</code> esté definido correctamente.",
 	"score-trimerr": "No se pudo ajustar la imagen:\n$1\nDefine <code>$wgScoreTrim=false</code> si persiste el problema.",
 	"score-use-category": "Páginas que usan la extensión Score",
-	"score-use-category-desc": "Estas páginas usan la extensión [[:mw:Extension:Score|Score]].",
+	"score-use-category-desc": "Estas páginas usan la extensión [https://www.mediawiki.org/wiki/Extension:Score Score].",
 	"score-versionerr": "No se pudo obtener la versión de LilyPond:\n$1",
 	"score-visualeditor-mwscoredialog-audio": "Incluir un archivo de audio (generado automáticamente por defecto)",
 	"score-visualeditor-mwscoredialog-card-advanced": "Avanzado",
