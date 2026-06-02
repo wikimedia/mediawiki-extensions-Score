@@ -48,6 +48,7 @@ class DeleteOldScoreFiles extends Maintenance {
 			true,
 			true
 		);
+		$this->addOption( 'dry-run', 'Do not actually delete files' );
 		$this->requireExtension( "Score" );
 	}
 
@@ -75,6 +76,10 @@ class DeleteOldScoreFiles extends Maintenance {
 		}
 
 		$this->output( "$count old score files to be deleted.\n" );
+		if ( $this->hasOption( 'dry-run' ) ) {
+			$this->output( "Dry run, not deleting files.\n" );
+			return;
+		}
 
 		$deletedCount = 0;
 		foreach ( array_chunk( $filesToDelete, 1000 ) as $chunk ) {
