@@ -9,7 +9,8 @@
 			"Steve.rusyn",
 			"SteveR",
 			"Vlad5250",
-			"Ата"
+			"Ата",
+			"Repakr"
 		]
 	},
 	"score-abc2lynotexecutable": "Не вдалося виконати конвертер ABC у LilyPond: $1 не є виконуваним файлом. Переконайтеся, що <code>$wgScoreAbc2Ly</code> правильно встановлено.",
@@ -47,6 +48,7 @@
 	"score-page": "Сторінка $1",
 	"score-pregreplaceerr": "Невдала заміна регулярного виразу PCRE",
 	"score-readerr": "Не можна прочитати файл  $1.",
+	"score-safe-mode": "Безпечний режим видалено з LilyPond, починаючи з версії 2.23.12. Файли LilyPond можуть виконувати довільний код. Будь ласка, ізолюйте Вашу встановлену LilyPond за допомогою [https://www.mediawiki.org/wiki/Shellbox Shellbox] та встановіть $wgScoreSafeMode = false.",
 	"score-scripterr": "Не вдається запустити віддалений скрипт: $1 закрито з кодом статусу $2\n$3",
 	"score-soundfontnotexists": "Soundfont знайти не вдалося: $1 не існує. Переконайтесь, що <code>$wgScoreSoundfont</code> встановлено правильно.",
 	"score-trimerr": "Зображення обрізати не вдалося:\n$1\nЗадайте <code>$wgScoreTrim=false</code>, якщо ця проблема не зникатиме.",
@@ -59,6 +61,7 @@
 	"score-visualeditor-mwscoredialog-lang": "Мова",
 	"score-visualeditor-mwscoredialog-notelanguage": "Мова нот",
 	"score-visualeditor-mwscoredialog-override-audio": "Використати існуючий аудіофайл",
+	"score-visualeditor-mwscoredialog-override-audio-placeholder": "Назва наявного аудіофайлу",
 	"score-visualeditor-mwscoredialog-override-midi": "Використати існуючий MIDI-файл",
 	"score-visualeditor-mwscoredialog-override-midi-placeholder": "Назва існуючого MIDI-файлу",
 	"score-visualeditor-mwscoredialog-raw": "Це — повний файл LilyPond",
