@@ -4,9 +4,11 @@ Score, a MediaWiki extension for rendering musical scores with LilyPond.
 
 ## Security
 
-By default, this extension runs LilyPond in safe mode, however it is unsafe to
-rely on it due to unfixed vulnerabilities, and indeed safe mode was removed in
-LilyPond version 2.23.12 and causes an error when used.
+In earlier versions of this extension, LilyPond ran in safe mode.
+
+However, it is unsafe to rely on safe mode due to unfixed vulnerabilities,
+and indeed safe mode was removed in LilyPond version 2.23.12 and causes an
+error when used.
 
 It is recommended that LilyPond is run as an unprivileged user inside an
 isolated container with no external network access.
