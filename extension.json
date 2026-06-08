@@ -176,10 +176,6 @@
 			"value": [],
 			"description": "A name/value map of environment variables to be passed to all shell commands"
 		},
-		"ScoreSafeMode": {
-			"value": false,
-			"description": "Must be set to false for LilyPond versions 2.23.12 or newer (safe mode was removed in 2.23.12 as it could no longer be guaranteed safe). For older versions, set this to true to enable LilyPond's safe mode (default). NOTE: if set to false, all inputs should be sanitized and/or trusted, and the LilyPond binary must be appropriately sandboxed."
-		},
 		"ScoreDisableExec": {
 			"value": false,
 			"description": "Set this to true to disable all new rendering of scores"

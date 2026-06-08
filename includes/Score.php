@@ -698,18 +698,12 @@ class Score {
 	 * @throws ScoreException on error.
 	 */
 	private static function generatePngAndMidi( $code, $options, &$metaData ) {
-		global $wgScoreLilyPond, $wgScoreTrim, $wgScoreSafeMode, $wgScoreDisableExec,
+		global $wgScoreLilyPond, $wgScoreTrim, $wgScoreDisableExec,
 			$wgScoreGhostscript, $wgScoreAbc2Ly, $wgImageMagickConvertCommand, $wgScoreUseSvg,
 			$wgShellboxShell, $wgPhpCli, $wgScoreEnvironment, $wgScoreImageMagickConvert;
 
 		if ( $wgScoreDisableExec ) {
 			throw new ScoreDisabledException();
-		}
-
-		if ( $wgScoreSafeMode
-			&& version_compare( self::getLilypondVersion(), '2.23.12', '>=' )
-		) {
-			throw new ScoreException( 'score-safe-mode' );
 		}
 
 		/* Create the working environment */
@@ -730,7 +724,6 @@ class Score {
 				'SCORE_ABC2LY' => $wgScoreAbc2Ly,
 				'SCORE_LILYPOND' => $wgScoreLilyPond,
 				'SCORE_USESVG' => $wgScoreUseSvg ? 'yes' : 'no',
-				'SCORE_SAFE' => $wgScoreSafeMode ? 'yes' : 'no',
 				'SCORE_GHOSTSCRIPT' => $wgScoreGhostscript,
 				'SCORE_CONVERT' => $wgScoreImageMagickConvert ?: $wgImageMagickConvertCommand,
 				'SCORE_TRIM' => $wgScoreTrim ? 'yes' : 'no',

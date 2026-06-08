@@ -7,8 +7,9 @@ Score, a MediaWiki extension for rendering musical scores with LilyPond.
 In earlier versions of this extension, LilyPond ran in safe mode.
 
 However, it is unsafe to rely on safe mode due to unfixed vulnerabilities,
-and indeed safe mode was removed in LilyPond version 2.23.12 and causes an
-error when used.
+and indeed safe mode was removed in LilyPond version 2.23.12.
+
+Score no longer attempts to run LilyPond in safe mode.
 
 It is recommended that LilyPond is run as an unprivileged user inside an
 isolated container with no external network access.
@@ -22,9 +23,9 @@ Instructions to set up a Shellbox server can be found at:
 
 Ensure the following additional packages are installed in your Shellbox container:
 
-* LilyPond (version 2.23.82 or later is required for SVG)
+* LilyPond (version 2.23.82 or later is required)
 * FluidSynth
-* A SoundFont for FluidSynth, for example Fluid (R3) General MIDI SoundFont (GM)
+* A SoundFont for FluidSynth, for example, Fluid (R3) General MIDI SoundFont (GM)
 * LAME
 
 If you are *not* using SVG output, you will also need to install:
@@ -76,7 +77,7 @@ $wgScoreEnvironment = [
 1. Change to the "extensions" directory of your MediaWiki installation.
 2. Clone this repository.
 3. Create a subdirectory named "lilypond" in your $wgUploadDirectory (usually
-   the directory named "images" in in your MediaWiki directory). Make sure
+   the directory named "images" in your MediaWiki directory). Make sure
    the directory is writable by your webserver. If you do not create this
    directory, the Score extension will attempt to create it for you with the
    rights available to it.
@@ -85,15 +86,13 @@ $wgScoreEnvironment = [
    wfLoadExtension( 'Score' );
    $wgScoreTrim = true;
 ```
-5. If you want SVG output, make sure your version of LilyPond is 2.23.82 or
-   newer, and add:
+5. If you want to use SVG output, add:
 ```php
    $wgScoreUseSvg = true;
-   $wgScoreSafeMode = false;
 ```
-   if you are not using SVG, you will need to ensure Score knows where to find
+   If you are not using SVG, you will need to ensure Score knows where to find
    Ghostscript and ImageMagick binaries (see below).
-6. If you are using shellbox to sandbox your lilypond processes, add:
+6. If you are using Shellbox to sandbox your lilypond processes, add:
 ```php
    $wgShellboxUrls['score'] = 'http://shellbox.internal/shellbox';
    $wgShellboxSecretKey = '... your secret key ...';
