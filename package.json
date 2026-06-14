@@ -11,7 +11,7 @@
 		"selenium-test": "npm run cypress:run"
 	},
 	"devDependencies": {
-		"@wikimedia/codex": "^2.4.0",
+		"@wikimedia/codex": "2.6.0",
 		"api-testing": "1.7.3",
 		"cypress": "^15.8.2",
 		"cypress-axe": "^1.7.0",
@@ -21,11 +21,11 @@
 		"grunt-banana-checker": "0.13.0",
 		"grunt-contrib-watch": "1.1.0",
 		"grunt-eslint": "24.3.0",
-		"grunt-stylelint": "0.20.1",
+		"grunt-stylelint": "0.21.0",
 		"jest": "^30.2.0",
 		"jest-environment-jsdom": "^30.2.0",
 		"npm-run-all": "^4.1.5",
-		"stylelint-config-wikimedia": "0.18.0",
+		"stylelint-config-wikimedia": "0.19.2",
 		"vue": "^3.5.34"
 	}
 }
