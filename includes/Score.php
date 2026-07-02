@@ -50,23 +50,23 @@ class Score {
 	/**
 	 * Version for cache invalidation.
 	 */
-	private const CACHE_VERSION = 1;
+	private const int CACHE_VERSION = 1;
 
 	/**
 	 * Cache expiry time for the LilyPond version
 	 */
-	private const VERSION_TTL = 3600;
+	private const int VERSION_TTL = 3600;
 
 	/**
 	 * Supported score languages.
 	 */
-	private const SUPPORTED_LANGS = [ 'lilypond', 'ABC' ];
+	private const array SUPPORTED_LANGS = [ 'lilypond', 'ABC' ];
 
 	/**
 	 * Supported note languages.
 	 * Key is LilyPond filename. Value is language code
 	 */
-	public const SUPPORTED_NOTE_LANGUAGES = [
+	public const array SUPPORTED_NOTE_LANGUAGES = [
 		'arabic' => 'ar',
 		'catalan' => 'ca',
 		'deutsch' => 'de',
@@ -84,20 +84,15 @@ class Score {
 	/**
 	 * Default language used for notes.
 	 */
-	private const DEFAULT_NOTE_LANGUAGE = 'nederlands';
+	private const string DEFAULT_NOTE_LANGUAGE = 'nederlands';
 
 	/**
 	 * LilyPond version string.
 	 * It defaults to null and is set the first time it is required.
-	 * @var string|null
 	 */
-	private static $lilypondVersion = null;
+	private static ?string $lilypondVersion = null;
 
-	/**
-	 * FileBackend instance cache
-	 * @var FileBackend|null
-	 */
-	private static $backend;
+	private static ?FileBackend $backend = null;
 
 	/**
 	 * Throws proper ScoreException in case of failed shell executions.
@@ -123,10 +118,9 @@ class Score {
 	}
 
 	/**
-	 * @return string
 	 * @throws ScoreException if LilyPond could not be executed properly.
 	 */
-	public static function getLilypondVersion() {
+	public static function getLilypondVersion(): string {
 		global $wgScoreLilyPondFakeVersion;
 
 		if ( strlen( $wgScoreLilyPondFakeVersion ) ) {
@@ -153,9 +147,8 @@ class Score {
 	 * Determines the version of LilyPond in use without caching
 	 *
 	 * @throws ScoreException if LilyPond could not be executed properly.
-	 * @return string
 	 */
-	private static function fetchLilypondVersion() {
+	private static function fetchLilypondVersion(): string {
 		global $wgScoreLilyPond, $wgScoreEnvironment;
 
 		$result = self::boxedCommand()
@@ -185,10 +178,9 @@ class Score {
 	 * callers, since the callers generally need to avoid writing input files.
 	 * We check twice to be safe.
 	 *
-	 * @return BoxedCommand
 	 * @throws ScoreDisabledException
 	 */
-	private static function boxedCommand() {
+	private static function boxedCommand(): BoxedCommand {
 		global $wgScoreDisableExec;
 
 		if ( $wgScoreDisableExec ) {
@@ -211,7 +203,7 @@ class Score {
 	 * @throws ScoreException if the directory does not exist and could not
 	 * 	be created.
 	 */
-	private static function createDirectory( $path, $mode = null ) {
+	private static function createDirectory( string $path, ?int $mode = null ) {
 		if ( !is_dir( $path ) ) {
 			$rc = wfMkdirParents( $path, $mode, __METHOD__ );
 			if ( !$rc ) {
@@ -220,10 +212,7 @@ class Score {
 		}
 	}
 
-	/**
-	 * @return bool|string
-	 */
-	private static function getBaseUrl() {
+	private static function getBaseUrl(): bool|string {
 		global $wgScorePath, $wgUploadPath;
 		if ( $wgScorePath === false ) {
 			return "{$wgUploadPath}/lilypond";
@@ -232,10 +221,7 @@ class Score {
 		return $wgScorePath;
 	}
 
-	/**
-	 * @return FileBackend
-	 */
-	public static function getBackend() {
+	public static function getBackend(): FileBackend {
 		global $wgScoreFileBackend;
 
 		if ( $wgScoreFileBackend ) {
@@ -440,9 +426,7 @@ class Score {
 
 		// Mark the page as using the score extension, it makes easier
 		// to track all those pages.
-		if ( $parser ) {
-			$parser->addTrackingCategory( 'score-use-category' );
-		}
+		$parser?->addTrackingCategory( 'score-use-category' );
 
 		return $html;
 	}
@@ -881,11 +865,8 @@ class Score {
 
 	/**
 	 * Add an input file from the scripts directory
-	 *
-	 * @param BoxedCommand $command
-	 * @param string $script
 	 */
-	private static function addScript( BoxedCommand $command, string $script ) {
+	private static function addScript( BoxedCommand $command, string $script ): void {
 		$command->inputFileFromFile( "scripts/$script",
 			__DIR__ . "/../scripts/$script" );
 	}
@@ -894,11 +875,9 @@ class Score {
 	 * Get error information from the output returned by scripts/generatePngAndMidi.sh
 	 * and throw a relevant error.
 	 *
-	 * @param string $stdout
-	 * @param array $options
 	 * @throws ScoreException
 	 */
-	private static function throwCompileException( $stdout, $options ): never {
+	private static function throwCompileException( string $stdout, array $options ): never {
 		global $wgScoreDebugOutput;
 
 		$message = self::extractMessage( $stdout );
@@ -925,10 +904,9 @@ class Score {
 	 * Get error information from the output returned by scripts/synth.sh
 	 * and throw a relevant error.
 	 *
-	 * @param string $stdout
 	 * @throws ScoreException
 	 */
-	private static function throwSynthException( $stdout ): never {
+	private static function throwSynthException( string $stdout ): never {
 		$message = self::extractMessage( $stdout );
 		if ( !$message ) {
 			$message = [ 'score-audioconversionerr', [] ];
@@ -948,7 +926,7 @@ class Score {
 	 * @param string &$stdout
 	 * @return array|null
 	 */
-	private static function extractMessage( &$stdout ) {
+	private static function extractMessage( string &$stdout ) {
 		$filteredStdout = '';
 		$messageParams = [];
 		foreach ( explode( "\n", $stdout ) as $line ) {
@@ -993,16 +971,12 @@ class Score {
 	 * @param string $filename
 	 * @return array of ints (width, height)
 	 */
-	private static function imageSize( $filename ) {
+	private static function imageSize( string $filename ): array {
 		[ $width, $height ] = getimagesize( $filename );
 		return [ $width, $height ];
 	}
 
-	/**
-	 * @param array $paperConfig
-	 * @return string
-	 */
-	private static function getPaperCode( $paperConfig = [] ) {
+	private static function getPaperCode( array $paperConfig = [] ): string {
 		$config = array_merge( [
 			"indent" => "0\\mm",
 		], $paperConfig );
@@ -1027,15 +1001,15 @@ class Score {
 	 *
 	 * @throws ScoreException if determining the LilyPond version fails.
 	 */
-	private static function embedLilypondCode( $lilypondCode, $noteLanguage, $paperCode ) {
+	private static function embedLilypondCode( string $lilypondCode, string $noteLanguage, string $paperCode ): string {
 		$version = self::getLilypondVersion();
 
 		// Check if parameters have already been supplied (hybrid-raw mode)
 		$options = "";
-		if ( strpos( $lilypondCode, "\\layout" ) === false ) {
+		if ( !str_contains( $lilypondCode, "\\layout" ) ) {
 			$options .= "\\layout { }\n";
 		}
-		if ( strpos( $lilypondCode, "\\midi" ) === false ) {
+		if ( !str_contains( $lilypondCode, "\\midi" ) ) {
 			$options .= <<<LY
 	\\midi {
 		\\context { \Score tempoWholesPerMinute = #(ly:make-moment 100 4) }
@@ -1045,7 +1019,7 @@ LY;
 
 		/* Raw code. In Scheme, ##f is false and ##t is true. */
 		/* Set the default MIDI tempo to 100, 60 is a bit too slow */
-		$raw = <<<LILYPOND
+		return <<<LILYPOND
 \\header {
 	tagline = ##f
 }
@@ -1059,8 +1033,6 @@ $options
 }
 $paperCode
 LILYPOND;
-
-		return $raw;
 	}
 
 	/**
@@ -1073,7 +1045,9 @@ LILYPOND;
 	 *
 	 * @throws ScoreException if an error occurs.
 	 */
-	private static function generateAudio( $sourceFile, $options, $remoteDest, &$metaData ) {
+	private static function generateAudio(
+		string $sourceFile, array $options, string $remoteDest, array &$metaData
+	): void {
 		global $wgScoreFluidsynth, $wgScoreSoundfont, $wgScoreLame, $wgScoreDisableExec,
 			$wgScoreEnvironment, $wgShellboxShell, $wgPhpCli;
 
@@ -1152,7 +1126,7 @@ LILYPOND;
 	 * @param string $stdout The script output
 	 * @return float duration in seconds
 	 */
-	private static function getDurationFromScriptOutput( $stdout ) {
+	private static function getDurationFromScriptOutput( string $stdout ): float {
 		if ( preg_match( '/^wavDuration: ([0-9.]+)$/m', $stdout, $m ) ) {
 			return (float)$m[1];
 		} else {
@@ -1165,7 +1139,7 @@ LILYPOND;
 	 *
 	 * @param string $type Type of shellout
 	 */
-	private static function recordShellout( $type ) {
+	private static function recordShellout( string $type ): void {
 		$statsd = MediaWikiServices::getInstance()->getStatsdDataFactory();
 		$statsd->increment( "score.$type" );
 	}
@@ -1175,7 +1149,7 @@ LILYPOND;
 	 *
 	 * @param ScoreException $ex
 	 */
-	private static function recordError( ScoreException $ex ) {
+	private static function recordError( ScoreException $ex ): void {
 		$key = $ex->getStatsdKey();
 		if ( $key === false ) {
 			return;
@@ -1191,7 +1165,7 @@ LILYPOND;
 	 *
 	 * @return bool true on success, false on error
 	 */
-	private static function eraseDirectory( $dir ) {
+	private static function eraseDirectory( string $dir ): bool {
 		if ( file_exists( $dir ) ) {
 			// @phan-suppress-next-line PhanPluginUseReturnValueInternalKnown
 			array_map( 'unlink', glob( "$dir/*", GLOB_NOSORT ) );
@@ -1211,7 +1185,7 @@ LILYPOND;
 	 *
 	 * @param string $msg message to log.
 	 */
-	private static function debug( $msg ) {
+	private static function debug( string $msg ): void {
 		wfDebugLog( 'Score', $msg );
 	}
 

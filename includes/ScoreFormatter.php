@@ -62,21 +62,14 @@ class ScoreFormatter implements ValueFormatter {
 
 		$valueString = $value->getValue();
 
-		switch ( $this->format ) {
-			case SnakFormatter::FORMAT_PLAIN:
-				return $valueString;
-			case SnakFormatter::FORMAT_WIKI:
-				return "<score>$valueString</score>";
-			default:
-				return $this->formatAsHtml( $valueString );
-		}
+		return match ( $this->format ) {
+			SnakFormatter::FORMAT_PLAIN => $valueString,
+			SnakFormatter::FORMAT_WIKI => "<score>$valueString</score>",
+			default => $this->formatAsHtml( $valueString ),
+		};
 	}
 
-	/**
-	 * @param string $valueString
-	 * @return string
-	 */
-	private function formatAsHtml( $valueString ) {
+	private function formatAsHtml( string $valueString ): string {
 		$args = [];
 
 		$args['line_width_inches'] = $this->config->get( 'WikibaseMusicalNotationLineWidthInches' );
@@ -100,30 +93,22 @@ class ScoreFormatter implements ValueFormatter {
 	/**
 	 * Constructs a detailed HTML rendering for use in diff views.
 	 *
-	 * @param string $valueHtml
-	 * @param string $valueString
-	 *
 	 * @return string HTML
 	 */
-	private function formatDetails( $valueHtml, $valueString ) {
-		$detailsHtml = '';
-		$detailsHtml .= Html::rawElement( 'h4',
+	private function formatDetails( string $valueHtml, string $valueString ): string {
+		return Html::rawElement( 'h4',
 			[ 'class' => 'wb-details wb-musical-notation-details wb-musical-notation-rendered' ],
 			$valueHtml
-		);
-
-		$detailsHtml .= Html::rawElement( 'div',
+		) . Html::rawElement( 'div',
 			[ 'class' => 'wb-details wb-musical-notation-details' ],
 			Html::element( 'code', [], $valueString )
 		);
-
-		return $detailsHtml;
 	}
 
 	/**
 	 * @return string One of the SnakFormatter::FORMAT_... constants.
 	 */
-	public function getFormat() {
+	public function getFormat(): string {
 		return $this->format;
 	}
 

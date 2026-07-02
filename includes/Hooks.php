@@ -5,7 +5,6 @@ namespace MediaWiki\Extension\Score;
 use MediaWiki\Config\Config;
 use MediaWiki\MainConfigNames;
 use MediaWiki\Parser\Hook\ParserFirstCallInitHook;
-use MediaWiki\Parser\Parser;
 use MediaWiki\Specials\Hook\SoftwareInfoHook;
 
 class Hooks implements
@@ -17,9 +16,7 @@ class Hooks implements
 	) {
 	}
 
-	/**
-	 * @param Parser $parser
-	 */
+	/** @inheritDoc */
 	public function onParserFirstCallInit( $parser ) {
 		global $wgScoreTrim;
 		if ( $this->config->get( 'ScoreUseSvg' ) ) {

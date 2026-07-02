@@ -27,10 +27,10 @@ class LilypondErrorMessageBeautifier {
 	/**
 	 * Lilyponds error reporting line regex, only the line with the error line, column and message.
 	 */
-	private const LILYPOND_ERR_REGEX = '/\.ly:(?<line>\d+):(?<column>\d+): error: (?<message>.+)$/m';
+	private const string LILYPOND_ERR_REGEX = '/\.ly:(?<line>\d+):(?<column>\d+): error: (?<message>.+)$/m';
 
-	private const BEAUTIFIED_ERR_FORMAT = "line %d - column %d:\n%s";
-	private const BEAUTIFIED_ERR_SEPARATOR = "\n--------\n";
+	private const string BEAUTIFIED_ERR_FORMAT = "line %d - column %d:\n%s";
+	private const string BEAUTIFIED_ERR_SEPARATOR = "\n--------\n";
 
 	/**
 	 * @param int $scoreFirstLineOffset
@@ -49,12 +49,8 @@ class LilypondErrorMessageBeautifier {
 	 * - adjusting line numbers fit the user's input
 	 * - stripping out all echoed erroneous code
 	 * - stripping out unnecessary keywords
-	 *
-	 * @param string $message
-	 *
-	 * @return string
 	 */
-	public function beautifyMessage( $message ) {
+	public function beautifyMessage( string $message ): string {
 		if ( !preg_match_all(
 			self::LILYPOND_ERR_REGEX,
 			$message,
@@ -73,11 +69,7 @@ class LilypondErrorMessageBeautifier {
 		return implode( self::BEAUTIFIED_ERR_SEPARATOR, $beautifiedMessages );
 	}
 
-	/**
-	 * @param array $errorMatch
-	 * @return string
-	 */
-	private function formatErrorMatchLine( array $errorMatch ) {
+	private function formatErrorMatchLine( array $errorMatch ): string {
 		return sprintf(
 			self::BEAUTIFIED_ERR_FORMAT,
 			intval( $errorMatch[ 'line' ] ) - $this->scoreFirstLineOffset,

@@ -16,7 +16,6 @@ class WikibaseClientHookHandler implements
 
 	/**
 	 * Add Datatype "Musical notation" to the Wikibase Client
-	 * @param array[] &$dataTypeDefinitions
 	 */
 	public function onWikibaseClientDataTypes( array &$dataTypeDefinitions ): void {
 		/**

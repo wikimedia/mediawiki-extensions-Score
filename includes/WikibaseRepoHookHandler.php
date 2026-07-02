@@ -22,7 +22,6 @@ class WikibaseRepoHookHandler implements
 
 	/**
 	 * Add Datatype "Musical notation" to the Wikibase Repository
-	 * @param array[] &$dataTypeDefinitions
 	 */
 	public function onWikibaseRepoDataTypes( array &$dataTypeDefinitions ): void {
 		/**

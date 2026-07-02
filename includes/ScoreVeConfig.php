@@ -11,7 +11,7 @@ class ScoreVeConfig {
 	 * @param RL\Context $context
 	 * @return string JavaScript code
 	 */
-	public static function makeScript( RL\Context $context ) {
+	public static function makeScript( RL\Context $context ): string {
 		$utils = MediaWikiServices::getInstance()->getLanguageNameUtils();
 		$supportedLangs = [];
 		foreach ( Score::SUPPORTED_NOTE_LANGUAGES as $lilyName => $code ) {
