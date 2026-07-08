@@ -27,7 +27,7 @@ namespace MediaWiki\Extension\Score;
 
 use Exception;
 use MediaWiki\Html\Html;
-use MediaWiki\Title\Title;
+use MediaWiki\Page\PageReferenceValue;
 
 /**
  * Score exception
@@ -55,7 +55,7 @@ class ScoreException extends Exception {
 		return $this->getBox(
 			wfMessage( $this->getMessage(), ...$this->args )
 				->inContentLanguage()
-				->title( Title::makeTitle( NS_SPECIAL, 'Badtitle' ) )
+				->page( PageReferenceValue::localReference( NS_SPECIAL, 'Badtitle' ) )
 				->parse()
 		);
 	}
