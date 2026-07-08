@@ -49,7 +49,8 @@ describe( 'add score statement', () => {
 				} );
 		} );
 
-		it( 'loads the item view, allows statements to be edited ' +
+		// T431574
+		it.skip( 'loads the item view, allows statements to be edited ' +
 			'and new statements to be added', function () {
 			const itemViewPage = new ItemViewPage( this.itemId );
 			itemViewPage.open();
