@@ -47,10 +47,11 @@ describe( 'add score statement', () => {
 					cy.task( 'MwApi:GetEntityData', { entityId: itemId } )
 						.as( 'item' );
 				} );
+			cy.task( 'MwApi:CreateProperty', { datatype: 'musical-notation', label: Util.getTestString( 'score-property' ) } )
+				.as( 'secondPropertyId' );
 		} );
 
-		// T431574
-		it.skip( 'loads the item view, allows statements to be edited ' +
+		it( 'loads the item view, allows statements to be edited ' +
 			'and new statements to be added', function () {
 			const itemViewPage = new ItemViewPage( this.itemId );
 			itemViewPage.open();
@@ -77,7 +78,7 @@ describe( 'add score statement', () => {
 
 			const addStatementFormPage = new AddStatementFormPage();
 			addStatementFormPage.propertyLookup().should( 'exist' );
-			cy.get<string>( '@propertyId' ).then( ( propertyId ) => {
+			cy.get<string>( '@secondPropertyId' ).then( ( propertyId ) => {
 				addStatementFormPage.setProperty( propertyId );
 			} );
 			addStatementFormPage.publishButton().should( 'be.disabled' );
