@@ -39,7 +39,6 @@
 	"score-page": "Bogga $1",
 	"score-pregreplaceerr": "Beddelka muujinta caadiga ah ee PCRE wuu fashilmay",
 	"score-readerr": "Lama akhrin karo faylka $1.",
-	"score-safe-mode": "Habka badbaadada waxaa laga saaray LilyPond laga bilaabo nooca 2.23.12. Faylasha LilyPond waxay fulin karaan koodh aan xaddidnayn. Fadlan bacaadka LilyPond adigoo isticmaalaya [https://www.mediawiki.org/wiki/Shellbox Shellbox], kuna dejiso $wgScoreSafeMode = false.",
 	"score-scripterr": "Lama ordi karo script-ka fog: $1 wuxuu ka baxay isagoo wata koodhka xaaladda $2\n$3",
 	"score-soundfontnotexists": "Soundfont lama helin: $1 ma jiro. Hubi in <code>$wgScoreSoundfont</code> si sax ah loo dejiyey.",
 	"score-trimerr": "Sawirka lama gooyn karo:\n$1\nHaddii dhibaatadani sii socoto, dhig <code>$wgScoreTrim=false</code>.",

@@ -44,7 +44,6 @@
 	"score-page": "Pàgina $1",
 	"score-pregreplaceerr": "Ha fallat la substitució de l'expressió regular PCRE",
 	"score-readerr": "No s'ha pogut llegir el fitxer $1.",
-	"score-safe-mode": "El mode segur s'ha eliminat de LilyPond a partir de la versió 2.23.12. Els fitxers de LilyPond poden executar codi arbitrari. Instal·leu LilyPond en un mode de proves mitjançant [https://www.mediawiki.org/wiki/Shellbox Shellbox] i definiu $wgScoreSafeMode = false.",
 	"score-scripterr": "No s'ha pogut executar l'script remot: $1 ha finalitzat amb un codi d'estat $2\n$3",
 	"score-soundfontnotexists": "No s'ha pogut trobar Soundfont: $1 no existeix. Assegureu-vos que <code>$wgScoreSoundfont</code> estigui configurat correctament.",
 	"score-trimerr": "No s'ha pogut retallar la imatge:\n$1\nDefineix <code>$wgScoreTrim=false</code> si aquest problema persisteix.",

@@ -46,7 +46,6 @@
 	"score-page": "Sida $1",
 	"score-pregreplaceerr": "Ersättning med PCRE reguljärt uttryck misslyckades",
 	"score-readerr": "Det gick inte att läsa filen $1.",
-	"score-safe-mode": "Säkert läge har tagits bort från LilyPond från och med version 2.23.12. LilyPond-filer kan köra arbiträr kod. Försätt din LiyPond installation i sandlådeläge med [https://www.mediawiki.org/wiki/Shellbox Shellbox] och ange $wgScoreSafeMode = false.",
 	"score-scripterr": "Gick inte att köra remote skript. $1 lämnade med statuskod $2\n$3",
 	"score-soundfontnotexists": "Soundfont kunde inte hittas. $1 existerar inte. Se till att <code>$wgScoreSoundfont</code> är inställd rätt.",
 	"score-trimerr": "Bilden kunde inte trimmas:\n$1\nAnge <code>$wgScoreTrim=false</code> om problemet kvarstår.",

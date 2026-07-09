@@ -41,7 +41,6 @@
 	"score-page": "Side $1",
 	"score-pregreplaceerr": "PCRE-regulæruttrykkerstatning lyktes ikke.",
 	"score-readerr": "Klarte ikek å lese filen $1.",
-	"score-safe-mode": "Sikkerhetsmodusen har blitt fjernet fra LilyPond per versjon 2.23.12. LilyPond-filer kan kjøre vilkårlig kode. Kjør LilyPond-installasjonen din i ei sandkasse ved å bruke [https://www.mediawiki.org/wiki/Shellbox Shellbox] og sett $wgScoreSafeMode = false.",
 	"score-scripterr": "Kunne ikke kjøre eksternt skript: $1 avsluttet med statuskoden $2.\n$3",
 	"score-soundfontnotexists": "Soundfont ble ikke funnet: $1 finnes ikke. Sjekk at <code>$wgScoreSoundfont</code> er satt riktig.",
 	"score-trimerr": "Bildet kunne ikke beskjæres:\n$1\nHvis problemet vedvarer kan du prøve å sette <code>$wgScoreTrim=false</code>.",

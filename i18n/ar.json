@@ -44,7 +44,6 @@
 	"score-page": "صفحة $1",
 	"score-pregreplaceerr": "فشل استبدال التعبير النمطي PCRE",
 	"score-readerr": "غير قادر على قراءة الملف $1.",
-	"score-safe-mode": "تمت إزالة الوضع الآمن من LilyPond اعتبارًا من الإصدار 2.23.12. يمكن لملفات LilyPond تشغيل تعليمات برمجية عشوائية. يرجى وضع الحماية لتثبيت LilyPond الخاص بك باستخدام [https://www.mediawiki.org/wiki/Shellbox Shellbox] وتعيين $ wgScoreSafeMode = false.",
 	"score-scripterr": "تعذر تشغيل البرنامج النصي عن بعد: تم الخروج من $1 برمز الحالة $2\n$3",
 	"score-soundfontnotexists": "تعذر العثور على Soundfont: $1 غير موجود; تأكد من تعيين <code>$wgScoreSoundfont</code> بشكل صحيح.",
 	"score-trimerr": "تعذر قطع الصورة:\n$1\nعين <code>$wgScoreTrim=false</code> إذا استمرت هذه المشكلة.",

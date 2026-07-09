@@ -42,7 +42,6 @@
 	"score-page": "Strana $1",
 	"score-pregreplaceerr": "Chyba při náhradě pomocí regulárního výrazu PCRE",
 	"score-readerr": "Nepodařilo se přečíst soubor $1.",
-	"score-safe-mode": "Bezpečný režim byl z LilyPondu odstraněn ve verzi 2.23.12. Soubory LilyPond můžou provádět libovolný kód. Zabezpečte prosím svou instalaci LilyPondu pomocí [https://www.mediawiki.org/wiki/Shellbox Shellboxu] a nastavte $wgScoreSafeMode = false.",
 	"score-scripterr": "Spuštění vzdáleného skriptu se nezdařilo: $1 byl ukončen se stavovým kódem $2\n$3",
 	"score-soundfontnotexists": "Nebyl nalezen Soundfont: $1 neexistuje. Ověřte, že máte správně nastaveno <code>$wgScoreSoundfont</code>.",
 	"score-trimerr": "Obrázek se nepodařilo oříznout:\n$1\nPokud problém přetrvává, nastavte <code>$wgScoreTrim=false</code>.",
