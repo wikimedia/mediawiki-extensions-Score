@@ -5,7 +5,8 @@
 			"Aishik Rehman",
 			"Muktogayn",
 			"Rasal Lia",
-			"আফতাবুজ্জামান"
+			"আফতাবুজ্জামান",
+			"Bodhisattwa"
 		]
 	},
 	"score-abc2lynotexecutable": "ABC থেকে LilyPond রূপান্তরকারী কার্যকর করা যায়নি: $1 কার্যকর করার যোগ্য ফাইল নয়। নিশ্চিত করুন <code>$wgScoreAbc2Ly</code> সঠিকভাবে নির্ধারণ করা হয়েছে।",
@@ -31,7 +32,7 @@
 	"score-use-category": "স্কোর এক্সটেনশন ব্যবহার করা পাতা",
 	"score-versionerr": "LilyPond সংস্করণ লাভ করা যায়নি:\n$1",
 	"score-visualeditor-mwscoredialog-audio": "একটি অডিও ফাইল অন্তর্ভুক্ত করুন (ডিফল্ট অনুযায়ী স্বয়ংক্রিয়ভাবে উত্পন্ন)",
-	"score-visualeditor-mwscoredialog-card-advanced": "উচ্চতর",
+	"score-visualeditor-mwscoredialog-card-advanced": "উন্নত",
 	"score-visualeditor-mwscoredialog-card-audio": "অডিও",
 	"score-visualeditor-mwscoredialog-lang": "ভাষা",
 	"score-visualeditor-mwscoredialog-notelanguage": "স্বরলিপির ভাষা",

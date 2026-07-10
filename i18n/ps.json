@@ -1,9 +1,26 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ahmed-Najib-Biabani-Ibrahimkhel"
+			"Ahmed-Najib-Biabani-Ibrahimkhel",
+			"شاه زمان پټان"
 		]
 	},
+	"score-deprecated-category": "هغه مخونه چې د رد شويو نومرو ځانگړي‌کونگ کاروي",
+	"score-desc": "ليلي‌پونډ سره د موسيقۍ نومرو وړاندې‌کولو لپاره نښلن ورگډوي",
+	"score-error-category": "هغه مخونه چې د نومرو وړاندې‌کولو تېروتنې لري",
 	"score-page": "$1 مخ",
-	"score-visualeditor-mwscoredialog-title": "موسيقي نښې"
+	"score-readerr": "$1 دوتنه نشي لوستل کېدای.",
+	"score-use-category": "هغه مخونه چې د نومرو شاتاړی کاروي",
+	"score-visualeditor-mwscoredialog-card-advanced": "پرمختللی",
+	"score-visualeditor-mwscoredialog-card-audio": "غږيز",
+	"score-visualeditor-mwscoredialog-lang": "ژبه",
+	"score-visualeditor-mwscoredialog-lang-abc": "ای‌بي‌سي",
+	"score-visualeditor-mwscoredialog-lang-lilypond": "ليلي‌پونډ",
+	"score-visualeditor-mwscoredialog-notelanguage": "د نښې ژبه",
+	"score-visualeditor-mwscoredialog-override-audio": "شته غږيزه دوتنه وکاروئ",
+	"score-visualeditor-mwscoredialog-override-audio-placeholder": "د شته غږيزې دوتنې نوم",
+	"score-visualeditor-mwscoredialog-override-midi": "شته ميدي دوتنه وکاروئ",
+	"score-visualeditor-mwscoredialog-title": "موسيقي نښې",
+	"datatypes-type-musical-notation": "د موسيقۍ نښه",
+	"wikibase-listdatatypes-musical-notation-head": "د موسيقۍ نښه"
 }
