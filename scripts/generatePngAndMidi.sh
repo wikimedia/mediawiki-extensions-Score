@@ -4,7 +4,6 @@
 
 export SCORE_ABC2LY="${SCORE_ABC2LY:-abc2ly}"
 export SCORE_LILYPOND="${SCORE_LILYPOND:-lilypond}"
-export SCORE_SAFE="${SCORE_SAFE:-yes}"
 export SCORE_GHOSTSCRIPT="${SCORE_GHOSTSCRIPT:-gs}"
 export SCORE_CONVERT="${SCORE_CONVERT:-convert}"
 export SCORE_TRIM="${SCORE_TRIM:-no}"
@@ -52,12 +51,6 @@ runLilypond() {
 	if [ ! -x "$SCORE_LILYPOND" ]; then
 		errorExit score-notexecutable "$SCORE_LILYPOND"
 	fi
-	if [ "$SCORE_SAFE" != no ]; then
-		# Safe mode was removed in LilyPond 2.23.12 and causes an error when used.
-		mode="-dsafe"
-	else
-		mode=""
-	fi
 
 	# LilyPond with libcairo (since 2.23.82) generates cropped PNG and SVG directly.
 	if [ "$SCORE_USESVG" = yes ]; then
@@ -74,7 +67,6 @@ runLilypond() {
 	LILYPOND_GC_YIELD=25 \
 	traceExec "$SCORE_LILYPOND" \
 		-dmidi-extension=midi \
-		"$mode" \
 		$svg \
 		--ps \
 		--header=texidoc \
