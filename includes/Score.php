@@ -582,7 +582,7 @@ class Score {
 				'alt' => $code,
 			];
 			if ( $wgScoreUseSvg ) {
-				$attribs['srcset'] = "{$options['dest_url']}/$imageSvgFileName 1x";
+				$attribs['src'] = "{$options['dest_url']}/$imageSvgFileName";
 			}
 			$link = Html::rawElement( 'img', $attribs );
 		} elseif ( isset( $existingFiles[$multi1FileName] ) ) {
@@ -607,7 +607,7 @@ class Score {
 				];
 				if ( $wgScoreUseSvg ) {
 					$svgFileName = "{$options['file_name_prefix']}-$i.svg";
-					$attribs['srcset'] = "{$options['dest_url']}/$svgFileName 1x";
+					$attribs['src'] = "{$options['dest_url']}/$svgFileName";
 				}
 				$link .= Html::rawElement( 'img', $attribs );
 			}
