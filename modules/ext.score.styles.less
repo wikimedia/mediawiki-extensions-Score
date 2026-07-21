@@ -8,6 +8,7 @@
 	font-style: italic;
 }
 
-.mw-ext-score img {
+// Using :not to preserve styling of cached HTML, T431148
+.mw-ext-score:not( .mw-ext-score-svg ) img {
 	background: @background-color-base-fixed;
 }

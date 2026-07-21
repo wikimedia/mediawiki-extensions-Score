@@ -651,6 +651,13 @@ class Score {
 			'class' => 'mw-ext-score noresize'
 		];
 
+		// support SVG dark mode output, T431148
+		if ( $wgScoreUseSvg ) {
+			$attributes['class'] .= ' mw-ext-score-svg skin-invert';
+		} else {
+			$attributes['class'] .= ' mw-ext-score-png';
+		}
+
 		if ( $options['override_midi']
 			|| isset( $existingFiles["{$options['file_name_prefix']}.midi"] ) ) {
 			$attributes['data-mw-midi'] = $options['override_midi'] ?
