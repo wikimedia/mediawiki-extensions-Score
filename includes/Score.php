@@ -565,6 +565,9 @@ class Score {
 						// No, need to fetch it from the backend
 						$sourceFileRef = $backend->getLocalReference(
 							[ 'src' => "{$options['dest_storage_path']}/$midiFileName" ] );
+						if ( !$sourceFileRef ) {
+							throw new ScoreException( 'score-audioconversionerr', [ $sourcePath ] );
+						}
 						$sourcePath = $sourceFileRef->getPath();
 					}
 					self::generateAudio( $sourcePath, $options, $audioPath, $metaData );
