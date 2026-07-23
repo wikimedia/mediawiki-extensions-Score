@@ -166,6 +166,11 @@ The following attributes are available:
           below). Its use is similar to the use of the override_midi attribute
           (see above).
 
+* Attribute: line_width_inches
+  - Allowed values: positive number, can have decimal places
+  - Effect: set the width of the lines in the generated score, by setting the
+          `line-width` directive in the LilyPond paper settings.
+
 * Attribute: raw
   - Effect: If included in the tag, the score code is interpreted as a complete
           LilyPond file. Use this option if you want to create more complex
