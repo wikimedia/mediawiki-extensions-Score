@@ -629,13 +629,12 @@ class Score {
 						]
 					) .
 					"<div>" .
-					wfMessage( 'score-audio-alt' )
-						->rawParams(
-							Html::element( 'a', [ 'href' => $audioUrl ],
-								wfMessage( 'score-audio-alt-link' )->text()
-							)
+					wfMessage( 'score-audio-fallback' )
+						->params(
+							(string)MediaWikiServices::getInstance()->getUrlUtils()
+								->expand( $audioUrl, PROTO_CURRENT )
 						)
-						->escaped() .
+						->parse() .
 					'</div>'
 				) .
 				'</div>';
