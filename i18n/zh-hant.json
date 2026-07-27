@@ -18,8 +18,6 @@
 	"score-abcconversionerr": "無法將 ABC 檔案轉換成 LilyPond 格式：\n$1",
 	"score-audioconversionerr": "無法將 MIDI 轉換為 MP3：\n$1",
 	"score-audiooverridenotfound": "您使用 override_audio 參數指定的檔案 \"<nowiki>$1</nowiki>\" 不存在。",
-	"score-audio-alt": "音訊播放在您的瀏覽器上不支援。您可以$1。",
-	"score-audio-alt-link": "下載音訊檔",
 	"score-backend-error": "無法複製產生的檔案至其最後位置：\n$1",
 	"score-compilererr": "無法編譯 LilyPond 輸入檔：\n$1",
 	"score-convertoverrideaudio": "您不能在請求音訊呈現的同時指定 override_audio。",

@@ -15,8 +15,6 @@
 	"score-abcconversionerr": "Det går inte att konvertera ABC-filen till LilyPond-formatet: $1",
 	"score-audioconversionerr": "Kunde inte konvertera MIDI till MP3:\n$1",
 	"score-audiooverridenotfound": "Filen \"<nowiki>$1</nowiki>\" du specificerade med override_audio existerar inte.",
-	"score-audio-alt": "Ljuduppspelning stöds inte i din webbläsare. Du kan $1",
-	"score-audio-alt-link": "Ladda ner ljudfilen",
 	"score-backend-error": "Det går inte att kopiera de genererade filerna till sin slutliga plats:\n$1",
 	"score-compilererr": "Det gick inte att kompilera LilyPond-indatafilen:\n$1",
 	"score-convertoverrideaudio": "Du kan inte begära ljud-framställning och ange override_audio samtidigt.",

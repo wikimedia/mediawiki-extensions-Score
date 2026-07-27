@@ -14,8 +14,6 @@
 	"score-abcconversionerr": "ABC dosyası LilyPond biçimine dönüştürülemiyor:\n$1",
 	"score-audioconversionerr": "MIDI MP3'e dönüştürülemiyor:\n$1",
 	"score-audiooverridenotfound": "override_audio ile belirttiğiniz \"<nowiki>$1</nowiki>\" dosyası mevcut değil.",
-	"score-audio-alt": "Tarayıcınız ses oynatma özelliğini desteklemiyor. $1 yapabilirsiniz.",
-	"score-audio-alt-link": "Ses dosyasını indir",
 	"score-backend-error": "Oluşturulan dosyalar nihai konumlarına kopyalanamıyor:\n$1",
 	"score-compilererr": "LilyPond giriş dosyası derlenemiyor:\n$1",
 	"score-convertoverrideaudio": "Ses oluşturma isteğinde bulunamaz ve aynı anda override_audio belirtemezsiniz.",

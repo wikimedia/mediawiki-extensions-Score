@@ -9,8 +9,6 @@
 	"score-abcconversionerr": "Nije moguće pretvoriti ABC datoteku u LilyPond format:\n$1",
 	"score-audioconversionerr": "Nije moguće pretvoriti MIDI u MP3:\n$1",
 	"score-audiooverridenotfound": "Datoteka \"<nowiki> $1</nowiki> \" koji ste naveli s override_audio ne postoji.",
-	"score-audio-alt": "Reprodukcija zvuka nije podržana u vašem pregledniku. Možete $1.",
-	"score-audio-alt-link": "preuzmi zvukovnu datoteku",
 	"score-backend-error": "Nije moguće kopirati generirane datoteke na njihovo odredišno mjesto:\n$1",
 	"score-compilererr": "Nije moguće sastaviti ulaznu LilyPond datoteku:\n$1",
 	"score-deprecated-category": "Stranice koje rabe zastarjele atribute partitura",

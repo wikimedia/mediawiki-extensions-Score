@@ -8,7 +8,6 @@
 		]
 	},
 	"score-audioconversionerr": "MIDI konnt net an MP3 ëmgewandelt ginn:\n$1",
-	"score-audio-alt-link": "den Audiofichier eroflueden",
 	"score-download-midi-file": "MDI-Fichier eroflueden",
 	"score-download-source-file": "Lilypond-Fichier eroflueden",
 	"score-nocontent": "De Fichier $1 konnt net vum Server geluede ginn.",

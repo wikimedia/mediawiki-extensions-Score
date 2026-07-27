@@ -11,8 +11,6 @@
 	"score-abcconversionerr": "Non se puido converter o ficheiro ABC ao formato LilyPond:\n$1",
 	"score-audioconversionerr": "Non se puido converter de MIDI a MP3:\n$1",
 	"score-audiooverridenotfound": "O ficheiro «<nowiki>$1</nowiki>» especificado con override_audio non existe.",
-	"score-audio-alt": "O seu navegador non soporta a reprodución de son. Pode $1.",
-	"score-audio-alt-link": "descargar o ficheiro de son",
 	"score-backend-error": "Non se puideron copiar os ficheiros xerados á súa localización final:\n$1",
 	"score-compilererr": "Non se puido compilar o ficheiro de entrada LilyPond:\n$1",
 	"score-convertoverrideaudio": "Non pode solicitar a xeración de son e especificar override_audio ó mesmo tempo.",

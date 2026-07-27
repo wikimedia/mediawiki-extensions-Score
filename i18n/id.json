@@ -12,8 +12,6 @@
 	"score-abcconversionerr": "Tidak dapat mengkonversi berkas ABC ke format LilyPond:\n$1",
 	"score-audioconversionerr": "Tidak dapat mengkonversi MIDI ke MP3:\n$1",
 	"score-audiooverridenotfound": "Berkas \"<nowiki>$1</nowiki>\" yang Anda sediakan dengan override_audio tidak tersedia.",
-	"score-audio-alt": "Pemutaran audio tidak didukung di penjelajah Anda. Anda bisa $1.",
-	"score-audio-alt-link": "mengunduh berkas audio",
 	"score-backend-error": "Tidak dapat menyalin berkas yang dihasilkan ke lokasi akhir:\n$1",
 	"score-compilererr": "Tidak dapat mengkompilasi berkas masukan LilyPond:\n$1",
 	"score-convertoverrideaudio": "Anda tidak dapat meminta penampilan audio dan menentukan override_audio dalam waktu bersamaan.",

@@ -12,8 +12,6 @@
 	"score-abcconversionerr": "Немагчыма пераўтварыць ABC-файл у фармат LilyPond:\n$1",
 	"score-audioconversionerr": "Немагчыма пераўтварыць MIDI у MP3:\n$1",
 	"score-audiooverridenotfound": "Файл «<nowiki>$1</nowiki>», які вы задалі з override_audio, не існуе.",
-	"score-audio-alt": "Прайграванне аўдыя не падтрымліваецца ў вашым браўзеры. Вы можаце $1.",
-	"score-audio-alt-link": "спампаваць аўдыёфайл",
 	"score-backend-error": "Немагчыма скапіяваць згенераваныя файлы ў іх канчатковае месца:\n$1",
 	"score-compilererr": "Немагчыма скампіляваць уваходны файл LilyPond:\n$1",
 	"score-convertoverrideaudio": "Вы не можаце адначасова запытаць рэндэрынг аўдыя і ўказаць override_audio.",

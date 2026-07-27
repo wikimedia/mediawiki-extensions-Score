@@ -8,8 +8,6 @@
 	"score-abcconversionerr": "ABC файл LilyPond формате йерзо йиш йац:\n$1",
 	"score-audioconversionerr": "MIDI - MP3 хийца аьтто бац:\n$1",
 	"score-audiooverridenotfound": "Override_audio гӀоьнца билгалйаьккхина йолу \"<nowiki>$1</nowiki>\" файл йац.",
-	"score-audio-alt": "Хьан браузеро ловш дац аудио лакхитар. Хьан йиш йу $1.",
-	"score-audio-alt-link": "аудиофайл схьаэца",
 	"score-backend-error": "Кхоьллина файлаш шайн чаккхенан метте копеш йан тарлуш дац:\n$1",
 	"score-compilererr": "Чуйуьллу LilyPond файл хӀотто тарлуш дац:\n$1",
 	"score-convertoverrideaudio": "Аудио рендеринг йеха а, override_audio цхьана хенахь билгалйаккха а йиш йац.",

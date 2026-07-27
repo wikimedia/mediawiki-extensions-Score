@@ -13,8 +13,6 @@
 	"score-abcconversionerr": "No s'ha pogut convertir el fitxer ABC al format LilyPond:\n$1",
 	"score-audioconversionerr": "No s'ha pogut convertir MIDI a MP3:\n$1",
 	"score-audiooverridenotfound": "El fitxer \"<nowiki>$1</nowiki>\" que heu especificat amb override_audio no existeix.",
-	"score-audio-alt": "La reproducció d'àudio no és compatible amb el vostre navegador. Podeu $1.",
-	"score-audio-alt-link": "descarrega el fitxer d'àudio",
 	"score-backend-error": "No s'han pogut copiar els fitxers generats a la seva ubicació final:\n$1",
 	"score-compilererr": "No s'ha pogut compilar el fitxer d'entrada del LilyPond:\n$1",
 	"score-convertoverrideaudio": "No podeu sol·licitar la renderització d'àudio i especificar override_audio alhora.",

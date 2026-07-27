@@ -8,8 +8,6 @@
 	"score-abcconversionerr": "Datoteke ABC ni bilo mogoče pretvoriti v zapis LilyPond:\n$1",
 	"score-audioconversionerr": "MIDI-ja ni bilo mogoče pretvoriti v MP3:\n$1",
 	"score-audiooverridenotfound": "Datoteka »<nowiki>$1</nowiki>«, ki ste jo določili z override_audio, ne obstaja.",
-	"score-audio-alt": "Vaš brskalnik ne podpira predvajanja zvoka. Lahko $1.",
-	"score-audio-alt-link": "prenesete zvočno datoteko",
 	"score-backend-error": "Ustvarjenih datotek ni bilo mogoče kopirati na njihovo končno mesto:\n$1",
 	"score-compilererr": "Vhodne datoteke LilyPond ni bilo mogoče prevesti:\n$1",
 	"score-convertoverrideaudio": "Ne morete zahtevati prikaza zvoka in določiti override_audio hkrati.",

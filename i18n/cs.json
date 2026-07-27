@@ -11,8 +11,6 @@
 	"score-abcconversionerr": "Převod souboru z formátu ABC na LilyPond se nezdařil:\n$1",
 	"score-audioconversionerr": "Převod MIDI do MP3 se nezdařil:\n$1",
 	"score-audiooverridenotfound": "Soubor „<nowiki>$1</nowiki>“ uvedený pomocí override_audio neexistuje.",
-	"score-audio-alt": "Přehrávání zvuku není ve vašem prohlížeči podporováno. Můžete $1.",
-	"score-audio-alt-link": "si stáhnout zvukový soubor",
 	"score-backend-error": "Nepodařilo se zkopírovat vygenerované soubory do cílového umístění:\n$1",
 	"score-compilererr": "Překlad vstupního souboru LilyPond se nezdařil:\n$1",
 	"score-convertoverrideaudio": "Nemůžete současně vyžadovat vytvoření audia a uvést override_audio.",

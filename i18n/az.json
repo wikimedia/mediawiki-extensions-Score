@@ -11,8 +11,6 @@
 	"score-abcconversionerr": "ABC faylını LilyPond formatına çevirmək mümkün olmadı:\n$1",
 	"score-audioconversionerr": "MIDI-ni MP3-ə çevirmək mümkün olmadı:\n$1",
 	"score-audiooverridenotfound": "override_audio ilə qeyd etdiyiniz \"<nowiki> $1</nowiki>\" faylı mövcud deyil.",
-	"score-audio-alt": "Audio oxutma brauzerinizdə dəstəklənmir. $1 bilərsiniz.",
-	"score-audio-alt-link": "Audio faylını yükləyə",
 	"score-backend-error": "Yaradılmış faylları son yerə köçürmək mümkün olmadı:\n$1",
 	"score-compilererr": "LilyPond daxiletmə faylını tərtib etmək mümkün olmadı:\n$1",
 	"score-convertoverrideaudio": "Siz eyni vaxtda audio render tələb edə və override_audio təyin edə bilməzsiniz.",
