@@ -11,7 +11,7 @@
 		"selenium-test": "npm run cypress:run"
 	},
 	"devDependencies": {
-		"@wikimedia/codex": "2.6.0",
+		"@wikimedia/codex": "2.6.2",
 		"api-testing": "1.7.3",
 		"cypress": "^15.8.2",
 		"cypress-axe": "^1.7.0",
