@@ -8,6 +8,7 @@
 	"score-abcconversionerr": "Не можам да ја претворам ABC податотеката во формат LilyPond:\n$1",
 	"score-audioconversionerr": "Не можам да го претворам ова MIDI во MP3:\n$1",
 	"score-audiooverridenotfound": "Податотеката „<nowiki>$1</nowiki>“ што ја укажавте со override_udio не постои.",
+	"score-audio-fallback": "Вашиот прелистувач не поддржува пуштање на звучни снимки. Можете да [$1 ја преземете звучната податотека].",
 	"score-backend-error": "Не можам да ги ставам создадените податотеки на нивното конечно место:\n$1",
 	"score-compilererr": "Не можам да составам влезна податотека за LilyPond:\n$1",
 	"score-convertoverrideaudio": "Не можете истовремено да побарате звучен испис и да укажете override_audio.",
