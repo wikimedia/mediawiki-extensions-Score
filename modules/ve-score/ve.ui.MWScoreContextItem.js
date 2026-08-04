@@ -29,7 +29,7 @@ OO.inheritClass( ve.ui.MWScoreContextItem, ve.ui.LinearContextItem );
 
 ve.ui.MWScoreContextItem.static.name = 'score';
 
-ve.ui.MWScoreContextItem.static.icon = 'score';
+ve.ui.MWScoreContextItem.static.icon = 'musicalScore';
 
 ve.ui.MWScoreContextItem.static.label = OO.ui.deferMsg( 'score-visualeditor-mwscoredialog-title' );
 

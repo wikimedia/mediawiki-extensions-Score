@@ -41,8 +41,7 @@
 				"ve-score/ve.ui.MWScoreDialog.css"
 			],
 			"dependencies": [
-				"ext.visualEditor.mwcore",
-				"ext.score.visualEditor.icons"
+				"ext.visualEditor.mwcore"
 			],
 			"messages": [
 				"score-visualeditor-mwscoredialog-audio",
@@ -59,27 +58,6 @@
 				"score-visualeditor-mwscoredialog-raw",
 				"score-visualeditor-mwscoredialog-title"
 			]
-		},
-		"ext.score.visualEditor.icons": {
-			"class": "MediaWiki\\ResourceLoader\\ImageModule",
-			"selectorWithoutVariant": ".oo-ui-icon-{name}",
-			"selectorWithVariant": ".oo-ui-image-{variant}.oo-ui-icon-{name}",
-			"variants": {
-				"progressive": {
-					"color": "#36c"
-				},
-				"invert": {
-					"color": "#fff"
-				}
-			},
-			"images": {
-				"score": {
-					"file": "ve-score/score.svg",
-					"variants": [
-						"progressive"
-					]
-				}
-			}
 		},
 		"ext.score.popup": {
 			"packageFiles": [

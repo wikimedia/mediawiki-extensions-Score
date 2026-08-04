@@ -21,7 +21,7 @@ ve.ui.MWScoreDialogTool = function VeUiMWScoreDialogTool( toolGroup, config ) {
 OO.inheritClass( ve.ui.MWScoreDialogTool, ve.ui.FragmentWindowTool );
 ve.ui.MWScoreDialogTool.static.name = 'score';
 ve.ui.MWScoreDialogTool.static.group = 'object';
-ve.ui.MWScoreDialogTool.static.icon = 'score';
+ve.ui.MWScoreDialogTool.static.icon = 'musicalScore';
 ve.ui.MWScoreDialogTool.static.title = OO.ui.deferMsg(
 	'score-visualeditor-mwscoredialog-title'
 );
