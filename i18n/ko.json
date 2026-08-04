@@ -17,6 +17,7 @@
 	"score-abcconversionerr": "ABC 파일을 LilyPond 형식으로 변환할 수 없습니다:\n$1",
 	"score-audioconversionerr": "MIDI를 MP3로 변환할 수 없습니다:\n$1",
 	"score-audiooverridenotfound": "override_midi로 지정한 \"<nowiki>$1</nowiki>\" 파일을 찾을 수 없습니다.",
+	"score-audio-fallback": "현재 브라우저에서는 오디오 재생이 지원되지 않습니다. [$1 오디오 파일을 다운로드] 할 수 있습니다.",
 	"score-backend-error": "생성한 파일을 최종 위치에 복사할 수 없습니다:\n$1",
 	"score-compilererr": "LilyPond 입력 파일을 컴파일할 수 없습니다:\n$1",
 	"score-convertoverrideaudio": "오디오 렌더링을 요청하고 동시에 override_audio를 지정할 수 없습니다.",
