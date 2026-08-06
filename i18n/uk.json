@@ -10,7 +10,8 @@
 			"SteveR",
 			"Vlad5250",
 			"Ата",
-			"Repakr"
+			"Repakr",
+			"Movses"
 		]
 	},
 	"score-abc2lynotexecutable": "Не вдалося виконати конвертер ABC у LilyPond: $1 не є виконуваним файлом. Переконайтеся, що <code>$wgScoreAbc2Ly</code> правильно встановлено.",
