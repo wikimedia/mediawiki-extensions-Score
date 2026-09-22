@@ -9,7 +9,7 @@
 
 	const wbui2025 = require( 'wikibase.wbui2025.lib' );
 
-	class ScoreValueStrategy extends wbui2025.store.StringValueStrategy {
+	class ScoreValueStrategy extends wbui2025.store.StringValueWithLtrInputStrategy {
 	}
 
 	/**

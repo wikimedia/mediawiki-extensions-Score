@@ -17,7 +17,7 @@ jest.mock(
 				registerStrategyForDatatype: mockRegisterStrategyForDatatype,
 				registerErrorPopoverFormatter: mockRegisterErrorPopoverFormatter
 			},
-			StringValueStrategy: class {}
+			StringValueWithLtrInputStrategy: class {}
 		}
 	} ),
 	{ virtual: true }
