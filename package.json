@@ -13,7 +13,7 @@
 	"devDependencies": {
 		"@wikimedia/codex": "2.6.2",
 		"api-testing": "1.7.3",
-		"cypress": "^15.8.2",
+		"cypress": "^15.21.1",
 		"cypress-axe": "^1.7.0",
 		"cypress-wikibase-api": "0.0.9",
 		"eslint-config-wikimedia": "0.32.5",
