@@ -27,7 +27,7 @@ class Hooks implements
 			// Default to if we use Image Magick, since it requires Image Magick.
 			$wgScoreTrim = $this->config->get( MainConfigNames::UseImageMagick );
 		}
-		$parser->setHook( 'score', [ Score::class, 'render' ] );
+		$parser->setHook( 'score', Score::render( ... ) );
 	}
 
 	/** @inheritDoc */
