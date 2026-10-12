@@ -4,25 +4,23 @@ export class EditStatementFormPage {
 
 	public static get SELECTORS(): object {
 		return {
+			MODAL_ROOT: '.wikibase-wbui2025-edit-statement-group-modal',
 			FORM: '.wikibase-wbui2025-edit-statement',
 			FORM_HEADING: '.wikibase-wbui2025-edit-statement-heading',
 			PROPERTY_NAME: '.wikibase-wbui2025-property-name > a',
-			SUBMIT_BUTTONS: '.wikibase-wbui2025-edit-form-actions > .cdx-button',
+			SUBMIT_BUTTONS: '.wikibase-wbui2025-edit-form-actions > .cdx-button, ' +
+				'.wikibase-wbui2025-modal-overlay__footer__actions > .cdx-button',
 			TEXT_INPUT: '.wikibase-wbui2025-edit-statement-value-input .cdx-text-input input, .wikibase-wbui2025-edit-statement-value-input textarea',
 			LOOKUP_INPUT: '.wikibase-wbui2025-edit-statement-value-input .cdx-lookup input',
 		};
 	}
 
 	public propertyName(): Chainable {
-		return cy.get( EditStatementFormPage.SELECTORS.PROPERTY_NAME );
-	}
-
-	public formHeading(): Chainable {
-		return cy.get( EditStatementFormPage.SELECTORS.FORM_HEADING );
+		return this.root().find( EditStatementFormPage.SELECTORS.PROPERTY_NAME );
 	}
 
 	public textInput(): Chainable {
-		return cy.get( EditStatementFormPage.SELECTORS.TEXT_INPUT ).first();
+		return this.root().find( EditStatementFormPage.SELECTORS.TEXT_INPUT ).first();
 	}
 
 	public setTextInputValue( newInputValue: string ): Chainable {
@@ -30,14 +28,18 @@ export class EditStatementFormPage {
 	}
 
 	public publishButton(): Chainable {
-		return cy.get( EditStatementFormPage.SELECTORS.SUBMIT_BUTTONS ).last();
+		return this.root().find( EditStatementFormPage.SELECTORS.SUBMIT_BUTTONS ).last();
 	}
 
 	public cancelButton(): Chainable {
-		return cy.get( EditStatementFormPage.SELECTORS.SUBMIT_BUTTONS ).first();
+		return this.root().find( EditStatementFormPage.SELECTORS.SUBMIT_BUTTONS ).first();
 	}
 
 	public form(): Chainable {
-		return cy.get( EditStatementFormPage.SELECTORS.FORM );
+		return this.root().find( EditStatementFormPage.SELECTORS.FORM );
+	}
+
+	public root(): Chainable {
+		return cy.get( EditStatementFormPage.SELECTORS.MODAL_ROOT );
 	}
 }

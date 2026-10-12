@@ -60,7 +60,7 @@ describe( 'add score statement', () => {
 			itemViewPage.editLinks().first().click();
 
 			const editFormPage = new EditStatementFormPage();
-			editFormPage.formHeading().should( 'exist' );
+			editFormPage.root().should( 'exist' );
 			editFormPage.propertyName().should( 'have.text', propertyName );
 
 			editFormPage.textInput().should( 'have.value', initialValue );
@@ -69,7 +69,7 @@ describe( 'add score statement', () => {
 			editFormPage.publishButton().click();
 
 			/* Wait for the form to close, and check the value is changed */
-			editFormPage.formHeading().should( 'not.exist' );
+			editFormPage.root().should( 'not.exist' );
 			/* CI has no support for lilypond, so what we actually see here is an error */
 			itemViewPage.mainSnakValues().first().should( 'contain.text', 'Unable to display the value' );
 
