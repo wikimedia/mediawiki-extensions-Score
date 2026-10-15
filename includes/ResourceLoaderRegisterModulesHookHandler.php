@@ -19,18 +19,12 @@ class ResourceLoaderRegisterModulesHookHandler implements ResourceLoaderRegister
 	}
 
 	public function onResourceLoaderRegisterModules( ResourceLoader $rl ): void {
-		if ( !$this->settings ) {
-			return;
-		}
 		$moduleTemplate = [
 			'localBasePath' => __DIR__ . '/..',
 			'remoteExtPath' => 'Score',
 		];
 
-		if (
-			$this->settings->getSetting( 'tmpMobileEditingUI' ) ||
-			$this->settings->getSetting( 'tmpEnableMobileEditingUIBetaFeature' )
-		) {
+		if ( $this->settings?->getSetting( 'tmpMobileEditingUI' ) ) {
 			$modules = [ 'score.wbui2025.entityViewInit' => $moduleTemplate +
 				[
 					'packageFiles' => [

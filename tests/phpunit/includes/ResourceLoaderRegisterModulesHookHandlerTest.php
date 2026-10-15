@@ -27,7 +27,6 @@ class ResourceLoaderRegisterModulesHookHandlerTest extends TestCase {
 	public function testRegistersNoModulesIfWbuiFeatureDisabled(): void {
 		$settings = new SettingsArray( [
 			'tmpMobileEditingUI' => false,
-			'tmpEnableMobileEditingUIBetaFeature' => false,
 		] );
 		$resourceLoader = $this->createMock( ResourceLoader::class );
 		$resourceLoader->expects( $this->never() )->method( 'register' );
@@ -35,23 +34,8 @@ class ResourceLoaderRegisterModulesHookHandlerTest extends TestCase {
 			->onResourceLoaderRegisterModules( $resourceLoader );
 	}
 
-	public static function provideSettingsAndModuleExpectation() {
-		yield 'module registered if tmpMobileEditingUI set' => [ true, false ];
-		yield 'module registered if tmpEnableMobileEditingUIBetaFeature set' => [ false, true ];
-		yield 'module registered if both set' => [ true, true ];
-	}
-
-	/**
-	 * @dataProvider provideSettingsAndModuleExpectation
-	 */
-	public function testRegistersWbuiModuleIfWbuiFeatureEnabled(
-		bool $tmpMobileEditingUI,
-		bool $tmpEnableMobileEditingUIBetaFeature
-	): void {
-		$settings = new SettingsArray( [
-			'tmpMobileEditingUI' => $tmpMobileEditingUI,
-			'tmpEnableMobileEditingUIBetaFeature' => $tmpEnableMobileEditingUIBetaFeature,
-		] );
+	public function testRegistersWbuiModuleIfWbuiFeatureEnabled(): void {
+		$settings = new SettingsArray( [ 'tmpMobileEditingUI' => true ] );
 		$resourceLoader = $this->createMock( ResourceLoader::class );
 		$resourceLoader
 			->expects( $this->once() )
