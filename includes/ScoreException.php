@@ -77,14 +77,4 @@ class ScoreException extends Exception {
 	public function isTracked() {
 		return true;
 	}
-
-	/**
-	 * Key for use in statsd metrics
-	 *
-	 * @return string|bool false if it shouldn't be recorded
-	 */
-	public function getStatsdKey() {
-		// Normalize message key into _ for statsd
-		return str_replace( '-', '_', $this->getMessage() );
-	}
 }

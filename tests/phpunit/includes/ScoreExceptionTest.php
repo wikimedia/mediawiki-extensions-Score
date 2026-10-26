@@ -10,8 +10,6 @@ use MediaWiki\Status\Status;
 use MediaWikiIntegrationTestCase;
 
 /**
- * Unit tests for ScoreException and related exception classes
- *
  * @covers \MediaWiki\Extension\Score\ScoreException
  * @covers \MediaWiki\Extension\Score\ScoreDisabledException
  * @covers \MediaWiki\Extension\Score\ScoreBackendException
@@ -19,8 +17,6 @@ use MediaWikiIntegrationTestCase;
 class ScoreExceptionTest extends MediaWikiIntegrationTestCase {
 
 	/**
-	 * Data provider for ScoreException constructor tests
-	 *
 	 * @return array[]
 	 */
 	public static function provideScoreExceptionTests(): array {
@@ -41,8 +37,6 @@ class ScoreExceptionTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * Test ScoreException constructor and basic methods
-	 *
 	 * @dataProvider provideScoreExceptionTests
 	 * @param string $message Message key
 	 * @param array $args Arguments
@@ -52,31 +46,15 @@ class ScoreExceptionTest extends MediaWikiIntegrationTestCase {
 
 		$this->assertEquals( $message, $exception->getMessage() );
 		$this->assertTrue( $exception->isTracked() );
-		$this->assertEquals( 'score_error', $exception->getStatsdKey() );
 	}
 
-	/**
-	 * Test ScoreException getStatsdKey() normalizes message keys
-	 */
-	public function testScoreExceptionStatsdKeyNormalization(): void {
-		$exception = new ScoreException( 'score-test-message' );
-		$this->assertEquals( 'score_test_message', $exception->getStatsdKey() );
-	}
-
-	/**
-	 * Test ScoreDisabledException
-	 */
 	public function testScoreDisabledException(): void {
 		$exception = new ScoreDisabledException();
 
 		$this->assertEquals( 'score-exec-disabled', $exception->getMessage() );
 		$this->assertFalse( $exception->isTracked() );
-		$this->assertFalse( $exception->getStatsdKey() );
 	}
 
-	/**
-	 * Test ScoreBackendException
-	 */
 	public function testScoreBackendException(): void {
 		$status = Status::newGood();
 		$status->fatal( 'test-error' );
