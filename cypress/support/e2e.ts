@@ -34,4 +34,10 @@ Cypress.Commands.add( 'visitTitle', ( args, qsDefaults = {} ) => {
 	return cy.window();
 } );
 
-Cypress.Commands.add( 'visitTitleMobile', ( args ) => cy.visitTitle( args, { mobileaction: 'toggle_view_mobile' } ) );
+Cypress.Commands.add( 'visitTitleMobile', ( args ) => {
+	cy.visitTitle( args, { mobileaction: 'toggle_view_mobile' } ).then( () => {
+		cy.window()
+			.its( 'mw' )
+			.invoke( 'cookie.set', 'wikibase.acknowledgedcopyrightversion', 'wikibase-1' );
+	} );
+} );
