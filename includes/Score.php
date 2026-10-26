@@ -41,6 +41,7 @@ use Shellbox\Command\BoxedCommand;
 use Wikimedia\FileBackend\FileBackend;
 use Wikimedia\FileBackend\FSFileBackend;
 use Wikimedia\LockManager\NullLockManager;
+use Wikimedia\Mime\XmlTypeCheck;
 use Wikimedia\ScopedCallback;
 
 /**
@@ -842,6 +843,7 @@ class Score {
 			$newFiles[$dstPngFileName] = true;
 
 			if ( $wgScoreUseSvg ) {
+				self::assertSvgIsSafe( $srcSvg );
 				$destSvg = "{$options['dest_storage_path']}/$dstSvgFileName";
 				$ops[] = [
 					'op' => 'store',
@@ -870,6 +872,71 @@ class Score {
 			throw new ScoreBackendException( $status );
 		}
 		return $newFiles;
+	}
+
+	/**
+	 * Reject a generated SVG that carries script or other active content before it
+	 * is stored to the publicly served file backend.
+	 *
+	 * LilyPond only emits static drawing markup, so a script element, event-handler
+	 * attribute, javascript: link or active-content element means the output was
+	 * tampered with (the render runs user-controlled code). Fail closed instead of
+	 * serving it from upload.wikimedia.org.
+	 *
+	 * @param string $svgPath Local path of the generated SVG
+	 * @throws ScoreException if the SVG is not well-formed or carries disallowed content
+	 */
+	private static function assertSvgIsSafe( string $svgPath ): void {
+		$check = new XmlTypeCheck( $svgPath, [ self::class, 'svgDisallowedContentFilter' ] );
+		if ( !$check->wellFormed || $check->filterMatch ) {
+			// Reuse the existing storage-step error; the file is not written to its
+			// final location because it is unsafe.
+			throw new ScoreException( 'score-backend-error',
+				[ 'the generated SVG contained disallowed content' ] );
+		}
+	}
+
+	/**
+	 * XmlTypeCheck filter: return true when an element or attribute can carry script
+	 * or active content. Public only so XmlTypeCheck can invoke it.
+	 *
+	 * @param string $name Element name, as "<namespaceURI>:<localName>" when namespaced
+	 * @param array $attribs Attribute name => value map
+	 * @param string|null $data Element text content (unused)
+	 * @return bool True to reject the file
+	 */
+	public static function svgDisallowedContentFilter( string $name, array $attribs, $data = null ): bool {
+		static $disallowedElements = [
+			'script', 'foreignobject', 'iframe', 'handler', 'audio', 'video', 'embed', 'object',
+		];
+		if ( in_array( self::svgLocalName( $name ), $disallowedElements, true ) ) {
+			return true;
+		}
+		foreach ( $attribs as $attrName => $attrValue ) {
+			$attrLocal = self::svgLocalName( $attrName );
+			// Event-handler attributes (onload, onclick, ...).
+			if ( str_starts_with( $attrLocal, 'on' ) ) {
+				return true;
+			}
+			// javascript: targets in href / xlink:href, ignoring whitespace obfuscation.
+			if ( $attrLocal === 'href'
+				&& str_starts_with( strtolower( preg_replace( '/\s+/', '', (string)$attrValue ) ), 'javascript:' )
+			) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * Lowercased local part of an element or attribute name that XmlTypeCheck passes
+	 * as "<namespaceURI>:<localName>" (or bare when not namespaced).
+	 *
+	 * @param string $name
+	 * @return string
+	 */
+	private static function svgLocalName( string $name ): string {
+		return strtolower( substr( strrchr( ':' . $name, ':' ), 1 ) );
 	}
 
 	/**
