@@ -6,6 +6,7 @@ namespace MediaWiki\Extension\Score\Tests;
 use MediaWiki\Extension\Score\Score;
 use MediaWiki\Extension\Score\ScoreException;
 use MediaWikiIntegrationTestCase;
+use Wikimedia\TestingAccessWrapper;
 
 /**
  * Unit tests for Score class
@@ -513,6 +514,61 @@ class ScoreTest extends MediaWikiIntegrationTestCase {
 
 		$this->assertIsString( $result );
 		$this->assertStringContainsString( 'mw-ext-score-disabled', $result );
+	}
+
+	/**
+	 * @dataProvider provideSvgDisallowedContent
+	 * @covers \MediaWiki\Extension\Score\Score::svgDisallowedContentFilter
+	 */
+	public function testSvgDisallowedContentFilter( string $name, array $attribs, bool $expected ): void {
+		$this->assertSame( $expected, Score::svgDisallowedContentFilter( $name, $attribs ) );
+	}
+
+	public static function provideSvgDisallowedContent(): array {
+		$svg = 'http://www.w3.org/2000/svg:';
+		$xlink = 'http://www.w3.org/1999/xlink:';
+		return [
+			// Things LilyPond legitimately emits: must NOT be rejected.
+			'path element' => [ $svg . 'path', [ $svg . 'd' => 'M0 0 L1 1' ], false ],
+			'group element' => [ $svg . 'g', [], false ],
+			'text element' => [ $svg . 'text', [], false ],
+			'use element (glyph reference)' => [ $svg . 'use', [ $xlink . 'href' => '#glyph0' ], false ],
+			'style element (CSS, not script)' => [ $svg . 'style', [], false ],
+			'image with safe data: href' =>
+				[ $svg . 'image', [ $xlink . 'href' => 'data:image/png;base64,AAAA' ], false ],
+			// Script / active-content vectors: must be rejected.
+			'script element' => [ $svg . 'script', [], true ],
+			'foreignObject element' => [ $svg . 'foreignObject', [], true ],
+			'iframe element' => [ $svg . 'iframe', [], true ],
+			'onload handler attribute' => [ $svg . 'svg', [ 'onload' => 'alert(1)' ], true ],
+			'onclick handler attribute' => [ $svg . 'rect', [ 'onclick' => 'alert(1)' ], true ],
+			'javascript: href' => [ $svg . 'a', [ $xlink . 'href' => 'javascript:alert(1)' ], true ],
+			'whitespace-obfuscated javascript: href' =>
+				[ $svg . 'a', [ $xlink . 'href' => "java\tscript:alert(1)" ], true ],
+		];
+	}
+
+	/**
+	 * @covers \MediaWiki\Extension\Score\Score::assertSvgIsSafe
+	 */
+	public function testAssertSvgIsSafeThrowsOnScriptSvg(): void {
+		$path = $this->getNewTempFile();
+		file_put_contents( $path,
+			'<svg xmlns="http://www.w3.org/2000/svg"><script>alert(1)</script></svg>' );
+		$this->expectException( ScoreException::class );
+		$this->expectExceptionMessage( 'score-backend-error' );
+		TestingAccessWrapper::newFromClass( Score::class )->assertSvgIsSafe( $path );
+	}
+
+	/**
+	 * @covers \MediaWiki\Extension\Score\Score::assertSvgIsSafe
+	 */
+	public function testAssertSvgIsSafeAllowsCleanSvg(): void {
+		$path = $this->getNewTempFile();
+		file_put_contents( $path,
+			'<svg xmlns="http://www.w3.org/2000/svg"><g><path d="M0 0 L1 1"/><text>C</text></g></svg>' );
+		TestingAccessWrapper::newFromClass( Score::class )->assertSvgIsSafe( $path );
+		$this->addToAssertionCount( 1 );
 	}
 
 }
