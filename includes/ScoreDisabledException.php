@@ -22,9 +22,4 @@ class ScoreDisabledException extends ScoreException {
 	public function isTracked() {
 		return false;
 	}
-
-	/** @inheritDoc */
-	public function getStatsdKey() {
-		return false;
-	}
 }

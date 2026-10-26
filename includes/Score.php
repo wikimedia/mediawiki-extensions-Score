@@ -157,7 +157,6 @@ class Score {
 			->environment( $wgScoreEnvironment )
 			->includeStderr()
 			->execute();
-		self::recordShellout( 'lilypond_version' );
 
 		$output = $result->getStdout();
 		if ( $result->getExitCode() != 0 ) {
@@ -419,7 +418,6 @@ class Score {
 				if ( $e->isTracked() ) {
 					$parser->addTrackingCategory( 'score-error-category' );
 				}
-				self::recordError( $e );
 			}
 			$html = $e->getHtml();
 		}
@@ -746,7 +744,6 @@ class Score {
 			$lilypondCode = '';
 		}
 		$result = $command->execute();
-		self::recordShellout( 'generate_png_and_midi' );
 
 		if ( $result->getExitCode() != 0 ) {
 			self::throwCompileException( $result->getStdout(), $options );
@@ -1092,7 +1089,6 @@ LILYPOND;
 		self::addScript( $command, 'getWavDuration.php' );
 
 		$result = $command->execute();
-		self::recordShellout( 'generate_audio' );
 
 		if ( ( $result->getExitCode() != 0 ) || !$result->wasReceived( 'file.mp3' ) ) {
 			self::throwSynthException( $result->getStdout() );
@@ -1141,30 +1137,6 @@ LILYPOND;
 		} else {
 			return 0.0;
 		}
-	}
-
-	/**
-	 * Track how often we do each type of shellout in statsd
-	 *
-	 * @param string $type Type of shellout
-	 */
-	private static function recordShellout( string $type ): void {
-		$statsd = MediaWikiServices::getInstance()->getStatsdDataFactory();
-		$statsd->increment( "score.$type" );
-	}
-
-	/**
-	 * Track how often each error occurs in statsd
-	 *
-	 * @param ScoreException $ex
-	 */
-	private static function recordError( ScoreException $ex ): void {
-		$key = $ex->getStatsdKey();
-		if ( $key === false ) {
-			return;
-		}
-		$statsd = MediaWikiServices::getInstance()->getStatsdDataFactory();
-		$statsd->increment( "score_error.$key" );
 	}
 
 	/**
