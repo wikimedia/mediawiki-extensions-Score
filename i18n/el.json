@@ -8,17 +8,28 @@
 			"Αντιγόνη"
 		]
 	},
+	"score-audioconversionerr": "Δεν είναι δυνατή η μετατροπή του MIDI σε MP3:\n $1",
+	"score-audiooverridenotfound": "Το αρχείο «<nowiki>$1</nowiki>» που ορίσατε με override_audio δεν υπάρχει.",
+	"score-backend-error": "Δεν είναι δυνατή η αντιγραφή των δημιουργημένων αρχείων στην τελική τους θέση:\n$1",
+	"score-compilererr": "Δεν είναι δυνατή η μεταγλώττιση του αρχείου εισόδου LilyPond:\n$1",
+	"score-download-midi-file": "Λήψη αρχείου MIDI",
 	"score-download-source-file": "Λήψη αρχείου LilyPond",
 	"score-error-category": "Σελίδες με σφάλματα απόδοσης παρτιτούρας",
+	"score-error-category-desc": "Παρουσιάστηκε σφάλμα κατά την απόδοση της παρτιτούρας.",
+	"score-exec-disabled": "Οι μουσικές παρτιτούρες είναι προσωρινά απενεργοποιημένες.",
 	"score-page": "Σελίδα $1",
 	"score-use-category": "Σελίδες που χρησιμοποιούν παρτιτούρα",
 	"score-visualeditor-mwscoredialog-audio": "Συμπερίληψη ενός αρχείου ήχου (αυτόματα παραγόμενου από προεπιλογή)",
 	"score-visualeditor-mwscoredialog-card-advanced": "Προχωρημένο",
 	"score-visualeditor-mwscoredialog-card-audio": "Ήχος",
 	"score-visualeditor-mwscoredialog-lang": "Γλώσσα",
+	"score-visualeditor-mwscoredialog-notelanguage": "Γλώσσα σημειογραφίας",
 	"score-visualeditor-mwscoredialog-override-audio": "Χρήση υπάρχοντος αρχείου ήχου",
+	"score-visualeditor-mwscoredialog-override-audio-placeholder": "Όνομα υπάρχοντος αρχείου ήχου",
 	"score-visualeditor-mwscoredialog-override-midi": "Χρήση υπάρχοντος αρχείου MIDI",
 	"score-visualeditor-mwscoredialog-override-midi-placeholder": "Όνομα υπάρχοντος αρχείου MIDI",
 	"score-visualeditor-mwscoredialog-raw": "Αυτό είναι ένα ολοκληρωμένο αρχείο LilyPond",
-	"score-visualeditor-mwscoredialog-title": "Μουσική σημειογραφία"
+	"score-visualeditor-mwscoredialog-title": "Μουσική σημειογραφία",
+	"datatypes-type-musical-notation": "Μουσική σημειογραφία",
+	"wikibase-listdatatypes-musical-notation-head": "Μουσική σημειογραφία"
 }
