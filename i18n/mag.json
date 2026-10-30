@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"ऐक्टिवेटेड्"
+		]
+	},
+	"score-page": "पन्ना $1",
+	"score-visualeditor-mwscoredialog-card-advanced": "उन्नत",
+	"score-visualeditor-mwscoredialog-card-audio": "आडियो",
+	"score-visualeditor-mwscoredialog-lang": "भाषा",
+	"score-visualeditor-mwscoredialog-notelanguage": "स्वरलिपि भाषा",
+	"score-visualeditor-mwscoredialog-override-audio": "एगो विद्यमान आडियो सञ्चिका प्रयोग करथिन",
+	"score-visualeditor-mwscoredialog-override-audio-placeholder": "विद्यमान आडियो सञ्चिकाके नाम",
+	"score-visualeditor-mwscoredialog-override-midi": "एगो विद्यमान MIDI सञ्चिका प्रयोग करथिन",
+	"score-visualeditor-mwscoredialog-override-midi-placeholder": "विद्यमान MIDI सञ्चिकाके नाम",
+	"score-visualeditor-mwscoredialog-raw": "ई एहो पूरा LilyPond सञ्चिका है",
+	"score-visualeditor-mwscoredialog-title": "साङ्गीतिक स्वरलिपि",
+	"datatypes-type-musical-notation": "साङ्गीतिक स्वरलिपि",
+	"wikibase-listdatatypes-musical-notation-head": "साङ्गीतिक स्वरलिपि"
+}
