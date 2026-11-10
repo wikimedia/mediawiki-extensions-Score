@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Luky001"
+			"Luky001",
+			"Wizzard"
 		]
 	},
 	"score-desc": "Pridáva značku pre vykresľovanie partitúr pomocou LilyPondu",
+	"score-use-category": "Stránky používajúce rozšírenie Score",
 	"score-visualeditor-mwscoredialog-audio": "Zahrnúť zvukový súbor (implicitne vygenerovaný automaticky)",
 	"score-visualeditor-mwscoredialog-notelanguage": "Jazyk notového zápisu",
 	"score-visualeditor-mwscoredialog-override-audio": "Použiť existujúci zvukový súbor",
